@@ -1,0 +1,13 @@
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\ProductVersion.wxi
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_HelpBuilderLog_az.txt
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_HelpBuilderLog_en.txt
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_HelpBuilderLog_gg.txt
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_HelpBuilderLog_ru.txt
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_HelpBuilderLog_hy-AM.txt
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_HelpBuilderLog_kk-KZ.txt
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_eidss.avr.Harvested_dir.wxs
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_eidss.mobile.Harvested_dir.wxs
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_eidss.smartphone.Harvested_dir.wxs
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_eidss.openapi.Harvested_dir.wxs
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_eidss.web.Harvested_dir.wxs
+D:\EIDSS_86\EIDSS\EIDSS.Setup\EIDSS.WebSetup\obj\Debug\_Help.Harvested_dir.wxs

@@ -1,0 +1,276 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS_ObjectAccess.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS_ObjectAccess.pdb
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ar-IQ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\az-Latn-AZ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\hy-am\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ka-GE\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\kk-KZ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-RU\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\th-TH\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\uk-UA\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.Properties.Resources.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.csproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.dll.licenses
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ar-IQ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\az-Latn-AZ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\hy-am\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ka-GE\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\kk-KZ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ru-RU\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\th-TH\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\uk-UA\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ObjectAccess.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ObjectAccess.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.Properties.Resources.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.csproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.dll.licenses
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ar-IQ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\az-Latn-AZ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\hy-am\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ka-GE\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\kk-KZ\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ru-RU\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\th-TH\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\uk-UA\EIDSS_ObjectAccess.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ObjectAccess.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ObjectAccess.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.csprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.Properties.Resources.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.csproj.GenerateResource.Cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.dll.licenses
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ar-IQ\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\az-Latn-AZ\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\hy-am\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ka-GE\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\kk-KZ\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ru-RU\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\th-TH\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\uk-UA\EIDSS_ObjectAccess.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ObjectAccess.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ObjectAccess.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.csprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.Properties.Resources.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.FreezerTree.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessDetail.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectAccessPanel.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeDetail.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS.ObjectTypeList.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.csproj.GenerateResource.Cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.dll.licenses
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ar-IQ\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\az-Latn-AZ\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\hy-am\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ka-GE\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\kk-KZ\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\ru-RU\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\th-TH\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\uk-UA\EIDSS_ObjectAccess.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ObjectAccess\obj\Debug\EIDSS_ObjectAccess.pdb

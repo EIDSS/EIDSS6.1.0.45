@@ -1,0 +1,12 @@
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.panels.FakeControls.LookupBindingTest.resources
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.panels.FakeControls.HumanCaseWinForm.resources
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.panels.FakeControls.TestListPanelUI.resources
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.panels.FakeControls.TestLookupPanelUI.resources
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.panels.FakeControls.TestPanelAdvancedWithActionGroups.resources
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.panels.FakeControls.TestPanelAdvancedWithCustomActions.resources
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.panels.FakeControls.TestPanelUI.resources
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.panels.TestGrid.resources
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.TranslationUI.ControlDesignerForm.resources
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.csproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS61\bv.WinTests\obj\Debug\bv.WinTests.dll.licenses

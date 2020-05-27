@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Namespaces>
+  <Namespace Name="CustomActions.UI">
+   <Messages>
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="Breaking">
+     <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'CustomActions.UI' with another namespace.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web\bin\Debug\CustomActions.Web.dll">
+   <Modules>
+    <Module Name="customactions.web.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'CustomActions.Web.dll' with a strong name key.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="CustomActions">
+       <Types>
+        <Type Name="AppPoolConfigurator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetAppPoolIdleTimeoutInSeconds(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="AppPoolConfigurator.cs" Line="20">In externally visible method 'AppPoolConfigurator.GetAppPoolIdleTimeoutInSeconds(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetAppPoolIdleTimeout(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="AppPoolConfigurator.cs" Line="39">In externally visible method 'AppPoolConfigurator.SetAppPoolIdleTimeout(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Cryptor" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Cryptor" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Cryptor' in type name 'Cryptor'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#DecryptServiceAccountDetails(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="Cryptor.cs" Line="53">In externally visible method 'Cryptor.DecryptServiceAccountDetails(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EncryptArchiveDbAccountDetails(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="Cryptor.cs" Line="25">In externally visible method 'Cryptor.EncryptArchiveDbAccountDetails(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EncryptDbAccountDetails(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="Cryptor.cs" Line="11">In externally visible method 'Cryptor.EncryptDbAccountDetails(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EncryptDbAccountForAvrDetails(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Avr" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="Cryptor.cs" Line="67">Correct the spelling of 'Avr' in member name 'Cryptor.EncryptDbAccountForAvrDetails(Session)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="Cryptor.cs" Line="68">In externally visible method 'Cryptor.EncryptDbAccountForAvrDetails(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EncryptServiceAccountDetails(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="Cryptor.cs" Line="39">In externally visible method 'Cryptor.EncryptServiceAccountDetails(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CultureRegistrator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Registrator" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Registrator' in type name 'CultureRegistrator'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#RegisterCustomCultures(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="CultureRegistrator.cs" Line="11">In externally visible method 'CultureRegistrator.RegisterCustomCultures(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DbChecker" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#TestArchiveDbConnection(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="DbChecker.cs" Line="27">In externally visible method 'DbChecker.TestArchiveDbConnection(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TestDbConnection(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="DbChecker.cs" Line="11">In externally visible method 'DbChecker.TestDbConnection(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TestDbConnectionForAvr(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Avr" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="DbChecker.cs" Line="42">Correct the spelling of 'Avr' in member name 'DbChecker.TestDbConnectionForAvr(Session)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="DbChecker.cs" Line="43">In externally visible method 'DbChecker.TestDbConnectionForAvr(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="InstallerStateManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FindInstalledFeatures(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="FindInstalledFeatures.cs" Line="11">In externally visible method 'InstallerStateManager.FindInstalledFeatures(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PathValidator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ValidatePath(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="PathValidator.cs" Line="12">In externally visible method 'PathValidator.ValidatePath(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PortDetector" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FindInstallerPorts(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="PortDetector.cs" Line="97">In externally visible method 'PortDetector.FindInstallerPorts(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TestAvrPort(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Avr" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="PortDetector.cs" Line="41">Correct the spelling of 'Avr' in member name 'PortDetector.TestAvrPort(Session)' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="PortDetector.cs" Line="42">In externally visible method 'PortDetector.TestAvrPort(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TestMobilePort(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="PortDetector.cs" Line="55">In externally visible method 'PortDetector.TestMobilePort(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TestOpenAPIPort(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="API" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="PortDetector.cs" Line="82">Correct the casing of 'API' in member name 'PortDetector.TestOpenAPIPort(Session)' by changing it to 'Api'.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="PortDetector.cs" Line="83">In externally visible method 'PortDetector.TestOpenAPIPort(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TestReportsServicePort(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="PortDetector.cs" Line="14">In externally visible method 'PortDetector.TestReportsServicePort(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TestSmartphonePort(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="PortDetector.cs" Line="69">In externally visible method 'PortDetector.TestSmartphonePort(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TestWebSitePort(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="WebSite" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeDiscreteTerm" Certainty="80" Level="Error" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="PortDetector.cs" Line="27">The compound word 'WebSite' in member name 'PortDetector.TestWebSitePort(Session)' exists as a discrete term. If your usage is intended to be single word, case it as 'Website' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="PortDetector.cs" Line="28">In externally visible method 'PortDetector.TestWebSitePort(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ServiceDetector" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetServiceVersion(Microsoft.Deployment.WindowsInstaller.Session,CustomActions.AVRService.IAVRFacade)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="ServiceDetector.cs" Line="97">Modify 'ServiceDetector.GetServiceVersion(Session, IAVRFacade)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PingAVRService(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="ServiceDetector.cs" Line="31">Modify 'ServiceDetector.PingAVRService(Session)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="AVR" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="ServiceDetector.cs" Line="12">Correct the casing of 'AVR' in member name 'ServiceDetector.PingAVRService(Session)' by changing it to 'Avr'.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="ServiceDetector.cs" Line="13">In externally visible method 'ServiceDetector.PingAVRService(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UINavigator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#RebuildDialogChain(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="UINavigator.cs" Line="11">In externally visible method 'UINavigator.RebuildDialogChain(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UserValidator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ValidateUser(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="UserValidator.cs" Line="13">In externally visible method 'UserValidator.ValidateUser(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ValueChecker" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#MustBeNumber(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="ValueChecker.cs" Line="16">In externally visible method 'ValueChecker.MustBeNumber(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#MustBeNumbers(Microsoft.Deployment.WindowsInstaller.Session)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="NonBreaking">
+             <Issue Name="NoArguments" Certainty="95" Level="CriticalError" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="ValueChecker.cs" Line="100">Call the 'ArgumentException' constructor that contains a message and/or paramName parameter.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2020-03-03 16:28:38Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.Web" File="ValueChecker.cs" Line="92">In externally visible method 'ValueChecker.MustBeNumbers(Session)', validate parameter 'session' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+   <Name>Avoid namespaces with few types</Name>
+   <Description>A namespace should generally have more than five types.</Description>
+   <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182130.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+   <Name>Compound words should be cased correctly</Name>
+   <Description>Avoid creating compound words from terms which exist in the dictionary as discrete terms. Do not create a compound word such as 'StopWatch' or 'PopUp'. These terms are recognized in the dictionary and should be cased as 'Stopwatch' and 'Popup'.</Description>
+   <Resolution Name="MemberShouldBeDiscreteTerm">The compound word '{0}' in member name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264474.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="80">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208">
+   <Name>Instantiate argument exceptions correctly</Name>
+   <Description>String arguments passed to constructors of ArgumentException and its derived types should be correct. Types derived from ArgumentException have inconsistent constructor overloads with respect to the message and paramName parameters as compared to ArgumentException.</Description>
+   <Resolution Name="NoArguments">Call the {0} constructor that contains a message and/or paramName parameter.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182347.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

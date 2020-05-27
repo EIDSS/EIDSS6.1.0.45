@@ -1,0 +1,24 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss_lims_db.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss_lims_db.pdb
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Limps_db\obj\Debug\EIDSS_Lims_db.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.dll.licenses
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_lims_db.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_lims_db.pdb
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\EIDSS_Lims_db.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.dll.licenses
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_lims_db.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_lims_db.pdb
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\EIDSS_Lims_db.vbprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.dll.licenses
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_lims_db.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_lims_db.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\EIDSS_Lims_db.vbprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.dll.licenses
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Limps_db\obj\Debug\eidss_lims_db.pdb

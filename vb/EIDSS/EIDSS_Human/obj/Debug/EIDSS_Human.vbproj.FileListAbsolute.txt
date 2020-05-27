@@ -1,0 +1,480 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.TH.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\fgdb.template
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss_human.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss_human.pdb
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ar-IQ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\az-Latn-AZ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\hy-am\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ka-GE\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\kk-KZ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-RU\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\th-TH\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\uk-UA\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\en-IQ-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\en-TH-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-KZ-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS_Human.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Resources.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.az-latn-az.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.hy-AM.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS_Human.vbproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.dll.licenses
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\ar-IQ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\az-Latn-AZ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\hy-am\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\ka-GE\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\kk-KZ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\ru-RU\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\th-TH\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\uk-UA\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\en-IQ-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\en-TH-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\ru-KZ-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.TH.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\fgdb.template
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_human.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_human.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS_Human.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Resources.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.az-latn-az.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.hy-AM.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS_Human.vbproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.dll.licenses
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ar-IQ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\az-Latn-AZ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\hy-am\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ka-GE\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\kk-KZ\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ru-RU\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\th-TH\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\uk-UA\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\en-IQ-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\en-TH-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ru-KZ-Eidss\eidss_human.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_human.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_human.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS_Human.vbprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Resources.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.en-IQ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.en-TH-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ru-KZ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.en-IQ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.en-TH-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.az-latn-az.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.hy-AM.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.en-TH-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS_Human.vbproj.GenerateResource.Cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.dll.licenses
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ar-IQ\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\az-Latn-AZ\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\hy-am\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ka-GE\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\kk-KZ\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ru-RU\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\th-TH\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\uk-UA\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\en-IQ-Eidss\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\en-TH-Eidss\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ru-KZ-Eidss\eidss_human.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.TH.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\fgdb.template
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_human.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_human.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS_Human.vbprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Resources.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateCaseDetail.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.AggregateSummaryCaseDetail.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.en-IQ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.en-TH-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ru-KZ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.en-IQ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.en-TH-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisChangeReason.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDeduplicationDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseDiagnosisHistory.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.HumanCaseSamplesPanel.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.az-latn-az.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.hy-AM.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.PatientDetail.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.en-TH-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS.Patient_Info.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\EIDSS_Human.vbproj.GenerateResource.Cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.dll.licenses
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ar-IQ\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\az-Latn-AZ\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\hy-am\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ka-GE\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\kk-KZ\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ru-RU\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\th-TH\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\uk-UA\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\en-IQ-Eidss\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\en-TH-Eidss\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\ru-KZ-Eidss\eidss_human.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Human\obj\Debug\eidss_human.pdb

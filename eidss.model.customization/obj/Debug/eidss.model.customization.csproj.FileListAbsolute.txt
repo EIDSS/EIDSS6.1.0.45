@@ -1,0 +1,56 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.TH.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\fgdb.template
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\DLLs\Hmis.Rpc.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\DLLs\QuickLZ.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\quicklz150_32_1.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\quicklz150_64_1.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\Proxies\HmisProxy.cs
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss.model.customization.dll.config
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss.model.customization.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss.model.customization.pdb
+D:\EIDSS_86\EIDSS61\eidss.model.customization\obj\Debug\eidss.model.customization.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\eidss.model.customization\obj\Debug\eidss.model.customization.dll
+D:\EIDSS_86\EIDSS61\eidss.model.customization\obj\Debug\eidss.model.customization.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.TH.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\fgdb.template
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\DLLs\Hmis.Rpc.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\DLLs\QuickLZ.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\quicklz150_32_1.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\quicklz150_64_1.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\Proxies\HmisProxy.cs
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.model.customization.dll.config
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.model.customization.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.model.customization.pdb
+D:\EIDSS_86\EIDSS\eidss.model.customization\obj\Debug\eidss.model.customization.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\eidss.model.customization\obj\Debug\eidss.model.customization.dll
+D:\EIDSS_86\EIDSS\eidss.model.customization\obj\Debug\eidss.model.customization.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\DLLs\Hmis.Rpc.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\DLLs\QuickLZ.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\quicklz150_32_1.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\quicklz150_64_1.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\Proxies\HmisProxy.cs
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.model.customization.dll.config
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.model.customization.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.model.customization.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.model.customization\obj\Debug\eidss.model.customization.csprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\eidss.model.customization\obj\Debug\eidss.model.customization.dll
+C:\Data\EIDSS_86\EIDSS\eidss.model.customization\obj\Debug\eidss.model.customization.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.TH.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\fgdb.template
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\DLLs\Hmis.Rpc.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\DLLs\QuickLZ.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\quicklz150_32_1.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\quicklz150_64_1.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\Proxies\HmisProxy.cs
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.model.customization.dll.config
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.model.customization.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.model.customization.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.model.customization\obj\Debug\eidss.model.customization.csprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.model.customization\obj\Debug\eidss.model.customization.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.model.customization\obj\Debug\eidss.model.customization.pdb

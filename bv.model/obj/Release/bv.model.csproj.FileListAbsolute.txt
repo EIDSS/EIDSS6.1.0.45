@@ -1,0 +1,5 @@
+D:\EIDSS_86\EIDSS\eidss.main\bin\Release\bv.model.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Release\bv.model.pdb
+D:\EIDSS_86\EIDSS\bv.model\obj\Release\bv.model.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\bv.model\obj\Release\bv.model.dll
+D:\EIDSS_86\EIDSS\bv.model\obj\Release\bv.model.pdb

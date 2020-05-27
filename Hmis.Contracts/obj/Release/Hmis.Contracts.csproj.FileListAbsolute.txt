@@ -1,0 +1,5 @@
+C:\NGDev\EIDSS61\Hmis.Contracts\bin\Release\Hmis.Contracts.dll
+C:\NGDev\EIDSS61\Hmis.Contracts\bin\Release\Hmis.Contracts.pdb
+C:\NGDev\EIDSS61\Hmis.Contracts\obj\Release\Hmis.Contracts.csprojResolveAssemblyReference.cache
+C:\NGDev\EIDSS61\Hmis.Contracts\obj\Release\Hmis.Contracts.dll
+C:\NGDev\EIDSS61\Hmis.Contracts\obj\Release\Hmis.Contracts.pdb

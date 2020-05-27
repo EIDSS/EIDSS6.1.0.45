@@ -1,0 +1,219 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\bv.common.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\bv.common.pdb
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\az-Latn-AZ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\hy-AM\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ka-GE\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\uk-UA\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ar-IQ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\en-IQ-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\en-TH-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\kk-KZ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-KZ-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-RU\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\th-TH\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.Images.ImagesStorage.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.XtraStrings.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.hy-AM.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.ka-GE.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.uk-UA.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.hy-am.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.ka-GE.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.ru-RU.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.th-TH.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.BvMessages.uk-UA.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.XtraStrings.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.XtraStrings.hy-AM.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ka-GE.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.XtraStrings.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ru-RU.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.XtraStrings.th-TH.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.Resources.XtraStrings.uk-UA.resources
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.csproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\az-Latn-AZ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\hy-AM\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\ka-GE\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\uk-UA\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\ar-IQ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\en-IQ-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\en-TH-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\kk-KZ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\ru-KZ-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\ru-RU\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\th-TH\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.dll
+D:\EIDSS_86\EIDSS61\bv.common\obj\Debug\bv.common.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv.common.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv.common.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-AM\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.Images.ImagesStorage.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.hy-AM.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.ka-GE.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.uk-UA.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ar-IQ.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.hy-am.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ka-GE.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.kk-KZ.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ru-RU.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.th-TH.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.uk-UA.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ar-IQ.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.hy-AM.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ka-GE.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.kk-KZ.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ru-RU.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.th-TH.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.uk-UA.resources
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.csproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\az-Latn-AZ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\hy-AM\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\ka-GE\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\uk-UA\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\ar-IQ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\en-IQ-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\en-TH-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\kk-KZ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\ru-KZ-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\ru-RU\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\th-TH\bv.common.resources.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.dll
+D:\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv.common.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv.common.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-AM\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.csprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.Images.ImagesStorage.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.hy-AM.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.en-IQ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.en-TH-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ru-KZ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.hy-AM.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.csproj.GenerateResource.Cache
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\az-Latn-AZ\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\hy-AM\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\ka-GE\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\uk-UA\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\ar-IQ\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\en-IQ-Eidss\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\en-TH-Eidss\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\kk-KZ\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\ru-KZ-Eidss\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\ru-RU\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\th-TH\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.dll
+C:\Data\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv.common.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv.common.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-AM\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.csprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.Images.ImagesStorage.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.hy-AM.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.CsvReader.Resources.ExceptionMessage.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.en-IQ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.en-TH-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ru-KZ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.BvMessages.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.hy-AM.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.Resources.XtraStrings.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.csproj.GenerateResource.Cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\az-Latn-AZ\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\hy-AM\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\ka-GE\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\uk-UA\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\ar-IQ\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\en-IQ-Eidss\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\en-TH-Eidss\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\kk-KZ\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\ru-KZ-Eidss\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\ru-RU\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\th-TH\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.common\obj\Debug\bv.common.pdb

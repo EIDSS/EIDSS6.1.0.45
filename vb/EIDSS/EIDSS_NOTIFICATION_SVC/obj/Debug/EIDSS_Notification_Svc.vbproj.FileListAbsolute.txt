@@ -1,0 +1,44 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS60_Ntfy.exe.config
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS60_Ntfy.exe
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS60_Ntfy.pdb
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS60_Ntfy.xml
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS_Notification_Svc.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS.NtfyServiceInstaller.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS.ServiceControl.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS_Notification_Svc.vbproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.exe
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.xml
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.exe.config
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.exe
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.xml
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS_Notification_Svc.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS.NtfyServiceInstaller.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS.ServiceControl.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS_Notification_Svc.vbproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.exe
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.xml
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.exe.config
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.exe
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.xml
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS_Notification_Svc.vbprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS.NtfyServiceInstaller.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS.ServiceControl.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS_Notification_Svc.vbproj.GenerateResource.Cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.exe
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.xml
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.exe.config
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.exe
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS60_Ntfy.xml
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS_Notification_Svc.vbprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS.NtfyServiceInstaller.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS.ServiceControl.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS_Notification_Svc.vbproj.GenerateResource.Cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.exe
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.xml
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\obj\Debug\EIDSS60_Ntfy.pdb

@@ -1,0 +1,20 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\bv_common.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\bv_common.pdb
+D:\EIDSS_86\EIDSS61\vb\Shared\bv_common\obj\Debug\bvcommon.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\vb\Shared\bv_common\obj\Debug\bv_common.dll
+D:\EIDSS_86\EIDSS61\vb\Shared\bv_common\obj\Debug\bv_common.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv_common.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv_common.pdb
+D:\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Debug\bvcommon.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Debug\bv_common.dll
+D:\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Debug\bv_common.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv_common.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv_common.pdb
+C:\Data\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Debug\bvcommon.vbprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Debug\bv_common.dll
+C:\Data\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Debug\bv_common.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv_common.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\bv_common.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Debug\bvcommon.vbprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Debug\bv_common.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Debug\bv_common.pdb

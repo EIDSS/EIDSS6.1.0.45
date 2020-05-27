@@ -1,0 +1,10 @@
+D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.MultiInstanceSupport\bin\x86\Debug\CustomActions.MultiInstanceSupport.dll
+D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.MultiInstanceSupport\bin\x86\Debug\CustomActions.MultiInstanceSupport.CA.dll
+D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.MultiInstanceSupport\bin\x86\Debug\CustomActions.MultiInstanceSupport.pdb
+D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.MultiInstanceSupport\bin\x86\Debug\CustomActions.MultiInstanceSupport.dll.CodeAnalysisLog.xml
+D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.MultiInstanceSupport\bin\x86\Debug\CustomActions.MultiInstanceSupport.dll.lastcodeanalysissucceeded
+D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.MultiInstanceSupport\bin\x86\Debug\Microsoft.Deployment.WindowsInstaller.dll
+D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.MultiInstanceSupport\bin\x86\Debug\Microsoft.Deployment.WindowsInstaller.xml
+D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.MultiInstanceSupport\obj\x86\Debug\CustomActions.MultiInstanceSupport.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.MultiInstanceSupport\obj\x86\Debug\CustomActions.MultiInstanceSupport.dll
+D:\EIDSS_86\EIDSS\EIDSS.Setup\CustomActions.MultiInstanceSupport\obj\x86\Debug\CustomActions.MultiInstanceSupport.pdb

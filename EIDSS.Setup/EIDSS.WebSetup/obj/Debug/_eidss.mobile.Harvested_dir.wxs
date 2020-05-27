@@ -1,0 +1,1331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="eidss.mobile">
+            <Component Id="cmpF701EE53F92B43F9571665FA95F021C4" Guid="*" MultiInstance="yes">
+                <File Id="filF6C5A8F1EBB200CA21ED68869067FAA1" KeyPath="yes" Source="$(var.MobilePath)\AvrLoggingConfiguration.config" />
+            </Component>
+            <Component Id="cmp4CF0205C01BF3421974FA56BE788BECA" Guid="*" MultiInstance="yes">
+                <File Id="fil72318AAD334DAC92531980C4EF531441" KeyPath="yes" Source="$(var.MobilePath)\BLToolkit.4.dll" />
+            </Component>
+            <Component Id="cmp0032DEB80A08D3A61974BF764E01DB17" Guid="*" MultiInstance="yes">
+                <File Id="fil559BA3F2244BBF4A4B24A3578A906FC5" KeyPath="yes" Source="$(var.MobilePath)\BLToolkit.4.pdb" />
+            </Component>
+            <Component Id="cmp8A3D13152C7458010F7A9CCD729EF3DD" Guid="*" MultiInstance="yes">
+                <File Id="fil7682EBE1F7D58FA9C8489118E6576874" KeyPath="yes" Source="$(var.MobilePath)\BruTile.dll" />
+            </Component>
+            <Component Id="cmpE583AD55DA21199AF02339E4AF540FE7" Guid="*" MultiInstance="yes">
+                <File Id="fil9DEA83FF0A007F6441218629600270A5" KeyPath="yes" Source="$(var.MobilePath)\bv.common.dll" />
+            </Component>
+            <Component Id="cmpAACD2D21F16C71DC70B6BF10B212223B" Guid="*" MultiInstance="yes">
+                <File Id="fil7ADEC6C9D105AF7FD8239F52CBD50001" KeyPath="yes" Source="$(var.MobilePath)\bv.common.pdb" />
+            </Component>
+            <Component Id="cmp125305F2E93BD976B791B2C9BAC1AA20" Guid="*" MultiInstance="yes">
+                <File Id="filDB20988DDB2D8C3004F6F800D77A4354" KeyPath="yes" Source="$(var.MobilePath)\bv.model.dll" />
+            </Component>
+            <Component Id="cmp0F114B15876D94AA42C097009329F09A" Guid="*" MultiInstance="yes">
+                <File Id="filCC48BFC1478A4AB7512971B1B432F40C" KeyPath="yes" Source="$(var.MobilePath)\bv.model.pdb" />
+            </Component>
+            <Component Id="cmpECE8785CD18538EEBB876ED008F6EA6E" Guid="*" MultiInstance="yes">
+                <File Id="filCF836B0759632CF03C07857D11858903" KeyPath="yes" Source="$(var.MobilePath)\bv.winclient.dll" />
+            </Component>
+            <Component Id="cmpE29970BE79C7F8F0F587EB438A7F6126" Guid="*" MultiInstance="yes">
+                <File Id="fil66F25737156C083EF2EF11BE8984DE6C" KeyPath="yes" Source="$(var.MobilePath)\bv.winclient.pdb" />
+            </Component>
+            <Component Id="cmp748BB53A47F55F463E52090A2247E0ED" Guid="*" MultiInstance="yes">
+                <File Id="fil164F7D689ED6A594FDF14753B868C910" KeyPath="yes" Source="$(var.MobilePath)\bvdb_common.dll" />
+            </Component>
+            <Component Id="cmp381F4510CFE24516335BBA9CC1BE3145" Guid="*" MultiInstance="yes">
+                <File Id="filE7A8F10EB33EAF490D3ABEEEE03E3604" KeyPath="yes" Source="$(var.MobilePath)\bvdb_common.pdb" />
+            </Component>
+            <Component Id="cmp6B082183A785D544100D99C6C0279A95" Guid="*" MultiInstance="yes">
+                <File Id="fil865E94A902A83E782A99267E275907D1" KeyPath="yes" Source="$(var.MobilePath)\bvwin_common.dll" />
+            </Component>
+            <Component Id="cmp2657F6F3916086D29197C23DF5B28E8D" Guid="*" MultiInstance="yes">
+                <File Id="fil970308CFCBC66C69D529F07843B118E4" KeyPath="yes" Source="$(var.MobilePath)\bvwin_common.pdb" />
+            </Component>
+            <Component Id="cmp1FB7BD4550B460A8ABF95ECBEF77E107" Guid="*" MultiInstance="yes">
+                <File Id="fil9A9932E8275D6285BB18CD040D3BBE27" KeyPath="yes" Source="$(var.MobilePath)\bv_common.dll" />
+            </Component>
+            <Component Id="cmp760278694CCB4E4C41C24370678C1E45" Guid="*" MultiInstance="yes">
+                <File Id="filB00AE4222794DA1DE6AA5F105B645901" KeyPath="yes" Source="$(var.MobilePath)\bv_common.pdb" />
+            </Component>
+            <Component Id="cmp31AE223C5D479D19F9AD3597DFF27C56" Guid="*" MultiInstance="yes">
+                <File Id="filE47F71DE2DEAD98E239A38D5DC367724" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Charts.v15.1.Core.dll" />
+            </Component>
+            <Component Id="cmpECAFB670F013250F253ABE05426ACF7A" Guid="*" MultiInstance="yes">
+                <File Id="fil91F0FA18D706ACB50FC9603A7603A8F8" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Data.v15.1.dll" />
+            </Component>
+            <Component Id="cmp7FF34D551D0E5A329E5A39B6EEAEF1B5" Guid="*" MultiInstance="yes">
+                <File Id="fil783A77DFF2A2572FF8B3F204D0DF44E4" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Data.v15.1.xml" />
+            </Component>
+            <Component Id="cmp057916A9F7AA71F976B18358B49B816C" Guid="*" MultiInstance="yes">
+                <File Id="filE4B53EAA613E32634713CEDB38BA52AD" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Office.v15.1.Core.dll" />
+            </Component>
+            <Component Id="cmpE649CC89AA56DE954C8EEDB53916EA64" Guid="*" MultiInstance="yes">
+                <File Id="fil0E940AF1B745F54C5BF45A14462F110A" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Office.v15.1.Core.xml" />
+            </Component>
+            <Component Id="cmp0ACF3AF19F8306820C95E810726A7465" Guid="*" MultiInstance="yes">
+                <File Id="fil587ECD69B0AFF5B64086366A137E4744" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.PivotGrid.v15.1.Core.dll" />
+            </Component>
+            <Component Id="cmp935EBDF3C9C2F3B853A0FC5238227FF5" Guid="*" MultiInstance="yes">
+                <File Id="fil6C884CE7C7612C6E25BDB03559C21185" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.PivotGrid.v15.1.Core.xml" />
+            </Component>
+            <Component Id="cmpBB414012AC911D68164244FBC6500AB6" Guid="*" MultiInstance="yes">
+                <File Id="fil5F06D567426EC98384CC2F4D7A2F24AF" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Printing.v15.1.Core.dll" />
+            </Component>
+            <Component Id="cmp4F22327412269F11CAB83AA7735E20A5" Guid="*" MultiInstance="yes">
+                <File Id="fil77487B1283DC9A61E08995E8EADA94F0" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Printing.v15.1.Core.xml" />
+            </Component>
+            <Component Id="cmp74CDC69899BED1EE06FD3EF50ECCB5DB" Guid="*" MultiInstance="yes">
+                <File Id="fil9B5D24B1C8C4AE0B97E7775C04BF99CE" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.RichEdit.v15.1.Core.dll" />
+            </Component>
+            <Component Id="cmpB346885D354CF380A014D71D4878703B" Guid="*" MultiInstance="yes">
+                <File Id="fil288120C66CE950789FB974EBC8FCACAF" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.RichEdit.v15.1.Core.xml" />
+            </Component>
+            <Component Id="cmpDCBE552CF133831BFFF53D42EC8ED1C8" Guid="*" MultiInstance="yes">
+                <File Id="fil7A9C8CD7C472B3DE73201B2B17ADFE20" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Sparkline.v15.1.Core.dll" />
+            </Component>
+            <Component Id="cmpA149B4FB4A72344F7E5163EC5AE16B11" Guid="*" MultiInstance="yes">
+                <File Id="filC1AC75FDFB23264A2A03B0E54B465D04" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Sparkline.v15.1.Core.xml" />
+            </Component>
+            <Component Id="cmp54BBEF293B0E259D77166AA4B4856D56" Guid="*" MultiInstance="yes">
+                <File Id="filCD4F730DE8C9202F89EC39DFB4B7C8AE" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Utils.v15.1.dll" />
+            </Component>
+            <Component Id="cmp62EEF8AF119FA9C8529E5F5A48483FF3" Guid="*" MultiInstance="yes">
+                <File Id="fil030DDF6E9A37640FD3278B8487A84C1D" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Utils.v15.1.UI.dll" />
+            </Component>
+            <Component Id="cmp7B609B8D8A77F8F5311DB2FF297EDA9D" Guid="*" MultiInstance="yes">
+                <File Id="fil7970573EB51F5D1549D96F2316BE252D" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Utils.v15.1.UI.xml" />
+            </Component>
+            <Component Id="cmp8630E9677326A306EB61056FB91EDBB1" Guid="*" MultiInstance="yes">
+                <File Id="filB53763EDEE395BBF3D70B29234EEB661" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.Utils.v15.1.xml" />
+            </Component>
+            <Component Id="cmpBAABE847AEF9B4EF2AD5C356F66E2EE3" Guid="*" MultiInstance="yes">
+                <File Id="fil6228F565BF31DB6F02AEA5752900DBFC" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraBars.v15.1.dll" />
+            </Component>
+            <Component Id="cmp9E8595E5195750D88D14DC0115BF92AB" Guid="*" MultiInstance="yes">
+                <File Id="fil4B59A73562708C1D45DD3DC2A9BFA21A" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraBars.v15.1.xml" />
+            </Component>
+            <Component Id="cmp22CF6CF837316E3B3BB8F1384CE233D2" Guid="*" MultiInstance="yes">
+                <File Id="fil84D3AFA490174B8830CEF307B2B46B57" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraCharts.v15.1.dll" />
+            </Component>
+            <Component Id="cmp8A5544B2AAA147E22FDE76C9B5387968" Guid="*" MultiInstance="yes">
+                <File Id="filA628D86FAE0D5F0D5F3ACE7EDFFBA1B4" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraCharts.v15.1.UI.dll" />
+            </Component>
+            <Component Id="cmp49402734480A0F1C68FC6131C3FDD403" Guid="*" MultiInstance="yes">
+                <File Id="fil08D3F636D6EAE1B3581DD50C5A41587C" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraCharts.v15.1.UI.xml" />
+            </Component>
+            <Component Id="cmpF5EA169653333D8B783F570EBF6761BE" Guid="*" MultiInstance="yes">
+                <File Id="fil8D5E6285108E77A0F866129CE55147B4" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraCharts.v15.1.Wizard.dll" />
+            </Component>
+            <Component Id="cmpE21D865734850AF66E4DCFFDBA95FDD3" Guid="*" MultiInstance="yes">
+                <File Id="fil1C0E1DCF258CA6FD7F975CA96361AD2E" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraCharts.v15.1.Wizard.xml" />
+            </Component>
+            <Component Id="cmpD2148D87B674504B49D668E4817F5EFD" Guid="*" MultiInstance="yes">
+                <File Id="fil20C5DFFB2D69013040CCCD2E446F4149" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraCharts.v15.1.xml" />
+            </Component>
+            <Component Id="cmp47B3BED4B5B0631EA957D4421D0A2708" Guid="*" MultiInstance="yes">
+                <File Id="fil47984A3017902F00D23024CF27CEBDAD" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraEditors.v15.1.dll" />
+            </Component>
+            <Component Id="cmpD2ABE2F24CB36AD07A0C107F49B9EBF1" Guid="*" MultiInstance="yes">
+                <File Id="fil461766111A2344403BADEBAD695A5382" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraEditors.v15.1.xml" />
+            </Component>
+            <Component Id="cmp8D2EEB3271013FAD154BC23EC400030A" Guid="*" MultiInstance="yes">
+                <File Id="fil05695E69C62B29398A55D405C7EA7627" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraGauges.v15.1.Core.dll" />
+            </Component>
+            <Component Id="cmpE5409088C27EAABF832536B249DB0A88" Guid="*" MultiInstance="yes">
+                <File Id="filF3C58059B6771B6AE896E55A43BC5D31" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraGauges.v15.1.Core.xml" />
+            </Component>
+            <Component Id="cmp674A5277D119C4378084E4385B422C96" Guid="*" MultiInstance="yes">
+                <File Id="filC64C6D4B85BF142D78AB973D4BE0E7A5" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraGrid.v15.1.dll" />
+            </Component>
+            <Component Id="cmp03DA6DDC43CA542374025A7D1DB09DDF" Guid="*" MultiInstance="yes">
+                <File Id="filE0FD4DC043AA1B789FF52CAA9C283930" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraGrid.v15.1.xml" />
+            </Component>
+            <Component Id="cmpEF66AB9B52CD3E04DE9D3B4FA0D35007" Guid="*" MultiInstance="yes">
+                <File Id="filEBCA3196D2D599D9EF5059D8398B49C1" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraLayout.v15.1.dll" />
+            </Component>
+            <Component Id="cmp961C4DBDE268FAA0C700EDD04CA7F796" Guid="*" MultiInstance="yes">
+                <File Id="fil5EF7FB8E6D13199F5FB3E202E932C4B8" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraLayout.v15.1.xml" />
+            </Component>
+            <Component Id="cmp0F0CAB3C7098BBA824F972A9F96ACC7F" Guid="*" MultiInstance="yes">
+                <File Id="fil3CB7E79475EFF128131BC9B425754FC4" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraNavBar.v15.1.dll" />
+            </Component>
+            <Component Id="cmp5418B40383B2C32752CF5EFAC1A0D2C6" Guid="*" MultiInstance="yes">
+                <File Id="fil82689065AB1F9BB7C977E7FD9215563C" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraNavBar.v15.1.xml" />
+            </Component>
+            <Component Id="cmp3159F4E3A6D640713173D0C592F5D0CE" Guid="*" MultiInstance="yes">
+                <File Id="fil4D8B27DF73CE65B436DFD48903D26B75" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraPivotGrid.v15.1.dll" />
+            </Component>
+            <Component Id="cmp48683C9211C76DC522026A310109F83B" Guid="*" MultiInstance="yes">
+                <File Id="fil3412042228725357D3A9B47DC105AAC2" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraPivotGrid.v15.1.xml" />
+            </Component>
+            <Component Id="cmp288EE1C8D20C4910D08625FC6CC5F92C" Guid="*" MultiInstance="yes">
+                <File Id="fil66933BC14ED0EACDD8322051D957F7A8" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraPrinting.v15.1.dll" />
+            </Component>
+            <Component Id="cmp08CA52EC5B92ED395A066E4AC9564044" Guid="*" MultiInstance="yes">
+                <File Id="fil2CCE19AB010B1B23D71F629C93CCA238" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraPrinting.v15.1.xml" />
+            </Component>
+            <Component Id="cmpF00ACED8CB04375BCA86FCDB49E715EC" Guid="*" MultiInstance="yes">
+                <File Id="fil4E0C1D6B6160E96B7C4D63EF44923AD9" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraReports.v15.1.dll" />
+            </Component>
+            <Component Id="cmpC8D79AD0DFD22B90723EC91E89B73868" Guid="*" MultiInstance="yes">
+                <File Id="fil8E5A9E97EF019D199A15C88F261535CD" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraReports.v15.1.xml" />
+            </Component>
+            <Component Id="cmp481C717E5B69566813A0013AAC0D28B1" Guid="*" MultiInstance="yes">
+                <File Id="filFFA16F2EAAB2DF2D1C2F8C4891BCB05B" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraRichEdit.v15.1.dll" />
+            </Component>
+            <Component Id="cmpA0BE5ABC1D11DAB6743909CF0910B908" Guid="*" MultiInstance="yes">
+                <File Id="fil78885C2AA3C78DCF3F3DCB00B02AFE9D" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraRichEdit.v15.1.xml" />
+            </Component>
+            <Component Id="cmpD18D58850149E56AAAB75B59EEDC61C8" Guid="*" MultiInstance="yes">
+                <File Id="fil9A5E3845A4433535E7F478BA744FD9E0" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraTreeList.v15.1.dll" />
+            </Component>
+            <Component Id="cmp2ED0DC5F924B289CACBCE8C52EDB8B43" Guid="*" MultiInstance="yes">
+                <File Id="fil91D5F4BC11F680EB7AA9DA4F78FBB54D" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraTreeList.v15.1.xml" />
+            </Component>
+            <Component Id="cmp14C42B87E475AB7CA211E8206B426099" Guid="*" MultiInstance="yes">
+                <File Id="fil95F8E00162E09F7510E134B57286BD3B" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraVerticalGrid.v15.1.dll" />
+            </Component>
+            <Component Id="cmp1D2E871F974E0885716A1F3200D83A37" Guid="*" MultiInstance="yes">
+                <File Id="fil7BFCB4E67EEDE9E847741893EF68806B" KeyPath="yes" Source="$(var.MobilePath)\DevExpress.XtraVerticalGrid.v15.1.xml" />
+            </Component>
+            <Component Id="cmp27755C7E1B9D06098920C1714BDB7A9E" Guid="*" MultiInstance="yes">
+                <File Id="filE38EF0751E70E1807811AF125A91D84C" KeyPath="yes" Source="$(var.MobilePath)\DotSpatial.Data.dll" />
+            </Component>
+            <Component Id="cmpBA11B41CC9481556F06EC0286CAF6A33" Guid="*" MultiInstance="yes">
+                <File Id="filE28F9F050664C6437D76ECD4AE042137" KeyPath="yes" Source="$(var.MobilePath)\DotSpatial.Mono.dll" />
+            </Component>
+            <Component Id="cmp176E2AED6458E80A93F0E976DA09E352" Guid="*" MultiInstance="yes">
+                <File Id="filF0A1F754C50FE75A55CA92A9A6C4164A" KeyPath="yes" Source="$(var.MobilePath)\DotSpatial.Projections.dll" />
+            </Component>
+            <Component Id="cmpB3DB18819E79D8EC24616F8502CC5793" Guid="*" MultiInstance="yes">
+                <File Id="fil329FB47988629F2311DB5EB01107D46B" KeyPath="yes" Source="$(var.MobilePath)\DotSpatial.Serialization.dll" />
+            </Component>
+            <Component Id="cmp8EF3DC066A5E1A72ECEB125E03D8DAFB" Guid="*" MultiInstance="yes">
+                <File Id="fil515750C029947F27BCB1FE24211C3923" KeyPath="yes" Source="$(var.MobilePath)\DotSpatial.Topology.dll" />
+            </Component>
+            <Component Id="cmp35AE3C9476EA9C06F95A7B622D5EB1CC" Guid="*" MultiInstance="yes">
+                <File Id="fil346115D363521F8F9B54FEDD051A72B2" KeyPath="yes" Source="$(var.MobilePath)\eidss.avr.dll" />
+            </Component>
+            <Component Id="cmpBD6204EE7B89CAEDFA662CFA93B517AF" Guid="*" MultiInstance="yes">
+                <File Id="fil86D985C69B3573A353A615C2DA9ED74A" KeyPath="yes" Source="$(var.MobilePath)\EIDSS.AVR.log" />
+            </Component>
+            <Component Id="cmp17E676D46911DE47EF6872C18F4DACEC" Guid="*" MultiInstance="yes">
+                <File Id="fil468C4F8865E1D5EA96FDA3379F03F90B" KeyPath="yes" Source="$(var.MobilePath)\eidss.avr.pdb" />
+            </Component>
+            <Component Id="cmp790D2AB557A1F78E5D8298250500DB29" Guid="*" MultiInstance="yes">
+                <File Id="filCDA7247C963AE1831DED58F5F507FDE3" KeyPath="yes" Source="$(var.MobilePath)\eidss.avr.service.exe" />
+            </Component>
+            <Component Id="cmp0577239B99AFC5608F0B4567D01BB462" Guid="*" MultiInstance="yes">
+                <File Id="fil5DE86B75D73C86526FC7A10047BB45B6" KeyPath="yes" Source="$(var.MobilePath)\eidss.avr.service.exe.config" />
+            </Component>
+            <Component Id="cmpEDA3BF13ED168472EE54B4E7B5213B11" Guid="*" MultiInstance="yes">
+                <File Id="fil4B286E5B525F20A4E96FFFEC82FC9CCE" KeyPath="yes" Source="$(var.MobilePath)\eidss.avr.service.pdb" />
+            </Component>
+            <Component Id="cmp447346D8A0FB9F7A23875392E0911EC3" Guid="*" MultiInstance="yes">
+                <File Id="fil7F40D3AC6A824B50C749F49307FA88F3" KeyPath="yes" Source="$(var.MobilePath)\eidss.avr_db.dll" />
+            </Component>
+            <Component Id="cmpFE6D22C9AFCAF8BDFEFC02F7AEF7AD9E" Guid="*" MultiInstance="yes">
+                <File Id="fil4D31DCF394562865A4B54CE5236AEE81" KeyPath="yes" Source="$(var.MobilePath)\eidss.avr_db.pdb" />
+            </Component>
+            <Component Id="cmp68C74B957929A41F10F410B3D9A72BE5" Guid="*" MultiInstance="yes">
+                <File Id="fil4BCA9F24CCF607211D569A3937A8A5AA" KeyPath="yes" Source="$(var.MobilePath)\eidss.core.dll" />
+            </Component>
+            <Component Id="cmpDBE16175D2F109BA892DA6DB01301CD6" Guid="*" MultiInstance="yes">
+                <File Id="fil6072D3D61B08580509B8428E51469887" KeyPath="yes" Source="$(var.MobilePath)\eidss.core.pdb" />
+            </Component>
+            <Component Id="cmp14CDA34F106DD07EA37905135D97ABBF" Guid="*" MultiInstance="yes">
+                <File Id="fil64C74788E6CA48D2E0546947DA7B1DD3" KeyPath="yes" Source="$(var.MobilePath)\EIDSS.FlexibleForms.dll" />
+            </Component>
+            <Component Id="cmpDBFF924EAE061964AA352D2B8586D0C9" Guid="*" MultiInstance="yes">
+                <File Id="filECB581AC653B7839AB13EA2C715B0C6C" KeyPath="yes" Source="$(var.MobilePath)\EIDSS.FlexibleForms.pdb" />
+            </Component>
+            <Component Id="cmp5EB5B9CA548BB06E73023E1D863AA5AD" Guid="*" MultiInstance="yes">
+                <File Id="fil9BAC21618CD365BF3123EB74C4E89F6B" KeyPath="yes" Source="$(var.MobilePath)\eidss.gis.common.dll" />
+            </Component>
+            <Component Id="cmpDCBA926A8D9C47A9F5C6F3B6404B48D5" Guid="*" MultiInstance="yes">
+                <File Id="fil807A73E6F4ACB974EFE83349B68691DF" KeyPath="yes" Source="$(var.MobilePath)\eidss.gis.common.pdb" />
+            </Component>
+            <Component Id="cmp04F10E926D561BB5CD15E4DFDB16EC67" Guid="*" MultiInstance="yes">
+                <File Id="filF9F009AEA8ADAE14C7AB693544C5CFF5" KeyPath="yes" Source="$(var.MobilePath)\eidss.gis.dll" />
+            </Component>
+            <Component Id="cmp12558A78212CE628398B8857A7EE79BF" Guid="*" MultiInstance="yes">
+                <File Id="fil2FDEAEA113946B83DD97759B306D0E3A" KeyPath="yes" Source="$(var.MobilePath)\eidss.gis.pdb" />
+            </Component>
+            <Component Id="cmpC5D79E0B3101D7EA34BBF3BB16B5F037" Guid="*" MultiInstance="yes">
+                <File Id="fil9F2173D4E73E73FC1632BF6C9042ADDD" KeyPath="yes" Source="$(var.MobilePath)\eidss.model.dll" />
+            </Component>
+            <Component Id="cmpB33173502C07F3865493807EC4D19CD6" Guid="*" MultiInstance="yes">
+                <File Id="filB6FCEA624BAE7F16543F0995659B646A" KeyPath="yes" Source="$(var.MobilePath)\eidss.model.pdb" />
+            </Component>
+            <Component Id="cmp2609902B3B7833AFE98D663CAEA82042" Guid="*" MultiInstance="yes">
+                <File Id="fil24016DD3A36A67309CA0300CDBE6AC05" KeyPath="yes" Source="$(var.MobilePath)\eidss.winclient.dll" />
+            </Component>
+            <Component Id="cmpC994A4D1644FD85E2D6FF957BC21EF89" Guid="*" MultiInstance="yes">
+                <File Id="filEB55AA231A3B06853633D6640F01D4AA" KeyPath="yes" Source="$(var.MobilePath)\eidss.winclient.pdb" />
+            </Component>
+            <Component Id="cmp4D97BA81C5F7CBD8C5517CB7B0E3D74E" Guid="*" MultiInstance="yes">
+                <File Id="filF8247B3F8870981E3C252DD10F22E8CD" KeyPath="yes" Source="$(var.MobilePath)\eidss_common.dll" />
+            </Component>
+            <Component Id="cmp6E4FEFE8B0F6239D81D49CF09E005E01" Guid="*" MultiInstance="yes">
+                <File Id="fil3EE384168E8A647F1FE604936A1B5031" KeyPath="yes" Source="$(var.MobilePath)\eidss_common.pdb" />
+            </Component>
+            <Component Id="cmpA289B12A7DEDE0C3DB7BD4E79BDF57E0" Guid="*" MultiInstance="yes">
+                <File Id="fil7D4087043CF8974C45EBA6B4D191A063" KeyPath="yes" Source="$(var.MobilePath)\eidss_db.dll" />
+            </Component>
+            <Component Id="cmp74D99BFE7CD81C8C01DB58FFA8F398AD" Guid="*" MultiInstance="yes">
+                <File Id="fil63974D05363FEBD9123B0AA5F0D1F9F3" KeyPath="yes" Source="$(var.MobilePath)\eidss_db.pdb" />
+            </Component>
+            <Component Id="cmpB4A826D180D78EA708F31D05BC1CEAA3" Guid="*" MultiInstance="yes">
+                <File Id="fil81127C72078554854D09C4D8159C2EFE" KeyPath="yes" Source="$(var.MobilePath)\eidss_forms.dll" />
+            </Component>
+            <Component Id="cmp5136808864D73C39846F49E5E1024BA7" Guid="*" MultiInstance="yes">
+                <File Id="fil3B725885EF327D47E109665B7A25FB12" KeyPath="yes" Source="$(var.MobilePath)\eidss_forms.pdb" />
+            </Component>
+            <Component Id="cmpD93C82F92AC30956C6E4ADDB8DC79EF0" Guid="*" MultiInstance="yes">
+                <File Id="fil8B01123EFD29511743850E9A0F6C219F" KeyPath="yes" Source="$(var.MobilePath)\fgdb.template" />
+            </Component>
+            <Component Id="cmp0143D6CDDFEDB18724FCF924BEB53BCF" Guid="*" MultiInstance="yes">
+                <File Id="filE96A1355D1AD4E7E2E08CA7060E87604" KeyPath="yes" Source="$(var.MobilePath)\gdal_csharp.dll" />
+            </Component>
+            <Component Id="cmp0B1993B9672CE8171F065E288728B583" Guid="*" MultiInstance="yes">
+                <File Id="fil18F6D08F1F578265FDFB0CD329ECF107" KeyPath="yes" Source="$(var.MobilePath)\GeoAPI.dll" />
+            </Component>
+            <Component Id="cmpC3F03F0AACF399F4EFFBB445FD1B06DB" Guid="*" MultiInstance="yes">
+                <File Id="fil4E7D55573AB8A1A9B643FE8D781E0E93" KeyPath="yes" Source="$(var.MobilePath)\GIS_V6.dll" />
+            </Component>
+            <Component Id="cmpB917D08FE81EC2B630D033EFD89E39C5" Guid="*" MultiInstance="yes">
+                <File Id="fil8142468A449E382EADFD649A03D4450D" KeyPath="yes" Source="$(var.MobilePath)\ICSharpCode.SharpZipLib.dll" />
+            </Component>
+            <Component Id="cmp3D636C00FE8D3930D41676FAF93F9538" Guid="*" MultiInstance="yes">
+                <File Id="fil8BCBE4613F1CDD978A9F22AF44C0EE42" KeyPath="yes" Source="$(var.MobilePath)\Ionic.Zip.dll" />
+            </Component>
+            <Component Id="cmp6102A5FB921401650B62872C2FBF3966" Guid="*" MultiInstance="yes">
+                <File Id="filC0965DA392D0BD1C54C511F57F699E84" KeyPath="yes" Source="$(var.MobilePath)\Ionic.Zlib.dll" />
+            </Component>
+            <Component Id="cmp5C5BC333946BE9BECF95A91E5A5B0F73" Guid="*" MultiInstance="yes">
+                <File Id="filDCE1E97E53276A1844E97BCA6DBEE7DE" KeyPath="yes" Source="$(var.MobilePath)\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+            </Component>
+            <Component Id="cmp5C42C5C7025F1020142A191AD83D25DF" Guid="*" MultiInstance="yes">
+                <File Id="fil8E7E27FE04D2440293BCBDA71F81030F" KeyPath="yes" Source="$(var.MobilePath)\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll" />
+            </Component>
+            <Component Id="cmpEA56CA4A188D0EA6103E618C4D90B702" Guid="*" MultiInstance="yes">
+                <File Id="filF005C32CEF232F6B44A4FB9A5ABF5896" KeyPath="yes" Source="$(var.MobilePath)\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+            </Component>
+            <Component Id="cmpC8C2D27EA43FA7BB6CFBE343B9CBCF2A" Guid="*" MultiInstance="yes">
+                <File Id="filDC295BED41A7D14483401E968586B6A4" KeyPath="yes" Source="$(var.MobilePath)\Microsoft.Practices.ServiceLocation.dll" />
+            </Component>
+            <Component Id="cmp438A99A20B7AE2968E34DC6CB89B673C" Guid="*" MultiInstance="yes">
+                <File Id="filE68EB5585936D6AA9C81E88C23D33F0C" KeyPath="yes" Source="$(var.MobilePath)\Microsoft.Practices.Unity.dll" />
+            </Component>
+            <Component Id="cmpAAE747E5616E17913C5F6D70A8030C36" Guid="*" MultiInstance="yes">
+                <File Id="fil0DEDB3A6D43A249BD6D15D769094BF54" KeyPath="yes" Source="$(var.MobilePath)\Microsoft.Practices.Unity.Interception.dll" />
+            </Component>
+            <Component Id="cmp41B0FD5A2581A4CDABB979271F26C0D0" Guid="*" MultiInstance="yes">
+                <File Id="fil5D397F6590231099D8952A0201C9DECA" KeyPath="yes" Source="$(var.MobilePath)\Microsoft.SqlServer.ConnectionInfo.dll" />
+            </Component>
+            <Component Id="cmp5B23B91734B542418A01BB65DDAD608E" Guid="*" MultiInstance="yes">
+                <File Id="fil88E22952CB0E8B43716E77DF9F969A28" KeyPath="yes" Source="$(var.MobilePath)\Microsoft.SqlServer.Management.Sdk.Sfc.dll" />
+            </Component>
+            <Component Id="cmp7A861C654FF47C5D98E29C0B8DF52F32" Guid="*" MultiInstance="yes">
+                <File Id="fil8C98E7A05E93C528EEA2183140148E81" KeyPath="yes" Source="$(var.MobilePath)\Microsoft.SqlServer.Smo.dll" />
+            </Component>
+            <Component Id="cmpE66C1509DB12A4286A62C076D1C2C3E7" Guid="*" MultiInstance="yes">
+                <File Id="fil2E8D5B410D79148CD7E3372781B263E4" KeyPath="yes" Source="$(var.MobilePath)\Microsoft.SqlServer.SqlClrProvider.dll" />
+            </Component>
+            <Component Id="cmpACE26933393AC2897922F42A300BDA50" Guid="*" MultiInstance="yes">
+                <File Id="filF10ED481E61A488E5A52A48FDE8043C4" KeyPath="yes" Source="$(var.MobilePath)\Microsoft.SqlServer.SqlEnum.dll" />
+            </Component>
+            <Component Id="cmp056FB66F6D6A7BBD5C2DBE0AEFB926F4" Guid="*" MultiInstance="yes">
+                <File Id="fil8CD9A3720F6F1490400CAF7CE4444EA7" KeyPath="yes" Source="$(var.MobilePath)\Mono.Security.dll" />
+            </Component>
+            <Component Id="cmpF30F1CEDF9EFDCE7294BE2666B8FE9FC" Guid="*" MultiInstance="yes">
+                <File Id="fil547270242BBD472AF2A45272443E1788" KeyPath="yes" Source="$(var.MobilePath)\NetTopologySuite.dll" />
+            </Component>
+            <Component Id="cmp331487AD72D92AF8A138271919D33A64" Guid="*" MultiInstance="yes">
+                <File Id="fil76BB52D462903541E27C0DF28CFEF1FD" KeyPath="yes" Source="$(var.MobilePath)\Npgsql.dll" />
+            </Component>
+            <Component Id="cmp478B0C477EFC22A3F12F4E1E03E02601" Guid="*" MultiInstance="yes">
+                <File Id="filDF8CEAE041DF3CDE9640C76373A628E1" KeyPath="yes" Source="$(var.MobilePath)\NPOI.dll" />
+            </Component>
+            <Component Id="cmp87F306D5F31ED0F210F218374B9A6CBF" Guid="*" MultiInstance="yes">
+                <File Id="filF90153C4E386D715E70545F66C41411A" KeyPath="yes" Source="$(var.MobilePath)\NPOI.OOXML.dll" />
+            </Component>
+            <Component Id="cmp703A6871D6649031E09EEC4329B7940F" Guid="*" MultiInstance="yes">
+                <File Id="fil32DFE80B4EB16CB8100AC05E63DD262E" KeyPath="yes" Source="$(var.MobilePath)\NPOI.OpenXml4Net.dll" />
+            </Component>
+            <Component Id="cmp8FDF843118EA391A7E3F3F840B77E9A6" Guid="*" MultiInstance="yes">
+                <File Id="fil27653898FEEDBAF21FEC4C5D2CD3D923" KeyPath="yes" Source="$(var.MobilePath)\NPOI.OpenXmlFormats.dll" />
+            </Component>
+            <Component Id="cmp080B463E016C65A6D78A5707612B5220" Guid="*" MultiInstance="yes">
+                <File Id="filC342A2561A1F20F61CE9E6A8C0142B7E" KeyPath="yes" Source="$(var.MobilePath)\ogr_csharp.dll" />
+            </Component>
+            <Component Id="cmp035B7CDF77C0A536DEC1F473113451CA" Guid="*" MultiInstance="yes">
+                <File Id="fil702102342A1EFB0D4012A0109C8A092D" KeyPath="yes" Source="$(var.MobilePath)\osr_csharp.dll" />
+            </Component>
+            <Component Id="cmpB5AE2F09026DA4537D1C661DE5C55288" Guid="*" MultiInstance="yes">
+                <File Id="fil65858010A06B6407FD0CB2FD01750CF1" KeyPath="yes" Source="$(var.MobilePath)\PostgreSql.Data.PostgreSqlClient.dll" />
+            </Component>
+            <Component Id="cmp80156565E0C00ED2B682EBCB018FB8A3" Guid="*" MultiInstance="yes">
+                <File Id="fil3BB1F7A22D6074BD642F859EC1B67E29" KeyPath="yes" Source="$(var.MobilePath)\SharpMap.dll" />
+            </Component>
+            <Component Id="cmp664417F8D39A9D7DEBF651D4A818BA27" Guid="*" MultiInstance="yes">
+                <File Id="fil8874C370F63D0642F2832E93EF148610" KeyPath="yes" Source="$(var.MobilePath)\SharpMap.Extensions.dll" />
+            </Component>
+            <Component Id="cmpCE09D3B6DE9F1DA28DB4195D85D12109" Guid="*" MultiInstance="yes">
+                <File Id="fil43E24430D45DD96D6F1B6BC5F8C476BB" KeyPath="yes" Source="$(var.MobilePath)\StructureMap.dll" />
+            </Component>
+            <Component Id="cmp774BE1DEC76B81247C7876BC8A0FE418" Guid="*" MultiInstance="yes">
+                <File Id="filA8A22285FAAFFEBCDED222982E7B55B2" KeyPath="yes" Source="$(var.MobilePath)\StructureMap.Net4.dll" />
+            </Component>
+            <Component Id="cmpCE312D941D7C893DA707997FE83EEF0C" Guid="*" MultiInstance="yes">
+                <File Id="filD5CA8FC54041DBCAB6EE87A8E26F6E51" KeyPath="yes" Source="$(var.MobilePath)\System.Data.SQLite.dll" />
+            </Component>
+            <Directory Id="dirFE24A86FFE989E9A59E1AB7C508A16CB" Name="AccessTemplate">
+                <Component Id="cmpD68F9C2EA1C2A344AB40A29797E51929" Guid="*" MultiInstance="yes">
+                    <File Id="filB49B57CD19FF0A2ED31A9F7BB8ED1176" KeyPath="yes" Source="$(var.MobilePath)\AccessTemplate\template.mdb" />
+                </Component>
+            </Directory>
+            <Directory Id="dir186F8C812A3C306D3DBD74253F8A2C35" Name="ar-IQ">
+                <Component Id="cmp46ACFC232E14EBC07D2A64FC8914C545" Guid="*" MultiInstance="yes">
+                    <File Id="filD7094F4D53E7798313B77AE30D50E3BB" KeyPath="yes" Source="$(var.MobilePath)\ar-IQ\bv.common.resources.dll" />
+                </Component>
+                <Component Id="cmp0ECAC9D8C4862BE7D35801BA31A1B52E" Guid="*" MultiInstance="yes">
+                    <File Id="fil5AA958B25BCC3FC8E6797092317AE0E7" KeyPath="yes" Source="$(var.MobilePath)\ar-IQ\bv.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmpE8B76077537DA843543D4D85AA52CE64" Guid="*" MultiInstance="yes">
+                    <File Id="fil0358A230BBC546EDAD9214050C693BB6" KeyPath="yes" Source="$(var.MobilePath)\ar-IQ\bvwin_common.resources.dll" />
+                </Component>
+                <Component Id="cmpE1BC477E9E4762DCBC76AC3D860D5216" Guid="*" MultiInstance="yes">
+                    <File Id="filE79A3F15EA1ED0776F1A0200E5E5375B" KeyPath="yes" Source="$(var.MobilePath)\ar-IQ\eidss.avr.resources.dll" />
+                </Component>
+                <Component Id="cmp996657DE74DAF17637C52FA68F0F870D" Guid="*" MultiInstance="yes">
+                    <File Id="fil3C45CD9A239324F48E9C811B9553F75A" KeyPath="yes" Source="$(var.MobilePath)\ar-IQ\eidss.core.resources.dll" />
+                </Component>
+                <Component Id="cmpF95E17DBF3904C84C541367A30755E25" Guid="*" MultiInstance="yes">
+                    <File Id="fil020736271E0D62F223FBB6E2508BA334" KeyPath="yes" Source="$(var.MobilePath)\ar-IQ\EIDSS.FlexibleForms.resources.dll" />
+                </Component>
+                <Component Id="cmp4EA89E90B73E874E634D7396B4172D73" Guid="*" MultiInstance="yes">
+                    <File Id="fil3FB1049FEE678CA247B6F3B5592C5ED6" KeyPath="yes" Source="$(var.MobilePath)\ar-IQ\eidss.gis.resources.dll" />
+                </Component>
+                <Component Id="cmp641ED4B7660CC63174AEB354C7256C3B" Guid="*" MultiInstance="yes">
+                    <File Id="fil11AA4AEED3B33CED56C4FB45C09B8EC0" KeyPath="yes" Source="$(var.MobilePath)\ar-IQ\eidss.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmpBDC5A92225D0218A975082BDE0AE1531" Guid="*" MultiInstance="yes">
+                    <File Id="filEF8C01A21FAE3199028FDC4120FE87ED" KeyPath="yes" Source="$(var.MobilePath)\ar-IQ\eidss_forms.resources.dll" />
+                </Component>
+                <Component Id="cmp1383316F32122002315450CFFDAC06F5" Guid="*" MultiInstance="yes">
+                    <File Id="fil6DC999564B5056E10FA6B00DA7CE345D" KeyPath="yes" Source="$(var.MobilePath)\ar-IQ\GIS_V6.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir70D4E6A8E7A6ED42A6C97EED18486DF1" Name="az-Latn-AZ">
+                <Component Id="cmp3BE2BE1E7D5C9440AFA86F9B509992A4" Guid="*" MultiInstance="yes">
+                    <File Id="fil5FF2953C2FA0E35A7E92682679DC02CD" KeyPath="yes" Source="$(var.MobilePath)\az-Latn-AZ\bv.common.resources.dll" />
+                </Component>
+                <Component Id="cmp830A2D15BA2AAC61684349ACF614C214" Guid="*" MultiInstance="yes">
+                    <File Id="fil0FBD98734AF491F612E0B7139C9C01D5" KeyPath="yes" Source="$(var.MobilePath)\az-Latn-AZ\bv.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp0FC609C22F46DA9885217508E79C2A38" Guid="*" MultiInstance="yes">
+                    <File Id="fil4C89F23D8E36D953AD1E018CC8DC3D5E" KeyPath="yes" Source="$(var.MobilePath)\az-Latn-AZ\bvwin_common.resources.dll" />
+                </Component>
+                <Component Id="cmp4479F41CFE5470421EFA3C14CBDF8308" Guid="*" MultiInstance="yes">
+                    <File Id="filF7EF038F9188208280ED3590E3B6D850" KeyPath="yes" Source="$(var.MobilePath)\az-Latn-AZ\eidss.avr.resources.dll" />
+                </Component>
+                <Component Id="cmpA5C0D0B0E4407C75EAE720F4B87924BD" Guid="*" MultiInstance="yes">
+                    <File Id="fil238D3EEF36873193F857E5805383FDD9" KeyPath="yes" Source="$(var.MobilePath)\az-Latn-AZ\eidss.core.resources.dll" />
+                </Component>
+                <Component Id="cmpA0CC0D645BD367C88BE146DF8D16463C" Guid="*" MultiInstance="yes">
+                    <File Id="fil8206CFD5818774370A769118EE2E2E1D" KeyPath="yes" Source="$(var.MobilePath)\az-Latn-AZ\EIDSS.FlexibleForms.resources.dll" />
+                </Component>
+                <Component Id="cmpF2BC6ABC00198CF54518C2AD5E7B13F4" Guid="*" MultiInstance="yes">
+                    <File Id="filE1771EFF277B4283FA7E54EC39064F24" KeyPath="yes" Source="$(var.MobilePath)\az-Latn-AZ\eidss.gis.resources.dll" />
+                </Component>
+                <Component Id="cmp42274D7DDEAFB94DA9947F65D2247967" Guid="*" MultiInstance="yes">
+                    <File Id="fil2570440A1DA360D8686B8392D45ECB7E" KeyPath="yes" Source="$(var.MobilePath)\az-Latn-AZ\eidss.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp7645FBCE685928E384AB74A9F79AC70E" Guid="*" MultiInstance="yes">
+                    <File Id="fil40D9CD1C1530A85A4E2A5D04BC72671A" KeyPath="yes" Source="$(var.MobilePath)\az-Latn-AZ\eidss_forms.resources.dll" />
+                </Component>
+                <Component Id="cmp660D2CFF744C4B9C2B153A0A2C654926" Guid="*" MultiInstance="yes">
+                    <File Id="fil7D2B524718386BBBE92E8DA85EF43C78" KeyPath="yes" Source="$(var.MobilePath)\az-Latn-AZ\GIS_V6.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir7953B02B69FB918AB8B81FE02215982C" Name="de">
+                <Component Id="cmp913618981A9F04403DBBA96F1EE1142F" Guid="*" MultiInstance="yes">
+                    <File Id="fil9BCF9F5BDF42817AFD916FCAD546111C" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.Data.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpE9976E5D13E902F1953EAA851818CD33" Guid="*" MultiInstance="yes">
+                    <File Id="filDF95BD9698FE8659CA539EC1A344E28C" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.Office.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmpF76A0002AFB5E59D1873429B995818C0" Guid="*" MultiInstance="yes">
+                    <File Id="fil99182B6276C7DB8A315A5D597C91A0E4" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.PivotGrid.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmpF2B508DBCBF8D5CBE7881B8D47CB8A93" Guid="*" MultiInstance="yes">
+                    <File Id="fil3307AF483565E6EAE6F521D52B1E477A" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.Printing.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmpB2809B11A26E8721CC57D1F10A55748E" Guid="*" MultiInstance="yes">
+                    <File Id="fil3E92EFAA281EE23F7786A3A87715AB1F" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.RichEdit.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp5E488D6EEC0A1BC25569DAEB98CE956F" Guid="*" MultiInstance="yes">
+                    <File Id="fil1AF5D5DCD2E3C3D56A4306CDF11B7CBD" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.Sparkline.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp5588E8CD402D69D77F4201898F94F98F" Guid="*" MultiInstance="yes">
+                    <File Id="filB8A2DD308DA9248F2D750F5870A4A286" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.Utils.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpF7F190AF87B69F7DEF7B047AEC6C168C" Guid="*" MultiInstance="yes">
+                    <File Id="filB94C9DBA46AB8F8CF66B3D55E8D01A4B" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.Utils.v15.1.UI.resources.dll" />
+                </Component>
+                <Component Id="cmp08AAAAA58A920E0FDC3B6A87899C534E" Guid="*" MultiInstance="yes">
+                    <File Id="fil8F3C83E86AB0E1746E38CF374AD1AE2C" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraBars.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpFCF3CEE1A341AA874E751E8D58C244FB" Guid="*" MultiInstance="yes">
+                    <File Id="fil698990CA482CDEECBA5AA6C1381D1F32" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraCharts.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp943596977E3E700E42FF58354BA56FA5" Guid="*" MultiInstance="yes">
+                    <File Id="fil5EE298CB4A45FFB020FBD2D17D12CCF7" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraCharts.v15.1.Wizard.resources.dll" />
+                </Component>
+                <Component Id="cmp95977069ABA63923573F34E4808879C6" Guid="*" MultiInstance="yes">
+                    <File Id="fil4D41FBC67A2F81FFA1E4DD4A81ABB96D" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraEditors.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp722827AC7DAB812878364BB507550B03" Guid="*" MultiInstance="yes">
+                    <File Id="fil45D13459FEC519CC42FDAE07B6503BA0" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraGauges.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp06AE81EA82EF1ECC33EA6103C7DD3329" Guid="*" MultiInstance="yes">
+                    <File Id="fil6EC6442D1235C20581EEF8ADF6EE0BB5" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraGrid.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpD61F9EB5FB4BBD46D8E429A5E8A9B967" Guid="*" MultiInstance="yes">
+                    <File Id="filA5CDA2730E827E3DA0F8621B03B6B81E" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraLayout.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp0A87914BB7BCFD708357F22006A24CAB" Guid="*" MultiInstance="yes">
+                    <File Id="fil93DEDE1158E1A9922F0746C434DBE7BA" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraNavBar.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpCD7719063173DACCC96B56C572CF58F0" Guid="*" MultiInstance="yes">
+                    <File Id="fil9BEF7749ACB6BC075673C5A8164CD5FE" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraPivotGrid.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp1FAC2363512F0FB539367E7784A40715" Guid="*" MultiInstance="yes">
+                    <File Id="filDB0E6CDCFADBD9144283FC8C04CE7FBE" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraPrinting.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp5D826FF370141F186A93B71476BC4049" Guid="*" MultiInstance="yes">
+                    <File Id="filCE6A96B5BEAF8D955B2880809312A081" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraReports.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp37F2407C997BA3728CE058F7D8C7F5FA" Guid="*" MultiInstance="yes">
+                    <File Id="fil7FC5197C4EC54F9844B83B13C51983A9" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraRichEdit.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpDB1070ADAD01618874A15F140BC2B2D5" Guid="*" MultiInstance="yes">
+                    <File Id="fil8C5E2FB4F1B6CC07217D5C4890E03DEF" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraTreeList.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp9F4B030EBDC75E3E79E838308F235581" Guid="*" MultiInstance="yes">
+                    <File Id="filE9BE797CBBFEDB1E6BADDAA257B1519E" KeyPath="yes" Source="$(var.MobilePath)\de\DevExpress.XtraVerticalGrid.v15.1.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dirFB72CC4CA67C0589AD9DE1CFF8CDFBA0" Name="en-IQ-Eidss">
+                <Component Id="cmp2D74EA183A2916459140756C64DE1850" Guid="*" MultiInstance="yes">
+                    <File Id="fil2CAF5E3F320931DFAD931ACC8EC663AC" KeyPath="yes" Source="$(var.MobilePath)\en-IQ-Eidss\bv.common.resources.dll" />
+                </Component>
+                <Component Id="cmp74C2538E7F22300406ABE1FCD63B5DA9" Guid="*" MultiInstance="yes">
+                    <File Id="fil341817C5BB6D0FE58402E6AB07C18DC1" KeyPath="yes" Source="$(var.MobilePath)\en-IQ-Eidss\eidss.core.resources.dll" />
+                </Component>
+                <Component Id="cmp4DC86178D0E0F213FD25A8EC6F8BE102" Guid="*" MultiInstance="yes">
+                    <File Id="filCCA5CE5497EB05189282257796541FFD" KeyPath="yes" Source="$(var.MobilePath)\en-IQ-Eidss\eidss.gis.resources.dll" />
+                </Component>
+                <Component Id="cmp47BBBCEF564C9C6A3C57D098409E2D07" Guid="*" MultiInstance="yes">
+                    <File Id="filDEFD0FD0B2491616F990F815052FF95D" KeyPath="yes" Source="$(var.MobilePath)\en-IQ-Eidss\eidss.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp43A59DC6B1522C40B00B9E8E7950BB1C" Guid="*" MultiInstance="yes">
+                    <File Id="fil0D60C1F8071D998EF11ABBEB408D1AEA" KeyPath="yes" Source="$(var.MobilePath)\en-IQ-Eidss\eidss_forms.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir1663E32259819114DC08199BA134CC95" Name="en-TH-Eidss">
+                <Component Id="cmp4C47FEB96225AF42F21DE5F27262479A" Guid="*" MultiInstance="yes">
+                    <File Id="fil737365559B912D79D9A26630886F7B1C" KeyPath="yes" Source="$(var.MobilePath)\en-TH-Eidss\bv.common.resources.dll" />
+                </Component>
+                <Component Id="cmpC169F464CB6EE79FD3E8E48BADE2F4F4" Guid="*" MultiInstance="yes">
+                    <File Id="filFA5446529E17CA73D51642D293160E2C" KeyPath="yes" Source="$(var.MobilePath)\en-TH-Eidss\eidss.core.resources.dll" />
+                </Component>
+                <Component Id="cmpE7009FBF24C28E41CB7DE610470AE3D8" Guid="*" MultiInstance="yes">
+                    <File Id="fil610931197E6D8D6FAAF14917AB99F4DE" KeyPath="yes" Source="$(var.MobilePath)\en-TH-Eidss\eidss.gis.resources.dll" />
+                </Component>
+                <Component Id="cmpB6270079284968F1E097AAF396671071" Guid="*" MultiInstance="yes">
+                    <File Id="filE33A7FB327CB6DDCC6981FE4A589FC42" KeyPath="yes" Source="$(var.MobilePath)\en-TH-Eidss\eidss.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmpA5CD6B314803EB52D6393BEC50E20D41" Guid="*" MultiInstance="yes">
+                    <File Id="filDBD21B47CA1BC0B22E7682296073AE8D" KeyPath="yes" Source="$(var.MobilePath)\en-TH-Eidss\eidss_forms.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dirB4485BC06221E3D6ADDDE5F8A1565B89" Name="es">
+                <Component Id="cmpA5FA071290E66EEEA4F32CC7F07B0BE9" Guid="*" MultiInstance="yes">
+                    <File Id="filE23BA394C5D9D2D0316EAF7B09691558" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.Data.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp06C01AEB09CC9C7FB9AFFF14D41B70E8" Guid="*" MultiInstance="yes">
+                    <File Id="fil7065C7EA733C1ACEEF43521BEE9AF3D6" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.Office.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp1D701125E4903DE01AD6D7B2993F4884" Guid="*" MultiInstance="yes">
+                    <File Id="filA8DC0410B846A7846E9B0A93D611ECAD" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.PivotGrid.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp0A2CECF5D682645994020A5511DD7D2A" Guid="*" MultiInstance="yes">
+                    <File Id="fil231E23D02436DFB34552A1F08A55D0B0" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.Printing.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp6E1E040C0504455CB2C4FE96A950F2AC" Guid="*" MultiInstance="yes">
+                    <File Id="fil14477807C11A1D3F39DBA1B6A0A1272F" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.RichEdit.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmpD06077C89C3FFCB5FAC0565F69984998" Guid="*" MultiInstance="yes">
+                    <File Id="filA3359D7F209ADF19D57523B9BED745E7" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.Sparkline.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp9729FE7A6194BE66FE9BBDDB9CC4B333" Guid="*" MultiInstance="yes">
+                    <File Id="fil64C09E30920A812670A4755B6F1F1BB1" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.Utils.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp69787FDBEDF832C64FA15B340E763AAD" Guid="*" MultiInstance="yes">
+                    <File Id="fil6BA45C0E96CD48954471180B67EBDC92" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.Utils.v15.1.UI.resources.dll" />
+                </Component>
+                <Component Id="cmp9C4189968F12D4C9FA57D4DEFCD93488" Guid="*" MultiInstance="yes">
+                    <File Id="fil31B78FFF3855357A06D46EB25A74D79A" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraBars.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpCFABF250B04B14F6986F10447710C6D8" Guid="*" MultiInstance="yes">
+                    <File Id="fil68283D6BCC76383B3B32539FCD50632A" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraCharts.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp5916B9D532F84D051E1BF9E897DD3456" Guid="*" MultiInstance="yes">
+                    <File Id="filB8FFE4C7D4D5083B29C60920408A23CC" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraCharts.v15.1.Wizard.resources.dll" />
+                </Component>
+                <Component Id="cmp92413AC8C3DC53BC1F8C8F190FD54644" Guid="*" MultiInstance="yes">
+                    <File Id="fil041F7F11AA7BFC829B717711EA0FE59C" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraEditors.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp5E859998558771874838FBC9CE8EC24A" Guid="*" MultiInstance="yes">
+                    <File Id="filBFF629CA3FBA000B866867775BA24BF1" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraGauges.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp74BAEF65DF5FA238320807A52497513A" Guid="*" MultiInstance="yes">
+                    <File Id="fil95774177FEFCC7C580BF4F06C8C77E35" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraGrid.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpE91C73D55C3ABB34EEDC71E237B58846" Guid="*" MultiInstance="yes">
+                    <File Id="fil481E3D2BB7E27945E2E8DB5FCB6D9FAC" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraLayout.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp5C692F28343AF51285525CD6EA38EE9F" Guid="*" MultiInstance="yes">
+                    <File Id="fil33609EA493FC27764C532B480EFE7ADD" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraNavBar.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpB3CEC951A067D30FC30DF844DD09B76A" Guid="*" MultiInstance="yes">
+                    <File Id="fil6BBFE7376A676FFB0EF6B386CC9EA6C1" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraPivotGrid.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp9D82910183FB21CD02B1FD1E623B39F5" Guid="*" MultiInstance="yes">
+                    <File Id="filE4A52C5E6759839B6CB217187A6BA5FD" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraPrinting.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpB9362FD5285EC9BD7BF0AE1C673DE548" Guid="*" MultiInstance="yes">
+                    <File Id="fil9235D8FCAFE311DE42B4372EA3830549" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraReports.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp7E8C54340F6E92F8C24594AC608DA5D0" Guid="*" MultiInstance="yes">
+                    <File Id="filDB9D51CB2F9A0F9178AE2A30F1D9C874" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraRichEdit.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp73F303B4AB1701ADDA76B5F5E0F526D9" Guid="*" MultiInstance="yes">
+                    <File Id="fil344935C05755B744A5E575878C64C77E" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraTreeList.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpFFE769B96D3335F43138D280BE4D4646" Guid="*" MultiInstance="yes">
+                    <File Id="fil44C9F073337629D369DB2349F3B01039" KeyPath="yes" Source="$(var.MobilePath)\es\DevExpress.XtraVerticalGrid.v15.1.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dirCF40C908D7E0946C1D894739DD0080F7" Name="hy-AM">
+                <Component Id="cmpC65FCB931B1422372A6D657CBCC1F379" Guid="*" MultiInstance="yes">
+                    <File Id="fil938F0A0F631D57ABF95FC7BB568C8535" KeyPath="yes" Source="$(var.MobilePath)\hy-AM\bv.common.resources.dll" />
+                </Component>
+                <Component Id="cmpB2E6581B2B2D34A1E4A5D8FD38BD473E" Guid="*" MultiInstance="yes">
+                    <File Id="filE5D115210C0935592B0ECB99FE8B734D" KeyPath="yes" Source="$(var.MobilePath)\hy-AM\bv.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp3B22A5653670E8B616C6EDFDF62F1B0D" Guid="*" MultiInstance="yes">
+                    <File Id="fil12122B92F445ABF92D23FAD817F29246" KeyPath="yes" Source="$(var.MobilePath)\hy-AM\bvwin_common.resources.dll" />
+                </Component>
+                <Component Id="cmpCD4B17C99BB86A7C6CFA8DAA5BEE5D55" Guid="*" MultiInstance="yes">
+                    <File Id="fil9E088D63AE1E19587283FFBC9FF27A19" KeyPath="yes" Source="$(var.MobilePath)\hy-AM\eidss.avr.resources.dll" />
+                </Component>
+                <Component Id="cmp24DC8F3832FD8CC3C6C74BA41A275EF9" Guid="*" MultiInstance="yes">
+                    <File Id="fil90A03EC1E0909022C504199D546A6C4E" KeyPath="yes" Source="$(var.MobilePath)\hy-AM\eidss.core.resources.dll" />
+                </Component>
+                <Component Id="cmpC7583E731CDA3BB3F1BDE46B1A3F3FCD" Guid="*" MultiInstance="yes">
+                    <File Id="filA2A076E928801AF0B43C0322A5D3F771" KeyPath="yes" Source="$(var.MobilePath)\hy-AM\EIDSS.FlexibleForms.resources.dll" />
+                </Component>
+                <Component Id="cmpB41511730B17E72F198776D9BFAEAA6C" Guid="*" MultiInstance="yes">
+                    <File Id="fil06CA680FBBA828260DC5412C0E76D963" KeyPath="yes" Source="$(var.MobilePath)\hy-AM\eidss.gis.resources.dll" />
+                </Component>
+                <Component Id="cmpD04093D7496068092A2888271BCB94CD" Guid="*" MultiInstance="yes">
+                    <File Id="fil6330942B96A61BFCB4AEE527CD91368A" KeyPath="yes" Source="$(var.MobilePath)\hy-AM\eidss.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp26966A3EDC57BDA3C1C11E9B2FCEEB0B" Guid="*" MultiInstance="yes">
+                    <File Id="filE3BAB3F08717170D0510F5EE6975143C" KeyPath="yes" Source="$(var.MobilePath)\hy-AM\eidss_forms.resources.dll" />
+                </Component>
+                <Component Id="cmp51FE076CBBADF8A8CA0EFA38ABC76A82" Guid="*" MultiInstance="yes">
+                    <File Id="fil9C35473FE691B5CE98A84B3D176AC42F" KeyPath="yes" Source="$(var.MobilePath)\hy-AM\GIS_V6.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dirCD7B75740B3F70E25B16B73967184CAE" Name="ja">
+                <Component Id="cmp12B526464D6F790280B228B71FBB865B" Guid="*" MultiInstance="yes">
+                    <File Id="filB1608DDC1C67A87F15E505EC1B49E4A1" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.Data.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpAB8AD124EA06B3E1EAE4561B84DB6C51" Guid="*" MultiInstance="yes">
+                    <File Id="filB4FC3A9F46CE619D64BCE9413C58E634" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.Office.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp733B1BBFE3A3AE2D48B75B7B67612BD1" Guid="*" MultiInstance="yes">
+                    <File Id="fil60ADBBEE75805693B19BCF5FF649169D" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.PivotGrid.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmpE2F80945B7DF46B45374E3BFFD36680E" Guid="*" MultiInstance="yes">
+                    <File Id="fil492F400E9207A8227653243FE6B96675" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.Printing.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmpC133700979943979F9BEDE670B77003B" Guid="*" MultiInstance="yes">
+                    <File Id="fil2897B8B95980B56DDB030387F1F8E584" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.RichEdit.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmpE4AEAC23C3BBBF2B6368E8F397BCE601" Guid="*" MultiInstance="yes">
+                    <File Id="fil7598B82B4ECCB5FD8750A5D0A700E5E2" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.Sparkline.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp82CAF73950851EAAC86CE6B9488F046A" Guid="*" MultiInstance="yes">
+                    <File Id="fil7A69FD944288E40AC4C47889B79DADD9" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.Utils.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpFC5FF3B9355DE6FB25D0A715F9BFB7DA" Guid="*" MultiInstance="yes">
+                    <File Id="fil5FD406F72EC47E00366E12E7F4B896B6" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.Utils.v15.1.UI.resources.dll" />
+                </Component>
+                <Component Id="cmpFF5ACE3D3829B6DAAB16F30A06F1D33C" Guid="*" MultiInstance="yes">
+                    <File Id="fil213D14D46EE38FF135DA499E8D05A070" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraBars.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp2F4DCF2DA4D523B01A3EB1A063071CA1" Guid="*" MultiInstance="yes">
+                    <File Id="fil09A8723E683411BEBE816A03AAC2209F" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraCharts.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp91AA94B5661BFAF9966064430FC29A28" Guid="*" MultiInstance="yes">
+                    <File Id="fil69E389704FA9C90D76C8E0457E523961" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraCharts.v15.1.Wizard.resources.dll" />
+                </Component>
+                <Component Id="cmpABDFE395484806A515A88276A285CCA0" Guid="*" MultiInstance="yes">
+                    <File Id="fil8EFD9218ADD6E0DE97BAFDCA3B818C76" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraEditors.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp7AB7C8BB796712CBF03C0891AF97C3D4" Guid="*" MultiInstance="yes">
+                    <File Id="fil1AEC4D178640CDD64F24E852118C6910" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraGauges.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp29FDC2B7169BD1D4C58089EE4E2C90CD" Guid="*" MultiInstance="yes">
+                    <File Id="fil3EAFD8B01FD63099C136BB033CC35B19" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraGrid.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp0606FD9D9B7283AA6A20984E01C6AE75" Guid="*" MultiInstance="yes">
+                    <File Id="filAF877D3C2F6359DC6779E70CB48BFC84" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraLayout.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp4A18F066894F270D64D80EA4D12A6FDF" Guid="*" MultiInstance="yes">
+                    <File Id="filE86A140DB7FA4CA80B8532AA8CA27EA9" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraNavBar.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpF8801AB5454839000046DD9582267D3C" Guid="*" MultiInstance="yes">
+                    <File Id="fil7B8DC70CABB1F2CE99A35D099D6585C4" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraPivotGrid.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp754020EC071294282AB44825C603F26A" Guid="*" MultiInstance="yes">
+                    <File Id="filA8E8173C8683C2010B6D187D116B633B" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraPrinting.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp7DA97B45EFA74A61E35F4CABBE1DF2AE" Guid="*" MultiInstance="yes">
+                    <File Id="filB92991C9A2850218225898BFE5BE5709" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraReports.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpFEE1C3ED38C69358F143EECA3BD95C2B" Guid="*" MultiInstance="yes">
+                    <File Id="fil36EECDD2641279AAE8E18CA9AE6E6270" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraRichEdit.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp0BFE903DE91D88D399AFB79137822506" Guid="*" MultiInstance="yes">
+                    <File Id="fil2E1B6EF4D1ED33AF1990DDFE9AED8DED" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraTreeList.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp0D607A61988180AD9A0F11AFC933C20C" Guid="*" MultiInstance="yes">
+                    <File Id="fil9F11B6FDC7BB5BE4220D1201D37AFC27" KeyPath="yes" Source="$(var.MobilePath)\ja\DevExpress.XtraVerticalGrid.v15.1.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir33B3AAF12A162F58C3D8079306DBA2A1" Name="ka-GE">
+                <Component Id="cmpDEFFC2841039DB9A7A8C0AAA5657CB04" Guid="*" MultiInstance="yes">
+                    <File Id="filAFFEF4290443D3ECC72CF0C26149C64C" KeyPath="yes" Source="$(var.MobilePath)\ka-GE\bv.common.resources.dll" />
+                </Component>
+                <Component Id="cmpD4815836C76DBF272A92949412963B37" Guid="*" MultiInstance="yes">
+                    <File Id="fil4CFDFBF5C1D4A7EECA8C62C543273771" KeyPath="yes" Source="$(var.MobilePath)\ka-GE\bv.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp2FB4BE7DCBC1DD783361E2BACB2BAD80" Guid="*" MultiInstance="yes">
+                    <File Id="fil1C83EC053B9FC6E48B9932BC68EF2B0C" KeyPath="yes" Source="$(var.MobilePath)\ka-GE\bvwin_common.resources.dll" />
+                </Component>
+                <Component Id="cmpD38539B475826EA252224B3B60976CDC" Guid="*" MultiInstance="yes">
+                    <File Id="fil1BFD6AAEE162CB68ACC56E993423E2CB" KeyPath="yes" Source="$(var.MobilePath)\ka-GE\eidss.avr.resources.dll" />
+                </Component>
+                <Component Id="cmpE968CC8E76647D4FE8F488EC0FD00032" Guid="*" MultiInstance="yes">
+                    <File Id="fil737266AA20A10C04D1AE2B51DA554280" KeyPath="yes" Source="$(var.MobilePath)\ka-GE\eidss.core.resources.dll" />
+                </Component>
+                <Component Id="cmp2214B4D28FE44C93E465B166C85052AC" Guid="*" MultiInstance="yes">
+                    <File Id="fil9234DE2CE5EDE4AE4CD3E9BC31B30B56" KeyPath="yes" Source="$(var.MobilePath)\ka-GE\EIDSS.FlexibleForms.resources.dll" />
+                </Component>
+                <Component Id="cmp00634387370CDFCAAAFF87D85E875FB0" Guid="*" MultiInstance="yes">
+                    <File Id="fil035124A1BEFC1E04D90D2A6AE89B5F9B" KeyPath="yes" Source="$(var.MobilePath)\ka-GE\eidss.gis.resources.dll" />
+                </Component>
+                <Component Id="cmp6F6841DFDD02BE41E2EE5EB104121CA0" Guid="*" MultiInstance="yes">
+                    <File Id="filC92303FFFAD620F69FA80DB9BC267168" KeyPath="yes" Source="$(var.MobilePath)\ka-GE\eidss.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp05655FCE8346403CB084E2D8D94E4C4F" Guid="*" MultiInstance="yes">
+                    <File Id="fil7E72BFC3998C17B9256C97126C550E9F" KeyPath="yes" Source="$(var.MobilePath)\ka-GE\eidss_forms.resources.dll" />
+                </Component>
+                <Component Id="cmp9AD3A3A59B2E8E0E6E8283FF313EF1B7" Guid="*" MultiInstance="yes">
+                    <File Id="fil0C879319B7B276D721B71A7D33157635" KeyPath="yes" Source="$(var.MobilePath)\ka-GE\GIS_V6.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dirC314DE986039EB1FE85BC1DF5B0C4D3B" Name="kk-KZ">
+                <Component Id="cmp955402221E9936D3B2072F58F62475D8" Guid="*" MultiInstance="yes">
+                    <File Id="fil70A77F3B660D8BBF4D718D5259F4D669" KeyPath="yes" Source="$(var.MobilePath)\kk-KZ\bv.common.resources.dll" />
+                </Component>
+                <Component Id="cmp587E801E1A1C69975DB35B08431BE469" Guid="*" MultiInstance="yes">
+                    <File Id="filDC0F4A9CA3C2ADD338C940CDF05A306F" KeyPath="yes" Source="$(var.MobilePath)\kk-KZ\bv.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp0D3DA55E9792B9B0814511579F0B1FB6" Guid="*" MultiInstance="yes">
+                    <File Id="filF74B7DF6F5EB5A99C04566B7A5810756" KeyPath="yes" Source="$(var.MobilePath)\kk-KZ\bvwin_common.resources.dll" />
+                </Component>
+                <Component Id="cmp6E72C61E80E7BA13C827D218779099AE" Guid="*" MultiInstance="yes">
+                    <File Id="fil4F0FA9DD2AC883F02B67E9580BF99FAB" KeyPath="yes" Source="$(var.MobilePath)\kk-KZ\eidss.avr.resources.dll" />
+                </Component>
+                <Component Id="cmpD37100F054279E3B772EB3D37F06F287" Guid="*" MultiInstance="yes">
+                    <File Id="fil30522693644AA415D87CB758571C33C8" KeyPath="yes" Source="$(var.MobilePath)\kk-KZ\eidss.core.resources.dll" />
+                </Component>
+                <Component Id="cmpBF5F788DBAC1F950D90A8E51E13F0CB2" Guid="*" MultiInstance="yes">
+                    <File Id="fil2611AEBCB31916822B9A3FB3C3D5F326" KeyPath="yes" Source="$(var.MobilePath)\kk-KZ\EIDSS.FlexibleForms.resources.dll" />
+                </Component>
+                <Component Id="cmpAB1730F1A1DCE55ED5C4504A0CB22A9B" Guid="*" MultiInstance="yes">
+                    <File Id="filC7C2463AAA28E4C10CFA3D4711207130" KeyPath="yes" Source="$(var.MobilePath)\kk-KZ\eidss.gis.resources.dll" />
+                </Component>
+                <Component Id="cmp148D070DB776FC220CAFA114EBC2ECBD" Guid="*" MultiInstance="yes">
+                    <File Id="filBC59396520CC282798598EFF7DE0C20D" KeyPath="yes" Source="$(var.MobilePath)\kk-KZ\eidss.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp467F02E2D76CF71A3460C26573831284" Guid="*" MultiInstance="yes">
+                    <File Id="fil413FEA2272324444564860E170AB264C" KeyPath="yes" Source="$(var.MobilePath)\kk-KZ\eidss_forms.resources.dll" />
+                </Component>
+                <Component Id="cmp16CF273ED0D2EDA52F68641D7C8817C0" Guid="*" MultiInstance="yes">
+                    <File Id="filCCA7CB16125FB99307CA34125C5C8542" KeyPath="yes" Source="$(var.MobilePath)\kk-KZ\GIS_V6.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir02969FA9A134E856C959C21F825E9A7F" Name="MapProjects">
+                <Component Id="cmpD60178A30BE383C793F22C09CF60FC06" Guid="*" MultiInstance="yes">
+                    <File Id="filB56FBCAB279BA8F909F69AF950FFBC09" KeyPath="yes" Source="$(var.MobilePath)\MapProjects\Default.KZ.map" />
+                </Component>
+                <Component Id="cmp2AD81B1BF214BEEC1BCACC4913EDAEF8" Guid="*" MultiInstance="yes">
+                    <File Id="fil6876D8B60385A0FFFA611EE35631CAC2" KeyPath="yes" Source="$(var.MobilePath)\MapProjects\Default.map" />
+                </Component>
+                <Component Id="cmp8112BFB8DA3191C63086DE6DC7C28D6F" Guid="*" MultiInstance="yes">
+                    <File Id="filB5C6AE40798550A77736211C93316EF2" KeyPath="yes" Source="$(var.MobilePath)\MapProjects\Default.TH.map" />
+                </Component>
+            </Directory>
+            <Directory Id="dirBCB35F50194702F23B57796A5AE74C21" Name="ru">
+                <Component Id="cmp07E78CDE89E104BCBF09E19B2D445479" Guid="*" MultiInstance="yes">
+                    <File Id="filEBD9B491F6830E7421B4BC16ADD8E4F0" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.Data.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp7F3A4E0F5A66E2969D7BB458F3CD98BE" Guid="*" MultiInstance="yes">
+                    <File Id="fil55928585135952DF8B4FACE58C2CCEFC" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.Office.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp1288553223ED64A0098D4389FD0B2D32" Guid="*" MultiInstance="yes">
+                    <File Id="filB427A0F775C86C6672354CBBDA184D7A" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.PivotGrid.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp2FAD8AE3AA7CCB121D15015EA646216A" Guid="*" MultiInstance="yes">
+                    <File Id="fil5FA2D428B8D0F86536160BF617E51BC1" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.Printing.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp1F3404D9082119EAA0544C2ED653F5E1" Guid="*" MultiInstance="yes">
+                    <File Id="filDD3F5CA391B1EE6791D9C3C6157B0397" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.RichEdit.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp45B523F9F4F6DCDD47C71E3977F20E3B" Guid="*" MultiInstance="yes">
+                    <File Id="fil9AE5C33B96B4D9E17E59BAFA76209831" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.Sparkline.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmp1EA5BE68264E55EE53AAF7F419266331" Guid="*" MultiInstance="yes">
+                    <File Id="filC91793683ECC231C6B900318D63D5BEF" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.Utils.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp82D3A6786605FE74BD3FC1E9144B272A" Guid="*" MultiInstance="yes">
+                    <File Id="fil77F2CD13E10C0ACDCA93C79863B452D4" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.Utils.v15.1.UI.resources.dll" />
+                </Component>
+                <Component Id="cmpCFEB233C09116C31B9DCD394C2899A4D" Guid="*" MultiInstance="yes">
+                    <File Id="filF53706B3B852CE5957D64E340B1F0B82" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraBars.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp6CAE517369592C271DF4AC83DCBFE9CA" Guid="*" MultiInstance="yes">
+                    <File Id="fil17DA03310B4D0E4E228F1B6C0FD8DF8A" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraCharts.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpA74DC5AF2E7422A045A0C1AC354C242D" Guid="*" MultiInstance="yes">
+                    <File Id="filBF97284E0F140783188EABC6B342B093" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraCharts.v15.1.Wizard.resources.dll" />
+                </Component>
+                <Component Id="cmp09ECFA7D5626AEFE7EB537FECEF48B59" Guid="*" MultiInstance="yes">
+                    <File Id="fil9FD7E4238D74F75EF5E5ABE6CABDF27E" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraEditors.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpF316E5054EFB3484E4878D8C75C50D07" Guid="*" MultiInstance="yes">
+                    <File Id="fil1FC63EF9C752E5423777F366652ADA88" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraGauges.v15.1.Core.resources.dll" />
+                </Component>
+                <Component Id="cmpCC4623750A1E23715623746671EABC62" Guid="*" MultiInstance="yes">
+                    <File Id="fil4805C5CE2002BF1FBF1B70406A322B52" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraGrid.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpDC42289DAC4A6C85C7C0D061647F124A" Guid="*" MultiInstance="yes">
+                    <File Id="fil88F4205EE7EB33C2DB1462788C34D535" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraLayout.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpD6E0F0E28D93435AE87706F15794FC8F" Guid="*" MultiInstance="yes">
+                    <File Id="filBD77C810FF6946B0BAEBF3820DCFEF17" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraNavBar.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmpC15F86EA4AF2EDFBE46289297E08D3BD" Guid="*" MultiInstance="yes">
+                    <File Id="fil2A2714F1F2C2EB079503ADEC898FD594" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraPivotGrid.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp3F130C3D0A8CEB214286C7F9F9172918" Guid="*" MultiInstance="yes">
+                    <File Id="fil9553B649E13727AC3B86CC8490C731D2" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraPrinting.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp30DC453F831AD80D85BBAD63A983D7A1" Guid="*" MultiInstance="yes">
+                    <File Id="fil4208AED84996656C4160E9693A78BDC0" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraReports.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp1F4F9F24785221FA426A3B14AC882EE1" Guid="*" MultiInstance="yes">
+                    <File Id="fil47571ADE71441E011AFC3FEF6480AA5B" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraRichEdit.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp0749637BE1C5AFDA77676F99502DECB5" Guid="*" MultiInstance="yes">
+                    <File Id="fil9D5C22DBF4505F32FE6050E64369D21F" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraTreeList.v15.1.resources.dll" />
+                </Component>
+                <Component Id="cmp9C752FC7810F5F0EF50F643C739AD53F" Guid="*" MultiInstance="yes">
+                    <File Id="filE759388EDCA174920AB8BE9A0C4AE05B" KeyPath="yes" Source="$(var.MobilePath)\ru\DevExpress.XtraVerticalGrid.v15.1.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir47840B88A03F24411376DD8818ECF150" Name="ru-KZ-Eidss">
+                <Component Id="cmp981785DC1BF36CE4D2E0CC82766F8AE4" Guid="*" MultiInstance="yes">
+                    <File Id="fil7D6623C2ECCFECDCB78132A1D17874C0" KeyPath="yes" Source="$(var.MobilePath)\ru-KZ-Eidss\bv.common.resources.dll" />
+                </Component>
+                <Component Id="cmp153BC367C549E750AB2FE52FF1021825" Guid="*" MultiInstance="yes">
+                    <File Id="filA7014FEB97CC4F7B857030E1D7F0A4A5" KeyPath="yes" Source="$(var.MobilePath)\ru-KZ-Eidss\eidss.core.resources.dll" />
+                </Component>
+                <Component Id="cmpCA1D931FA84CFF26C0C2F5AC9EB36EAC" Guid="*" MultiInstance="yes">
+                    <File Id="fil8F9B1E3620FB5D784F12CDB6A8CE95F3" KeyPath="yes" Source="$(var.MobilePath)\ru-KZ-Eidss\eidss.gis.resources.dll" />
+                </Component>
+                <Component Id="cmp32277E085F2426153FD3578EC449C290" Guid="*" MultiInstance="yes">
+                    <File Id="fil43E21CDB343BD87DA034C529F89E709B" KeyPath="yes" Source="$(var.MobilePath)\ru-KZ-Eidss\eidss.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmpFDF0D5B0857DC2DC8E8095397B2F9777" Guid="*" MultiInstance="yes">
+                    <File Id="fil7D7B4B5E4496A7A5952B6C2B3046334F" KeyPath="yes" Source="$(var.MobilePath)\ru-KZ-Eidss\eidss_forms.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir79BB376FD4EDEC3A6CF80568FB8C4E2B" Name="ru-RU">
+                <Component Id="cmpDEE16C8201777F201B0C82678A5EA486" Guid="*" MultiInstance="yes">
+                    <File Id="fil6C190B7BB8582A1A99D4EB0EED3FC7E1" KeyPath="yes" Source="$(var.MobilePath)\ru-RU\bv.common.resources.dll" />
+                </Component>
+                <Component Id="cmpBAC7EFC8A0710AECC92C2B633431DDFC" Guid="*" MultiInstance="yes">
+                    <File Id="filFC81AA550F6D480C10A6C856CE4C63AD" KeyPath="yes" Source="$(var.MobilePath)\ru-RU\bv.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmpC0865AA5F7987163F9CD8C6007AEEF85" Guid="*" MultiInstance="yes">
+                    <File Id="filEA5C3A1349B7A2B365CB4220E4863A2F" KeyPath="yes" Source="$(var.MobilePath)\ru-RU\bvwin_common.resources.dll" />
+                </Component>
+                <Component Id="cmpCAF1D24039969CCC5134F17A74F6286C" Guid="*" MultiInstance="yes">
+                    <File Id="fil4300A5401FC368D35B1F0A8CB6126D18" KeyPath="yes" Source="$(var.MobilePath)\ru-RU\eidss.avr.resources.dll" />
+                </Component>
+                <Component Id="cmp7546C27A51B2A86ADE2D7A5BB3805927" Guid="*" MultiInstance="yes">
+                    <File Id="filC466B0E3D15A8B3BCC38E9A5E045990E" KeyPath="yes" Source="$(var.MobilePath)\ru-RU\eidss.core.resources.dll" />
+                </Component>
+                <Component Id="cmpF7D5C59A601F6A7141A03FEE108ABB82" Guid="*" MultiInstance="yes">
+                    <File Id="fil722729F9037360066AB014F31ECE3FE7" KeyPath="yes" Source="$(var.MobilePath)\ru-RU\EIDSS.FlexibleForms.resources.dll" />
+                </Component>
+                <Component Id="cmpED825A51C08339DBF8B17FFBE4852022" Guid="*" MultiInstance="yes">
+                    <File Id="filB115BFADD91239AD07B5BB0B11CA30F5" KeyPath="yes" Source="$(var.MobilePath)\ru-RU\eidss.gis.resources.dll" />
+                </Component>
+                <Component Id="cmp4F4D4034529CEF938873B07EE61D409A" Guid="*" MultiInstance="yes">
+                    <File Id="fil4CA5DA239CC248D2AE8D97A8536654B6" KeyPath="yes" Source="$(var.MobilePath)\ru-RU\eidss.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmpA59381309382B4524F5BD79ACD6BC936" Guid="*" MultiInstance="yes">
+                    <File Id="fil63D959303A39CB5E3527B34D11B0C455" KeyPath="yes" Source="$(var.MobilePath)\ru-RU\eidss_forms.resources.dll" />
+                </Component>
+                <Component Id="cmp8D65F9EFFE17E7168D364340A689F959" Guid="*" MultiInstance="yes">
+                    <File Id="filA5150F40BFC85933FB3D0F72FE773764" KeyPath="yes" Source="$(var.MobilePath)\ru-RU\GIS_V6.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dirA3DD90D61D4909268EFFB4A0CDD94B81" Name="th-TH">
+                <Component Id="cmpFEE1B6EE809B8CEE9FE15FB0ACF8A70F" Guid="*" MultiInstance="yes">
+                    <File Id="fil0378095BA62B3C32C763110D35B4CBC8" KeyPath="yes" Source="$(var.MobilePath)\th-TH\bv.common.resources.dll" />
+                </Component>
+                <Component Id="cmp667DFFEC181C2161D60DD9E459BE8B17" Guid="*" MultiInstance="yes">
+                    <File Id="fil633A02C3B260D3849C666EB19B8BE9B8" KeyPath="yes" Source="$(var.MobilePath)\th-TH\bv.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmpAB6A8E14C6533995BFF70143FDD3B480" Guid="*" MultiInstance="yes">
+                    <File Id="filFBDFBFB06DF932C4C9E8933A097D7AB6" KeyPath="yes" Source="$(var.MobilePath)\th-TH\bvwin_common.resources.dll" />
+                </Component>
+                <Component Id="cmp1175DA053C67BB935405F1B71AFA28FD" Guid="*" MultiInstance="yes">
+                    <File Id="filEB191DB22575E19D8C23B8C09FA45D6A" KeyPath="yes" Source="$(var.MobilePath)\th-TH\eidss.avr.resources.dll" />
+                </Component>
+                <Component Id="cmp61221F4EE82B0CED23E82AD5EA93BD9E" Guid="*" MultiInstance="yes">
+                    <File Id="fil929CC163EFC51279FBBBE28C6ED82E43" KeyPath="yes" Source="$(var.MobilePath)\th-TH\eidss.core.resources.dll" />
+                </Component>
+                <Component Id="cmp548FCA09EBFA7A5242968C98B6BCCF4E" Guid="*" MultiInstance="yes">
+                    <File Id="fil75331578C21C5850D39F624338028C2B" KeyPath="yes" Source="$(var.MobilePath)\th-TH\EIDSS.FlexibleForms.resources.dll" />
+                </Component>
+                <Component Id="cmp37184097C9AE0C729F71E5EB901D4E9E" Guid="*" MultiInstance="yes">
+                    <File Id="filC7547C60ED9F2D8005A625CB05577B3F" KeyPath="yes" Source="$(var.MobilePath)\th-TH\eidss.gis.resources.dll" />
+                </Component>
+                <Component Id="cmpE43833125248BD173941691662403848" Guid="*" MultiInstance="yes">
+                    <File Id="fil0A4FAE13120BE6D6203ECB54CF480B7F" KeyPath="yes" Source="$(var.MobilePath)\th-TH\eidss.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp0BF797A4FF495388014ADE893231F9AB" Guid="*" MultiInstance="yes">
+                    <File Id="filA2B189333F5C01F589D9DA12B0683F45" KeyPath="yes" Source="$(var.MobilePath)\th-TH\eidss_forms.resources.dll" />
+                </Component>
+                <Component Id="cmpC365F9955F8F4CFA16A0BBFEF9EF36B8" Guid="*" MultiInstance="yes">
+                    <File Id="fil33C4D1B2FDC2A76851A08060E11EEEC5" KeyPath="yes" Source="$(var.MobilePath)\th-TH\GIS_V6.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dirF85EDA350B678294FB3DC188CFC2A268" Name="ThirdPartyComponents">
+                <Component Id="cmpAF5B714F496A439DC3B1548117793F18" Guid="*" MultiInstance="yes">
+                    <File Id="fil9F976EEE2C5E416A6B900665D962E5FA" KeyPath="yes" Source="$(var.MobilePath)\ThirdPartyComponents\Eidss.Avr.Autotester.exe" />
+                </Component>
+                <Component Id="cmpB2FBE05E8A02CDF65A8E5043D270E3D8" Guid="*" MultiInstance="yes">
+                    <File Id="fil3E898F4D554D81A23FD34AFB5F38723B" KeyPath="yes" Source="$(var.MobilePath)\ThirdPartyComponents\Eidss.Avr.Autotester.exe.config" />
+                </Component>
+            </Directory>
+            <Directory Id="dir410EF021299D2945C678D654DA6B4AD4" Name="uk-UA">
+                <Component Id="cmpCB6BC8AF6DE0FE9C9BD8A7F188295E30" Guid="*" MultiInstance="yes">
+                    <File Id="fil689E0CF6588DD96533F3C4F646871018" KeyPath="yes" Source="$(var.MobilePath)\uk-UA\bv.common.resources.dll" />
+                </Component>
+                <Component Id="cmp8F21AE7A4AEEF0E092167F3CC3B8C8E3" Guid="*" MultiInstance="yes">
+                    <File Id="fil2877DBDE51B929EC8FD0F854290EAD6A" KeyPath="yes" Source="$(var.MobilePath)\uk-UA\bv.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp41D1B05C44F829F19F9B547D8FBBFF87" Guid="*" MultiInstance="yes">
+                    <File Id="fil6FBE0637903631152F7D3B72F84F59A0" KeyPath="yes" Source="$(var.MobilePath)\uk-UA\bvwin_common.resources.dll" />
+                </Component>
+                <Component Id="cmp602D0FCF755AFCA42A90E4595F98FCDE" Guid="*" MultiInstance="yes">
+                    <File Id="fil500775708F9C802508F408D71F19FEAC" KeyPath="yes" Source="$(var.MobilePath)\uk-UA\eidss.avr.resources.dll" />
+                </Component>
+                <Component Id="cmp5FBFEF08B15791858D47390EEB313917" Guid="*" MultiInstance="yes">
+                    <File Id="fil0B254920EBEB7F9B0153C3DBFB821876" KeyPath="yes" Source="$(var.MobilePath)\uk-UA\eidss.core.resources.dll" />
+                </Component>
+                <Component Id="cmpEE03CF2087AF60139C611F89FAD4C068" Guid="*" MultiInstance="yes">
+                    <File Id="filF548BC6FF313AA6691279E881CAD8522" KeyPath="yes" Source="$(var.MobilePath)\uk-UA\EIDSS.FlexibleForms.resources.dll" />
+                </Component>
+                <Component Id="cmp3D077BE9E108BB5BBF51C17F204258DB" Guid="*" MultiInstance="yes">
+                    <File Id="fil9BC9EA4C1B33B98B831F66A118608E11" KeyPath="yes" Source="$(var.MobilePath)\uk-UA\eidss.gis.resources.dll" />
+                </Component>
+                <Component Id="cmp844F0623457F6E806CE2324E7AAACBC7" Guid="*" MultiInstance="yes">
+                    <File Id="fil479BD7960A6FCA19659C94FE049A7BA7" KeyPath="yes" Source="$(var.MobilePath)\uk-UA\eidss.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp5C101AD8E86C1672F77EC6D9D6BF2849" Guid="*" MultiInstance="yes">
+                    <File Id="fil82026DEAD3246FF51BD22DBBF9BA8542" KeyPath="yes" Source="$(var.MobilePath)\uk-UA\eidss_forms.resources.dll" />
+                </Component>
+                <Component Id="cmpB8559545DA322CF5422B297060FA5E93" Guid="*" MultiInstance="yes">
+                    <File Id="filFDFA75212CF6AE58B933B315E6CD1A04" KeyPath="yes" Source="$(var.MobilePath)\uk-UA\GIS_V6.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dirB6C9C6FD7C40E8D12B9473A6C6934268" Name="uz-Cyrl-UZ">
+                <Component Id="cmpEAFC181B94D689CB83CFFCB629EBE735" Guid="*" MultiInstance="yes">
+                    <File Id="filB82232FD3AEAFDCA55414FA3EF42D77C" KeyPath="yes" Source="$(var.MobilePath)\uz-Cyrl-UZ\bv.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmp8FD05F8DDC3F9F1584A2FF97B7C38F0A" Guid="*" MultiInstance="yes">
+                    <File Id="fil5E0BF5D1BA678EC9822BA26AF896F3F1" KeyPath="yes" Source="$(var.MobilePath)\uz-Cyrl-UZ\bvwin_common.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dirAEB18222FFBC6224C328A4FF7A1EE78E" Name="uz-Latn-UZ">
+                <Component Id="cmp7F5084C40226278073A0B79AA05DEFB1" Guid="*" MultiInstance="yes">
+                    <File Id="fil1B95A32886CF684D09553C3361BD93B8" KeyPath="yes" Source="$(var.MobilePath)\uz-Latn-UZ\bv.winclient.resources.dll" />
+                </Component>
+                <Component Id="cmpEA1F85673C7DC48FB22BBD106E119CBC" Guid="*" MultiInstance="yes">
+                    <File Id="fil1A47DEADFBEEE7D2A615A2CB4B4B5149" KeyPath="yes" Source="$(var.MobilePath)\uz-Latn-UZ\bvwin_common.resources.dll" />
+                </Component>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="eidss.mobile.Harvested">
+            <ComponentRef Id="cmpF701EE53F92B43F9571665FA95F021C4" />
+            <ComponentRef Id="cmp4CF0205C01BF3421974FA56BE788BECA" />
+            <ComponentRef Id="cmp0032DEB80A08D3A61974BF764E01DB17" />
+            <ComponentRef Id="cmp8A3D13152C7458010F7A9CCD729EF3DD" />
+            <ComponentRef Id="cmpE583AD55DA21199AF02339E4AF540FE7" />
+            <ComponentRef Id="cmpAACD2D21F16C71DC70B6BF10B212223B" />
+            <ComponentRef Id="cmp125305F2E93BD976B791B2C9BAC1AA20" />
+            <ComponentRef Id="cmp0F114B15876D94AA42C097009329F09A" />
+            <ComponentRef Id="cmpECE8785CD18538EEBB876ED008F6EA6E" />
+            <ComponentRef Id="cmpE29970BE79C7F8F0F587EB438A7F6126" />
+            <ComponentRef Id="cmp748BB53A47F55F463E52090A2247E0ED" />
+            <ComponentRef Id="cmp381F4510CFE24516335BBA9CC1BE3145" />
+            <ComponentRef Id="cmp6B082183A785D544100D99C6C0279A95" />
+            <ComponentRef Id="cmp2657F6F3916086D29197C23DF5B28E8D" />
+            <ComponentRef Id="cmp1FB7BD4550B460A8ABF95ECBEF77E107" />
+            <ComponentRef Id="cmp760278694CCB4E4C41C24370678C1E45" />
+            <ComponentRef Id="cmp31AE223C5D479D19F9AD3597DFF27C56" />
+            <ComponentRef Id="cmpECAFB670F013250F253ABE05426ACF7A" />
+            <ComponentRef Id="cmp7FF34D551D0E5A329E5A39B6EEAEF1B5" />
+            <ComponentRef Id="cmp057916A9F7AA71F976B18358B49B816C" />
+            <ComponentRef Id="cmpE649CC89AA56DE954C8EEDB53916EA64" />
+            <ComponentRef Id="cmp0ACF3AF19F8306820C95E810726A7465" />
+            <ComponentRef Id="cmp935EBDF3C9C2F3B853A0FC5238227FF5" />
+            <ComponentRef Id="cmpBB414012AC911D68164244FBC6500AB6" />
+            <ComponentRef Id="cmp4F22327412269F11CAB83AA7735E20A5" />
+            <ComponentRef Id="cmp74CDC69899BED1EE06FD3EF50ECCB5DB" />
+            <ComponentRef Id="cmpB346885D354CF380A014D71D4878703B" />
+            <ComponentRef Id="cmpDCBE552CF133831BFFF53D42EC8ED1C8" />
+            <ComponentRef Id="cmpA149B4FB4A72344F7E5163EC5AE16B11" />
+            <ComponentRef Id="cmp54BBEF293B0E259D77166AA4B4856D56" />
+            <ComponentRef Id="cmp62EEF8AF119FA9C8529E5F5A48483FF3" />
+            <ComponentRef Id="cmp7B609B8D8A77F8F5311DB2FF297EDA9D" />
+            <ComponentRef Id="cmp8630E9677326A306EB61056FB91EDBB1" />
+            <ComponentRef Id="cmpBAABE847AEF9B4EF2AD5C356F66E2EE3" />
+            <ComponentRef Id="cmp9E8595E5195750D88D14DC0115BF92AB" />
+            <ComponentRef Id="cmp22CF6CF837316E3B3BB8F1384CE233D2" />
+            <ComponentRef Id="cmp8A5544B2AAA147E22FDE76C9B5387968" />
+            <ComponentRef Id="cmp49402734480A0F1C68FC6131C3FDD403" />
+            <ComponentRef Id="cmpF5EA169653333D8B783F570EBF6761BE" />
+            <ComponentRef Id="cmpE21D865734850AF66E4DCFFDBA95FDD3" />
+            <ComponentRef Id="cmpD2148D87B674504B49D668E4817F5EFD" />
+            <ComponentRef Id="cmp47B3BED4B5B0631EA957D4421D0A2708" />
+            <ComponentRef Id="cmpD2ABE2F24CB36AD07A0C107F49B9EBF1" />
+            <ComponentRef Id="cmp8D2EEB3271013FAD154BC23EC400030A" />
+            <ComponentRef Id="cmpE5409088C27EAABF832536B249DB0A88" />
+            <ComponentRef Id="cmp674A5277D119C4378084E4385B422C96" />
+            <ComponentRef Id="cmp03DA6DDC43CA542374025A7D1DB09DDF" />
+            <ComponentRef Id="cmpEF66AB9B52CD3E04DE9D3B4FA0D35007" />
+            <ComponentRef Id="cmp961C4DBDE268FAA0C700EDD04CA7F796" />
+            <ComponentRef Id="cmp0F0CAB3C7098BBA824F972A9F96ACC7F" />
+            <ComponentRef Id="cmp5418B40383B2C32752CF5EFAC1A0D2C6" />
+            <ComponentRef Id="cmp3159F4E3A6D640713173D0C592F5D0CE" />
+            <ComponentRef Id="cmp48683C9211C76DC522026A310109F83B" />
+            <ComponentRef Id="cmp288EE1C8D20C4910D08625FC6CC5F92C" />
+            <ComponentRef Id="cmp08CA52EC5B92ED395A066E4AC9564044" />
+            <ComponentRef Id="cmpF00ACED8CB04375BCA86FCDB49E715EC" />
+            <ComponentRef Id="cmpC8D79AD0DFD22B90723EC91E89B73868" />
+            <ComponentRef Id="cmp481C717E5B69566813A0013AAC0D28B1" />
+            <ComponentRef Id="cmpA0BE5ABC1D11DAB6743909CF0910B908" />
+            <ComponentRef Id="cmpD18D58850149E56AAAB75B59EEDC61C8" />
+            <ComponentRef Id="cmp2ED0DC5F924B289CACBCE8C52EDB8B43" />
+            <ComponentRef Id="cmp14C42B87E475AB7CA211E8206B426099" />
+            <ComponentRef Id="cmp1D2E871F974E0885716A1F3200D83A37" />
+            <ComponentRef Id="cmp27755C7E1B9D06098920C1714BDB7A9E" />
+            <ComponentRef Id="cmpBA11B41CC9481556F06EC0286CAF6A33" />
+            <ComponentRef Id="cmp176E2AED6458E80A93F0E976DA09E352" />
+            <ComponentRef Id="cmpB3DB18819E79D8EC24616F8502CC5793" />
+            <ComponentRef Id="cmp8EF3DC066A5E1A72ECEB125E03D8DAFB" />
+            <ComponentRef Id="cmp35AE3C9476EA9C06F95A7B622D5EB1CC" />
+            <ComponentRef Id="cmpBD6204EE7B89CAEDFA662CFA93B517AF" />
+            <ComponentRef Id="cmp17E676D46911DE47EF6872C18F4DACEC" />
+            <ComponentRef Id="cmp790D2AB557A1F78E5D8298250500DB29" />
+            <ComponentRef Id="cmp0577239B99AFC5608F0B4567D01BB462" />
+            <ComponentRef Id="cmpEDA3BF13ED168472EE54B4E7B5213B11" />
+            <ComponentRef Id="cmp447346D8A0FB9F7A23875392E0911EC3" />
+            <ComponentRef Id="cmpFE6D22C9AFCAF8BDFEFC02F7AEF7AD9E" />
+            <ComponentRef Id="cmp68C74B957929A41F10F410B3D9A72BE5" />
+            <ComponentRef Id="cmpDBE16175D2F109BA892DA6DB01301CD6" />
+            <ComponentRef Id="cmp14CDA34F106DD07EA37905135D97ABBF" />
+            <ComponentRef Id="cmpDBFF924EAE061964AA352D2B8586D0C9" />
+            <ComponentRef Id="cmp5EB5B9CA548BB06E73023E1D863AA5AD" />
+            <ComponentRef Id="cmpDCBA926A8D9C47A9F5C6F3B6404B48D5" />
+            <ComponentRef Id="cmp04F10E926D561BB5CD15E4DFDB16EC67" />
+            <ComponentRef Id="cmp12558A78212CE628398B8857A7EE79BF" />
+            <ComponentRef Id="cmpC5D79E0B3101D7EA34BBF3BB16B5F037" />
+            <ComponentRef Id="cmpB33173502C07F3865493807EC4D19CD6" />
+            <ComponentRef Id="cmp2609902B3B7833AFE98D663CAEA82042" />
+            <ComponentRef Id="cmpC994A4D1644FD85E2D6FF957BC21EF89" />
+            <ComponentRef Id="cmp4D97BA81C5F7CBD8C5517CB7B0E3D74E" />
+            <ComponentRef Id="cmp6E4FEFE8B0F6239D81D49CF09E005E01" />
+            <ComponentRef Id="cmpA289B12A7DEDE0C3DB7BD4E79BDF57E0" />
+            <ComponentRef Id="cmp74D99BFE7CD81C8C01DB58FFA8F398AD" />
+            <ComponentRef Id="cmpB4A826D180D78EA708F31D05BC1CEAA3" />
+            <ComponentRef Id="cmp5136808864D73C39846F49E5E1024BA7" />
+            <ComponentRef Id="cmpD93C82F92AC30956C6E4ADDB8DC79EF0" />
+            <ComponentRef Id="cmp0143D6CDDFEDB18724FCF924BEB53BCF" />
+            <ComponentRef Id="cmp0B1993B9672CE8171F065E288728B583" />
+            <ComponentRef Id="cmpC3F03F0AACF399F4EFFBB445FD1B06DB" />
+            <ComponentRef Id="cmpB917D08FE81EC2B630D033EFD89E39C5" />
+            <ComponentRef Id="cmp3D636C00FE8D3930D41676FAF93F9538" />
+            <ComponentRef Id="cmp6102A5FB921401650B62872C2FBF3966" />
+            <ComponentRef Id="cmp5C5BC333946BE9BECF95A91E5A5B0F73" />
+            <ComponentRef Id="cmp5C42C5C7025F1020142A191AD83D25DF" />
+            <ComponentRef Id="cmpEA56CA4A188D0EA6103E618C4D90B702" />
+            <ComponentRef Id="cmpC8C2D27EA43FA7BB6CFBE343B9CBCF2A" />
+            <ComponentRef Id="cmp438A99A20B7AE2968E34DC6CB89B673C" />
+            <ComponentRef Id="cmpAAE747E5616E17913C5F6D70A8030C36" />
+            <ComponentRef Id="cmp41B0FD5A2581A4CDABB979271F26C0D0" />
+            <ComponentRef Id="cmp5B23B91734B542418A01BB65DDAD608E" />
+            <ComponentRef Id="cmp7A861C654FF47C5D98E29C0B8DF52F32" />
+            <ComponentRef Id="cmpE66C1509DB12A4286A62C076D1C2C3E7" />
+            <ComponentRef Id="cmpACE26933393AC2897922F42A300BDA50" />
+            <ComponentRef Id="cmp056FB66F6D6A7BBD5C2DBE0AEFB926F4" />
+            <ComponentRef Id="cmpF30F1CEDF9EFDCE7294BE2666B8FE9FC" />
+            <ComponentRef Id="cmp331487AD72D92AF8A138271919D33A64" />
+            <ComponentRef Id="cmp478B0C477EFC22A3F12F4E1E03E02601" />
+            <ComponentRef Id="cmp87F306D5F31ED0F210F218374B9A6CBF" />
+            <ComponentRef Id="cmp703A6871D6649031E09EEC4329B7940F" />
+            <ComponentRef Id="cmp8FDF843118EA391A7E3F3F840B77E9A6" />
+            <ComponentRef Id="cmp080B463E016C65A6D78A5707612B5220" />
+            <ComponentRef Id="cmp035B7CDF77C0A536DEC1F473113451CA" />
+            <ComponentRef Id="cmpB5AE2F09026DA4537D1C661DE5C55288" />
+            <ComponentRef Id="cmp80156565E0C00ED2B682EBCB018FB8A3" />
+            <ComponentRef Id="cmp664417F8D39A9D7DEBF651D4A818BA27" />
+            <ComponentRef Id="cmpCE09D3B6DE9F1DA28DB4195D85D12109" />
+            <ComponentRef Id="cmp774BE1DEC76B81247C7876BC8A0FE418" />
+            <ComponentRef Id="cmpCE312D941D7C893DA707997FE83EEF0C" />
+            <ComponentRef Id="cmpD68F9C2EA1C2A344AB40A29797E51929" />
+            <ComponentRef Id="cmp46ACFC232E14EBC07D2A64FC8914C545" />
+            <ComponentRef Id="cmp0ECAC9D8C4862BE7D35801BA31A1B52E" />
+            <ComponentRef Id="cmpE8B76077537DA843543D4D85AA52CE64" />
+            <ComponentRef Id="cmpE1BC477E9E4762DCBC76AC3D860D5216" />
+            <ComponentRef Id="cmp996657DE74DAF17637C52FA68F0F870D" />
+            <ComponentRef Id="cmpF95E17DBF3904C84C541367A30755E25" />
+            <ComponentRef Id="cmp4EA89E90B73E874E634D7396B4172D73" />
+            <ComponentRef Id="cmp641ED4B7660CC63174AEB354C7256C3B" />
+            <ComponentRef Id="cmpBDC5A92225D0218A975082BDE0AE1531" />
+            <ComponentRef Id="cmp1383316F32122002315450CFFDAC06F5" />
+            <ComponentRef Id="cmp3BE2BE1E7D5C9440AFA86F9B509992A4" />
+            <ComponentRef Id="cmp830A2D15BA2AAC61684349ACF614C214" />
+            <ComponentRef Id="cmp0FC609C22F46DA9885217508E79C2A38" />
+            <ComponentRef Id="cmp4479F41CFE5470421EFA3C14CBDF8308" />
+            <ComponentRef Id="cmpA5C0D0B0E4407C75EAE720F4B87924BD" />
+            <ComponentRef Id="cmpA0CC0D645BD367C88BE146DF8D16463C" />
+            <ComponentRef Id="cmpF2BC6ABC00198CF54518C2AD5E7B13F4" />
+            <ComponentRef Id="cmp42274D7DDEAFB94DA9947F65D2247967" />
+            <ComponentRef Id="cmp7645FBCE685928E384AB74A9F79AC70E" />
+            <ComponentRef Id="cmp660D2CFF744C4B9C2B153A0A2C654926" />
+            <ComponentRef Id="cmp913618981A9F04403DBBA96F1EE1142F" />
+            <ComponentRef Id="cmpE9976E5D13E902F1953EAA851818CD33" />
+            <ComponentRef Id="cmpF76A0002AFB5E59D1873429B995818C0" />
+            <ComponentRef Id="cmpF2B508DBCBF8D5CBE7881B8D47CB8A93" />
+            <ComponentRef Id="cmpB2809B11A26E8721CC57D1F10A55748E" />
+            <ComponentRef Id="cmp5E488D6EEC0A1BC25569DAEB98CE956F" />
+            <ComponentRef Id="cmp5588E8CD402D69D77F4201898F94F98F" />
+            <ComponentRef Id="cmpF7F190AF87B69F7DEF7B047AEC6C168C" />
+            <ComponentRef Id="cmp08AAAAA58A920E0FDC3B6A87899C534E" />
+            <ComponentRef Id="cmpFCF3CEE1A341AA874E751E8D58C244FB" />
+            <ComponentRef Id="cmp943596977E3E700E42FF58354BA56FA5" />
+            <ComponentRef Id="cmp95977069ABA63923573F34E4808879C6" />
+            <ComponentRef Id="cmp722827AC7DAB812878364BB507550B03" />
+            <ComponentRef Id="cmp06AE81EA82EF1ECC33EA6103C7DD3329" />
+            <ComponentRef Id="cmpD61F9EB5FB4BBD46D8E429A5E8A9B967" />
+            <ComponentRef Id="cmp0A87914BB7BCFD708357F22006A24CAB" />
+            <ComponentRef Id="cmpCD7719063173DACCC96B56C572CF58F0" />
+            <ComponentRef Id="cmp1FAC2363512F0FB539367E7784A40715" />
+            <ComponentRef Id="cmp5D826FF370141F186A93B71476BC4049" />
+            <ComponentRef Id="cmp37F2407C997BA3728CE058F7D8C7F5FA" />
+            <ComponentRef Id="cmpDB1070ADAD01618874A15F140BC2B2D5" />
+            <ComponentRef Id="cmp9F4B030EBDC75E3E79E838308F235581" />
+            <ComponentRef Id="cmp2D74EA183A2916459140756C64DE1850" />
+            <ComponentRef Id="cmp74C2538E7F22300406ABE1FCD63B5DA9" />
+            <ComponentRef Id="cmp4DC86178D0E0F213FD25A8EC6F8BE102" />
+            <ComponentRef Id="cmp47BBBCEF564C9C6A3C57D098409E2D07" />
+            <ComponentRef Id="cmp43A59DC6B1522C40B00B9E8E7950BB1C" />
+            <ComponentRef Id="cmp4C47FEB96225AF42F21DE5F27262479A" />
+            <ComponentRef Id="cmpC169F464CB6EE79FD3E8E48BADE2F4F4" />
+            <ComponentRef Id="cmpE7009FBF24C28E41CB7DE610470AE3D8" />
+            <ComponentRef Id="cmpB6270079284968F1E097AAF396671071" />
+            <ComponentRef Id="cmpA5CD6B314803EB52D6393BEC50E20D41" />
+            <ComponentRef Id="cmpA5FA071290E66EEEA4F32CC7F07B0BE9" />
+            <ComponentRef Id="cmp06C01AEB09CC9C7FB9AFFF14D41B70E8" />
+            <ComponentRef Id="cmp1D701125E4903DE01AD6D7B2993F4884" />
+            <ComponentRef Id="cmp0A2CECF5D682645994020A5511DD7D2A" />
+            <ComponentRef Id="cmp6E1E040C0504455CB2C4FE96A950F2AC" />
+            <ComponentRef Id="cmpD06077C89C3FFCB5FAC0565F69984998" />
+            <ComponentRef Id="cmp9729FE7A6194BE66FE9BBDDB9CC4B333" />
+            <ComponentRef Id="cmp69787FDBEDF832C64FA15B340E763AAD" />
+            <ComponentRef Id="cmp9C4189968F12D4C9FA57D4DEFCD93488" />
+            <ComponentRef Id="cmpCFABF250B04B14F6986F10447710C6D8" />
+            <ComponentRef Id="cmp5916B9D532F84D051E1BF9E897DD3456" />
+            <ComponentRef Id="cmp92413AC8C3DC53BC1F8C8F190FD54644" />
+            <ComponentRef Id="cmp5E859998558771874838FBC9CE8EC24A" />
+            <ComponentRef Id="cmp74BAEF65DF5FA238320807A52497513A" />
+            <ComponentRef Id="cmpE91C73D55C3ABB34EEDC71E237B58846" />
+            <ComponentRef Id="cmp5C692F28343AF51285525CD6EA38EE9F" />
+            <ComponentRef Id="cmpB3CEC951A067D30FC30DF844DD09B76A" />
+            <ComponentRef Id="cmp9D82910183FB21CD02B1FD1E623B39F5" />
+            <ComponentRef Id="cmpB9362FD5285EC9BD7BF0AE1C673DE548" />
+            <ComponentRef Id="cmp7E8C54340F6E92F8C24594AC608DA5D0" />
+            <ComponentRef Id="cmp73F303B4AB1701ADDA76B5F5E0F526D9" />
+            <ComponentRef Id="cmpFFE769B96D3335F43138D280BE4D4646" />
+            <ComponentRef Id="cmpC65FCB931B1422372A6D657CBCC1F379" />
+            <ComponentRef Id="cmpB2E6581B2B2D34A1E4A5D8FD38BD473E" />
+            <ComponentRef Id="cmp3B22A5653670E8B616C6EDFDF62F1B0D" />
+            <ComponentRef Id="cmpCD4B17C99BB86A7C6CFA8DAA5BEE5D55" />
+            <ComponentRef Id="cmp24DC8F3832FD8CC3C6C74BA41A275EF9" />
+            <ComponentRef Id="cmpC7583E731CDA3BB3F1BDE46B1A3F3FCD" />
+            <ComponentRef Id="cmpB41511730B17E72F198776D9BFAEAA6C" />
+            <ComponentRef Id="cmpD04093D7496068092A2888271BCB94CD" />
+            <ComponentRef Id="cmp26966A3EDC57BDA3C1C11E9B2FCEEB0B" />
+            <ComponentRef Id="cmp51FE076CBBADF8A8CA0EFA38ABC76A82" />
+            <ComponentRef Id="cmp12B526464D6F790280B228B71FBB865B" />
+            <ComponentRef Id="cmpAB8AD124EA06B3E1EAE4561B84DB6C51" />
+            <ComponentRef Id="cmp733B1BBFE3A3AE2D48B75B7B67612BD1" />
+            <ComponentRef Id="cmpE2F80945B7DF46B45374E3BFFD36680E" />
+            <ComponentRef Id="cmpC133700979943979F9BEDE670B77003B" />
+            <ComponentRef Id="cmpE4AEAC23C3BBBF2B6368E8F397BCE601" />
+            <ComponentRef Id="cmp82CAF73950851EAAC86CE6B9488F046A" />
+            <ComponentRef Id="cmpFC5FF3B9355DE6FB25D0A715F9BFB7DA" />
+            <ComponentRef Id="cmpFF5ACE3D3829B6DAAB16F30A06F1D33C" />
+            <ComponentRef Id="cmp2F4DCF2DA4D523B01A3EB1A063071CA1" />
+            <ComponentRef Id="cmp91AA94B5661BFAF9966064430FC29A28" />
+            <ComponentRef Id="cmpABDFE395484806A515A88276A285CCA0" />
+            <ComponentRef Id="cmp7AB7C8BB796712CBF03C0891AF97C3D4" />
+            <ComponentRef Id="cmp29FDC2B7169BD1D4C58089EE4E2C90CD" />
+            <ComponentRef Id="cmp0606FD9D9B7283AA6A20984E01C6AE75" />
+            <ComponentRef Id="cmp4A18F066894F270D64D80EA4D12A6FDF" />
+            <ComponentRef Id="cmpF8801AB5454839000046DD9582267D3C" />
+            <ComponentRef Id="cmp754020EC071294282AB44825C603F26A" />
+            <ComponentRef Id="cmp7DA97B45EFA74A61E35F4CABBE1DF2AE" />
+            <ComponentRef Id="cmpFEE1C3ED38C69358F143EECA3BD95C2B" />
+            <ComponentRef Id="cmp0BFE903DE91D88D399AFB79137822506" />
+            <ComponentRef Id="cmp0D607A61988180AD9A0F11AFC933C20C" />
+            <ComponentRef Id="cmpDEFFC2841039DB9A7A8C0AAA5657CB04" />
+            <ComponentRef Id="cmpD4815836C76DBF272A92949412963B37" />
+            <ComponentRef Id="cmp2FB4BE7DCBC1DD783361E2BACB2BAD80" />
+            <ComponentRef Id="cmpD38539B475826EA252224B3B60976CDC" />
+            <ComponentRef Id="cmpE968CC8E76647D4FE8F488EC0FD00032" />
+            <ComponentRef Id="cmp2214B4D28FE44C93E465B166C85052AC" />
+            <ComponentRef Id="cmp00634387370CDFCAAAFF87D85E875FB0" />
+            <ComponentRef Id="cmp6F6841DFDD02BE41E2EE5EB104121CA0" />
+            <ComponentRef Id="cmp05655FCE8346403CB084E2D8D94E4C4F" />
+            <ComponentRef Id="cmp9AD3A3A59B2E8E0E6E8283FF313EF1B7" />
+            <ComponentRef Id="cmp955402221E9936D3B2072F58F62475D8" />
+            <ComponentRef Id="cmp587E801E1A1C69975DB35B08431BE469" />
+            <ComponentRef Id="cmp0D3DA55E9792B9B0814511579F0B1FB6" />
+            <ComponentRef Id="cmp6E72C61E80E7BA13C827D218779099AE" />
+            <ComponentRef Id="cmpD37100F054279E3B772EB3D37F06F287" />
+            <ComponentRef Id="cmpBF5F788DBAC1F950D90A8E51E13F0CB2" />
+            <ComponentRef Id="cmpAB1730F1A1DCE55ED5C4504A0CB22A9B" />
+            <ComponentRef Id="cmp148D070DB776FC220CAFA114EBC2ECBD" />
+            <ComponentRef Id="cmp467F02E2D76CF71A3460C26573831284" />
+            <ComponentRef Id="cmp16CF273ED0D2EDA52F68641D7C8817C0" />
+            <ComponentRef Id="cmpD60178A30BE383C793F22C09CF60FC06" />
+            <ComponentRef Id="cmp2AD81B1BF214BEEC1BCACC4913EDAEF8" />
+            <ComponentRef Id="cmp8112BFB8DA3191C63086DE6DC7C28D6F" />
+            <ComponentRef Id="cmp07E78CDE89E104BCBF09E19B2D445479" />
+            <ComponentRef Id="cmp7F3A4E0F5A66E2969D7BB458F3CD98BE" />
+            <ComponentRef Id="cmp1288553223ED64A0098D4389FD0B2D32" />
+            <ComponentRef Id="cmp2FAD8AE3AA7CCB121D15015EA646216A" />
+            <ComponentRef Id="cmp1F3404D9082119EAA0544C2ED653F5E1" />
+            <ComponentRef Id="cmp45B523F9F4F6DCDD47C71E3977F20E3B" />
+            <ComponentRef Id="cmp1EA5BE68264E55EE53AAF7F419266331" />
+            <ComponentRef Id="cmp82D3A6786605FE74BD3FC1E9144B272A" />
+            <ComponentRef Id="cmpCFEB233C09116C31B9DCD394C2899A4D" />
+            <ComponentRef Id="cmp6CAE517369592C271DF4AC83DCBFE9CA" />
+            <ComponentRef Id="cmpA74DC5AF2E7422A045A0C1AC354C242D" />
+            <ComponentRef Id="cmp09ECFA7D5626AEFE7EB537FECEF48B59" />
+            <ComponentRef Id="cmpF316E5054EFB3484E4878D8C75C50D07" />
+            <ComponentRef Id="cmpCC4623750A1E23715623746671EABC62" />
+            <ComponentRef Id="cmpDC42289DAC4A6C85C7C0D061647F124A" />
+            <ComponentRef Id="cmpD6E0F0E28D93435AE87706F15794FC8F" />
+            <ComponentRef Id="cmpC15F86EA4AF2EDFBE46289297E08D3BD" />
+            <ComponentRef Id="cmp3F130C3D0A8CEB214286C7F9F9172918" />
+            <ComponentRef Id="cmp30DC453F831AD80D85BBAD63A983D7A1" />
+            <ComponentRef Id="cmp1F4F9F24785221FA426A3B14AC882EE1" />
+            <ComponentRef Id="cmp0749637BE1C5AFDA77676F99502DECB5" />
+            <ComponentRef Id="cmp9C752FC7810F5F0EF50F643C739AD53F" />
+            <ComponentRef Id="cmp981785DC1BF36CE4D2E0CC82766F8AE4" />
+            <ComponentRef Id="cmp153BC367C549E750AB2FE52FF1021825" />
+            <ComponentRef Id="cmpCA1D931FA84CFF26C0C2F5AC9EB36EAC" />
+            <ComponentRef Id="cmp32277E085F2426153FD3578EC449C290" />
+            <ComponentRef Id="cmpFDF0D5B0857DC2DC8E8095397B2F9777" />
+            <ComponentRef Id="cmpDEE16C8201777F201B0C82678A5EA486" />
+            <ComponentRef Id="cmpBAC7EFC8A0710AECC92C2B633431DDFC" />
+            <ComponentRef Id="cmpC0865AA5F7987163F9CD8C6007AEEF85" />
+            <ComponentRef Id="cmpCAF1D24039969CCC5134F17A74F6286C" />
+            <ComponentRef Id="cmp7546C27A51B2A86ADE2D7A5BB3805927" />
+            <ComponentRef Id="cmpF7D5C59A601F6A7141A03FEE108ABB82" />
+            <ComponentRef Id="cmpED825A51C08339DBF8B17FFBE4852022" />
+            <ComponentRef Id="cmp4F4D4034529CEF938873B07EE61D409A" />
+            <ComponentRef Id="cmpA59381309382B4524F5BD79ACD6BC936" />
+            <ComponentRef Id="cmp8D65F9EFFE17E7168D364340A689F959" />
+            <ComponentRef Id="cmpFEE1B6EE809B8CEE9FE15FB0ACF8A70F" />
+            <ComponentRef Id="cmp667DFFEC181C2161D60DD9E459BE8B17" />
+            <ComponentRef Id="cmpAB6A8E14C6533995BFF70143FDD3B480" />
+            <ComponentRef Id="cmp1175DA053C67BB935405F1B71AFA28FD" />
+            <ComponentRef Id="cmp61221F4EE82B0CED23E82AD5EA93BD9E" />
+            <ComponentRef Id="cmp548FCA09EBFA7A5242968C98B6BCCF4E" />
+            <ComponentRef Id="cmp37184097C9AE0C729F71E5EB901D4E9E" />
+            <ComponentRef Id="cmpE43833125248BD173941691662403848" />
+            <ComponentRef Id="cmp0BF797A4FF495388014ADE893231F9AB" />
+            <ComponentRef Id="cmpC365F9955F8F4CFA16A0BBFEF9EF36B8" />
+            <ComponentRef Id="cmpAF5B714F496A439DC3B1548117793F18" />
+            <ComponentRef Id="cmpB2FBE05E8A02CDF65A8E5043D270E3D8" />
+            <ComponentRef Id="cmpCB6BC8AF6DE0FE9C9BD8A7F188295E30" />
+            <ComponentRef Id="cmp8F21AE7A4AEEF0E092167F3CC3B8C8E3" />
+            <ComponentRef Id="cmp41D1B05C44F829F19F9B547D8FBBFF87" />
+            <ComponentRef Id="cmp602D0FCF755AFCA42A90E4595F98FCDE" />
+            <ComponentRef Id="cmp5FBFEF08B15791858D47390EEB313917" />
+            <ComponentRef Id="cmpEE03CF2087AF60139C611F89FAD4C068" />
+            <ComponentRef Id="cmp3D077BE9E108BB5BBF51C17F204258DB" />
+            <ComponentRef Id="cmp844F0623457F6E806CE2324E7AAACBC7" />
+            <ComponentRef Id="cmp5C101AD8E86C1672F77EC6D9D6BF2849" />
+            <ComponentRef Id="cmpB8559545DA322CF5422B297060FA5E93" />
+            <ComponentRef Id="cmpEAFC181B94D689CB83CFFCB629EBE735" />
+            <ComponentRef Id="cmp8FD05F8DDC3F9F1584A2FF97B7C38F0A" />
+            <ComponentRef Id="cmp7F5084C40226278073A0B79AA05DEFB1" />
+            <ComponentRef Id="cmpEA1F85673C7DC48FB22BBD106E119CBC" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

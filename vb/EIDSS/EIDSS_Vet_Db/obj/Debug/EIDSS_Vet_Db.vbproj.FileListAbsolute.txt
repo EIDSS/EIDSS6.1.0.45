@@ -1,0 +1,20 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss_vet_db.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss_vet_db.pdb
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\EIDSS_Vet_Db.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\eidss_vet_db.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\eidss_vet_db.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_vet_db.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_vet_db.pdb
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\EIDSS_Vet_Db.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\eidss_vet_db.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\eidss_vet_db.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_vet_db.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_vet_db.pdb
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\EIDSS_Vet_Db.vbprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\eidss_vet_db.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\eidss_vet_db.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_vet_db.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_vet_db.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\EIDSS_Vet_Db.vbprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\eidss_vet_db.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Vet_Db\obj\Debug\eidss_vet_db.pdb

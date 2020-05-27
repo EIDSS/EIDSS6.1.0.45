@@ -1,0 +1,78 @@
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\EidssConfigEditor.exe.config
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\EidssConfigEditor.exe
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\EidssConfigEditor.pdb
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\ru-RU\EidssConfigEditor.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\bv.common.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\bv.common.pdb
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\ar-IQ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\az-Latn-AZ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\en-IQ-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\en-TH-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\hy-AM\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\ka-GE\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\kk-KZ\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\ru-KZ-Eidss\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\ru-RU\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\th-TH\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\bin\Debug\uk-UA\bv.common.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\obj\Debug\EidssConfigEditor.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\obj\Debug\EidssConfigEditor.MainForm.resources
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\obj\Debug\EidssConfigEditor.Properties.Resources.resources
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\obj\Debug\EidssConfigEditor.MainForm.ru-RU.resources
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\obj\Debug\EidssConfigEditor.csproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\obj\Debug\EidssConfigEditor.exe.licenses
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\obj\Debug\ru-RU\EidssConfigEditor.resources.dll
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\obj\Debug\EidssConfigEditor.exe
+D:\EIDSS_86\EIDSS61\EidssConfigEditor\obj\Debug\EidssConfigEditor.pdb
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\EidssConfigEditor.exe.config
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\EidssConfigEditor.exe
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\EidssConfigEditor.pdb
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\ru-RU\EidssConfigEditor.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\bv.common.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\bv.common.pdb
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\ar-IQ\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\az-Latn-AZ\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\en-IQ-Eidss\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\en-TH-Eidss\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\hy-AM\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\ka-GE\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\kk-KZ\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\ru-KZ-Eidss\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\ru-RU\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\th-TH\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\uk-UA\bv.common.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.csprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.MainForm.resources
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.Properties.Resources.resources
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.MainForm.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.csproj.GenerateResource.Cache
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.exe.licenses
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\ru-RU\EidssConfigEditor.resources.dll
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.exe
+C:\Data\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\EidssConfigEditor.exe.config
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\EidssConfigEditor.exe
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\EidssConfigEditor.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\ru-RU\EidssConfigEditor.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\bv.common.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\bv.common.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\ar-IQ\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\az-Latn-AZ\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\en-IQ-Eidss\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\en-TH-Eidss\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\hy-AM\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\ka-GE\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\kk-KZ\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\ru-KZ-Eidss\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\ru-RU\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\th-TH\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\bin\Debug\uk-UA\bv.common.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.csprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.MainForm.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.Properties.Resources.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.MainForm.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.csproj.GenerateResource.Cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.exe.licenses
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\ru-RU\EidssConfigEditor.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.exe
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\EidssConfigEditor\obj\Debug\EidssConfigEditor.pdb

@@ -1,0 +1,16 @@
+D:\EIDSS_86\EIDSS61\bv.culture.registrator\bin\Debug\bv.culture.registrator.exe.config
+D:\EIDSS_86\EIDSS61\bv.culture.registrator\bin\Debug\bv.culture.registrator.exe
+D:\EIDSS_86\EIDSS61\bv.culture.registrator\bin\Debug\bv.culture.registrator.pdb
+D:\EIDSS_86\EIDSS61\bv.culture.registrator\obj\Debug\bv.culture.registrator.exe
+D:\EIDSS_86\EIDSS61\bv.culture.registrator\obj\Debug\bv.culture.registrator.pdb
+C:\Data\EIDSS_86\EIDSS\bv.culture.registrator\bin\Debug\bv.culture.registrator.exe.config
+C:\Data\EIDSS_86\EIDSS\bv.culture.registrator\bin\Debug\bv.culture.registrator.exe
+C:\Data\EIDSS_86\EIDSS\bv.culture.registrator\bin\Debug\bv.culture.registrator.pdb
+C:\Data\EIDSS_86\EIDSS\bv.culture.registrator\obj\Debug\bv.culture.registrator.exe
+C:\Data\EIDSS_86\EIDSS\bv.culture.registrator\obj\Debug\bv.culture.registrator.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.culture.registrator\bin\Debug\bv.culture.registrator.exe.config
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.culture.registrator\bin\Debug\bv.culture.registrator.exe
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.culture.registrator\bin\Debug\bv.culture.registrator.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.culture.registrator\obj\Debug\bv.culture.registrator.csprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.culture.registrator\obj\Debug\bv.culture.registrator.exe
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\bv.culture.registrator\obj\Debug\bv.culture.registrator.pdb

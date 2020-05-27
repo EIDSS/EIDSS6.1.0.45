@@ -1,0 +1,5 @@
+D:\EIDSS_86\EIDSS\eidss.main\bin\Release\bv_common.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Release\bv_common.pdb
+D:\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Release\bvcommon.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Release\bv_common.dll
+D:\EIDSS_86\EIDSS\vb\Shared\bv_common\obj\Release\bv_common.pdb

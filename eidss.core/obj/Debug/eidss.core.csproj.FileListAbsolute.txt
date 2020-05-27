@@ -1,0 +1,244 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss.core.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss.core.pdb
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ar-IQ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\az-Latn-AZ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\en-IQ-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\en-TH-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\hy-am\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ka-GE\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\kk-KZ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-KZ-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-RU\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\th-TH\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\uk-UA\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.core.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.hy-am.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ka-GE.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ru-RU.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.th-TH.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.uk-UA.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.hy-am.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ka-GE.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ru-RU.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.th-TH.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.uk-UA.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.hy-am.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ka-GE.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ru-RU.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.th-TH.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.uk-UA.resources
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.core.csproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\ar-IQ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\az-Latn-AZ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\en-IQ-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\en-TH-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\hy-am\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\ka-GE\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\kk-KZ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\ru-KZ-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\ru-RU\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\th-TH\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\uk-UA\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.core.dll
+D:\EIDSS_86\EIDSS61\eidss.core\obj\Debug\eidss.core.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.core.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.core.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ar-IQ.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.hy-am.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ka-GE.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.kk-KZ.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ru-RU.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.th-TH.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.uk-UA.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ar-IQ.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.hy-am.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ka-GE.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.kk-KZ.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ru-RU.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.th-TH.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.uk-UA.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ar-IQ.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.hy-am.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ka-GE.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.kk-KZ.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ru-RU.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.th-TH.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.uk-UA.resources
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.csproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\ar-IQ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\az-Latn-AZ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\en-IQ-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\en-TH-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\hy-am\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\ka-GE\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\kk-KZ\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\ru-KZ-Eidss\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\ru-RU\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\th-TH\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\uk-UA\eidss.core.resources.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.dll
+D:\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.core.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.core.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.csprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.en-IQ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.en-TH-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ru-KZ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.en-IQ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.en-TH-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ru-KZ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.csproj.GenerateResource.Cache
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\ar-IQ\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\az-Latn-AZ\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\en-IQ-Eidss\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\en-TH-Eidss\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\hy-am\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\ka-GE\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\kk-KZ\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\ru-KZ-Eidss\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\ru-RU\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\th-TH\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\uk-UA\eidss.core.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.dll
+C:\Data\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.core.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.core.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.csprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.en-IQ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.en-TH-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ru-KZ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssFields.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMenu.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.en-IQ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.en-TH-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ru-KZ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.model.Resources.EidssMessages.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.csproj.GenerateResource.Cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\ar-IQ\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\az-Latn-AZ\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\en-IQ-Eidss\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\en-TH-Eidss\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\hy-am\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\ka-GE\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\kk-KZ\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\ru-KZ-Eidss\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\ru-RU\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\th-TH\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\uk-UA\eidss.core.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.core\obj\Debug\eidss.core.pdb

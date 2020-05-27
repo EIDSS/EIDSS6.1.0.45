@@ -1,0 +1,620 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.TH.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\fgdb.template
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss_forms.dll.config
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss_forms.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss_forms.pdb
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ar-IQ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\az-Latn-AZ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\en-IQ-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\en-TH-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\hy-am\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ka-GE\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\kk-KZ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-KZ-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-RU\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\th-TH\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\uk-UA\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS_Common_Forms.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.Resources.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS_Common_Forms.vbproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.dll.licenses
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ar-IQ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\az-Latn-AZ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\en-IQ-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\en-TH-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\hy-am\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ka-GE\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\kk-KZ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ru-KZ-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ru-RU\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\th-TH\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\uk-UA\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.TH.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\fgdb.template
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_forms.dll.config
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_forms.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_forms.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS_Common_Forms.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.Resources.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS_Common_Forms.vbproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.dll.licenses
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ar-IQ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\az-Latn-AZ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\en-IQ-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\en-TH-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\hy-am\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ka-GE\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\kk-KZ\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ru-KZ-Eidss\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ru-RU\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\th-TH\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\uk-UA\eidss_forms.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.map
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.TH.map
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\fgdb.template
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_forms.dll.config
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_forms.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_forms.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS_Common_Forms.vbprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.Resources.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.en-IQ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.en-TH-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ru-KZ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.en-IQ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.en-TH-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ru-KZ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.en-IQ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.en-TH-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ru-KZ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.en-IQ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.en-TH-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ru-KZ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS_Common_Forms.vbproj.GenerateResource.Cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.dll.licenses
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ar-IQ\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\az-Latn-AZ\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\en-IQ-Eidss\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\en-TH-Eidss\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\hy-am\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ka-GE\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\kk-KZ\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ru-KZ-Eidss\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ru-RU\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\th-TH\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\uk-UA\eidss_forms.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.TH.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\fgdb.template
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_forms.dll.config
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_forms.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss_forms.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS_Common_Forms.vbprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.Resources.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.en-IQ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.en-TH-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ru-KZ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AggregateHeader.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseSamplesPanel.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.CaseTestsPanel.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.en-IQ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.en-TH-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ru-KZ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressLookup.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.AddressSelectDialog.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.ExactLocationPanel.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.en-IQ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.en-TH-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ru-KZ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationLookup.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.LocationSelectDialog.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.en-IQ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.en-TH-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ru-KZ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.SettlementDetail.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.TestResult2TestDetail.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.NotificationSubscriptionDetail.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS.OutbreakDetail.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\EIDSS_Common_Forms.vbproj.GenerateResource.Cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.dll.licenses
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ar-IQ\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\az-Latn-AZ\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\en-IQ-Eidss\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\en-TH-Eidss\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\hy-am\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ka-GE\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\kk-KZ\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ru-KZ-Eidss\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\ru-RU\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\th-TH\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\uk-UA\eidss_forms.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common_Forms\obj\Debug\eidss_forms.pdb

@@ -1,0 +1,248 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS_ClientAgent.exe.config
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS_ClientAgent.exe
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS_ClientAgent.pdb
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS_ClientAgent.xml
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ar-IQ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\az-Latn-AZ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\hy-am\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ka-GE\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\kk-KZ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-RU\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\th-TH\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\uk-UA\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\en-IQ-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\en-TH-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-KZ-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ka-GE.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.kk-KZ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.uk-UA.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.vbproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.exe.licenses
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ar-IQ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\az-Latn-AZ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\hy-am\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ka-GE\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\kk-KZ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ru-RU\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\th-TH\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\uk-UA\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\en-IQ-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\en-TH-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ru-KZ-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.exe
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.xml
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.exe.config
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.exe
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.xml
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.en-IQ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.en-TH-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ru-KZ-Eidss.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.az-Latn-AZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ka-GE.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.kk-KZ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.uk-UA.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.vbproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.exe.licenses
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ar-IQ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\az-Latn-AZ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\hy-am\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ka-GE\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\kk-KZ\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ru-RU\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\th-TH\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\uk-UA\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\en-IQ-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\en-TH-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ru-KZ-Eidss\EIDSS_ClientAgent.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.exe
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.xml
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.exe.config
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.exe
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.xml
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.vbprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.en-IQ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.en-TH-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ru-KZ-Eidss.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.az-Latn-AZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ka-GE.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.kk-KZ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.uk-UA.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.vbproj.GenerateResource.Cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.exe.licenses
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ar-IQ\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\az-Latn-AZ\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\hy-am\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ka-GE\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\kk-KZ\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ru-RU\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\th-TH\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\uk-UA\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\en-IQ-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\en-TH-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ru-KZ-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.exe
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.xml
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.exe.config
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.exe
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_ClientAgent.xml
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-Latn-AZ\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-GE\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-KZ\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-UA\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-IQ-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\en-TH-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-KZ-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.vbprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.BaseTaskBarForm.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.en-IQ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.en-TH-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ru-KZ-Eidss.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.NotificationForm.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.az-Latn-AZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ka-GE.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.kk-KZ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.PopupMessage.uk-UA.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.vbproj.GenerateResource.Cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.exe.licenses
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ar-IQ\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\az-Latn-AZ\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\hy-am\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ka-GE\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\kk-KZ\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ru-RU\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\th-TH\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\uk-UA\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\en-IQ-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\en-TH-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\ru-KZ-Eidss\EIDSS_ClientAgent.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.exe
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.xml
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_ClientAgent\obj\Debug\EIDSS_ClientAgent.pdb

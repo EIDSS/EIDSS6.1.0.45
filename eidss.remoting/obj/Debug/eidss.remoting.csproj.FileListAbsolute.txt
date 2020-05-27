@@ -1,0 +1,20 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss.remoting.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\eidss.remoting.pdb
+D:\EIDSS_86\EIDSS61\eidss.remoting\obj\Debug\eidss.remoting.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\eidss.remoting\obj\Debug\eidss.remoting.dll
+D:\EIDSS_86\EIDSS61\eidss.remoting\obj\Debug\eidss.remoting.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.remoting.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.remoting.pdb
+D:\EIDSS_86\EIDSS\eidss.remoting\obj\Debug\eidss.remoting.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\eidss.remoting\obj\Debug\eidss.remoting.dll
+D:\EIDSS_86\EIDSS\eidss.remoting\obj\Debug\eidss.remoting.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.remoting.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.remoting.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.remoting\obj\Debug\eidss.remoting.csprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\eidss.remoting\obj\Debug\eidss.remoting.dll
+C:\Data\EIDSS_86\EIDSS\eidss.remoting\obj\Debug\eidss.remoting.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.remoting.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\eidss.remoting.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.remoting\obj\Debug\eidss.remoting.csprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.remoting\obj\Debug\eidss.remoting.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.remoting\obj\Debug\eidss.remoting.pdb

@@ -1,0 +1,24 @@
+D:\EIDSS_86\EIDSS61\eidss.openapi.contract\bin\Debug\eidss.openapi.contract.XML
+D:\EIDSS_86\EIDSS61\eidss.openapi.contract\bin\Debug\eidss.openapi.contract.dll
+D:\EIDSS_86\EIDSS61\eidss.openapi.contract\bin\Debug\eidss.openapi.contract.pdb
+D:\EIDSS_86\EIDSS61\eidss.openapi.contract\bin\Debug\Newtonsoft.Json.dll
+D:\EIDSS_86\EIDSS61\eidss.openapi.contract\bin\Debug\Newtonsoft.Json.xml
+D:\EIDSS_86\EIDSS61\eidss.openapi.contract\obj\Debug\eidss.openapi.contract.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\eidss.openapi.contract\obj\Debug\eidss.openapi.contract.dll
+D:\EIDSS_86\EIDSS61\eidss.openapi.contract\obj\Debug\eidss.openapi.contract.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.openapi.contract\bin\Debug\eidss.openapi.contract.XML
+C:\Data\EIDSS_86\EIDSS\eidss.openapi.contract\bin\Debug\eidss.openapi.contract.dll
+C:\Data\EIDSS_86\EIDSS\eidss.openapi.contract\bin\Debug\eidss.openapi.contract.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.openapi.contract\bin\Debug\Newtonsoft.Json.dll
+C:\Data\EIDSS_86\EIDSS\eidss.openapi.contract\bin\Debug\Newtonsoft.Json.xml
+C:\Data\EIDSS_86\EIDSS\eidss.openapi.contract\obj\Debug\eidss.openapi.contract.csprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\eidss.openapi.contract\obj\Debug\eidss.openapi.contract.dll
+C:\Data\EIDSS_86\EIDSS\eidss.openapi.contract\obj\Debug\eidss.openapi.contract.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.openapi.contract\bin\Debug\eidss.openapi.contract.XML
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.openapi.contract\bin\Debug\eidss.openapi.contract.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.openapi.contract\bin\Debug\eidss.openapi.contract.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.openapi.contract\bin\Debug\Newtonsoft.Json.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.openapi.contract\bin\Debug\Newtonsoft.Json.xml
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.openapi.contract\obj\Debug\eidss.openapi.contract.csprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.openapi.contract\obj\Debug\eidss.openapi.contract.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.openapi.contract\obj\Debug\eidss.openapi.contract.pdb

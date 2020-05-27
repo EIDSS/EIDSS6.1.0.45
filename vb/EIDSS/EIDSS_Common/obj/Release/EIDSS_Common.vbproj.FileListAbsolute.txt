@@ -1,0 +1,5 @@
+D:\EIDSS_86\EIDSS\eidss.main\bin\Release\eidss_common.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Release\eidss_common.pdb
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common\obj\Release\EIDSS_Common.vbprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common\obj\Release\eidss_common.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_Common\obj\Release\eidss_common.pdb

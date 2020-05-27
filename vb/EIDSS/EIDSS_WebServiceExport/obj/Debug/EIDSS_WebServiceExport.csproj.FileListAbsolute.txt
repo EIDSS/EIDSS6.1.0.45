@@ -1,0 +1,148 @@
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\MapProjects\Default.TH.map
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\fgdb.template
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS_WebServiceExport.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\EIDSS_WebServiceExport.pdb
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ar-IQ\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\az-latn-az\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\hy-am\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ka-ge\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\kk-kz\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\ru-RU\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\th-TH\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\eidss.main\bin\Debug\uk-ua\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.az-latn-az.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.hy-am.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ka-ge.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.kk-kz.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.th-TH.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.uk-ua.resources
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.csproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.dll.licenses
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ar-IQ\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\az-latn-az\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\hy-am\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ka-ge\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\kk-kz\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ru-RU\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\th-TH\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\uk-ua\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.dll
+D:\EIDSS_86\EIDSS61\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.TH.map
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\fgdb.template
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_WebServiceExport.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_WebServiceExport.pdb
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-latn-az\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-ge\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-kz\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-ua\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.csprojResolveAssemblyReference.cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ar-IQ.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.az-latn-az.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.hy-am.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ka-ge.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.kk-kz.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ru-RU.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.th-TH.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.uk-ua.resources
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.csproj.GenerateResource.Cache
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.dll.licenses
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ar-IQ\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\az-latn-az\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\hy-am\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ka-ge\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\kk-kz\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ru-RU\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\th-TH\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\uk-ua\EIDSS_WebServiceExport.resources.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.dll
+D:\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.map
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.TH.map
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\fgdb.template
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_WebServiceExport.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_WebServiceExport.pdb
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-latn-az\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-ge\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-kz\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-ua\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.csprojResolveAssemblyReference.cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ar-IQ.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.az-latn-az.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.hy-am.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ka-ge.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.kk-kz.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ru-RU.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.th-TH.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.uk-ua.resources
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.csproj.GenerateResource.Cache
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.dll.licenses
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ar-IQ\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\az-latn-az\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\hy-am\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ka-ge\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\kk-kz\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ru-RU\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\th-TH\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\uk-ua\EIDSS_WebServiceExport.resources.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.dll
+C:\Data\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.KZ.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\MapProjects\Default.TH.map
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\fgdb.template
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_WebServiceExport.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\EIDSS_WebServiceExport.pdb
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ar-IQ\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\az-latn-az\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\hy-am\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ka-ge\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\kk-kz\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\ru-RU\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\th-TH\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\eidss.main\bin\Debug\uk-ua\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.csprojResolveAssemblyReference.cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ar-IQ.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.az-latn-az.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.hy-am.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ka-ge.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.kk-kz.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.ru-RU.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.th-TH.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\eidss.winclient.WhoExport.WhoExportMasterDetail.uk-ua.resources
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.csproj.GenerateResource.Cache
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.dll.licenses
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ar-IQ\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\az-latn-az\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\hy-am\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ka-ge\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\kk-kz\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\ru-RU\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\th-TH\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\uk-ua\EIDSS_WebServiceExport.resources.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.dll
+C:\Users\omdje\Documents\Visual Studio 2015\Projects\EIDSS_86\EIDSS\vb\EIDSS\EIDSS_WebServiceExport\obj\Debug\EIDSS_WebServiceExport.pdb
