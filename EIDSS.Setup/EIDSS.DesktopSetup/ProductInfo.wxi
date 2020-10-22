@@ -19,4 +19,5 @@
   <?define ProductRegistryKey = $(var.ProductFamilyRegistryKey)\[UpgradeCode]?>
   <?define ThirdParty = $(var.SourceDir)dlls\?>
   <?define ThirdParty.GIS = $(var.ThirdParty)gis\?>
+  <?define ThirdParty.GgPinService = $(var.ThirdParty)pin\?>
 </Include>

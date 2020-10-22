@@ -292,7 +292,7 @@
     <value>Запись будет удалена. Удалить запись?</value>
   </data>
   <data name="msgEIDSSCopyright" xml:space="preserve">
-    <value>Все права защищены © 2005-2017 Black &amp;&amp; Veatch Special Projects Corp.</value>
+    <value>Все права защищены © 2005-2020 Black &amp;&amp; Veatch Special Projects Corp.</value>
   </data>
   <data name="msgEIDSSRunning" xml:space="preserve">
     <value>Вы не можете запустить больше одной сессии EIDSS одновременно. Одна сессия программы уже запущена.</value>

@@ -337,7 +337,7 @@
     <value>The record(s) will be deleted. Delete?</value>
   </data>
   <data name="msgEIDSSCopyright" xml:space="preserve">
-    <value>Copyright © 2005-2017 Black &amp;&amp; Veatch Special Projects Corp.</value>
+    <value>Copyright © 2005-2020 Black &amp;&amp; Veatch Special Projects Corp.</value>
   </data>
   <data name="msgEIDSSRunning" xml:space="preserve">
     <value>You can't run multiple EIDSS instances simultaneously. Other instance of EIDSS is running already</value>
@@ -561,7 +561,9 @@
   <data name="titleEmergencyNotificationDTRAReport" xml:space="preserve">
     <value>Urgent Notification Form (customized)</value>
   </data>
-
+  <data name="titleEmergencyNotificationUkraineReport" xml:space="preserve">
+    <value>Urgent Notification Form (Ukraine)</value>
+  </data>
   <data name="titleFieldTestsSetResult" xml:space="preserve">
     <value>Set result</value>
   </data>

@@ -23,6 +23,7 @@ namespace eidss.webclient.Controllers
             //var aggCase = ModelStorage.Get(ModelUserContext.ClientID, root, null, false) as AggregateCaseHeader;
             return ObjectStorage.Using<AggregateCaseHeader, ActionResult>(aggCase =>
                 {
+                    UpdateFlexFormObjectReadonly(aggCase);
                     if ((aggCase != null) && (aggCase.FFPresenterCase != null) && (aggCase.FFPresenterCase.CurrentObservation.HasValue))
                     {
                         ObjectStorage.Put(ModelUserContext.ClientID, aggCase.idfAggrCase, aggCase.idfAggrCase, aggCase.FFPresenterCase.CurrentObservation.Value.ToString(), aggCase.FFPresenterCase);
@@ -34,12 +35,15 @@ namespace eidss.webclient.Controllers
                 }, ModelUserContext.ClientID, root, null, false);
         }
 
+      
+
         [CompressFilter]
         public ActionResult GetFlexFormDiagnostic(long root)
         {
             //var aggCase = ModelStorage.Get(ModelUserContext.ClientID, root, null, false) as AggregateCaseHeader;
             return ObjectStorage.Using<AggregateCaseHeader, ActionResult>(aggCase =>
                 {
+                    UpdateFlexFormObjectReadonly(aggCase);
                     if ((aggCase != null) && (aggCase.FFPresenterDiagnostic != null) && (aggCase.FFPresenterDiagnostic.CurrentObservation.HasValue))
                     {
                         ObjectStorage.Put(ModelUserContext.ClientID, aggCase.idfAggrCase, aggCase.idfAggrCase, aggCase.FFPresenterDiagnostic.CurrentObservation.Value.ToString(), aggCase.FFPresenterDiagnostic);
@@ -56,6 +60,7 @@ namespace eidss.webclient.Controllers
             //var aggCase = ModelStorage.Get(ModelUserContext.ClientID, root, null, false) as AggregateCaseHeader;
             return ObjectStorage.Using<AggregateCaseHeader, ActionResult>(aggCase =>
                 {
+                    UpdateFlexFormObjectReadonly(aggCase);
                     if ((aggCase != null) && (aggCase.FFPresenterProphylactic != null) && (aggCase.FFPresenterProphylactic.CurrentObservation.HasValue))
                     {
                         ObjectStorage.Put(ModelUserContext.ClientID, aggCase.idfAggrCase, aggCase.idfAggrCase, aggCase.FFPresenterProphylactic.CurrentObservation.Value.ToString(), aggCase.FFPresenterProphylactic);
@@ -72,6 +77,7 @@ namespace eidss.webclient.Controllers
             //var aggCase = ModelStorage.Get(ModelUserContext.ClientID, root, null, false) as AggregateCaseHeader;
             return ObjectStorage.Using<AggregateCaseHeader, ActionResult>(aggCase =>
                 {
+                    UpdateFlexFormObjectReadonly(aggCase);
                     if ((aggCase != null) && (aggCase.FFPresenterSanitary != null) && (aggCase.FFPresenterSanitary.CurrentObservation.HasValue))
                     {
                         ObjectStorage.Put(ModelUserContext.ClientID, aggCase.idfAggrCase, aggCase.idfAggrCase, aggCase.FFPresenterSanitary.CurrentObservation.Value.ToString(), aggCase.FFPresenterSanitary);
@@ -81,6 +87,19 @@ namespace eidss.webclient.Controllers
 
                     return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = Translator.GetMessageString("msgNowTemplate") };
                 }, ModelUserContext.ClientID, root, null, false);
+        }
+
+        private void UpdateFlexFormObjectReadonly(object obj)
+        {
+            var iObj = obj as IObject;
+            if (iObj != null)
+            {
+                IObjectPermissions permission = iObj.GetPermissions();
+                if (permission != null && permission.IsReadOnlyForEdit)
+                {
+                    iObj.ReadOnly = true;
+                }
+            }
         }
     }
 }

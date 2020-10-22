@@ -238,7 +238,7 @@ var formRefresher = (function () {
             }
             else {
                 var control = $("#" + itemData.controlName);
-                control.removeClass("requiredField");                
+                control.removeClass("requiredField");
             }
         }
         if (datePicker.length == 0) {
@@ -254,7 +254,7 @@ var formRefresher = (function () {
         datePickerFacade.setRequired(itemData.controlName, itemData.mandatory);
         datePickerFacade.setEnabled(datePickerData, !itemData.readOnly);
         datePickerFacade.setVisible(itemData.controlName, itemData.invisible);
-        
+
         var controlName = itemData.controlName;
         var objectIdent = controlName; //controlName.substring(controlName.lastIndexOf("_") + 1);
         var label = $("label[for=" + objectIdent + "]");
@@ -299,7 +299,7 @@ var formRefresher = (function () {
         if (numericData) {
             numericTextBoxFacade.setEnabled(numericData, !itemData.readOnly);
             numericTextBoxFacade.setValue(numericData, itemData.value);
-            
+
             var buttonIdent = controlName.substring(0, controlName.lastIndexOf("_") + 1);
             var button = $("#" + buttonIdent);
             if (button.length > 0) {
@@ -348,7 +348,7 @@ var formRefresher = (function () {
             control.parent().removeClass("invisible");
             comboBoxFacade.show(comboBoxData);
         }
-        
+
         if (itemData.items) {
             comboBoxData.dataSource.data(itemData.items);
             //var comboBox = comboBoxFacade.getControlData(controlName);
@@ -384,7 +384,7 @@ var formRefresher = (function () {
         var dropDownData = comboBoxFacade.getControlData(itemData.controlName, true);
         if (dropDownData) {
             updateComboBox(dropDownData, itemData);
-        } 
+        }
     }
 
     function updateCheckBox(itemData) {
@@ -489,7 +489,7 @@ var formRefresher = (function () {
             asCampaign.enableInlinePicker(objectId, propertyName, value);
         }
     }
-    
+
     function showInlineItemPickers(objectId, propertyName, controlName) {
         if (typeof organization != "undefined" && organization) {
             organization.showInlinePicker(objectId, propertyName, controlName);
@@ -537,7 +537,7 @@ var formRefresher = (function () {
         } else {
             bvGrid.enable(itemData.controlName);
         }
-        bvGrid.reloadById(itemData.controlName); 
+        bvGrid.reloadById(itemData.controlName);
     }
 
     function emptyFunction() {
@@ -700,9 +700,44 @@ var formRefresher = (function () {
                     if (showWait) {
                         hideLoading();
                     }
+
                     if (!doChangedSuccessAfterUpdate)
                         formRefresher.doOnChangedSuccess(data);
+
                     formRefresher.updateControls(data);
+
+                    // Any code duplications are not allowed.
+                    let customRequiredFieldSetter = function (classList, className, htmlElement) {
+                        const requireFieldClassName = 'requiredField';
+                        let isItEnabled = true;
+                        for (let i = 0; i < classList.length; ++i) {
+                            if (classList[i] === className) {
+                                isItEnabled = false;
+                                break;
+                            }
+                        }
+
+                        if (isItEnabled) {
+                            htmlElement.kendoAddClass(requireFieldClassName);
+                        }
+                        else {
+                            htmlElement.kendoRemoveClass(requireFieldClassName);
+                        }
+                    }
+
+                    if ($('#IsHospitalizationPlaceRequired').val() === "true") {
+                        let placeOfHospitalizationElement = $('#HospitalizationPlaceConstantId > span > input');
+                        let classList = placeOfHospitalizationElement.attr('class').split(/\s+/);
+                        customRequiredFieldSetter(classList, 'readonlyField', placeOfHospitalizationElement);
+                    }
+
+                    if ($('#IsHospitalizationDateRequired').val() === "true") {
+                        let dateOfHospitalizationFirstSpanElement = $('#HospitalizationDateConstantId > span');
+                        let dateOfHospitalizationSecondSpanElement = $('#HospitalizationDateConstantId > span > span');
+                        let classList = dateOfHospitalizationSecondSpanElement.attr('class').split(/\s+/);
+                        customRequiredFieldSetter(classList, 'k-state-disabled', dateOfHospitalizationFirstSpanElement);
+                    }
+
                     if (doChangedSuccessAfterUpdate)
                         formRefresher.doOnChangedSuccess(data);
                 },
@@ -736,7 +771,7 @@ var formRefresher = (function () {
             var textBoxValue = $("#" + textBoxName).val();
             formRefresher.onFieldChanged(textBoxName, textBoxValue);
         },
-        
+
         /*onComboBoxChanged: function (e) {
             var args = comboBoxFacade.getOnChangedEventArgs(e);
             formRefresher.onFieldChanged(args.senderId, args.selectedValue);

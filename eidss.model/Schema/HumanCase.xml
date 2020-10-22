@@ -497,8 +497,10 @@
                   <db_lambda_extender target="strCaseID" type="string" lambda='(c,m) => 
                       !string.IsNullOrEmpty(c.strCaseID)
                       ? c.strCaseID 
-                      : m.SetSpCommand("dbo.spGetNextNumber", (long)NumberingObjectEnum.HumanCase, DBNull.Value, DBNull.Value)
-                      .ExecuteScalar&lt;string&gt;(ScalarSourceType.OutputParameter, "NextNumberValue")' />
+                      : ( BaseSettings.GenerateReadableIdByNumericObjectId
+                          ? ReadableIdentifierHelper.GetReadableIdentifier(NumberingObjectEnum.HumanCase, c.idfCase)
+                          : m.SetSpCommand("dbo.spGetNextNumber", (long)NumberingObjectEnum.HumanCase, DBNull.Value, DBNull.Value)
+                              .ExecuteScalar&lt;string&gt;(ScalarSourceType.OutputParameter, "NextNumberValue"))' />
                     
                   <!-- In the field Date Last Saved the current date will be inserted each time the changes are saved -->
                   <lambda_extender target="datModificationDate" type="DateTime?" lambda="c => DateTime.Now" />
@@ -917,7 +919,10 @@
                   <custom_mandatory_validator name="idfReceivedByPerson" fieldId="HumanCase_NotificationReceivedByName" label="strReceivedByPerson2" predicate="c => !eidss.model.Core.EidssUserContext.SmartphoneContext"/>
                   <custom_mandatory_validator name="strReceivedByPerson" fieldId="HumanCase_NotificationReceivedByName" predicate="c => !eidss.model.Core.EidssUserContext.SmartphoneContext"/>
                   <custom_mandatory_validator name="Hospitalization" fieldId="HumanCase_Hospitalization" label="idfsYNHospitalization" predicate="c => !eidss.model.Core.EidssUserContext.SmartphoneContext"/>
-                  
+                  <custom_mandatory_validator name="strHospitalizationPlace" fieldId="HumanCase_HospitalizationPlace" predicate="c => (!eidss.model.Core.EidssUserContext.SmartphoneContext) &amp;&amp; (c.idfsYNHospitalization == (long)YesNoUnknownValuesEnum.Yes)"/>
+                  <custom_mandatory_validator name="datHospitalizationDate" fieldId="HumanCase_HospitalizationDate" predicate="c => (!eidss.model.Core.EidssUserContext.SmartphoneContext) &amp;&amp; (c.idfsYNHospitalization == (long)YesNoUnknownValuesEnum.Yes)"/>
+                  <custom_mandatory_validator name="SpecimenCollected" fieldId="HumanCase_SpecimenCollected" label="idfsYNSpecimenCollected" predicate="c => !eidss.model.Core.EidssUserContext.SmartphoneContext"/>
+
                   <predicate_validator predicate="c => c.Patient.CurrentResidenceAddress.dblLongitude.HasValue &amp;&amp; c.Patient.CurrentResidenceAddress.dblLatitude.HasValue || !c.Patient.CurrentResidenceAddress.dblLongitude.HasValue &amp;&amp; !c.Patient.CurrentResidenceAddress.dblLatitude.HasValue" message="msgCoordinatesAreNotDefined"/>
                   <predicate_validator predicate="c => c.Patient.RegistrationAddress.dblLongitude.HasValue &amp;&amp; c.Patient.RegistrationAddress.dblLatitude.HasValue || !c.Patient.RegistrationAddress.dblLongitude.HasValue &amp;&amp; !c.Patient.RegistrationAddress.dblLatitude.HasValue" message="msgCoordinatesAreNotDefined"/>
 
@@ -1011,7 +1016,16 @@
                 <preUI webType="JScript"/>
               </run>
             </action>
-            
+
+            <action name="EmergencyNotificationUkraineReport" type="Action">
+              <visual panel="ContextMenu" visiblePredicate="(o1, o2, p, r) => eidss.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed(&quot;HumUrgentyNotificationUkraine&quot;)">
+                <regular caption="titleEmergencyNotificationUkraineReport" icon="" tooltip=""/>
+              </visual>
+              <run>
+                <preUI webType="JScript"/>
+              </run>
+            </action>
+
             <action name="ExportHumUrgentyNotificationTanzania" type="Action">
               <visual panel="ContextMenu" visiblePredicate="(o1, o2, p, r) => eidss.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed(&quot;HumUrgentyNotificationTanzania&quot;)">
                 <regular caption="titleEmergencyNotificationReport" icon="" tooltip=""/>

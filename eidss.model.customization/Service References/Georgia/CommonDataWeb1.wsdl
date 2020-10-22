@@ -311,10 +311,10 @@
   </wsdl:binding>
   <wsdl:service name="CommonDataWeb">
     <wsdl:port name="CommonDataWebSoap" binding="tns:CommonDataWebSoap">
-      <soap:address location="http://ncdclogin.moh.gov.ge/Hmis/Hmis.CommonData.Web/Services/CommonDataWeb.asmx" />
+      <soap:address location="https://ncdclogin.moh.gov.ge/Hmis/Hmis.CommonData.Web/Services/CommonDataWeb.asmx" />
     </wsdl:port>
     <wsdl:port name="CommonDataWebSoap12" binding="tns:CommonDataWebSoap12">
-      <soap12:address location="http://ncdclogin.moh.gov.ge/Hmis/Hmis.CommonData.Web/Services/CommonDataWeb.asmx" />
+      <soap12:address location="https://ncdclogin.moh.gov.ge/Hmis/Hmis.CommonData.Web/Services/CommonDataWeb.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

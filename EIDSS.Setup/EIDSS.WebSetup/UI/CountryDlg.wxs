@@ -20,15 +20,16 @@
           <Publish Property="Kazakh" Value="kk" Order="6"><![CDATA[COUNTRY = "!(loc.Kazakhstan)"]]></Publish>
           <Publish Property="Kazakh" Value="{}" Order="6"><![CDATA[COUNTRY <> "!(loc.Kazakhstan)"]]></Publish>
           <Publish Property="Russian" Value="ru" Order="7">
-            <![CDATA[COUNTRY <> "!(loc.Iraq)" And COUNTRY <> "!(loc.Tanzania)"]]>
+            <![CDATA[COUNTRY <> "!(loc.Iraq)" And COUNTRY <> "!(loc.Tanzania)" And COUNTRY <> "!(loc.UnitedStates)"]]>
           </Publish>
           <Publish Property="Russian" Value="{}" Order="7">
-            <![CDATA[COUNTRY = "!(loc.Iraq)" Or COUNTRY = "!(loc.Tanzania)"]]>
+            <![CDATA[COUNTRY = "!(loc.Iraq)" Or COUNTRY = "!(loc.Tanzania)" Or COUNTRY = "!(loc.UnitedStates)"]]>
           </Publish>
-          <Publish Property="DEFAULTLANGUAGE" Value="en" Order="8"><![CDATA[COUNTRY = "!(loc.Tanzania)"]]></Publish>
-          <Publish Property="SUPPORTEDLANGUAGES" Value="en" Order="8"><![CDATA[COUNTRY = "!(loc.Tanzania)"]]></Publish>
-          <Publish Property="SkipLanguageDlg" Value="1" Order="8"><![CDATA[COUNTRY = "!(loc.Tanzania)"]]></Publish>
-          <Publish Property="SkipLanguageDlg" Value="{}" Order="8"><![CDATA[COUNTRY <> "!(loc.Tanzania)"]]></Publish>
+          <Publish Property="DEFAULTLANGUAGE" Value="en" Order="8"><![CDATA[COUNTRY = "!(loc.Tanzania)" Or COUNTRY = "!(loc.UnitedStates)"]]></Publish>
+          <Publish Property="SUPPORTEDLANGUAGES" Value="en" Order="8"><![CDATA[COUNTRY = "!(loc.Tanzania)" Or COUNTRY = "!(loc.UnitedStates)"]]></Publish>
+          <Publish Property="SkipLanguageDlg" Value="1" Order="8"><![CDATA[COUNTRY = "!(loc.Tanzania)" Or COUNTRY = "!(loc.UnitedStates)"]]></Publish>
+          <Publish Property="SkipLanguageDlg" Value="{}" Order="8"><![CDATA[COUNTRY <> "!(loc.Tanzania)" And COUNTRY <> "!(loc.UnitedStates)"]]></Publish>
+          
           <Publish Property="Ukrainian" Value="uk" Order="9"><![CDATA[COUNTRY = "!(loc.Ukraine)"]]></Publish>
           <Publish Property="Ukrainian" Value="{}" Order="9"><![CDATA[COUNTRY <> "!(loc.Ukraine)"]]></Publish>
 
@@ -71,6 +72,7 @@
             <ListItem Text="Tanzania" Value="!(loc.Tanzania)" />
             <ListItem Text="Thailand" Value="!(loc.Thailand)" />
             <ListItem Text="Ukraine" Value="!(loc.Ukraine)" />
+            <ListItem Text="United States of America" Value="!(loc.UnitedStates)" />
             <ListItem Text="Vietnam" Value="!(loc.Vietnam)" />
           </ComboBox>
         </Control>

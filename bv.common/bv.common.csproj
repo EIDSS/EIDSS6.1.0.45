@@ -16,7 +16,6 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,7 +28,6 @@
     <DocumentationFile>
     </DocumentationFile>
     <NoWarn>1591;1572;1587;1734;1573</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,7 +36,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="sysglobl" />
@@ -177,13 +174,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\BvMessages.en-IQ-Eidss.resx">
       <DependentUpon>BvMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\BvMessages.en-TH-Eidss.resx">
       <DependentUpon>BvMessages.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\BvMessages.en-US-Eidss.resx">
+      <DependentUpon>BvMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\BvMessages.hy-am.resx">
       <DependentUpon>BvMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\BvMessages.ka-GE.resx">
       <DependentUpon>BvMessages.cs</DependentUpon>
@@ -199,6 +202,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\BvMessages.ru-KZ-Eidss.resx">
       <DependentUpon>BvMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\BvMessages.ru-RU.resx">
       <DependentUpon>BvMessages.cs</DependentUpon>
@@ -206,9 +210,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\BvMessages.th-TH.resx">
       <DependentUpon>BvMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\BvMessages.uk-UA.resx">
       <DependentUpon>BvMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Images\ImagesStorage.resx">
       <DependentUpon>ImagesStorage.cs</DependentUpon>

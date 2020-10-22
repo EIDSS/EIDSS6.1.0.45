@@ -46,8 +46,8 @@
               <calculated name="strEnteredDate" depends="datEnteredDate" type="string" lambda='c => c.datEnteredDate.HasValue ? c.datEnteredDate.Value.ToShortDateString() : ""'/>
               <calculated name="strModificationDate" depends="datModificationDate" type="string" lambda='c => c.datModificationDate.HasValue ? c.datModificationDate.Value.ToShortDateString() : ""'/>
 
-              <calculated name="IsFirstCreatedAndGGPin" depends="idfsPersonIDType" type="bool" lambda="c => eidss.model.Core.EidssSiteContext.Instance.IsGeorgiaCustomization &amp;&amp; c.bFirstCreated &amp;&amp; c.idfsPersonIDType == (long)PersonalIDType.PIN_GG"/>
-              <calculated name="IsGGPinChangedAndNotValidated" depends="" type="bool" lambda="c => eidss.model.Core.EidssSiteContext.Instance.IsGeorgiaCustomization &amp;&amp; c.idfsPersonIDType == (long)PersonalIDType.PIN_GG &amp;&amp; c.strPersonID.CompareTo(c.strPinValid) != 0"/>
+              <calculated name="IsFirstCreatedAndGGPin" depends="idfsPersonIDType" type="bool" lambda="c => eidss.model.Core.EidssSiteContext.Instance.IsGeorgiaCustomization &amp;&amp; c.bFirstCreated &amp;&amp; c.idfsPersonIDType == (long)PersonalIDType.PIN_GG  &amp;&amp; BaseSettings.GGPinServiceVerification"/>
+              <calculated name="IsGGPinChangedAndNotValidated" depends="" type="bool" lambda="c => eidss.model.Core.EidssSiteContext.Instance.IsGeorgiaCustomization &amp;&amp; c.idfsPersonIDType == (long)PersonalIDType.PIN_GG  &amp;&amp; BaseSettings.GGPinServiceVerification &amp;&amp; c.strPersonID.CompareTo(c.strPinValid) != 0"/>
             </fields>
             <readonly>
               <fields name="strName" predicate="c => true" />              

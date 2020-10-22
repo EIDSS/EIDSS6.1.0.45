@@ -1673,9 +1673,6 @@ namespace eidss.model.Schema
                   
                     if (loading != null)
                         loading(obj);
-
-                    //_SetupRefs(sets, obj);
-
                     _SetupLoad(manager, obj);
                     
                     obj.HumanGenderRefs.ForEach(c => HumanGenderRefsAccessor._SetupLoad(manager, c));
@@ -1712,21 +1709,6 @@ namespace eidss.model.Schema
                     throw DbModelException.Create(obj, e);
                   }
                 
-            }
-
-            private void _SetupRefs(MapResultSet[] sets, Upload506Master obj)
-            {
-                obj.HumanGenderRefs.AddRange((IList)sets[1].List);
-                obj.NationalityRefs.AddRange((IList)sets[2].List);
-                obj.OccupationTypeRefs.AddRange((IList)sets[3].List);
-                obj.OutcomeRefs.AddRange((IList)sets[4].List);
-                obj.DiagnosisRefs.AddRange((IList)sets[5].List);
-                obj.MaritalStatusRefs.AddRange((IList)sets[6].List);
-                obj.ForeignerTypeRefs.AddRange((IList)sets[7].List);
-                obj.MunicipalityRefs.AddRange((IList)sets[8].List);
-                obj.HospitalizationRefs.AddRange((IList)sets[9].List);
-                obj.PatientTypeRefs.AddRange((IList)sets[10].List);
-                obj.ComplicationRefs.AddRange((IList)sets[11].List);
             }
     
             private void _SetupAddChildHandlerItems(Upload506Master obj)
@@ -2344,45 +2326,47 @@ BEGIN
 	EXECUTE sp_executesql @drop_cmd
 END
 CREATE TABLE #R506(
-	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Id] [int] IDENTITY(1,25) NOT NULL,
 	[E0] [int] NULL,
 	[E1] [int] NULL,
 	[PE0] [int] NULL,
 	[PE1] [int] NULL,
-	[DISEASE] [nvarchar](255) NULL,
+	[DISEASE] [nvarchar](255) COLLATE Cyrillic_General_CI_AS NULL,
 	[iDISEASE] [bigint] NULL,
-	[HN] [nvarchar](255) NULL,
-	[NAME] [nvarchar](255) NULL,
+	[HN] [nvarchar](255) COLLATE Cyrillic_General_CI_AS NULL,
+	[NAME] [nvarchar](255) COLLATE Cyrillic_General_CI_AS NULL,
 	[SEX] [int] NULL,
 	[YEAR] [int] NULL,
 	[MONTH] [int] NULL,
 	[DAY] [int] NULL,
 	[RACE] [int] NULL,
 	[OCCUPAT] [int] NULL,
-	[ADDRESS] [nvarchar](255) NULL,
+	[ADDRESS] [nvarchar](255) COLLATE Cyrillic_General_CI_AS NULL,
 	[ADDRCODE] [nvarchar](255) COLLATE Cyrillic_General_CI_AS NULL,
 	[PROVINCE] [nvarchar](255) COLLATE Cyrillic_General_CI_AS NULL,
 	[TYPE] [int] NULL,
 	[RESULT] [int] NULL,
 	[HSERV] [nvarchar](255) COLLATE Cyrillic_General_CI_AS NULL,
-	[SCHOOL] [nvarchar](255) NULL,
+	[SCHOOL] [nvarchar](255) COLLATE Cyrillic_General_CI_AS NULL,
 	[DATESICK] [datetime] NULL,
 	[DATEDEFINE] [datetime] NULL,
 	[DATEDEATH] [datetime] NULL,
 	[DATERECORD] [datetime] NULL,
 	--[DATEREACH] [datetime] NULL,
-	--[ORGANISM] [nvarchar](255) NULL,
-	[COMPLICA] [nvarchar](255) NULL,
+	--[ORGANISM] [nvarchar](255) COLLATE Cyrillic_General_CI_AS NULL,
+	[COMPLICA] [nvarchar](255) COLLATE Cyrillic_General_CI_AS NULL,
 	[iCOMPLICA] [bigint] NULL,
 	[MARIETAL] [int] NULL,
 	[RACE1] [int] NULL,
 	[METROPOL] [int] NULL,
 	[HOSPITAL] [int] NULL,
+	idfsUpload506 BIGINT NULL,
 	idfsUpload506Item BIGINT NULL,
 	idfHumanCase BIGINT NULL,
-	strCaseID NVARCHAR(255) NULL,
+	strCaseID NVARCHAR(255) COLLATE Cyrillic_General_CI_AS NULL,
 	Resolution int
 ) 
+delete from #R506 
 ").ExecuteNonQuery())(obj, manager);
                     // posting extenters - end
             

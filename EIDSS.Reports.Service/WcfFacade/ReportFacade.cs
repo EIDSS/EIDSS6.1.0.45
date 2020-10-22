@@ -60,6 +60,7 @@ using EIDSS.Reports.Parameterized.Veterinary.TestType;
 using SampleReport = EIDSS.Reports.Document.Lim.ContainerContent.ContainerContentReport;
 using eidss.model.Reports.UA;
 using EIDSS.Reports.Parameterized.Human.UA.Reports;
+using EIDSS.Reports.Parameterized.Veterinary.AZ.Reports;
 
 namespace EIDSS.Reports.Service.WcfFacade
 {
@@ -180,6 +181,31 @@ namespace EIDSS.Reports.Service.WcfFacade
                 cr = (l, m, am) =>
                 {
                     BaseDocumentReport report = new EmergencyNotificationDTRAReport();
+
+                    Dictionary<string, string> ps = ReportHelper.CreateParameters(model.Id);
+                    ReportHelper.AppendOrganizationIdToParameters(model, ps);
+                    report.SetParameters(l, ps, m, am);
+                    return report;
+                };
+                return ExportReportToBytesWrapper(cr, model);
+            }
+            catch (Exception ex)
+            {
+                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), TraceTitle, model);
+                throw;
+            }
+        }
+
+        public byte[] ExportHumUrgentyNotificationUkraine(BaseIdModel model)
+        {
+            try
+            {
+                m_Trace.TraceMethodCall(Utils.GetCurrentMethodName(), TraceTitle, model);
+
+                ReportHelper.CreateReportDelegate cr;
+                cr = (l, m, am) =>
+                {
+                    BaseDocumentReport report = new EmergencyNotificationUkraineReport();
 
                     Dictionary<string, string> ps = ReportHelper.CreateParameters(model.Id);
                     ReportHelper.AppendOrganizationIdToParameters(model, ps);
@@ -1246,6 +1272,27 @@ namespace EIDSS.Reports.Service.WcfFacade
             }
         }
 
+        public byte[] ExportVetComparativeByMonth(VetComparativeByMonthModel model)
+        {
+            try
+            {
+                m_Trace.TraceMethodCall(Utils.GetCurrentMethodName(), TraceTitle, model);
+                ReportHelper.CreateReportDelegate cr;
+                cr = (l, m, am) =>
+                {
+                    var report = new ComparativeReportByMonths();
+                    report.SetParameters(model, m, am);
+                    return report;
+                };
+                return ExportReportToBytesWrapper(cr, model);
+            }
+            catch (Exception ex)
+            {
+                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), TraceTitle, model);
+                throw;
+            }
+        }
+
 
         #endregion
 
@@ -1682,6 +1729,69 @@ namespace EIDSS.Reports.Service.WcfFacade
             }
         }
 
+        public byte[] ExportComparativeReportByRegionKZ(ComparativeReportByRegionKZModel model) 
+        {
+            try
+            {
+                m_Trace.TraceMethodCall(Utils.GetCurrentMethodName(), TraceTitle, model);
+
+                ReportHelper.CreateReportDelegate cr = (l, m, am) =>
+                {
+                    var report = new EIDSS.Reports.Parameterized.Human.KZ.Report.ComparativeReportByRegion();
+                    report.SetParameters(model, m, am);
+                    return report;
+                };
+                return ExportReportToBytesWrapper(cr, model);
+            }
+            catch (Exception ex)
+            {
+                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), TraceTitle, model);
+                throw;
+            }
+        }
+
+        public byte[] ExportHumanComparativeKZReport(ComparativeKZModel model)
+        {
+            try
+            {
+                m_Trace.TraceMethodCall(Utils.GetCurrentMethodName(), TraceTitle, model);
+
+                ReportHelper.CreateReportDelegate cr = (l, m, am) =>
+                {
+                    var report = new EIDSS.Reports.Parameterized.Human.KZ.Report.ComparativeReport();
+                    report.SetParameters(model, m, am);
+                    return report;
+                };
+                return ExportReportToBytesWrapper(cr, model);
+            }
+            catch (Exception ex)
+            {
+                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), TraceTitle, model);
+                throw;
+            }
+        }
+
+        public byte[] ExportIncidenceReportByRegionKZ(IncidenceReportByRegionKZModel model)
+        {
+            try
+            {
+                m_Trace.TraceMethodCall(Utils.GetCurrentMethodName(), TraceTitle, model);
+
+                ReportHelper.CreateReportDelegate cr = (l, m, am) =>
+                {
+                    var report = new EIDSS.Reports.Parameterized.Human.KZ.Report.IncidenceReportByRegion();
+                    report.SetParameters(model, m, am);
+                    return report;
+                };
+                return ExportReportToBytesWrapper(cr, model);
+            }
+            catch (Exception ex)
+            {
+                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), TraceTitle, model);
+                throw;
+            }
+        }
+
         #endregion
 
         #region KZ Veterinary reports
@@ -1816,7 +1926,8 @@ namespace EIDSS.Reports.Service.WcfFacade
         #endregion
 
         #region Human UA Reports
-        public byte[] ExportUAFormNo1(UAFormModel model)
+
+        public byte[] ExportUASpecialInfectionAndParazitaryDisease(UAFormModel model)
         {
             try
             {
@@ -1825,9 +1936,8 @@ namespace EIDSS.Reports.Service.WcfFacade
                 ReportHelper.CreateReportDelegate cr;
                 cr = (l, m, am) =>
                 {
-                    var report = new FormNo1();
+                    FormNum1 report = new FormNum1();
                     report.SetParameters(model, m, am);
-
                     return report;
                 };
 
@@ -1840,7 +1950,7 @@ namespace EIDSS.Reports.Service.WcfFacade
             }
         }
 
-        public byte[] ExportUAFormNo2(UAFormModel model)
+        public byte[] ExportUASpecialInfectionAndParazitaryDiseaseNo2(UAFormModel model)
         {
             try
             {
@@ -1849,13 +1959,12 @@ namespace EIDSS.Reports.Service.WcfFacade
                 ReportHelper.CreateReportDelegate cr;
                 cr = (l, m, am) =>
                 {
-                    var report = new FormNo2();
+                    FormNum2 report = new FormNum2();
                     report.SetParameters(model, m, am);
-
                     return report;
                 };
 
-                return ExportReportToBytesWrapper(cr, model);
+                return ReportFacade.ExportReportToBytes(model, cr);
             }
             catch (Exception ex)
             {
@@ -1863,6 +1972,7 @@ namespace EIDSS.Reports.Service.WcfFacade
                 throw;
             }
         }
+
         #endregion
 
         #region Lab module reports
@@ -2258,6 +2368,76 @@ namespace EIDSS.Reports.Service.WcfFacade
             }
         }
 
+        //private static byte[] ExportReportToBytes(ReportHelper.CreateReportDelegate createReport,
+        //    string language, ReportArchiveMode mode, ReportExportType exportType, List<PersonalDataGroup> forbiddenGroups)
+        //{
+        //    Utils.CheckNotNull(createReport, "createReport");
+
+        //    Utils.CheckNotNullOrEmpty(language, "parameters.Language");
+
+        //    string lang = language; //.ToLowerInvariant();
+        //    byte[] bytes;
+
+        //    InitEidssCoreIfNeeded();
+
+        //    if (!CustomCultureHelper.SupportedLanguages.ContainsKey(lang))
+        //    {
+        //        throw new ArgumentException(String.Format("Language {0} is not supported", lang));
+        //    }
+
+        //    EidssUserContext.User.SetForbiddenPersonalDataGroups(forbiddenGroups ?? new List<PersonalDataGroup>());
+        //    using (new CultureInfoTransaction(new CultureInfo(CustomCultureHelper.SupportedLanguages[lang])))
+        //    {
+        //        using (DbManagerProxy manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
+        //        {
+        //            DbManagerProxy archiveManager = null;
+        //            BaseReport report = null;
+        //            try
+        //            {
+        //                if (mode != ReportArchiveMode.ActualOnly)
+        //                {
+        //                    archiveManager = DbManagerFactory.Factory[DatabaseType.Archive].Create();
+        //                }
+        //                switch (mode)
+        //                {
+        //                    case ReportArchiveMode.ActualOnly:
+        //                        report = createReport(language, manager, manager);
+        //                        break;
+        //                    case ReportArchiveMode.ArchiveOnly:
+        //                        report = createReport(language, archiveManager, archiveManager);
+        //                        break;
+        //                    default:
+        //                        report = createReport(language, manager, archiveManager);
+        //                        break;
+        //                }
+        //                report.SetAdaptersNull();
+        //                if (report.ChildReport != null)
+        //                {
+        //                    report.ChildReport.SetAdaptersNull();
+        //                    report.CreateDocument();
+        //                    report.ChildReport.CreateDocument();
+        //                    report.Pages.AddRange(report.ChildReport.Pages);
+        //                    report.PrintingSystem.ContinuousPageNumbering = true;
+        //                }
+
+        //                bytes = report.ExportToBytes(exportType);
+        //            }
+        //            finally
+        //            {
+        //                if (report != null)
+        //                {
+        //                    report.Dispose();
+        //                }
+        //                if (archiveManager != null)
+        //                {
+        //                    archiveManager.Dispose();
+        //                }
+        //            }
+        //        }
+        //    }
+        //    return bytes;
+        //}
+
         private static byte[] ExportReportToBytes(BaseModel model, ReportHelper.CreateReportDelegate createReport)
         {
             Utils.CheckNotNull(createReport, "createReport");
@@ -2287,35 +2467,39 @@ namespace EIDSS.Reports.Service.WcfFacade
                         {
                             archiveManager = DbManagerFactory.Factory[DatabaseType.Archive].Create();
                         }
+
                         switch (model.Mode)
                         {
                             case ReportArchiveMode.ActualOnly:
                                 report = createReport(model.Language, manager, manager);
                                 break;
+
                             case ReportArchiveMode.ArchiveOnly:
                                 report = createReport(model.Language, archiveManager, archiveManager);
                                 break;
-                            default:
+
+                            case ReportArchiveMode.ActualWithArchive:
                                 report = createReport(model.Language, manager, archiveManager);
                                 break;
                         }
-                        report.SetAdaptersNull();
+
+                        report.ThisReport.SetAdaptersNull();
                         if (report.ChildReport != null)
                         {
                             report.ChildReport.SetAdaptersNull();
-                            report.CreateDocument();
+                            report.ThisReport.CreateDocument();
                             report.ChildReport.CreateDocument();
-                            report.Pages.AddRange(report.ChildReport.Pages);
-                            report.PrintingSystem.ContinuousPageNumbering = true;
+                            report.ThisReport.Pages.AddRange(report.ChildReport.Pages);
+                            report.ThisReport.PrintingSystem.ContinuousPageNumbering = true;
                         }
 
-                        bytes = report.ExportToBytes(model.ExportFormatEnum);
+                        bytes = report.ThisReport.ExportToBytes(model.ExportFormatEnum);
                     }
                     finally
                     {
                         if (report != null)
                         {
-                            report.Dispose();
+                            report.ThisReport.Dispose();
                         }
                         if (archiveManager != null)
                         {

@@ -3010,12 +3010,33 @@
     <value>Есеп нысаны</value>
   </data>
   <data name="Form1KZRegion" xml:space="preserve">
-    <value>Облысы</value>
+    <value>Облыс</value>
   </data>
   <data name="Form1KZFromMonth" xml:space="preserve">
     <value>Айдан</value>
   </data>
   <data name="Form1KZToMonth" xml:space="preserve">
     <value>Айға дейін</value>
+  </data>
+  <data name="strQueryName" xml:space="preserve">
+    <value>Атауы (қазақша)</value>
+  </data>
+  <data name="ComparativeReportByRegionDiagnosis" xml:space="preserve">
+    <value>Ауруы</value>
+  </data>
+  <data name="ComparativeReportByRegionFromMonth" xml:space="preserve">
+    <value>Айдан бастап</value>
+  </data>
+  <data name="ComparativeReportByRegionPopulation" xml:space="preserve">
+    <value>Тұрғындары</value>
+  </data>
+  <data name="ComparativeReportByRegionToMonth" xml:space="preserve">
+    <value>Айға дейін</value>
+  </data>
+  <data name="ComparativeReportByRegionYear1" xml:space="preserve">
+    <value>1 Жыл</value>
+  </data>
+  <data name="ComparativeReportByRegionYear2" xml:space="preserve">
+    <value>2 Жыл</value>
   </data>
 </root>

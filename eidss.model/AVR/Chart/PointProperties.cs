@@ -5,10 +5,11 @@ using System.Xml.Serialization;
 namespace eidss.model.Avr.Chart
 {
     [Serializable]
-    public class PointProperties: IParentSeries
+    public class PointProperties : IParentSeries
     {
         [XmlIgnore]
         public Color Color { get; set; }
+
         public int ColorArgb
         {
             get { return Color.ToArgb(); }

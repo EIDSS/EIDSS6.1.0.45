@@ -174,14 +174,14 @@
                         <xsl:choose>
                             <xsl:when test="@type='DateTime' or @type='DateTime?'">
                         <!--sqlDeclare.AppendFormat("declare @<xsl:value-of select="@name" />_{1}_ datetime\r\nselect @<xsl:value-of select="@name" />_{1}_=@<xsl:value-of select="@name" />_{1}\r\n", filters.Operation("<xsl:value-of select="@name" />", i), i);-->
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), <xsl:value-of select="$sp_get" />.<xsl:value-of select="@name" />, 112) {0} CONVERT(NVARCHAR(8), @<xsl:value-of select="@name" />_{1}, 112)", filters.Operation("<xsl:value-of select="@name" />", i), i);
+                        sql.AppendFormat("<xsl:value-of select="$sp_get" />.<xsl:value-of select="@name" /> {0} @<xsl:value-of select="@name" />_{1}", filters.Operation("<xsl:value-of select="@name" />", i), i);
                             </xsl:when>
                             <xsl:when test="@type='long' or @type='long?' or @type='Int64' or @type='Int64?' or @type='int' or @type='int?' or @type='Int32' or @type='Int32?'">
                         <!--sqlDeclare.AppendFormat("declare @<xsl:value-of select="@name" />_{1}_ bigint\r\nselect @<xsl:value-of select="@name" />_{1}_=@<xsl:value-of select="@name" />_{1}\r\n", filters.Operation("<xsl:value-of select="@name" />", i), i);-->
                         if (filters.Operation("<xsl:value-of select="@name" />", i) == "&amp;")
-                          sql.AppendFormat("(isnull(<xsl:value-of select="$sp_get" />.<xsl:value-of select="@name" />,0) {0} @<xsl:value-of select="@name" />_{1} = @<xsl:value-of select="@name" />_{1})", filters.Operation("<xsl:value-of select="@name" />", i), i);
+                          sql.AppendFormat("(<xsl:value-of select="$sp_get" />.<xsl:value-of select="@name" /> {0} @<xsl:value-of select="@name" />_{1} = @<xsl:value-of select="@name" />_{1})", filters.Operation("<xsl:value-of select="@name" />", i), i);
                         else
-                          sql.AppendFormat("isnull(<xsl:value-of select="$sp_get" />.<xsl:value-of select="@name" />,0) {0} @<xsl:value-of select="@name" />_{1}", filters.Operation("<xsl:value-of select="@name" />", i), i);
+                          sql.AppendFormat("<xsl:value-of select="$sp_get" />.<xsl:value-of select="@name" /> {0} @<xsl:value-of select="@name" />_{1}", filters.Operation("<xsl:value-of select="@name" />", i), i);
                             </xsl:when>
                             <xsl:otherwise>
                         <!--sqlDeclare.AppendFormat("declare @<xsl:value-of select="@name" />_{1}_ nvarchar(1024)\r\nselect @<xsl:value-of select="@name" />_{1}_=@<xsl:value-of select="@name" />_{1}\r\n", filters.Operation("<xsl:value-of select="@name" />", i), i);-->

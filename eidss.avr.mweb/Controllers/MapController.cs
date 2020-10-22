@@ -264,54 +264,76 @@ namespace eidss.avr.mweb.Controllers
             string lTableName = CoordinatesUtils.GetWKBTableName(data, connection);
 
             const int srid = 4326;
-            for (int i = 0; i < data.Rows.Count; i++)
+            string ratio = "0"; // Settlement
+            if (lTableName == "gisWKBRegion") { ratio = "50"; }
+            if ((lTableName == "gisWKBRayon") || (lTableName == "gisWKBDistrict")) { ratio = "100"; }
+
+            string strIds = string.Empty;
+            if (data.Rows.Count > 0)
             {
-                SharpMap.Geometries.Geometry feature = null;
+                strIds = String.Join(",", data.AsEnumerable().Select(x => x.Field<long>("id").ToString()).ToArray());
+                strIds = string.Format("idfsGeoObject in ({0}) and ", strIds);
+                if ((data.PrimaryKey == null) || (data.PrimaryKey.Length == 0))
+                {
+                    var key = new DataColumn[1];
+                    key[0] = data.Columns["id"];
+                    data.PrimaryKey = key;
+                }
 
-                long id = 0;
-                if (data.Rows[i]["id"].ToString() != "") { id = Int64.Parse(data.Rows[i]["id"].ToString()); }
-
-                int isPrecached = 0;
                 try // Try get it from precached table geomShape_4326
                 {
-                    string ratio = "0"; // Settlement
-                    if (lTableName == "gisWKBRegion") { ratio = "50"; }
-                    if (lTableName == "gisWKBRayon") { ratio = "100"; }
-                    string strSQL = "SELECT g.geomShape_4326.STAsBinary() FROM " + lTableName + "Ready g WHERE idfsGeoObject='" + id + "' AND Ratio = " + ratio;
-                    var command = new SqlCommand(strSQL, sqlConnection);
-                    object wkb_result = command.ExecuteScalar();
-                    System.Data.SqlTypes.SqlBytes wkb = new System.Data.SqlTypes.SqlBytes((byte[])wkb_result);
-                    if (wkb != null) { data.Rows[i]["geom"] = SqlGeometry.STGeomFromWKB(wkb, srid); }
-                    isPrecached = 1;
-                    // feature = SharpMap.Converters.WellKnownBinary.GeometryFromWKB.Parse((byte[])wkb_result);
-                }
-                catch (Exception) { }
+                    string strBatchSql = "SELECT g.idfsGeoObject as id, g.geomShape_4326 as geom FROM " + lTableName + "Ready g WHERE " + strIds + " Ratio = " + ratio;
+                    var cmdBatch = new SqlCommand(strBatchSql, sqlConnection);
+                    using (SqlDataReader dr = cmdBatch.ExecuteReader())
+                    {
+                        var resBatch = new DataTable();
 
-                // Try get it as usual
-                if (isPrecached == 0)
+                        resBatch.Load(dr);
+                        if ((resBatch != null) && resBatch.Rows.Count > 0)
+                        {
+                            if ((resBatch.PrimaryKey == null) || (resBatch.PrimaryKey.Length == 0))
+                            {
+                                var resBatchKey = new DataColumn[1];
+                                resBatchKey[0] = resBatch.Columns["id"];
+                                resBatch.PrimaryKey = resBatchKey;
+                            }
+
+                            data.Merge(resBatch, false, MissingSchemaAction.Ignore);
+                        }
+                    }
+                }
+                catch (Exception /*ex*/) { /*var strErr = ex.Message;*/ }
+
+                foreach (var rEmptyGeom in data.Select("geom is null"))
                 {
+                    SharpMap.Geometries.Geometry feature = null;
+
+                    long id = 0;
+                    if (rEmptyGeom["id"].ToString() != "") { id = Int64.Parse(rEmptyGeom["id"].ToString()); }
+
+                    // Try get it as usual
                     feature = Extents.GetGeomById(sqlConnection, lTableName, id);
                     if (feature != null)
                     {
                         feature = GeometryTransform.TransformGeometry(feature, GIS_V4.Common.CoordinateSystems.SphericalMercatorCS, GIS_V4.Common.CoordinateSystems.WGS84);
                         var wktGeometry = new System.Data.SqlTypes.SqlChars(feature.AsText());
-                        data.Rows[i]["geom"] = SqlGeometry.STGeomFromText(wktGeometry, srid);
+                        rEmptyGeom["geom"] = SqlGeometry.STGeomFromText(wktGeometry, srid);
                     }
-                }
 
-                if (feature != null)
-                {
-                    SharpMap.Geometries.Point point = feature.GetBoundingBox().GetCentroid();
-                    data.Rows[i]["x"] = point.X;
-                    data.Rows[i]["y"] = point.Y;
-                }
-                else
-                {
-                    double x, y;
-                    if (CoordinatesUtils.GetAdminUnitCoordinates(connection, id, out x, out y))
+                    if (feature != null)
                     {
-                        data.Rows[i]["x"] = x;
-                        data.Rows[i]["y"] = y;
+                        SharpMap.Geometries.Point point = feature.GetBoundingBox().GetCentroid();
+                        rEmptyGeom["x"] = point.X;
+                        rEmptyGeom["y"] = point.Y;
+                    }
+                    else
+                    {
+                        double x, y;
+                        if (CoordinatesUtils.GetAdminUnitCoordinates(connection, id, out x, out y))
+                        {
+                            rEmptyGeom["x"] = x;
+                            rEmptyGeom["y"] = y;
+                        }
                     }
                 }
             }
@@ -321,7 +343,6 @@ namespace eidss.avr.mweb.Controllers
             var ds = new DataSet();
             ds.Tables.Add(data.Copy());
 
-            //string json = GeoJSON.DataSetToJSON(ds);
             string json = GeoJSON.DataSetToJSON(ds);
             json = json.Replace("\\r\\n", " ");
 

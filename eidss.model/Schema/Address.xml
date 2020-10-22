@@ -35,7 +35,7 @@
               <calculated name="strReadOnlyRegion" type="string" depends="idfsRegion" lambda='c => c.Region == null ? (string)null : c.Region.strRegionName' />
               <calculated name="strReadOnlyRayon" type="string" depends="idfsRayon" lambda='c => c.Rayon == null ? (string)null : c.Rayon.strRayonName' />
               <calculated name="strReadOnlySettlement" type="string" depends="idfsSettlement" 
-                          lambda='c => c.idfsSettlement == null ? (string)null : c.Settlement.strSettlementName' />
+                          lambda='c => c.Settlement == null ? (string)null : c.Settlement.strSettlementName' />
               <calculated name="strReadOnlyStreet" type="string" depends="strStreetName" lambda='c => c.strStreetName' />
               <calculated name="strReadOnlyPostCode" type="string" depends="strPostCode" lambda='c => c.strPostCode' />
               <calculated name="strReadOnlyBuilding" type="string" depends="strBuilding" lambda='c => c.strBuilding' />

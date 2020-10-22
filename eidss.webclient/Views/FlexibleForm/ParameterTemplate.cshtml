@@ -70,7 +70,6 @@
                     enable = !Model.FFModel.ParameterTemplateReadOnly[parameterTemplate];
                 }
                 var htmlAttributes = new Dictionary<string, object> {{"class", "control"}};
-
                 if (!enable && parameterType == FFParameterTypes.String && editor == FFParameterEditors.TextBox)
                 {
                     htmlAttributes.Add("readonly", "readonly");

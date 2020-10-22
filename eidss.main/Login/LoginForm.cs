@@ -284,10 +284,10 @@ namespace eidss.main.Login
 
         private void SuccessLogin()
         {
-            //Splash.ShowSplash();
+            Splash.ShowSplash();
             Config.ReloadSettings();
             DialogResult = DialogResult.OK;
-            BaseFormManager.Close(this, DialogResult.OK);
+            BaseFormManager.Close(this,DialogResult.OK);
         }
 
         private void FailedLogin(string err, int errorCode)
@@ -320,10 +320,10 @@ namespace eidss.main.Login
             InitConnection();
 
             var form = new ChangePasswordForm
-            {
-                txtOrganization = { Text = txtOrganization.Text },
-                txtUserName = { Text = txtUserName.Text }
-            };
+                           {
+                               txtOrganization = { Text = txtOrganization.Text },
+                               txtUserName = { Text = txtUserName.Text }
+                           };
 
             BaseFormManager.ShowModal(form, this);
         }

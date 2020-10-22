@@ -42,6 +42,12 @@
         detailPage.openReport(url);
     },
 
+    showENDReport: function () {
+        var caseId = $("#idfCase").val();
+        var url = bvUrls.getHumanCaseEmergencyNotificationUkraineReportUrl({ id: caseId });
+        detailPage.openReport(url);
+    },
+
     showENTReport: function () {
         var caseId = $("#idfCase").val();
         var url = bvUrls.getHumanCaseEmergencyNotificationTanzaniaReportUrl({ id: caseId });

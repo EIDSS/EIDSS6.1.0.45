@@ -119,6 +119,7 @@
       <ComponentRef Id="eidss.apk" />
       <ComponentRef Id="eidss.apk_am" />
       <ComponentRef Id="eidss.apk_az" />
+      <ComponentRef Id="eidss.apk_en" />
       <ComponentRef Id="eidss.apk_gg" />
       <ComponentRef Id="eidss.apk_iq" />
       <ComponentRef Id="eidss.apk_kz" />
@@ -129,7 +130,7 @@
     <DirectoryRef Id="ANDROID">
       <Directory Id="Android_default" Name="Android_default">
         <Component Id="eidss.apk" MultiInstance="yes">
-          <Condition><![CDATA[COUNTRY <> "!(loc.Armenia)" And COUNTRY <> "!(loc.Azerbaijan)" And COUNTRY <> "!(loc.Georgia)" And COUNTRY <> "!(loc.Iraq)" And COUNTRY <> "!(loc.Kazakhstan)"]]></Condition>
+          <Condition><![CDATA[COUNTRY <> "!(loc.Armenia)" And COUNTRY <> "!(loc.Azerbaijan)" And COUNTRY <> "!(loc.Georgia)" And COUNTRY <> "!(loc.Iraq)" And COUNTRY <> "!(loc.Kazakhstan)" And COUNTRY <> "!(loc.UnitedStates)"]]></Condition>
           <File Id="eidss.smartphone.bin_eidss.apk" Name="eidss.apk" Source="$(var.Apk.TargetPath)" KeyPath="yes">
             <CopyFile Id="eidss.smartphone.bin_eidss.apk" DestinationDirectory="ANDROID" />
           </File>
@@ -150,6 +151,15 @@
           <Condition><![CDATA[COUNTRY = "!(loc.Azerbaijan)"]]></Condition>
           <File Id="eidss.smartphone.bin_eidss.apk_az" Name="eidss.apk" Source="$(var.AzApk.TargetPath)" KeyPath="yes">
             <CopyFile Id="eidss.smartphone.bin_eidss.apk_az" DestinationDirectory="ANDROID" />
+          </File>
+        </Component>
+      </Directory>
+
+      <Directory Id="Android_en" Name="Android_en">
+        <Component Id="eidss.apk_en" MultiInstance="yes">
+          <Condition><![CDATA[COUNTRY = "!(loc.UnitedStates)"]]></Condition>
+          <File Id="eidss.smartphone.bin_eidss.apk_en" Name="eidss.apk" Source="$(var.EnApk.TargetPath)" KeyPath="yes">
+            <CopyFile Id="eidss.smartphone.bin_eidss.apk_en" DestinationDirectory="ANDROID" />
           </File>
         </Component>
       </Directory>

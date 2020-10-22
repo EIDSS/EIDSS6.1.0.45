@@ -13,10 +13,7 @@
     <div>
         @foreach (var node in Model.TemplateFlexNode.ChildList)
         {
-            //@Html.Partial("FlexNode", (FlexNode)node)
-            var fNode = (FlexNode)node;
-            fNode.IsReadOnly = Model.TemplateFlexNode.IsReadOnly;
-            @Html.Partial("FlexNode", fNode)
+            @Html.Partial("FlexNode", (FlexNode)node)
         }
     </div>
 }

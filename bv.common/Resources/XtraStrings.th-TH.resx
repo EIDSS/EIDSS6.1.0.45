@@ -6517,7 +6517,7 @@
     <value>ทำให้เท่ากัน</value>
   </data>
   <data name="ReportStringId.UD_Capt_SpacingRemove" xml:space="preserve">
-    <value>&amp;ย้ายออก</value>
+    <value>&amp;ลบรายการนี้</value>
   </data>
   <data name="ReportStringId.UD_Capt_StatusBarName" xml:space="preserve">
     <value>แถบสถานะ</value>
@@ -7459,7 +7459,7 @@
     <value>พลังงาน</value>
   </data>
   <data name="StringId.FilterCriteriaToStringFunctionRemove" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>ลบรายการนี้</value>
   </data>
   <data name="StringId.FilterCriteriaToStringFunctionReplace" xml:space="preserve">
     <value>แทนที่</value>
@@ -7871,7 +7871,7 @@
     <value>หมวดหมู่</value>
   </data>
   <data name="VGridStringId.RowCustomizationTabPageRowsText" xml:space="preserve">
-    <value>แถว</value>
+    <value>รวมค่าจากกลุ่มแถว</value>
   </data>
   <data name="VGridStringId.RowCustomizationText" xml:space="preserve">
     <value>การตั้งค่ากำหนดเอง</value>
@@ -8120,7 +8120,7 @@
     <value>ตั้งชื่อใหม่</value>
   </data>
   <data name="BarString.RibbonCustomizationRemoveText" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>ลบรายการนี้</value>
   </data>
   <data name="BarString.RibbonCustomizationAddText" xml:space="preserve">
     <value>เพิ่ม</value>
@@ -9854,7 +9854,7 @@
     <value>บันทึกการเปลี่ยนแปลง</value>
   </data>
   <data name="ASPxGridViewStringId.CommandBatchEditCancel" xml:space="preserve">
-    <value>ยกเลิกการเปลี่ยนแปลง</value>
+    <value>ยกเลิกการแก้ไข</value>
   </data>
   <data name="ASPxGridViewStringId.CommandSelectAllOnPage" xml:space="preserve">
     <value>เลือกแถวทั้งหมดในหน้านี้</value>
@@ -10260,7 +10260,7 @@
     <value>ล้างการเลือก</value>
   </data>
   <data name="ASPxperienceStringId.UploadControl_RemoveButton" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>ลบรายการนี้</value>
   </data>
   <data name="ASPxperienceStringId.UploadControl_AddButton" xml:space="preserve">
     <value>เพิ่ม</value>
@@ -10500,7 +10500,7 @@
     <value>เพิ่มเงื่อนไข</value>
   </data>
   <data name="ASPxEditorsStringId.FilterControl_Remove" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>ลบรายการนี้</value>
   </data>
   <data name="ASPxEditorsStringId.FilterConrol_Empty" xml:space="preserve">
     <value>&lt;ว่าง&gt;</value>

@@ -382,7 +382,7 @@
     <value>วันที่</value>
   </data>
   <data name="datEnteredDate" xml:space="preserve">
-    <value>วันที่นำเข้า</value>
+    <value>วันที่สร้างรายการ</value>
   </data>
   <data name="datPersonEnteredDate" xml:space="preserve">
     <value>วันที่สร้างรายการ</value>
@@ -1294,7 +1294,7 @@
     <value>จังหวัด 2</value>
   </data>
   <data name="strDistrict" xml:space="preserve">
-    <value>เขต</value>
+    <value>อำเภอ</value>
   </data>
   <data name="strDistrict1" xml:space="preserve">
     <value>เขต 1</value>
@@ -1462,10 +1462,10 @@
     <value>ประเภทผู้ป่วย</value>
   </data>
   <data name="strCaseID" xml:space="preserve">
-    <value>รหัส</value>
+    <value>ID ผู้ป่วย</value>
   </data>
   <data name="strCaseIDSessionID" xml:space="preserve">
-    <value>ID ตัวอย่าง/เซสชั่น</value>
+    <value>ID เคสผู้ป่วย/เซสชั่น</value>
   </data>
   <data name="strCaseInfo" xml:space="preserve">
     <value>ข้อมูลกรณี</value>
@@ -1651,7 +1651,7 @@
     <value>สถานที่รักษา</value>
   </data>
   <data name="strHouse" xml:space="preserve">
-    <value>อาคาร</value>
+    <value>บ้านเลขที่/อาคาร</value>
   </data>
   <data name="strIdentificationMethod" xml:space="preserve">
     <value>ระบุโดยวิธีการ</value>
@@ -1705,7 +1705,7 @@
     <value>ID ท้องถิ่น</value>
   </data>
   <data name="strLocalIdentifier" xml:space="preserve">
-    <value>ตัวระบุท้องถิ่น</value>
+    <value>รหัสผู้ป่วย(HN)</value>
   </data>
   <data name="strLongitude" xml:space="preserve">
     <value>ลองติจูด</value>
@@ -2014,7 +2014,7 @@
     <value>เมืองหรือหมู่บ้าน</value>
   </data>
   <data name="strTranslatedName" xml:space="preserve">
-    <value>ชื่อคิวรี่ภาษาอังกฤษ (ชื่อเลย์เอ้าแสดงชือภาษาไทย)</value>
+    <value>ชื่อ (ภาษาอังกฤษ)</value>
   </data>
   <data name="strCaseClassificationTranslatedName" xml:space="preserve">
     <value>ค่าที่แปล</value>
@@ -2137,7 +2137,7 @@
     <value>ความเห็น</value>
   </data>
   <data name="VsSessionSummary.RecordID" xml:space="preserve">
-    <value>ID บันทึก</value>
+    <value>ID รายการบันทึก</value>
   </data>
   <data name="VetCase.FinalDiagnogis" xml:space="preserve">
     <value>การวินิจฉัยสุดท้าย</value>
@@ -2323,7 +2323,7 @@
     <value>ประเภทระยะเวลาการรายงาน</value>
   </data>
   <data name="Counter" xml:space="preserve">
-    <value>เครื่องนับ</value>
+    <value>หน่วยนับ</value>
   </data>
   <data name="FromYearLabel" xml:space="preserve">
     <value>จากปี</value>
@@ -2761,10 +2761,10 @@
     <value>ชื่อโฟลเดอร์ (ประเทศ)</value>
   </data>
   <data name="LayoutNameEnglish" xml:space="preserve">
-    <value>ชื่อเลย์เอาท์ (ภาษาอังกฤษ)</value>
+    <value>ชื่อเลย์เอ้าท์ (ภาษาอังกฤษ)</value>
   </data>
   <data name="LayoutNameNational" xml:space="preserve">
-    <value>ชื่อเลย์เอาท์ (ประเทศ)</value>
+    <value>ชื่อเลย์เอ้าท์ (ภาษาไทย)</value>
   </data>
   <data name="PublishLayout" xml:space="preserve">
     <value>เลย์เอาท์ตีพิมพ์</value>
@@ -2776,7 +2776,7 @@
     <value>คำอธิบาย (ภาษาอังกฤษ)</value>
   </data>
   <data name="DescriptionNational" xml:space="preserve">
-    <value>คำอธิบาย  (ประเทศ)</value>
+    <value>คำอธิบาย (ภาษาไทย)</value>
   </data>
   <data name="FormatGeneral" xml:space="preserve">
     <value>ทั่วไป</value>
@@ -2965,19 +2965,19 @@
     <value>หมายเลขเอกสาร</value>
   </data>
   <data name="intListGridPageSize" xml:space="preserve">
-    <value>จำนวนแถวในฟอร์มรายชื่อสำหรับรูปแบบดู/แก้ไข</value>
+    <value>จำนวนแถวในตารางรายการสำหรับดู/เปิดเพื่อแก้ไข</value>
   </data>
   <data name="intPopupGridPageSize" xml:space="preserve">
-    <value>จำนวนแถวในฟอร์มรายชื่อสำหรับรูปแบบที่เลือก</value>
+    <value>จำนวนแถวในตารางบนฟอร์มอื่นที่เรียกดู</value>
   </data>
   <data name="intDetailGridPageSize" xml:space="preserve">
-    <value>จำนวนแถวในตารางของฟอร์มรายละเอียด</value>
+    <value>จำนวนแถวในตารางบนฟอร์มแจ้งรายละเอียด</value>
   </data>
   <data name="intLabSectionPageSize" xml:space="preserve">
     <value>จำนวนแถวในฟอร์มห้องปฏิบัติการ</value>
   </data>
   <data name="blnDefaultRegion" xml:space="preserve">
-    <value>จังหวัดตั้งต้นในแถบค้นหา</value>
+    <value>จังหวัดตั้งต้นในแถบค้นหาระบุอัติโนมัติ</value>
   </data>
   <data name="intDefaultDays" xml:space="preserve">
     <value>ระบุจำนวนวันเป็นค่าตั้งต้นเพื่อแสดงข้อมูล</value>
@@ -2989,7 +2989,7 @@
     <value>พิมพ์แผนที่ในฟอร์มสอบสวนทางสัตวแพทย์</value>
   </data>
   <data name="blnShowWharningForFinalCaseDefinition" xml:space="preserve">
-    <value>แสดงคำเตือนสำหรับการสรุปกรณี</value>
+    <value>แสดงคำเตือนสำหรับการสรุปประเภทผู้ป่วย</value>
   </data>
   <data name="TentativeDiagnoses" xml:space="preserve">
     <value>การวินิจฉัยเบื้องต้น</value>
@@ -3041,5 +3041,8 @@
   </data>
   <data name="strTypeEIDSS" xml:space="preserve">
     <value>ประเภทผู้ป่วย</value>
+  </data>
+  <data name="strQueryName" xml:space="preserve">
+    <value>ชื่อคิวรี่ภาษาอังกฤษ (ชื่อเลย์เอ้าแสดงชือภาษาไทย)</value>
   </data>
 </root>

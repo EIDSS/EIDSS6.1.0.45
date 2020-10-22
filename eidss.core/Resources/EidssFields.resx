@@ -3122,5 +3122,31 @@
     <value>To month</value>
     <comment>Kazakh customization message</comment>
   </data>
-  
+  <data name="rmTitle" xml:space="preserve">
+    <value>Report Mode</value>
+  </data>
+  <data name="Province_District" xml:space="preserve">
+    <value>Province/District</value>
+  </data>
+  <data name="strQueryName" xml:space="preserve">
+    <value>Name (English)</value>
+  </data>
+  <data name="ComparativeReportByRegionDiagnosis" xml:space="preserve">
+    <value>Diagnosis</value>
+  </data>
+  <data name="ComparativeReportByRegionFromMonth" xml:space="preserve">
+    <value>From Month</value>
+  </data>
+  <data name="ComparativeReportByRegionPopulation" xml:space="preserve">
+    <value>Population</value>
+  </data>
+  <data name="ComparativeReportByRegionToMonth" xml:space="preserve">
+    <value>To Month</value>
+  </data>
+  <data name="ComparativeReportByRegionYear1" xml:space="preserve">
+    <value>Year 1</value>
+  </data>
+  <data name="ComparativeReportByRegionYear2" xml:space="preserve">
+    <value>Year 2</value>
+  </data>
 </root>

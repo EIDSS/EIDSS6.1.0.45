@@ -72,8 +72,38 @@
     <?define no_GIS_V6.resources.dll?>
     <?include Resources.wxi?>
 
+    <?define FolderId=en_US_Eidss?>
+    <?define Folder=en-US-Eidss?>
+    <?define no_bv.winclient.resources.dll?>
+    <?define no_bvwin_common.resources.dll?>
+    <?define no_eidss.avr.resources.dll?>
+    <?define no_eidss.main.resources.dll?>
+    <?define no_EIDSS_ObjectAccess.resources.dll?>
+    <?define no_EIDSS.FlexibleForms.resources.dll?>
+    <?define no_GIS_V6.resources.dll?>
+    <?include Resources.wxi?>
+
+    <?define FolderId=en_KA_Eidss?>
+    <?define Folder=en-KA-Eidss?>
+    <?define no_bv.winclient.resources.dll?>
+    <?define no_bvwin_common.resources.dll?>
+    <?define no_eidss.avr.resources.dll?>
+    <?define no_eidss.main.resources.dll?>
+    <?define no_EIDSS_ObjectAccess.resources.dll?>
+    <?define no_EIDSS.FlexibleForms.resources.dll?>
+    <?define no_GIS_V6.resources.dll?>
+    <?define no_bv.common.resources.dll?>
+    <?define no_eidss_admin.resources.dll?>
+    <?define no_EIDSS_ClientAgent.resources.dll?>
+    <?define no_eidss_forms.resources.dll?>
+    <?define no_eidss_human.resources.dll?>
+    <?define no_eidss_lims.resources.dll?>
+    <?define no_eidss.winclient.resources.dll?>
+    <?define no_eidss.gis.resources.dll ?>
+    <?include Resources.wxi?>
+
     <ComponentGroup Id="Resources">
-      <?define FolderIds=ar_IQ;az_Latn_AZ;en_IQ_Eidss;hy_AM;ka_GE;kk_KZ;ru_KZ_Eidss;ru_RU;uk_UA;th_TH;en_TH_Eidss?>
+      <?define FolderIds=ar_IQ;az_Latn_AZ;en_IQ_Eidss;hy_AM;ka_GE;kk_KZ;ru_KZ_Eidss;ru_RU;uk_UA;th_TH;en_TH_Eidss;en_US_Eidss;en_KA_Eidss?>
       <?foreach FolderId in $(var.FolderIds)?>
       <ComponentGroupRef Id="Resources_$(var.FolderId)" />
       <?endforeach?>

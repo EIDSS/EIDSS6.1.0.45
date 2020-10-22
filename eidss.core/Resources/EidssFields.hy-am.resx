@@ -3020,4 +3020,10 @@
   <data name="idfRootFarm" xml:space="preserve">
     <value>Տնտեսության ընտրություն</value>
   </data>
+  <data name="strQueryName" xml:space="preserve">
+    <value>Անվանում (հայերեն)</value>
+  </data>
+  <data name="Form1KZRegion" xml:space="preserve">
+    <value>Մարզ</value>
+  </data>
 </root>

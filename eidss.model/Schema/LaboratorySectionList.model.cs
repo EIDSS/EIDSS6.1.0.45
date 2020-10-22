@@ -13219,7 +13219,7 @@ namespace eidss.model.Schema
             
                 (new RequiredValidator( "idfsTestResult", "idfsTestResult","TestResult",
                 ValidationEventType.Error
-              )).Validate(c => c.idfTesting.HasValue && !c.bTestDeleted && (/*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/), obj, obj.idfsTestResult);
+              )).Validate(c => c.idfTesting.HasValue && !c.bTestDeleted && (c.idfsTestStatus == (long)eidss.model.Enums.TestStatus.Preliminary || /*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/), obj, obj.idfsTestResult);
             
                 (new RequiredValidator( "strContactPerson", "strContactPerson","strContact",
                 ValidationEventType.Error
@@ -13353,10 +13353,10 @@ namespace eidss.model.Schema
                     .AddRequired("TestStatusFull", c => c.idfTesting.HasValue && !c.bTestDeleted && (/*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
                 
                 obj
-                    .AddRequired("idfsTestResult", c => c.idfTesting.HasValue && !c.bTestDeleted && (/*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
+                    .AddRequired("idfsTestResult", c => c.idfTesting.HasValue && !c.bTestDeleted && (c.idfsTestStatus == (long)eidss.model.Enums.TestStatus.Preliminary || /*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
                     
                   obj
-                    .AddRequired("TestResultRef", c => c.idfTesting.HasValue && !c.bTestDeleted && (/*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
+                    .AddRequired("TestResultRef", c => c.idfTesting.HasValue && !c.bTestDeleted && (c.idfsTestStatus == (long)eidss.model.Enums.TestStatus.Preliminary || /*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
                 
                 obj
                     .AddRequired("strContactPerson", c => c.idfTesting.HasValue && !c.bTestDeleted && (/*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
@@ -13526,8 +13526,8 @@ namespace eidss.model.Schema
                 if (!RequiredByField.ContainsKey("idfsTestStatus")) RequiredByField.Add("idfsTestStatus", c => c.idfTesting.HasValue && !c.bTestDeleted && (/*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
                 if (!RequiredByProperty.ContainsKey("idfsTestStatus")) RequiredByProperty.Add("idfsTestStatus", c => c.idfTesting.HasValue && !c.bTestDeleted && (/*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
                 
-                if (!RequiredByField.ContainsKey("idfsTestResult")) RequiredByField.Add("idfsTestResult", c => c.idfTesting.HasValue && !c.bTestDeleted && (/*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
-                if (!RequiredByProperty.ContainsKey("idfsTestResult")) RequiredByProperty.Add("idfsTestResult", c => c.idfTesting.HasValue && !c.bTestDeleted && (/*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
+                if (!RequiredByField.ContainsKey("idfsTestResult")) RequiredByField.Add("idfsTestResult", c => c.idfTesting.HasValue && !c.bTestDeleted && (c.idfsTestStatus == (long)eidss.model.Enums.TestStatus.Preliminary || /*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
+                if (!RequiredByProperty.ContainsKey("idfsTestResult")) RequiredByProperty.Add("idfsTestResult", c => c.idfTesting.HasValue && !c.bTestDeleted && (c.idfsTestStatus == (long)eidss.model.Enums.TestStatus.Preliminary || /*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
                 
                 if (!RequiredByField.ContainsKey("strContactPerson")) RequiredByField.Add("strContactPerson", c => c.idfTesting.HasValue && !c.bTestDeleted && (/*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));
                 if (!RequiredByProperty.ContainsKey("strContactPerson")) RequiredByProperty.Add("strContactPerson", c => c.idfTesting.HasValue && !c.bTestDeleted && (/*c.blnExternalTest.HasValue && */c.blnExternalTest/*.Value*/));

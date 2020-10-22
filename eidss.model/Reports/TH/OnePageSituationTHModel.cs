@@ -37,8 +37,8 @@ namespace eidss.model.Reports.TH
 		{
 			get
 			{
-				return FilterHelper.GetDiagnosisList(Localizer.CurrentCultureLanguageID, (int)HACode.Human,
-					DiagnosisUsingTypeEnum.StandardCase);
+				return FilterHelper.GetDiagnosisList(new FilterHelper.GetDiagnosisListParam(
+                    Localizer.CurrentCultureLanguageID, HACode.Human, DiagnosisUsingTypeEnum.StandardCase));
 			}
 		}
 		public long? idfsZone { get; set; }

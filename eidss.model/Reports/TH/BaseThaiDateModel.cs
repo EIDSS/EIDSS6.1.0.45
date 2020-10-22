@@ -19,7 +19,7 @@ namespace eidss.model.Reports.TH
 
         public override int MinYear
         {
-            get { return Language == Localizer.lngThai ? 2550 : 2000; }
+            get { return Language == Localizer.lngThai ? 2543 : 2000; }
         }
 
         public override int MaxYear

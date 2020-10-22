@@ -65,11 +65,7 @@ namespace eidss.avr.mweb.Models
                         return m_RealPivotData;
                     bool isNewObject;
                     string errorMessage;
-                    base.RealPivotData = LayoutPivotGridHelper.GetPivotData(PivotSettings.LayoutDataset,
-                                                                            PivotSettings.QueryId,
-                                                                            PivotSettings.LayoutId,
-                                                                            PivotSettings.UseArchiveData,
-                                                                            out isNewObject, out errorMessage);
+                    base.RealPivotData = LayoutPivotGridHelper.GetPivotData(PivotSettings, out isNewObject, out errorMessage);
                     if (PivotSettings.ShowMissedValues)
                         LayoutPivotGridHelper.AddMissedValues(this, false);
                     return m_RealPivotData;

@@ -6,7 +6,7 @@ namespace eidss.model.Avr.Chart
     public class XAxisProperties
     {
         public AxisProperties AxisProperties { get; set; }
-        
+
         public int LeftIndent { get; set; }
 
         public XAxisProperties()

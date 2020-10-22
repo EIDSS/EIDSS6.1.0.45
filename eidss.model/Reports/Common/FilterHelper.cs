@@ -17,6 +17,7 @@ using eidss.model.Enums;
 using eidss.model.Reports.AZ;
 using eidss.model.Resources;
 using eidss.model.Schema;
+using eidss.model.Reports.KZ;
 
 namespace eidss.model.Reports.Common
 {
@@ -48,6 +49,8 @@ namespace eidss.model.Reports.Common
         private static readonly string[] m_TimeUnits = { "day", "week", "month" };
         private static readonly string[] m_AnalysisMethods = { "CUSUM" };
         private static readonly string[] m_KzFormType = { "kzForm1", "kzForm2" };
+
+        private static readonly string[] m_ReportModes = { "rmProvincesByZones", "rmProvincesByRegions", "rmDistrictsByProvinces", "rmSubDistrictsByDistricts" };
 
         public static long? GetDefaultRegion(bool hasChe = false)
         {
@@ -204,26 +207,28 @@ namespace eidss.model.Reports.Common
             return result;
         }
 
-        public static List<SelectListItemSurrogate> GetDiagnosisList
-            (string lang, int hacode, DiagnosisUsingTypeEnum? usingType, bool zoonoticDiseases = false, bool addSelectAllItem = false)
+        public static List<SelectListItemSurrogate> GetDiagnosisList(GetDiagnosisListParam param)
         {
             var parameters = new Dictionary<string, object>
             {
-                {"@LangID", lang},
-                {"@HACode", hacode},
-                {"@DiagnosisUsingType", usingType}
+                {"@LangID", param.Lang},
+                {"@HACode", param.Hacode},
+                {"@DiagnosisUsingType", param.UsingType}
             };
-            var filter = zoonoticDiseases ? "blnZoonotic = 1" : string.Empty;
-            var diagnosisTable = ExecSp("spDiagnosis_SelectLookup", parameters);
-            var dv = diagnosisTable.Select(filter);
-            var result = dv.Where(c => Convert.ToInt32(c["intRowStatus"]) == 0).Select(
+            string filter = param.ZoonoticDiseases ? "blnZoonotic = 1" : string.Empty;
+            DataTable diagnosisTable = ExecSp("spDiagnosis_SelectLookup", parameters);
+            DataRow[] dv = diagnosisTable.Select(filter);
+            List<SelectListItemSurrogate> result = dv
+                .Where(c => Convert.ToInt32(c["intRowStatus"]) == 0)
+                .Select(
                 r => new SelectListItemSurrogate
                 {
                     Text = r["name"].ToString(),
                     Value = r["idfsDiagnosis"].ToString(),
                 }).ToList();
+
             result.Sort((item1, item2) => string.CompareOrdinal(item1.Text, item2.Text));
-            if (addSelectAllItem)
+            if (param.AddSelectAllItem)
             {
                 result.Insert(0, SelectAllItem);
             }
@@ -249,7 +254,6 @@ namespace eidss.model.Reports.Common
                             ? "clsItemInGroup"
                             : "clsItemAsGroup")
                 }).ToList();
-            //result.Sort((item1, item2) => string.CompareOrdinal(item1.Text, item2.Text));
             if (addEmptyItem)
             {
                 result.Insert(0, EmptyItem);
@@ -404,7 +408,6 @@ namespace eidss.model.Reports.Common
                     Text = Localizer.GetMenuLanguageName(c),
                     Value = c,
                     Selected = String.Equals(c, Localizer.CurrentCultureLanguageID, StringComparison.InvariantCultureIgnoreCase),
-                    //                    Selected = c == Thread.CurrentThread.CurrentCulture.Name.Substring(0, c.Length),
                 })
                 .ToList();
 
@@ -558,6 +561,11 @@ namespace eidss.model.Reports.Common
             return GetWebCollectionFromEidssMessages(m_Months, selectedIndex, !isMandatory, 1);
         }
 
+        public static List<SelectListItemSurrogate> GetPopulationList()
+        {
+            return GetPopulationFromEidssMessages();
+        }
+
         public static List<ItemWrapper> GetWinMonthList()
         {
             return GetWinCollectionFromEidssMessages(m_Months);
@@ -700,6 +708,24 @@ namespace eidss.model.Reports.Common
             return collection;
         }
 
+        private static List<SelectListItemSurrogate> GetPopulationFromEidssMessages()
+        {
+            var collection = new List<SelectListItemSurrogate>();
+            foreach (Population population in Enum.GetValues(typeof(Population)))
+            { 
+                var item = new SelectListItemSurrogate
+                {
+                    Text = EidssMessages.Instance.GetString(Enum.GetName(typeof(Population),population)),
+                    Value = ((int)population).ToString(),
+                    Selected = population == Population.All
+                };
+
+                collection.Add(item);
+            }
+
+            return collection;
+        }
+
         private static List<ItemWrapper> GetWinCollectionFromEidssMessages(string[] englishDefaults)
         {
             var collection = new List<ItemWrapper>();
@@ -798,21 +824,26 @@ namespace eidss.model.Reports.Common
             return result;
         }
 
-        public static List<SelectListItemSurrogate> GetSpeciesTypes(HACode accessory)
+        public static List<SelectListItemSurrogate> GetSpeciesTypes(GetSpeciesTypesParam param)
         {
             using (var manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
             {
-                int code = (int)accessory;
+                int code = (int)param.HACode;
                 var result = SpeciesTypeLookup.Accessor.Instance(null).SelectLookupList(manager)
                     .Where(c => c.intHACode.HasValue && (c.intHACode.Value & code) > 0).Select(r => new SelectListItemSurrogate
                 {
                     Text = r.name,
                     Value = r.idfsBaseReference.ToString(),
                 }).ToList();
-                if (result.Count > 0)
+
+                if (param.AddSelectAll)
                 {
-                    result.Insert(0, SelectAllItem);
+                    if (result.Count > 0)
+                    {
+                        result.Insert(0, SelectAllItem);
+                    }
                 }
+
                 return result;
             }
         }
@@ -838,16 +869,50 @@ namespace eidss.model.Reports.Common
             return result;
         }
 
+        public static IEnumerable<SelectListItemSurrogate> LoadDiagnosesAndGroups()
+        {
+            List<DiagnosesAndGroupsLookup> lookup = new List<DiagnosesAndGroupsLookup>();
+
+            FilterHelper.LoadDiagnosesAndGroupsLookup(lookup, HACode.Human, null,
+            (long)BaseReferenceType.rftDiagnosisGroup, false);
+
+            var result = lookup.Select(c => new SelectListItemSurrogate
+            {
+                Value = c.idfsDiagnosisOrDiagnosisGroup.ToString(),
+                Text = c.name,
+                ClassName =
+                        c.idfsDiagnosisOrDiagnosisGroup != 0 ? (
+                            c.blnGroup.HasValue && c.blnGroup.Value
+                                ? "clsGroup"//class for group
+                                : (c.idfsDiagnosisGroup.HasValue && c.idfsDiagnosisGroup.Value > 0 ?
+                                        "clsItemInGroup" : //class for item included to group
+                                        "clsItemAsGroup")) ://class for item not included to group
+                                ""//class for Select all item
+            });
+
+            return result;
+        }
+
         public static void LoadDiagnosesAndGroupsLookup
             (List<DiagnosesAndGroupsLookup> lookup, HACode haCode, long? usingType, long? groupReferenceId)
+        {
+            LoadDiagnosesAndGroupsLookup(lookup, haCode, usingType, groupReferenceId, true);
+        }
+
+        public static void LoadDiagnosesAndGroupsLookup
+            (List<DiagnosesAndGroupsLookup> lookup, HACode haCode, long? usingType, long? groupReferenceId, bool addSelectAll = false)
         {
             using (var manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
             {
                 var da = DiagnosesAndGroupsLookup.Accessor.Instance(null); //m_CS
                 lookup.Clear();
-                lookup.Add(da.CreateNewT(manager, null));
-                lookup.Last().name = EidssFields.Get("SelectAll");
-                lookup.Last().SetValue(lookup.Last().KeyName, "0");
+
+                if (addSelectAll)
+                {
+                    lookup.Add(da.CreateNewT(manager, null));
+                    lookup.Last().name = EidssFields.Get("SelectAll");
+                    lookup.Last().SetValue(lookup.Last().KeyName, "0");
+                }
 
                 List<DiagnosesAndGroupsLookup> l = da.SelectLookupList(manager
                     , (int)haCode
@@ -875,6 +940,7 @@ namespace eidss.model.Reports.Common
                     .ToList());
             }
         }
+
 
         public static string GetVetSummarySurveillanceTypeName(VetSummarySurveillanceType sType)
         {
@@ -1031,5 +1097,218 @@ namespace eidss.model.Reports.Common
         {
             return GetWinCollectionFromEidssMessages(m_KzFormType);
         }
+
+        public static List<SelectListItemSurrogate> GetWebReportModeList()
+        {
+            return GetWebCollectionFromEidssMessages(m_ReportModes, 0, true, 0);
+        }
+        public static List<ItemWrapper> GetWinReportModeList()
+        {
+            return GetWinCollectionFromEidssMessages(m_ReportModes);
+        }
+
+        public static void LoadProvinceDistrictTreeLookup
+        (List<ThaiProvinceDistrictTreeLookup> lookup, long? RegionID, long? ID)
+        {
+            using (var manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
+            {
+                var da = ThaiProvinceDistrictTreeLookup.Accessor.Instance(null); //m_CS
+                lookup.Clear();
+                lookup.Add(da.CreateNewT(manager, null));
+                lookup.Last().name = EidssFields.Get("SelectAll");
+                lookup.Last().SetValue(lookup.Last().KeyName, "0");
+
+                List<ThaiProvinceDistrictTreeLookup> l = da.SelectLookupList(manager
+                    , RegionID
+                    , ID
+                    )
+                    .Where(
+                        c =>
+                            (c.intRowStatus == 0))
+                    .ToList();
+
+                foreach (ThaiProvinceDistrictTreeLookup g in l.Where(c => c.blnGroup.HasValue && c.blnGroup.Value).OrderBy(c => c.name).ToList())
+                {
+                    // add provinces
+                    lookup.Add(g);
+                    // add districts of provinces 
+                    lookup.AddRange(l.Where(c => c.idfsRegion == g.idfsProvinceOrDistrict)
+                        .OrderBy(c => c.name)
+                        .ToList());
+                }
+            }
+        }
+
+        public static string SelectedDistricts2Names(string[] checkedItems, List<ThaiProvinceDistrictTreeLookup> lookup)
+        {
+            if (checkedItems == null || checkedItems.Length == 0)
+                return string.Empty;
+            int lookupIndex = 0;
+            var sb = new StringBuilder();
+            for (int i = 0; i < checkedItems.Length; )
+            {
+                if (IsFirstProvinceDistrictTreeGroupItem(checkedItems[i], lookup, ref lookupIndex))
+                {
+                    GetProvinceDistrictTreeItemNamesOrGroupName(sb, checkedItems, ref i, lookup, ref lookupIndex);
+                }
+                else
+                {
+                    GetProvinceDistrictTreeItemName(sb, checkedItems, ref i, lookup, ref lookupIndex);
+                }
+            }
+            return sb.ToString();
+        }
+
+        private static bool FindProvinceDistrictTreeLookupIndex(long id, List<ThaiProvinceDistrictTreeLookup> lookup, ref int lookupIndex)
+        {
+            for (int i = lookupIndex; i < lookup.Count; i++)
+            {
+                if (lookup[i].idfsProvinceOrDistrict == id)
+                {
+                    lookupIndex = i;
+                    return true;
+                }
+            }
+            return false;
+        }
+        private static void GetProvinceDistrictTreeItemName(StringBuilder sb, string[] checkedItems, ref int i, List<ThaiProvinceDistrictTreeLookup> lookup, ref int lookupIndex)
+        {
+            if (FindProvinceDistrictTreeLookupIndex(long.Parse(checkedItems[i]), lookup, ref lookupIndex))
+            {
+                i++;
+                if (sb.Length > 0)
+                    sb.Append(", ");
+                sb.Append(lookup[lookupIndex].name);
+            }
+        }
+
+        private static void GetProvinceDistrictTreeItemNamesOrGroupName(StringBuilder sb, string[] checkedItems, ref int i, List<ThaiProvinceDistrictTreeLookup> lookup, ref int lookupIndex)
+        {
+            int groupIndex = lookupIndex - 1;
+            long groupId = lookup[lookupIndex - 1].idfsProvinceOrDistrict;
+            var tmpSb = new StringBuilder();
+            while (i < checkedItems.Length && lookupIndex < lookup.Count && checkedItems[i] == lookup[lookupIndex].idfsProvinceOrDistrict.ToString() && groupId.Equals(lookup[lookupIndex].idfsRegion))
+            {
+                if (tmpSb.Length > 0)
+                    tmpSb.Append(", ");
+                tmpSb.Append(lookup[lookupIndex].name);
+                i++;
+                lookupIndex++;
+            }
+            if (groupId.Equals(lookup[lookupIndex].idfsRegion))
+            {
+                if (sb.Length > 0)
+                    sb.Append(", ");
+                sb.Append(tmpSb);
+            }
+            else
+            {
+                if (sb.Length > 0)
+                    sb.Append(", ");
+                sb.Append(lookup[groupIndex].name);
+            }
+        }
+
+        private static bool IsFirstProvinceDistrictTreeGroupItem(string checkedItemId, List<ThaiProvinceDistrictTreeLookup> lookup, ref int lookupIndex)
+        {
+            var id = long.Parse(checkedItemId);
+            if (!FindProvinceDistrictTreeLookupIndex(id, lookup, ref lookupIndex))
+                return false;
+            var blnGroup = lookup[lookupIndex - 1].blnGroup;
+            return blnGroup != null && blnGroup.Value;
+        }
+
+        #region Nested Types
+
+        public interface IStorageKey
+        {
+            /// <summary>
+            /// Pramarily for using in with <see cref="eidss.web.common.Utils.ObjectStorage"/>.
+            /// </summary>
+            /// <returns>String key.</returns>
+            string GenerateUniqueAdditionalKey();
+
+            /// <summary>
+            /// Pramarily for using in with <see cref="eidss.web.common.Utils.ObjectStorage"/>.
+            /// </summary>
+            /// <returns>String key.</returns>
+            long GenerateUniqueKey();
+        }
+
+        public sealed class GetDiagnosisListParam : IStorageKey
+        {
+            public string Lang;
+
+            public HACode Hacode;
+
+            public DiagnosisUsingTypeEnum? UsingType;
+
+            public bool ZoonoticDiseases;
+
+            public bool AddSelectAllItem;
+
+            public GetDiagnosisListParam(
+                string lang,
+                HACode hacode,
+                DiagnosisUsingTypeEnum? usingType,
+                bool zoonoticDiseases = false,
+                bool addSelectAllItem = false)
+            {
+                Lang = lang;
+                Hacode = hacode;
+                UsingType = usingType;
+                ZoonoticDiseases = zoonoticDiseases;
+                AddSelectAllItem = addSelectAllItem;
+            }
+
+            /// <summary>
+            /// Pramarily for using in with <see cref="eidss.web.common.Utils.ObjectStorage"/>
+            /// </summary>
+            /// <returns></returns>
+            public string GenerateUniqueAdditionalKey()
+            {
+                return String.Format("{0}-{1}-{2}-{3}-{4}", Lang, Hacode, UsingType, ZoonoticDiseases, AddSelectAllItem);
+            }
+
+            public long GenerateUniqueKey()
+            {
+                return GetHashCode();
+            }
+
+            public override int GetHashCode()
+            {
+                return Lang.GetHashCode() ^ (int)Hacode ^ (int)UsingType;
+            }
+        }
+
+        public sealed class GetSpeciesTypesParam : IStorageKey
+        {
+            public HACode HACode;
+
+            public bool AddSelectAll;
+
+            public GetSpeciesTypesParam(HACode haCode, bool addAllSelectAll = true)
+            {
+                HACode = haCode;
+                AddSelectAll = addAllSelectAll;
+            }
+
+            public string GenerateUniqueAdditionalKey()
+            {
+                return String.Format("{0}-{1}", HACode, AddSelectAll);
+            }
+
+            public long GenerateUniqueKey()
+            {
+                return GetHashCode();
+            }
+
+            public override int GetHashCode()
+            {
+                return (int)HACode ^ AddSelectAll.GetHashCode();
+            }
+        }
+
+        #endregion
     }
 }

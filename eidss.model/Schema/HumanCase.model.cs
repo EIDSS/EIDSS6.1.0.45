@@ -5991,6 +5991,24 @@ namespace eidss.model.Schema
             }
             
       
+            public ActResult EmergencyNotificationUkraineReport(DbManagerProxy manager, HumanCase obj, List<object> pars)
+            {
+                
+                return EmergencyNotificationUkraineReport(manager, obj
+                    );
+            }
+            public ActResult EmergencyNotificationUkraineReport(DbManagerProxy manager, HumanCase obj
+                )
+            {
+                
+                if (obj != null && !obj.GetPermissions().CanExecute("EmergencyNotificationUkraineReport"))
+                    throw new PermissionException("HumanCase", "EmergencyNotificationUkraineReport");
+                
+                return true;
+                
+            }
+            
+      
             public ActResult ExportHumUrgentyNotificationTanzania(DbManagerProxy manager, HumanCase obj, List<object> pars)
             {
                 
@@ -6865,18 +6883,6 @@ namespace eidss.model.Schema
                                     obj.OnValidationEnd(ex);
                                     obj.UnlockNotifyChanges();
                                 }
-                        }
-
-                        if (e.PropertyName == _str_datDischargeDate)
-                        {
-                            var ex = ChainsValidate(obj);
-                            if (ex != null && !obj.OnValidation(ex))
-                            {
-                                obj.LockNotifyChanges();
-                                obj.CancelMemberLastChanges(_str_datDischargeDate);
-                                obj.OnValidationEnd(ex);
-                                obj.UnlockNotifyChanges();
-                            }
                         }
                     
                         if (e.PropertyName == _str_datFacilityLastVisit)
@@ -8614,8 +8620,10 @@ namespace eidss.model.Schema
                 obj.strCaseID = new Func<HumanCase, DbManagerProxy, string>((c,m) => 
                       !string.IsNullOrEmpty(c.strCaseID)
                       ? c.strCaseID 
-                      : m.SetSpCommand("dbo.spGetNextNumber", (long)NumberingObjectEnum.HumanCase, DBNull.Value, DBNull.Value)
-                      .ExecuteScalar<string>(ScalarSourceType.OutputParameter, "NextNumberValue"))(obj, manager);
+                      : ( BaseSettings.GenerateReadableIdByNumericObjectId
+                          ? ReadableIdentifierHelper.GetReadableIdentifier(NumberingObjectEnum.HumanCase, c.idfCase)
+                          : m.SetSpCommand("dbo.spGetNextNumber", (long)NumberingObjectEnum.HumanCase, DBNull.Value, DBNull.Value)
+                              .ExecuteScalar<string>(ScalarSourceType.OutputParameter, "NextNumberValue")))(obj, manager);
                 obj.datModificationDate = new Func<HumanCase, DateTime?>(c => DateTime.Now)(obj);
                 obj.intPatientAge = new Func<HumanCase, int?>(c => c.Patient.intPatientAgeFromCase)(obj);
                 obj.idfsHumanAgeType = new Func<HumanCase, long?>(c => c.Patient.idfsHumanAgeTypeFromCase)(obj);
@@ -8891,21 +8899,7 @@ namespace eidss.model.Schema
     }));
   
     }));
-          listdatDateofBirth.Add(
-    new ChainsValidatorDateTime<HumanCase>(obj, "datDischargeDate", c => true,
-      obj.datDischargeDate,
-      obj.GetType(),
-      false, listdatDischargeDate => {
-          listdatDischargeDate.Add(
-          new ChainsValidatorDateTime<HumanCase>(obj, "CurrentDate", c => true,
-            DateTime.Now,
-            null,
-            false, listCurrentDate => {
-
-            }));
-
-      }));
-          listdatDateofBirth.Add(
+  listdatDateofBirth.Add(
     new ChainsValidatorDateTime<HumanCase>(obj, "datFacilityLastVisit", c => true, 
       obj.datFacilityLastVisit,
       obj.GetType(),
@@ -9332,6 +9326,24 @@ namespace eidss.model.Schema
             (new CustomMandatoryFieldValidator("Hospitalization", "Hospitalization", "idfsYNHospitalization",
             ValidationEventType.Error
             )).Validate(obj, obj.Hospitalization, CustomMandatoryField.HumanCase_Hospitalization,
+            c => !eidss.model.Core.EidssUserContext.SmartphoneContext);
+
+          
+            (new CustomMandatoryFieldValidator("strHospitalizationPlace", "strHospitalizationPlace", "",
+            ValidationEventType.Error
+            )).Validate(obj, obj.strHospitalizationPlace, CustomMandatoryField.HumanCase_HospitalizationPlace,
+            c => (!eidss.model.Core.EidssUserContext.SmartphoneContext) && (c.idfsYNHospitalization == (long)YesNoUnknownValuesEnum.Yes));
+
+          
+            (new CustomMandatoryFieldValidator("datHospitalizationDate", "datHospitalizationDate", "",
+            ValidationEventType.Error
+            )).Validate(obj, obj.datHospitalizationDate, CustomMandatoryField.HumanCase_HospitalizationDate,
+            c => (!eidss.model.Core.EidssUserContext.SmartphoneContext) && (c.idfsYNHospitalization == (long)YesNoUnknownValuesEnum.Yes));
+
+          
+            (new CustomMandatoryFieldValidator("SpecimenCollected", "SpecimenCollected", "idfsYNSpecimenCollected",
+            ValidationEventType.Error
+            )).Validate(obj, obj.SpecimenCollected, CustomMandatoryField.HumanCase_SpecimenCollected,
             c => !eidss.model.Core.EidssUserContext.SmartphoneContext);
 
           
@@ -9811,6 +9823,27 @@ namespace eidss.model.Schema
               {
                 obj
                   .AddRequired("Hospitalization", c => !eidss.model.Core.EidssUserContext.SmartphoneContext);
+                
+                }
+            
+              if (EidssSiteContext.Instance.CustomMandatoryFields.Contains(CustomMandatoryField.HumanCase_HospitalizationPlace)  && new Func<HumanCase, bool>(c => (!eidss.model.Core.EidssUserContext.SmartphoneContext) && (c.idfsYNHospitalization == (long)YesNoUnknownValuesEnum.Yes))(obj))
+              {
+                obj
+                  .AddRequired("strHospitalizationPlace", c => (!eidss.model.Core.EidssUserContext.SmartphoneContext) && (c.idfsYNHospitalization == (long)YesNoUnknownValuesEnum.Yes));
+                
+                }
+            
+              if (EidssSiteContext.Instance.CustomMandatoryFields.Contains(CustomMandatoryField.HumanCase_HospitalizationDate)  && new Func<HumanCase, bool>(c => (!eidss.model.Core.EidssUserContext.SmartphoneContext) && (c.idfsYNHospitalization == (long)YesNoUnknownValuesEnum.Yes))(obj))
+              {
+                obj
+                  .AddRequired("datHospitalizationDate", c => (!eidss.model.Core.EidssUserContext.SmartphoneContext) && (c.idfsYNHospitalization == (long)YesNoUnknownValuesEnum.Yes));
+                
+                }
+            
+              if (EidssSiteContext.Instance.CustomMandatoryFields.Contains(CustomMandatoryField.HumanCase_SpecimenCollected)  && new Func<HumanCase, bool>(c => !eidss.model.Core.EidssUserContext.SmartphoneContext)(obj))
+              {
+                obj
+                  .AddRequired("SpecimenCollected", c => !eidss.model.Core.EidssUserContext.SmartphoneContext);
                 
                 }
             
@@ -10654,6 +10687,44 @@ namespace eidss.model.Schema
                     null,
                     null,
                     (o1, o2, p, r) => eidss.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed("HumUrgentyNotificationDTRA"),
+                    false,
+                    false,
+                    null,
+                    false,
+                    new ActionMetaItem[] {
+                      
+                      }
+                    
+                    ));
+                  
+                Actions.Add(new ActionMetaItem(
+                    "EmergencyNotificationUkraineReport",
+                    ActionTypes.Action,
+                    true,
+                    "",
+                    "",
+                    
+                    (manager, c, pars) => Accessor.Instance(null).EmergencyNotificationUkraineReport(manager, (HumanCase)c, pars),
+                        
+                    null,
+                    
+                    new ActionMetaItem.VisualItem(
+                        /*from BvMessages*/"titleEmergencyNotificationUkraineReport",
+                        "",
+                        /*from BvMessages*/"",
+                        /*from BvMessages*/"",
+                        "",
+                        /*from BvMessages*/"",
+                        ActionsAlignment.Left,
+                        ActionsPanelType.ContextMenu,
+                        ActionsAppType.All
+                        ),
+                      true,
+                    null,
+                    null,
+                    null,
+                    null,
+                    (o1, o2, p, r) => eidss.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed("HumUrgentyNotificationUkraine"),
                     false,
                     false,
                     null,

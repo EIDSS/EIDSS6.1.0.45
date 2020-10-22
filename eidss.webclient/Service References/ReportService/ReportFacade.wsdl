@@ -15,13 +15,9 @@
       <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/eidss.model.Reports.TH" />
       <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/eidss.model.Reports.ARM" />
       <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/eidss.model.Reports.KZ" />
-      <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/eidss.model.Reports.UA" />
-      <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/eidss.model.Schema" />
-      <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/BLToolkit.EditableObjects" />
-      <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/BLToolkit.Common" />
-      <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/BLToolkit.ComponentModel" />
-      <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/System" />
-      <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/bv.common.Core" />
+      <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/bv.common.Core" />
+      <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:8097/?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/eidss.model.Reports.UA" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IReportFacade_ExportHumAggregateCase_InputMessage">
@@ -53,6 +49,12 @@
   </wsdl:message>
   <wsdl:message name="IReportFacade_ExportHumUrgentyNotificationDTRA_OutputMessage">
     <wsdl:part name="parameters" element="tns:ExportHumUrgentyNotificationDTRAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReportFacade_ExportHumUrgentyNotificationUkraine_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportHumUrgentyNotificationUkraine" />
+  </wsdl:message>
+  <wsdl:message name="IReportFacade_ExportHumUrgentyNotificationUkraine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportHumUrgentyNotificationUkraineResponse" />
   </wsdl:message>
   <wsdl:message name="IReportFacade_ExportHumUrgentyNotificationTanzania_InputMessage">
     <wsdl:part name="parameters" element="tns:ExportHumUrgentyNotificationTanzania" />
@@ -615,6 +617,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationDTRA" message="tns:IReportFacade_ExportHumUrgentyNotificationDTRA_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationDTRAResponse" message="tns:IReportFacade_ExportHumUrgentyNotificationDTRA_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="ExportHumUrgentyNotificationUkraine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationUkraine" message="tns:IReportFacade_ExportHumUrgentyNotificationUkraine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationUkraineResponse" message="tns:IReportFacade_ExportHumUrgentyNotificationUkraine_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="ExportHumUrgentyNotificationTanzania">
       <wsdl:input wsaw:Action="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationTanzania" message="tns:IReportFacade_ExportHumUrgentyNotificationTanzania_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationTanzaniaResponse" message="tns:IReportFacade_ExportHumUrgentyNotificationTanzania_OutputMessage" />
@@ -883,6 +889,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IReportFacade/ExportForm1KZReport" message="tns:IReportFacade_ExportForm1KZReport_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IReportFacade/ExportForm1KZReportResponse" message="tns:IReportFacade_ExportForm1KZReport_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="ExportComparativeReportByRegionKZ">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportFacade/ExportComparativeReportByRegionKZ" message="tns:IReportFacade_ExportComparativeReportByRegionKZ_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportFacade/ExportComparativeReportByRegionKZResponse" message="tns:IReportFacade_ExportComparativeReportByRegionKZ_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="ExportVetCountryPreventiveMeasures">
       <wsdl:input wsaw:Action="http://tempuri.org/IReportFacade/ExportVetCountryPreventiveMeasures" message="tns:IReportFacade_ExportVetCountryPreventiveMeasures_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IReportFacade/ExportVetCountryPreventiveMeasuresResponse" message="tns:IReportFacade_ExportVetCountryPreventiveMeasures_OutputMessage" />
@@ -1016,6 +1026,15 @@
     </wsdl:operation>
     <wsdl:operation name="ExportHumUrgentyNotificationDTRA">
       <soap:operation soapAction="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationDTRA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportHumUrgentyNotificationUkraine">
+      <soap:operation soapAction="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationUkraine" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

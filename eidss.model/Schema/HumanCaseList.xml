@@ -42,27 +42,27 @@
                             ) on hc.idfHumanCase = fn_HumanCase_SelectList.idfCase
                     </join>
                     <where>
-                      <expr param="datModificationDate" value="CONVERT(NVARCHAR(8), hc.datModificationDate, 112) {0} CONVERT(NVARCHAR(8), @datModificationDate, 112)"/>
-                      <expr param="datCompletionPaperFormDate" value="CONVERT(NVARCHAR(8), hc.datCompletionPaperFormDate, 112) {0} CONVERT(NVARCHAR(8), @datCompletionPaperFormDate, 112)"/>
-                      <expr param="idfsTentativeDiagnosis" value="isnull(hc.idfsTentativeDiagnosis,0) {0} @idfsTentativeDiagnosis"/>
-                      <expr param="datTentativeDiagnosisDate" value="CONVERT(NVARCHAR(8), hc.datTentativeDiagnosisDate, 112) {0} CONVERT(NVARCHAR(8), @datTentativeDiagnosisDate, 112)" />
+                      <expr param="datModificationDate" value="hc.datModificationDate {0} @datModificationDate"/>
+                      <expr param="datCompletionPaperFormDate" value="hc.datCompletionPaperFormDate {0} @datCompletionPaperFormDate"/>
+                      <expr param="idfsTentativeDiagnosis" value="hc.idfsTentativeDiagnosis {0} @idfsTentativeDiagnosis"/>
+                      <expr param="datTentativeDiagnosisDate" value="hc.datTentativeDiagnosisDate {0} @datTentativeDiagnosisDate" />
                       <expr param="idfsFinalDiagnosis" value="hc.idfsFinalDiagnosis {0} @idfsFinalDiagnosis"/>
-                      <expr param="datFinalDiagnosisDate" value="CONVERT(NVARCHAR(8), hc.datFinalDiagnosisDate, 112) {0} CONVERT(NVARCHAR(8), @datFinalDiagnosisDate, 112)"/>
-                      <expr param="idfSentByOffice" value="isnull(hc.idfSentByOffice,0) {0} @idfSentByOffice"/>
-                      <expr param="idfReceivedByOffice" value="isnull(hc.idfReceivedByOffice,0) {0} @idfReceivedByOffice"/>
+                      <expr param="datFinalDiagnosisDate" value="hc.datFinalDiagnosisDate {0} @datFinalDiagnosisDate"/>
+                      <expr param="idfSentByOffice" value="hc.idfSentByOffice {0} @idfSentByOffice"/>
+                      <expr param="idfReceivedByOffice" value="hc.idfReceivedByOffice {0} @idfReceivedByOffice"/>
                       <expr param="strSentByLast" value="tlbSentByPerson.strFamilyName {0} @strSentByLast"/>
                       <expr param="strSentByFirst" value="tlbSentByPerson.strFirstName {0} @strSentByFirst"/>
                       <expr param="strSentByPatronimyc" value="tlbSentByPerson.strSecondName {0} @strSentByPatronimyc"/>
                       <expr param="strReceivedByLast" value="tlbReceivedByPerson.strFamilyName {0} @strReceivedByLast"/>
                       <expr param="strReceivedByFirst" value="tlbReceivedByPerson.strFirstName {0} @strReceivedByFirst"/>
                       <expr param="strReceivedByPatronimyc" value="tlbReceivedByPerson.strSecondName {0} @strReceivedByPatronimyc"/>
-                      <expr param="datFacilityLastVisit" value="CONVERT(NVARCHAR(8), hc.datFacilityLastVisit, 112) {0} CONVERT(NVARCHAR(8), @datFacilityLastVisit, 112)" />
-                      <expr param="datOnSetDate" value="CONVERT(NVARCHAR(8), hc.datOnSetDate, 112) {0} CONVERT(NVARCHAR(8), @datOnSetDate, 112)"/>
-                      <expr param="idfsFinalState" value="isnull(hc.idfsFinalState,0) {0} @idfsFinalState"/>
-                      <expr param="idfsHospitalizationStatus" value="isnull(hc.idfsHospitalizationStatus,0) {0} @idfsHospitalizationStatus"/>
-                      <expr param="strCurrentLocation" value="ISNULL(hc.strCurrentLocation, hospital.name) {0} @strCurrentLocation"/>
+                      <expr param="datFacilityLastVisit" value="hc.datFacilityLastVisit {0} @datFacilityLastVisit" />
+                      <expr param="datOnSetDate" value="hc.datOnSetDate {0} @datOnSetDate"/>
+                      <expr param="idfsFinalState" value="hc.idfsFinalState {0} @idfsFinalState"/>
+                      <expr param="idfsHospitalizationStatus" value="hc.idfsHospitalizationStatus {0} @idfsHospitalizationStatus"/>
+                      <expr param="strCurrentLocation" value="(hc.strCurrentLocation {0} @strCurrentLocation) or (hc.strCurrentLocation is null and hospital.name {0} @strCurrentLocation)"/>
                       <expr param="strNote" value="hc.strNote {0} @strNote"/>
-                      <expr param="datNotificationDate" value="CONVERT(NVARCHAR(8), hc.datNotificationDate, 112) {0} CONVERT(NVARCHAR(8), @datNotificationDate, 112)"/>
+                      <expr param="datNotificationDate" value="hc.datNotificationDate {0} @datNotificationDate"/>
                       <expr param="uidOfflineCaseID" value="hc.uidOfflineCaseID {0} @uidOfflineCaseID"/>
                     </where>
                 </filter>
@@ -72,10 +72,10 @@
                             on h.idfHuman = fn_HumanCase_SelectList.idfHuman
                     </join>
                     <where>
-                      <expr param="idfsHumanGender" value="isnull(h.idfsHumanGender,0) {0} @idfsHumanGender"/>
-                      <expr param="strHomePhone" value="isnull(h.strHomePhone,'') {0} @strHomePhone"/>
-                      <expr param="idfsNationality" value="isnull(h.idfsNationality,0) {0} @idfsNationality"/>
-                      <expr param="strEmployerName" value="isnull(h.strEmployerName,'') {0} @strEmployerName"/>
+                      <expr param="idfsHumanGender" value="h.idfsHumanGender {0} @idfsHumanGender"/>
+                      <expr param="strHomePhone" value="h.strHomePhone {0} @strHomePhone"/>
+                      <expr param="idfsNationality" value="h.idfsNationality {0} @idfsNationality"/>
+                      <expr param="strEmployerName" value="h.strEmployerName {0} @strEmployerName"/>
                     </where>
                 </filter>
               <filter>

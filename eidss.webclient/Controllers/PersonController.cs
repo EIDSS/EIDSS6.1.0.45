@@ -220,6 +220,7 @@ namespace eidss.webclient.Controllers
                     {
                         var clone = eidss.model.Schema.Patient.Accessor.Instance(null).CreateNewT(manager, patient);
                         clone.idfCase = idfCase;
+                        clone.idfHuman = idfHuman;
                         clone.idfContactedCasePerson = idfContactedCasePerson;
                         clone.strPersonID = patient.strPersonID;
                         clone.strLastName = patient.strLastName;
@@ -249,6 +250,7 @@ namespace eidss.webclient.Controllers
                     {
                         var clone = eidss.model.Schema.Patient.Accessor.Instance(null).CreateNewT(manager, contactedCasePerson);
                         clone.idfCase = idfCase;
+                        clone.idfHuman = idfHuman;
                         clone.idfContactedCasePerson = idfContactedCasePerson;
                         clone.strPersonID = contactedCasePerson.Person.strPersonID;
                         clone.strLastName = contactedCasePerson.Person.strLastName;
@@ -278,6 +280,7 @@ namespace eidss.webclient.Controllers
                     {
                         var clone = eidss.model.Schema.Patient.Accessor.Instance(null).CreateNewT(manager, humanCase);
                         clone.idfCase = idfCase;
+                        clone.idfHuman = idfHuman;
                         clone.idfContactedCasePerson = idfContactedCasePerson;
                         clone.strPersonID = humanCase.Patient.strPersonID;
                         clone.strLastName = humanCase.Patient.strLastName;

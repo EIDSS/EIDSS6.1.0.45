@@ -2057,7 +2057,7 @@
     <value>ID กลุ่มเลือด/ตัวนำโรค</value>
   </data>
   <data name="Remove" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>ลบรายการนี้</value>
   </data>
   <data name="Report" xml:space="preserve">
     <value>รายงาน</value>
@@ -2171,7 +2171,7 @@
     <value>มีสัตว์ที่อ้างอิงถึงสายพันธุ์นี้ คุณควรลบสัตว์เหล่านี้ก่อนสายพันธุ์เปลี่ยน</value>
   </data>
   <data name="strColumn" xml:space="preserve">
-    <value>คอลัมน์</value>
+    <value>เลือกแก้ไขคอลัมน์</value>
   </data>
   <data name="strCreateAliquote" xml:space="preserve">
     <value>สร้างอลิคว๊อท</value>
@@ -2465,7 +2465,7 @@
     <value>เริ่มปรากฏโดย</value>
   </data>
   <data name="titleAccessionIn" xml:space="preserve">
-    <value>การเริ่มปรากฏของโรค</value>
+    <value>ลงรายการรับตัวอย่าง</value>
   </data>
   <data name="titleAccessionInTitle" xml:space="preserve">
     <value>การเริ่มปรากฏใน</value>
@@ -3683,16 +3683,16 @@
     <value>ชื่อโฟลด์เดอร์ (ประจำชาติ)</value>
   </data>
   <data name="LayoutNameEnglish" xml:space="preserve">
-    <value>ชื่อเลย์เอาท์ (ภาษาอังกฤษ)</value>
-  </data>
-  <data name="LayoutNameNational" xml:space="preserve">
-    <value>ชื่อเลย์เอาท์ (ประจำชาติ)</value>
-  </data>
-  <data name="QueryNameEnglish" xml:space="preserve">
     <value>ชื่อเลย์เอ้าท์ (ภาษาอังกฤษ)</value>
   </data>
-  <data name="QueryNameNational" xml:space="preserve">
+  <data name="LayoutNameNational" xml:space="preserve">
     <value>ชื่อเลย์เอ้าท์ (ภาษาไทย)</value>
+  </data>
+  <data name="QueryNameEnglish" xml:space="preserve">
+    <value>ชื่อคำถาม (ภาษาอังกฤษ)</value>
+  </data>
+  <data name="QueryNameNational" xml:space="preserve">
+    <value>ชื่อคำถาม (ประจำชาติ)</value>
   </data>
   <data name="PublishLayout" xml:space="preserve">
     <value>ตีพิมพ์เลย์เอาท์</value>
@@ -3749,7 +3749,7 @@
     <value>ลบคอลัมน์รวม</value>
   </data>
   <data name="CancelChanges" xml:space="preserve">
-    <value>ยกเลิกการเปลี่ยนแปลง</value>
+    <value>ยกเลิกการแก้ไข</value>
   </data>
   <data name="RefreshData" xml:space="preserve">
     <value>รีเฟรชข้อมูล</value>
@@ -3896,7 +3896,7 @@
     <value>การทิ้งตัวอย่างจะถูกปฏิเสธ บันทึกจะถูกลบจากบันทึกนี้ และส่งคืนไปที่รายการตัวอย่าง ดำเนินการต่อหรือไม่?</value>
   </data>
   <data name="strDeleteSample_Id" xml:space="preserve">
-    <value>ลบตัวอย่าง (ข้อผิดพลาดในการป้อนข้อมูล)</value>
+    <value>ลบตัวอย่าง(มีข้อผิดพลาดในการป้อนข้อมูล)</value>
   </data>
   <data name="strDestroySample_Id" xml:space="preserve">
     <value>ทำลาย</value>
@@ -3938,7 +3938,7 @@
     <value>ไม่สามารถลงทะเบียนฝูงสัตว์ได้โดยที่ไม่มีสายพันธุ์ คุณต้องลงทะเบียนสายพันธุ์ก่อนทำการบันทึกแบบฟอร์ม</value>
   </data>
   <data name="strColumnTooltip" xml:space="preserve">
-    <value>คอลัมน์</value>
+    <value>เลือกแก้ไขคอลัมน์</value>
   </data>
   <data name="strRemoveTooltip" xml:space="preserve">
     <value>ย้ายออก</value>
@@ -4196,7 +4196,7 @@
     <value>ไม่สามารถแสดงข้อมูลสำหรับเลย์เอาท์ได้เนื่องจากต้องใช้หน่วยความจำมากเกินไป</value>
   </data>
   <data name="cbCounterThai0" xml:space="preserve">
-    <value>อัตราส่วนต่อ100,000</value>
+    <value>อัตราป่วย / 100,000 คน</value>
   </data>
   <data name="kendoMenuColumns" xml:space="preserve">
     <value>เลือกคอลัมน์</value>
@@ -4332,9 +4332,11 @@
   </data>
   <data name="msgTooManyDiagnosisThaiReports" xml:space="preserve">
     <value>เลือกหัวข้อการวินิจฉัย เกินกำหนด สามารถเลือกได้ไม่เกิน {0} รายการ โปรดลบและสร้างรายงานใหม่อีกครั้ง</value>
+    <comment>{0} - Maximum allowed number of selected diagnoses in the report (by default, 10)</comment>
   </data>
   <data name="msgTooManyDistrictsThaiReports" xml:space="preserve">
     <value>เลือกหัวข้ออำเภอ เกินกำหนด สามารถเลือกได้ไม่เกิน {0} อำเภอ โปรดลบและสร้างรายงานใหม่อีกครั้ง</value>
+    <comment>{0} - Maximum allowed number of selected districts in the report (by default, 50)</comment>
   </data>
   <data name="btCreateNew" xml:space="preserve">
     <value>สร้างกรณีใหม่</value>
@@ -4434,5 +4436,8 @@
   </data>
   <data name="title506CasesForUpdate" xml:space="preserve">
     <value>ตรวจสอบและเลือกอัปเดทกรณีผู้ป่วย</value>
+  </data>
+  <data name="cbCounterThai1" xml:space="preserve">
+    <value>ร้อยละ</value>
   </data>
 </root>

@@ -12,7 +12,6 @@ namespace eidss.model.Avr.View
         Proportion = 10004011,
         MaxOfRow = 10004017,
         MinOfRow = 10004018,
-        Ratio = 10004019,
-
+        Ratio = 10004019
     }
 }

@@ -48,7 +48,7 @@ namespace eidss.smartphone.web.Models
                 else if (type == (long)BaseReferenceType.rftSampleType + 10000)
                 {
                     return SampleTypeForDiagnosisLookup.Accessor.Instance(null).SelectLookupList(manager, null)
-                        .Where(c => c.idfsDiagnosis != 0)
+                        .Where(c => c.idfsDiagnosis != 0 && c.idfsReference != 10320001 /*Unknown*/)
                         .Select(c => new BaseReferenceRaw() { id = c.idfsReference, df = c.name, ha = c.intHACode.HasValue ? c.intHACode.Value : 0, tp = (long)BaseReferenceType.rftSampleType, rs = c.intRowStatus, rd = 0, f1 = c.idfsDiagnosis, f2 = 0 });
                 }
                 else

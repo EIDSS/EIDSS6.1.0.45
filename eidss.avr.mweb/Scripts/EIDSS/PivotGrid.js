@@ -131,6 +131,7 @@
                     data: { value: s.target.checked },
                     success: function (data) {
                         pivotGrid.PerformCallback(e);
+                        location.reload();
                     }
                 });
             }

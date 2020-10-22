@@ -135,7 +135,7 @@ namespace eidss.model.Avr.Commands.Models
 
         protected virtual void RaisePropertyChangedEvent(SharedProperty property)
         {
-            PropertyChangedEventHandler eventHandler = PropertyChanged;
+            var eventHandler = PropertyChanged;
             if (eventHandler != null)
             {
                 eventHandler(this, new PropertyChangedEventArgs(property.ToString()));

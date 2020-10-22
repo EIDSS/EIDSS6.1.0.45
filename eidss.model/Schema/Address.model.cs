@@ -1121,7 +1121,7 @@ namespace eidss.model.Schema
           [LocalizedDisplayName(_str_strReadOnlySettlement)]
         public string strReadOnlySettlement
         {
-            get { return new Func<Address, string>(c => c.idfsSettlement == null ? (string)null : c.Settlement.strSettlementName)(this); }
+            get { return new Func<Address, string>(c => c.Settlement == null ? (string)null : c.Settlement.strSettlementName)(this); }
             
         }
         
@@ -2280,54 +2280,24 @@ namespace eidss.model.Schema
                 obj.RayonLookup.Clear();
                 
                 obj.RayonLookup.Add(RayonAccessor.CreateNewT(manager, null));
-
-                if(EidssSiteContext.Instance.IsThaiCustomization)
-                {
-                    try
-                    {
-                        obj.RayonLookup.AddRange(RayonAccessor.SelectLookupList(manager
-
+                
+                obj.RayonLookup.AddRange(RayonAccessor.SelectLookupList(manager
+                    
                     , new Func<Address, long>(c => c.idfsRegion ?? 0)(obj)
-
-                    , null
-                    )
-                    .Where(c => (c.intRowStatus == 0 && c.idfsRayon != c.idfsParent) || (c.idfsRayon == obj.idfsRayon))
-
-                    .ToList());
-                    }
-                    catch (Exception e)
-                    {
-                        obj.RayonLookup.AddRange(RayonAccessor.SelectLookupList(manager
-
-                    , new Func<Address, long>(c => c.idfsRegion ?? 0)(obj)
-
+                            
                     , null
                     )
                     .Where(c => (c.intRowStatus == 0) || (c.idfsRayon == obj.idfsRayon))
-
+                    
                     .ToList());
-                    }
-                }
-                else
-                {
-                    obj.RayonLookup.AddRange(RayonAccessor.SelectLookupList(manager
-
-                    , new Func<Address, long>(c => c.idfsRegion ?? 0)(obj)
-
-                    , null
-                    )
-                    .Where(c => (c.intRowStatus == 0) || (c.idfsRayon == obj.idfsRayon))
-
-                    .ToList());
-                }
-
+                
                 if (obj.idfsRayon != null && obj.idfsRayon != 0)
                 {
                     obj.Rayon = obj.RayonLookup
                         .SingleOrDefault(c => c.idfsRayon == obj.idfsRayon);
-
+                    
                 }
-
+              
                 LookupManager.AddObject("RayonLookup", obj, RayonAccessor.GetType(), "_SelectListInternal");
                 obj.bNeedLookupRemove = true;
               

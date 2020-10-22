@@ -5,7 +5,6 @@ using System.Text;
 using bv.common.Core;
 using bv.model.BLToolkit;
 using bv.model.Model.Core;
-using BLToolkit.Data;
 using eidss.model.Avr.Pivot;
 using eidss.model.Avr.Tree;
 using eidss.model.Core;
@@ -40,7 +39,7 @@ namespace eidss.model.Avr
 
         public static List<AvrTreeElement> LoadQueriesLayoutsFolders()
         {
-            List<AvrTreeElement> treeElements = LoadQueries();
+            var treeElements = LoadQueries();
             treeElements.AddRange(LoadFolders());
             treeElements.AddRange(LoadLayouts());
             return treeElements;
@@ -49,17 +48,17 @@ namespace eidss.model.Avr
         public static List<AvrTreeElement> LoadQueries(bool readOnly = false)
         {
             LookupManager.AddObject("Query", null, AvrQueryLookup.Accessor.Instance(null).GetType(), "_SelectListInternal");
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                AvrQueryLookup.Accessor accessor = AvrQueryLookup.Accessor.Instance(null);
-                List<AvrQueryLookup> lookup = accessor.SelectLookupList(manager, null);
+                var accessor = AvrQueryLookup.Accessor.Instance(null);
+                var lookup = accessor.SelectLookupList(manager, null);
 
-                List<AvrTreeElement> treeElements = lookup
+                var treeElements = lookup
                     .Where(
                         q =>
-                            ((!readOnly || q.blnReadOnly) &&
-                             (q.idfsSearchObject == null ||
-                              ((EidssUser) (ModelUserContext.Instance.CurrentUser)).IsAvrSearchObjectAvailable(q.idfsSearchObject.Value))))
+                            (!readOnly || q.blnReadOnly) &&
+                            (q.idfsSearchObject == null ||
+                             ((EidssUser) ModelUserContext.Instance.CurrentUser).IsAvrSearchObjectAvailable(q.idfsSearchObject.Value)))
                     .Select(q => (AvrTreeElement) q)
                     .ToList();
                 return treeElements;
@@ -79,12 +78,12 @@ namespace eidss.model.Avr
             LookupManager.AddObject("Query", null, AvrQueryLookup.Accessor.Instance(null).GetType(), "_SelectListInternal");
             LookupManager.ClearByTable("Query");
             LookupManager.ClearAndReloadOnIdle();
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                AvrQueryLookup.Accessor accessor = AvrQueryLookup.Accessor.Instance(null);
-                List<AvrQueryLookup> lookup = accessor.SelectLookupList(manager, queryId);
+                var accessor = AvrQueryLookup.Accessor.Instance(null);
+                var lookup = accessor.SelectLookupList(manager, queryId);
 
-                AvrQueryLookup foundQuery = lookup.FirstOrDefault();
+                var foundQuery = lookup.FirstOrDefault();
                 return foundQuery != null
                     ? (AvrTreeElement) foundQuery
                     : null;
@@ -94,12 +93,12 @@ namespace eidss.model.Avr
         public static List<AvrTreeElement> LoadFolders(bool readOnly = false, long? queryId = null)
         {
             LookupManager.AddObject("LayoutFolder", null, AvrFolderLookup.Accessor.Instance(null).GetType(), "_SelectListInternal");
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                AvrFolderLookup.Accessor accessor = AvrFolderLookup.Accessor.Instance(null);
-                List<AvrFolderLookup> lookup = accessor.SelectLookupList(manager, null, queryId);
-                var eidssUser = ((EidssUser) (ModelUserContext.Instance.CurrentUser));
-                List<AvrTreeElement> treeElements = lookup
+                var accessor = AvrFolderLookup.Accessor.Instance(null);
+                var lookup = accessor.SelectLookupList(manager, null, queryId);
+                var eidssUser = (EidssUser) ModelUserContext.Instance.CurrentUser;
+                var treeElements = lookup
                     .Where(
                         f =>
                             (!readOnly || f.blnReadOnly) &&
@@ -123,12 +122,12 @@ namespace eidss.model.Avr
             LookupManager.AddObject("LayoutFolder", null, AvrFolderLookup.Accessor.Instance(null).GetType(), "_SelectListInternal");
             LookupManager.ClearByTable("LayoutFolder");
             LookupManager.ClearAndReloadOnIdle();
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                AvrFolderLookup.Accessor accessor = AvrFolderLookup.Accessor.Instance(null);
-                List<AvrFolderLookup> lookup = accessor.SelectLookupList(manager, folderId, null);
+                var accessor = AvrFolderLookup.Accessor.Instance(null);
+                var lookup = accessor.SelectLookupList(manager, folderId, null);
 
-                AvrFolderLookup foundFolder = lookup.FirstOrDefault();
+                var foundFolder = lookup.FirstOrDefault();
                 return foundFolder != null
                     ? (AvrTreeElement) foundFolder
                     : null;
@@ -138,19 +137,19 @@ namespace eidss.model.Avr
         public static List<AvrTreeElement> LoadLayouts(bool readOnly = false, long? queryId = null)
         {
             LookupManager.AddObject("Layout", null, AvrLayoutLookup.Accessor.Instance(null).GetType(), "_SelectListInternal");
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                AvrLayoutLookup.Accessor accessor = AvrLayoutLookup.Accessor.Instance(null);
-                List<AvrLayoutLookup> lookup = accessor.SelectLookupList(manager, null, queryId);
-                long employeeId = EidssUserContext.User.EmployeeID is long ? (long) EidssUserContext.User.EmployeeID : -1;
-                var user = ((EidssUser) (ModelUserContext.Instance.CurrentUser));
+                var accessor = AvrLayoutLookup.Accessor.Instance(null);
+                var lookup = accessor.SelectLookupList(manager, null, queryId);
+                var employeeId = EidssUserContext.User.EmployeeID is long ? (long) EidssUserContext.User.EmployeeID : -1;
+                var user = (EidssUser) ModelUserContext.Instance.CurrentUser;
                 Func<AvrLayoutLookup, bool> selector =
                     lay => (!readOnly || lay.blnReadOnly) &&
                            (!lay.idfsSearchObject.HasValue || user.IsAvrSearchObjectAvailable(lay.idfsSearchObject.Value)) &&
                            (lay.idfPerson.HasValue && lay.idfPerson.Value == employeeId ||
                             lay.blnShareLayout ||
                             AvrPermissions.AccessToAVRAdministrationPermission);
-                List<AvrTreeElement> treeElements = lookup.Where(selector).Select(lay => (AvrTreeElement) lay).ToList();
+                var treeElements = lookup.Where(selector).Select(lay => (AvrTreeElement) lay).ToList();
 
                 return treeElements;
             }
@@ -169,12 +168,12 @@ namespace eidss.model.Avr
             LookupManager.AddObject("Layout", null, AvrLayoutLookup.Accessor.Instance(null).GetType(), "_SelectListInternal");
             LookupManager.ClearByTable("Layout");
             LookupManager.ClearAndReloadOnIdle();
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                AvrLayoutLookup.Accessor accessor = AvrLayoutLookup.Accessor.Instance(null);
-                List<AvrLayoutLookup> lookup = accessor.SelectLookupList(manager, layoutId, null);
+                var accessor = AvrLayoutLookup.Accessor.Instance(null);
+                var lookup = accessor.SelectLookupList(manager, layoutId, null);
 
-                AvrLayoutLookup foundLayout = lookup.FirstOrDefault();
+                var foundLayout = lookup.FirstOrDefault();
                 return foundLayout != null
                     ? (AvrTreeElement) foundLayout
                     : null;
@@ -183,29 +182,30 @@ namespace eidss.model.Avr
 
         public static void SaveLayoutLocation(long layoutId, long? folderId)
         {
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                DbManager command = manager.SetSpCommand("spAsLayoutParentPost",
+                var command = manager.SetSpCommand("spAsLayoutParentPost",
                     manager.Parameter("idflLayout", layoutId),
                     manager.Parameter("idflFolder", folderId ?? (object) DBNull.Value));
                 command.ExecuteNonQuery();
             }
+
             //LookupCache.NotifyChange("Layout");
             LookupManager.ClearByTable("Layout");
         }
 
         public static void SaveLayoutMetadata
-            (string strLanguage, long idflLayout, string strDefaultLayoutName
-                , string strLayoutName, long idfsDefaultGroupDate, long idflQuery, long idflDescription
-                , string strDescription, string strDescriptionEnglish
-                , bool blnReadOnly = false, bool blnShareLayout = false)
+        (string strLanguage, long idflLayout, string strDefaultLayoutName
+            , string strLayoutName, long idfsDefaultGroupDate, long idflQuery, long idflDescription
+            , string strDescription, string strDescriptionEnglish
+            , bool blnReadOnly = false, bool blnShareLayout = false)
         {
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                long? employeeId = (EidssUserContext.User == null || EidssUserContext.User.EmployeeID == null)
+                var employeeId = EidssUserContext.User == null || EidssUserContext.User.EmployeeID == null
                     ? (long?) null
                     : (long) EidssUserContext.User.EmployeeID;
-                DbManager command = manager.SetSpCommand("dbo.spAsLayoutMetadataPost",
+                var command = manager.SetSpCommand("dbo.spAsLayoutMetadataPost",
                     manager.Parameter("strLanguage", strLanguage),
                     manager.Parameter("idflLayout", idflLayout),
                     manager.Parameter("strDefaultLayoutName", strDefaultLayoutName),
@@ -219,75 +219,83 @@ namespace eidss.model.Avr
                     manager.Parameter("blnReadOnly", blnReadOnly),
                     manager.Parameter("blnShareLayout", blnShareLayout),
                     manager.Parameter("idfPerson", employeeId)
-                    );
+                );
                 command.ExecuteNonQuery();
             }
+
             //LookupCache.NotifyChange("Layout");
             LookupManager.ClearByTable("Layout");
         }
 
         public static void SaveFolder(long folderId, long? parentFolderId, long queryId, string defaultName, string nationalName)
         {
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                DbManager command = manager.SetSpCommand("spAsFolderPost",
+                var command = manager.SetSpCommand("spAsFolderPost",
                     manager.Parameter("strLanguage", ModelUserContext.CurrentLanguage),
                     manager.Parameter("idflFolder", folderId),
                     manager.Parameter("idflParentFolder", parentFolderId ?? (object) DBNull.Value),
                     manager.Parameter("strFolderName", nationalName),
                     manager.Parameter("strDefaultFolderName", defaultName),
                     manager.Parameter("idflQuery", queryId)
-                    );
+                );
                 command.ExecuteNonQuery();
             }
+
             //LookupCache.NotifyChange("LayoutFolder");
             LookupManager.ClearByTable("LayoutFolder");
         }
 
         public static long GetGlobalId(long id, AvrTreeElementType type)
         {
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
                 switch (type)
                 {
                     case AvrTreeElementType.Layout:
-                        AvrLayoutLookup.Accessor layoutAccessor = AvrLayoutLookup.Accessor.Instance(null);
-                        List<AvrLayoutLookup> layoutLookup = layoutAccessor.SelectLookupList(manager, id, null);
-                        AvrLayoutLookup foundLayout = layoutLookup.SingleOrDefault();
+                        var layoutAccessor = AvrLayoutLookup.Accessor.Instance(null);
+                        var layoutLookup = layoutAccessor.SelectLookupList(manager, id, null);
+                        var foundLayout = layoutLookup.SingleOrDefault();
                         if (foundLayout == null)
                         {
-                            throw new AvrException(String.Format("Could not find Layout with ID {0} to unpublish", id));
+                            throw new AvrException(string.Format("Could not find Layout with ID {0} to unpublish", id));
                         }
+
                         if (!foundLayout.idfsGlobalLayout.HasValue)
                         {
-                            throw new AvrException(String.Format("Could not unpublish non-published Layout with ID {0}", id));
+                            throw new AvrException(string.Format("Could not unpublish non-published Layout with ID {0}", id));
                         }
+
                         return foundLayout.idfsGlobalLayout.Value;
                     case AvrTreeElementType.Folder:
-                        AvrFolderLookup.Accessor folderAccessor = AvrFolderLookup.Accessor.Instance(null);
-                        List<AvrFolderLookup> folderLookup = folderAccessor.SelectLookupList(manager, id, null);
-                        AvrFolderLookup foundFolder = folderLookup.SingleOrDefault();
+                        var folderAccessor = AvrFolderLookup.Accessor.Instance(null);
+                        var folderLookup = folderAccessor.SelectLookupList(manager, id, null);
+                        var foundFolder = folderLookup.SingleOrDefault();
                         if (foundFolder == null)
                         {
-                            throw new AvrException(String.Format("Could not find Folder with ID {0} to unpublish", id));
+                            throw new AvrException(string.Format("Could not find Folder with ID {0} to unpublish", id));
                         }
+
                         if (!foundFolder.idfsGlobalFolder.HasValue)
                         {
-                            throw new AvrException(String.Format("Could not unpublish non-published Folder with ID {0}", id));
+                            throw new AvrException(string.Format("Could not unpublish non-published Folder with ID {0}", id));
                         }
+
                         return foundFolder.idfsGlobalFolder.Value;
                     case AvrTreeElementType.Query:
-                        AvrQueryLookup.Accessor queryAccessor = AvrQueryLookup.Accessor.Instance(null);
-                        List<AvrQueryLookup> queryLookup = queryAccessor.SelectLookupList(manager, id);
-                        AvrQueryLookup foundQuery = queryLookup.SingleOrDefault();
+                        var queryAccessor = AvrQueryLookup.Accessor.Instance(null);
+                        var queryLookup = queryAccessor.SelectLookupList(manager, id);
+                        var foundQuery = queryLookup.SingleOrDefault();
                         if (foundQuery == null)
                         {
-                            throw new AvrException(String.Format("Could not find Query with ID {0} to unpublish", id));
+                            throw new AvrException(string.Format("Could not find Query with ID {0} to unpublish", id));
                         }
+
                         if (!foundQuery.idfsGlobalQuery.HasValue)
                         {
-                            throw new AvrException(String.Format("Could not unpublish non-published Query with ID {0}", id));
+                            throw new AvrException(string.Format("Could not unpublish non-published Query with ID {0}", id));
                         }
+
                         return foundQuery.idfsGlobalQuery.Value;
                     default:
                         throw new AvrException("Unsupported AvrTreeElementType " + type);
@@ -300,20 +308,21 @@ namespace eidss.model.Avr
             Utils.CheckNotNull(layout, "layout");
             if (layout.ElementType != AvrTreeElementType.Layout)
             {
-                throw new ArgumentException("Parameter should has ElementType == AvrTreeElementType.Layout", "layout");
+                throw new ArgumentException(@"Parameter should has ElementType == AvrTreeElementType.Layout", "layout");
             }
 
-            string newDefault = GetLayoutNameWithPrefix(layout.DefaultName, layout.QueryID, layout.ID, Localizer.lngEn, true);
+            var newDefault = GetLayoutNameWithPrefix(layout.DefaultName, layout.QueryID, layout.ID, Localizer.lngEn, true);
 
             var xmlBuilder = new StringBuilder(@"<?xml version=""1.0"" encoding=""UTF-16""?><ROOT>");
             xmlBuilder.AppendFormat(@"<LayoutName LanguageId=""{0}""  Translation=""{1}"" />", Localizer.lngEn, newDefault);
             if (ModelUserContext.CurrentLanguage != Localizer.lngEn)
             {
-                string newNational = GetLayoutNameWithPrefix(layout.NationalName, layout.QueryID, layout.ID,
+                var newNational = GetLayoutNameWithPrefix(layout.NationalName, layout.QueryID, layout.ID,
                     ModelUserContext.CurrentLanguage, true);
                 xmlBuilder.AppendFormat(@"<LayoutName LanguageId=""{0}""  Translation=""{1}"" />", ModelUserContext.CurrentLanguage,
                     newNational);
             }
+
             xmlBuilder.Append(@"</ROOT>");
 
             return xmlBuilder.ToString();
@@ -323,14 +332,14 @@ namespace eidss.model.Avr
         {
             Utils.CheckNotNullOrEmpty(lang, "lang");
 
-            string result = layoutName;
-            for (int index = 0; index < Int32.MaxValue; index++)
+            var result = layoutName;
+            for (var index = 0; index < int.MaxValue; index++)
             {
-                string strIndex = index > 0 ? String.Format(" ({0})", index) : String.Empty;
-                string prefix = EidssMessages.Get("msgCopyPrefix", "Copy{0} of", lang);
-                prefix = String.Format(Utils.Str(prefix).Trim(), strIndex);
-                string format = EidssMessages.Get("msgCopyFormat", "{0} {1}", lang);
-                result = String.Format(format, prefix, Utils.Str(layoutName));
+                var strIndex = index > 0 ? string.Format(" ({0})", index) : string.Empty;
+                var prefix = EidssMessages.Get("msgCopyPrefix", "Copy{0} of", lang);
+                prefix = string.Format(Utils.Str(prefix).Trim(), strIndex);
+                var format = EidssMessages.Get("msgCopyFormat", "{0} {1}", lang);
+                result = string.Format(format, prefix, Utils.Str(layoutName));
 
                 if (!IsLayoutExists(result, queryId, layoutId, lang, isNewObject))
                 {
@@ -344,14 +353,15 @@ namespace eidss.model.Avr
         public static string ValidateElementName(AvrTreeElement element, bool isNewObject)
         {
             Func<string, long, long, string, bool, bool> exists = (s, l, arg3, arg4, arg5) => false;
-            string defaultMessage = string.Empty;
-            string nationalMessage = string.Empty;
+            var defaultMessage = string.Empty;
+            var nationalMessage = string.Empty;
             if (element.IsLayout)
             {
                 exists = IsLayoutExists;
                 defaultMessage = m_DefaultLayoutExists;
                 nationalMessage = m_NationalLayoutExists;
             }
+
             if (element.IsFolder)
             {
                 exists = IsFolderExists;
@@ -363,12 +373,14 @@ namespace eidss.model.Avr
             {
                 return defaultMessage;
             }
-            if ((ModelUserContext.CurrentLanguage != Localizer.lngEn) &&
-                (exists(element.NationalName, element.QueryID, element.ID, ModelUserContext.CurrentLanguage, isNewObject)))
+
+            if (ModelUserContext.CurrentLanguage != Localizer.lngEn &&
+                exists(element.NationalName, element.QueryID, element.ID, ModelUserContext.CurrentLanguage, isNewObject))
             {
                 return nationalMessage;
             }
-            return String.Empty;
+
+            return string.Empty;
         }
 
         public static bool IsLayoutExists(string layoutName, long queryId, long layoutId, string lang, bool isNewObject)
@@ -376,18 +388,18 @@ namespace eidss.model.Avr
             Utils.CheckNotNull(layoutName, "layoutName");
 
             layoutName = layoutName.Replace("'", "''");
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                AvrLayoutLookup.Accessor accessor = AvrLayoutLookup.Accessor.Instance(null);
-                List<AvrLayoutLookup> lookup = accessor.SelectLookupList(manager, null, queryId);
+                var accessor = AvrLayoutLookup.Accessor.Instance(null);
+                var lookup = accessor.SelectLookupList(manager, null, queryId);
 
-                AvrLayoutLookup[] found = (lang == Localizer.lngEn)
-                    ? lookup.Where(lay => (layoutName == lay.strDefaultLayoutName)).ToArray()
-                    : lookup.Where(lay => (layoutName == lay.strLayoutName)).ToArray();
+                var found = lang == Localizer.lngEn
+                    ? lookup.Where(lay => layoutName == lay.strDefaultLayoutName).ToArray()
+                    : lookup.Where(lay => layoutName == lay.strLayoutName).ToArray();
 
-                bool isExists = (found.Length > 1) ||
-                                (isNewObject && found.Length > 0) ||
-                                ((found.Length == 1) && (found[0].idflLayout != layoutId));
+                var isExists = found.Length > 1 ||
+                               isNewObject && found.Length > 0 ||
+                               found.Length == 1 && found[0].idflLayout != layoutId;
                 return isExists;
             }
         }
@@ -397,18 +409,18 @@ namespace eidss.model.Avr
             Utils.CheckNotNull(folderName, "folderName");
 
             folderName = folderName.Replace("'", "''");
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                AvrFolderLookup.Accessor accessor = AvrFolderLookup.Accessor.Instance(null);
-                List<AvrFolderLookup> lookup = accessor.SelectLookupList(manager, null, queryId);
+                var accessor = AvrFolderLookup.Accessor.Instance(null);
+                var lookup = accessor.SelectLookupList(manager, null, queryId);
 
-                AvrFolderLookup[] found = (lang == Localizer.lngEn)
-                    ? lookup.Where(f => (folderName == f.strDefaultFolderName)).ToArray()
-                    : lookup.Where(f => (folderName == f.strFolderName)).ToArray();
+                var found = lang == Localizer.lngEn
+                    ? lookup.Where(f => folderName == f.strDefaultFolderName).ToArray()
+                    : lookup.Where(f => folderName == f.strFolderName).ToArray();
 
-                bool isExists = (found.Length > 1) ||
-                                (isNewObject && found.Length > 0) ||
-                                ((found.Length == 1) && (found[0].idflFolder != folderId));
+                var isExists = found.Length > 1 ||
+                               isNewObject && found.Length > 0 ||
+                               found.Length == 1 && found[0].idflFolder != folderId;
                 return isExists;
             }
         }

@@ -36,6 +36,7 @@
   </DirectoryRef>
 
   <ComponentGroup Id="Resources_$(var.FolderId)" Directory="$(var.FolderId)" Source="$(var.BinariesPaths)$(var.Folder)\">
+    <?ifndef no_bv.common.resources.dll?>
     <Component Id="bv.common.resources.dll_$(var.FolderId)">
       <File
         Id="bv.common.resources.dll_$(var.FolderId)"
@@ -43,6 +44,10 @@
         KeyPath="yes"
         Source="$(var.bv.common.TargetDir)$(var.Folder)\$(var.bv.common.TargetName).resources$(var.bv.common.TargetExt)" />
     </Component>
+    <?else?>
+    <?undef no_bv.common.resources.dll?>
+    <?endif?>
+
     <?ifndef no_bv.winclient.resources.dll?>
     <Component Id="bv.winclient.resources.dll_$(var.FolderId)">
       <File Id="bv.winclient.resources.dll_$(var.FolderId)" Name="bv.winclient.resources.dll" Checksum="yes" KeyPath="yes" />
@@ -83,24 +88,48 @@
     <?else?>
     <?undef no_eidss.main.resources.dll?>
     <?endif?>
+    <?ifndef no_eidss.winclient.resources.dll?>
     <Component Id="eidss.winclient.resources.dll_$(var.FolderId)">
       <File Id="eidss.winclient.resources.dll_$(var.FolderId)" Name="eidss.winclient.resources.dll" Checksum="yes" KeyPath="yes" />
     </Component>
+    <?else?>
+    <?undef no_eidss.winclient.resources.dll?>
+    <?endif?>
+    <?ifndef no_eidss_admin.resources.dll?>
     <Component Id="eidss_admin.resources.dll_$(var.FolderId)">
       <File Id="eidss_admin.resources.dll_$(var.FolderId)" Name="eidss_admin.resources.dll" Checksum="yes" KeyPath="yes" />
     </Component>
+    <?else?>
+    <?undef no_eidss_admin.resources.dll?>
+    <?endif?>
+    <?ifndef no_EIDSS_ClientAgent.resources.dll?>
     <Component Id="EIDSS_ClientAgent.resources.dll_$(var.FolderId)">
       <File Id="EIDSS_ClientAgent.resources.dll_$(var.FolderId)" Name="EIDSS_ClientAgent.resources.dll" Checksum="yes" KeyPath="yes" />
     </Component>
+    <?else?>
+    <?undef no_EIDSS_ClientAgent.resources.dll?>
+    <?endif?>
+    <?ifndef no_eidss_forms.resources.dll?>
     <Component Id="eidss_forms.resources.dll_$(var.FolderId)">
       <File Id="eidss_forms.resources.dll_$(var.FolderId)" Name="eidss_forms.resources.dll" Checksum="yes" KeyPath="yes" />
     </Component>
+    <?else?>
+    <?undef no_eidss_forms.resources.dll?>
+    <?endif?>
+    <?ifndef no_eidss_human.resources.dll?>
     <Component Id="eidss_human.resources.dll_$(var.FolderId)">
       <File Id="eidss_human.resources.dll_$(var.FolderId)" Name="eidss_human.resources.dll" Checksum="yes" KeyPath="yes" />
     </Component>
+    <?else?>
+    <?undef no_eidss_human.resources.dll?>
+    <?endif?>
+    <?ifndef no_eidss_lims.resources.dll?>
     <Component Id="eidss_lims.resources.dll_$(var.FolderId)">
       <File Id="eidss_lims.resources.dll_$(var.FolderId)" Name="eidss_lims.resources.dll" Checksum="yes" KeyPath="yes" />
     </Component>
+    <?else?>
+    <?undef no_eidss_lims.resources.dll?>
+    <?endif?>
     <?ifndef no_EIDSS_ObjectAccess.resources.dll?>
     <Component Id="EIDSS_ObjectAccess.resources.dll_$(var.FolderId)">
       <File Id="EIDSS_ObjectAccess.resources.dll_$(var.FolderId)" Name="EIDSS_ObjectAccess.resources.dll" Checksum="yes" KeyPath="yes" />

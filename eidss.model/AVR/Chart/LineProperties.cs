@@ -8,7 +8,11 @@ namespace eidss.model.Avr.Chart
     public class LineProperties : ILineProperties, IParentSeries
     {
         [XmlIgnore]
-        public Color Color { get { return Color.FromArgb(ColorArgb); } }
+        public Color Color
+        {
+            get { return Color.FromArgb(ColorArgb); }
+        }
+
         public int ColorArgb { get; set; }
         public int LineStyle { get; set; }
         public int LineStyleWidth { get; set; }

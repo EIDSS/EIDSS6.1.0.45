@@ -3003,4 +3003,7 @@
   <data name="strLabDepartment" xml:space="preserve">
     <value>Laborator şöbə</value>
   </data>
+  <data name="strQueryName" xml:space="preserve">
+    <value>Tərcüməsi</value>
+  </data>
 </root>

@@ -3003,4 +3003,10 @@
   <data name="idfRootFarm" xml:space="preserve">
     <value>أختار مزرعة</value>
   </data>
+  <data name="strQueryName" xml:space="preserve">
+    <value>القيمة المترجمة</value>
+  </data>
+  <data name="Form1KZRegion" xml:space="preserve">
+    <value>إقليم (منطقة)</value>
+  </data>
 </root>

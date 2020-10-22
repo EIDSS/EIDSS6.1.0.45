@@ -2836,6 +2836,12 @@ namespace eidss.model.Schema
             c => c.idfsSampleType != (long)SampleTypeEnum.Unknown);
 
           
+            (new CustomMandatoryFieldValidator("strFieldBarcode", "strFieldBarcode", "",
+            ValidationEventType.Error
+            )).Validate(obj, obj.strFieldBarcode, CustomMandatoryField.HumanCaseSample_LocalID,
+            c => c.idfsSampleType != (long)SampleTypeEnum.Unknown);
+
+          
                   
                     }
 
@@ -2884,6 +2890,13 @@ namespace eidss.model.Schema
               {
                 obj
                   .AddRequired("strSendToOffice", c => c.idfsSampleType != (long)SampleTypeEnum.Unknown);
+                
+                }
+            
+              if (EidssSiteContext.Instance.CustomMandatoryFields.Contains(CustomMandatoryField.HumanCaseSample_LocalID)  && new Func<HumanCaseSample, bool>(c => c.idfsSampleType != (long)SampleTypeEnum.Unknown)(obj))
+              {
+                obj
+                  .AddRequired("strFieldBarcode", c => c.idfsSampleType != (long)SampleTypeEnum.Unknown);
                 
                 }
             

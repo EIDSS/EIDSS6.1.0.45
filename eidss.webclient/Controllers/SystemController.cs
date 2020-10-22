@@ -39,13 +39,13 @@ namespace eidss.webclient.Controllers
             //var o = ModelStorage.Get(ModelUserContext.ClientID, id, null) as IObject;
             return ObjectStorage.Using<IObject, ActionResult>(o =>
                 {
-            if (o != null)
+            if ((o != null) && (formData != null))
             {
                 bChanged = o.HasChanges;
                 if (!bChanged)
                 {
                     var formCollection = HttpUtility.ParseQueryString(formData);
-                    if (string.IsNullOrEmpty(formCollection.Get("NotToCloneInCheckChanges")))
+                    if ((formCollection != null) && (string.IsNullOrEmpty(formCollection.Get("NotToCloneInCheckChanges"))))
                     {
                         using (var manager = DbManagerFactory.Factory.Create(EidssUserContext.Instance))
                         {
@@ -292,9 +292,9 @@ namespace eidss.webclient.Controllers
             if (!string.IsNullOrEmpty(val))
             {
                 double ret;
-                if (double.TryParse(val, out ret))
-                    return ret;
                 if (double.TryParse(val, NumberStyles.AllowDecimalPoint, new NumberFormatInfo() { NumberDecimalSeparator = "." }, out ret))
+                    return ret;
+                if (double.TryParse(val, out ret))
                     return ret;
             }
             return origVal;
@@ -308,20 +308,26 @@ namespace eidss.webclient.Controllers
             originalGeoLocation.Rayon = originalGeoLocation.RayonLookup.SingleOrDefault(c => c.idfsRayon == cloneGeoLocation.idfsRayon);
             originalGeoLocation.Settlement = originalGeoLocation.SettlementLookup.SingleOrDefault(c => c.idfsSettlement == cloneGeoLocation.idfsSettlement);
             originalGeoLocation.GroundType = originalGeoLocation.GroundTypeLookup.SingleOrDefault(c => c.idfsBaseReference == cloneGeoLocation.idfsGroundType);
-            NameValueCollection formCollection = HttpUtility.ParseQueryString(formData);
-            string objectIdent = cloneGeoLocation.ObjectIdent;
-            originalGeoLocation.strDescription = formCollection[objectIdent + "strDescription"];
-            originalGeoLocation.strForeignAddress = formCollection[objectIdent + "strForeignAddress"];
             var bSave = originalGeoLocation.bCancelCoordinationValidation;
             originalGeoLocation.bCancelCoordinationValidation = true;
-            originalGeoLocation.dblLongitude = parseDouble(formCollection, objectIdent, "dblLongitude", originalGeoLocation.dblLongitude);
-            originalGeoLocation.dblLatitude = parseDouble(formCollection, objectIdent, "dblLatitude", originalGeoLocation.dblLatitude);
-            originalGeoLocation.bCancelCoordinationValidation = bSave;
-            originalGeoLocation.dblAccuracy = parseDouble(formCollection, objectIdent, "dblAccuracy", originalGeoLocation.dblAccuracy);
-            originalGeoLocation.dblAlignment = parseDouble(formCollection, objectIdent, "dblAlignment", originalGeoLocation.dblAlignment);
-            originalGeoLocation.dblDistance = parseDouble(formCollection, objectIdent, "dblDistance", originalGeoLocation.dblDistance);
-            originalGeoLocation.dblRelLatitude = parseDouble(formCollection, objectIdent, "dblRelLatitude", originalGeoLocation.dblRelLatitude);
-            originalGeoLocation.dblRelLongitude = parseDouble(formCollection, objectIdent, "dblRelLongitude", originalGeoLocation.dblRelLongitude);
+            if (formData != null)
+            {
+                NameValueCollection formCollection = HttpUtility.ParseQueryString(formData);
+                if (formCollection != null)
+                {
+                    string objectIdent = cloneGeoLocation.ObjectIdent;
+                    originalGeoLocation.strDescription = formCollection[objectIdent + "strDescription"];
+                    originalGeoLocation.strForeignAddress = formCollection[objectIdent + "strForeignAddress"];
+                    originalGeoLocation.dblLongitude = parseDouble(formCollection, objectIdent, "dblLongitude", originalGeoLocation.dblLongitude);
+                    originalGeoLocation.dblLatitude = parseDouble(formCollection, objectIdent, "dblLatitude", originalGeoLocation.dblLatitude);
+                    originalGeoLocation.bCancelCoordinationValidation = bSave;
+                    originalGeoLocation.dblAccuracy = parseDouble(formCollection, objectIdent, "dblAccuracy", originalGeoLocation.dblAccuracy);
+                    originalGeoLocation.dblAlignment = parseDouble(formCollection, objectIdent, "dblAlignment", originalGeoLocation.dblAlignment);
+                    originalGeoLocation.dblDistance = parseDouble(formCollection, objectIdent, "dblDistance", originalGeoLocation.dblDistance);
+                    originalGeoLocation.dblRelLatitude = parseDouble(formCollection, objectIdent, "dblRelLatitude", originalGeoLocation.dblRelLatitude);
+                    originalGeoLocation.dblRelLongitude = parseDouble(formCollection, objectIdent, "dblRelLongitude", originalGeoLocation.dblRelLongitude);
+                }
+            }
         }
 
 
@@ -970,12 +976,12 @@ namespace eidss.webclient.Controllers
                     {
                         var obj = o as IObject;
                         var root = r as IObject;
-                        var parent = obj.Parent as IObject;
 
                         if (obj != null)
                         {
                             //AsSession.Check(ModelStorage.Get(ModelUserContext.ClientID, root == null ? 0 : (long)root.Key, null), obj);
 
+                            var parent = obj.Parent as IObject;
                             var name = keyparts[2];
                             value = value == "null" ? null : value;
                             var oldvalue = obj.GetValue(name);

@@ -31,7 +31,6 @@ namespace eidss.model.Avr.Chart
         public int AxisYIndex { get; set; }
 
 
-
         public SeriesProperties()
         {
             AxisYIndex = 0; //Primary Axis Y

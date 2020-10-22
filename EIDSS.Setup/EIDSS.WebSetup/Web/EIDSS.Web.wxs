@@ -21,6 +21,7 @@
       <ComponentGroupRef Id="AvrSettings" />
       <ComponentGroupRef Id="WebAppSettings" />
       <ComponentGroupRef Id="PinService" />
+      <ComponentGroupRef Id="Th506Upload" />
       <ComponentGroupRef Id="web.ThirdParty.GIS.GDBAPI" />
       <ComponentRef Id="CommonAppData.Translations.Folder" Primary="yes" />
     </ComponentGroup>
@@ -131,7 +132,7 @@
           <iis:WebVirtualDir Id="Help.ar_IQ.VirtualDirectory" Alias="ar-IQ" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.lo_LA.VirtualDirectory" Alias="lo-LA" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.vi_VN.VirtualDirectory" Alias="vi-VN" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
-          <iis:WebVirtualDir Id="Help.th_TH.VirtualDirectory" Alias="th-TH" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
+          <iis:WebVirtualDir Id="Help.th_TH.VirtualDirectory" Alias="th-TH" Directory="Help.th_TH" DirProperties="Help.VirtualDirectory.Propertiess" />
 
           <iis:WebVirtualDir Id="Help.en_AZ_Eidss.VirtualDirectory" Alias="en-AZ-Eidss" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.en_HY_Eidss.VirtualDirectory" Alias="en-HY-Eidss" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
@@ -361,6 +362,72 @@
           <?define value = ?>
           <?define order = 88 ?>
           <?include $(var.ProjectDir)AddConfigKey.wxi?>
+        </Component>
+        <Component Id="GgPinService" Guid="{1905AC8C-A45C-442D-B149-9E37E4F9AF3F}" MultiInstance="yes" KeyPath="yes">
+          <Condition><![CDATA[COUNTRY = "!(loc.Georgia)"]]></Condition>
+
+          <?define key = GgPinServiceUsr ?>
+          <?define value = u2R6azUrYIRICRqzeyV5sA== ?>
+          <?define order = 89 ?>
+          <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
+          <?define key = GgPinServicePwd ?>
+          <?define value = xkejmfCbOc3drSaYIMzr6w== ?>
+          <?define order = 90 ?>
+          <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
+          <?define key = GGPinServiceVerification ?>
+          <?define value = true ?>
+          <?define order = 91 ?>
+          <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
+        </Component>
+    </ComponentGroup>
+  </Fragment>
+  
+  <Fragment Id="Th506Upload">
+    <ComponentGroup Id="Th506Upload" Directory="eidss.web">
+      <Component Id="Th506UploadSettings" Guid="{87232829-40B0-4019-9EF4-C98EBE894D1E}" MultiInstance="yes" KeyPath="yes">
+        <Condition><![CDATA[COUNTRY = "!(loc.Thailand)"]]></Condition>
+
+        <?define key = UploadingSessionsCount ?>
+        <?define value = 30 ?>
+        <?define order = 92 ?>
+        <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
+        <?define key = Uploading506HSERVUnique ?>
+        <?define value = false ?>
+        <?define order = 93 ?>
+        <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
+        <?define key = Uploading506ResultToExcel ?>
+        <?define value = true ?>
+        <?define order = 94 ?>
+        <?include $(var.ProjectDir)AddConfigKey.wxi?>
+      </Component>
+     </ComponentGroup>
+  </Fragment>
+
+    <Fragment Id="ReadableIdByNumericId">
+    <ComponentGroup Id="ReadableIdByNumericId" Directory="eidss.web">
+        <Component Id="UaReadableIdByNumericId" Guid="{5B5E38A2-6F54-42DE-B581-69FA476A5FC3}" MultiInstance="yes" KeyPath="yes">
+          <Condition><![CDATA[COUNTRY = "!(loc.Ukraine)"]]></Condition>
+
+          <?define key = GenerateReadableIdByNumericObjectId ?>
+          <?define value = true ?>
+          <?define order = 95 ?>
+          <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
+          <?define key = AddExtraCharInReadableId ?>
+          <?define value = true ?>
+          <?define order = 96 ?>
+          <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
+          <?define key = ExtraCharInReadableId ?>
+          <?define value = - ?>
+          <?define order = 97 ?>
+          <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
         </Component>
     </ComponentGroup>
   </Fragment>

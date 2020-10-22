@@ -190,10 +190,6 @@
             paperForm.OnMonthChangedAZInternal(e);
     },
 
-    OnMonthChangedAZ: function (e) {
-        paperForm.OnMonthChangedAZInternal(e);
-    },
-
     OnMonthChangedAZInternal: function (e, years) {
         var startMonth = $('#StartMonth').data('kendoComboBox');
         var endMonth = $('#EndMonth').data('kendoComboBox');
@@ -226,6 +222,48 @@
             }
         }
     },
+    OnMonthChangedAZ: function (e) {
+        var startMonth = $('#StartMonth').data('kendoComboBox');
+        var endMonth = $('#EndMonth').data('kendoComboBox');
+
+        var thisMonth, otherMonth;
+        if (startMonth != null && endMonth != null) {
+            if (e.sender == startMonth) {
+                thisMonth = startMonth;
+                otherMonth = endMonth;
+            } else {
+                thisMonth = endMonth;
+                otherMonth = startMonth;
+            }
+
+            if (thisMonth.value() == null || thisMonth.value() == "") {
+                otherMonth.value(null);
+                return;
+            }
+            if (otherMonth.value() == null || otherMonth.value() == "") {
+                otherMonth.value(thisMonth.value());
+                return;
+            }
+
+            if (thisMonth === startMonth) {
+                var thisValue = parseInt(thisMonth.value());
+                var otherValue = parseInt(otherMonth.value());
+
+                if (thisValue > otherValue) {
+                    otherMonth.value(thisMonth.value())
+                }
+            }
+            else {
+                var thisValue = parseInt(thisMonth.value());
+                var otherValue = parseInt(otherMonth.value());
+
+                if (thisValue < otherValue) {
+                    otherMonth.value(thisMonth.value())
+                }
+            }
+        }
+    },
+
     OnMonthChangedKZ: function () {
         var startMonth = $('#StartMonth').data('kendoComboBox');
         var endMonth = $('#EndMonth').data('kendoComboBox');
@@ -282,9 +320,13 @@
         if (!paperForm.ValidateYears(e))
             bvDialog.showError(EIDSS.BvMessages.msgComparativeReportTHCorrectYear);
     },
+    KZValidateYears: function (e) {
+        if (!paperForm.ValidateYears(e))
+            bvDialog.showError(EIDSS.BvMessages.msgComparativeReportKZCorrectYear);
+    },
     //rule year2>year1
     findStartYearControl: function () {
-        var names = ["#StartYear", "#YearModel_StartYear", "#Year1", "#YearModel_Year1"];
+        var names = ["#StartYear", "#YearModel_StartYear", "#Year1", "#YearModel_Year1", "#YearFrom"];
         for (var i = 0; i < names.length; i++) {
             if ($(names[i]) != null && $(names[i]).data() != null)
                 return $(names[i]).data().kendoNumericTextBox;
@@ -292,7 +334,7 @@
         return null;
     },
     findEndYearControl: function () {
-        var names = ["#EndYear", "#YearModel_EndYear", "#Year2", "#YearModel_Year2"];
+        var names = ["#EndYear", "#YearModel_EndYear", "#Year2", "#YearModel_Year2", "#YearTo"];
         for (var i = 0; i < names.length; i++) {
             if ($(names[i]) != null && $(names[i]).data() != null)
                 return $(names[i]).data().kendoNumericTextBox;
@@ -366,6 +408,36 @@
                 paperForm.OnYearMonthChanged(e);
             }
         }
+    },
+
+    OnVetComparativeYearChanged: function (e) {
+        var startYear = paperForm.findStartYearControl();
+        var endYear = paperForm.findEndYearControl();
+        var year1Old = document.getElementById('StartYearOld');
+        var year2Old = document.getElementById('EndYearOld');
+
+        if (endYear.value() - startYear.value() > 2) {
+            startYear.value(parseInt(year1Old.value));
+            endYear.value(parseInt(year2Old.value));
+
+            bvDialog.showError(EIDSS.BvMessages.msgVetComparativeReportAZCorrectYear);
+            return;
+        }
+
+        var childDropdown = $('#SpeciesType_CheckedItems').data('kendoDropDownList');;
+        var dropdownInput = $('#SpeciesType_CheckedItems');
+        if (startYear.value() == endYear.value()) {
+            dropdownInput.addClass("requiredField");
+            comboBoxFacade.addClass(childDropdown, "requiredField");
+        } else {
+            dropdownInput.removeClass("requiredField");
+            comboBoxFacade.removeClass(childDropdown, "requiredField");
+        }
+
+        paperForm.OnVetYearChanged(e);
+
+        year1Old.value = startYear.value();
+        year2Old.value = endYear.value();
     },
 
     OnYearMonthChanged: function (e) {
@@ -659,7 +731,7 @@
 
     SetThaiYear: function (yearElem, lang) {
         var thaiYarShift = 543;
-        var minThaiYear = 2550;
+        var minThaiYear = 2543;
         var minYear = 2000;
         if (yearElem != null && yearElem != "undefined") {
             var curLang = yearElem.element[0].getAttribute("lang");
@@ -740,7 +812,6 @@
     },
 
     OnThaiProvinceInternalChanged: function (e, districtComboboxName) {
-        debugger
         if (e.sender == null) {
             return;
         }
@@ -797,6 +868,7 @@
 
     },
     setThaiZoneRegionProvinceEnabled: function (zone, region, province, district) {
+        // TODO - Remove, handling is now in OnReportModeChanged
         if (zone != null)
             zone.enable((region == null || region.value() == null || region.value() == '')
                 && (province == null || province.value() == null || province.value() == ''));
@@ -1020,6 +1092,84 @@
         }
         else{
             ctl.style.display='none';
+        }
+    },
+
+    // Report Mode Handling
+    // Elements: ZoneFilter_CheckedItems, RegionFilter_CheckedItems, ProvinceFilter_CheckedItems, SubDistrictFilter_CheckedItems
+    OnReportModeChanged: function (e) {
+        var selectedIndex = e.sender._selectedValue;
+
+        //console.log('OnReportModeChanged: ' + selectedIndex.toString());
+
+        // 2 divs each for the ID
+        switch (selectedIndex) {
+            case "0":
+                $('[id=divZone]').attr('style', 'display: initial');
+                $('[id=divRegion]').attr('style', 'display: none');
+                $('[id=divProvince]').attr('style', 'display: none');
+                $('[id=divProvinceDistrict]').attr('style', 'display: none');
+
+                $('[id=divPlaceholder]').attr('style', 'display: none');
+
+                // Clear value content from all other inputs
+                bvCheckedComboBox.onClearCheckedComboBox('RegionFilter_CheckedItems');
+                bvCheckedComboBox.onClearCheckedComboBox('ProvinceFilter_CheckedItems');
+                bvCheckedComboBox.onClearCheckedComboBox('SelectedDistricts');
+                break;
+            case "1":
+                $('[id=divZone]').attr('style', 'display: none');
+                $('[id=divRegion]').attr('style', 'display: initial');
+                $('[id=divProvince]').attr('style', 'display: none');
+                $('[id=divProvinceDistrict]').attr('style', 'display: none');
+
+                $('[id=divPlaceholder]').attr('style', 'display: none');
+
+                // Clear value content from all other inputs
+                bvCheckedComboBox.onClearCheckedComboBox('ZoneFilter_CheckedItems');
+                bvCheckedComboBox.onClearCheckedComboBox('ProvinceFilter_CheckedItems');
+                bvCheckedComboBox.onClearCheckedComboBox('SelectedDistricts');
+                break;
+            case "2":
+                $('[id=divZone]').attr('style', 'display: none');
+                $('[id=divRegion]').attr('style', 'display: none');
+                $('[id=divProvince]').attr('style', 'display: initial');
+                $('[id=divProvinceDistrict]').attr('style', 'display: none');
+
+                $('[id=divPlaceholder]').attr('style', 'display: none');
+
+                // Clear value content from all other inputs
+                bvCheckedComboBox.onClearCheckedComboBox('ZoneFilter_CheckedItems');
+                bvCheckedComboBox.onClearCheckedComboBox('RegionFilter_CheckedItems');
+                bvCheckedComboBox.onClearCheckedComboBox('SelectedDistricts');
+                break;
+            case "3":
+                $('[id=divZone]').attr('style', 'display: none');
+                $('[id=divRegion]').attr('style', 'display: none');
+                $('[id=divProvince]').attr('style', 'display: none');
+                $('[id=divProvinceDistrict]').attr('style', 'display: initial');
+
+                $('[id=divPlaceholder]').attr('style', 'display: none');
+
+                // Clear value content from all other inputs
+                bvCheckedComboBox.onClearCheckedComboBox('ZoneFilter_CheckedItems');
+                bvCheckedComboBox.onClearCheckedComboBox('RegionFilter_CheckedItems');
+                bvCheckedComboBox.onClearCheckedComboBox('ProvinceFilter_CheckedItems');
+                break;
+            default:
+                $('[id=divZone]').attr('style', 'display: none');
+                $('[id=divRegion]').attr('style', 'display: none');
+                $('[id=divProvince]').attr('style', 'display: none');
+                $('[id=divProvinceDistrict]').attr('style', 'display: none');
+
+                $('[id=divPlaceholder]').attr('style', 'display: initial');
+
+                // Clear value content from all inputs
+                bvCheckedComboBox.onClearCheckedComboBox('ZoneFilter_CheckedItems');
+                bvCheckedComboBox.onClearCheckedComboBox('RegionFilter_CheckedItems');
+                bvCheckedComboBox.onClearCheckedComboBox('ProvinceFilter_CheckedItems');
+                bvCheckedComboBox.onClearCheckedComboBox('SelectedDistricts');
+                break;
         }
     }
 };

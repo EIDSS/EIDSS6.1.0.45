@@ -12,7 +12,7 @@ namespace eidss.model.Reports.AZ
     public class VetSummaryModel : BaseIntervalModel
     {
         private MultipleSpeciesTypeModel m_SpeciesType;
-        public const int VetMaxSpeciesTypeCount = 3;
+        public const int VetMaxSpeciesTypeCount = 6;
 //        private MultipleDiagnosisModel m_MultipleDiagnosisFilter;
 
         public VetSummaryModel()
@@ -64,14 +64,17 @@ namespace eidss.model.Reports.AZ
                 switch (SurveillanceType)
                 {
                     case VetSummarySurveillanceType.ActiveSurveillanceIndex:
-                        return FilterHelper.GetDiagnosisList(Localizer.CurrentCultureLanguageID, (int) HACode.Livestock,
-                            DiagnosisUsingTypeEnum.StandardCase);
+                        return FilterHelper.GetDiagnosisList(new FilterHelper.GetDiagnosisListParam(
+                            Localizer.CurrentCultureLanguageID, HACode.Livestock, DiagnosisUsingTypeEnum.StandardCase));
+
                     case VetSummarySurveillanceType.PassiveSurveillanceIndex:
-                        return FilterHelper.GetDiagnosisList(Localizer.CurrentCultureLanguageID, (int) (HACode.Livestock | HACode.Avian),
-                            DiagnosisUsingTypeEnum.StandardCase);
+                        return FilterHelper.GetDiagnosisList(new FilterHelper.GetDiagnosisListParam(
+                            Localizer.CurrentCultureLanguageID, HACode.LivestockAvian, DiagnosisUsingTypeEnum.StandardCase));
+
                     case VetSummarySurveillanceType.AggregateActionsIndex:
-                        return FilterHelper.GetDiagnosisList(Localizer.CurrentCultureLanguageID, (int) (HACode.Livestock | HACode.Avian),
-                            DiagnosisUsingTypeEnum.AggregatedCase);
+                        return FilterHelper.GetDiagnosisList(new FilterHelper.GetDiagnosisListParam(
+                            Localizer.CurrentCultureLanguageID, HACode.LivestockAvian, DiagnosisUsingTypeEnum.AggregatedCase));
+
                     default:
                         return new List<SelectListItemSurrogate>();
                 }

@@ -6,7 +6,7 @@ namespace eidss.model.Avr.Commands.Models
         SelectedQueryId,
         SelectedLayoutId,
         SelectedFolderId,
-        
+
         StandardReports,
         StartUpParameters,
 
@@ -14,7 +14,7 @@ namespace eidss.model.Avr.Commands.Models
 
         ExportStrategy,
         QueryRefreshDateTime,
-        
+
         UseArchiveData,
         IgnoreValidationWarnings
     }

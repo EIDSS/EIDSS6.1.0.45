@@ -133,7 +133,7 @@
     <value>Фільтрувати назви тестів за діагнозом</value>
   </data>
   <data name="lblAddNote.Text" xml:space="preserve">
-    <value>Тест доданий. Можете вводити дані іншого тісту.</value>
+    <value>Тест доданий. Можете вводити дані для іншого тесту.</value>
   </data>
   <data name="lblDateStarted.Text" xml:space="preserve">
     <value>Дата тесту</value>

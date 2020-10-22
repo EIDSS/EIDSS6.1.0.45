@@ -34,6 +34,9 @@ namespace EIDSS.Reports.Service.WcfFacade
         byte[] ExportHumUrgentyNotificationDTRA(BaseIdModel model);
 
         [OperationContract]
+        byte[] ExportHumUrgentyNotificationUkraine(BaseIdModel model);
+
+        [OperationContract]
         byte[] ExportHumUrgentyNotificationTanzania(BaseIdModel model);
 
         [OperationContract]
@@ -204,6 +207,9 @@ namespace EIDSS.Reports.Service.WcfFacade
         [OperationContract]
         byte[] ExportVeterinaryIndicators(VetIndicatorsSurrogateModel model);
 
+        [OperationContract]
+        byte[] ExportVetComparativeByMonth(VetComparativeByMonthModel model);
+
         #endregion
 
         #region TH reports
@@ -276,6 +282,16 @@ namespace EIDSS.Reports.Service.WcfFacade
 
         [OperationContract]
         byte[] ExportForm1KZReport(Form1KZSurrogateModel model);
+
+        [OperationContract]
+        byte[] ExportComparativeReportByRegionKZ(ComparativeReportByRegionKZModel model);
+
+        [OperationContract]
+        byte[] ExportHumanComparativeKZReport(ComparativeKZModel model);
+
+        [OperationContract]
+        byte[] ExportIncidenceReportByRegionKZ(IncidenceReportByRegionKZModel model);
+
         #endregion
 
         #region KZ Veterinary reports
@@ -301,11 +317,13 @@ namespace EIDSS.Reports.Service.WcfFacade
         #endregion
 
         #region Human UA Reports
-        [OperationContract]
-        byte[] ExportUAFormNo1(UAFormModel model);
 
         [OperationContract]
-        byte[] ExportUAFormNo2(UAFormModel model);
+        byte[] ExportUASpecialInfectionAndParazitaryDisease(UAFormModel model);
+
+        [OperationContract]
+        byte[] ExportUASpecialInfectionAndParazitaryDiseaseNo2(UAFormModel model);
+
         #endregion
 
         #region Lab module reports

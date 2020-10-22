@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -6,7 +7,8 @@ namespace eidss.model.Helpers
 {
     public class EidssSerializer<T> where T : class
     {
-        private static readonly XmlSerializer m_Serializer = new XmlSerializer(typeof (T));
+        private static readonly XmlSerializer m_Serializer =
+            XmlSerializer.FromTypes(new Type[] {typeof(T)})[0];
 
         static EidssSerializer()
         {

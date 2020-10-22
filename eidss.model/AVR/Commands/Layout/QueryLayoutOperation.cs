@@ -9,6 +9,6 @@ namespace eidss.model.Avr.Commands.Layout
         RefreshQuery,
 
         Publish,
-        Unpublish,
+        Unpublish
     }
 }

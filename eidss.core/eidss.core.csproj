@@ -16,7 +16,6 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,7 +25,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,7 +33,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -118,6 +115,7 @@
     <Compile Include="AVR\SourceData\ChunkByteArray.cs" />
     <Compile Include="Core\AddressHelper.cs" />
     <Compile Include="Core\Constants.cs" />
+    <Compile Include="Core\ReadableIdentifierHelper.cs" />
     <Compile Include="Core\EidssEventLog.cs" />
     <Compile Include="Core\EidssUserOptions.cs" />
     <Compile Include="Core\ForcedReplicationClient.cs" />
@@ -282,6 +280,10 @@
       <DependentUpon>EidssFields.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EidssFields.en-US-Eidss.resx">
+      <DependentUpon>EidssFields.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssFields.en-TH-Eidss.resx">
       <DependentUpon>EidssFields.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,7 +355,15 @@
       <DependentUpon>EidssMessages.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EidssMessages.en-KA-Eidss.resx">
+      <DependentUpon>EidssMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMessages.en-IQ-Eidss.resx">
+      <DependentUpon>EidssMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EidssMessages.en-US-Eidss.resx">
       <DependentUpon>EidssMessages.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>

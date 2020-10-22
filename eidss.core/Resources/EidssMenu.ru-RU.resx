@@ -894,4 +894,20 @@
   <data name="ReportFormNo.2" xml:space="preserve">
     <value>Форма № 2</value>
   </data>
+  <data name="ComparativeReportByRegionKZ" xml:space="preserve">
+    <value>Сравнительный отчет по регионам</value>
+  </data>
+  <data name="ComparativeReportKZ" xml:space="preserve">
+    <value>Сравнительный отчет</value>
+  </data>
+  <data name="HumanComparativeReportKZ" xml:space="preserve">
+    <value>Сравнительный отчёт</value>
+  </data>
+  <data name="VeterinaryComparativeByMonthReportAZ" xml:space="preserve">
+    <value>Ветеринарный Сравнительный отчёт по месяцам</value>
+  </data>
+  <data name="IncidenceReportByRegionKZ" xml:space="preserve">
+    <value>Отчет инцидентов по выбранному диагнозу в регионах</value>
+    <comment>KZ Human Report</comment>
+  </data>
 </root>

@@ -10,27 +10,43 @@
         </td>
         <td class="largereport">
             @{
-                @(Html.Kendo().DatePicker()
+                @*TODO: Chrome date problem fix - start*@
+                @*old version@(Html.Kendo().DatePicker()
                 .Name("StartDate")
                 .Value(Model.StartDate)
                 .HtmlAttributes(new {@class = "requiredField", lang = @Model.Language})
                 .Events(c => c.Change("paperForm.OnStartDateChanged"))
+                      )*@
+                @(Html.Kendo().DatePicker()
+                .Name("StartDate")
+                .Value(Model.StartDate)
+                .HtmlAttributes(new {@class = "requiredField", type = "text", lang = @Model.Language})
+                .Events(c => c.Change("paperForm.OnStartDateChanged"))
                       )
-                }
+               @*TODO: Chrome date problem fix - end*@
+             }
         </td>
         <td class="mediumreport">
             @Translator.GetString("strTo")
         </td>
         <td class="largereport">
             @{
-                @(
+                @*TODO: Chrome date problem fix - start*@
+                @*old version@(
                     Html.Kendo().DatePicker()
                         .Name("EndDate")
                         .Value(Model.EndDate)
                         .HtmlAttributes(new {@class = "requiredField", lang = @Model.Language})
                         .Events(c => c.Change("paperForm.OnEndDateChanged"))
+                      )*@
+                @(Html.Kendo().DatePicker()
+                        .Name("EndDate")
+                        .Value(Model.EndDate)
+                                .HtmlAttributes(new { @class = "requiredField", type = "text", lang = @Model.Language })
+                        .Events(c => c.Change("paperForm.OnEndDateChanged"))
                       )
-            }
+                @*TODO: Chrome date problem fix - end*@
+           }
         </td>
         
     </tr>

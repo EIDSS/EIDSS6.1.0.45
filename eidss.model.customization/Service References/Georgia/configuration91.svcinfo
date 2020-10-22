@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="CommonDataWebSoap" contract="Georgia.CommonDataWebSoap" bindingType="basicHttpBinding" address="http://ncdclogin.moh.gov.ge/Hmis/Hmis.CommonData.Web/Services/CommonDataWeb.asmx" bindingConfiguration="CommonDataWebSoap">
+    <endpoint name="CommonDataWebSoap" contract="Georgia.CommonDataWebSoap" bindingType="basicHttpBinding" address="https://ncdclogin.moh.gov.ge/Hmis/Hmis.CommonData.Web/Services/CommonDataWeb.asmx" bindingConfiguration="CommonDataWebSoap">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://ncdclogin.moh.gov.ge/Hmis/Hmis.CommonData.Web/Services/CommonDataWeb.asmx</serializedValue>
+          <serializedValue>https://ncdclogin.moh.gov.ge/Hmis/Hmis.CommonData.Web/Services/CommonDataWeb.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

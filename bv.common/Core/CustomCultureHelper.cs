@@ -80,6 +80,7 @@ namespace bv.common.Core
             AddCountry(2260000000, "UA");
             AddCountry(2250000000, "TZ");
             AddCountry(2150000000, "TH");
+            AddCountry(2340000000, "US");
         }
 
         private static void AddCountry(long countryID, string countryCode)
@@ -114,6 +115,7 @@ namespace bv.common.Core
             AddCountryName(2260000000, "Ukraine");
             AddCountryName(2250000000, "Tanzania");
             AddCountryName(2150000000, "Thailand");
+            AddCountryName(2340000000, "United States of America");
         }
 
         private static void AddCountryName(long countryID, string countryName)
@@ -153,6 +155,7 @@ namespace bv.common.Core
             AddCustomCulture("en", 2260000000);
             AddCustomCulture("en", 2250000000);
             AddCustomCulture("en", 2150000000);
+            AddCustomCulture("en", 2340000000);
         }
 
         private static void AddCustomCulture(string cultureCode, long countryID)
@@ -332,11 +335,16 @@ namespace bv.common.Core
         public static bool IsCultureRegistered(string cultureName)
         {
             bool bFound = false;
-            foreach (CultureInfo ci in CultureInfo.GetCultures(CultureTypes.UserCustomCulture))
+
+            if (!String.IsNullOrWhiteSpace(cultureName))
             {
-                if (cultureName == ci.Name)
-                    bFound = true;
+                foreach (CultureInfo ci in CultureInfo.GetCultures(CultureTypes.UserCustomCulture))
+                {
+                    if (cultureName.Equals(ci.Name, StringComparison.InvariantCultureIgnoreCase))
+                        bFound = true;
+                }
             }
+
             return bFound;
         }
 

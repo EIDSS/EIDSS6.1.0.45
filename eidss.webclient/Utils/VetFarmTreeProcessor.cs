@@ -70,6 +70,10 @@ namespace eidss.webclient.Utils
                         {
                             var root = list.FirstOrDefault(v => v.idfParentParty == null);
                             var item = VetFarmTree.Accessor.Instance(null).CreateHerd(manager, rootobj, root);
+
+                            // todo: [ivasilev] dirty fix. need investigation
+                            item.strName = String.Format("(new {0})", 1 + list.Count(x => x.idfsPartyType == (long)PartyTypeEnum.Herd && x.IsNew));
+
                             list.Add(item);
                             return item;
                         }

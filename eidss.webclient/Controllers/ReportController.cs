@@ -24,10 +24,6 @@ using eidss.webclient.Models.Reports;
 using eidss.webclient.Utils;
 using EIDSS.Reports.Parameterized.Human.GG.Report;
 using eidss.model.Reports.UA;
-using System.Text;
-using EIDSS.Reports.BaseControls.Filters;
-using System.Data;
-using bv.common.db.Core;
 
 namespace eidss.webclient.Controllers
 {
@@ -379,7 +375,7 @@ namespace eidss.webclient.Controllers
             ViewBag.GetReportActionName = "ShowHumSummaryByRayonDiagnosisAgeGroups";
             ViewBag.Title = EidssMenu.Instance.GetString("HumSummaryByRayonDiagnosisAgeGroups");
             ViewBag.MaxCheckedCount = SummaryByRayonDiagnosisModel.HumMaxDiagnosisCount;
-            return View("AZ/SummaryByRayonDiagnosis", new SummaryByRayonDiagnosisModel(null) { CanWorkWithArchive = true });
+            return View("AZ/SummaryByRayonDiagnosis", new SummaryByRayonDiagnosisModel(null));
         }
 
         public ActionResult ShowHumSummaryByRayonDiagnosisAgeGroups(SummaryByRayonDiagnosisModel model)
@@ -624,8 +620,31 @@ namespace eidss.webclient.Controllers
                 if (cnt.Length > TuberculosisSurrogateModel.MaxYearsCount)
                 {
                     messageText = string.Format(BvMessages.Get("msgTooManyYears"), TuberculosisSurrogateModel.MaxYearsCount);
+                    isSuccessValue = false;
                 }
             }
+            else if (reportName == "THReportWithDiagAndDistrict")
+            {
+                var selectedDiag = collection["Diagnoses_CheckedItems"];
+                var cntDiag = selectedDiag.Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                if (cntDiag.Length > NumberOfCasesDeathsMonthTHModel.MaxNumberOfDiagnosis)
+                {
+                    messageText = string.Format(EidssMessages.Get("msgTooManyDiagnosisThaiReports"), NumberOfCasesDeathsMonthTHModel.MaxNumberOfDiagnosis);
+                    isSuccessValue = false;
+                }
+                else
+                {
+                    var selectedDistr = collection["SelectedDistricts"];
+                    var cntDistr = selectedDistr.Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                    if (cntDistr.Length > NumberOfCasesDeathsMonthTHModel.MaxNumberOfDistrict)
+                    {
+                        messageText = string.Format(EidssMessages.Get("msgTooManyDistrictsThaiReports"), NumberOfCasesDeathsMonthTHModel.MaxNumberOfDistrict);
+                        isSuccessValue = false;
+                    }
+
+                }
+            }
+
             if (!ValidateArchiveDataUsing(collection))
             {
                 var useArciveWarning = BvMessages.Get("msgDataInArchive");
@@ -1076,14 +1095,22 @@ namespace eidss.webclient.Controllers
         public JsonResult GetVetSummarySpecies(VetSummaryModel model)
         {
             HACode accessory = HACode.None;
-            using (var manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
-            {
-                var d = DiagnosisLookup.Accessor.Instance(null).SelectLookupList(manager)
-                    .FirstOrDefault(c => c.idfsDiagnosis == model.DiagnosisId);
 
-                if (d != null)
+            if (model.DiagnosisId == -1 && model.DiagnosisName == null)
+            {
+                accessory = HACode.All;
+            }
+            else
+            {
+                using (var manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
                 {
-                    accessory = (HACode)(d.intHACode??0);
+                    var d = DiagnosisLookup.Accessor.Instance(null).SelectLookupList(manager)
+                        .FirstOrDefault(c => c.idfsDiagnosis == model.DiagnosisId);
+
+                    if (d != null)
+                    {
+                        accessory = (HACode)(d.intHACode ?? 0);
+                    }
                 }
             }
 
@@ -1091,7 +1118,7 @@ namespace eidss.webclient.Controllers
             {
                 Data = new
                 {
-                    data = FilterHelper.GetSpeciesTypes(accessory),
+                    data = FilterHelper.GetSpeciesTypes(new FilterHelper.GetSpeciesTypesParam(accessory, false)),
                 },
                 JsonRequestBehavior = JsonRequestBehavior.AllowGet
             };
@@ -1125,6 +1152,41 @@ namespace eidss.webclient.Controllers
                         model.ExportFormatEnum.ToString(), model.IsOpenInNewWindow);
                 }
 
+            }
+
+            return PrepareReportResult(resultParameters);
+        }
+
+        public ActionResult VeterinaryComparativeByMonthReportAZ()
+        {
+            ViewBag.GetReportActionName = "ShowVetComparativeByMonthAZ";
+            ViewBag.Title = EidssMenu.Instance.GetString("VeterinaryComparativeByMonthReportAZ");
+            var model = new VetComparativeByMonthWebModel(FilterHelper.GetDefaultRegion(), FilterHelper.GetDefaultRayon())
+            {
+                CanWorkWithArchive = false,
+            };
+            
+            return View("AZ/VeterinaryComparativeByMonthReportAZ", model);
+        }
+
+        public ActionResult ShowVetComparativeByMonthAZ(VetComparativeByMonthWebModel model)
+        {
+            if (Localizer.CurrentCultureLanguageID != model.Language)
+            {
+                model.TranslateSelectedDiagnosisAndSpeciesTypes();
+            }
+
+            ReportResultParameters resultParameters = null;
+            using (var wrapper = new ReportClientWrapper())
+            {
+                using (model.CreateCurrentCultureInfoTransaction())
+                {
+                    model.InitContextProperties();
+
+                    byte[] report = wrapper.Client.ExportVetComparativeByMonth((VetComparativeByMonthModel)model);
+                    resultParameters = new ReportResultParameters(report, "Vet_Comparative_by_month",
+                        model.ExportFormatEnum.ToString(), model.IsOpenInNewWindow);
+                }
             }
 
             return PrepareReportResult(resultParameters);
@@ -1293,36 +1355,73 @@ namespace eidss.webclient.Controllers
             ViewBag.GetReportActionName = "ShowHumReportedCasesDeathsByProvinceMonthTH";
             ViewBag.Title = EidssMenu.Instance.GetString("HumReportedCasesDeathsByProvinceMonthTH");
 
-            var model = new NumberOfCasesDeathsMonthTHModel { Diagnoses = { AddSelectAllItem = true } };
+            var model = new NumberOfCasesDeathsMonthTHWebModel
+            {
+                Language = ModelUserContext.CurrentLanguage,
+                Diagnoses = { AddSelectAllItem = true }
+            };
 
+            model.LoadProvinceDistrictTree();
+            ObjectStorage.Put(ModelUserContext.ClientID, model.Key, model.Key, null, model);
             return View("TH/ReportedCasesDeathsByProvinceMonth", model);
         }
 
-        public ActionResult ShowHumReportedCasesDeathsByProvinceMonthTH(NumberOfCasesDeathsMonthTHModel model)
+        public ActionResult ThReport_SelectDistrictOrProvince(long id, string keyname, string valuename)
+        {
+            return ObjectStorage.Using<NumberOfCasesDeathsMonthTHWebModel, ActionResult>(o =>
+                ProvinceDistrictTreeLookup2Json(o.ProvinceDistrictTreeLookup, null, keyname, valuename),
+                ModelUserContext.ClientID, id, null);
+        }
+
+        private JsonResult ProvinceDistrictTreeLookup2Json(List<ThaiProvinceDistrictTreeLookup> list, List<long> checkedValues, string keyname, string valuename)
+        {
+            return Json(list/*.Where(c => c.idfsProvinceOrDistrict != 0)*/.Select(c => new
+            {
+                Value = c.GetValue(keyname),
+                Text = c.GetValue(valuename),
+                IsChecked = checkedValues != null && checkedValues.Contains(c.idfsProvinceOrDistrict),
+                group =
+                    c.blnGroup.HasValue && c.blnGroup.Value
+                        ? ""
+                        : (c.idfsRegion.HasValue && c.idfsRegion.Value != 0 ? c.idfsRegion.Value.ToString() : ""),
+                classname =
+                c.idfsProvinceOrDistrict != 0 ? (
+                    c.blnGroup.HasValue && c.blnGroup.Value
+                        ? "clsGroup"//class for group
+                        : (c.idfsRegion.HasValue && c.idfsRegion.Value > 0 ?
+                                "clsItemInGroup" : //class for item included to group
+                                "clsItemAsGroup")) ://class for item not included to group
+                        ""//class for Select all item
+            }), JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult ShowHumReportedCasesDeathsByProvinceMonthTH(NumberOfCasesDeathsMonthTHWebModel model)
         {
             ReportResultParameters resultParameters;
             using (var wrapper = new ReportClientWrapper())
             {
                 try
                 {
+                    NumberOfCasesDeathsMonthTHModel surrogateModel;
                     using (model.CreateCurrentCultureInfoTransaction())
                     {
                         model.InitContextProperties();
-
                         SetCheckedItems(model.Diagnoses_CheckedItems, model.Diagnoses);
                         SetCheckedItems(model.ZoneFilter_CheckedItems, model.Zones);
                         SetCheckedItems(model.RegionFilter_CheckedItems, model.Regions);
                         SetCheckedItems(model.ProvinceFilter_CheckedItems, model.Provinces);
-                        SetCheckedItems(model.DistrictFilter_CheckedItems, model.Districts);
-
+                        //SetCheckedItems(model.ProvinceDistrictTreeFilter_CheckedItems, model.Districts);
                         if (model.Language == Localizer.lngThai)
                         {
                             model.Year = ThaiCalendarHelper.ThaiYearToGregorian(model.Year);
                         }
+                        surrogateModel = model.ConvertToBaseModel();
+                        // todo: [ivan] change 
+                        surrogateModel.ReportModeIndex++;
                     }
-                    byte[] report = wrapper.Client.ExportHumNumberOfCasesDeathsMonthTH(model);
-                    resultParameters = new ReportResultParameters(report, "Reported_cases_and_deaths_by_Province_and_by_Month",
-                        model.ExportFormatEnum.ToString(), model.IsOpenInNewWindow);
+                    byte[] report = wrapper.Client.ExportHumNumberOfCasesDeathsMonthTH(surrogateModel);
+                    resultParameters = new ReportResultParameters(report, "Reported_cases_and_deaths_by_Province_District_SubDistrict_and_by_Month",
+                            model.ExportFormatEnum.ToString(), model.IsOpenInNewWindow);
                 }
                 catch (Exception ex)
                 {
@@ -1393,6 +1492,7 @@ namespace eidss.webclient.Controllers
 
             return PrepareReportResult(resultParameters);
         }
+
         public ActionResult OnePageSituationTH()
         {
             ViewBag.GetReportActionName = "ShowOnePageSituationTH";
@@ -1951,6 +2051,7 @@ namespace eidss.webclient.Controllers
             }
             return PrepareReportResult(resultParameters);
         }
+
         public ActionResult HumComparativeGGReport()
         {
             ViewBag.GetReportActionName = "ShowHumComparativeGGReport";
@@ -1978,6 +2079,7 @@ namespace eidss.webclient.Controllers
 
             return PrepareReportResult(resultParameters);
         }
+
         public ActionResult HumComparativeSeveralYearsGGReport()
         {
             ViewBag.GetReportActionName = "ShowHumComparativeSeveralYearsGGReport";
@@ -2006,6 +2108,7 @@ namespace eidss.webclient.Controllers
 
             return PrepareReportResult(resultParameters);
         }
+
         public ActionResult ComparativeGGSeveralYears_SelectDiagOrGroup(long id, string keyname, string valuename)
         {
             return ObjectStorage.Using<ComparativeGGSeveralYearsModel, ActionResult>(o =>
@@ -2349,28 +2452,6 @@ namespace eidss.webclient.Controllers
 
         #region KZ Human Reports
 
-        public ActionResult HumInfectiousParasiticKZ()
-        {
-            ViewBag.GetReportActionName = "ShowHumInfectiousParasiticKZ";
-            ViewBag.Title = EidssMenu.Instance.GetString("HumInfectiousParasiticKZ");
-            var model = new InfectiousParasiticKZModel(FilterHelper.GetDefaultRegion(), FilterHelper.GetDefaultRayon());
-            return View("KZ/HumInfectiousParasiticKZ", model);
-        }
-
-        public ActionResult ShowHumInfectiousParasiticKZ(InfectiousParasiticKZModel model)
-        {
-            ReportResultParameters resultParameters;
-            using (var wrapper = new ReportClientWrapper())
-            {
-                model.InitContextProperties();
-                byte[] report = wrapper.Client.ExportInfectiousParasiticKZReport((InfectiousParasiticKZSurrogateModel)model);
-                resultParameters = new ReportResultParameters(report, "Human_Form_No_2",
-                    model.ExportFormatEnum.ToString(), model.IsOpenInNewWindow);
-            }
-
-            return PrepareReportResult(resultParameters);
-        }
-
         public ActionResult HumForm1KZ()
         {
             ViewBag.GetReportActionName = "ShowHumForm1KZ";
@@ -2392,6 +2473,82 @@ namespace eidss.webclient.Controllers
 
             return PrepareReportResult(resultParameters);
         }
+
+        public ActionResult HumanComparativeReportKZ()
+        {
+            ViewBag.GetReportActionName = "ShowComparativeKZReport";
+            ViewBag.Title = EidssMenu.Instance.GetString("ComparativeReportKZ");
+
+            var model = new HumanComparativeKZReportModel(FilterHelper.GetDefaultRegion(), FilterHelper.GetDefaultRayon());
+            model.IsOpenInNewWindow = true;
+            
+            return View("KZ/HumanComparativeReportKZ", model);
+        }
+
+        public ActionResult ShowComparativeKZReport(HumanComparativeKZReportModel model)
+        {
+            ReportResultParameters resultParameters = null;
+
+            using (var wrapper = new ReportClientWrapper())
+            {
+                ComparativeKZModel wcfModel = (ComparativeKZModel)model;
+                byte[] report = wrapper.Client.ExportHumanComparativeKZReport(wcfModel);
+                resultParameters = new ReportResultParameters(report, wcfModel.GenerateName(),
+                    model.ExportFormatEnum.ToString(), model.IsOpenInNewWindow);
+            }
+
+            return PrepareReportResult(resultParameters);
+        }
+
+        public ActionResult ComparativeReportByRegionKZ()
+        {
+            ViewBag.GetReportActionName = "ShowComparativeReportByRegionKZ";
+            ViewBag.Title = EidssMenu.Instance.GetString("ComparativeReportByRegionKZ");
+
+            var model = new ComparativeReportByRegionKZWebModel(FilterHelper.GetDefaultRegion(), FilterHelper.GetDefaultRayon());
+            model.LoadDiagnosesList();
+
+            return View("KZ/ComparativeReportByRegionKZ", model);
+        }
+
+        public ActionResult ShowComparativeReportByRegionKZ(ComparativeReportByRegionKZWebModel model)
+        {
+            ReportResultParameters resultParameters = null;
+            using (var wrapper = new ReportClientWrapper())
+            {
+                model.InitContextProperties();
+                byte[] report = wrapper.Client.ExportComparativeReportByRegionKZ((ComparativeReportByRegionKZModel)model);
+                resultParameters = new ReportResultParameters(report, "Comparative_Report_by_region",
+                    model.ExportFormatEnum.ToString(), model.IsOpenInNewWindow);
+            }
+            return PrepareReportResult(resultParameters);
+        }
+
+        public ActionResult IncidenceReportByRegionKZ()
+        {
+            ViewBag.GetReportActionName = "ShowIncidenceReportByRegionKZ";
+            ViewBag.Title = EidssMenu.Instance.GetString("IncidenceReportByRegionKZ");
+
+            var model = new IncidenceReportByRegionKZWebModel(FilterHelper.GetDefaultRegion(), FilterHelper.GetDefaultRayon());
+            model.LoadDiagnosesList();
+
+            return View("KZ/IncidenceReportByRegionKZ", model);
+        }
+
+        public ActionResult ShowIncidenceReportByRegionKZ(IncidenceReportByRegionKZWebModel model)
+        {
+            ReportResultParameters resultParameters = null;
+            using (var wrapper = new ReportClientWrapper())
+            {
+                model.InitContextProperties();
+                byte[] report = wrapper.Client.ExportIncidenceReportByRegionKZ((IncidenceReportByRegionKZModel) model);
+                resultParameters = new ReportResultParameters(report, "Incidence_Report_by_region",
+                    model.ExportFormatEnum.ToString(), model.IsOpenInNewWindow);
+            }
+
+            return PrepareReportResult(resultParameters);
+        }
+
         #endregion
 
         #region GG Vet Reports
@@ -2468,7 +2625,8 @@ namespace eidss.webclient.Controllers
         #endregion
 
         #region UA Human Reports
-        public ActionResult FormNo1()
+
+        public ActionResult SpecialInfectionAndParazitaryDiseaseReport()
         {
             ViewBag.GetReportActionName = "ShowUAFormNo1";
             ViewBag.Title = EidssMenu.Instance.GetString("ReportFormNo.1");
@@ -2477,10 +2635,17 @@ namespace eidss.webclient.Controllers
                 CanWorkWithArchive = true,
                 Language = ModelUserContext.CurrentLanguage
             };
-            return View("UA/FormNo1", model);
+
+            return View("UA/SpecialInfectionAndParazitaryDiseaseReport", model);
         }
 
-        public ActionResult FormNo2()
+        public ActionResult ShowUAFormNo1(UAFormModel model)
+        {
+            return PrepareReportResult(ProcessUAFormModel(model,
+                "FormNo1", UAFormReports.FormNo1));
+        }
+
+        public ActionResult SpecialInfectionAndParazitaryDiseaseReportNo2()
         {
             ViewBag.GetReportActionName = "ShowUAFormNo2";
             ViewBag.Title = EidssMenu.Instance.GetString("ReportFormNo.2");
@@ -2489,46 +2654,58 @@ namespace eidss.webclient.Controllers
                 CanWorkWithArchive = true,
                 Language = ModelUserContext.CurrentLanguage
             };
-            return View("UA/FormNo2", model);
-        }
 
-        public ActionResult ShowUAFormNo1(UAFormModel model)
-        {
-            ReportResultParameters resultParameters;
-            using (var wrapper = new ReportClientWrapper())
-            {
-                using (model.CreateCurrentCultureInfoTransaction())
-                {
-                    model.RegionId = model.Address.RegionId;
-                    model.InitContextProperties();
-                    model.Address.ResetAddressLookup();
-                }
-                byte[] report = wrapper.Client.ExportUAFormNo1(model);
-                resultParameters = new ReportResultParameters(report, "UA_Form_No_1",
-                    model.ExportFormatEnum.ToString(), model.IsOpenInNewWindow);
-            }
-
-            return PrepareReportResult(resultParameters);
+            return View("UA/SpecialInfectionAndParazitaryDiseaseReportNo2", model);
         }
 
         public ActionResult ShowUAFormNo2(UAFormModel model)
         {
+            return PrepareReportResult(ProcessUAFormModel(model,
+                "FormNo2", UAFormReports.FormNo2));
+        }
+
+        private static ReportResultParameters ProcessUAFormModel(UAFormModel model, string outputReportFileName, UAFormReports reportType)
+        {
             ReportResultParameters resultParameters;
+
             using (var wrapper = new ReportClientWrapper())
             {
                 using (model.CreateCurrentCultureInfoTransaction())
                 {
-                    model.RegionId = model.Address.RegionId;
                     model.InitContextProperties();
                     model.Address.ResetAddressLookup();
                 }
-                byte[] report = wrapper.Client.ExportUAFormNo2(model);
-                resultParameters = new ReportResultParameters(report, "UA_Form_No_2",
+
+                byte[] report;
+
+                switch (reportType)
+                {
+                    case UAFormReports.FormNo1:
+                        report = wrapper.Client.ExportUASpecialInfectionAndParazitaryDisease(model);
+                        break;
+
+                    case UAFormReports.FormNo2:
+                        report = wrapper.Client.ExportUASpecialInfectionAndParazitaryDiseaseNo2(model);
+                        break;
+
+                    default:
+                        throw new ArgumentException("Error! Wrong UAFormReports value.");
+                }
+
+                string fileName = outputReportFileName + '_' + model.GenerateName();
+
+                resultParameters = new ReportResultParameters(report, fileName,
                     model.ExportFormatEnum.ToString(), model.IsOpenInNewWindow);
             }
 
-            return PrepareReportResult(resultParameters);
+            return resultParameters;
         }
+
+        internal enum UAFormReports
+        {
+            FormNo1, FormNo2
+        }
+
         #endregion
 
         #region Common Administrative Reports

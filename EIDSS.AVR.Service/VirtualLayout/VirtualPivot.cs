@@ -83,7 +83,6 @@ namespace eidss.avr.service.VirtualLayout
             var receiver = new AvrCacheReceiver(new AVRFacade(m_Container));
             var validatorWaiter = new LayoutSilentValidatorWaiter();
             CachedQueryResult result = receiver.GetCachedQueryTable(queryId, lang, isArchive, filter, validatorWaiter);
-            // todo: [ivan] check validator if needed
             return result;
         }
 
@@ -113,6 +112,9 @@ namespace eidss.avr.service.VirtualLayout
             var filter = layoutRow.blnApplyPivotGridFilter ? layoutRow.strPivotGridSettings : string.Empty;
             var queryResult = AvrMainFormPresenter.ExecQueryInternal(layoutRow.idflQuery, lang,
                 layoutRow.blnUseArchivedData, filter, validatorWaiter, false, QueryExecutor);
+
+            //var queryResult = AvrMainFormPresenter.ExecQueryInternal(layoutRow.idflQuery, lang,
+            //    layoutRow.blnUseArchivedData, layoutRow.strPivotGridSettings, validatorWaiter, false, QueryExecutor);
 
             m_Trace.Trace(TraceTitle, string.Format("Data for layout {0} received from AVR Cashe ", layoutId));
 

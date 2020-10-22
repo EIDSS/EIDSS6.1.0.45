@@ -8,7 +8,7 @@ namespace bv.winclient.Core
 {
     public class Help2
     {
-        public const string HomePage = "system_requirements_and_set-up";
+        public const string HomePage = "";
         public static void ShowHelp(Control parent, string url)
         {
             if (url.StartsWith("http"))
@@ -26,6 +26,12 @@ namespace bv.winclient.Core
         }
         public static void ShowHelp(Control parent, string url, string keyword)
         {
+            if (String.IsNullOrWhiteSpace(keyword))
+            {
+                ShowHelp(parent, url);
+                return;
+            }
+
             if (url.StartsWith("http"))
             {
                 url = url + "index.html?" + keyword + ".htm";

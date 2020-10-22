@@ -75,7 +75,6 @@
     <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\Release\</OutputPath>
@@ -91,7 +90,6 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -276,40 +274,142 @@
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Paper Forms\ar\General Case Investigation Form.pdf" />
-    <None Include="Paper Forms\ar\Investigation Form For Avian Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\ar\Investigation Form For Livestock Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\az-L\General Case Investigation Form.pdf" />
-    <None Include="Paper Forms\az-L\Investigation Form For Avian Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\az-L\Investigation Form For Livestock Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\En\General Case Investigation Form IQ.pdf" />
-    <None Include="Paper Forms\En\General Case Investigation Form.pdf" />
-    <None Include="Paper Forms\En\Investigation Form For Avian Disease Outbreaks GG.pdf" />
-    <None Include="Paper Forms\En\Investigation Form For Avian Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\En\Investigation Form For Livestock Disease Outbreaks GG.pdf" />
-    <None Include="Paper Forms\En\Investigation Form For Livestock Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\En\Urgent Notification Ukraine EN Blank.pdf" />
-    <None Include="Paper Forms\En\Urgent Notification Ukraine.pdf" />
-    <None Include="Paper Forms\hy\General Case Investigation Form.pdf" />
-    <None Include="Paper Forms\hy\Investigation Form For Avian Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\hy\Investigation Form For Livestock Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\ka\General Case Investigation Form.pdf" />
-    <None Include="Paper Forms\ka\Investigation Form For Avian Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\ka\Investigation Form For Livestock Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\ka\Old Form\Investigation Form For Avian Disease Outbreaks Old.pdf" />
-    <None Include="Paper Forms\kk\General Case Investigation Form.pdf" />
-    <None Include="Paper Forms\kk\Investigation Form For Avian Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\kk\Investigation Form For Livestock Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\RU\General Case Investigation Form.pdf" />
-    <None Include="Paper Forms\RU\Investigation Form For Avian Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\RU\Investigation Form For Livestock Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\th\General Case Investigation Form.pdf" />
-    <None Include="Paper Forms\th\Investigation Form For Avian Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\th\Investigation Form For Livestock Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\uk\General Case Investigation Form.pdf" />
-    <None Include="Paper Forms\uk\Investigation Form For Avian Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\uk\Investigation Form For Livestock Disease Outbreaks.pdf" />
-    <None Include="Paper Forms\uk\Urgent Notification Ukraine UA.pdf" />
+    <None Include="..\Paper Forms\ar\General Case Investigation Form.pdf">
+      <Link>Paper Forms\ar\General Case Investigation Form.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\ar\Investigation Form For Avian Disease Outbreaks.pdf">
+      <Link>Paper Forms\ar\Investigation Form For Avian Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\ar\Investigation Form For Livestock Disease Outbreaks.pdf">
+      <Link>Paper Forms\ar\Investigation Form For Livestock Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\az-L\General Case Investigation Form.pdf">
+      <Link>Paper Forms\az-L\General Case Investigation Form.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\az-L\Investigation Form For Avian Disease Outbreaks.pdf">
+      <Link>Paper Forms\az-L\Investigation Form For Avian Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\az-L\Investigation Form For Livestock Disease Outbreaks.pdf">
+      <Link>Paper Forms\az-L\Investigation Form For Livestock Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\En\General Case Investigation Form IQ.pdf">
+      <Link>Paper Forms\En\General Case Investigation Form IQ.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\En\General Case Investigation Form.pdf">
+      <Link>Paper Forms\En\General Case Investigation Form.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\En\Investigation Form For Avian Disease Outbreaks.pdf">
+      <Link>Paper Forms\En\Investigation Form For Avian Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\En\Investigation Form For Livestock Disease Outbreaks.pdf">
+      <Link>Paper Forms\En\Investigation Form For Livestock Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\En\Investigation Form For Avian Disease Outbreaks GG.pdf">
+      <Link>Paper Forms\En\Investigation Form For Avian Disease Outbreaks GG.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\En\Investigation Form For Livestock Disease Outbreaks GG.pdf">
+      <Link>Paper Forms\En\Investigation Form For Livestock Disease Outbreaks GG.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\En\Urgent Notification Ukraine EN.pdf">
+      <Link>Paper Forms\En\Urgent Notification Ukraine EN.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\hy\General Case Investigation Form.pdf">
+      <Link>Paper Forms\hy\General Case Investigation Form.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\hy\Investigation Form For Avian Disease Outbreaks.pdf">
+      <Link>Paper Forms\hy\Investigation Form For Avian Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\hy\Investigation Form For Livestock Disease Outbreaks.pdf">
+      <Link>Paper Forms\hy\Investigation Form For Livestock Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\ka\General Case Investigation Form.pdf">
+      <Link>Paper Forms\ka\General Case Investigation Form.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\ka\Investigation Form For Avian Disease Outbreaks.pdf">
+      <Link>Paper Forms\ka\Investigation Form For Avian Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\ka\Investigation Form For Livestock Disease Outbreaks.pdf">
+      <Link>Paper Forms\ka\Investigation Form For Livestock Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\ka\Investigation Form For Avian Disease Outbreaks GG.pdf">
+      <Link>Paper Forms\ka\Investigation Form For Avian Disease Outbreaks GG.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\ka\Investigation Form For Livestock Disease Outbreaks GG.pdf">
+      <Link>Paper Forms\ka\Investigation Form For Livestock Disease Outbreaks GG.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\kk\General Case Investigation Form.pdf">
+      <Link>Paper Forms\kk\General Case Investigation Form.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\kk\Investigation Form For Avian Disease Outbreaks.pdf">
+      <Link>Paper Forms\kk\Investigation Form For Avian Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\kk\Investigation Form For Livestock Disease Outbreaks.pdf">
+      <Link>Paper Forms\kk\Investigation Form For Livestock Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\RU\General Case Investigation Form.pdf">
+      <Link>Paper Forms\RU\General Case Investigation Form.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\RU\Investigation Form For Avian Disease Outbreaks.pdf">
+      <Link>Paper Forms\RU\Investigation Form For Avian Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\RU\Investigation Form For Livestock Disease Outbreaks.pdf">
+      <Link>Paper Forms\RU\Investigation Form For Livestock Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\th\General Case Investigation Form.pdf">
+      <Link>Paper Forms\th\General Case Investigation Form.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\th\Investigation Form For Avian Disease Outbreaks.pdf">
+      <Link>Paper Forms\th\Investigation Form For Avian Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\th\Investigation Form For Livestock Disease Outbreaks.pdf">
+      <Link>Paper Forms\th\Investigation Form For Livestock Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\uk\General Case Investigation Form.pdf">
+      <Link>Paper Forms\uk\General Case Investigation Form.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\uk\Investigation Form For Avian Disease Outbreaks.pdf">
+      <Link>Paper Forms\uk\Investigation Form For Avian Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\uk\Investigation Form For Livestock Disease Outbreaks.pdf">
+      <Link>Paper Forms\uk\Investigation Form For Livestock Disease Outbreaks.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Paper Forms\uk\Urgent Notification Ukraine UA.pdf">
+      <Link>Paper Forms\uk\Urgent Notification Ukraine UA.pdf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -463,7 +563,9 @@
     </PropertyGroup>
     <RemoveDir Directories="$(_targetESRI)" />
     <MakeDir Directories="$(_targetESRI)" />
-    <Copy SourceFiles="@(_esri)" DestinationFiles="@(_esri->'$(_targetESRI)%(RecursiveDir)%(Filename)%(Extension)')">
+    <Copy
+      SourceFiles="@(_esri)"
+      DestinationFiles="@(_esri->'$(_targetESRI)%(RecursiveDir)%(Filename)%(Extension)')">
       <Output TaskParameter="CopiedFiles" ItemName="FileWrites" />
     </Copy>
   </Target>

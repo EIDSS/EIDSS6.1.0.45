@@ -33,7 +33,8 @@ namespace eidss.model.Reports.Common
 
         public override List<SelectListItemSurrogate> LoadItemList()
         {
-            return FilterHelper.GetDiagnosisList(Localizer.CurrentCultureLanguageID, HascCode, UsingType, false, AddSelectAllItem);
+            return FilterHelper.GetDiagnosisList(new FilterHelper.GetDiagnosisListParam(
+                Localizer.CurrentCultureLanguageID, (HACode)HascCode, UsingType, false, AddSelectAllItem));
         }
     }
 }

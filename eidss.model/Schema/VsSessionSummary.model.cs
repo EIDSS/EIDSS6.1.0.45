@@ -55,8 +55,8 @@ namespace eidss.model.Schema
         public abstract String strVSSessionSummaryID { get; set; }
         protected String strVSSessionSummaryID_Original { get { return ((EditableValue<String>)((dynamic)this)._strVSSessionSummaryID).OriginalValue; } }
         protected String strVSSessionSummaryID_Previous { get { return ((EditableValue<String>)((dynamic)this)._strVSSessionSummaryID).PreviousValue; } }
-                
-        [LocalizedDisplayName("AsSessionCase.strGeoLocation")]
+
+        [LocalizedDisplayName(_str_idfGeoLocation)]
         [MapField(_str_idfGeoLocation)]
         public abstract Int64 idfGeoLocation { get; set; }
         protected Int64 idfGeoLocation_Original { get { return ((EditableValue<Int64>)((dynamic)this)._idfGeoLocation).OriginalValue; } }
@@ -545,8 +545,8 @@ namespace eidss.model.Schema
             }
         }
         protected EditableList<VsSessionSummaryDiagnosis> _DiagnosisList = new EditableList<VsSessionSummaryDiagnosis>();
-                    
-        [LocalizedDisplayName(_str_Location)]
+
+        [LocalizedDisplayName("LocationDisplayName")]
         [Relation(typeof(GeoLocation), eidss.model.Schema.GeoLocation._str_idfGeoLocation, _str_idfGeoLocation)]
         public GeoLocation Location
         {

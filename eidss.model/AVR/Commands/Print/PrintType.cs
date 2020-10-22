@@ -4,7 +4,6 @@ namespace eidss.model.Avr.Commands.Print
     {
         Chart,
         View,
-        Map,
-        
+        Map
     }
 }

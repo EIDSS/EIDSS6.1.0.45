@@ -1678,7 +1678,7 @@
     <value>Вік</value>
   </data>
   <data name="AntimicrobialTherapy" xml:space="preserve">
-    <value>Антибіотик</value>
+    <value>Препарат</value>
   </data>
   <data name="btAddContact" xml:space="preserve">
     <value>Додати контакт</value>
@@ -1801,7 +1801,7 @@
     <value>Досліджено</value>
   </data>
   <data name="titleInvestigation" xml:space="preserve">
-    <value>Розслідування</value>
+    <value>Епід.розслідування</value>
   </data>
   <data name="titleLocation" xml:space="preserve">
     <value>Місцезнаходження</value>
@@ -1831,7 +1831,7 @@
     <value>Агреговані дані про захворювання тварин</value>
   </data>
   <data name="titleAntibiotic" xml:space="preserve">
-    <value>Антибіотик</value>
+    <value>Препарат</value>
   </data>
   <data name="titleGeoLocation" xml:space="preserve">
     <value>Деталі ймовірного місця зараження</value>
@@ -3826,7 +3826,7 @@
     <value>Група проб прийнята. Можете вводити дані іншої групи.</value>
   </data>
   <data name="msgTestAdded" xml:space="preserve">
-    <value>Тест доданий. Можете вводити дані іншого тісту.</value>
+    <value>Тест доданий. Можете вводити дані для іншого тесту.</value>
   </data>
   <data name="bssMaskMonthsOnly" xml:space="preserve">
     <value>{0} (місяців)</value>
@@ -4492,7 +4492,7 @@
     <value>Звіт про спалах</value>
   </data>
   <data name="titleHumanAggregateCasesSummaryReport" xml:space="preserve">
-    <value>Сумарний звіт про агреговані випадки захворювання людини</value>
+    <value>Сумарний звіт про агреговані дані про захворювання людини</value>
   </data>
   <data name="titleVetAggregateCasesSummaryReport" xml:space="preserve">
     <value>Сумарний звіт про агреговані випадки захворювання тварин</value>

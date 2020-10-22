@@ -26,7 +26,8 @@
     <script src="@Url.Content(String.Format("~/Scripts/Kendo/min/cultures/kendo.culture.{0}.min.js", Cultures.GetCulture(ModelUserContext.CurrentLanguage)))" type="text/javascript"></script>
     <script src="@Url.Action("MessagesScript", "Account", new { version = Extenders.VersionCode() })"></script>
     <!-- Common -->
-    @Scripts.Render("~/bundles/system")
+
+    @Extenders.RenderEidss("~/bundles/system")
     @Extenders.RenderEidss("~/bundles/EIDSS")
 
 

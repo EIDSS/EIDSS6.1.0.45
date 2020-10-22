@@ -5,6 +5,7 @@ using eidss.model.Avr.Commands.Export;
 namespace eidss.avr.db.Common.CommandProcessing.Commands.Export
 {
     public delegate void ExportDelegate(string filename);
+
     public delegate void ExportDataTableDelegate(string filename, DataTable dataSource);
 
     public class ExportCommand : Command
