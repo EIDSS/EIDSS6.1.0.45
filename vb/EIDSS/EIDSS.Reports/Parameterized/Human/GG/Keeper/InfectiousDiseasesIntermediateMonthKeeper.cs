@@ -80,12 +80,18 @@ namespace EIDSS.Reports.Parameterized.Human.GG.Keeper
         }
         private void dtStart_EditValueChanging(object sender, ChangingEventArgs e)
         {
-            e.Cancel = !(e.NewValue is DateTime) || CorrectRange((DateTime)e.NewValue, EndDateTruncated);
+            if (!ContextKeeper.ContainsContext(ContextValue.ReportKeeperFirstLoading))
+            {
+                e.Cancel = !(e.NewValue is DateTime) || CorrectRange((DateTime) e.NewValue, EndDateTruncated);
+            }
         }
 
         private void dtEnd_EditValueChanging(object sender, ChangingEventArgs e)
         {
-            e.Cancel = !(e.NewValue is DateTime) || CorrectRange(StartDateTruncated, (DateTime)e.NewValue);
+            if (!ContextKeeper.ContainsContext(ContextValue.ReportKeeperFirstLoading))
+            {
+                e.Cancel = !(e.NewValue is DateTime) || CorrectRange(StartDateTruncated, (DateTime) e.NewValue);
+            }
         }
 
         private bool CorrectRange(DateTime startDate, DateTime endDate)

@@ -45,7 +45,7 @@ namespace eidss.avr.db.CacheReceiver
 
         #region Exec Query
 
-        public static CachedQueryResult ExecQuery(long queryId, bool isArchive, bool forExport = false)
+        public static CachedQueryResult ExecQuery(long queryId, bool isArchive, string filter, bool forExport = false)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace eidss.avr.db.CacheReceiver
                 {
                     CallAvrServiceToForceLOHMemoryAllocations();
 
-                    result = GetAvrServiceQueryResult(queryId, isArchive);
+                    result = GetAvrServiceQueryResult(queryId, isArchive, filter);
 
                     result.QueryTable.TableName = QueryProcessor.GetQueryName(queryId);
                     QueryProcessor.SetCopyPropertyForColumnsIfNeeded(result.QueryTable);
@@ -98,14 +98,14 @@ namespace eidss.avr.db.CacheReceiver
 
         #region Avr Service wrappers
 
-        public static CachedQueryResult GetAvrServiceQueryResult(long queryId, bool isArchive, long queryCacheId = -1)
+        public static CachedQueryResult GetAvrServiceQueryResult(long queryId, bool isArchive, string filter, long queryCacheId = -1)
         {
             using (var wrapper = new AvrServiceClientWrapper())
             {
                 var receiver = new AvrCacheReceiver(wrapper);
                 LayoutBaseValidatorWaiter validatorWaiter = new LayoutSilentValidatorWaiter();
                 CachedQueryResult result = receiver.GetCachedQueryTable(queryId, ModelUserContext.CurrentLanguage, isArchive,
-                    string.Empty, validatorWaiter, queryCacheId);
+                    filter, validatorWaiter, queryCacheId);
                 return result;
             }
         

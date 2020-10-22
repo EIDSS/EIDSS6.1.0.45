@@ -71,21 +71,26 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             // cellInputStartDate
             // 
+            resources.ApplyResources(this.cellInputStartDate, "cellInputStartDate");
             this.cellInputStartDate.StylePriority.UseFont = false;
             this.cellInputStartDate.StylePriority.UseTextAlignment = false;
             // 
             // cellInputEndDate
             // 
+            resources.ApplyResources(this.cellInputEndDate, "cellInputEndDate");
             this.cellInputEndDate.StylePriority.UseFont = false;
             this.cellInputEndDate.StylePriority.UseTextAlignment = false;
             // 
             // cellDefis
             // 
+            resources.ApplyResources(this.cellDefis, "cellDefis");
             this.cellDefis.StylePriority.UseFont = false;
             this.cellDefis.StylePriority.UseTextAlignment = false;
             // 
             // cellLanguage
             // 
+            resources.ApplyResources(this.cellLanguage, "cellLanguage");
+            this.cellLanguage.StylePriority.UseFont = false;
             this.cellLanguage.StylePriority.UseTextAlignment = false;
             // 
             // lblReportName
@@ -110,6 +115,7 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             // PageFooter
             // 
+            resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.StylePriority.UseBorders = false;
             // 
             // ReportHeader
@@ -126,25 +132,26 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             resources.ApplyResources(this.xrPageInfo1, "xrPageInfo1");
             this.xrPageInfo1.StylePriority.UseBorders = false;
+            this.xrPageInfo1.StylePriority.UseFont = false;
             // 
             // cellReportHeader
             // 
+            resources.ApplyResources(this.cellReportHeader, "cellReportHeader");
             this.cellReportHeader.StylePriority.UseBorders = false;
             this.cellReportHeader.StylePriority.UseFont = false;
             this.cellReportHeader.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.cellReportHeader, "cellReportHeader");
             // 
             // cellBaseSite
             // 
+            resources.ApplyResources(this.cellBaseSite, "cellBaseSite");
             this.cellBaseSite.StylePriority.UseBorders = false;
             this.cellBaseSite.StylePriority.UseFont = false;
             this.cellBaseSite.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.cellBaseSite, "cellBaseSite");
             // 
             // cellBaseCountry
             // 
-            this.cellBaseCountry.StylePriority.UseFont = false;
             resources.ApplyResources(this.cellBaseCountry, "cellBaseCountry");
+            this.cellBaseCountry.StylePriority.UseFont = false;
             // 
             // cellBaseLeftHeader
             // 
@@ -181,12 +188,12 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             this.cellType,
             this.xrTableCell4,
             this.cellPerson});
+            resources.ApplyResources(this.rowHeader1, "rowHeader1");
             this.rowHeader1.Name = "rowHeader1";
             this.rowHeader1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.rowHeader1.StylePriority.UseFont = false;
             this.rowHeader1.StylePriority.UsePadding = false;
             this.rowHeader1.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.rowHeader1, "rowHeader1");
             // 
             // cellDateTime
             // 
@@ -245,6 +252,7 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             this.DetailReport.DataAdapter = this.m_Adapter;
             this.DetailReport.DataMember = "NumberOfCasesTable";
             this.DetailReport.DataSource = this.m_DataSet;
+            resources.ApplyResources(this.DetailReport, "DetailReport");
             this.DetailReport.Level = 0;
             this.DetailReport.Name = "DetailReport";
             // 
@@ -277,12 +285,12 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             this.CFRCell,
             this.MortalityRateCell,
             this.PopulationCell});
+            resources.ApplyResources(this.xrTableRow1, "xrTableRow1");
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrTableRow1.StylePriority.UseFont = false;
             this.xrTableRow1.StylePriority.UsePadding = false;
             this.xrTableRow1.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.xrTableRow1, "xrTableRow1");
             // 
             // ReportingAreaCell
             // 
@@ -360,8 +368,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // xrLine2
             // 
             this.xrLine2.BorderWidth = 0F;
-            this.xrLine2.LineWidth = 0;
             resources.ApplyResources(this.xrLine2, "xrLine2");
+            this.xrLine2.LineWidth = 0;
             this.xrLine2.Name = "xrLine2";
             this.xrLine2.StylePriority.UseBorderWidth = false;
             // 
@@ -388,8 +396,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             this.HeaderRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.HeaderCell1});
-            this.HeaderRow1.Name = "HeaderRow1";
             resources.ApplyResources(this.HeaderRow1, "HeaderRow1");
+            this.HeaderRow1.Name = "HeaderRow1";
             // 
             // HeaderCell1
             // 
@@ -401,8 +409,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             this.HeaderRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.HeaderCell2});
-            this.HeaderRow2.Name = "HeaderRow2";
             resources.ApplyResources(this.HeaderRow2, "HeaderRow2");
+            this.HeaderRow2.Name = "HeaderRow2";
             // 
             // HeaderCell2
             // 
@@ -414,8 +422,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             this.HeaderRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.HeaderCell3});
-            this.HeaderRow3.Name = "HeaderRow3";
             resources.ApplyResources(this.HeaderRow3, "HeaderRow3");
+            this.HeaderRow3.Name = "HeaderRow3";
             // 
             // HeaderCell3
             // 
@@ -447,8 +455,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             this.OrganizationNameCell,
             this.xrTableCell1,
             this.DateTimeCell});
-            this.xrTableRow7.Name = "xrTableRow7";
             resources.ApplyResources(this.xrTableRow7, "xrTableRow7");
+            this.xrTableRow7.Name = "xrTableRow7";
             // 
             // OrganizationNameCell
             // 

@@ -13,7 +13,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssignmentLabDiagnosticReportKeeper));
             this.CaseId = new DevExpress.XtraEditors.TextEdit();
-            this.lblCaseID = new DevExpress.XtraEditors.LabelControl();
+            this.lblCaseID = new System.Windows.Forms.Label();
             this.ValidateButton = new DevExpress.XtraEditors.SimpleButton();
             this.SentTo = new EIDSS.Reports.BaseControls.Filters.SentToAZLookupFilter();
             this.pnlSettings.SuspendLayout();
@@ -50,6 +50,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(AssignmentLabDiagnosticReportKeeper), out resources);
             // Form Is Localizable: True
@@ -78,6 +80,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // AssignmentLabDiagnosticReportKeeper
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("AssignmentLabDiagnosticReportKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.HeaderHeight = 130;
             this.Name = "AssignmentLabDiagnosticReportKeeper";
             this.pnlSettings.ResumeLayout(false);
@@ -91,7 +95,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
         #endregion
 
         private DevExpress.XtraEditors.TextEdit CaseId;
-        private DevExpress.XtraEditors.LabelControl lblCaseID;
+        private System.Windows.Forms.Label lblCaseID;
         private DevExpress.XtraEditors.SimpleButton ValidateButton;
         private BaseControls.Filters.SentToAZLookupFilter SentTo;
 

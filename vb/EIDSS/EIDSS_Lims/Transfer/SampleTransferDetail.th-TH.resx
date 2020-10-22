@@ -181,7 +181,7 @@
     <value>ย้ายเข้า</value>
   </data>
   <data name="btnTransferOut.Text" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>โอนย้ายตัวอย่าง</value>
   </data>
   <data name="GroupControl3.Text" xml:space="preserve">
     <value>การย้ายตัวอย่าง</value>

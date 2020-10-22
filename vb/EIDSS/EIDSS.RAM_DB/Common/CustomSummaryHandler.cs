@@ -278,15 +278,8 @@ namespace eidss.avr.db.Common
             long result = 0;
             if (ds.RowCount != 0)
             {
-                if (m_AvrPivotGrid.SingleSearchObject)
-                {
-                    result = GetCount(e, ds);
-                }
-                else
-                {
-                    object firstValue = GetFirstValue(e, ds);
-                    result = GetDistinctCount(e, ds, firstValue);
-                }
+                object firstValue = GetFirstValue(e, ds);
+                result = GetDistinctCount(e, ds, firstValue);
             }
             e.CustomValue = result;
 
@@ -919,7 +912,7 @@ namespace eidss.avr.db.Common
         private  long GetCountOrDistinctCount(BasePivotGridCustomSummaryEventArgs e, PivotDrillDownDataSource ds)
         {
             long count;
-            if (e.BasicCountFunctions == CustomSummaryType.DistinctCount && !m_AvrPivotGrid.SingleSearchObject)
+            if (e.BasicCountFunctions == CustomSummaryType.DistinctCount)
             {
                 object firstValue = GetFirstValue(e, ds);
                 count = GetDistinctCount(e, ds, firstValue);

@@ -566,7 +566,7 @@ namespace bv.tests.Reports
             using (var wrapper = new ReportClientWrapper())
             {
                 AssertPDF(
-                    wrapper.Client.ExportHumNumberOfCasesDeathsMonthTH(new NumberOfCasesDeathsMonthTHModel("en", 2015, null, null, null,
+                    wrapper.Client.ExportHumNumberOfCasesDeathsMonthTH(new NumberOfCasesDeathsMonthTHModel("en", 2015, 1, null, null, null, null,
                         null, null, null, new List<PersonalDataGroup>(), false)));
             }
         }
@@ -730,18 +730,6 @@ namespace bv.tests.Reports
                 AssertPDF(
                     wrapper.Client.ExportVetRabiesBulletinEurope(new RBESurrogateModel("en", 2012, new QuartersModel(), new string[0],
                         new string[0], true, false)));
-            }
-        }
-
-        [TestMethod] 
-        public void PdfInfectiousParasiticKZTest()
-        {
-            using (var wrapper = new ReportClientWrapper())
-            {
-                var model = new InfectiousParasiticKZSurrogateModel("en", 2012, 1, 10, null, null, null, null, null,
-                    new List<PersonalDataGroup>(), false);
-
-                AssertPDF(wrapper.Client.ExportInfectiousParasiticKZReport(model));
             }
         }
 

@@ -56,14 +56,28 @@ namespace EIDSS.Reports.BaseControls.Filters
             get { return checkedComboBox.EditValue; }
         }
 
-         [Browsable(false)]
-         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public string[] SelectUIValues()
+        {
+            Queue<string> valueQueue = new Queue<string>();
+
+            for (int j = 0; j < checkedComboBox.Properties.Items.Count; ++j)
+            {
+                if (checkedComboBox.Properties.Items[j].CheckState == CheckState.Checked)
+                {
+                    valueQueue.Enqueue(checkedComboBox.Properties.Items[j].Description);
+                }
+            }
+
+            return valueQueue.ToArray();
+        }
+
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool SelectAllItemVisible
         {
             get { return checkedComboBox.Properties.SelectAllItemVisible; }
-            set {  checkedComboBox.Properties.SelectAllItemVisible = value; }
+            set { checkedComboBox.Properties.SelectAllItemVisible = value; }
         }
-        
 
         /// <summary>
         ///     Set Filter Mandatory
@@ -89,15 +103,15 @@ namespace EIDSS.Reports.BaseControls.Filters
 
             ApplyResources();
 
-            IEnumerable<CheckedListBoxItem> items = GetCheckedListBoxItems();
-            Dictionary<long, CheckState> checkState = items.ToDictionary(item => (long) item.Value, item => item.CheckState);
+            var items = GetCheckedListBoxItems();
+            var checkState = items.ToDictionary(item => (long)item.Value, item => item.CheckState);
             checkedComboBox.RefreshEditValue();
 
-            foreach (KeyValuePair<long, CheckState> state in checkState)
+            foreach (var state in checkState)
             {
-                List<CheckedListBoxItem> checkedListBoxItems = GetCheckedListBoxItems().ToList();
+                var checkedListBoxItems = GetCheckedListBoxItems().ToList();
                 items = checkedListBoxItems;
-                CheckedListBoxItem foundItem = items.FirstOrDefault(item => (long) item.Value == state.Key);
+                var foundItem = items.FirstOrDefault(item => (long)item.Value == state.Key);
                 if (foundItem != null)
                 {
                     foundItem.CheckState = state.Value;
@@ -109,11 +123,25 @@ namespace EIDSS.Reports.BaseControls.Filters
             checkedComboBox_EditValueChanged(this, EventArgs.Empty);
         }
 
+        public void ClearSelection()
+        {
+            foreach (CheckedListBoxItem item in checkedComboBox.Properties.Items)
+            {
+                if (item.CheckState == CheckState.Checked)
+                {
+                    item.CheckState = CheckState.Unchecked;
+                }
+            }
+            checkedComboBox.SetEditValue(string.Empty);
+            checkedComboBox.RefreshEditValue();
+        }
+
         protected void RefreshEditValue()
         {
             checkedComboBox.RefreshEditValue();
-            
         }
+
+
 
         protected IEnumerable<CheckedListBoxItem> GetCheckedListBoxItems()
         {
@@ -163,7 +191,7 @@ namespace EIDSS.Reports.BaseControls.Filters
             {
                 if (item.CheckState == CheckState.Checked)
                 {
-                    dictionary.Add((long) item.Value, item.Description);
+                    dictionary.Add((long)item.Value, item.Description);
                 }
             }
 

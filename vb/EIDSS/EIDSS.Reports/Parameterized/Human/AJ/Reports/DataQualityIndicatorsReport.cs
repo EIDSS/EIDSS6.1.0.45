@@ -5,12 +5,12 @@ using DevExpress.XtraReports.UI;
 using EIDSS.Reports.Parameterized.Human.AJ.DataSets;
 using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 
 namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
 {
 	public partial class DataQualityIndicatorsReport : BaseDataQualityIndicatorsReport
 	{
-		private int m_SubTotalCases;
 
 		public DataQualityIndicatorsReport()
 		{
@@ -400,14 +400,27 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
 			}
 		}
 
-		private void NumberOfCasesSubTotalCell_SummaryCalculated(object sender, TextFormatEventArgs e)
-		{
-			var cell = (sender as XRTableCell);
-			if (cell != null && !int.TryParse(e.Text, out m_SubTotalCases))
-			{
-				m_SubTotalCases = 0;
-			}
-		}
+        private void IndicatorCell_BeforePrint(object sender, PrintEventArgs e)
+        {
+            if (!(sender is XRTableCell))
+            {
+                return;
+            }
+            var currentCell = ((XRTableCell)sender);
+
+            double nominator;
+            long denominator;
+            if (double.TryParse(currentCell.Text, out nominator) &&
+                long.TryParse(NumberOfCasesDetailCell.Text, out denominator))
+            {
+                double result = (denominator == 0)
+                    ? 0.00
+                    : (1.0 * nominator) / denominator;
+
+                currentCell.Text = result.ToString("0.00");
+            }
+        }
+
 
 		private void SubTotalCell_SummaryGetResult(object sender, SummaryGetResultEventArgs e)
 		{
@@ -424,7 +437,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
 						sum += tempValue;
 				}
 
-				e.Result = sum / m_SubTotalCases;
+				e.Result = sum / this.CurrentSubTotalCases;
 				e.Handled = true;
 			}
 		}

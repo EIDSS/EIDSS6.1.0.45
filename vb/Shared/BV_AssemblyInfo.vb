@@ -15,12 +15,12 @@ Imports System
 Imports System.Reflection
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-<Assembly: AssemblyConfiguration("Release"),
- Assembly: AssemblyCompany("Black & Veatch Special Projects Corp."),
- Assembly: AssemblyTitle("BV framework"),
- Assembly: AssemblyProduct("BV framework"),
- Assembly: AssemblyCopyright("Copyright © 2005-2016, Black & Veatch Special Projects Corp."),
- Assembly: AssemblyTrademark("Trademark by Black & Veatch Special Projects Corp."),
- Assembly: AssemblyVersion("6.1.0.42"),
- Assembly: AssemblyFileVersion("6.1.0.42")>
+<Assembly: AssemblyConfiguration("Release"), _
+ Assembly: AssemblyCompany("Black & Veatch Special Projects Corp."), _
+ Assembly: AssemblyTitle("BV framework"), _
+ Assembly: AssemblyProduct("BV framework"), _
+ Assembly: AssemblyCopyright("Copyright © 2005-2020, Black & Veatch Special Projects Corp."), _
+ Assembly: AssemblyTrademark("Trademark by Black & Veatch Special Projects Corp."), _
+ Assembly: AssemblyVersion("6.1.0.67"), _
+ Assembly: AssemblyFileVersion("6.1.0.67")> 
 

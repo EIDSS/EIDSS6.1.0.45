@@ -972,66 +972,67 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             public ChartDataRow AddChartDataRow(
                         int Order, 
                         string Month, 
-                        double Year1PercentValue, 
-                        short Year1Value, 
-                        double Year2PercentValue, 
-                        short Year2Value, 
-                        double Year3PercentValue, 
-                        short Year3Value, 
-                        double Year4PercentValue, 
-                        short Year4Value, 
-                        double Year5PercentValue, 
-                        short Year5Value, 
-                        double Year6PercentValue, 
-                        short Year6Value, 
-                        double Year7PercentValue, 
-                        short Year7Value, 
-                        double Year8PercentValue, 
-                        short Year8Value, 
-                        double Year9PercentValue, 
-                        short Year9Value, 
-                        double Year10PercentValue, 
-                        short Year10Value, 
-                        double Year11PercentValue, 
-                        short Year11Value, 
-                        double Year12PercentValue, 
-                        short Year12Value, 
-                        double Year13PercentValue, 
-                        short Year13Value, 
-                        double Year14PercentValue, 
-                        short Year14Value, 
-                        double Year15PercentValue, 
-                        short Year15Value, 
-                        double Year16PercentValue, 
-                        short Year16Value, 
-                        double Year17PercentValue, 
-                        short Year17Value, 
-                        double Year18PercentValue, 
-                        short Year18Value, 
-                        double Year19PercentValue, 
-                        short Year19Value, 
-                        double Year20PercentValue, 
-                        short Year20Value, 
-                        double Year21PercentValue, 
-                        short Year21Value, 
-                        double Year22PercentValue, 
-                        short Year22Value, 
-                        double Year23PercentValue, 
-                        short Year23Value, 
-                        double Year24PercentValue, 
-                        short Year24Value, 
-                        double Year25PercentValue, 
-                        short Year25Value, 
-                        double Year26PercentValue, 
-                        short Year26Value, 
-                        double Year27PercentValue, 
-                        short Year27Value, 
-                        double Year28PercentValue, 
-                        short Year28Value, 
-                        double Year29PercentValue, 
-                        short Year29Value, 
-                        double Year30PercentValue, 
-                        short Year30Value) {
+                        double Year1PercentValue,
+                        long Year1Value, 
+                        double Year2PercentValue,
+                        long Year2Value, 
+                        double Year3PercentValue,
+                        long Year3Value, 
+                        double Year4PercentValue,
+                        long Year4Value, 
+                        double Year5PercentValue,
+                        long Year5Value, 
+                        double Year6PercentValue,
+                        long Year6Value, 
+                        double Year7PercentValue,
+                        long Year7Value, 
+                        double Year8PercentValue,
+                        long Year8Value, 
+                        double Year9PercentValue,
+                        long Year9Value, 
+                        double Year10PercentValue,
+                        long Year10Value, 
+                        double Year11PercentValue,
+                        long Year11Value, 
+                        double Year12PercentValue,
+                        long Year12Value, 
+                        double Year13PercentValue,
+                        long Year13Value, 
+                        double Year14PercentValue,
+                        long Year14Value, 
+                        double Year15PercentValue,
+                        long Year15Value, 
+                        double Year16PercentValue,
+                        long Year16Value, 
+                        double Year17PercentValue,
+                        long Year17Value, 
+                        double Year18PercentValue,
+                        long Year18Value, 
+                        double Year19PercentValue,
+                        long Year19Value, 
+                        double Year20PercentValue,
+                        long Year20Value, 
+                        double Year21PercentValue,
+                        long Year21Value, 
+                        double Year22PercentValue,
+                        long Year22Value, 
+                        double Year23PercentValue,
+                        long Year23Value, 
+                        double Year24PercentValue,
+                        long Year24Value, 
+                        double Year25PercentValue,
+                        long Year25Value, 
+                        double Year26PercentValue,
+                        long Year26Value, 
+                        double Year27PercentValue,
+                        long Year27Value, 
+                        double Year28PercentValue,
+                        long Year28Value, 
+                        double Year29PercentValue,
+                        long Year29Value, 
+                        double Year30PercentValue,
+                        long Year30Value)
+            {
                 ChartDataRow rowChartDataRow = ((ChartDataRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Order,
@@ -1191,123 +1192,123 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
                 base.Columns.Add(this.columnMonth);
                 this.columnYear1PercentValue = new global::System.Data.DataColumn("Year1PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear1PercentValue);
-                this.columnYear1Value = new global::System.Data.DataColumn("Year1Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear1Value = new global::System.Data.DataColumn("Year1Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear1Value);
                 this.columnYear2PercentValue = new global::System.Data.DataColumn("Year2PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear2PercentValue);
-                this.columnYear2Value = new global::System.Data.DataColumn("Year2Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear2Value = new global::System.Data.DataColumn("Year2Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear2Value);
                 this.columnYear3PercentValue = new global::System.Data.DataColumn("Year3PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear3PercentValue);
-                this.columnYear3Value = new global::System.Data.DataColumn("Year3Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear3Value = new global::System.Data.DataColumn("Year3Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear3Value);
                 this.columnYear4PercentValue = new global::System.Data.DataColumn("Year4PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear4PercentValue);
-                this.columnYear4Value = new global::System.Data.DataColumn("Year4Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear4Value = new global::System.Data.DataColumn("Year4Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear4Value);
                 this.columnYear5PercentValue = new global::System.Data.DataColumn("Year5PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear5PercentValue);
-                this.columnYear5Value = new global::System.Data.DataColumn("Year5Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear5Value = new global::System.Data.DataColumn("Year5Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear5Value);
                 this.columnYear6PercentValue = new global::System.Data.DataColumn("Year6PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear6PercentValue);
-                this.columnYear6Value = new global::System.Data.DataColumn("Year6Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear6Value = new global::System.Data.DataColumn("Year6Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear6Value);
                 this.columnYear7PercentValue = new global::System.Data.DataColumn("Year7PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear7PercentValue);
-                this.columnYear7Value = new global::System.Data.DataColumn("Year7Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear7Value = new global::System.Data.DataColumn("Year7Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear7Value);
                 this.columnYear8PercentValue = new global::System.Data.DataColumn("Year8PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear8PercentValue);
-                this.columnYear8Value = new global::System.Data.DataColumn("Year8Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear8Value = new global::System.Data.DataColumn("Year8Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear8Value);
                 this.columnYear9PercentValue = new global::System.Data.DataColumn("Year9PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear9PercentValue);
-                this.columnYear9Value = new global::System.Data.DataColumn("Year9Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear9Value = new global::System.Data.DataColumn("Year9Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear9Value);
                 this.columnYear10PercentValue = new global::System.Data.DataColumn("Year10PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear10PercentValue);
-                this.columnYear10Value = new global::System.Data.DataColumn("Year10Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear10Value = new global::System.Data.DataColumn("Year10Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear10Value);
                 this.columnYear11PercentValue = new global::System.Data.DataColumn("Year11PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear11PercentValue);
-                this.columnYear11Value = new global::System.Data.DataColumn("Year11Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear11Value = new global::System.Data.DataColumn("Year11Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear11Value);
                 this.columnYear12PercentValue = new global::System.Data.DataColumn("Year12PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear12PercentValue);
-                this.columnYear12Value = new global::System.Data.DataColumn("Year12Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear12Value = new global::System.Data.DataColumn("Year12Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear12Value);
                 this.columnYear13PercentValue = new global::System.Data.DataColumn("Year13PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear13PercentValue);
-                this.columnYear13Value = new global::System.Data.DataColumn("Year13Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear13Value = new global::System.Data.DataColumn("Year13Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear13Value);
                 this.columnYear14PercentValue = new global::System.Data.DataColumn("Year14PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear14PercentValue);
-                this.columnYear14Value = new global::System.Data.DataColumn("Year14Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear14Value = new global::System.Data.DataColumn("Year14Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear14Value);
                 this.columnYear15PercentValue = new global::System.Data.DataColumn("Year15PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear15PercentValue);
-                this.columnYear15Value = new global::System.Data.DataColumn("Year15Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear15Value = new global::System.Data.DataColumn("Year15Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear15Value);
                 this.columnYear16PercentValue = new global::System.Data.DataColumn("Year16PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear16PercentValue);
-                this.columnYear16Value = new global::System.Data.DataColumn("Year16Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear16Value = new global::System.Data.DataColumn("Year16Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear16Value);
                 this.columnYear17PercentValue = new global::System.Data.DataColumn("Year17PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear17PercentValue);
-                this.columnYear17Value = new global::System.Data.DataColumn("Year17Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear17Value = new global::System.Data.DataColumn("Year17Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear17Value);
                 this.columnYear18PercentValue = new global::System.Data.DataColumn("Year18PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear18PercentValue);
-                this.columnYear18Value = new global::System.Data.DataColumn("Year18Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear18Value = new global::System.Data.DataColumn("Year18Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear18Value);
                 this.columnYear19PercentValue = new global::System.Data.DataColumn("Year19PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear19PercentValue);
-                this.columnYear19Value = new global::System.Data.DataColumn("Year19Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear19Value = new global::System.Data.DataColumn("Year19Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear19Value);
                 this.columnYear20PercentValue = new global::System.Data.DataColumn("Year20PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear20PercentValue);
-                this.columnYear20Value = new global::System.Data.DataColumn("Year20Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear20Value = new global::System.Data.DataColumn("Year20Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear20Value);
                 this.columnYear21PercentValue = new global::System.Data.DataColumn("Year21PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear21PercentValue);
-                this.columnYear21Value = new global::System.Data.DataColumn("Year21Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear21Value = new global::System.Data.DataColumn("Year21Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear21Value);
                 this.columnYear22PercentValue = new global::System.Data.DataColumn("Year22PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear22PercentValue);
-                this.columnYear22Value = new global::System.Data.DataColumn("Year22Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear22Value = new global::System.Data.DataColumn("Year22Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear22Value);
                 this.columnYear23PercentValue = new global::System.Data.DataColumn("Year23PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear23PercentValue);
-                this.columnYear23Value = new global::System.Data.DataColumn("Year23Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear23Value = new global::System.Data.DataColumn("Year23Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear23Value);
                 this.columnYear24PercentValue = new global::System.Data.DataColumn("Year24PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear24PercentValue);
-                this.columnYear24Value = new global::System.Data.DataColumn("Year24Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear24Value = new global::System.Data.DataColumn("Year24Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear24Value);
                 this.columnYear25PercentValue = new global::System.Data.DataColumn("Year25PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear25PercentValue);
-                this.columnYear25Value = new global::System.Data.DataColumn("Year25Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear25Value = new global::System.Data.DataColumn("Year25Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear25Value);
                 this.columnYear26PercentValue = new global::System.Data.DataColumn("Year26PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear26PercentValue);
-                this.columnYear26Value = new global::System.Data.DataColumn("Year26Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear26Value = new global::System.Data.DataColumn("Year26Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear26Value);
                 this.columnYear27PercentValue = new global::System.Data.DataColumn("Year27PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear27PercentValue);
-                this.columnYear27Value = new global::System.Data.DataColumn("Year27Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear27Value = new global::System.Data.DataColumn("Year27Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear27Value);
                 this.columnYear28PercentValue = new global::System.Data.DataColumn("Year28PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear28PercentValue);
-                this.columnYear28Value = new global::System.Data.DataColumn("Year28Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear28Value = new global::System.Data.DataColumn("Year28Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear28Value);
                 this.columnYear29PercentValue = new global::System.Data.DataColumn("Year29PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear29PercentValue);
-                this.columnYear29Value = new global::System.Data.DataColumn("Year29Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear29Value = new global::System.Data.DataColumn("Year29Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear29Value);
                 this.columnYear30PercentValue = new global::System.Data.DataColumn("Year30PercentValue", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear30PercentValue);
-                this.columnYear30Value = new global::System.Data.DataColumn("Year30Value", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnYear30Value = new global::System.Data.DataColumn("Year30Value", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear30Value);
             }
             
@@ -1499,10 +1500,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year1Value {
+            public long Year1Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year1ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year1ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year1Value\' in table \'ChartData\' is DBNull.", e);
@@ -1531,10 +1532,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year2Value {
+            public long Year2Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year2ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year2ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year2Value\' in table \'ChartData\' is DBNull.", e);
@@ -1563,10 +1564,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year3Value {
+            public long Year3Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year3ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year3ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year3Value\' in table \'ChartData\' is DBNull.", e);
@@ -1595,10 +1596,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year4Value {
+            public long Year4Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year4ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year4ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year4Value\' in table \'ChartData\' is DBNull.", e);
@@ -1627,10 +1628,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year5Value {
+            public long Year5Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year5ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year5ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year5Value\' in table \'ChartData\' is DBNull.", e);
@@ -1659,10 +1660,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year6Value {
+            public long Year6Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year6ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year6ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year6Value\' in table \'ChartData\' is DBNull.", e);
@@ -1691,10 +1692,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year7Value {
+            public long Year7Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year7ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year7ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year7Value\' in table \'ChartData\' is DBNull.", e);
@@ -1723,10 +1724,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year8Value {
+            public long Year8Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year8ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year8ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year8Value\' in table \'ChartData\' is DBNull.", e);
@@ -1755,10 +1756,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year9Value {
+            public long Year9Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year9ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year9ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year9Value\' in table \'ChartData\' is DBNull.", e);
@@ -1787,10 +1788,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year10Value {
+            public long Year10Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year10ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year10ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year10Value\' in table \'ChartData\' is DBNull.", e);
@@ -1819,10 +1820,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year11Value {
+            public long Year11Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year11ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year11ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year11Value\' in table \'ChartData\' is DBNull.", e);
@@ -1851,10 +1852,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year12Value {
+            public long Year12Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year12ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year12ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year12Value\' in table \'ChartData\' is DBNull.", e);
@@ -1883,10 +1884,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year13Value {
+            public long Year13Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year13ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year13ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year13Value\' in table \'ChartData\' is DBNull.", e);
@@ -1915,10 +1916,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year14Value {
+            public long Year14Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year14ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year14ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year14Value\' in table \'ChartData\' is DBNull.", e);
@@ -1947,10 +1948,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year15Value {
+            public long Year15Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year15ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year15ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year15Value\' in table \'ChartData\' is DBNull.", e);
@@ -1979,10 +1980,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year16Value {
+            public long Year16Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year16ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year16ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year16Value\' in table \'ChartData\' is DBNull.", e);
@@ -2011,10 +2012,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year17Value {
+            public long Year17Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year17ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year17ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year17Value\' in table \'ChartData\' is DBNull.", e);
@@ -2043,10 +2044,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year18Value {
+            public long Year18Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year18ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year18ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year18Value\' in table \'ChartData\' is DBNull.", e);
@@ -2075,10 +2076,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year19Value {
+            public long Year19Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year19ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year19ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year19Value\' in table \'ChartData\' is DBNull.", e);
@@ -2107,10 +2108,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year20Value {
+            public long Year20Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year20ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year20ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year20Value\' in table \'ChartData\' is DBNull.", e);
@@ -2139,10 +2140,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year21Value {
+            public long Year21Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year21ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year21ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year21Value\' in table \'ChartData\' is DBNull.", e);
@@ -2171,10 +2172,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year22Value {
+            public long Year22Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year22ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year22ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year22Value\' in table \'ChartData\' is DBNull.", e);
@@ -2203,10 +2204,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year23Value {
+            public long Year23Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year23ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year23ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year23Value\' in table \'ChartData\' is DBNull.", e);
@@ -2235,10 +2236,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year24Value {
+            public long Year24Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year24ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year24ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year24Value\' in table \'ChartData\' is DBNull.", e);
@@ -2267,10 +2268,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year25Value {
+            public long Year25Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year25ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year25ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year25Value\' in table \'ChartData\' is DBNull.", e);
@@ -2299,10 +2300,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year26Value {
+            public long Year26Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year26ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year26ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year26Value\' in table \'ChartData\' is DBNull.", e);
@@ -2331,10 +2332,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year27Value {
+            public long Year27Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year27ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year27ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year27Value\' in table \'ChartData\' is DBNull.", e);
@@ -2363,10 +2364,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year28Value {
+            public long Year28Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year28ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year28ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year28Value\' in table \'ChartData\' is DBNull.", e);
@@ -2395,10 +2396,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year29Value {
+            public long Year29Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year29ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year29ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year29Value\' in table \'ChartData\' is DBNull.", e);
@@ -2427,10 +2428,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short Year30Value {
+            public long Year30Value {
                 get {
                     try {
-                        return ((short)(this[this.tableChartData.Year30ValueColumn]));
+                        return ((long)(this[this.tableChartData.Year30ValueColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Year30Value\' in table \'ChartData\' is DBNull.", e);

@@ -31,7 +31,7 @@ Public Class ReferenceDetail
         m_Helper = New ReferenceEditorHelper(gcReference, colTranslatedValue, "strDefault,name", "strDefault,name")
         m_Helper.CanDeleteProc = "spBaseReference_CanDelete"
 
-        If Not eidss.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.DeletePermission(
+        If Not eidss.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.DeletePermission( _
                                         eidss.model.Enums.EIDSSPermissionObject.Reference)) Then
             cmdDeleteRow.Enabled = False
         End If
@@ -349,7 +349,7 @@ Public Class ReferenceDetail
             MyBase.ReadOnly = value
             If value Then
                 cmdDeleteRow.Visible = False
-                If EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(
+                If EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission( _
                                                             EIDSS.model.Enums.EIDSSPermissionObject.Reference)) Then
                     CType(gcReference.FocusedView, DevExpress.XtraGrid.Views.Grid.GridView).OptionsBehavior.Editable = True
                 End If

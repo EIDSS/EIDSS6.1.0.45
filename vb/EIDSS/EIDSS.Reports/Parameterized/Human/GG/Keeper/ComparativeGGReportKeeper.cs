@@ -31,13 +31,13 @@ namespace EIDSS.Reports.Parameterized.Human.GG.Keeper
             {
                 SetMandatory();
 
-                Year1SpinEdit.Value = DateTime.Now.Year - 1;
-                Year1SpinEdit.Properties.MaxValue = DateTime.Now.Year - 1;
-                Year1SpinEdit.Properties.MinValue = 2012;
-
                 Year2SpinEdit.Value = DateTime.Now.Year;
                 Year2SpinEdit.Properties.MaxValue = DateTime.Now.Year;
                 Year2SpinEdit.Properties.MinValue = 2013;
+
+                Year1SpinEdit.Value = DateTime.Now.Year - 1;
+                Year1SpinEdit.Properties.MaxValue = DateTime.Now.Year - 1;
+                Year1SpinEdit.Properties.MinValue = 2012;
 
                 BindLookup(StartMonthLookUp, MonthCollection, StartMonthLabel.Text);
                 StartMonthLookUp.EditValue = MonthCollection[0];

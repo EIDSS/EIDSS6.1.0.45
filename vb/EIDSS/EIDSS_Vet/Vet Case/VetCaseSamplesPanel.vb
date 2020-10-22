@@ -2,6 +2,7 @@
 Imports bv.winclient.Core
 Imports bv.common.Configuration
 Imports bv.winclient.Localization
+Imports DevExpress.XtraGrid.Views.Grid
 
 Public Class VetCaseSamplesPanel
     Inherits CaseSamplesPanel
@@ -289,5 +290,6 @@ Public Class VetCaseSamplesPanel
             SamplesGridView.InitXtraGridCustomization(New String() {"idfsSampleType", "strFieldBarcode", "idfParty", "datFieldCollectionDate", "idfSendToOffice"})
         End If
         SamplesGridView.LoadGridLayout(GridLayoutName)
+        SamplesGridView.OptionsView.NewItemRowPosition = NewItemRowPosition.Top
     End Sub
 End Class

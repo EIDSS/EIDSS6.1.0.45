@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblcheckedComboBoxName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
-  </data>
   <data name="lblcheckedComboBoxName.Text" xml:space="preserve">
     <value>Diagnosis</value>
   </data>
@@ -128,13 +124,13 @@
     <value>lblcheckedComboBoxName</value>
   </data>
   <data name="&gt;&gt;lblcheckedComboBoxName.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblcheckedComboBoxName.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblcheckedComboBoxName.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="bvResourceManagerChanger1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -142,19 +138,23 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="HumStandardDiagnosisMultiFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>6, 14</value>
   </data>
   <data name="&gt;&gt;bvResourceManagerChanger1.Name" xml:space="preserve">
     <value>bvResourceManagerChanger1</value>
   </data>
   <data name="&gt;&gt;bvResourceManagerChanger1.Type" xml:space="preserve">
-    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.0.53.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>HumStandardDiagnosisMultiFilter</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.BaseMultilineFilter, EIDSS.Reports, Version=6.0.53.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Filters.BaseMultilineFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

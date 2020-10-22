@@ -59,6 +59,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // ceUseArchiveData
             // 
             resources.ApplyResources(this.ceUseArchiveData, "ceUseArchiveData");
+            this.ceUseArchiveData.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ceUseArchiveData.Properties.Appearance.Font")));
             this.ceUseArchiveData.Properties.Appearance.Options.UseFont = true;
             this.ceUseArchiveData.Properties.AppearanceDisabled.Options.UseFont = true;
             this.ceUseArchiveData.Properties.AppearanceFocused.Options.UseFont = true;
@@ -67,6 +68,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(BorderRayonsComparativeReportKeeper), out resources);
             // Form Is Localizable: True
@@ -150,6 +153,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             this.diagnosisFilter.Appearance.Options.UseFont = true;
             this.diagnosisFilter.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.diagnosisFilter.FilterType = EIDSS.Reports.BaseControls.Filters.HumDiagnosisGroupsType.DiagnosesAndGroupsHuman;
             resources.ApplyResources(this.diagnosisFilter, "diagnosisFilter");
             this.diagnosisFilter.Name = "diagnosisFilter";
             this.diagnosisFilter.ValueChanged += new System.EventHandler<EIDSS.Reports.BaseControls.Filters.MultiFilterEventArgs>(this.Diagnosis_ValueChanged);
@@ -165,6 +169,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // BorderRayonsComparativeReportKeeper
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("BorderRayonsComparativeReportKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.HeaderHeight = 170;
             this.Name = "BorderRayonsComparativeReportKeeper";
             this.pnlSettings.ResumeLayout(false);

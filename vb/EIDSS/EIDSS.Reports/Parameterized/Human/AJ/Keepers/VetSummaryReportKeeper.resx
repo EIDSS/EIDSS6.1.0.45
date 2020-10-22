@@ -408,12 +408,12 @@
   <data name="&gt;&gt;ceUseArchiveData.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="bvResourceManagerChanger1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="bvResourceManagerChanger1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="VetSummaryReportKeeper.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 8.25pt</value>
   </data>
@@ -428,5 +428,8 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>EIDSS.Reports.BaseControls.Keeper.BaseIntervalKeeper, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="ErrorMessage_Key" xml:space="preserve">
+    <value>You can specify not more than six species in Species type filter.</value>
   </data>
 </root>

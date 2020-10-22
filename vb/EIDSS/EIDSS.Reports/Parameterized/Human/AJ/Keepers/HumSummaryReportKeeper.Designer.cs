@@ -73,6 +73,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(HumSummaryReportKeeper), out resources);
             // Form Is Localizable: True
@@ -89,6 +91,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // HumSummaryReportKeeper
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("HumSummaryReportKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.Name = "HumSummaryReportKeeper";
             ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties)).EndInit();

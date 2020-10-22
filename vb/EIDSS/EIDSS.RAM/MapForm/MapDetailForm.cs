@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Data;
-using System.Windows.Forms;
 using bv.common;
 using bv.common.Core;
 using bv.common.win;
@@ -13,9 +12,8 @@ namespace eidss.avr.MapForm
 {
     public partial class MapDetailForm : BaseDetailForm
     {
-        private bool m_IsMapPosted;
         private readonly string m_LayoutName;
-        
+
 
         public MapDetailForm()
         {
@@ -40,8 +38,8 @@ namespace eidss.avr.MapForm
             PrintMapButton.Enabled = true;
         }
 
-        public MapDetailForm(Action<LookUpEdit> fillMapAdminUnitHandler, TryToPrepareMapDataHandler tryToPrepareMapData, 
-            EventLayerSettings settings,string layoutName, bool isNewParentLayout)
+        public MapDetailForm(Action<LookUpEdit> fillMapAdminUnitHandler, TryToPrepareMapDataHandler tryToPrepareMapData,
+            EventLayerSettings settings, string layoutName, bool isNewParentLayout)
             : this()
         {
             Utils.CheckNotNull(fillMapAdminUnitHandler, "fillMapAdminUnitHandler");
@@ -72,20 +70,18 @@ namespace eidss.avr.MapForm
                 MapDetail = null;
             }
 
-            if (disposing && (components != null))
+            if (disposing && components != null)
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
         public DataSet DataSource { get; set; }
 
-      
-        public bool NeedSaveMapSettings
-        {
-            get { return m_IsMapPosted; }
-        }
+
+        public bool NeedSaveMapSettings { get; private set; }
 
         public EventLayerSettings ChangedMapSettings
         {
@@ -94,7 +90,13 @@ namespace eidss.avr.MapForm
 
         public string MapAdminUnitViewColumn
         {
-            get { return MapDetail.AdministrativeUnit.EditValue.ToString(); }
+            get
+            {
+                var value = MapDetail.AdministrativeUnit.EditValue;
+                return value != null 
+                    ? value.ToString() 
+                    : null;
+            }
         }
 
         private void ExportMapButton_Click(object sender, EventArgs e)
@@ -109,17 +111,17 @@ namespace eidss.avr.MapForm
 
         private void MapDetailForm_OnBeforePost(object sender, EventArgs e)
         {
-            m_IsMapPosted = MapDetail.PostMap();
+            NeedSaveMapSettings = MapDetail.PostMap();
         }
 
         private void ChangeCaptionTimer_Tick(object sender, EventArgs e)
         {
-            Form parentForm = FindForm();
+            var parentForm = FindForm();
             if (parentForm != null)
             {
                 ChangeCaptionTimer.Stop();
-                var resources = new ComponentResourceManager(typeof (MapDetailForm));
-                string baseCaption = resources.GetString("$this.Caption");
+                var resources = new ComponentResourceManager(typeof(MapDetailForm));
+                var baseCaption = resources.GetString("$this.Caption");
                 parentForm.Text = string.Format("{0} - {1}", baseCaption, m_LayoutName);
             }
         }

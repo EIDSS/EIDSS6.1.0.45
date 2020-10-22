@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using bv.model.BLToolkit;
-using eidss.model.Enums;
 using eidss.model.Reports;
 using EIDSS.Reports.BaseControls.FlexFormIntegration;
 using EIDSS.Reports.BaseControls.Report;
@@ -43,7 +42,7 @@ namespace EIDSS.Reports.Document.Veterinary.Aggregate
 
                 CaseIdCell.Text = firstRow.strCaseID;
                 CaseIdBarcodeCell.Text = m_BarCode.Code128(firstRow.strCaseID);
-                PlaceCell.Text = GetFullLocationFromAdmUnitId(firstRow.idfsAdministrativeUnit, (GisReferenceType) firstRow.idfsAdmUnitType);
+                PlaceCell.Text = firstRow.strAdmUnitFullName;
             }
             PageHeader.Visible = false;
             tableInterval.Visible = hasData;

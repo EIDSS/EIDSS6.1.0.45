@@ -136,7 +136,7 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
                     // Note: if exception throws, you need to add extra column to ComparativeSeveralYearsChartDataSet.ChartDataDataTable
                     CheckColumnExists(data, yearColumnName);
                     CheckColumnExists(data, yearPercentColumnName);
-                    IList<int> monthValues = ComparativeSeveralYearsChartHelper.GetMonthValues(yearRow);
+                    IList<long> monthValues = ComparativeSeveralYearsChartHelper.GetMonthValues(yearRow);
                     maxValues.Add(monthValues.Max());
                     IList<double?> monthPercent = ComparativeSeveralYearsChartHelper.GetMonthPercent(yearRow);
                     for (int monthCount = 0; monthCount < data.Count; monthCount++)

@@ -27,7 +27,7 @@ namespace EIDSS.Reports.Document.Veterinary.Aggregate
 
             ((AdmUnitReport) xrSubreportAdmUnit.ReportSource).SetParameters(lang, aggrXml, manager, archiveManager);
 
-            List<long> observations = AggregateHelper.GetObservationList(parameters, "@observationId");
+            List<long> observations = EIDSS.Reports.BaseControls.Aggregate.AggregateHelper.GetObservationList(parameters, "@observationId");
             FlexFactory.CreateVetAggregateSummaryReport(FlexSubreport, observations, tableBaseHeader.Width - DeltaWidth);
 
             ReportRtlHelper.SetRTL(this);

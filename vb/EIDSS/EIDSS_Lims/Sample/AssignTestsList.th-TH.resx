@@ -127,7 +127,7 @@
     <value>เลือกการวินิจฉัย เพื่อกรองรายการการทดสอบ</value>
   </data>
   <data name="cmdRemove.Text" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>ลบรายการนี้</value>
   </data>
   <data name="cmdAdd.Text" xml:space="preserve">
     <value>เพิ่ม</value>

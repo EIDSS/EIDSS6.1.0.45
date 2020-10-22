@@ -40,6 +40,7 @@
             // RayonMultiFilter
             // 
             resources.ApplyResources(this, "$this");
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("RayonMultiFilter.Appearance.Font")));
             this.Appearance.FontSizeDelta = ((int)(resources.GetObject("RayonMultiFilter.Appearance.FontSizeDelta")));
             this.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("RayonMultiFilter.Appearance.FontStyleDelta")));
             this.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("RayonMultiFilter.Appearance.GradientMode")));
@@ -48,7 +49,6 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.Name = "RayonMultiFilter";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

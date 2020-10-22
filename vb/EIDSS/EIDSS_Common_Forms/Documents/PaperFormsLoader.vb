@@ -1,9 +1,9 @@
 Imports bv.winclient.Core
 Imports bv.model.Model.Core
 Imports System.IO
-Imports EIDSS.model.Core
-Imports EIDSS.model.Enums
-Imports EIDSS.model.Resources
+Imports eidss.model.Core
+Imports eidss.model.Enums
+Imports eidss.model.Resources
 
 Public Class PaperFormsLoader
     Inherits BaseForm

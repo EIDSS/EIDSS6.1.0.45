@@ -847,7 +847,6 @@
             this.NumberOfCasesSubTotalCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.intCaseCount")});
             resources.ApplyResources(this.NumberOfCasesSubTotalCell, "NumberOfCasesSubTotalCell");
-            this.NumberOfCasesSubTotalCell.SummaryCalculated += new DevExpress.XtraReports.UI.TextFormatEventHandler(this.NumberOfCasesSubTotalCell_SummaryCalculated);
             // 
             // xrTable4
             // 
@@ -1142,6 +1141,8 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dbl_1_Notification", "{0:0.00}")});
             this.xrTableCell4.Name = "xrTableCell4";
             resources.ApplyResources(this.xrTableCell4, "xrTableCell4");
+            this.xrTableCell4.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
+
             // 
             // xrTableCell3
             // 
@@ -1149,6 +1150,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblCaseStatus", "{0:0.00}")});
             this.xrTableCell3.Name = "xrTableCell3";
             resources.ApplyResources(this.xrTableCell3, "xrTableCell3");
+            this.xrTableCell3.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell36
             // 
@@ -1156,6 +1158,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblDateOfCompletionOfPaperForm", "{0:0.00}")});
             this.xrTableCell36.Name = "xrTableCell36";
             resources.ApplyResources(this.xrTableCell36, "xrTableCell36");
+            this.xrTableCell36.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell41
             // 
@@ -1163,6 +1166,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblNameOfEmployer", "{0:0.00}")});
             this.xrTableCell41.Name = "xrTableCell41";
             resources.ApplyResources(this.xrTableCell41, "xrTableCell41");
+            this.xrTableCell41.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell42
             // 
@@ -1170,6 +1174,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblCurrentLocationOfPatient", "{0:0.00}")});
             this.xrTableCell42.Name = "xrTableCell42";
             resources.ApplyResources(this.xrTableCell42, "xrTableCell42");
+            this.xrTableCell42.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell39
             // 
@@ -1177,6 +1182,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblNotificationDateTime", "{0:0.00}")});
             this.xrTableCell39.Name = "xrTableCell39";
             resources.ApplyResources(this.xrTableCell39, "xrTableCell39");
+            this.xrTableCell39.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell43
             // 
@@ -1184,6 +1190,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dbldblNotificationSentByName", "{0:0.00}")});
             this.xrTableCell43.Name = "xrTableCell43";
             resources.ApplyResources(this.xrTableCell43, "xrTableCell43");
+            this.xrTableCell43.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell44
             // 
@@ -1191,6 +1198,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblNotificationReceivedByFacility", "{0:0.00}")});
             this.xrTableCell44.Name = "xrTableCell44";
             resources.ApplyResources(this.xrTableCell44, "xrTableCell44");
+            this.xrTableCell44.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell38
             // 
@@ -1198,6 +1206,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblNotificationReceivedByName", "{0:0.00}")});
             this.xrTableCell38.Name = "xrTableCell38";
             resources.ApplyResources(this.xrTableCell38, "xrTableCell38");
+            this.xrTableCell38.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell48
             // 
@@ -1205,6 +1214,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblTimelinessofDataEntry", "{0:0.00}")});
             this.xrTableCell48.Name = "xrTableCell48";
             resources.ApplyResources(this.xrTableCell48, "xrTableCell48");
+            this.xrTableCell48.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell47
             // 
@@ -1212,6 +1222,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dbl_2_CaseInvestigation", "{0:0.00}")});
             this.xrTableCell47.Name = "xrTableCell47";
             resources.ApplyResources(this.xrTableCell47, "xrTableCell47");
+            this.xrTableCell47.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell49
             // 
@@ -1220,6 +1231,7 @@
                     "ation", "{0:0.00}")});
             this.xrTableCell49.Name = "xrTableCell49";
             resources.ApplyResources(this.xrTableCell49, "xrTableCell49");
+            this.xrTableCell49.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell46
             // 
@@ -1227,6 +1239,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblDemographicInformationOccupation", "{0:0.00}")});
             this.xrTableCell46.Name = "xrTableCell46";
             resources.ApplyResources(this.xrTableCell46, "xrTableCell46");
+            this.xrTableCell46.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell37
             // 
@@ -1234,6 +1247,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblClinicalInformationInitialCaseClassification", "{0:0.00}")});
             this.xrTableCell37.Name = "xrTableCell37";
             resources.ApplyResources(this.xrTableCell37, "xrTableCell37");
+            this.xrTableCell37.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell53
             // 
@@ -1241,6 +1255,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblClinicalInformationLocationOfExposure", "{0:0.00}")});
             this.xrTableCell53.Name = "xrTableCell53";
             resources.ApplyResources(this.xrTableCell53, "xrTableCell53");
+            this.xrTableCell53.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell52
             // 
@@ -1248,6 +1263,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblClinicalInformationAntibioticAntiviralTherapy", "{0:0.00}")});
             this.xrTableCell52.Name = "xrTableCell52";
             resources.ApplyResources(this.xrTableCell52, "xrTableCell52");
+            this.xrTableCell52.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell51
             // 
@@ -1255,6 +1271,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblSamplesCollectionSamplesCollected", "{0:0.00}")});
             this.xrTableCell51.Name = "xrTableCell51";
             resources.ApplyResources(this.xrTableCell51, "xrTableCell51");
+            this.xrTableCell51.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell55
             // 
@@ -1262,6 +1279,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblContactListAddContact", "{0:0.00}")});
             this.xrTableCell55.Name = "xrTableCell55";
             resources.ApplyResources(this.xrTableCell55, "xrTableCell55");
+            this.xrTableCell55.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell54
             // 
@@ -1269,6 +1287,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblCaseClassificationClinicalSigns", "{0:0.00}")});
             this.xrTableCell54.Name = "xrTableCell54";
             resources.ApplyResources(this.xrTableCell54, "xrTableCell54");
+            this.xrTableCell54.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell56
             // 
@@ -1276,6 +1295,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblEpidemiologicalLinksAndRiskFactors", "{0:0.00}")});
             this.xrTableCell56.Name = "xrTableCell56";
             resources.ApplyResources(this.xrTableCell56, "xrTableCell56");
+            this.xrTableCell56.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell58
             // 
@@ -1283,6 +1303,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblFinalCaseClassificationBasisOfDiagnosis", "{0:0.00}")});
             this.xrTableCell58.Name = "xrTableCell58";
             resources.ApplyResources(this.xrTableCell58, "xrTableCell58");
+            this.xrTableCell58.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell60
             // 
@@ -1290,6 +1311,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblFinalCaseClassificationOutcome", "{0:0.00}")});
             this.xrTableCell60.Name = "xrTableCell60";
             resources.ApplyResources(this.xrTableCell60, "xrTableCell60");
+            this.xrTableCell60.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell57
             // 
@@ -1297,6 +1319,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblFinalCaseClassificationIsThisCaseOutbreak", "{0:0.00}")});
             this.xrTableCell57.Name = "xrTableCell57";
             resources.ApplyResources(this.xrTableCell57, "xrTableCell57");
+            this.xrTableCell57.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell61
             // 
@@ -1304,6 +1327,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblFinalCaseClassificationEpidemiologistName", "{0:0.00}")});
             this.xrTableCell61.Name = "xrTableCell61";
             resources.ApplyResources(this.xrTableCell61, "xrTableCell61");
+            this.xrTableCell61.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell63
             // 
@@ -1311,6 +1335,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dbl_3_TheResultsOfLaboratoryTests", "{0:0.00}")});
             this.xrTableCell63.Name = "xrTableCell63";
             resources.ApplyResources(this.xrTableCell63, "xrTableCell63");
+            this.xrTableCell63.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell62
             // 
@@ -1318,6 +1343,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblTheResultsOfLaboratoryTestsTestsConducted", "{0:0.00}")});
             this.xrTableCell62.Name = "xrTableCell62";
             resources.ApplyResources(this.xrTableCell62, "xrTableCell62");
+            this.xrTableCell62.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell64
             // 
@@ -1325,6 +1351,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblTheResultsOfLaboratoryTestsResultObservation", "{0:0.00}")});
             this.xrTableCell64.Name = "xrTableCell64";
             resources.ApplyResources(this.xrTableCell64, "xrTableCell64");
+            this.xrTableCell64.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // xrTableCell2
             // 
@@ -1333,6 +1360,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblSummaryScoreByIndicators", "{0:0.00}")});
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.StylePriority.UseBackColor = false;
+            this.xrTableCell2.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // _1_NotificationAVGCell
             // 

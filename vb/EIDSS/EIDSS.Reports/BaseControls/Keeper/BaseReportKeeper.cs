@@ -224,8 +224,8 @@ namespace EIDSS.Reports.BaseControls.Keeper
                                     m_ArchiveManager = DbManagerFactory.Factory[DatabaseType.Archive].Create();
 
                                     BaseReport report = GenerateReport(m_Manager, m_ArchiveManager);
-                                    report.SetAdaptersNull();
-                                    reportView1.SetReport(report, cultureNotChanged);
+                                    report.ThisReport.SetAdaptersNull();
+                                    reportView1.SetReport(report.ThisReport, cultureNotChanged);
                                     reportView1.Report.AfterPrint += Report_AfterPrint;
 
                                     break;

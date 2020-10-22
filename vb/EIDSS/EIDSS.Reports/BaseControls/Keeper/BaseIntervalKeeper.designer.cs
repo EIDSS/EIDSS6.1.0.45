@@ -44,16 +44,15 @@ namespace EIDSS.Reports.BaseControls.Keeper
             resources.ApplyResources(this.ceUseArchiveData, "ceUseArchiveData");
             this.ceUseArchiveData.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ceUseArchiveData.Properties.Appearance.Font")));
             this.ceUseArchiveData.Properties.Appearance.Options.UseFont = true;
-            this.ceUseArchiveData.Properties.AppearanceDisabled.Font = ((System.Drawing.Font)(resources.GetObject("ceUseArchiveData.Properties.AppearanceDisabled.Font")));
             this.ceUseArchiveData.Properties.AppearanceDisabled.Options.UseFont = true;
-            this.ceUseArchiveData.Properties.AppearanceFocused.Font = ((System.Drawing.Font)(resources.GetObject("ceUseArchiveData.Properties.AppearanceFocused.Font")));
             this.ceUseArchiveData.Properties.AppearanceFocused.Options.UseFont = true;
-            this.ceUseArchiveData.Properties.AppearanceReadOnly.Font = ((System.Drawing.Font)(resources.GetObject("ceUseArchiveData.Properties.AppearanceReadOnly.Font")));
             this.ceUseArchiveData.Properties.AppearanceReadOnly.Options.UseFont = true;
             this.ceUseArchiveData.Properties.Caption = resources.GetString("ceUseArchiveData.Properties.Caption");
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(BaseIntervalKeeper), out resources);
             // Form Is Localizable: True
@@ -72,11 +71,12 @@ namespace EIDSS.Reports.BaseControls.Keeper
             // 
             resources.ApplyResources(this.dtStart, "dtStart");
             this.dtStart.Name = "dtStart";
+            this.dtStart.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("dtStart.Properties.Appearance.Font")));
+            this.dtStart.Properties.Appearance.Options.UseFont = true;
             this.dtStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtStart.Properties.Buttons"))))});
             this.dtStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            
             this.dtStart.QueryPopUp += new System.ComponentModel.CancelEventHandler(this.dtStart_QueryPopUp);
             this.dtStart.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.dtStart_Closed);
             this.dtStart.EditValueChanged += new System.EventHandler(this.dtStart_ValueChanged);
@@ -85,6 +85,8 @@ namespace EIDSS.Reports.BaseControls.Keeper
             // 
             resources.ApplyResources(this.dtEnd, "dtEnd");
             this.dtEnd.Name = "dtEnd";
+            this.dtEnd.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("dtEnd.Properties.Appearance.Font")));
+            this.dtEnd.Properties.Appearance.Options.UseFont = true;
             this.dtEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("dtEnd.Properties.Buttons"))))});
             this.dtEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -95,7 +97,8 @@ namespace EIDSS.Reports.BaseControls.Keeper
             // 
             // BaseIntervalKeeper
             // 
-            resources.ApplyResources(this, "$this");
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("BaseIntervalKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.HeaderHeight = 130;
             this.Name = "BaseIntervalKeeper";
             this.pnlSettings.ResumeLayout(false);

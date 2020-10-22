@@ -33,12 +33,15 @@
             // 
             // lblLookupName
             // 
+            
             resources.ApplyResources(this.lblLookupName, "lblLookupName");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(CaseReportTypeLookupFilter), out resources);
             // Form Is Localizable: True
             // 
             // CaseReportTypeLookupFilter
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("CaseReportTypeLookupFilter.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.Name = "CaseReportTypeLookupFilter";
             this.ResumeLayout(false);

@@ -136,6 +136,6 @@
     <value>Дані узагальненого звіту</value>
   </data>
   <data name="MenuItem1.Text" xml:space="preserve">
-    <value>Резюме звіту про агреговані випадки захворювання людини</value>
+    <value>Резюме звіту про агреговані дані про захворювання людини</value>
   </data>
 </root>

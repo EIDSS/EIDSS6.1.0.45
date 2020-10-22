@@ -33,7 +33,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VetSummaryReportKeeper));
             this.VetDiagnosisFilter = new EIDSS.Reports.BaseControls.Filters.VetSingleDiagnosisAZFilter();
             this.SurveillanceTypeGroup = new DevExpress.XtraEditors.RadioGroup();
-            this.SurveillanceTypeLabel = new DevExpress.XtraEditors.LabelControl();
+            this.SurveillanceTypeLabel = new System.Windows.Forms.Label();
             this.NameOfInvestigationOrMeasure = new EIDSS.Reports.BaseControls.Filters.NameOfInvestigationOrMeasureAZFilter();
             this.SpeciesTypeFilter = new EIDSS.Reports.BaseControls.Filters.SpeciesTypeAZMultiFilter();
             ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties.CalendarTimeProperties)).BeginInit();
@@ -96,6 +96,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(VetSummaryReportKeeper), out resources);
             // Form Is Localizable: True
@@ -143,6 +145,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // VetSummaryReportKeeper
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("VetSummaryReportKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.HeaderHeight = 220;
             this.Name = "VetSummaryReportKeeper";
             ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties.CalendarTimeProperties)).EndInit();
@@ -161,7 +165,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
 
         private VetSingleDiagnosisAZFilter VetDiagnosisFilter;
         private DevExpress.XtraEditors.RadioGroup SurveillanceTypeGroup;
-        private DevExpress.XtraEditors.LabelControl SurveillanceTypeLabel;
+        private System.Windows.Forms.Label SurveillanceTypeLabel;
         private NameOfInvestigationOrMeasureAZFilter NameOfInvestigationOrMeasure;
         private SpeciesTypeAZMultiFilter SpeciesTypeFilter;
     }

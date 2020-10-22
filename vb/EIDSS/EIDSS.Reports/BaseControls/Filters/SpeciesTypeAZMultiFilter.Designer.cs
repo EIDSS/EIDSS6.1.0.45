@@ -39,12 +39,12 @@
             // 
             // SpeciesTypeAZMultiFilter
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("SpeciesTypeAZMultiFilter.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.Name = "SpeciesTypeAZMultiFilter";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

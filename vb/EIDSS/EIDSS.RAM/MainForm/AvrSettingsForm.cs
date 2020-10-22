@@ -66,8 +66,6 @@ namespace eidss.avr.MainForm
             LookupBinder.BindBaseRepositoryLookup(cbFunction, BaseReferenceType.rftAggregateFunction, false);
             var view = (DataView)cbFunction.DataSource;
             
-            //LookupBinder.RemoveEmptyRow(view);
-
             // note [Ivan]: I know, tha it's not good idea to get another lokup for filtering original one
             // but i don't want to touch binding before GAT
             DataView aggrView = LookupCache.Get(LookupTables.AggregateFunction.ToString());

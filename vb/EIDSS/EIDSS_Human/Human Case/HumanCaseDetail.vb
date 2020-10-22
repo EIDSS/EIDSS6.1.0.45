@@ -107,7 +107,7 @@ Public Class HumanCaseDetail
         AuditObject = New AuditObject(EIDSSAuditObject.daoHumanCase, AuditTable.tlbHumanCase)
         Me.PermissionObject = EIDSS.model.Enums.EIDSSPermissionObject.HumanCase
 
-        If Not EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.UpdatePermission(
+        If Not EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.UpdatePermission( _
                                                 EIDSS.model.Enums.EIDSSPermissionObject.HumanCase)) Then
             Me.cbCaseStatus.Tag = Me.cbCaseStatus.Tag.ToString().Replace("{alwayseditable}", "")
             Me.cbCaseStatus.Enabled = False
@@ -149,6 +149,9 @@ Public Class HumanCaseDetail
         If (EIDSS.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed("HumUrgentyNotificationDTRA")) Then
             Me.cmMenuReports.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.miNotificationFormDTRA})
         End If
+        If (EIDSS.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed("HumUrgentyNotificationUkraine")) Then
+            Me.cmMenuReports.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.miNotificationFormUkraine})
+        End If
         If (EIDSS.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed("HumUrgentyNotificationTanzania")) Then
             Me.cmMenuReports.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.miNotificationFormTanzania})
         End If
@@ -169,10 +172,10 @@ Public Class HumanCaseDetail
         'Add any initialization after the InitializeComponent() call
         HumanCaseDbService = New HumanCase_DB
         AuditObject = New AuditObject(EIDSSAuditObject.daoHumanCase, AuditTable.tlbHumanCase)
-        Me.PermissionObject = EIDSS.model.Enums.EIDSSPermissionObject.HumanCase
+        Me.PermissionObject = eidss.model.Enums.EIDSSPermissionObject.HumanCase
 
-        If Not EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.UpdatePermission(
-                                                EIDSS.model.Enums.EIDSSPermissionObject.HumanCase)) Then
+        If Not eidss.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.UpdatePermission( _
+                                                eidss.model.Enums.EIDSSPermissionObject.HumanCase)) Then
             Me.cbCaseStatus.Tag = Me.cbCaseStatus.Tag.ToString().Replace("{alwayseditable}", "")
             Me.cbCaseStatus.Enabled = False
         End If
@@ -303,7 +306,7 @@ Public Class HumanCaseDetail
     Friend WithEvents txtRegistrationPhone As DevExpress.XtraEditors.TextEdit
     Friend WithEvents lblRegistrationPhoneNumber As System.Windows.Forms.Label
     Friend WithEvents lblWorkPhoneNumber As System.Windows.Forms.Label
-    Friend WithEvents lpEmployerAddress As EIDSS.AddressLookup
+    Friend WithEvents lpEmployerAddress As eidss.AddressLookup
     Friend WithEvents gcolAntimicrobialTherapyDose As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents cbAntimicrobialTherapy As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents cbOccupation As DevExpress.XtraEditors.LookUpEdit
@@ -335,7 +338,7 @@ Public Class HumanCaseDetail
     Friend WithEvents lblDOB As System.Windows.Forms.Label
     Friend WithEvents lblPatientName As System.Windows.Forms.Label
     Friend WithEvents gpDemographicInfo As DevExpress.XtraEditors.GroupControl
-    Friend WithEvents lpPermanentAddress As EIDSS.AddressLookup
+    Friend WithEvents lpPermanentAddress As eidss.AddressLookup
     Friend WithEvents lblPermanentAddress As System.Windows.Forms.Label
     Friend WithEvents lblEmployerLastVisit As System.Windows.Forms.Label
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
@@ -370,6 +373,7 @@ Public Class HumanCaseDetail
     Friend WithEvents miCaseInvestigationForm As System.Windows.Forms.MenuItem
     Friend WithEvents miNotificationForm As System.Windows.Forms.MenuItem
     Friend WithEvents miNotificationFormDTRA As System.Windows.Forms.MenuItem
+    Friend WithEvents miNotificationFormUkraine As System.Windows.Forms.MenuItem
     Friend WithEvents miNotificationFormTanzania As System.Windows.Forms.MenuItem
 
     Friend WithEvents deOnsetDate As DevExpress.XtraEditors.DateEdit
@@ -380,11 +384,11 @@ Public Class HumanCaseDetail
     Friend WithEvents cbHospitalizedTo As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents txtAge As DevExpress.XtraEditors.SpinEdit
     Friend WithEvents cbAgeUnits As DevExpress.XtraEditors.LookUpEdit
-    Friend WithEvents ffEpiInvestigations As EIDSS.FlexibleForms.FFPresenter
-    Friend WithEvents FFClinicalSigns As EIDSS.FlexibleForms.FFPresenter
+    Friend WithEvents ffEpiInvestigations As eidss.FlexibleForms.FFPresenter
+    Friend WithEvents FFClinicalSigns As eidss.FlexibleForms.FFPresenter
     Friend WithEvents TabControl1 As DevExpress.XtraTab.XtraTabControl
     Friend WithEvents tpTests As DevExpress.XtraTab.XtraTabPage
-    Friend WithEvents CaseTestsPanel1 As EIDSS.CaseTestsPanel
+    Friend WithEvents CaseTestsPanel1 As eidss.CaseTestsPanel
     Friend WithEvents bntNextCase As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents bntPreviousCase As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnLastCase As DevExpress.XtraEditors.SimpleButton
@@ -564,7 +568,7 @@ Public Class HumanCaseDetail
         Me.dtLastVisitToEmployer = New DevExpress.XtraEditors.DateEdit()
         Me.lblLastVisitToEmployer = New System.Windows.Forms.Label()
         Me.lblAge = New System.Windows.Forms.Label()
-        Me.PatientInfo = New EIDSS.Patient_Info()
+        Me.PatientInfo = New eidss.Patient_Info()
         Me.cbAgeUnits = New DevExpress.XtraEditors.LookUpEdit()
         Me.txtAge = New DevExpress.XtraEditors.SpinEdit()
         Me.gpGeneralInformation = New DevExpress.XtraEditors.GroupControl()
@@ -648,13 +652,13 @@ Public Class HumanCaseDetail
         Me.lblEmployerLastVisit = New System.Windows.Forms.Label()
         Me.lblPatientName = New System.Windows.Forms.Label()
         Me.lblLastName = New System.Windows.Forms.Label()
-        Me.lpCurrentResidenceAddress = New EIDSS.AddressLookup()
-        Me.lpEmployerAddress = New EIDSS.AddressLookup()
-        Me.lpPermanentAddress = New EIDSS.AddressLookup()
+        Me.lpCurrentResidenceAddress = New eidss.AddressLookup()
+        Me.lpEmployerAddress = New eidss.AddressLookup()
+        Me.lpPermanentAddress = New eidss.AddressLookup()
         Me.lblInvestigationStartDate = New System.Windows.Forms.Label()
         Me.lblInvOrganization = New System.Windows.Forms.Label()
         Me.tpClinicalInformation = New DevExpress.XtraTab.XtraTabPage()
-        Me.cbGeoLocation = New EIDSS.LocationLookup()
+        Me.cbGeoLocation = New eidss.LocationLookup()
         Me.cbNonNotifiableDiesease = New DevExpress.XtraEditors.LookUpEdit()
         Me.cbHospitalization = New DevExpress.XtraEditors.LookUpEdit()
         Me.lblAntimicrobialTherapyTable = New System.Windows.Forms.Label()
@@ -693,7 +697,7 @@ Public Class HumanCaseDetail
         Me.lblNotCollectedReason = New System.Windows.Forms.Label()
         Me.cbSpecimenCollected = New DevExpress.XtraEditors.LookUpEdit()
         Me.lblSpecimenCollected = New System.Windows.Forms.Label()
-        Me.HumanCaseSamplesPanel1 = New EIDSS.HumanCaseSamplesPanel()
+        Me.HumanCaseSamplesPanel1 = New eidss.HumanCaseSamplesPanel()
         Me.tpContactsRemarks = New DevExpress.XtraTab.XtraTabPage()
         Me.gcContactPeople = New DevExpress.XtraGrid.GridControl()
         Me.gvContactPeople = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -711,9 +715,9 @@ Public Class HumanCaseDetail
         Me.btnDeleteContact = New DevExpress.XtraEditors.SimpleButton()
         Me.btnEditContact = New DevExpress.XtraEditors.SimpleButton()
         Me.tpCaseClassification = New DevExpress.XtraTab.XtraTabPage()
-        Me.FFClinicalSigns = New EIDSS.FlexibleForms.FFPresenter()
+        Me.FFClinicalSigns = New eidss.FlexibleForms.FFPresenter()
         Me.tpEpiLinksRiskFactors = New DevExpress.XtraTab.XtraTabPage()
-        Me.ffEpiInvestigations = New EIDSS.FlexibleForms.FFPresenter()
+        Me.ffEpiInvestigations = New eidss.FlexibleForms.FFPresenter()
         Me.tpCaseSummary = New DevExpress.XtraTab.XtraTabPage()
         Me.dtFinalCaseClassificationDate = New DevExpress.XtraEditors.DateEdit()
         Me.lbFinalCaseClassificationDate = New System.Windows.Forms.Label()
@@ -746,7 +750,7 @@ Public Class HumanCaseDetail
         Me.tpTests = New DevExpress.XtraTab.XtraTabPage()
         Me.lbTestsConducted = New DevExpress.XtraEditors.LabelControl()
         Me.cbTestsConducted = New DevExpress.XtraEditors.LookUpEdit()
-        Me.CaseTestsPanel1 = New EIDSS.CaseTestsPanel()
+        Me.CaseTestsPanel1 = New eidss.CaseTestsPanel()
         Me.RepositoryItemDateEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
         Me.redDateDiagDate = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
         Me.redLookupDiagType = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
@@ -790,6 +794,7 @@ Public Class HumanCaseDetail
         Me.miCaseInvestigationForm = New System.Windows.Forms.MenuItem()
         Me.miNotificationForm = New System.Windows.Forms.MenuItem()
         Me.miNotificationFormDTRA = New System.Windows.Forms.MenuItem()
+        Me.miNotificationFormUkraine = New System.Windows.Forms.MenuItem()
         Me.miNotificationFormTanzania = New System.Windows.Forms.MenuItem()
         Me.PopUpButton2 = New bv.winclient.Core.PopUpButton()
         Me.txtCaseCount = New DevExpress.XtraEditors.TextEdit()
@@ -1155,7 +1160,7 @@ Public Class HumanCaseDetail
         Me.btnSearch.Appearance.Options.UseFont = True
         Me.btnSearch.Appearance.Options.UseTextOptions = True
         Me.btnSearch.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
-        Me.btnSearch.Image = Global.EIDSS.My.Resources.Resources.Search_for_Duplicates2
+        Me.btnSearch.Image = Global.eidss.My.Resources.Resources.Search_for_Duplicates2
         Me.btnSearch.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter
         resources.ApplyResources(Me.btnSearch, "btnSearch")
         Me.btnSearch.Name = "btnSearch"
@@ -2609,14 +2614,14 @@ Public Class HumanCaseDetail
         SerializableAppearanceObject37.Options.UseFont = True
         Me.deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons1"), CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons2"), Integer), CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons3"), Boolean), CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons4"), Boolean), CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons5"), Boolean), CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons6"), DevExpress.XtraEditors.ImageLocation), CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons7"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject37, resources.GetString("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons8"), CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons9"), Object), CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons10"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Buttons11"), Boolean))})
         Me.deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.EditMask = resources.GetString("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.EditMask")
-        Me.deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.IgnoreMaskBlank = CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.IgnoreMas" &
+        Me.deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.IgnoreMaskBlank = CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.IgnoreMas" & _
         "kBlank"), Boolean)
         Me.deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.MaskType = CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.MaskType"), DevExpress.XtraEditors.Mask.MaskType)
-        Me.deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.SaveLiteral = CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.SaveLiter" &
+        Me.deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.SaveLiteral = CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.SaveLiter" & _
         "al"), Boolean)
-        Me.deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.ShowPlaceHolders = CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.ShowPlace" &
+        Me.deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.ShowPlaceHolders = CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.Mask.ShowPlace" & _
         "Holders"), Boolean)
-        Me.deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.NullValuePrompt = resources.GetString("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.NullValuePromp" &
+        Me.deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.NullValuePrompt = resources.GetString("deDateOfAdmissionHospitalization.Properties.CalendarTimeProperties.NullValuePromp" & _
         "t")
         Me.deDateOfAdmissionHospitalization.Properties.Mask.EditMask = resources.GetString("deDateOfAdmissionHospitalization.Properties.Mask.EditMask")
         Me.deDateOfAdmissionHospitalization.Properties.Mask.IgnoreMaskBlank = CType(resources.GetObject("deDateOfAdmissionHospitalization.Properties.Mask.IgnoreMaskBlank"), Boolean)
@@ -2732,7 +2737,7 @@ Public Class HumanCaseDetail
         'btnRemoveAntimicrobialTherapy
         '
         Me.btnRemoveAntimicrobialTherapy.Appearance.Options.UseFont = True
-        Me.btnRemoveAntimicrobialTherapy.Image = Global.EIDSS.My.Resources.Resources.Delete_Remove
+        Me.btnRemoveAntimicrobialTherapy.Image = Global.eidss.My.Resources.Resources.Delete_Remove
         resources.ApplyResources(Me.btnRemoveAntimicrobialTherapy, "btnRemoveAntimicrobialTherapy")
         Me.btnRemoveAntimicrobialTherapy.Name = "btnRemoveAntimicrobialTherapy"
         '
@@ -2948,7 +2953,7 @@ Public Class HumanCaseDetail
         resources.ApplyResources(Me.txtContactName, "txtContactName")
         SerializableAppearanceObject43.Options.UseFont = True
         SerializableAppearanceObject44.Options.UseFont = True
-        Me.txtContactName.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("txtContactName.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("txtContactName.Buttons1"), CType(resources.GetObject("txtContactName.Buttons2"), Integer), CType(resources.GetObject("txtContactName.Buttons3"), Boolean), CType(resources.GetObject("txtContactName.Buttons4"), Boolean), CType(resources.GetObject("txtContactName.Buttons5"), Boolean), CType(resources.GetObject("txtContactName.Buttons6"), DevExpress.XtraEditors.ImageLocation), Global.EIDSS.My.Resources.Resources.Browse5, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject43, resources.GetString("txtContactName.Buttons7"), CType(resources.GetObject("txtContactName.Buttons8"), Object), CType(resources.GetObject("txtContactName.Buttons9"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("txtContactName.Buttons10"), Boolean)), New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("txtContactName.Buttons11"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("txtContactName.Buttons12"), CType(resources.GetObject("txtContactName.Buttons13"), Integer), CType(resources.GetObject("txtContactName.Buttons14"), Boolean), CType(resources.GetObject("txtContactName.Buttons15"), Boolean), CType(resources.GetObject("txtContactName.Buttons16"), Boolean), CType(resources.GetObject("txtContactName.Buttons17"), DevExpress.XtraEditors.ImageLocation), CType(resources.GetObject("txtContactName.Buttons18"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject44, resources.GetString("txtContactName.Buttons19"), CType(resources.GetObject("txtContactName.Buttons20"), Object), CType(resources.GetObject("txtContactName.Buttons21"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("txtContactName.Buttons22"), Boolean))})
+        Me.txtContactName.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("txtContactName.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("txtContactName.Buttons1"), CType(resources.GetObject("txtContactName.Buttons2"), Integer), CType(resources.GetObject("txtContactName.Buttons3"), Boolean), CType(resources.GetObject("txtContactName.Buttons4"), Boolean), CType(resources.GetObject("txtContactName.Buttons5"), Boolean), CType(resources.GetObject("txtContactName.Buttons6"), DevExpress.XtraEditors.ImageLocation), Global.eidss.My.Resources.Resources.Browse5, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject43, resources.GetString("txtContactName.Buttons7"), CType(resources.GetObject("txtContactName.Buttons8"), Object), CType(resources.GetObject("txtContactName.Buttons9"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("txtContactName.Buttons10"), Boolean)), New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("txtContactName.Buttons11"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("txtContactName.Buttons12"), CType(resources.GetObject("txtContactName.Buttons13"), Integer), CType(resources.GetObject("txtContactName.Buttons14"), Boolean), CType(resources.GetObject("txtContactName.Buttons15"), Boolean), CType(resources.GetObject("txtContactName.Buttons16"), Boolean), CType(resources.GetObject("txtContactName.Buttons17"), DevExpress.XtraEditors.ImageLocation), CType(resources.GetObject("txtContactName.Buttons18"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject44, resources.GetString("txtContactName.Buttons19"), CType(resources.GetObject("txtContactName.Buttons20"), Object), CType(resources.GetObject("txtContactName.Buttons21"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("txtContactName.Buttons22"), Boolean))})
         Me.txtContactName.Mask.EditMask = resources.GetString("txtContactName.Mask.EditMask")
         Me.txtContactName.Mask.IgnoreMaskBlank = CType(resources.GetObject("txtContactName.Mask.IgnoreMaskBlank"), Boolean)
         Me.txtContactName.Mask.SaveLiteral = CType(resources.GetObject("txtContactName.Mask.SaveLiteral"), Boolean)
@@ -3053,21 +3058,21 @@ Public Class HumanCaseDetail
         '
         resources.ApplyResources(Me.btnAddContact, "btnAddContact")
         Me.btnAddContact.Appearance.Options.UseFont = True
-        Me.btnAddContact.Image = Global.EIDSS.My.Resources.Resources.add
+        Me.btnAddContact.Image = Global.eidss.My.Resources.Resources.add
         Me.btnAddContact.Name = "btnAddContact"
         '
         'btnDeleteContact
         '
         resources.ApplyResources(Me.btnDeleteContact, "btnDeleteContact")
         Me.btnDeleteContact.Appearance.Options.UseFont = True
-        Me.btnDeleteContact.Image = Global.EIDSS.My.Resources.Resources.Delete_Remove
+        Me.btnDeleteContact.Image = Global.eidss.My.Resources.Resources.Delete_Remove
         Me.btnDeleteContact.Name = "btnDeleteContact"
         '
         'btnEditContact
         '
         resources.ApplyResources(Me.btnEditContact, "btnEditContact")
         Me.btnEditContact.Appearance.Options.UseFont = True
-        Me.btnEditContact.Image = Global.EIDSS.My.Resources.Resources.edit
+        Me.btnEditContact.Image = Global.eidss.My.Resources.Resources.edit
         Me.btnEditContact.Name = "btnEditContact"
         '
         'tpCaseClassification
@@ -3184,11 +3189,11 @@ Public Class HumanCaseDetail
         SerializableAppearanceObject49.Options.UseFont = True
         Me.dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons1"), CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons2"), Integer), CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons3"), Boolean), CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons4"), Boolean), CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons5"), Boolean), CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons6"), DevExpress.XtraEditors.ImageLocation), CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons7"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject49, resources.GetString("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons8"), CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons9"), Object), CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons10"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Buttons11"), Boolean))})
         Me.dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.EditMask = resources.GetString("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.EditMask")
-        Me.dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.IgnoreMaskBlank = CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.IgnoreMaskBl" &
+        Me.dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.IgnoreMaskBlank = CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.IgnoreMaskBl" & _
         "ank"), Boolean)
         Me.dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.MaskType = CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.MaskType"), DevExpress.XtraEditors.Mask.MaskType)
         Me.dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.SaveLiteral = CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.SaveLiteral"), Boolean)
-        Me.dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.ShowPlaceHolders = CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.ShowPlaceHol" &
+        Me.dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.ShowPlaceHolders = CType(resources.GetObject("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.Mask.ShowPlaceHol" & _
         "ders"), Boolean)
         Me.dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.NullValuePrompt = resources.GetString("dtFinalCaseClassificationDate.Properties.CalendarTimeProperties.NullValuePrompt")
         Me.dtFinalCaseClassificationDate.Properties.Mask.EditMask = resources.GetString("dtFinalCaseClassificationDate.Properties.Mask.EditMask")
@@ -3441,7 +3446,7 @@ Public Class HumanCaseDetail
         SerializableAppearanceObject56.Options.UseFont = True
         SerializableAppearanceObject57.Options.UseFont = True
         SerializableAppearanceObject58.Options.UseFont = True
-        Me.cbOutbreakID.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("cbOutbreakID.Properties.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("cbOutbreakID.Properties.Buttons1"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons2"), Integer), CType(resources.GetObject("cbOutbreakID.Properties.Buttons3"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons4"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons5"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons6"), DevExpress.XtraEditors.ImageLocation), Global.EIDSS.My.Resources.Resources.Browse5, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject56, resources.GetString("cbOutbreakID.Properties.Buttons7"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons8"), Object), CType(resources.GetObject("cbOutbreakID.Properties.Buttons9"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("cbOutbreakID.Properties.Buttons10"), Boolean)), New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("cbOutbreakID.Properties.Buttons11"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("cbOutbreakID.Properties.Buttons12"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons13"), Integer), CType(resources.GetObject("cbOutbreakID.Properties.Buttons14"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons15"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons16"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons17"), DevExpress.XtraEditors.ImageLocation), CType(resources.GetObject("cbOutbreakID.Properties.Buttons18"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject57, resources.GetString("cbOutbreakID.Properties.Buttons19"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons20"), Object), CType(resources.GetObject("cbOutbreakID.Properties.Buttons21"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("cbOutbreakID.Properties.Buttons22"), Boolean)), New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("cbOutbreakID.Properties.Buttons23"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("cbOutbreakID.Properties.Buttons24"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons25"), Integer), CType(resources.GetObject("cbOutbreakID.Properties.Buttons26"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons27"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons28"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons29"), DevExpress.XtraEditors.ImageLocation), CType(resources.GetObject("cbOutbreakID.Properties.Buttons30"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject58, resources.GetString("cbOutbreakID.Properties.Buttons31"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons32"), Object), CType(resources.GetObject("cbOutbreakID.Properties.Buttons33"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("cbOutbreakID.Properties.Buttons34"), Boolean))})
+        Me.cbOutbreakID.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("cbOutbreakID.Properties.Buttons"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("cbOutbreakID.Properties.Buttons1"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons2"), Integer), CType(resources.GetObject("cbOutbreakID.Properties.Buttons3"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons4"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons5"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons6"), DevExpress.XtraEditors.ImageLocation), Global.eidss.My.Resources.Resources.Browse5, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject56, resources.GetString("cbOutbreakID.Properties.Buttons7"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons8"), Object), CType(resources.GetObject("cbOutbreakID.Properties.Buttons9"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("cbOutbreakID.Properties.Buttons10"), Boolean)), New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("cbOutbreakID.Properties.Buttons11"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("cbOutbreakID.Properties.Buttons12"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons13"), Integer), CType(resources.GetObject("cbOutbreakID.Properties.Buttons14"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons15"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons16"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons17"), DevExpress.XtraEditors.ImageLocation), CType(resources.GetObject("cbOutbreakID.Properties.Buttons18"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject57, resources.GetString("cbOutbreakID.Properties.Buttons19"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons20"), Object), CType(resources.GetObject("cbOutbreakID.Properties.Buttons21"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("cbOutbreakID.Properties.Buttons22"), Boolean)), New DevExpress.XtraEditors.Controls.EditorButton(CType(resources.GetObject("cbOutbreakID.Properties.Buttons23"), DevExpress.XtraEditors.Controls.ButtonPredefines), resources.GetString("cbOutbreakID.Properties.Buttons24"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons25"), Integer), CType(resources.GetObject("cbOutbreakID.Properties.Buttons26"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons27"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons28"), Boolean), CType(resources.GetObject("cbOutbreakID.Properties.Buttons29"), DevExpress.XtraEditors.ImageLocation), CType(resources.GetObject("cbOutbreakID.Properties.Buttons30"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject58, resources.GetString("cbOutbreakID.Properties.Buttons31"), CType(resources.GetObject("cbOutbreakID.Properties.Buttons32"), Object), CType(resources.GetObject("cbOutbreakID.Properties.Buttons33"), DevExpress.Utils.SuperToolTip), CType(resources.GetObject("cbOutbreakID.Properties.Buttons34"), Boolean))})
         Me.cbOutbreakID.Properties.NullText = resources.GetString("cbOutbreakID.Properties.NullText")
         Me.cbOutbreakID.Properties.NullValuePrompt = resources.GetString("cbOutbreakID.Properties.NullValuePrompt")
         Me.cbOutbreakID.Properties.ShowDropDown = DevExpress.XtraEditors.Controls.ShowDropDown.Never
@@ -4105,10 +4110,17 @@ Public Class HumanCaseDetail
         Me.miNotificationFormDTRA.Index = -1
         resources.ApplyResources(Me.miNotificationFormDTRA, "miNotificationFormDTRA")
         '
+        'miNotificationFormUkraine
+        '
+        Me.miNotificationFormUkraine.Index = -1
+        resources.ApplyResources(Me.miNotificationFormUkraine, "miNotificationFormUkraine")
+        '
         'miNotificationFormTanzania
         '
         Me.miNotificationFormTanzania.Index = -1
         resources.ApplyResources(Me.miNotificationFormTanzania, "miNotificationFormTanzania")
+
+
         '
         'PopUpButton2
         '
@@ -4254,21 +4266,21 @@ Public Class HumanCaseDetail
         '
         resources.ApplyResources(Me.btnSearchHumanCase, "btnSearchHumanCase")
         Me.btnSearchHumanCase.Appearance.Options.UseFont = True
-        Me.btnSearchHumanCase.Image = Global.EIDSS.My.Resources.Resources.Browse5
+        Me.btnSearchHumanCase.Image = Global.eidss.My.Resources.Resources.Browse5
         Me.btnSearchHumanCase.Name = "btnSearchHumanCase"
         '
         'btnClear
         '
         resources.ApplyResources(Me.btnClear, "btnClear")
         Me.btnClear.Appearance.Options.UseFont = True
-        Me.btnClear.Image = Global.EIDSS.My.Resources.Resources.Clear_Cancel_Changes1
+        Me.btnClear.Image = Global.eidss.My.Resources.Resources.Clear_Cancel_Changes1
         Me.btnClear.Name = "btnClear"
         '
         'btnSearchInBrowseMode
         '
         resources.ApplyResources(Me.btnSearchInBrowseMode, "btnSearchInBrowseMode")
         Me.btnSearchInBrowseMode.Appearance.Options.UseFont = True
-        Me.btnSearchInBrowseMode.Image = Global.EIDSS.My.Resources.Resources.Search
+        Me.btnSearchInBrowseMode.Image = Global.eidss.My.Resources.Resources.Search
         Me.btnSearchInBrowseMode.Name = "btnSearchInBrowseMode"
         '
         'HumanCaseDetail
@@ -4300,7 +4312,7 @@ Public Class HumanCaseDetail
         Me.FormID = "H02"
         Me.HelpTopicID = "HC_H02"
         Me.KeyFieldName = "idfCase"
-        Me.LeftIcon = Global.EIDSS.My.Resources.Resources.Human_Case__large_
+        Me.LeftIcon = Global.eidss.My.Resources.Resources.Human_Case__large_
         Me.Name = "HumanCaseDetail"
         Me.ObjectName = "HumanCase"
         Me.ShowNewButton = True
@@ -4493,7 +4505,7 @@ Public Class HumanCaseDetail
         ma.BigIconIndex = MenuIcons.NewHumanCase
         ma.Name = "btnNewHumanCase"
         ma.Group = CInt(MenuGroup.CreateCase)
-        ma.SelectPermission = PermissionHelper.InsertPermission(EIDSS.model.Enums.EIDSSPermissionObject.HumanCase)
+        ma.SelectPermission = PermissionHelper.InsertPermission(eidss.model.Enums.EIDSSPermissionObject.HumanCase)
 
         'Toolbar menu
         ma = New MenuAction(AddressOf ShowMe, MenuActionManager.Instance, MenuActionManager.Instance.Journals, "ToolbarNewHumanCase", 100100)
@@ -4503,14 +4515,14 @@ Public Class HumanCaseDetail
         ma.Name = "btnNewHumanCase"
         ma.Order = 100100
         ma.Group = CInt(MenuGroup.ToolbarCreate)
-        ma.SelectPermission = PermissionHelper.InsertPermission(EIDSS.model.Enums.EIDSSPermissionObject.HumanCase)
+        ma.SelectPermission = PermissionHelper.InsertPermission(eidss.model.Enums.EIDSSPermissionObject.HumanCase)
 
         ma = New MenuAction(AddressOf ShowSearchMode, MenuActionManager.Instance, MenuActionManager.Instance.Search, "MenuSearchHumanCaseInBrowseMode", 220)
         ma.ShowInToolbar = False
         ma.BigIconIndex = MenuIcons.SearchHumanCaseInBrowseMode
         ma.SmallIconIndex = MenuIconsSmall.SearchHumanCaseInBrowseMode
         ma.Order = 22
-        ma.SelectPermission = PermissionHelper.SelectPermission(EIDSS.model.Enums.EIDSSPermissionObject.HumanCase)
+        ma.SelectPermission = PermissionHelper.SelectPermission(eidss.model.Enums.EIDSSPermissionObject.HumanCase)
     End Sub
 
     Public Shared Sub ShowMe()
@@ -4553,7 +4565,7 @@ Public Class HumanCaseDetail
         End If
     End Sub
     Private Sub ResetFFTemplate()
-        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
+        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
                (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
             baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsCSFormTemplate") = DBNull.Value
             baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsEPIFormTemplate") = DBNull.Value
@@ -4613,7 +4625,7 @@ Public Class HumanCaseDetail
             Dim Diag As Long = -1
             Dim CSObs As Long = -1
             Dim EpiObs As Long = -1
-            If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
+            If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
                (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
                 If Not Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis")) Then
                     Diag = CType(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis"), Long)
@@ -4643,7 +4655,7 @@ Public Class HumanCaseDetail
                         End If
                         FFClinicalSigns.ShowFlexibleFormByDeterminant(Diag, CSObs, FFType.HumanClinicalSigns, True)
                     End If
-                    baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsCSFormTemplate") =
+                    baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsCSFormTemplate") = _
                         GetDBTemplateID(FFClinicalSigns.TemplateID)
                 Else
                     CSTemplateID = CLng(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsCSFormTemplate"))
@@ -4663,7 +4675,7 @@ Public Class HumanCaseDetail
                         End If
                         ffEpiInvestigations.ShowFlexibleFormByDeterminant(Diag, EpiObs, FFType.HumanEpiInvestigations, True)
                     End If
-                    baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsEPIFormTemplate") =
+                    baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsEPIFormTemplate") = _
                         GetDBTemplateID(ffEpiInvestigations.TemplateID)
                 Else
                     EpiTemplateID = CLng(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsEPIFormTemplate"))
@@ -4738,6 +4750,17 @@ Public Class HumanCaseDetail
     End Sub
 
 
+    Private Sub miNotificationFormUkraine_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles miNotificationFormUkraine.Click
+        If baseDataSet Is Nothing OrElse baseDataSet.Tables.Count = 0 Then
+            Return
+        End If
+        If (Not IsSearchMode()) AndAlso Post(PostType.FinalPosting) Then
+            Dim key As Long = CLng(GetKey(HumanCase_DB.tlbHumanCase, "idfCase"))
+            EidssSiteContext.ReportFactory.HumUrgentyNotificationUkraine(key)
+        End If
+    End Sub
+
+
     Private Sub miNotificationFormTanzania_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles miNotificationFormTanzania.Click
         If baseDataSet Is Nothing OrElse baseDataSet.Tables.Count = 0 Then
             Return
@@ -4786,15 +4809,15 @@ Public Class HumanCaseDetail
         If Not sender Is dtChangedDiagnosisDate Then dtChangedDiagnosisDate.Enabled = False
         If (TypeOf (sender) Is Control) Then
             Dim Tag As TagHelper = TagHelper.GetTagHelper(CType(sender, Control))
-            If (Tag Is Nothing) OrElse (Tag.Tag Is Nothing) OrElse
+            If (Tag Is Nothing) OrElse (Tag.Tag Is Nothing) OrElse _
                (Not TypeOf Tag.Tag Is DevExpress.XtraEditors.Repository.RepositoryItemDateEdit) Then
                 HumanCaseSamplesPanel1.CollectionDate.ReadOnly = True
                 HumanCaseSamplesPanel1.SentDate.ReadOnly = True
             Else
-                If (Not CType(Tag.Tag, DevExpress.XtraEditors.Repository.RepositoryItemDateEdit) Is
+                If (Not CType(Tag.Tag, DevExpress.XtraEditors.Repository.RepositoryItemDateEdit) Is _
                     HumanCaseSamplesPanel1.CollectionDate) Then _
                     HumanCaseSamplesPanel1.CollectionDate.ReadOnly = True
-                If (Not CType(Tag.Tag, DevExpress.XtraEditors.Repository.RepositoryItemDateEdit) Is
+                If (Not CType(Tag.Tag, DevExpress.XtraEditors.Repository.RepositoryItemDateEdit) Is _
                     HumanCaseSamplesPanel1.SentDate) Then _
                     HumanCaseSamplesPanel1.SentDate.ReadOnly = True
             End If
@@ -4850,8 +4873,8 @@ Public Class HumanCaseDetail
         '    m_LastDateError.CheckMinMax()
         '    Return
         'End If
-        If m_CanSelectTab AndAlso (Not IsBRCheking) AndAlso
-           (((e.Page.Equals(tpCaseInvestigation)) AndAlso (tcCaseInvestigation.SelectedTabPage.Equals(tpSamples))) OrElse
+        If m_CanSelectTab AndAlso (Not IsBRCheking) AndAlso _
+           (((e.Page.Equals(tpCaseInvestigation)) AndAlso (tcCaseInvestigation.SelectedTabPage.Equals(tpSamples))) OrElse _
             (e.Page.Equals(tpSamples))) Then
             e.Cancel = (Not HumanCaseSamplesPanel1.ValidateSamplesData(True)) ' OrElse (Not Check_BR())
         End If
@@ -5081,15 +5104,15 @@ Public Class HumanCaseDetail
 
     Public Sub Check_BR(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim IsGlobalAction As Boolean = False
-        If (FormCloseButtonClicked() OrElse (Me.ActiveControl Is OkButton) OrElse (Me.ActiveControl Is SaveButton) OrElse
-            (Me.ActiveControl Is CancelButton) OrElse (Me.ActiveControl Is NewButton) OrElse
-            (Me.ActiveControl Is DeleteButton) OrElse (Me.ActiveControl Is btnSearch) OrElse
-            (Me.ActiveControl Is btnSearchHumanCase) OrElse (Me.ActiveControl Is btnClear) OrElse
-            (Me.ActiveControl Is bntNextCase) OrElse (Me.ActiveControl Is bntPreviousCase) OrElse
-            (Me.ActiveControl Is btnFirstCase) OrElse (Me.ActiveControl Is btnLastCase) OrElse
-            (Me.ActiveControl Is btnNewCase) OrElse (Me.ActiveControl Is btnNextCase1) OrElse
-            (Me.ActiveControl Is btnPrevCase1) OrElse (Me.ActiveControl Is btnFirstCase1) OrElse
-            (Me.ActiveControl Is btnLastCase1) OrElse (Me.ActiveControl Is btnNewCase1)) AndAlso
+        If (FormCloseButtonClicked() OrElse (Me.ActiveControl Is OkButton) OrElse (Me.ActiveControl Is SaveButton) OrElse _
+            (Me.ActiveControl Is CancelButton) OrElse (Me.ActiveControl Is NewButton) OrElse _
+            (Me.ActiveControl Is DeleteButton) OrElse (Me.ActiveControl Is btnSearch) OrElse _
+            (Me.ActiveControl Is btnSearchHumanCase) OrElse (Me.ActiveControl Is btnClear) OrElse _
+            (Me.ActiveControl Is bntNextCase) OrElse (Me.ActiveControl Is bntPreviousCase) OrElse _
+            (Me.ActiveControl Is btnFirstCase) OrElse (Me.ActiveControl Is btnLastCase) OrElse _
+            (Me.ActiveControl Is btnNewCase) OrElse (Me.ActiveControl Is btnNextCase1) OrElse _
+            (Me.ActiveControl Is btnPrevCase1) OrElse (Me.ActiveControl Is btnFirstCase1) OrElse _
+            (Me.ActiveControl Is btnLastCase1) OrElse (Me.ActiveControl Is btnNewCase1)) AndAlso _
            (TypeOf (sender) Is DevExpress.XtraEditors.DateEdit) Then
             Me.m_LastFocusedControl = CType(sender, DevExpress.XtraEditors.DateEdit)
             m_LastFocusedControl.Focus()
@@ -5128,7 +5151,7 @@ Public Class HumanCaseDetail
     End Property
 
     Private m_ParentHumanCaseList As List(Of HumanCaseListItem) = Nothing
-    <CLSCompliant(False)>
+    <CLSCompliant(False)> _
     Public Property ParentHumanCaseList() As List(Of HumanCaseListItem)
         Get
             Return m_ParentHumanCaseList
@@ -5233,13 +5256,13 @@ Public Class HumanCaseDetail
         bntPreviousCase.Enabled = True
         bntNextCase.Enabled = True
         btnLastCase.Enabled = True
-        If EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(EIDSS.model.Enums.EIDSSPermissionObject.HumanCase)) Then
+        If eidss.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(eidss.model.Enums.EIDSSPermissionObject.HumanCase)) Then
             btnNewCase.Visible = True
         Else
             btnNewCase.Visible = False
             btnNewCase1.Visible = False
         End If
-        If (Not EIDSS.model.Core.EidssSiteContext.Instance.SiteID.Equals(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsSite"))) OrElse (txtCaseNumber1.Visible) Then
+        If (Not eidss.model.Core.EidssSiteContext.Instance.SiteID.Equals(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsSite"))) OrElse (txtCaseNumber1.Visible) Then
             btnFirstCase.Visible = False
             bntPreviousCase.Visible = False
             txtCaseNumber.Visible = False
@@ -5284,8 +5307,8 @@ Public Class HumanCaseDetail
                 End If
                 If Not okToCancel Then
                     If newVal > caseCount OrElse newVal < 0 Then okToCancel = True
-                    If (newVal = 0) AndAlso
-                       (Not EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(EIDSS.model.Enums.EIDSSPermissionObject.HumanCase))) Then
+                    If (newVal = 0) AndAlso _
+                       (Not eidss.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(eidss.model.Enums.EIDSSPermissionObject.HumanCase))) Then
                         okToCancel = True
                     End If
                 End If
@@ -5497,16 +5520,16 @@ Public Class HumanCaseDetail
             btnPrevCase1.Enabled = True
             btnNextCase1.Enabled = True
             btnLastCase1.Enabled = True
-            If EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(EIDSS.model.Enums.EIDSSPermissionObject.HumanCase)) Then
+            If eidss.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(eidss.model.Enums.EIDSSPermissionObject.HumanCase)) Then
                 btnNewCase1.Visible = True
             Else
                 btnNewCase1.Visible = False
                 btnNewCase.Visible = False
             End If
         End If
-        If _showNavigator1 AndAlso
-           (IsSearchMode() OrElse (Not m_ShowNavigators) OrElse
-            ((BaseSettings.ShowRecordsFromCurrentSiteForNewCase = True) AndAlso
+        If _showNavigator1 AndAlso _
+           (IsSearchMode() OrElse (Not m_ShowNavigators) OrElse _
+            ((BaseSettings.ShowRecordsFromCurrentSiteForNewCase = True) AndAlso _
              (Not HumanCaseDbService Is Nothing) AndAlso HumanCaseDbService.IsNewObject)) _
         Then _showNavigator1 = False
         '--Version 3--Dim ParentListForm As BasePagedListForm = Nothing
@@ -5565,7 +5588,7 @@ Public Class HumanCaseDetail
             _curCaseNumber1 = 0
             Dim item As HumanCaseListItem = Nothing
 
-            While _curCaseNumber1 < caseCount AndAlso
+            While _curCaseNumber1 < caseCount AndAlso _
                 (Utils.Str(m_ParentHumanCaseList.Item(_curCaseNumber1).idfCase) <> Utils.Str(GetKey(HumanCase_DB.tlbHumanCase, "idfCase")))
                 '--Version 3--dtHumanCase.Rows(_curCaseNumber1)(0).ToString <> Utils.Str(GetKey(HumanCase_DB.tlbHumanCase, "idfCase"))
                 _curCaseNumber1 = _curCaseNumber1 + 1
@@ -5612,8 +5635,8 @@ Public Class HumanCaseDetail
                 End If
                 If Not okToCancel Then
                     If newVal > caseCount OrElse newVal < 0 Then okToCancel = True
-                    If (newVal = 0) AndAlso
-                       (Not EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(EIDSS.model.Enums.EIDSSPermissionObject.HumanCase))) Then
+                    If (newVal = 0) AndAlso _
+                       (Not eidss.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(eidss.model.Enums.EIDSSPermissionObject.HumanCase))) Then
                         okToCancel = True
                     End If
                 End If
@@ -5628,7 +5651,7 @@ Public Class HumanCaseDetail
             Dim strResult As String = ""
             Dim idResult As Object
 
-            If (caseNumber = 0) OrElse (m_ParentHumanCaseList Is Nothing) OrElse
+            If (caseNumber = 0) OrElse (m_ParentHumanCaseList Is Nothing) OrElse _
                (m_ParentHumanCaseList.Count < caseNumber) OrElse (m_ParentHumanCaseList.Count = 0) Then
                 idResult = Nothing
             Else
@@ -5789,7 +5812,7 @@ Public Class HumanCaseDetail
 
     Private ReadOnly Property IsSearchMode() As Boolean
         Get
-            Return (Not Me.HumanCaseDbService Is Nothing) AndAlso
+            Return (Not Me.HumanCaseDbService Is Nothing) AndAlso _
                    (Utils.SEARCH_MODE_ID.Equals(Me.HumanCaseDbService.ID))
         End Get
     End Property
@@ -5821,7 +5844,7 @@ Public Class HumanCaseDetail
     End Function
     Private m_IsAgePersonalData As Boolean
     Protected Overrides Sub AfterLoad()
-        If (Not IsSearchMode()) AndAlso (Not HumanCaseDbService Is Nothing) AndAlso
+        If (Not IsSearchMode()) AndAlso (Not HumanCaseDbService Is Nothing) AndAlso _
            (HumanCaseDbService.IsNewObject) AndAlso (Utils.IsEmpty(PatientInfo.RootID)) Then
             PatientInfo.RootID = BaseDbService.NewIntID
         End If
@@ -5844,7 +5867,7 @@ Public Class HumanCaseDetail
         If IsSearchMode() Then
             Return WinUtils.ConfirmMessage(EidssMessages.Get("msgCancelPromptInSearchMode"))
         End If
-        If ((HumanCaseDbService Is Nothing) OrElse (Not HumanCaseDbService.IsNewObject)) AndAlso
+        If ((HumanCaseDbService Is Nothing) OrElse (Not HumanCaseDbService.IsNewObject)) AndAlso _
             (Not HasChanges()) Then
             SetClosedCaseReadOnly()
             Return True
@@ -5919,7 +5942,7 @@ Public Class HumanCaseDetail
     End Function
 
 
-    <Browsable(False), Localizable(False), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
+    <Browsable(False), Localizable(False), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)> _
     Public Overrides Property [ReadOnly]() As Boolean
         Get
             Return MyBase.ReadOnly
@@ -5939,9 +5962,9 @@ Public Class HumanCaseDetail
                         btnSearchHumanCase.Enabled = True
                         btnSearch.Visible = True
                         btnSearch.Enabled = True
-                        If BaseSettings.ShowNavigatorInH02Form AndAlso
-                            EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(
-                                                    EIDSS.model.Enums.EIDSSPermissionObject.HumanCase)) Then
+                        If BaseSettings.ShowNavigatorInH02Form AndAlso _
+                            eidss.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission( _
+                                                    eidss.model.Enums.EIDSSPermissionObject.HumanCase)) Then
                             If _showNavigator1 Then
                                 btnNewCase.Visible = False
                                 btnNewCase1.Visible = True
@@ -6051,10 +6074,10 @@ Public Class HumanCaseDetail
 
         txtCaseID.TabStop = False
         Core.LookupBinder.BindTextEdit(txtCaseID, baseDataSet, HumanCase_DB.tlbHumanCase + ".strCaseID")
-        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
-           (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
+        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
+           (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
            (Not Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("strCaseID"))) Then
-            txtCaseID.ToolTip =
+            txtCaseID.ToolTip = _
                 Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("strCaseID"))
         Else
             txtCaseID.ToolTip = Nothing
@@ -6070,7 +6093,7 @@ Public Class HumanCaseDetail
         dtEnteringDate.Properties.Buttons.Clear()
         dtEnteringDate.Enabled = False
         dtEnteringDate.TabStop = False
-        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
+        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
            (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
             dtEnteringDate.EditValue = baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("datModificationDate")
         End If
@@ -6084,10 +6107,10 @@ Public Class HumanCaseDetail
     End Sub
 
     Private Sub SetCaseStatusState()
-        If (Not IsSearchMode()) AndAlso (Not baseDataSet Is Nothing) AndAlso
-           (baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase)) AndAlso
-           (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
-           baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsCaseProgressStatus").Equals(CLng(CaseStatus.Closed)) AndAlso
+        If (Not IsSearchMode()) AndAlso (Not baseDataSet Is Nothing) AndAlso _
+           (baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase)) AndAlso _
+           (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
+           baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsCaseProgressStatus").Equals(CLng(CaseStatus.Closed)) AndAlso _
            (Not Me.ReadOnly) Then
             IsStatusReadOnly = True
             Me.ReadOnly = True
@@ -6107,7 +6130,7 @@ Public Class HumanCaseDetail
         Dim TentativeDiag As Object = Nothing
         Dim FinalDiag As Object = Nothing
 
-        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
+        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
            (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
 
             TentativeDiag = baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsTentativeDiagnosis")
@@ -6169,7 +6192,7 @@ Public Class HumanCaseDetail
 
     Sub SetBasisOfDiagnosisState()
 
-        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
+        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
            (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
 
             Dim TentativeDiag As Object = baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsTentativeDiagnosis")
@@ -6293,8 +6316,8 @@ Public Class HumanCaseDetail
         'rgCurrentPatientLocation
         Core.LookupBinder.BindBaseLookup(cbCurrentPatientLocation, baseDataSet, HumanCase_DB.tlbHumanCase + ".idfsHospitalizationStatus", db.BaseReferenceType.rftHospStatus, False)
         'CurrentLocation
-        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
-           (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
+        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
+           (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
            (Not Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsHospitalizationStatus"))) Then
             SetHospitalizationStatusVisibility(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsHospitalizationStatus"))
             Dim hospStatus As HospitalizationStatus = CType(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsHospitalizationStatus"), HospitalizationStatus)
@@ -6525,7 +6548,7 @@ Public Class HumanCaseDetail
 
     Private Sub BindLocation()
 
-        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
+        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
            (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
             cbGeoLocation.Bind(baseDataSet, HumanCase_DB.tlbHumanCase + ".idfPointGeoLocation")
         End If
@@ -6558,11 +6581,13 @@ Public Class HumanCaseDetail
 
         If baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0 Then
             If (Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsYNHospitalization"), "10100003") <> "10100001") Then ' default value = 10100003 = "ynvUnknown", 10100001 = "ynvYes"
+                UpdateHospitalizationAttributes(False)
                 deDateOfAdmissionHospitalization.Enabled = False
                 txtHospital.Enabled = False
             Else
                 deDateOfAdmissionHospitalization.Enabled = True
                 txtHospital.Enabled = True
+                UpdateHospitalizationAttributes(True)
             End If
         End If
 
@@ -6749,10 +6774,10 @@ Public Class HumanCaseDetail
     End Sub
 
     Private Sub SetClosedCaseReadOnly()
-        If (Not IsSearchMode()) AndAlso (Not baseDataSet Is Nothing) AndAlso
-           (baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase)) AndAlso
-           (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
-           baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsCaseProgressStatus").Equals(CLng(CaseStatus.Closed)) AndAlso
+        If (Not IsSearchMode()) AndAlso (Not baseDataSet Is Nothing) AndAlso _
+           (baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase)) AndAlso _
+           (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
+           baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsCaseProgressStatus").Equals(CLng(CaseStatus.Closed)) AndAlso _
            (Not Me.ReadOnly) Then
             Me.ReadOnly = True
         End If
@@ -6760,9 +6785,9 @@ Public Class HumanCaseDetail
 
     Private ReadOnly Property IsCaseClosed() As Boolean
         Get
-            If (Not IsSearchMode()) AndAlso (Not baseDataSet Is Nothing) AndAlso
-               (baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase)) AndAlso
-               (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
+            If (Not IsSearchMode()) AndAlso (Not baseDataSet Is Nothing) AndAlso _
+               (baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase)) AndAlso _
+               (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
                baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsCaseProgressStatus").Equals(CLng(CaseStatus.Closed)) Then
                 Return True
             End If
@@ -6889,8 +6914,8 @@ Public Class HumanCaseDetail
 
 #Region "Field Value Properties"
     Private Function GetCurrentRepSourceName() As String
-        If (Not IsSearchMode()) AndAlso
-           baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
+        If (Not IsSearchMode()) AndAlso _
+           baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
            (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
             Dim keyVal As Object = baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfSentByOffice")
             If Not Utils.IsEmpty(keyVal) Then
@@ -6925,7 +6950,7 @@ Public Class HumanCaseDetail
                     End If
                 End If
                 DxControlsHelper.SetButtonEditButtonVisibility(cbChangedDiagnosis, ButtonPredefines.Glyph, Not Utils.IsEmpty(cbChangedDiagnosis.EditValue))
-            ElseIf baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
+            ElseIf baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
                    (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
 
                 If Not Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsTentativeDiagnosis")) Then
@@ -6944,7 +6969,7 @@ Public Class HumanCaseDetail
 
             If Not Utils.IsEmpty(InitDiagID) Then
                 If (m_strInitDiagID <> InitDiagID) Then
-                    Dim clinicalDiagName As String = LookupCache.GetLookupValue(
+                    Dim clinicalDiagName As String = LookupCache.GetLookupValue( _
                                     InitDiagID, LookupTables.HumanStandardDiagnosis, "Name")
                     txtClinicalDiagnosis.Properties.ReadOnly = False
                     txtClinicalDiagnosis.Text = clinicalDiagName
@@ -6959,7 +6984,7 @@ Public Class HumanCaseDetail
 
             If (Not Utils.IsEmpty(DiagID)) Then
                 If (m_DiagID <> DiagID) Then
-                    Dim FinalDiagName As String = LookupCache.GetLookupValue(
+                    Dim FinalDiagName As String = LookupCache.GetLookupValue( _
                                     DiagID, LookupTables.HumanStandardDiagnosis, "Name")
                     If Not IsSearchMode Then
                         cbCurrentDiagnosis.EditValue = DiagID
@@ -7011,7 +7036,7 @@ Public Class HumanCaseDetail
 
     Private Sub RefreshCaseClassification()
         Core.LookupBinder.ClearEditValueWithoutPrompt(cbCaseClassification)
-        If Not IsSearchMode() AndAlso baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
+        If Not IsSearchMode() AndAlso baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
                (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
             If Not Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalCaseStatus")) Then
                 cbCaseClassification.EditValue = baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalCaseStatus")
@@ -7404,15 +7429,15 @@ Public Class HumanCaseDetail
                 txtSymptomOnsetDate.Text = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern
             End If
             txtSymptomOnsetDate.Properties.ReadOnly = True
-        ElseIf (sender Is dtDiagnosisDate) AndAlso
-            (((Not IsSearchMode()) AndAlso
-              ((baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count = 0) OrElse
-               (Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis")))))
+        ElseIf (sender Is dtDiagnosisDate) AndAlso _
+            (((Not IsSearchMode()) AndAlso _
+              ((baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count = 0) OrElse _
+               (Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis"))))) _
             ) Then
             dtFinalDiagnosisDate.EditValue = dtDiagnosisDate.EditValue
         ElseIf (sender Is dtChangedDiagnosisDate) Then
-            If ((Not IsSearchMode()) AndAlso
-                ((baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count = 0) OrElse
+            If ((Not IsSearchMode()) AndAlso _
+                ((baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count = 0) OrElse _
                  (Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis"))))) Then
                 dtFinalDiagnosisDate.EditValue = dtDiagnosisDate.EditValue
             Else
@@ -7549,10 +7574,10 @@ Public Class HumanCaseDetail
     End Sub
 
     Private Sub txtLastPatientName_Leave(ByVal sender As Object, ByVal e As System.EventArgs)
-        If BaseSettings.SearchDuplicatesAutomatically AndAlso (Not IsSearchMode()) AndAlso Utils.IsEmpty(txtCaseID.EditValue) AndAlso
-           ClickDuplicateSearch AndAlso
-           Not (Utils.IsEmpty(PatientInfo.txtLastName.EditValue) AndAlso
-                Utils.IsEmpty(PatientInfo.txtSecondName.EditValue) AndAlso
+        If BaseSettings.SearchDuplicatesAutomatically AndAlso (Not IsSearchMode()) AndAlso Utils.IsEmpty(txtCaseID.EditValue) AndAlso _
+           ClickDuplicateSearch AndAlso _
+           Not (Utils.IsEmpty(PatientInfo.txtLastName.EditValue) AndAlso _
+                Utils.IsEmpty(PatientInfo.txtSecondName.EditValue) AndAlso _
                 Utils.IsEmpty(PatientInfo.txtFirstName.EditValue)) Then
             btnSearch.PerformClick()
             ClickDuplicateSearch = False
@@ -7575,11 +7600,11 @@ Public Class HumanCaseDetail
         If Not sender Is Me Then
             Return
         End If
-        If (Not IsSearchMode()) AndAlso
-           baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
+        If (Not IsSearchMode()) AndAlso _
+           baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
            (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
             dtEnteringDate.EditValue = baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("datModificationDate")
-            If (Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("strCaseID")) <>
+            If (Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("strCaseID")) <> _
                 Utils.Str(txtCaseID.ToolTip)) Then
                 If Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("strCaseID")) Then
                     txtCaseID.ToolTip = Nothing
@@ -7776,33 +7801,33 @@ Public Class HumanCaseDetail
         Dim duplicateRows As DataRow()
         Dim dob As DateTime = DateTime.Parse("01/01/1900")
         If (Not Utils.IsEmpty(contactRow("datDateOfBirth"))) Then dob = CDate(contactRow("datDateOfBirth"))
-        Dim duplicateCondition As String =
-            String.Format("IsNull(strName, '') = '{0}' and " +
-                          "IsNull(idfsHumanGender, -200) = {1} and " +
-                          "IsNull(idfsCountry, -200) = {2} and " +
-                          "IsNull(idfsRegion, -200) = {3} and " +
-                          "IsNull(idfsRayon, -200) = {4} and " +
-                          "IsNull(idfsSettlement, -200) = {5} and " +
-                          "IsNull(strPostCode, '') = '{6}' and " +
-                          "IsNull(strStreetName, '') = '{7}' and " +
-                          "IsNull(strHouse, '') = '{8}' and " +
-                          "IsNull(strBuilding, '') = '{9}' and " +
-                          "IsNull(strApartment, '') = '{10}' and " +
-                          "IsNull(datDateofBirth, #01/01/1900#) = #{11}# and " +
-                          "IsNull(idfContactedCasePerson, -1000) <> {12} ",
-                          Utils.Str(contactRow("strName")).Replace("'", "''"),
-                          Utils.Str(contactRow("idfsHumanGender"), "-200"),
-                          Utils.Str(contactRow("idfsCountry"), "-200"),
-                          Utils.Str(contactRow("idfsRegion"), "-200"),
-                          Utils.Str(contactRow("idfsRayon"), "-200"),
-                          Utils.Str(contactRow("idfsSettlement"), "-200"),
-                          Utils.Str(contactRow("strPostCode")).Replace("'", "''"),
-                          Utils.Str(contactRow("strStreetName")).Replace("'", "''"),
-                          Utils.Str(contactRow("strHouse")).Replace("'", "''"),
-                          Utils.Str(contactRow("strBuilding")).Replace("'", "''"),
-                          Utils.Str(contactRow("strApartment")).Replace("'", "''"),
-                          dob.ToString("d", DateTimeFormatInfo.InvariantInfo),
-                          Utils.Str(contactRow("idfContactedCasePerson"), "-1000")
+        Dim duplicateCondition As String = _
+            String.Format("IsNull(strName, '') = '{0}' and " + _
+                          "IsNull(idfsHumanGender, -200) = {1} and " + _
+                          "IsNull(idfsCountry, -200) = {2} and " + _
+                          "IsNull(idfsRegion, -200) = {3} and " + _
+                          "IsNull(idfsRayon, -200) = {4} and " + _
+                          "IsNull(idfsSettlement, -200) = {5} and " + _
+                          "IsNull(strPostCode, '') = '{6}' and " + _
+                          "IsNull(strStreetName, '') = '{7}' and " + _
+                          "IsNull(strHouse, '') = '{8}' and " + _
+                          "IsNull(strBuilding, '') = '{9}' and " + _
+                          "IsNull(strApartment, '') = '{10}' and " + _
+                          "IsNull(datDateofBirth, #01/01/1900#) = #{11}# and " + _
+                          "IsNull(idfContactedCasePerson, -1000) <> {12} ", _
+                          Utils.Str(contactRow("strName")).Replace("'", "''"), _
+                          Utils.Str(contactRow("idfsHumanGender"), "-200"), _
+                          Utils.Str(contactRow("idfsCountry"), "-200"), _
+                          Utils.Str(contactRow("idfsRegion"), "-200"), _
+                          Utils.Str(contactRow("idfsRayon"), "-200"), _
+                          Utils.Str(contactRow("idfsSettlement"), "-200"), _
+                          Utils.Str(contactRow("strPostCode")).Replace("'", "''"), _
+                          Utils.Str(contactRow("strStreetName")).Replace("'", "''"), _
+                          Utils.Str(contactRow("strHouse")).Replace("'", "''"), _
+                          Utils.Str(contactRow("strBuilding")).Replace("'", "''"), _
+                          Utils.Str(contactRow("strApartment")).Replace("'", "''"), _
+                          dob.ToString("d", DateTimeFormatInfo.InvariantInfo), _
+                          Utils.Str(contactRow("idfContactedCasePerson"), "-1000") _
                          )
         duplicateRows = contactRow.Table.Select(duplicateCondition)
         If duplicateRows.Length > 0 Then
@@ -8047,8 +8072,8 @@ Public Class HumanCaseDetail
                 btnSearchHumanCase.Enabled = True
                 btnSearch.Visible = True
                 btnSearch.Enabled = True
-                If EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(
-                                                    EIDSS.model.Enums.EIDSSPermissionObject.HumanCase)) Then
+                If eidss.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission( _
+                                                    eidss.model.Enums.EIDSSPermissionObject.HumanCase)) Then
                     Me.ShowNewButton = True
                 End If
             End If
@@ -8095,12 +8120,12 @@ Public Class HumanCaseDetail
 
     Private Sub cbDiagnosis_EditValueChanging(ByVal sender As Object, ByVal e As DevExpress.XtraEditors.Controls.ChangingEventArgs) Handles cbDiagnosis.EditValueChanging
         If Loading Then Return
-        If (Not Utils.IsEmpty(e.NewValue)) AndAlso
-           (((Not IsSearchMode()) AndAlso
-             (Utils.Str(e.NewValue) = Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis")))) OrElse
+        If (Not Utils.IsEmpty(e.NewValue)) AndAlso _
+           (((Not IsSearchMode()) AndAlso _
+             (Utils.Str(e.NewValue) = Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis")))) OrElse _
             (IsSearchMode() AndAlso (Utils.Str(e.NewValue) = Utils.Str(cbChangedDiagnosis.EditValue)))) Then
             Dim initialDiagnosis As String = LookupCache.GetLookupValue(e.NewValue, LookupTables.HumanStandardDiagnosis, "name")
-            Dim changedDiagnosis As String = IIf(IsSearchMode(), LookupCache.GetLookupValue(cbChangedDiagnosis.EditValue, LookupTables.HumanStandardDiagnosis, "name"),
+            Dim changedDiagnosis As String = IIf(IsSearchMode(), LookupCache.GetLookupValue(cbChangedDiagnosis.EditValue, LookupTables.HumanStandardDiagnosis, "name"), _
                                                  LookupCache.GetLookupValue(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis"), LookupTables.HumanStandardDiagnosis, "name")).ToString()
             MessageForm.Show(String.Format(EidssMessages.Get("msgWrongDiagnosis"), changedDiagnosis, initialDiagnosis))
             e.Cancel = True
@@ -8115,7 +8140,7 @@ Public Class HumanCaseDetail
             If IsSearchMode() Then Return Nothing
             If baseDataSet Is Nothing Then Return Nothing
             If Not baseDataSet.Tables.Contains(HumanCase_DB.tlbChangeDiagnosisHistory) Then Return Nothing
-            Dim dtDiagnosisChange As DataTable =
+            Dim dtDiagnosisChange As DataTable = _
                 baseDataSet.Tables(HumanCase_DB.tlbChangeDiagnosisHistory).GetChanges(DataRowState.Added)
             If (Not dtDiagnosisChange Is Nothing) AndAlso (dtDiagnosisChange.Rows.Count > 0) Then
                 Dim rDiagnosisChange As DataRow = baseDataSet.Tables(HumanCase_DB.tlbChangeDiagnosisHistory).Rows.Find(dtDiagnosisChange.Rows(0)("idfChangeDiagnosisHistory"))
@@ -8204,12 +8229,12 @@ Public Class HumanCaseDetail
 
     Private Sub cbChangedDiagnosis_EditValueChanging(ByVal sender As Object, ByVal e As DevExpress.XtraEditors.Controls.ChangingEventArgs) Handles cbChangedDiagnosis.EditValueChanging
         If Loading Then Return
-        If (Not Utils.IsEmpty(e.NewValue)) AndAlso
-           (((Not IsSearchMode()) AndAlso
-             (Utils.Str(e.NewValue) = Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsTentativeDiagnosis")))) OrElse
+        If (Not Utils.IsEmpty(e.NewValue)) AndAlso _
+           (((Not IsSearchMode()) AndAlso _
+             (Utils.Str(e.NewValue) = Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsTentativeDiagnosis")))) OrElse _
             (IsSearchMode() AndAlso (Utils.Str(e.NewValue) = Utils.Str(cbDiagnosis.EditValue)))) Then
             Dim changedDiagnosis As String = LookupCache.GetLookupValue(e.NewValue, LookupTables.HumanStandardDiagnosis, "name")
-            Dim initialDiagnosis As String = IIf(IsSearchMode(), LookupCache.GetLookupValue(cbDiagnosis.EditValue, LookupTables.HumanStandardDiagnosis, "name"),
+            Dim initialDiagnosis As String = IIf(IsSearchMode(), LookupCache.GetLookupValue(cbDiagnosis.EditValue, LookupTables.HumanStandardDiagnosis, "name"), _
                                                  LookupCache.GetLookupValue(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsTentativeDiagnosis"), LookupTables.HumanStandardDiagnosis, "name")).ToString()
             MessageForm.Show(String.Format(EidssMessages.Get("msgWrongDiagnosis"), changedDiagnosis, initialDiagnosis))
             e.Cancel = True
@@ -8219,13 +8244,13 @@ Public Class HumanCaseDetail
         'Ask for reason of the diagnosis changes
         If (e.Cancel = False) AndAlso (Not IsSearchMode()) Then
             Dim rDiagnosisChange As DataRow = GetNotSavedDiagnosisChange()
-            If ((Utils.Str(e.NewValue) =
-                 Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis")))) AndAlso
+            If ((Utils.Str(e.NewValue) = _
+                 Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis")))) AndAlso _
                (Not rDiagnosisChange Is Nothing) Then
                 rDiagnosisChange.Delete()
-            ElseIf ((Utils.Str(e.NewValue) <>
-                     Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis")))) AndAlso
-                   ((Me.State And BusinessObjectState.NewObject) = 0) AndAlso
+            ElseIf ((Utils.Str(e.NewValue) <> _
+                     Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsFinalDiagnosis")))) AndAlso _
+                   ((Me.State And BusinessObjectState.NewObject) = 0) AndAlso _
                    (rDiagnosisChange Is Nothing) Then
                 Dim frmReason As HumanCaseDiagnosisChangeReason = New HumanCaseDiagnosisChangeReason
                 Dim idfHumanCase As Object = GetKey(HumanCase_DB.tlbHumanCase, "idfCase")
@@ -8240,8 +8265,8 @@ Public Class HumanCaseDetail
                         rDiagnosisChange("datChangedDate") = DateTime.Now
                         rDiagnosisChange("idfsChangeDiagnosisReason") = frmReason.Reason
                         rDiagnosisChange("strReason") = frmReason.ReasonText
-                        rDiagnosisChange("idfPerson") = EIDSS.model.Core.EidssUserContext.User.EmployeeID
-                        rDiagnosisChange("strPersonName") = EIDSS.model.Core.EidssUserContext.User.FullName
+                        rDiagnosisChange("idfPerson") = eidss.model.Core.EidssUserContext.User.EmployeeID
+                        rDiagnosisChange("strPersonName") = eidss.model.Core.EidssUserContext.User.FullName
                         rDiagnosisChange("Organization") = EIDSS.model.Schema.OrganizationLookup.OrganizationNational
                         rDiagnosisChange("PreviousDiagnosisName") = LookupCache.GetLookupValue(e.OldValue, LookupTables.HumanStandardDiagnosis, "Name")
                         rDiagnosisChange("CurrentDiagnosisName") = LookupCache.GetLookupValue(e.NewValue, LookupTables.HumanStandardDiagnosis, "Name")
@@ -8672,12 +8697,12 @@ Public Class HumanCaseDetail
                     Dim pIdIsEmpty As Boolean = Utils.IsEmpty(pID)
 
                     If pIdIsEmpty Then
-                        If Not EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(EIDSS.model.Enums.EIDSSPermissionObject.Outbreak)) Then
+                        If Not eidss.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(eidss.model.Enums.EIDSSPermissionObject.Outbreak)) Then
                             MessageForm.Show(BvMessages.Get("msgNoInsertPermission", "You have no rights to create this object"))
                             Return
                         End If
                         pID = Nothing
-                    ElseIf Not EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.SelectPermission(EIDSS.model.Enums.EIDSSPermissionObject.Outbreak)) Then
+                    ElseIf Not eidss.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.SelectPermission(eidss.model.Enums.EIDSSPermissionObject.Outbreak)) Then
                         MessageForm.Show(BvMessages.Get("msgNoSelectPermission", "You have no rights to view this form"))
                         Return
                     End If
@@ -8698,16 +8723,16 @@ Public Class HumanCaseDetail
                         Dim idfsDiagnosisGroup As String = LookupCache.GetLookupValue(idfsDiagnosisOrDiagnosisGroup, LookupTables.DiagnosesAndGroups.ToString, "idfsDiagnosisGroup")
                         Dim strDiagnosisGroup As String = LookupCache.GetLookupValue(idfsDiagnosisGroup, LookupTables.DiagnosesAndGroups.ToString, "Name")
 
-                        SetOutbreak(sender, dlgOutbreakDetail.GetKey(),
-                                    dlgOutbreakDetail.GetKey("Outbreak", "strOutbreakID"),
-                                    idfsDiagnosisOrDiagnosisGroup,
-                                    strDiagnosisOrDiagnosisGroup,
-                                    idfsDiagnosisGroup,
-                                    strDiagnosisGroup,
+                        SetOutbreak(sender, dlgOutbreakDetail.GetKey(), _
+                                    dlgOutbreakDetail.GetKey("Outbreak", "strOutbreakID"), _
+                                    idfsDiagnosisOrDiagnosisGroup, _
+                                    strDiagnosisOrDiagnosisGroup, _
+                                    idfsDiagnosisGroup, _
+                                    strDiagnosisGroup, _
                                     baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0 AndAlso Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfOutbreak")))
                         DataEventManager.Flush()
 
-                    ElseIf Not pIdIsEmpty AndAlso dlgOutbreakDetail.DbService.ID Is Nothing AndAlso
+                    ElseIf Not pIdIsEmpty AndAlso dlgOutbreakDetail.DbService.ID Is Nothing AndAlso _
                            (IsSearchMode() OrElse baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
 
                         SetOutbreak(sender, DBNull.Value)
@@ -8743,12 +8768,12 @@ Public Class HumanCaseDetail
         Return humList(0)
     End Function
 
-    Private Sub SetOutbreak(ByVal sender As Object, ByVal idfOutbreak As Object,
-                            Optional ByVal strOutbreakID As Object = "",
-                            Optional ByVal idfsDiagnosis As Object = -1,
-                            Optional ByVal strDiagnosisOrDiagnosisGroup As Object = "",
-                            Optional ByVal idfsDiagnosisGroup As Object = -1,
-                            Optional ByVal strDiagnosisGroup As Object = "",
+    Private Sub SetOutbreak(ByVal sender As Object, ByVal idfOutbreak As Object, _
+                            Optional ByVal strOutbreakID As Object = "", _
+                            Optional ByVal idfsDiagnosis As Object = -1, _
+                            Optional ByVal strDiagnosisOrDiagnosisGroup As Object = "", _
+                            Optional ByVal idfsDiagnosisGroup As Object = -1, _
+                            Optional ByVal strDiagnosisGroup As Object = "", _
                             Optional ByVal bSetTable As Boolean = True)
         ' check diagnoses connection before
         If Not idfOutbreak Is DBNull.Value Then
@@ -8780,27 +8805,29 @@ Public Class HumanCaseDetail
     End Sub
 
 
-    Private Sub HospitalizationInSearchMode_Changed(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Function DoEnableHospitalizationAttributes(ByVal Val As Object) As Boolean
+        Dim Res As Boolean = False
         If Not Utils.IsEmpty(cbHospitalization.EditValue) Then
-            Dim Hospitalization As String = Utils.Str(cbHospitalization.EditValue)
-            Select Case Hospitalization
-                Case "10100002" '"ynvNo"
-                    deDateOfAdmissionHospitalization.EditValue = DBNull.Value
-                    txtHospital.EditValue = DBNull.Value
-                    deDateOfAdmissionHospitalization.Enabled = False
-                    txtHospital.Enabled = False
-                Case "10100003" '"ynvUnknown"
-                    deDateOfAdmissionHospitalization.EditValue = DBNull.Value
-                    txtHospital.EditValue = DBNull.Value
-                    deDateOfAdmissionHospitalization.Enabled = False
-                    txtHospital.Enabled = False
-                Case Else
-                    deDateOfAdmissionHospitalization.Enabled = True
-                    txtHospital.Enabled = True
-            End Select
+            Dim Hospitalization As String = Utils.Str(Val)
+            If (Not Utils.IsEmpty(Hospitalization)) AndAlso _
+               (Not (Hospitalization.Equals("10100002", StringComparison.InvariantCultureIgnoreCase) OrElse _
+                     Hospitalization.Equals("10100003", StringComparison.InvariantCultureIgnoreCase))) Then
+                Res = True
+            End If
+        End If
+
+        Return Res
+
+    End Function
+
+    Private Sub HospitalizationInSearchMode_Changed(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim Enable As Boolean = False
+        Enable = DoEnableHospitalizationAttributes(cbHospitalization.EditValue)
+
+        If Enable Then
+            deDateOfAdmissionHospitalization.Enabled = True
+            txtHospital.Enabled = True
         Else
-            'deDateOfAdmissionHospitalization.Enabled = True
-            'txtHospital.Enabled = True
             deDateOfAdmissionHospitalization.EditValue = DBNull.Value
             txtHospital.EditValue = DBNull.Value
             deDateOfAdmissionHospitalization.Enabled = False
@@ -8808,31 +8835,42 @@ Public Class HumanCaseDetail
         End If
     End Sub
 
-    Private Sub Hospitalization_Changed(ByVal sender As System.Object, ByVal e As DataFieldChangeEventArgs)
-        If Not Utils.IsEmpty(cbHospitalization.EditValue) Then
-            Dim Hospitalization As String = Utils.Str(e.Value)
-            Select Case Hospitalization
-                Case "10100002" '"ynvNo"
-                    baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("datHospitalizationDate") = DBNull.Value
-                    baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("strHospitalizationPlace") = DBNull.Value
-                    deDateOfAdmissionHospitalization.EditValue = DBNull.Value
-                    txtHospital.EditValue = DBNull.Value
-                    deDateOfAdmissionHospitalization.Enabled = False
-                    txtHospital.Enabled = False
-                Case "10100003" '"ynvUnknown"
-                    baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("datHospitalizationDate") = DBNull.Value
-                    baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("strHospitalizationPlace") = DBNull.Value
-                    deDateOfAdmissionHospitalization.EditValue = DBNull.Value
-                    txtHospital.EditValue = DBNull.Value
-                    deDateOfAdmissionHospitalization.Enabled = False
-                    txtHospital.Enabled = False
-                Case Else
-                    deDateOfAdmissionHospitalization.Enabled = True
-                    txtHospital.Enabled = True
-            End Select
+    Private Sub UpdateHospitalizationAttributes(ByVal IsEnabled As Boolean)
+        If IsSearchMode() OrElse [ReadOnly] Then
+            Return
+        End If
+
+        If IsEnabled AndAlso _
+               EidssSiteContext.Instance.CustomMandatoryFields.Contains(CustomMandatoryField.HumanCase_HospitalizationDate) Then
+
+            If Not deDateOfAdmissionHospitalization.Enabled Then deDateOfAdmissionHospitalization.Enabled = True
+            If Not txtHospital.Enabled Then txtHospital.Enabled = True
+
+            SetMandatory(deDateOfAdmissionHospitalization)
+            SetMandatory(txtHospital)
         Else
-            'deDateOfAdmissionHospitalization.Enabled = True
-            'txtHospital.Enabled = True
+            RemoveControlStateFromTag(deDateOfAdmissionHospitalization, ControlState.Mandatory)
+            RemoveControlStateFromTag(txtHospital, ControlState.Mandatory)
+            LayoutCorrector.SetStyleController(deDateOfAdmissionHospitalization, LayoutCorrector.EditorStyleController)
+            LayoutCorrector.SetStyleController(txtHospital, LayoutCorrector.EditorStyleController)
+
+            If (Not IsEnabled) AndAlso deDateOfAdmissionHospitalization.Enabled Then deDateOfAdmissionHospitalization.Enabled = False
+            If (Not IsEnabled) AndAlso txtHospital.Enabled Then txtHospital.Enabled = False
+        End If
+    End Sub
+
+    Private Sub Hospitalization_Changed(ByVal sender As System.Object, ByVal e As DataFieldChangeEventArgs)
+        Dim Enable As Boolean = False
+        If Not Utils.IsEmpty(cbHospitalization.EditValue) Then
+            Enable = DoEnableHospitalizationAttributes(e.Value)
+        End If
+
+        UpdateHospitalizationAttributes(Enable)
+
+        If Enable Then
+            deDateOfAdmissionHospitalization.Enabled = True
+            txtHospital.Enabled = True
+        Else
             baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("datHospitalizationDate") = DBNull.Value
             baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("strHospitalizationPlace") = DBNull.Value
             deDateOfAdmissionHospitalization.EditValue = DBNull.Value
@@ -8848,7 +8886,7 @@ Public Class HumanCaseDetail
             'If IsSearchMode() AndAlso Not (Utils.IsEmpty(deDateOfAdmissionHospitalization.EditValue) AndAlso Utils.IsEmpty(txtHospital.EditValue)) Then
             '    e.Cancel = Not (MessageForm.Show(EidssMessages.Get("mbSureToClearHosp", "There is some information on hospitalization. Are you sure you want to clear it?"), EidssMessages.Get("mbConfirmation", "Confirmation"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) = DialogResult.Yes)
             'End If
-            If (Not IsSearchMode()) AndAlso Not (Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("datHospitalizationDate")) AndAlso
+            If (Not IsSearchMode()) AndAlso Not (Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("datHospitalizationDate")) AndAlso _
                Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("strHospitalizationPlace"))) Then
                 e.Cancel = Not (MessageForm.Show(EidssMessages.Get("mbSureToDisableHosp", "There is some information on hospitalization. Are you sure you want to delete it?"), EidssMessages.Get("mbConfirmation", "Confirmation"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) = DialogResult.Yes)
             End If
@@ -8914,7 +8952,7 @@ Public Class HumanCaseDetail
         'If (Not IsSearchMode()) AndAlso (Utils.Str(e.NewValue, "ynvUnknown") <> "ynvYes") AndAlso _
 
         'default value = "10100003" = "ynvUnknown", "10100001" = "ynvYes"
-        If (Utils.Str(e.NewValue, "10100003") <> "10100001") AndAlso
+        If (Utils.Str(e.NewValue, "10100003") <> "10100001") AndAlso _
            (TableNotDelRowCount(baseDataSet.Tables(HumanCase_DB.tlbAntimicrobialTherapy)) > 0) Then
             MessageForm.Show(EidssMessages.Get("mbCannotDeleteAllAntibiotics", "It is impossible to disable the table of antibiotic or antiviral therapy because it contains some records."))
             e.Cancel = True
@@ -9065,7 +9103,7 @@ Public Class HumanCaseDetail
             If IsSearchMode() AndAlso (Not Utils.IsEmpty(cbOutbreakID.EditValue)) Then
                 e.Cancel = Not (MessageForm.Show(EidssMessages.Get("mbSureToClearOutbreakID", "Outbreak ID is not empty. Are you sure you want to clear it?"), EidssMessages.Get("mbConfirmation", "Confirmation"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) = DialogResult.Yes)
             End If
-            If (Not IsSearchMode()) AndAlso (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
+            If (Not IsSearchMode()) AndAlso (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
                (Not Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfOutbreak"))) Then
                 e.Cancel = Not (MessageForm.Show(EidssMessages.Get("mbSureToRemoveFromOutbreak", "This case is related to an outbreak. Are you sure you want to remove it from outbreak?"), EidssMessages.Get("mbConfirmation", "Confirmation"), MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) = DialogResult.Yes)
             End If
@@ -9094,8 +9132,8 @@ Public Class HumanCaseDetail
                 End If
                 HumanCaseSamplesPanel1.UpdateHumanCaseSamplesPanel_View(cbNotCollectedReason.Top - 8)
             Else
-                If (Not IsSearchMode()) AndAlso (baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase)) AndAlso
-                   (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
+                If (Not IsSearchMode()) AndAlso (baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase)) AndAlso _
+                   (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
                    (Not Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsNotCollectedReason"))) Then _
                     baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsNotCollectedReason") = DBNull.Value
                 Core.LookupBinder.ClearEditValueWithoutPrompt(cbNotCollectedReason)
@@ -9156,8 +9194,8 @@ Public Class HumanCaseDetail
         If (Not CType(sender, Control).Visible) OrElse Loading Then Return
 
         'default value = "10100003" = "ynvUnknown", "10100001" = "ynvYes"
-        If (Utils.Str(e.NewValue, "10100003") <> "10100001") AndAlso
-               (HumanCaseSamplesPanel1.baseDataSet.Tables.Count > HumanCaseSamplesDetail_DB.TablesEnum.Materials) AndAlso
+        If (Utils.Str(e.NewValue, "10100003") <> "10100001") AndAlso _
+               (HumanCaseSamplesPanel1.baseDataSet.Tables.Count > HumanCaseSamplesDetail_DB.TablesEnum.Materials) AndAlso _
                ((SamplesCount(HumanCaseSamplesPanel1.baseDataSet.Tables(HumanCaseSamplesDetail_DB.TablesEnum.Materials)) > 0)) Then
             e.Cancel = True
             MessageForm.Show(EidssMessages.Get("mbCannotDeleteAllSpecimens", "It is impossible to disable Samples table because it contains some records."))
@@ -9221,9 +9259,9 @@ Public Class HumanCaseDetail
 
     Private Sub HumanCaseSamplesPanel1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles HumanCaseSamplesPanel1.Load
         '"10100002" = "ynvNo", "10100003" = "ynvUnknown"
-        If ((Not IsSearchMode()) AndAlso
-            ((baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count = 0) OrElse
-             (Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsYNSpecimenCollected"), "10100003") <> "10100002"))) OrElse
+        If ((Not IsSearchMode()) AndAlso _
+            ((baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count = 0) OrElse _
+             (Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsYNSpecimenCollected"), "10100003") <> "10100002"))) OrElse _
            (IsSearchMode() AndAlso (Utils.IsEmpty(cbSpecimenCollected.EditValue) OrElse (Utils.Str(cbSpecimenCollected.EditValue, "10100003") <> "10100002"))) Then
             HumanCaseSamplesPanel1.UpdateHumanCaseSamplesPanel_View(cbSpecimenCollected.Top - 8)
         Else
@@ -9268,7 +9306,7 @@ Public Class HumanCaseDetail
 
     Private Sub BindLocationInSearchMode()
         cbGeoLocation.UseMandatoryFields = False
-        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso
+        If baseDataSet.Tables.Contains(HumanCase_DB.tlbHumanCase) AndAlso _
            (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) Then
             cbGeoLocation.Bind(baseDataSet, HumanCase_DB.tlbHumanCase + ".idfPointGeoLocation")
         End If
@@ -10128,18 +10166,18 @@ Public Class HumanCaseDetail
     End Sub
 
     Private Sub AddFF_csCondition(ByRef strFrom As String)
-        If (HCSearch Is Nothing) OrElse (FFClinicalSigns Is Nothing) OrElse
-           (FFClinicalSigns.MainDbService Is Nothing) OrElse
-           (FFClinicalSigns.MainDbService.MainDataSet Is Nothing) OrElse
-           (FFClinicalSigns.MainDbService.MainDataSet.Parameters Is Nothing) OrElse
-           (FFClinicalSigns.MainDbService.MainDataSet.Parameters.Rows.Count = 0) OrElse
-           (FFClinicalSigns.MainDbService.MainDataSet.ActivityParameters Is Nothing) OrElse
+        If (HCSearch Is Nothing) OrElse (FFClinicalSigns Is Nothing) OrElse _
+           (FFClinicalSigns.MainDbService Is Nothing) OrElse _
+           (FFClinicalSigns.MainDbService.MainDataSet Is Nothing) OrElse _
+           (FFClinicalSigns.MainDbService.MainDataSet.Parameters Is Nothing) OrElse _
+           (FFClinicalSigns.MainDbService.MainDataSet.Parameters.Rows.Count = 0) OrElse _
+           (FFClinicalSigns.MainDbService.MainDataSet.ActivityParameters Is Nothing) OrElse _
            (FFClinicalSigns.MainDbService.MainDataSet.ActivityParameters.Rows.Count = 0) Then Return
 
         Dim ind As Integer = 0
         For Each r As DataRow In FFClinicalSigns.MainDbService.MainDataSet.ActivityParameters.Rows
-            If (r.RowState <> DataRowState.Deleted) AndAlso
-               (Not Utils.IsEmpty(r("idfsParameter"))) AndAlso
+            If (r.RowState <> DataRowState.Deleted) AndAlso _
+               (Not Utils.IsEmpty(r("idfsParameter"))) AndAlso _
                (Not Utils.IsEmpty(r("varValue"))) Then
                 ind = ind + 1
                 If (ind = 1) Then strFrom = strFrom + HCSearch.Get_tlbObservation_cs_From()
@@ -10149,18 +10187,18 @@ Public Class HumanCaseDetail
     End Sub
 
     Private Sub AddFF_epiCondition(ByRef strFrom As String)
-        If (HCSearch Is Nothing) OrElse (ffEpiInvestigations Is Nothing) OrElse
-           (ffEpiInvestigations.MainDbService Is Nothing) OrElse
-           (ffEpiInvestigations.MainDbService.MainDataSet Is Nothing) OrElse
-           (ffEpiInvestigations.MainDbService.MainDataSet.Parameters Is Nothing) OrElse
-           (ffEpiInvestigations.MainDbService.MainDataSet.Parameters.Rows.Count = 0) OrElse
-           (ffEpiInvestigations.MainDbService.MainDataSet.ActivityParameters Is Nothing) OrElse
+        If (HCSearch Is Nothing) OrElse (ffEpiInvestigations Is Nothing) OrElse _
+           (ffEpiInvestigations.MainDbService Is Nothing) OrElse _
+           (ffEpiInvestigations.MainDbService.MainDataSet Is Nothing) OrElse _
+           (ffEpiInvestigations.MainDbService.MainDataSet.Parameters Is Nothing) OrElse _
+           (ffEpiInvestigations.MainDbService.MainDataSet.Parameters.Rows.Count = 0) OrElse _
+           (ffEpiInvestigations.MainDbService.MainDataSet.ActivityParameters Is Nothing) OrElse _
            (ffEpiInvestigations.MainDbService.MainDataSet.ActivityParameters.Rows.Count = 0) Then Return
 
         Dim ind As Integer = 0
         For Each r As DataRow In ffEpiInvestigations.MainDbService.MainDataSet.ActivityParameters.Rows
-            If (r.RowState <> DataRowState.Deleted) AndAlso
-               (Not Utils.IsEmpty(r("idfsParameter"))) AndAlso
+            If (r.RowState <> DataRowState.Deleted) AndAlso _
+               (Not Utils.IsEmpty(r("idfsParameter"))) AndAlso _
                (Not Utils.IsEmpty(r("varValue"))) Then
                 ind = ind + 1
                 If (ind = 1) Then strFrom = strFrom + HCSearch.Get_tlbObservation_epi_From()
@@ -10185,8 +10223,8 @@ Public Class HumanCaseDetail
     End Function
 
     Private Sub Add_tlbContactedCasePerson_Condition(ByRef strFrom As String, ByRef strWhere As String)
-        If (HCSearch Is Nothing) OrElse (baseDataSet Is Nothing) OrElse
-           (Not baseDataSet.Tables.Contains("tlbContactedCasePerson")) OrElse
+        If (HCSearch Is Nothing) OrElse (baseDataSet Is Nothing) OrElse _
+           (Not baseDataSet.Tables.Contains("tlbContactedCasePerson")) OrElse _
            (baseDataSet.Tables("tlbContactedCasePerson").Rows.Count = 0) Then Return
 
         Dim ind As Integer = 0
@@ -10237,9 +10275,9 @@ Public Class HumanCaseDetail
     End Sub
 
     Private Sub Add_tlbMaterial_Condition(ByRef strFrom As String, ByRef strWhere As String)
-        If (HCSearch Is Nothing) OrElse (HumanCaseSamplesPanel1 Is Nothing) OrElse
-           (HumanCaseSamplesPanel1.baseDataSet Is Nothing) OrElse
-           (HumanCaseSamplesPanel1.baseDataSet.Tables.Count <= HumanCaseSamplesDetail_DB.TablesEnum.Materials) OrElse
+        If (HCSearch Is Nothing) OrElse (HumanCaseSamplesPanel1 Is Nothing) OrElse _
+           (HumanCaseSamplesPanel1.baseDataSet Is Nothing) OrElse _
+           (HumanCaseSamplesPanel1.baseDataSet.Tables.Count <= HumanCaseSamplesDetail_DB.TablesEnum.Materials) OrElse _
            (HumanCaseSamplesPanel1.baseDataSet.Tables(HumanCaseSamplesDetail_DB.TablesEnum.Materials).Rows.Count = 0) Then Return
 
         Dim ind As Integer = 0
@@ -10299,8 +10337,8 @@ Public Class HumanCaseDetail
                     rFrom = HCSearch.Get_tlbMaterial_From(ind + 1, False)
                     If Not Utils.IsEmpty(rFrom) Then
                         ind = ind + 1
-                        If (ind = 1) AndAlso
-                           (Not HumanCaseSearch.S1_Contains_S2(
+                        If (ind = 1) AndAlso _
+                           (Not HumanCaseSearch.S1_Contains_S2( _
                                     strFrom, HCSearch.GetFrom(HumanCaseSearch.HCTable.tlbHuman))) Then _
                             strFrom = strFrom + HCSearch.GetFrom(HumanCaseSearch.HCTable.tlbHuman)
 
@@ -10323,8 +10361,8 @@ Public Class HumanCaseDetail
     End Sub
 
     Private Sub Add_tlbAntimicrobialTherapy_Condition(ByRef strFrom As String, ByRef strWhere As String)
-        If (HCSearch Is Nothing) OrElse (baseDataSet Is Nothing) OrElse
-           (Not baseDataSet.Tables.Contains("tlbAntimicrobialTherapy")) OrElse
+        If (HCSearch Is Nothing) OrElse (baseDataSet Is Nothing) OrElse _
+           (Not baseDataSet.Tables.Contains("tlbAntimicrobialTherapy")) OrElse _
            (baseDataSet.Tables("tlbAntimicrobialTherapy").Rows.Count = 0) Then Return
 
         Dim ind As Integer = 0
@@ -10406,7 +10444,7 @@ Public Class HumanCaseDetail
                 If Utils.IsEmpty(caseID) Then
                     MessageForm.Show(EidssMessages.Get("mbNoCaseSearchResults", "On the set criteria of search no case was found. Change some information and try find again."), EidssMessages.Get("mbHumanCaseSearchInfo", "Human Case Search Info"))
                 Else
-                    Dim drLoadCase As DialogResult =
+                    Dim drLoadCase As DialogResult = _
                             MessageForm.Show(EidssMessages.Get("mbOneCaseSearchResult", "On the set criteria of search one case was found. Do you want to open it for editing?"), EidssMessages.Get("mbHumanCaseSearchInfo", "Human Case Search Info"), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
                     If drLoadCase = DialogResult.Yes Then
                         Dim humanCaseForm As New HumanCaseDetail
@@ -10494,32 +10532,35 @@ Public Class HumanCaseDetail
                 dtChangedDiagnosisDate.Enabled = False
             End If
 
-            If (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
+            If (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
                (Not Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsHospitalizationStatus"))) Then
                 SetHospitalizationStatusVisibility(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsHospitalizationStatus"))
             Else
                 SetHospitalizationStatusVisibility(DBNull.Value)
             End If
             '"10100001" = "ynvYes", "10100002" = "ynvNo", "10100003" = "ynvUnknown"
-            If (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
-               (Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsYNHospitalization"), "10100003") <>
+            If (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
+               (Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsYNHospitalization"), "10100003") <> _
                 "10100001") Then
                 deDateOfAdmissionHospitalization.Enabled = False
                 txtHospital.Enabled = False
+                UpdateHospitalizationAttributes(False)
+            Else
+                UpdateHospitalizationAttributes(True)
             End If
-            If (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
-               (Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsYNAntimicrobialTherapy"), "10100003") <>
+            If (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
+               (Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsYNAntimicrobialTherapy"), "10100003") <> _
                 "10100001") Then
                 gcAntimicrobialTherapy.Enabled = False
                 gvAntimicrobialTherapy.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.None
                 btnRemoveAntimicrobialTherapy.Enabled = False
             End If
-            If (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
-               (Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsYNRelatedToOutbreak"), "10100003") <>
+            If (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
+               (Utils.Str(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("idfsYNRelatedToOutbreak"), "10100003") <> _
                 "10100001") Then
                 cbOutbreakID.Enabled = False
             End If
-            If (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso
+            If (baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows.Count > 0) AndAlso _
                (Not Utils.IsEmpty(baseDataSet.Tables(HumanCase_DB.tlbHumanCase).Rows(0)("intPatientAge"))) Then
                 txtAge.Enabled = False
                 cbAgeUnits.Enabled = False
@@ -10537,11 +10578,11 @@ Public Class HumanCaseDetail
             btnSearch.Enabled = True
             btnClear.Visible = True
             btnClear.Enabled = True
-            If EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission(
+            If EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.InsertPermission( _
                                                 EIDSS.model.Enums.EIDSSPermissionObject.HumanCase)) Then
                 Me.ShowNewButton = True
             End If
-            If EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.DeletePermission(
+            If EIDSS.model.Core.EidssUserContext.User.HasPermission(PermissionHelper.DeletePermission( _
                                                 EIDSS.model.Enums.EIDSSPermissionObject.HumanCase)) Then
                 Me.ShowDeleteButton = True
             End If
@@ -10681,6 +10722,8 @@ Public Class HumanCaseDetail
         MandatoryFieldHelper.SetCustomMandatoryField(cbHospitalization, CustomMandatoryField.HumanCase_Hospitalization)
         'Final Case Classification tab
         MandatoryFieldHelper.SetCustomMandatoryField(lueFinalCaseClassification, CustomMandatoryField.HumanCase_FinalCaseStatus)
+        'Samples Collection tab
+        MandatoryFieldHelper.SetCustomMandatoryField(cbSpecimenCollected, CustomMandatoryField.HumanCase_SpecimenCollected)
     End Sub
     Private m_IgnorePersonalData As Boolean
     Protected Overrides Function CheckColumnForModification(tableName As String, columnName As String) As Boolean
@@ -10754,11 +10797,11 @@ Public Class HumanCaseDetail
     Public Overrides Sub ControlBoundChange(sender As Object, args As EventArgs)
         Dim designer As ControlDesigner = CType(sender, ControlDesigner)
         If (Not designer Is Nothing AndAlso Not designer.ProcessedControl Is Nothing) Then
-            If designer.ProcessedControl Is lblDOB OrElse
-                designer.ProcessedControl Is lblFirstName OrElse
-                designer.ProcessedControl Is lblPatronymic OrElse
-                designer.ProcessedControl Is txtLastName OrElse
-                designer.ProcessedControl Is txtFirstName OrElse
+            If designer.ProcessedControl Is lblDOB OrElse _
+                designer.ProcessedControl Is lblFirstName OrElse _
+                designer.ProcessedControl Is lblPatronymic OrElse _
+                designer.ProcessedControl Is txtLastName OrElse _
+                designer.ProcessedControl Is txtFirstName OrElse _
                 designer.ProcessedControl Is txtSecondName Then
                 lpCurrentResidenceAddress_Load(lpCurrentResidenceAddress, EventArgs.Empty)
                 lpPermanentAddress_Load(lpPermanentAddress, EventArgs.Empty)

@@ -1564,7 +1564,7 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets.NumberOfCasesDeathsMonth
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::EIDSS.Reports.Properties.Settings.Default.EIDSS_THConnectionString;
+            this._connection.ConnectionString = global::EIDSS.Reports.Properties.Settings.Default.eidss_v6ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1577,20 +1577,21 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets.NumberOfCasesDeathsMonth
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LangID", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Diagnosis", global::System.Data.SqlDbType.Xml, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ThaiRegion", global::System.Data.SqlDbType.Xml, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ThaiZone", global::System.Data.SqlDbType.Xml, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ThaiProvince", global::System.Data.SqlDbType.Xml, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ThaiDistrict", global::System.Data.SqlDbType.Xml, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.Int, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Diagnosis", global::System.Data.SqlDbType.Xml, 0, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ThaiRegion", global::System.Data.SqlDbType.Xml, 0, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ThaiZone", global::System.Data.SqlDbType.Xml, 0, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ThaiProvince", global::System.Data.SqlDbType.Xml, 0, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ThaiDistrictWithProvince", global::System.Data.SqlDbType.Xml, 0, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CaseClassification", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 19, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReportMode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NumberOfCasesDeathsMonthTHDataSet.NumberOfCasesTableDataTable dataTable, string LangID, global::System.Nullable<int> Year, object Diagnosis, object ThaiRegion, object ThaiZone, object ThaiProvince, object ThaiDistrict, global::System.Nullable<long> CaseClassification) {
+        public virtual int Fill(NumberOfCasesDeathsMonthTHDataSet.NumberOfCasesTableDataTable dataTable, string LangID, global::System.Nullable<int> Year, object Diagnosis, object ThaiRegion, object ThaiZone, object ThaiProvince, object ThaiDistrictWithProvince, global::System.Nullable<long> CaseClassification, int ReportMode) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((LangID == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1628,11 +1629,11 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets.NumberOfCasesDeathsMonth
             else {
                 this.Adapter.SelectCommand.Parameters[6].Value = ((object)(ThaiProvince));
             }
-            if ((ThaiDistrict == null)) {
+            if ((ThaiDistrictWithProvince == null)) {
                 this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[7].Value = ((object)(ThaiDistrict));
+                this.Adapter.SelectCommand.Parameters[7].Value = ((object)(ThaiDistrictWithProvince));
             }
             if ((CaseClassification.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[8].Value = ((long)(CaseClassification.Value));
@@ -1640,6 +1641,7 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets.NumberOfCasesDeathsMonth
             else {
                 this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
+            this.Adapter.SelectCommand.Parameters[9].Value = ((int)(ReportMode));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1651,7 +1653,7 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets.NumberOfCasesDeathsMonth
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NumberOfCasesDeathsMonthTHDataSet.NumberOfCasesTableDataTable GetData(string LangID, global::System.Nullable<int> Year, object Diagnosis, object ThaiRegion, object ThaiZone, object ThaiProvince, object ThaiDistrict, global::System.Nullable<long> CaseClassification) {
+        public virtual NumberOfCasesDeathsMonthTHDataSet.NumberOfCasesTableDataTable GetData(string LangID, global::System.Nullable<int> Year, object Diagnosis, object ThaiRegion, object ThaiZone, object ThaiProvince, object ThaiDistrictWithProvince, global::System.Nullable<long> CaseClassification, int ReportMode) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((LangID == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1689,11 +1691,11 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets.NumberOfCasesDeathsMonth
             else {
                 this.Adapter.SelectCommand.Parameters[6].Value = ((object)(ThaiProvince));
             }
-            if ((ThaiDistrict == null)) {
+            if ((ThaiDistrictWithProvince == null)) {
                 this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[7].Value = ((object)(ThaiDistrict));
+                this.Adapter.SelectCommand.Parameters[7].Value = ((object)(ThaiDistrictWithProvince));
             }
             if ((CaseClassification.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[8].Value = ((long)(CaseClassification.Value));
@@ -1701,6 +1703,7 @@ namespace EIDSS.Reports.Parameterized.Human.TH.DataSets.NumberOfCasesDeathsMonth
             else {
                 this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
+            this.Adapter.SelectCommand.Parameters[9].Value = ((int)(ReportMode));
             NumberOfCasesDeathsMonthTHDataSet.NumberOfCasesTableDataTable dataTable = new NumberOfCasesDeathsMonthTHDataSet.NumberOfCasesTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

@@ -39,16 +39,12 @@
             // 
             // YearMultiFilter
             // 
-            resources.ApplyResources(this, "$this");
-            this.Appearance.FontSizeDelta = ((int)(resources.GetObject("YearMultiFilter.Appearance.FontSizeDelta")));
-            this.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("YearMultiFilter.Appearance.FontStyleDelta")));
-            this.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("YearMultiFilter.Appearance.GradientMode")));
-            this.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("YearMultiFilter.Appearance.Image")));
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("YearMultiFilter.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.Name = "YearMultiFilter";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -211,6 +211,7 @@ namespace EIDSS.Reports.Document.Human.Aggregate
             this.CaseIdBarcodeCell.Name = "CaseIdBarcodeCell";
             this.CaseIdBarcodeCell.StylePriority.UseFont = false;
             this.CaseIdBarcodeCell.StylePriority.UseTextAlignment = false;
+            this.CaseIdBarcodeCell.Tag = "UnchangebleFont";
             // 
             // xrTableCell2
             // 
@@ -264,7 +265,7 @@ namespace EIDSS.Reports.Document.Human.Aggregate
             this.ExportOptions.Xls.SheetName = resources.GetString("CaseAggregateReport.ExportOptions.Xls.SheetName");
             this.ExportOptions.Xlsx.SheetName = resources.GetString("CaseAggregateReport.ExportOptions.Xlsx.SheetName");
             resources.ApplyResources(this, "$this");
-            this.Version = "14.1";
+            this.Version = "15.1";
             ((System.ComponentModel.ISupportInitialize)(this.m_BaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBaseHeader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableInterval)).EndInit();

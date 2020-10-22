@@ -100,6 +100,7 @@ Public Enum LookupTables
     HumanAggregateCaseParameter
     AccessoryCode
     SampleTypeForDiagnosis
+    ProvinceDistrictTree
 
 End Enum
 
@@ -690,6 +691,11 @@ Public Class EIDSS_LookupCacheHelper
         LookupCache.LookupTables.Add(LookupTables.AccessoryCode.ToString, table)
         LookupCache.LookupTables.Add(BaseReferenceType.rftAccessionCondition.ToString, _
                               New LookupTableInfo(BaseReferenceType.rftAccessionCondition, False, BaseReferenceType.rftAccessionCondition.ToString(), , , , False))
+
+        table = _
+            New LookupTableInfo(LookupTables.ProvinceDistrictTree, False, "ProvinceDistrictTree", _
+                                 "spProvinceDistrictTree_SelectLookup")
+        LookupCache.LookupTables.Add(LookupTables.ProvinceDistrictTree.ToString, table)
 
         LookupCache.Init()
     End Sub

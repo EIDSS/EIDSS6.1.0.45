@@ -80,6 +80,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ExportHumUrgentyNotificationUkraine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/eidss.model.Reports.Common" minOccurs="0" name="model" nillable="true" type="q5:BaseIdModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportHumUrgentyNotificationUkraineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExportHumUrgentyNotificationUkraineResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ExportHumUrgentyNotificationTanzania">
     <xs:complexType>
       <xs:sequence>

@@ -135,4 +135,7 @@
   <data name="SurveillanceTypeGroup.Properties.Items5" xml:space="preserve">
     <value>Агрегированные мероприяти</value>
   </data>
+  <data name="ErrorMessage_Key" xml:space="preserve">
+    <value>Вы можете выбрать не более шести значений в фильтре Вид животного.</value>
+  </data>
 </root>

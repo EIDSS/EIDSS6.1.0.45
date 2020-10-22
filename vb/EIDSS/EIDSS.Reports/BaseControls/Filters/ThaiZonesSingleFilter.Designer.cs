@@ -28,23 +28,27 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThaiZonesSingleFilter));
-			this.SuspendLayout();
-			// 
-			// lblLookupName
-			// 
-			resources.ApplyResources(this.lblLookupName, "lblLookupName");
-			bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(ThaiZonesSingleFilter), out resources);
-			// Form Is Localizable: True
-			// 
-			// ThaiZonesSingleFilter
-			// 
-			this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ThaiZonesSingleFilter.Appearance.Font")));
-			this.Appearance.Options.UseFont = true;
-			resources.ApplyResources(this, "$this");
-			this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.Name = "ThaiZonesSingleFilter";
-			this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThaiZonesSingleFilter));
+            this.SuspendLayout();
+            // 
+            // lblLookupName
+            // 
+            resources.ApplyResources(this.lblLookupName, "lblLookupName");
+            bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(ThaiZonesSingleFilter), out resources);
+            // Form Is Localizable: True
+            // 
+            // ThaiZonesSingleFilter
+            // 
+            resources.ApplyResources(this, "$this");
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ThaiZonesSingleFilter.Appearance.Font")));
+            this.Appearance.FontSizeDelta = ((int)(resources.GetObject("ThaiZonesSingleFilter.Appearance.FontSizeDelta")));
+            this.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("ThaiZonesSingleFilter.Appearance.FontStyleDelta")));
+            this.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("ThaiZonesSingleFilter.Appearance.GradientMode")));
+            this.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("ThaiZonesSingleFilter.Appearance.Image")));
+            this.Appearance.Options.UseFont = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.Name = "ThaiZonesSingleFilter";
+            this.ResumeLayout(false);
 
 		}
 

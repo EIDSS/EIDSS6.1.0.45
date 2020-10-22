@@ -157,7 +157,7 @@
     <value>ฟังค์ชั่นรวม</value>
   </data>
   <data name="DefaultGroupDateLabel.Text" xml:space="preserve">
-    <value>วันที่กลุ่มตั้งต้น</value>
+    <value>ตั้งค่าช่วงเวลา</value>
   </data>
   <data name="nbGroupSettings.Caption" xml:space="preserve">
     <value>การตั้งค่าตาราง Pivot</value>
@@ -170,5 +170,35 @@
   </data>
   <data name="BasicCountLabel.Text" xml:space="preserve">
     <value>ฟังก์ชั่นนับจำนวนแบบพื้นฐาน</value>
+  </data>
+  <data name="ShowTotalsComboBoxEdit.Properties.Items" xml:space="preserve">
+    <value>รวมค่าจากกลุ่มคอลัมน์</value>
+  </data>
+  <data name="ShowTotalsComboBoxEdit.Properties.Items1" xml:space="preserve">
+    <value>รวมค่าจากกลุ่มคอลัมน์</value>
+  </data>
+  <data name="ShowTotalsComboBoxEdit.Properties.Items2" xml:space="preserve">
+    <value>รวมค่าจากกลุ่มแถว</value>
+  </data>
+  <data name="ShowTotalsComboBoxEdit.Properties.Items3" xml:space="preserve">
+    <value>รวมค่าจากกลุ่มแถว</value>
+  </data>
+  <data name="ShowTotalsComboBoxEdit.Properties.Items4" xml:space="preserve">
+    <value>รวมยอดคอลัมน์ทั้งหมด</value>
+  </data>
+  <data name="ShowTotalsComboBoxEdit.Properties.Items5" xml:space="preserve">
+    <value>รวมยอดคอลัมน์ทั้งหมด</value>
+  </data>
+  <data name="ShowTotalsComboBoxEdit.Properties.Items6" xml:space="preserve">
+    <value>รวมยอดแถวทั้งหมด</value>
+  </data>
+  <data name="ShowTotalsComboBoxEdit.Properties.Items7" xml:space="preserve">
+    <value>รวมยอดแถวทั้งหมด</value>
+  </data>
+  <data name="ShowTotalsComboBoxEdit.Properties.Items8" xml:space="preserve">
+    <value>รวมยอดจากกลุ่มแถวหรือแถวเดียว</value>
+  </data>
+  <data name="ShowTotalsComboBoxEdit.Properties.Items9" xml:space="preserve">
+    <value>รวมยอดจากกลุ่มแถวหรือแถวเดียว</value>
   </data>
 </root>

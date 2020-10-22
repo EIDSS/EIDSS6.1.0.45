@@ -23,6 +23,8 @@
             // 
             // DistrictFilter
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("DistrictFilter.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.Name = "DistrictFilter";
             this.ResumeLayout(false);

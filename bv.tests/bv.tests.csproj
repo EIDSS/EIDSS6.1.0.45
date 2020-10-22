@@ -27,7 +27,6 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,7 +36,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -46,7 +44,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>Always</RunPostBuildEvent>
@@ -190,6 +187,7 @@
     <Compile Include="common\EidssSiteOptionsTests.cs" />
     <Compile Include="common\DatePeriodTest.cs" />
     <Compile Include="common\CustomCultureTest.cs" />
+    <Compile Include="model\PdfExportHelperTests.cs" />
     <Compile Include="db.tests\ActiveSurveillenceTest.cs" />
     <Compile Include="db.tests\AddressTest.cs" />
     <Compile Include="db.tests\BSSTests.cs" />
@@ -376,9 +374,6 @@
     </None>
     <None Include="Service References\PortManagement\service1.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ReportPdfService\bv.tests.ReportPdfService.Version.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ReportPdfService\item.disco" />
     <None Include="Properties\Settings.settings">

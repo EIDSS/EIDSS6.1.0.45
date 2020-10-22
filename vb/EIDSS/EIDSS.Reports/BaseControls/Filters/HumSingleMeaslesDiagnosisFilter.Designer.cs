@@ -39,6 +39,8 @@
             // 
             // HumSingleMeaslesDiagnosisFilter
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("HumSingleMeaslesDiagnosisFilter.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.Name = "HumSingleMeaslesDiagnosisFilter";
             this.ResumeLayout(false);

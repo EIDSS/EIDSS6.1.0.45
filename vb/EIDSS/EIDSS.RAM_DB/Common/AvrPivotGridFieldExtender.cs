@@ -279,15 +279,12 @@ namespace eidss.avr.db.Common
             if ((string.IsNullOrEmpty(oldFilter) || !oldFilter.Contains(CountryNameAttribute)) &&
                 (tableName == LookupTables.Region.ToString() ||
                  tableName == LookupTables.Rayon.ToString() ||
-                 tableName == LookupTables.Settlement.ToString()))
+                 tableName == LookupTables.Settlement.ToString() ||
+                 tableName == LookupTables.DistrictOnly.ToString() ||
+                 tableName == LookupTables.SubDistrictOnly.ToString()))
             {
                 filterMembers.Add("idfsCountry=" + EidssSiteContext.Instance.CountryID);
             }
-
-//            if (lookup.Table.Columns.Contains("intRowStatus"))
-//            {
-//                filterMembers.Add("intRowStatus = 0");
-//            }
 
             if (lookup.Table.Columns.Contains("intHACode"))
             {

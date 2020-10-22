@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupsMultiFilter));
-            this.lblcheckedComboBoxName = new DevExpress.XtraEditors.LabelControl();
+            this.lblcheckedComboBoxName = new System.Windows.Forms.Label();
             this.treeListLookUp = new DevExpress.XtraEditors.TreeListLookUpEdit();
             this.treeList = new DevExpress.XtraTreeList.TreeList();
             ((System.ComponentModel.ISupportInitialize)(this.treeListLookUp.Properties)).BeginInit();
@@ -47,6 +47,8 @@
             // 
             resources.ApplyResources(this.treeListLookUp, "treeListLookUp");
             this.treeListLookUp.Name = "treeListLookUp";
+            this.treeListLookUp.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("treeListLookUp.Properties.Appearance.Font")));
+            this.treeListLookUp.Properties.Appearance.Options.UseFont = true;
             this.treeListLookUp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("treeListLookUp.Properties.Buttons"))))});
             this.treeListLookUp.Properties.NullText = resources.GetString("treeListLookUp.Properties.NullText");
@@ -65,6 +67,7 @@
             // 
             // GroupsMultiFilter
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GroupsMultiFilter.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
@@ -79,7 +82,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.LabelControl lblcheckedComboBoxName;
+        private System.Windows.Forms.Label lblcheckedComboBoxName;
         private DevExpress.XtraEditors.TreeListLookUpEdit treeListLookUp;
         private DevExpress.XtraTreeList.TreeList treeList;
 

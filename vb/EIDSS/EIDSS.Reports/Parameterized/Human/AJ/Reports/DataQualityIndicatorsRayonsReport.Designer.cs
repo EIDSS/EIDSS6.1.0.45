@@ -68,13 +68,11 @@
             // 
             // GroupHeaderRegion
             // 
-            resources.ApplyResources(this.GroupHeaderRegion, "GroupHeaderRegion");
             this.GroupHeaderRegion.StylePriority.UseBorderWidth = false;
             this.GroupHeaderRegion.StylePriority.UsePadding = false;
             // 
             // DetailDynamicTable
             // 
-            resources.ApplyResources(this.DetailDynamicTable, "DetailDynamicTable");
             this.DetailDynamicTable.StylePriority.UseBorders = false;
             this.DetailDynamicTable.StylePriority.UsePadding = false;
             this.DetailDynamicTable.StylePriority.UseTextAlignment = false;
@@ -83,7 +81,6 @@
             // 
             this.DetailDynamicTableRow.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.SummaryScoreByIndicatorsDetailCell});
-            resources.ApplyResources(this.DetailDynamicTableRow, "DetailDynamicTableRow");
             this.DetailDynamicTableRow.Controls.SetChildIndex(this.SummaryScoreByIndicatorsDetailCell, 0);
             this.DetailDynamicTableRow.Controls.SetChildIndex(this.NumberOfCasesDetailCell, 0);
             this.DetailDynamicTableRow.Controls.SetChildIndex(this.DiagnosisDetailCell, 0);
@@ -92,12 +89,10 @@
             // 
             // ReportFooter
             // 
-            resources.ApplyResources(this.ReportFooter, "ReportFooter");
             this.ReportFooter.StylePriority.UsePadding = false;
             // 
             // GroupFooterRayon
             // 
-            resources.ApplyResources(this.GroupFooterRayon, "GroupFooterRayon");
             this.GroupFooterRayon.StylePriority.UseBorderWidth = false;
             // 
             // xrLine1
@@ -123,17 +118,12 @@
             // 
             // DiagnosisDetailCell
             // 
-            resources.ApplyResources(this.DiagnosisDetailCell, "DiagnosisDetailCell");
             this.DiagnosisDetailCell.StylePriority.UsePadding = false;
+            resources.ApplyResources(this.DiagnosisDetailCell, "DiagnosisDetailCell");
             // 
             // GroupHeaderRayon
             // 
-            resources.ApplyResources(this.GroupHeaderRayon, "GroupHeaderRayon");
             this.GroupHeaderRayon.StylePriority.UseBorderWidth = false;
-            // 
-            // GroupHeaderLine
-            // 
-            resources.ApplyResources(this.GroupHeaderLine, "GroupHeaderLine");
             // 
             // GroupFooterLine
             // 
@@ -142,7 +132,6 @@
             // 
             // GroupFooterRegion
             // 
-            resources.ApplyResources(this.GroupFooterRegion, "GroupFooterRegion");
             this.GroupFooterRegion.StylePriority.UseBorderWidth = false;
             this.GroupFooterRegion.StylePriority.UsePadding = false;
             // 
@@ -157,7 +146,6 @@
             // 
             this.MaximumDynamicRow.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell99});
-            resources.ApplyResources(this.MaximumDynamicRow, "MaximumDynamicRow");
             this.MaximumDynamicRow.Controls.SetChildIndex(this.xrTableCell99, 0);
             this.MaximumDynamicRow.Controls.SetChildIndex(this.NumberOfCasesMaxCell, 0);
             this.MaximumDynamicRow.Controls.SetChildIndex(this.DiagnosisMaxCell, 0);
@@ -169,12 +157,11 @@
             // 
             // DiagnosisMaxCell
             // 
-            resources.ApplyResources(this.DiagnosisMaxCell, "DiagnosisMaxCell");
             this.DiagnosisMaxCell.StylePriority.UsePadding = false;
+            resources.ApplyResources(this.DiagnosisMaxCell, "DiagnosisMaxCell");
             // 
             // TotalDynamicTable
             // 
-            resources.ApplyResources(this.TotalDynamicTable, "TotalDynamicTable");
             this.TotalDynamicTable.StylePriority.UseBorders = false;
             this.TotalDynamicTable.StylePriority.UsePadding = false;
             this.TotalDynamicTable.StylePriority.UseTextAlignment = false;
@@ -183,7 +170,6 @@
             // 
             this.TotalDynamicRow.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.SummaryScoreByIndicatorsTotalCell});
-            resources.ApplyResources(this.TotalDynamicRow, "TotalDynamicRow");
             this.TotalDynamicRow.Controls.SetChildIndex(this.SummaryScoreByIndicatorsTotalCell, 0);
             this.TotalDynamicRow.Controls.SetChildIndex(this.NumberOfCasesTotalCell, 0);
             this.TotalDynamicRow.Controls.SetChildIndex(this.DiagnosisTotalCell, 0);
@@ -195,8 +181,8 @@
             // 
             // DiagnosisTotalCell
             // 
-            resources.ApplyResources(this.DiagnosisTotalCell, "DiagnosisTotalCell");
             this.DiagnosisTotalCell.StylePriority.UsePadding = false;
+            resources.ApplyResources(this.DiagnosisTotalCell, "DiagnosisTotalCell");
             // 
             // HeaderDynamicTable
             // 
@@ -219,29 +205,29 @@
             // 
             // RegionHeaderCell
             // 
-            resources.ApplyResources(this.RegionHeaderCell, "RegionHeaderCell");
             this.RegionHeaderCell.StylePriority.UseBorders = false;
             this.RegionHeaderCell.StylePriority.UseFont = false;
             this.RegionHeaderCell.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.RegionHeaderCell, "RegionHeaderCell");
             // 
             // RayonHeaderCell
             // 
-            resources.ApplyResources(this.RayonHeaderCell, "RayonHeaderCell");
             this.RayonHeaderCell.StylePriority.UseBorders = false;
             this.RayonHeaderCell.StylePriority.UseFont = false;
             this.RayonHeaderCell.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.RayonHeaderCell, "RayonHeaderCell");
             // 
             // DiagnosisHeaderCell
             // 
-            resources.ApplyResources(this.DiagnosisHeaderCell, "DiagnosisHeaderCell");
             this.DiagnosisHeaderCell.StylePriority.UseFont = false;
             this.DiagnosisHeaderCell.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.DiagnosisHeaderCell, "DiagnosisHeaderCell");
             // 
             // NumberOfCasesHeaderCell
             // 
             this.NumberOfCasesHeaderCell.Angle = 0F;
-            resources.ApplyResources(this.NumberOfCasesHeaderCell, "NumberOfCasesHeaderCell");
             this.NumberOfCasesHeaderCell.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.NumberOfCasesHeaderCell, "NumberOfCasesHeaderCell");
             // 
             // NumberOfCasesDetailCell
             // 
@@ -257,14 +243,12 @@
             // 
             this.NumberOfCasesTotalCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.intCaseCount")});
-            resources.ApplyResources(this.NumberOfCasesTotalCell, "NumberOfCasesTotalCell");
-            resources.ApplyResources(xrSummary2, "xrSummary2");
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.NumberOfCasesTotalCell.Summary = xrSummary2;
+            resources.ApplyResources(this.NumberOfCasesTotalCell, "NumberOfCasesTotalCell");
             // 
             // xrChart1
             // 
-            resources.ApplyResources(this.xrChart1, "xrChart1");
             series1.ArgumentDataMember = "FirstChartData.RayonName";
             series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             sideBySideBarSeriesLabel1.LineVisibility = DevExpress.Utils.DefaultBoolean.True;
@@ -298,14 +282,12 @@
             // 
             // FirstSignatureTable
             // 
-            resources.ApplyResources(this.FirstSignatureTable, "FirstSignatureTable");
             this.FirstSignatureTable.StylePriority.UseFont = false;
             this.FirstSignatureTable.StylePriority.UsePadding = false;
             this.FirstSignatureTable.StylePriority.UseTextAlignment = false;
             // 
             // xrChart2
             // 
-            resources.ApplyResources(this.xrChart2, "xrChart2");
             series3.ArgumentDataMember = "SecondChartData.IndicatorName";
             series3.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             sideBySideBarSeriesLabel3.LineVisibility = DevExpress.Utils.DefaultBoolean.True;
@@ -326,42 +308,36 @@
             // 
             // SecondSignatureTable
             // 
-            resources.ApplyResources(this.SecondSignatureTable, "SecondSignatureTable");
             this.SecondSignatureTable.StylePriority.UseFont = false;
             this.SecondSignatureTable.StylePriority.UsePadding = false;
             this.SecondSignatureTable.StylePriority.UseTextAlignment = false;
             // 
             // FirstOrganizationNameCell
             // 
-            resources.ApplyResources(this.FirstOrganizationNameCell, "FirstOrganizationNameCell");
             this.FirstOrganizationNameCell.StylePriority.UseFont = false;
+            resources.ApplyResources(this.FirstOrganizationNameCell, "FirstOrganizationNameCell");
             // 
             // FirstPrintedFromEidssCell
             // 
-            resources.ApplyResources(this.FirstPrintedFromEidssCell, "FirstPrintedFromEidssCell");
             this.FirstPrintedFromEidssCell.StylePriority.UseFont = false;
             this.FirstPrintedFromEidssCell.StylePriority.UsePadding = false;
             this.FirstPrintedFromEidssCell.StylePriority.UseTextAlignment = false;
-            // 
-            // FirstDateTimeCell
-            // 
-            resources.ApplyResources(this.FirstDateTimeCell, "FirstDateTimeCell");
+            resources.ApplyResources(this.FirstPrintedFromEidssCell, "FirstPrintedFromEidssCell");
             // 
             // SecondOrganizationNameCell
             // 
-            resources.ApplyResources(this.SecondOrganizationNameCell, "SecondOrganizationNameCell");
             this.SecondOrganizationNameCell.StylePriority.UseFont = false;
+            resources.ApplyResources(this.SecondOrganizationNameCell, "SecondOrganizationNameCell");
             // 
             // SecondPrintedFromEidssCell
             // 
-            resources.ApplyResources(this.SecondPrintedFromEidssCell, "SecondPrintedFromEidssCell");
             this.SecondPrintedFromEidssCell.StylePriority.UseFont = false;
             this.SecondPrintedFromEidssCell.StylePriority.UsePadding = false;
             this.SecondPrintedFromEidssCell.StylePriority.UseTextAlignment = false;
+            resources.ApplyResources(this.SecondPrintedFromEidssCell, "SecondPrintedFromEidssCell");
             // 
             // SecondDateTimeCell
             // 
-            resources.ApplyResources(this.SecondDateTimeCell, "SecondDateTimeCell");
             this.SecondDateTimeCell.StylePriority.UsePadding = false;
             // 
             // SubTotalDynamicTable
@@ -375,15 +351,14 @@
             // 
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.SummaryScoreByIndicatorsSubTotalCell});
-            resources.ApplyResources(this.xrTableRow1, "xrTableRow1");
             this.xrTableRow1.Controls.SetChildIndex(this.SummaryScoreByIndicatorsSubTotalCell, 0);
             this.xrTableRow1.Controls.SetChildIndex(this.NumberOfCasesSubTotalCell, 0);
             this.xrTableRow1.Controls.SetChildIndex(this.RayonSubTotalCell, 0);
             // 
             // RayonSubTotalCell
             // 
-            resources.ApplyResources(this.RayonSubTotalCell, "RayonSubTotalCell");
             this.RayonSubTotalCell.StylePriority.UseBorders = false;
+            resources.ApplyResources(this.RayonSubTotalCell, "RayonSubTotalCell");
             // 
             // NumberOfCasesSubTotalCell
             // 
@@ -393,19 +368,16 @@
             // 
             // xrTable4
             // 
-            resources.ApplyResources(this.xrTable4, "xrTable4");
             this.xrTable4.StylePriority.UseBorders = false;
             this.xrTable4.StylePriority.UseFont = false;
             this.xrTable4.StylePriority.UsePadding = false;
             // 
             // cellLanguage
             // 
-            resources.ApplyResources(this.cellLanguage, "cellLanguage");
             this.cellLanguage.StylePriority.UseTextAlignment = false;
             // 
             // lblReportName
             // 
-            resources.ApplyResources(this.lblReportName, "lblReportName");
             this.lblReportName.StylePriority.UseBorders = false;
             this.lblReportName.StylePriority.UseBorderWidth = false;
             this.lblReportName.StylePriority.UseFont = false;
@@ -413,19 +385,16 @@
             // 
             // Detail
             // 
-            resources.ApplyResources(this.Detail, "Detail");
             this.Detail.StylePriority.UseFont = false;
             this.Detail.StylePriority.UsePadding = false;
             // 
             // PageHeader
             // 
-            resources.ApplyResources(this.PageHeader, "PageHeader");
             this.PageHeader.StylePriority.UseFont = false;
             this.PageHeader.StylePriority.UsePadding = false;
             // 
             // PageFooter
             // 
-            resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.StylePriority.UseBorders = false;
             // 
             // ReportHeader
@@ -442,30 +411,22 @@
             // 
             // cellReportHeader
             // 
-            resources.ApplyResources(this.cellReportHeader, "cellReportHeader");
             this.cellReportHeader.StylePriority.UseBorders = false;
             this.cellReportHeader.StylePriority.UseFont = false;
             this.cellReportHeader.StylePriority.UseTextAlignment = false;
             // 
             // cellBaseSite
             // 
-            resources.ApplyResources(this.cellBaseSite, "cellBaseSite");
             this.cellBaseSite.StylePriority.UseBorders = false;
             this.cellBaseSite.StylePriority.UseFont = false;
             this.cellBaseSite.StylePriority.UseTextAlignment = false;
             // 
             // cellBaseCountry
             // 
-            resources.ApplyResources(this.cellBaseCountry, "cellBaseCountry");
             this.cellBaseCountry.StylePriority.UseFont = false;
-            // 
-            // cellBaseLeftHeader
-            // 
-            resources.ApplyResources(this.cellBaseLeftHeader, "cellBaseLeftHeader");
             // 
             // tableBaseHeader
             // 
-            resources.ApplyResources(this.tableBaseHeader, "tableBaseHeader");
             this.tableBaseHeader.StylePriority.UseBorders = false;
             this.tableBaseHeader.StylePriority.UseBorderWidth = false;
             this.tableBaseHeader.StylePriority.UseFont = false;
@@ -486,6 +447,7 @@
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicatorsRayons.dblSummaryScoreByIndicators", "{0:0.00}")});
             this.SummaryScoreByIndicatorsDetailCell.Name = "SummaryScoreByIndicatorsDetailCell";
             this.SummaryScoreByIndicatorsDetailCell.StylePriority.UseBackColor = false;
+            this.SummaryScoreByIndicatorsDetailCell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.IndicatorCell_BeforePrint);
             // 
             // SummaryScoreByIndicatorsTotalCell
             // 
@@ -507,13 +469,13 @@
             // 
             resources.ApplyResources(this.SummaryScoreByIndicatorsSubTotalCell, "SummaryScoreByIndicatorsSubTotalCell");
             this.SummaryScoreByIndicatorsSubTotalCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblSummaryScoreByIndicators", "{0:0.00}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.dblSummaryScoreByIndicators")});
             this.SummaryScoreByIndicatorsSubTotalCell.Name = "SummaryScoreByIndicatorsSubTotalCell";
             this.SummaryScoreByIndicatorsSubTotalCell.StylePriority.UseBackColor = false;
             resources.ApplyResources(xrSummary3, "xrSummary3");
-            xrSummary3.Func = DevExpress.XtraReports.UI.SummaryFunc.Avg;
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.SummaryScoreByIndicatorsSubTotalCell.Summary = xrSummary3;
+            this.SummaryScoreByIndicatorsSubTotalCell.SummaryGetResult += new DevExpress.XtraReports.UI.SummaryGetResultHandler(this.SubTotalCell_SummaryGetResult);
             // 
             // DataQualityIndicatorsRayonsReport
             // 
@@ -529,7 +491,6 @@
             this.GroupHeaderRayon,
             this.GroupFooterLine,
             this.GroupHeaderLine});
-            resources.ApplyResources(this, "$this");
             this.Version = "15.1";
             ((System.ComponentModel.ISupportInitialize)(this.m_DQIChartDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_DQIDataSet)).EndInit();

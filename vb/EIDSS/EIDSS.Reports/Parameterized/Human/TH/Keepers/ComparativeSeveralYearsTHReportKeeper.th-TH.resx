@@ -127,6 +127,6 @@
     <value>จาก</value>
   </data>
   <data name="CounterLabel.Text" xml:space="preserve">
-    <value>ตัวนับ</value>
+    <value>หน่วยนับ</value>
   </data>
 </root>

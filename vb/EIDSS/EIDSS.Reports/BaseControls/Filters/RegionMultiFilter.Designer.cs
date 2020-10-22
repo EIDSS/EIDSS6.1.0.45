@@ -39,16 +39,12 @@
             // 
             // RegionMultiFilter
             // 
-            resources.ApplyResources(this, "$this");
-            this.Appearance.FontSizeDelta = ((int)(resources.GetObject("RegionMultiFilter.Appearance.FontSizeDelta")));
-            this.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("RegionMultiFilter.Appearance.FontStyleDelta")));
-            this.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("RegionMultiFilter.Appearance.GradientMode")));
-            this.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("RegionMultiFilter.Appearance.Image")));
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("RegionMultiFilter.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.Name = "RegionMultiFilter";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

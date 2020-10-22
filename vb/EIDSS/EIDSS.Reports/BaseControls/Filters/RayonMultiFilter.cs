@@ -121,7 +121,7 @@ namespace EIDSS.Reports.BaseControls.Filters
                     sbFilter.AppendFormat("idfsRegion = {0}", region);
                     firstRegion = false;
                 }
-                sbFilter.Append(") AND (idfsRayon = idfsParent)");
+                sbFilter.Append(")");
                 DataSource.RowFilter = sbFilter.ToString();
             }
             RefreshEditValue();
@@ -130,7 +130,7 @@ namespace EIDSS.Reports.BaseControls.Filters
         protected override void ApplyResources()
         {
             base.ApplyResources();
-            if(EidssSiteContext.Instance.IsThaiCustomization && ModelUserContext.CurrentLanguage == bv.common.Core.Localizer.lngEn)
+            if (EidssSiteContext.Instance.IsThaiCustomization && ModelUserContext.CurrentLanguage == bv.common.Core.Localizer.lngEn)
             {
                 lblcheckedComboBoxName.Text = "District";
             }
@@ -142,7 +142,7 @@ namespace EIDSS.Reports.BaseControls.Filters
 
         public new void ClearSelection()
         {
-            for(int i = 0; i < checkedComboBox.Properties.Items.Count; i++)
+            for (int i = 0; i < checkedComboBox.Properties.Items.Count; i++)
             {
                 checkedComboBox.Properties.Items[i].CheckState = CheckState.Unchecked;
             }

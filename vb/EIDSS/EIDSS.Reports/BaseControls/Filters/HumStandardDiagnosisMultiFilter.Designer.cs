@@ -39,11 +39,11 @@
             // 
             // HumStandardDiagnosisMultiFilter
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("HumStandardDiagnosisMultiFilter.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.Name = "HumStandardDiagnosisMultiFilter";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

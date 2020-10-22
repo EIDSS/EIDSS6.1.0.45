@@ -118,157 +118,230 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RayonMultiFilter1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+  <data name="ReportModeLookUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 71</value>
   </data>
-  <data name="RayonMultiFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 96</value>
+  <data name="ReportModeLookUp.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
   </data>
-  <data name="RayonMultiFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 39</value>
+  <assembly alias="DevExpress.Utils.v15.1" name="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="ReportModeLookUp.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="ReportModeLookUp.Properties.Buttons1" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Delete</value>
+  </data>
+  <data name="ReportModeLookUp.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReportModeLookUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 20</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RayonMultiFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>1001</value>
+  <data name="ReportModeLookUp.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
   </data>
-  <data name="&gt;&gt;RayonMultiFilter.Name" xml:space="preserve">
-    <value>RayonMultiFilter</value>
+  <data name="&gt;&gt;ReportModeLookUp.Name" xml:space="preserve">
+    <value>ReportModeLookUp</value>
   </data>
-  <data name="&gt;&gt;RayonMultiFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.RayonMultiFilter, EIDSS.Reports, Version=6.1.0.41, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ReportModeLookUp.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;RayonMultiFilter.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ReportModeLookUp.Parent" xml:space="preserve">
     <value>pnlSettings</value>
   </data>
-  <data name="&gt;&gt;RayonMultiFilter.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ReportModeLookUp.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ProvinceFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Sylfaen, 8.25pt</value>
-  </data>
-  <data name="ProvinceFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>609, 50</value>
+  <data name="ReportModeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ProvinceFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+  <data name="ReportModeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ReportModeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 55</value>
+  </data>
+  <data name="ReportModeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 14</value>
+  </data>
+  <data name="ReportModeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1003</value>
+  </data>
+  <data name="ReportModeLabel.Text" xml:space="preserve">
+    <value>Report Mode</value>
+  </data>
+  <data name="&gt;&gt;ReportModeLabel.Name" xml:space="preserve">
+    <value>ReportModeLabel</value>
+  </data>
+  <data name="&gt;&gt;ReportModeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ReportModeLabel.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;ReportModeLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ProvinceDistrictMultiFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
+  <data name="ProvinceDistrictMultiFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>778, 54</value>
+  </data>
+  <data name="ProvinceDistrictMultiFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 39</value>
+  </data>
+  <data name="ProvinceDistrictMultiFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>500</value>
+  </data>
+  <data name="ProvinceDistrictMultiFilter.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ProvinceDistrictMultiFilter.Name" xml:space="preserve">
+    <value>ProvinceDistrictMultiFilter</value>
+  </data>
+  <data name="&gt;&gt;ProvinceDistrictMultiFilter.Type" xml:space="preserve">
+    <value>EIDSS.Reports.BaseControls.Filters.ThaiProvinceDistrictsGroupsMultiFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ProvinceDistrictMultiFilter.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;ProvinceDistrictMultiFilter.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ProvinceFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
+  <data name="ProvinceFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 54</value>
   </data>
   <data name="ProvinceFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 39</value>
+    <value>67, 39</value>
   </data>
   <data name="ProvinceFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>600</value>
+    <value>300</value>
+  </data>
+  <data name="ProvinceFilter.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;ProvinceFilter.Name" xml:space="preserve">
     <value>ProvinceFilter</value>
   </data>
   <data name="&gt;&gt;ProvinceFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.ThaiProvinceMultiFilter, EIDSS.Reports, Version=6.1.0.41, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Filters.ThaiProvinceMultiFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ProvinceFilter.Parent" xml:space="preserve">
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;ProvinceFilter.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
+  </data>
+  <data name="CaseClassificationFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="CaseClassificationFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 11</value>
-  </data>
-  <data name="CaseClassificationFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>351, 97</value>
   </data>
   <data name="CaseClassificationFilter.Size" type="System.Drawing.Size, System.Drawing">
     <value>297, 39</value>
   </data>
   <data name="CaseClassificationFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>300</value>
+    <value>700</value>
   </data>
   <data name="&gt;&gt;CaseClassificationFilter.Name" xml:space="preserve">
     <value>CaseClassificationFilter</value>
   </data>
   <data name="&gt;&gt;CaseClassificationFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.ThaiCaseClassificationFilter, EIDSS.Reports, Version=6.1.0.41, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Filters.ThaiCaseClassificationFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CaseClassificationFilter.Parent" xml:space="preserve">
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;CaseClassificationFilter.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
-  <data name="ThaiZonesFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 50</value>
+  <data name="ZonesFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
   </data>
-  <data name="ThaiZonesFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+  <data name="ZonesFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 54</value>
   </data>
-  <data name="ThaiZonesFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 39</value>
+  <data name="ZonesFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 39</value>
   </data>
-  <data name="ThaiZonesFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>400</value>
+  <data name="ZonesFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>200</value>
   </data>
-  <data name="&gt;&gt;ThaiZonesFilter.Name" xml:space="preserve">
-    <value>ThaiZonesFilter</value>
+  <data name="ZonesFilter.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;ThaiZonesFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.ThaiZonesMultiFilter, EIDSS.Reports, Version=6.1.0.41, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ZonesFilter.Name" xml:space="preserve">
+    <value>ZonesFilter</value>
   </data>
-  <data name="&gt;&gt;ThaiZonesFilter.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ZonesFilter.Type" xml:space="preserve">
+    <value>EIDSS.Reports.BaseControls.Filters.ThaiZonesMultiFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ZonesFilter.Parent" xml:space="preserve">
     <value>pnlSettings</value>
   </data>
-  <data name="&gt;&gt;ThaiZonesFilter.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;ZonesFilter.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RegionFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="RegionFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 50</value>
-  </data>
-  <data name="RegionFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>697, 54</value>
   </data>
   <data name="RegionFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 39</value>
+    <value>67, 39</value>
   </data>
   <data name="RegionFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>500</value>
+    <value>400</value>
+  </data>
+  <data name="RegionFilter.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;RegionFilter.Name" xml:space="preserve">
     <value>RegionFilter</value>
   </data>
   <data name="&gt;&gt;RegionFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.ThaiRegionMultiFilter, EIDSS.Reports, Version=6.1.0.41, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Filters.ThaiRegionMultiFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RegionFilter.Parent" xml:space="preserve">
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;RegionFilter.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
+  </data>
+  <data name="DiagnosesFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="DiagnosesFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 94</value>
-  </data>
-  <data name="DiagnosesFilter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>31, 97</value>
   </data>
   <data name="DiagnosesFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 39</value>
+    <value>298, 39</value>
   </data>
   <data name="DiagnosesFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>200</value>
+    <value>600</value>
   </data>
   <data name="&gt;&gt;DiagnosesFilter.Name" xml:space="preserve">
     <value>DiagnosesFilter</value>
   </data>
   <data name="&gt;&gt;DiagnosesFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.HumDiagnosisMultiFilter, EIDSS.Reports, Version=6.1.0.41, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Filters.HumDiagnosisMultiFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DiagnosesFilter.Parent" xml:space="preserve">
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;DiagnosesFilter.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="pnlSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>868, 148</value>
+    <value>868, 154</value>
   </data>
   <data name="&gt;&gt;pnlSettings.Name" xml:space="preserve">
     <value>pnlSettings</value>
@@ -282,8 +355,11 @@
   <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="GenerateReportButton.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
   <data name="GenerateReportButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>667, 110</value>
+    <value>676, 112</value>
   </data>
   <data name="GenerateReportButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 23</value>
@@ -298,25 +374,19 @@
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;GenerateReportButton.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="ceUseArchiveData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>676, 27</value>
+    <value>351, 26</value>
   </data>
   <data name="ceUseArchiveData.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
-  <data name="ceUseArchiveData.Properties.AppearanceDisabled.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="ceUseArchiveData.Properties.AppearanceFocused.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="ceUseArchiveData.Properties.AppearanceReadOnly.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+  <data name="ceUseArchiveData.Properties.Caption" xml:space="preserve">
+    <value>CheckEdit</value>
   </data>
   <data name="ceUseArchiveData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 19</value>
+    <value>167, 19</value>
   </data>
   <data name="&gt;&gt;ceUseArchiveData.Name" xml:space="preserve">
     <value>ceUseArchiveData</value>
@@ -328,7 +398,7 @@
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;ceUseArchiveData.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <metadata name="bvResourceManagerChanger1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -336,16 +406,19 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="NumberOfCasesDeathsMonthTHReportKeeper.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
   <data name="&gt;&gt;bvResourceManagerChanger1.Name" xml:space="preserve">
     <value>bvResourceManagerChanger1</value>
   </data>
   <data name="&gt;&gt;bvResourceManagerChanger1.Type" xml:space="preserve">
-    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.1.0.41, Culture=neutral, PublicKeyToken=null</value>
+    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>NumberOfCasesDeathsMonthTHReportKeeper</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Keeper.BaseYearKeeper, EIDSS.Reports, Version=6.1.0.41, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Keeper.BaseYearKeeper, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

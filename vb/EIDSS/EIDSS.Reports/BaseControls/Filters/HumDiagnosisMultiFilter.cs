@@ -34,7 +34,9 @@ namespace EIDSS.Reports.BaseControls.Filters
         protected override void ApplyResources()
         {
             base.ApplyResources();
-            lblcheckedComboBoxName.Text = m_Resources.GetString("lblcheckedComboBoxName.Text");
+            m_Resources.ApplyResources(lblcheckedComboBoxName, "lblcheckedComboBoxName");
+            
+            //lblcheckedComboBoxName.Text = m_Resources.GetString("lblcheckedComboBoxName.Text");
         }
     }
 }

@@ -324,7 +324,7 @@
     <value>bvResourceManagerChanger1</value>
   </data>
   <data name="&gt;&gt;bvResourceManagerChanger1.Type" xml:space="preserve">
-    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.0.72.52, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;GridView1.Name" xml:space="preserve">
     <value>GridView1</value>
@@ -378,6 +378,6 @@
     <value>ReferenceDetail</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>bv.common.win.BaseDetailList, bvwin_common, Version=6.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>bv.common.win.BaseDetailList, bvwin_common, Version=6.0.72.52, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

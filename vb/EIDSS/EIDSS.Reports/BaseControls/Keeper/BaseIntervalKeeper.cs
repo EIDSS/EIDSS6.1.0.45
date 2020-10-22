@@ -98,8 +98,6 @@ namespace EIDSS.Reports.BaseControls.Keeper
 
                 m_Resources.ApplyResources(dtStart, "dtStart");
                 m_Resources.ApplyResources(dtEnd, "dtEnd");
-                dtStart.Top = 28;
-                dtEnd.Top = 28;
                 m_Resources.ApplyResources(lblStart, "lblStart");
                 m_Resources.ApplyResources(lblEnd, "lblEnd");
 

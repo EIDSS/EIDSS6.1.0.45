@@ -255,16 +255,16 @@
     <value>720, 27</value>
   </data>
   <data name="ceUseArchiveData.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceDisabled.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceFocused.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceReadOnly.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="&gt;&gt;ceUseArchiveData.Name" xml:space="preserve">
     <value>ceUseArchiveData</value>
@@ -279,7 +279,7 @@
     <value>4</value>
   </data>
   <data name="speciesFilter1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="speciesFilter1.Location" type="System.Drawing.Point, System.Drawing">
     <value>516, 47</value>
@@ -303,7 +303,7 @@
     <value>3</value>
   </data>
   <data name="DiagnosisMatrixFilter1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="DiagnosisMatrixFilter1.Location" type="System.Drawing.Point, System.Drawing">
     <value>240, 47</value>
@@ -327,7 +327,7 @@
     <value>2</value>
   </data>
   <data name="regionFilter1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="regionFilter1.Location" type="System.Drawing.Point, System.Drawing">
     <value>31, 52</value>
@@ -351,7 +351,7 @@
     <value>1</value>
   </data>
   <data name="investigationTypeFilter1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="investigationTypeFilter1.Location" type="System.Drawing.Point, System.Drawing">
     <value>516, 7</value>

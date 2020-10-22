@@ -15,12 +15,12 @@ Imports System
 Imports System.Reflection
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
-<Assembly: AssemblyConfiguration("Release"),
- Assembly: AssemblyCompany("Black & Veatch Special Projects Corp."),
- Assembly: AssemblyTitle("EIDSS"),
- Assembly: AssemblyProduct("Electronic Integrated Disease Surveillance System"),
- Assembly: AssemblyCopyright("Copyright © 2005-2016, Black & Veatch Special Projects Corp."),
- Assembly: AssemblyTrademark("Trademark by Black & Veatch Special Projects Corp."),
- Assembly: AssemblyVersion("6.1.0.42"),
- Assembly: AssemblyFileVersion("6.1.0.42")>
+<Assembly: AssemblyConfiguration("Release"), _
+ Assembly: AssemblyCompany("Black & Veatch Special Projects Corp."), _
+ Assembly: AssemblyTitle("EIDSS"), _
+ Assembly: AssemblyProduct("Electronic Integrated Disease Surveillance System"), _
+ Assembly: AssemblyCopyright("Copyright © 2005-2020, Black & Veatch Special Projects Corp."), _
+ Assembly: AssemblyTrademark("Trademark by Black & Veatch Special Projects Corp."), _
+ Assembly: AssemblyVersion("6.1.0.67"), _
+ Assembly: AssemblyFileVersion("6.1.0.67")> 
 

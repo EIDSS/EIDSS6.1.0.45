@@ -413,6 +413,10 @@ namespace eidss.avr.FilterForm
                     return "idfsRayon";
                 case "Settlement":
                     return "idfsSettlement";
+                case "DistrictOnly":
+                    return "idfsDistrict";
+                case "SubDistrictOnly":
+                    return "idfsSubDistrict";
                 default:
                     return base.GetValueMemberForSpecialLookup(type);
             }

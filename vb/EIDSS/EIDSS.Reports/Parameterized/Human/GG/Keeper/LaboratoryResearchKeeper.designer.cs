@@ -14,16 +14,16 @@ namespace EIDSS.Reports.Parameterized.Human.GG.Keeper
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LaboratoryResearchKeeper));
             this.CaseIdTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.SessionIdTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.CaseIdLabel = new DevExpress.XtraEditors.LabelControl();
-            this.SessionIdLabel = new DevExpress.XtraEditors.LabelControl();
+            this.CaseIdLabel = new System.Windows.Forms.Label();
+            this.SessionIdLabel = new System.Windows.Forms.Label();
             this.RegistrationNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.RegistrationNumberLabel = new DevExpress.XtraEditors.LabelControl();
+            this.RegistrationNumberLabel = new System.Windows.Forms.Label();
             this.ResultRecipientTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ResultRecipientLabel = new DevExpress.XtraEditors.LabelControl();
+            this.ResultRecipientLabel = new System.Windows.Forms.Label();
             this.ReportSourceLookUp = new DevExpress.XtraEditors.LookUpEdit();
-            this.ReportSourceLabel = new DevExpress.XtraEditors.LabelControl();
+            this.ReportSourceLabel = new System.Windows.Forms.Label();
             this.ReportConditionLookUp = new DevExpress.XtraEditors.LookUpEdit();
-            this.ReportConditionLabel = new DevExpress.XtraEditors.LabelControl();
+            this.ReportConditionLabel = new System.Windows.Forms.Label();
             this.pnlSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ceUseArchiveData.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CaseIdTextEdit.Properties)).BeginInit();
@@ -177,15 +177,15 @@ namespace EIDSS.Reports.Parameterized.Human.GG.Keeper
         
         private DevExpress.XtraEditors.TextEdit SessionIdTextEdit;
         private DevExpress.XtraEditors.TextEdit CaseIdTextEdit;
-        private DevExpress.XtraEditors.LabelControl ResultRecipientLabel;
+        private System.Windows.Forms.Label ResultRecipientLabel;
         private DevExpress.XtraEditors.TextEdit ResultRecipientTextEdit;
-        private DevExpress.XtraEditors.LabelControl RegistrationNumberLabel;
+        private System.Windows.Forms.Label RegistrationNumberLabel;
         private DevExpress.XtraEditors.TextEdit RegistrationNumberTextEdit;
-        private DevExpress.XtraEditors.LabelControl SessionIdLabel;
-        private DevExpress.XtraEditors.LabelControl CaseIdLabel;
-        private DevExpress.XtraEditors.LabelControl ReportSourceLabel;
+        private System.Windows.Forms.Label SessionIdLabel;
+        private System.Windows.Forms.Label CaseIdLabel;
+        private System.Windows.Forms.Label ReportSourceLabel;
         private DevExpress.XtraEditors.LookUpEdit ReportSourceLookUp;
-        private DevExpress.XtraEditors.LabelControl ReportConditionLabel;
+        private System.Windows.Forms.Label ReportConditionLabel;
         private DevExpress.XtraEditors.LookUpEdit ReportConditionLookUp;
 
     }

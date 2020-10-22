@@ -46,6 +46,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // ceUseArchiveData
             // 
             resources.ApplyResources(this.ceUseArchiveData, "ceUseArchiveData");
+            this.ceUseArchiveData.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ceUseArchiveData.Properties.Appearance.Font")));
             this.ceUseArchiveData.Properties.Appearance.Options.UseFont = true;
             this.ceUseArchiveData.Properties.AppearanceDisabled.Options.UseFont = true;
             this.ceUseArchiveData.Properties.AppearanceFocused.Options.UseFont = true;
@@ -54,6 +55,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(TuberculosisComparativeReportKeeper), out resources);
             // Form Is Localizable: True
@@ -113,6 +116,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // TuberculosisComparativeReportKeeper
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("TuberculosisComparativeReportKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.HeaderHeight = 130;
             this.Name = "TuberculosisComparativeReportKeeper";
             this.pnlSettings.ResumeLayout(false);

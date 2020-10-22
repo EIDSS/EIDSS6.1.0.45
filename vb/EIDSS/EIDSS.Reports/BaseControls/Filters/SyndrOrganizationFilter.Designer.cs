@@ -40,6 +40,12 @@
             // SyndrOrganizationFilter
             // 
             resources.ApplyResources(this, "$this");
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("SyndrOrganizationFilter.Appearance.Font")));
+            this.Appearance.FontSizeDelta = ((int)(resources.GetObject("SyndrOrganizationFilter.Appearance.FontSizeDelta")));
+            this.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("SyndrOrganizationFilter.Appearance.FontStyleDelta")));
+            this.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("SyndrOrganizationFilter.Appearance.GradientMode")));
+            this.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("SyndrOrganizationFilter.Appearance.Image")));
+            this.Appearance.Options.UseFont = true;
             this.Name = "SyndrOrganizationFilter";
             this.ResumeLayout(false);
 

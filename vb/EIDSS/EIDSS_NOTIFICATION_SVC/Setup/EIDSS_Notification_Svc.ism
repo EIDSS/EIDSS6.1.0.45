@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <?xml-stylesheet type="text/xsl" href="is.xsl" ?>
 <!DOCTYPE msi [
    <!ELEMENT msi   (summary,table*)>
@@ -2392,7 +2392,7 @@
 		<row><td>ISProductFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectDataFolder</td><td/><td/><td>1</td></row>
 		<row><td>ISProjectFolder</td><td/><td/><td>1</td></row>
-		<row><td>PATH_TO_BIN_FILES</td><td>c:\Mike\Projects\EIDSS_V4\DevelopersBranch\vb\EIDSS\EIDSS_NOTIFICATION_SVC\Setup\Source Files</td><td/><td>2</td></row>
+		<row><td>PATH_TO_BIN_FILES</td><td>D:\Work\Development\bvtfs\BVScrum\BVDev\EIDSSTrunk\EIDSS\vb\EIDSS\EIDSS_NOTIFICATION_SVC\Setup\Source Files</td><td/><td>2</td></row>
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>SystemFolder</td><td/><td/><td>1</td></row>
 		<row><td>WindowsFolder</td><td/><td/><td>1</td></row>

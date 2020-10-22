@@ -61,9 +61,9 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             return series;
         }
 
-        public static IList<int> GetMonthValues(ComparativeSeveralYearsTHDataSet.ComparativeTableRow row)
+        public static IList<long> GetMonthValues(ComparativeSeveralYearsTHDataSet.ComparativeTableRow row)
         {
-            return new List<int>
+            return new List<long>
             {
                 row.intJanuary,
                 row.intFebruary,

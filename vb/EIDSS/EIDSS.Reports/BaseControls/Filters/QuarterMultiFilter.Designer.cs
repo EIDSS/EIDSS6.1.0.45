@@ -39,16 +39,12 @@
             // 
             // QuarterMultiFilter
             // 
-            resources.ApplyResources(this, "$this");
-            this.Appearance.FontSizeDelta = ((int)(resources.GetObject("QuarterMultiFilter.Appearance.FontSizeDelta")));
-            this.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("QuarterMultiFilter.Appearance.FontStyleDelta")));
-            this.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("QuarterMultiFilter.Appearance.GradientMode")));
-            this.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("QuarterMultiFilter.Appearance.Image")));
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("QuarterMultiFilter.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.Name = "QuarterMultiFilter";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -76,6 +76,7 @@
             // cellLanguage
             // 
             resources.ApplyResources(this.cellLanguage, "cellLanguage");
+            this.cellLanguage.StylePriority.UseFont = false;
             this.cellLanguage.StylePriority.UseTextAlignment = false;
             // 
             // lblReportName
@@ -124,6 +125,7 @@
             // 
             resources.ApplyResources(this.xrPageInfo1, "xrPageInfo1");
             this.xrPageInfo1.StylePriority.UseBorders = false;
+            this.xrPageInfo1.StylePriority.UseFont = false;
             // 
             // cellReportHeader
             // 
@@ -142,6 +144,7 @@
             // cellBaseCountry
             // 
             resources.ApplyResources(this.cellBaseCountry, "cellBaseCountry");
+            this.cellBaseCountry.StylePriority.UseFont = false;
             // 
             // cellBaseLeftHeader
             // 
@@ -387,6 +390,7 @@
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo2.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
             this.xrPageInfo2.StylePriority.UseBorders = false;
+            this.xrPageInfo2.StylePriority.UseFont = false;
             this.xrPageInfo2.StylePriority.UseForeColor = false;
             this.xrPageInfo2.StylePriority.UseTextAlignment = false;
             // 

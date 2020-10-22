@@ -8,6 +8,8 @@ using bv.winclient.Core;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraTreeList;
 using DevExpress.XtraTreeList.Nodes;
+using eidss.model.Resources;
+using bv.winclient.Layout;
 
 namespace EIDSS.Reports.BaseControls.Filters
 {
@@ -18,9 +20,15 @@ namespace EIDSS.Reports.BaseControls.Filters
         /// </summary>
         public event EventHandler<MultiFilterEventArgs> ValueChanged;
 
+        /// <summary>
+        ///     Fires immediately after lookup edit value has been changed
+        /// </summary>
+        public event EventHandler<MultiFilterEventArgs> GroupAndIndividualValueChanged;
+
         private bool m_Checking;
         protected string m_GroupDisplayText = string.Empty;
         private readonly IDictionary<long, string> m_CheckedItems = new Dictionary<long, string>();
+        private readonly IDictionary<long, string> m_CheckedGroupAndIndividualItems = new Dictionary<long, string>();
 
         protected GroupsMultiFilter()
         {
@@ -82,54 +90,74 @@ namespace EIDSS.Reports.BaseControls.Filters
             set { treeList.OptionsView.ShowCheckBoxes = value; }
         }
 
+        public void ClearSelection()
+        {
+            using (CreateWaitDialog())
+            {
+                treeList.UncheckAll();
+                m_CheckedItems.Clear();
+                m_CheckedGroupAndIndividualItems.Clear();
+                m_GroupDisplayText = string.Empty;
+                // note: [ivan] don't remove this assignment. Otherwise lookup will not refresh the text.
+                treeListLookUp.Text = " ";
+                treeListLookUp.Text = string.Empty;
+            }
+        }
+
+        public virtual void SetMandatory()
+        {
+            LayoutCorrector.SetStyleController(treeListLookUp, LayoutCorrector.MandatoryStyleController);
+        }
+
+        
         /// <summary>
         ///     Bind Datasouce to the Lookup Control and Customize Filter
         /// </summary>
         public override void DefineBinding()
         {
-            ResetDataSource();
-
-            treeList.DataSource = DataSource;
-
-            treeList.KeyFieldName = KeyColumnName;
-            treeList.ParentFieldName = ParentColumnName;
-            for (int i = 0; i < treeList.Columns.Count; i++)
+            using (CreateWaitDialog())
             {
-                if (treeList.Columns[i].FieldName == ValueColumnName)
+                ResetDataSource();
+
+                treeList.DataSource = DataSource;
+
+                treeList.KeyFieldName = KeyColumnName;
+                treeList.ParentFieldName = ParentColumnName;
+                for (int i = 0; i < treeList.Columns.Count; i++)
                 {
-                    treeList.Columns[i].Caption = CheckedComboBoxName;
+                    if (treeList.Columns[i].FieldName == ValueColumnName)
+                    {
+                        treeList.Columns[i].Caption = CheckedComboBoxName;
+                    }
+                    else if (treeList.Columns[i].FieldName == SecondColumnName)
+                    {
+                        treeList.Columns[i].Caption = SecondColumnCaption;
+                    }
+                    else
+                    {
+                        treeList.Columns[i].Visible = false;
+                    }
                 }
-                else if (treeList.Columns[i].FieldName == SecondColumnName)
+                //  treeList.OptionsView.ShowCheckBoxes = false;
+                treeList.ExpandAll();
+
+                treeListLookUp.Properties.PopupFormWidth = treeListLookUp.Width;
+
+                treeList.NodesIterator.DoOperation(node =>
                 {
-                    treeList.Columns[i].Caption = SecondColumnCaption;
-                }
-                else
-                {
-                    treeList.Columns[i].Visible = false;
-                }
+                    var idItem = (long)node.GetValue(KeyColumnName);
+                    if (m_CheckedItems.ContainsKey(idItem))
+                    {
+                        m_CheckedItems[idItem] = node.GetDisplayText("name");
+                        node.Checked = true;
+                    }
+                });
+                CalculateGroupDisplayText();
+                treeListLookUp.Text = GetDisplayText();
+                CalculateCheckedGroupAndIndividualItems();
+                ApplyResources();
             }
-            //  treeList.OptionsView.ShowCheckBoxes = false;
-            treeList.ExpandAll();
-
-            treeListLookUp.Properties.PopupFormWidth = treeListLookUp.Width;
-
-            treeList.NodesIterator.DoOperation(node =>
-            {
-                var idItem = (long) node.GetValue(KeyColumnName);
-                if (m_CheckedItems.ContainsKey(idItem))
-                {
-                    m_CheckedItems[idItem] = node.GetDisplayText("name");
-                    node.Checked = true;
-                }
-            });
-            CalculateGroupDisplayText();
-            treeListLookUp.Text = GetDisplayText();
-            ApplyResources();
         }
-
-       
-
-       
         protected override void ApplyResources()
         {
             base.ApplyResources();
@@ -156,29 +184,53 @@ namespace EIDSS.Reports.BaseControls.Filters
             }
         }
 
-
-
         public virtual string GetDisplayText()
         {
             return string.Join(", ", m_CheckedItems.Values.ToArray());
         }
 
-     
+        public virtual string GetGroupAndIndividualDisplayText()
+        {
+            return string.Join(", ", m_CheckedGroupAndIndividualItems.Values.ToArray());
+        }
 
         private void CustomDisplayText(object sender, CustomDisplayTextEventArgs e)
         {
             e.DisplayText = GetDisplayText();
         }
 
+        public virtual void SetValue(long? value)
+        {
+            if (value == null)
+            {
+                return;
+            }
+
+            this.treeListLookUp.EditValue = value;
+            this.treeListLookUp.RefreshEditValue();
+        }
+
+        private static WaitDialog CreateWaitDialog()
+        {
+            string title = EidssMessages.Get("msgPleaseWait");
+            string caption = EidssMessages.Get("msgLoading");
+            return new WaitDialog(caption, title);
+
+        }
         private void AfterCheckNode(object sender, NodeEventArgs e)
         {
             if (m_Checking || !ShowCheckBoxes)
             {
                 return;
             }
+            WaitDialog wait = null;
             try
             {
+                wait = CreateWaitDialog();
+
                 m_Checking = true;
+
+                treeList.BeginUpdate();
                 if (e.Node.Checked)
                 {
                     e.Node.CheckAll();
@@ -187,33 +239,44 @@ namespace EIDSS.Reports.BaseControls.Filters
                 {
                     e.Node.UncheckAll();
                 }
+                treeList.EndUpdate();
+
                 SetParentNodeState(e.Node);
                 var checkedNodes = treeList.GetAllCheckedNodes();
                 m_CheckedItems.Clear();
                 foreach (var node in checkedNodes)
                 {
                     var idGroup = node.GetValue("blnGroup");
-                    if (idGroup != DBNull.Value && !(bool) idGroup)
+                    if (idGroup != DBNull.Value && !(bool)idGroup)
                     {
-                        var idItem = (long) node.GetValue(KeyColumnName);
+                        var idItem = (long)node.GetValue(KeyColumnName);
                         string name = node.GetDisplayText("name");
 
                         m_CheckedItems.Add(idItem, name);
                     }
                 }
 
+                CalculateCheckedGroupAndIndividualItems();
+
                 CalculateGroupDisplayText();
                 treeListLookUp.Text = GetDisplayText();
+                treeListLookUp.Refresh();
                 var args = new MultiFilterEventArgs(m_CheckedItems);
                 ValueChanged.SafeRaise(sender, args);
+                var groupAndIndividualArgs = new MultiFilterEventArgs(m_CheckedGroupAndIndividualItems);
+                GroupAndIndividualValueChanged.SafeRaise(sender, groupAndIndividualArgs);
             }
             finally
             {
+                if (wait != null)
+                {
+                    wait.Dispose();
+                }
                 m_Checking = false;
             }
         }
 
-        private void FocusedNodeChanged(object sender, FocusedNodeChangedEventArgs e)
+        protected virtual void FocusedNodeChanged(object sender, FocusedNodeChangedEventArgs e)
         {
             if (ShowCheckBoxes || e.Node == null)
             {
@@ -229,8 +292,11 @@ namespace EIDSS.Reports.BaseControls.Filters
                 m_CheckedItems.Add(idItem, name);
             }
             CalculateGroupDisplayText();
+            CalculateCheckedGroupAndIndividualItems();
             var args = new MultiFilterEventArgs(m_CheckedItems);
             ValueChanged.SafeRaise(sender, args);
+            var groupAndIndividualArgs = new MultiFilterEventArgs(m_CheckedGroupAndIndividualItems);
+            GroupAndIndividualValueChanged.SafeRaise(sender, groupAndIndividualArgs);
         }
         private void CalculateGroupDisplayText()
         {
@@ -251,5 +317,25 @@ namespace EIDSS.Reports.BaseControls.Filters
                 m_GroupDisplayText = string.Join(", ", items.ToArray());
             }
         }
+
+        private void CalculateCheckedGroupAndIndividualItems()
+        {
+            m_CheckedGroupAndIndividualItems.Clear();
+            if (treeList != null)
+            {
+                List<TreeListNode> checkedNodes = treeList.GetAllCheckedNodes();
+
+                foreach (var node in checkedNodes)
+                {
+                    if (node.HasChildren || (node.ParentNode != null && node.ParentNode.CheckState != CheckState.Checked))
+                    {
+                        var idItem = (long)node.GetValue(KeyColumnName);
+                        var name = node.GetDisplayText("name");
+                        m_CheckedGroupAndIndividualItems.Add(idItem, name);
+                    }
+                }
+            }
+        }
+
     }
 }

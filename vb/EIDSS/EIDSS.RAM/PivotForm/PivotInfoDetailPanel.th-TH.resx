@@ -142,10 +142,10 @@
     <value>คำอธิบาย</value>
   </data>
   <data name="LayoutDefaultNameLabel.Text" xml:space="preserve">
-    <value>ชื่อเลย์เอาท์ (ภาษาอังกฤษ)</value>
+    <value>ชื่อเลย์เอ้าท์ (ภาษาอังกฤษ)</value>
   </data>
   <data name="LayoutNationalNameLabel.Text" xml:space="preserve">
-    <value>ชื่อเลย์เอาท์</value>
+    <value>ชื่อเลย์เอ้าท์ (ภาษาไทย)</value>
   </data>
   <data name="UnpublishValueLabel.Text" xml:space="preserve">
     <value>ไม่ได้ตีพิมพ์</value>

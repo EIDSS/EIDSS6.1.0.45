@@ -193,7 +193,7 @@ namespace EIDSS.Reports.BaseControls.Keeper
 			lookUpEdit.EditValue = MonthCollection[month - 1];
 		}
 
-		protected override BaseReport GenerateReport(DbManagerProxy manager, DbManagerProxy archiveManager)
+        protected override BaseReport GenerateReport(DbManagerProxy manager, DbManagerProxy archiveManager)
 		{
 			var report = ((BaseDateReport)CreateReportObject());
 			var model = new BaseDateModel(CurrentCulture.ShortName, YearParam, StartMonthParam, EndMonthParam, UseArchive);
