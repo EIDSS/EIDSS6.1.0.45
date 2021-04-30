@@ -115,12 +115,6 @@ namespace eidss.model.AVR.SourceData
             return new AvrDataRowEx(dto);
         }
 
-//        public AvrDataRowBase[] Select(string filterExpression)
-//        {
-//            //todo: [ivan] implement
-//            return Rows.ToArray();
-//        }
-
         public void DenyColumn(string columnName)
         {
             Columns.Deny(columnName);

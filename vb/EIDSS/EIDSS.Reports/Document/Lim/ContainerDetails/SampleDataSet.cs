@@ -9,10 +9,6 @@ namespace EIDSS.Reports.Document.Lim.ContainerDetails
 {
 }
 
-namespace EIDSS.Reports.Document.Lim.ContainerDetails
-{
-}
-
 namespace EIDSS.Reports.Document.Lim.ContainerDetails.SampleDataSetTableAdapters
 {
     

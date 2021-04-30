@@ -5,7 +5,6 @@ using bv.common.db.Core;
 using bv.winclient.Core;
 using bv.winclient.Layout;
 using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Controls;
 
 namespace EIDSS.Reports.BaseControls.Filters
 {

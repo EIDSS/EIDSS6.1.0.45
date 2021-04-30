@@ -121,7 +121,7 @@
     <value>บาร์โค้ดตัวอย่าง</value>
   </data>
   <data name="MenuItem2.Text" xml:space="preserve">
-    <value>เพิ่มใน</value>
+    <value>ลงรายการรับตัวอย่าง</value>
   </data>
   <data name="$this.Caption" xml:space="preserve">
     <value>เพิ่มกลุ่มใน</value>

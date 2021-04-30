@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Linq;
-using System.Xml.Serialization;
 using System.Text.RegularExpressions;
+using System.Xml.Serialization;
 using bv.common.Core;
 using eidss.model.Avr.Pivot;
 using eidss.model.Resources;
@@ -36,7 +36,6 @@ namespace eidss.model.Avr.View
         private int m_ColumnWidth = 100;
 
         private bool m_IsChanged;
-        private bool m_ToDelete;
         [XmlIgnore] private Type m_FieldType;
 
         #region Constructors
@@ -58,9 +57,9 @@ namespace eidss.model.Avr.View
             m_ID = -1;
             m_Visible = true;
             SetUnchanged();
-            m_ToDelete = false;
+            IsToDelete = false;
             m_SortAscending = true;
-            FieldType = typeof (string);
+            FieldType = typeof(string);
             CustomSummaryType = CustomSummaryType.Undefined;
         }
 
@@ -71,27 +70,31 @@ namespace eidss.model.Avr.View
             m_ViewID = (long) row["idfView"];
             UniquePath = (string) row["UniquePath"];
             OriginalName = (string) row["strOriginalName"];
-            object ids = row["idfLayoutSearchField"];
+            var ids = row["idfLayoutSearchField"];
             if (!Utils.IsEmpty(ids))
             {
                 LayoutSearchFieldId = (long) ids;
             }
+
             ids = row["strDisplayName"];
             if (!Utils.IsEmpty(ids))
             {
                 m_DisplayText = (string) ids;
             }
+
             m_Aggregate = (bool) row["blnAggregateColumn"];
             ids = row["idfsAggregateFunction"];
             if (!Utils.IsEmpty(ids))
             {
                 m_AggregateFunction = (long?) ids;
             }
+
             ids = row["intPrecision"];
             if (!Utils.IsEmpty(ids))
             {
                 Precision = (int?) ids;
             }
+
             m_ChartSeries = (bool) row["blnChartSeries"];
             m_MapDiagramSeries = (bool) row["blnMapDiagramSeries"];
             m_MapGradientSeries = (bool) row["blnMapGradientSeries"];
@@ -100,11 +103,13 @@ namespace eidss.model.Avr.View
             {
                 m_SourceViewColumn = (string) ids;
             }
+
             ids = row["DenominatorViewColumn"];
             if (!Utils.IsEmpty(ids))
             {
                 m_DenominatorViewColumn = (string) ids;
             }
+
             m_Visible = (bool) row["blnVisible"];
             m_Freeze = (bool) row["blnFreeze"];
             ids = row["intSortOrder"];
@@ -112,6 +117,7 @@ namespace eidss.model.Avr.View
             {
                 m_SortOrder = (int?) ids;
             }
+
             m_SortAscending = (bool) row["blnSortAscending"];
             ids = row["intOrder"];
             if (!Utils.IsEmpty(ids))
@@ -122,11 +128,13 @@ namespace eidss.model.Avr.View
             {
                 m_Order = 0;
             }
+
             ids = row["strColumnFilter"];
             if (!Utils.IsEmpty(ids))
             {
                 m_ColumnFilter = (string) ids;
             }
+
             ids = row["intColumnWidth"];
             if (!Utils.IsEmpty(ids))
             {
@@ -136,7 +144,7 @@ namespace eidss.model.Avr.View
             CustomSummaryType = CustomSummaryType.Undefined;
 
             m_IsChanged = false;
-            m_ToDelete = false;
+            IsToDelete = false;
         }
 
         // returns (Select All) for web
@@ -169,12 +177,13 @@ namespace eidss.model.Avr.View
 
         [XmlIgnore]
         public BaseBand Owner { get; set; }
-        
+
         public long? GisReferenceTypeId
         {
             get { return m_GisReferenceTypeID; }
             set { m_GisReferenceTypeID = value; }
         }
+
         public long LayoutSearchFieldId { get; set; }
 
         public string LayoutSearchFieldName { get; set; }
@@ -257,7 +266,7 @@ namespace eidss.model.Avr.View
             }
         }
 
-        
+
         public CustomSummaryType CustomSummaryType { get; set; }
 
         public int? Precision { get; set; }
@@ -277,7 +286,7 @@ namespace eidss.model.Avr.View
         [XmlIgnore]
         public string Precision_
         {
-            get { return (Precision.HasValue && Precision.Value != -1) ? Precision.ToString() : string.Empty; }
+            get { return Precision.HasValue && Precision.Value != -1 ? Precision.ToString() : string.Empty; }
         }
 
         [XmlIgnore]
@@ -288,10 +297,15 @@ namespace eidss.model.Avr.View
                 if (m_PrecisionString == null)
                 {
                     if (FieldType.IsNumeric() && Precision_.Length > 0)
+                    {
                         m_PrecisionString = "N" + Precision_;
+                    }
                     else
+                    {
                         m_PrecisionString = Precision_;
+                    }
                 }
+
                 return m_PrecisionString;
             }
             set { m_PrecisionString = value; }
@@ -404,10 +418,9 @@ namespace eidss.model.Avr.View
                 if (m_SortOrder != value && (m_SortOrder != null || value != -1))
                 {
                     SetChanges();
-                    if (value == -1)
-                        m_SortOrder = null;
-                    else
-                        m_SortOrder = value;
+                    m_SortOrder = value == -1 
+                        ? null 
+                        : value;
                 }
             }
         }
@@ -450,7 +463,7 @@ namespace eidss.model.Avr.View
         [XmlIgnore]
         public int Order_ForUse
         {
-            get { return Order_Temp.HasValue ? Order_Temp.Value : (Order > 0 ? Order : Order_Pivot + 1000); }
+            get { return Order_Temp ?? (Order > 0 ? Order : Order_Pivot + 1000); }
         }
 
         [XmlIgnore]
@@ -473,7 +486,7 @@ namespace eidss.model.Avr.View
             get
             {
                 //remove L from numbers
-                string ret = Regex.Replace(m_ColumnFilter, "(=\\s?\\d+)L", "$1");
+                var ret = Regex.Replace(m_ColumnFilter, "(=\\s?\\d+)L", "$1");
                 // replace  Not IsNullOrEmpty
                 ret = Regex.Replace(ret, "Not IsNullOrEmpty\\(([^\\(\\)]+)\\)", "$1 Not is NULL AND $1 <> ''");
                 // replace  IsNullOrEmpty
@@ -489,7 +502,7 @@ namespace eidss.model.Avr.View
             {
                 if (m_ColumnWidth != value)
                 {
-                    SetChanges();//bug 11987
+                    SetChanges(); //bug 11987
                     m_ColumnWidth = value;
                 }
             }
@@ -510,13 +523,13 @@ namespace eidss.model.Avr.View
         // this property is used when asking if to save
         public bool IsChanged
         {
-            get { return !m_ToDelete && m_IsChanged; }
+            get { return !IsToDelete && m_IsChanged; }
         }
 
         // this property is used when saving
         public bool IsSelfChanged
         {
-            get { return !m_ToDelete && (m_IsChanged || m_ID <= 0 || (!IsAggregate && ColumnWidth != ColumnWidth_Pivot)); }
+            get { return !IsToDelete && (m_IsChanged || m_ID <= 0 || !IsAggregate && ColumnWidth != ColumnWidth_Pivot); }
         }
 
         #endregion
@@ -528,7 +541,8 @@ namespace eidss.model.Avr.View
             if (!m_IsChanged)
             {
                 m_IsChanged = true;
-                System.Diagnostics.Trace.WriteLine("AvrViewColumn '" + m_DisplayText + "' ID=" + m_ID.ToString() + "  changed in function " + Utils.GetPreviousMethodName());
+                System.Diagnostics.Trace.WriteLine("AvrViewColumn '" + m_DisplayText + "' ID=" + m_ID + "  changed in function " +
+                                                   Utils.GetPreviousMethodName());
             }
         }
 
@@ -537,13 +551,14 @@ namespace eidss.model.Avr.View
             if (m_IsChanged)
             {
                 m_IsChanged = false;
-                System.Diagnostics.Trace.WriteLine("AvrViewColumn '" + m_DisplayText + "' ID=" + m_ID.ToString() + " set unchanged in function " + Utils.GetPreviousMethodName());
+                System.Diagnostics.Trace.WriteLine("AvrViewColumn '" + m_DisplayText + "' ID=" + m_ID + " set unchanged in function " +
+                                                   Utils.GetPreviousMethodName());
             }
         }
 
         public void SavePivotSettings(int order, AvrViewColumn pivotCol)
         {
-            m_ToDelete = false;
+            IsToDelete = false;
             Order_Pivot = order;
             m_DisplayNamePivot = pivotCol.DisplayText;
             IsRowArea = pivotCol.IsRowArea;
@@ -577,39 +592,51 @@ namespace eidss.model.Avr.View
             {
                 return true;
             }
+
             if (Order != 0)
             {
                 return true;
             }
+
             if (!IsVisible)
             {
                 return true;
             }
+
             if (SortOrder != null)
             {
                 return true;
             }
+
             if (!IsSortAscending)
             {
                 return true;
             }
+
             if (!string.IsNullOrEmpty(ColumnFilter))
             {
                 return true;
             }
+
             if (m_ChartSeries)
+            {
                 return true;
+            }
+
             if (m_MapDiagramSeries)
+            {
                 return true;
+            }
+
             if (m_MapGradientSeries)
+            {
                 return true;
+            }
+
             return false;
         }
 
-        public bool IsToDelete
-        {
-            get { return m_ToDelete; }
-        }
+        public bool IsToDelete { get;  set; }
 
         public bool Delete()
         {
@@ -617,7 +644,8 @@ namespace eidss.model.Avr.View
             {
                 return false;
             }
-            m_ToDelete = true;
+
+            IsToDelete = true;
             return true;
         }
 
@@ -631,45 +659,49 @@ namespace eidss.model.Avr.View
             m_Visible = true;
         }
 
-        public bool getRatio()
+        public bool GetRatio()
         {
-            bool ratio = false;
+            var ratio = false;
             switch (AggregateFunction)
             {
                 case (long) ViewAggregateFunction.CumulativePercent:
                 case (long) ViewAggregateFunction.PercentOfColumn:
                 case (long) ViewAggregateFunction.PercentOfRow:
-                    if (SourceViewColumn == null || SourceViewColumn == "")
+                    if (string.IsNullOrEmpty(SourceViewColumn))
                     {
                         ratio = true;
                     }
+
                     break;
                 case (long) ViewAggregateFunction.Proportion:
                     if (SourceViewColumn == null || DenominatorViewColumn == null || SourceViewColumn == "" || DenominatorViewColumn == "")
                     {
                         ratio = true;
                     }
+
                     break;
                 case (long) ViewAggregateFunction.Ratio:
                     if (SourceViewColumn == null || DenominatorViewColumn == null || SourceViewColumn == "" || DenominatorViewColumn == "")
                     {
                         ratio = true;
                     }
-                    else if (Owner.GetColumnByOriginalName(SourceViewColumn).FieldType == typeof (int) &&
-                             Owner.GetColumnByOriginalName(DenominatorViewColumn).FieldType == typeof (int))
+                    else if (Owner.GetColumnByOriginalName(SourceViewColumn).FieldType == typeof(int) &&
+                             Owner.GetColumnByOriginalName(DenominatorViewColumn).FieldType == typeof(int))
                     {
                         ratio = true;
                     }
+
                     break;
             }
+
             return ratio;
         }
 
-        public void setAggrColumnTypeWeb()
+        public void SetAggrColumnTypeWeb()
         {
-            if (getRatio())
+            if (GetRatio())
             {
-                FieldType = typeof (string);
+                FieldType = typeof(string);
             }
             else
             {
@@ -678,38 +710,41 @@ namespace eidss.model.Avr.View
                     case (long) ViewAggregateFunction.CumulativePercent:
                     case (long) ViewAggregateFunction.PercentOfColumn:
                     case (long) ViewAggregateFunction.PercentOfRow:
-                        FieldType = typeof (double);
+                        FieldType = typeof(double);
                         PrecisionStringWeb = "P" + Precision_;
                         break;
                     case (long) ViewAggregateFunction.Proportion:
-                        FieldType = typeof (double);
+                        FieldType = typeof(double);
                         PrecisionStringWeb = "N" + Precision_;
                         break;
                     case (long) ViewAggregateFunction.Ratio:
-                        FieldType = typeof (string);
+                        FieldType = typeof(string);
                         break;
                     case (long) ViewAggregateFunction.MaxOfRow:
                     case (long) ViewAggregateFunction.MinOfRow:
-                        AvrViewColumn neibN =
-                            Owner.GetAllColumns().ToList().Find(n => !n.IsToDelete && n.IsVisible && !n.IsAggregate && n.FieldType.IsNumeric());
-                        AvrViewColumn neibD =
-                            Owner.GetAllColumns().ToList().Find(n => !n.IsToDelete && n.IsVisible && !n.IsAggregate && n.FieldType == typeof(DateTime));
+                        var neibN =
+                            Owner.GetAllColumns().ToList()
+                                .Find(n => !n.IsToDelete && n.IsVisible && !n.IsAggregate && n.FieldType.IsNumeric());
+                        var neibD =
+                            Owner.GetAllColumns().ToList().Find(n =>
+                                !n.IsToDelete && n.IsVisible && !n.IsAggregate && n.FieldType == typeof(DateTime));
                         if (neibN != null || neibD != null)
                         {
                             if (neibN != null)
                             {
-                                FieldType = typeof (double);
+                                FieldType = typeof(double);
                                 PrecisionStringWeb = "N" + Precision_;
                             }
                             else
                             {
-                                FieldType = typeof (DateTime);
+                                FieldType = typeof(DateTime);
                                 PrecisionStringWeb = "d";
                             }
                         }
+
                         break;
                     default:
-                        FieldType = typeof (string);
+                        FieldType = typeof(string);
                         break;
                 }
             }
@@ -719,12 +754,19 @@ namespace eidss.model.Avr.View
         {
             var b = Owner;
             if (b is AvrView)
-                return (AvrView)b;
-            do{
+            {
+                return (AvrView) b;
+            }
+
+            do
+            {
                 b = b.Owner;
                 if (b is AvrView)
-                    return (AvrView)b;
+                {
+                    return (AvrView) b;
+                }
             } while (b != null);
+
             return null;
         }
 

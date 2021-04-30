@@ -174,7 +174,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="measureTypeFilter1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="measureTypeFilter1.Location" type="System.Drawing.Point, System.Drawing">
     <value>240, 51</value>
@@ -198,7 +198,7 @@
     <value>0</value>
   </data>
   <data name="regionFilter1.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="regionFilter1.Location" type="System.Drawing.Point, System.Drawing">
     <value>31, 51</value>
@@ -249,16 +249,16 @@
     <value>7</value>
   </data>
   <data name="ceUseArchiveData.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceDisabled.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceFocused.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceReadOnly.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="&gt;&gt;ceUseArchiveData.Name" xml:space="preserve">
     <value>ceUseArchiveData</value>

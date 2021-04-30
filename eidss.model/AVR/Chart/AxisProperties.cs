@@ -9,19 +9,24 @@ namespace eidss.model.Avr.Chart
     {
         [XmlIgnore]
         public Color LineColor { get; set; }
+
         public int LineColorArgb
         {
             get { return LineColor.ToArgb(); }
             set { LineColor = Color.FromArgb(value); }
         }
+
         public int LineWidth { get; set; }
+
         [XmlIgnore]
         public Color GridLinesColor { get; set; }
+
         public int GridLinesColorArgb
         {
             get { return GridLinesColor.ToArgb(); }
             set { GridLinesColor = Color.FromArgb(value); }
         }
+
         public int GridLinesStyle { get; set; }
         public bool GridLinesVisibility { get; set; }
         public int ValueLabelAngle { get; set; }
@@ -32,7 +37,7 @@ namespace eidss.model.Avr.Chart
 
         public int TickmarkMinorCount { get; set; }
         public bool RangeReverse { get; set; }
-        
+
         public AxisProperties()
         {
             Title = new TitleProperties();

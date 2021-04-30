@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
-using System.Data;
 using bv.common.Core;
-using bv.common.db.Core;
 using bv.model.BLToolkit;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.UI;
 using eidss.model.Core;
-using eidss.model.Enums;
 using EIDSS.Reports.Factory;
+//using System.Data;
+//using bv.common.db.Core;
+//using eidss.model.Enums;
 
 namespace EIDSS.Reports.BaseControls.Report
 {
@@ -43,47 +43,47 @@ namespace EIDSS.Reports.BaseControls.Report
             ReportRtlHelper.SetRTL(this);
         }
 
-        protected internal static string GetFullLocationFromAdmUnitId(long admUnitId, GisReferenceType admUnitType)
-        {
-            switch (admUnitType)
-            {
-                case GisReferenceType.Country:
-                    return LookupCache.GetLookupValue(admUnitId, LookupTables.Country, "strCountryName");
+        //protected internal static string GetFullLocationFromAdmUnitId(long admUnitId, GisReferenceType admUnitType)
+        //{
+        //    switch (admUnitType)
+        //    {
+        //        case GisReferenceType.Country:
+        //            return LookupCache.GetLookupValue(admUnitId, LookupTables.Country, "strCountryName");
 
-                case GisReferenceType.Region:
-                    DataRow regionRow = LookupCache.GetLookupRow(admUnitId, LookupTables.Region.ToString());
-                    if (regionRow == null)
-                    {
-                        return string.Empty;
-                    }
-                    string region = Utils.Str(regionRow["strRegionName"]);
-                    string country = GetFullLocationFromAdmUnitId((long) regionRow["idfsCountry"], GisReferenceType.Country);
-                    return string.Format("{0}, {1}", country, region);
+        //        case GisReferenceType.Region:
+        //            DataRow regionRow = LookupCache.GetLookupRow(admUnitId, LookupTables.Region.ToString());
+        //            if (regionRow == null)
+        //            {
+        //                return string.Empty;
+        //            }
+        //            string region = Utils.Str(regionRow["strRegionName"]);
+        //            string country = GetFullLocationFromAdmUnitId((long)regionRow["idfsCountry"], GisReferenceType.Country);
+        //            return string.Format("{0}, {1}", country, region);
 
-                case GisReferenceType.Rayon:
-                    DataRow rayonRow = LookupCache.GetLookupRow(admUnitId, LookupTables.Rayon.ToString());
-                    if (rayonRow == null)
-                    {
-                        return string.Empty;
-                    }
-                    string rayon = Utils.Str(rayonRow["strRayonName"]);
-                    string regionLocation = GetFullLocationFromAdmUnitId((long) rayonRow["idfsRegion"], GisReferenceType.Region);
-                    return string.Format("{0}, {1}", regionLocation, rayon);
+        //        case GisReferenceType.Rayon:
+        //            DataRow rayonRow = LookupCache.GetLookupRow(admUnitId, LookupTables.Rayon.ToString());
+        //            if (rayonRow == null)
+        //            {
+        //                return string.Empty;
+        //            }
+        //            string rayon = Utils.Str(rayonRow["strRayonName"]);
+        //            string regionLocation = GetFullLocationFromAdmUnitId((long)rayonRow["idfsRegion"], GisReferenceType.Region);
+        //            return string.Format("{0}, {1}", regionLocation, rayon);
 
-                case GisReferenceType.Settlement:
-                    DataRow settlementRow = LookupCache.GetLookupRow(admUnitId, LookupTables.Settlement.ToString());
-                    if (settlementRow == null)
-                    {
-                        return string.Empty;
-                    }
-                    string settlement = Utils.Str(settlementRow["strSettlementName"]);
-                    string rayonLocation = GetFullLocationFromAdmUnitId((long) settlementRow["idfsRayon"], GisReferenceType.Rayon);
-                    return string.Format("{0}, {1}", rayonLocation, settlement);
+        //        case GisReferenceType.Settlement:
+        //            DataRow settlementRow = LookupCache.GetLookupRow(admUnitId, LookupTables.Settlement.ToString());
+        //            if (settlementRow == null)
+        //            {
+        //                return string.Empty;
+        //            }
+        //            string settlement = Utils.Str(settlementRow["strSettlementName"]);
+        //            string rayonLocation = GetFullLocationFromAdmUnitId((long)settlementRow["idfsRayon"], GisReferenceType.Rayon);
+        //            return string.Format("{0}, {1}", rayonLocation, settlement);
 
-                default:
-                    return string.Empty;
-            }
-        }
+        //        default:
+        //            return string.Empty;
+        //    }
+        //}
 
         protected internal static void AddBuildingHouseBinding
             (XRTableCell buildingCell, XRTableCell houseCell, string buildingMember, string houseMember)

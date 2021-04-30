@@ -1,23 +1,28 @@
 using System;
 using bv.common.Core;
 using DevExpress.XtraPivotGrid.Data;
+using eidss.model.Reports.OperationContext;
 
 namespace eidss.avr.Tools.DataTransactions
 {
     public class DataTransaction : IDisposable
     {
         private readonly PivotGridData m_Data;
-        private readonly DataTransactionStrategy.EndTransactionHandler m_EndTransactionHandler;
+        private IContextKeeper m_Keeper;
+        private readonly Action m_AfterDisposeTransaction;
 
         public DataTransaction()
         {
         }
 
-        public DataTransaction(DataTransactionStrategy.EndTransactionHandler endTransactionHandler, PivotGridData data)
+        public DataTransaction(IContextKeeper keeper, Action afterDisposeTransaction, PivotGridData data)
         {
+            Utils.CheckNotNull(keeper, "keeper");
             Utils.CheckNotNull(data, "data");
+            m_Keeper = keeper;
             m_Data = data;
-            m_EndTransactionHandler = endTransactionHandler;
+
+            m_AfterDisposeTransaction = afterDisposeTransaction;
 
             m_Data.BeginUpdate();
         }
@@ -31,11 +36,14 @@ namespace eidss.avr.Tools.DataTransactions
         {
             if (m_Data != null)
             {
-                m_Data.EndUpdate();
+                using (m_Keeper.CreateNewContext(ContextValue.PivotSuppressRefreshing))
+                {
+                    m_Data.EndUpdate();
+                }
             }
-            if (m_EndTransactionHandler != null)
+            if (m_AfterDisposeTransaction != null)
             {
-                m_EndTransactionHandler();
+                m_AfterDisposeTransaction();
             }
         }
     }

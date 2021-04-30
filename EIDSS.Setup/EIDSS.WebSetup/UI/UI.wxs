@@ -98,6 +98,10 @@
       <?define Country = !(loc.Ukraine) ?>
       <?include LanguagesDlg\PublishLanguagesDlg.wxi?>
 
+      <?define LanguageDlg = UnitedStatesLanguagesDlg ?>
+      <?define Country = !(loc.UnitedStates) ?>
+      <?include LanguagesDlg\PublishLanguagesDlg.wxi?>
+
       <?define LanguageDlg = VietnamLanguagesDlg ?>
       <?define Country = !(loc.Vietnam) ?>
       <?include LanguagesDlg\PublishLanguagesDlg.wxi?>

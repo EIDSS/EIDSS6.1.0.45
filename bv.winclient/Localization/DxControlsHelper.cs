@@ -296,26 +296,6 @@ namespace bv.winclient.Localization
             }
         }
 
-        //private static void OnTreeListPopupMenuShowing(object sender, DevExpress.XtraTreeList.PopupMenuShowingEventArgs e)
-        //{
-        //    if (e.Menu == null) return;
-        //    if (e.Menu.MenuType != TreeListMenuType.Column) return;
-        //    var treeList = sender as TreeList;
-        //    if (treeList != null)
-        //    {
-        //        for (var i = e.Menu.Items.Count - 1; i >= 0; i--)
-        //        {
-        //            var it = e.Menu.Items[i];
-        //            if (!it.Tag.ToString().Equals("MenuColumnRemoveColumn") &&
-        //                !it.Tag.ToString().Equals("MenuColumnColumnCustomization"))
-        //                e.Menu.Items.Remove(it);
-        //            else if (treeList.VisibleColumns.Count == 1 &&
-        //                     it.Tag.ToString().Equals("MenuColumnRemoveColumn"))
-        //                e.Menu.Items.Remove(it);
-        //        }
-        //    }
-        //}
-
         private static string GetGridLayoutFilename(string name)
         {
             var di = Directory.GetParent(Application.LocalUserAppDataPath);
@@ -371,9 +351,22 @@ namespace bv.winclient.Localization
                 {
                     var editable = tree.OptionsBehavior.Editable;
                     var rdonly = tree.OptionsBehavior.ReadOnly;
+                    var columnCaptions = new Dictionary<string, string>();
+                    foreach (TreeListColumn column in tree.Columns)
+                    {
+                        columnCaptions.Add(column.Name, column.Caption);
+                    }
                     tree.RestoreLayoutFromXml(filename);
                     tree.OptionsBehavior.ReadOnly = rdonly;
                     tree.OptionsBehavior.Editable = editable;
+                    foreach (TreeListColumn column in tree.Columns)
+                    {
+                        string caption;
+                        if (columnCaptions.TryGetValue(column.Name, out caption))
+                        {
+                            column.Caption = caption;
+                        }
+                    }
                 }
                 catch
                 {

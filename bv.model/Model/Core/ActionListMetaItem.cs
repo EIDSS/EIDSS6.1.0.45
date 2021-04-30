@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace bv.model.Model.Core
-{ 
+{
     /*
     public class ActionListMetaItem : ActionMetaItem
     {

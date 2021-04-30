@@ -6,6 +6,7 @@
   </DirectoryRef>
 
   <ComponentGroup Id="Resources_$(var.FolderId)" Directory="$(var.FolderId)" Source="$(var.BinariesPaths)$(var.Folder)\">
+    <?ifndef no_bv.common.resources.dll?>
     <Component Id="bv.common.resources.dll_$(var.FolderId)">
       <File
         Id="bv.common.resources.dll_$(var.FolderId)"
@@ -13,6 +14,10 @@
         KeyPath="yes"
         Source="$(var.bv.common.TargetDir)$(var.Folder)\$(var.bv.common.TargetName).resources$(var.bv.common.TargetExt)" />
     </Component>
+    <?else?>
+    <?undef no_bv.common.resources.dll?>
+    <?endif?>
+
     <?ifndef no_bv.winclient.resources.dll?>
     <Component Id="bv.winclient.resources.dll_$(var.FolderId)">
       <File Id="bv.winclient.resources.dll_$(var.FolderId)" Name="bv.winclient.resources.dll" Checksum="yes" KeyPath="yes" />
@@ -39,12 +44,20 @@
     <Component Id="eidss.core.resources.dll_$(var.FolderId)">
       <File Id="eidss.core.resources.dll_$(var.FolderId)" Name="eidss.core.resources.dll" Checksum="yes" KeyPath="yes" />
     </Component>
+    <?ifndef no_eidss.winclient.resources.dll?>
     <Component Id="eidss.winclient.resources.dll_$(var.FolderId)">
       <File Id="eidss.winclient.resources.dll_$(var.FolderId)" Name="eidss.winclient.resources.dll" Checksum="yes" KeyPath="yes" />
     </Component>
+    <?else?>
+    <?undef no_eidss.winclient.resources.dll?>
+    <?endif?>
+    <?ifndef no_eidss_forms.resources.dll?>
     <Component Id="eidss_forms.resources.dll_$(var.FolderId)">
       <File Id="eidss_forms.resources.dll_$(var.FolderId)" Name="eidss_forms.resources.dll" Checksum="yes" KeyPath="yes" />
     </Component>
+    <?else?>
+    <?undef no_eidss_forms.resources.dll?>
+    <?endif?>
     <?ifndef no_EIDSS.FlexibleForms.resources.dll?>
     <Component Id="EIDSS.FlexibleForms.resources.dll_$(var.FolderId)">
       <File Id="EIDSS.FlexibleForms.resources.dll_$(var.FolderId)" Name="EIDSS.FlexibleForms.resources.dll" Checksum="yes" KeyPath="yes" />

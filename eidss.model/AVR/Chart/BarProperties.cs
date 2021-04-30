@@ -8,8 +8,13 @@ namespace eidss.model.Avr.Chart
     public class BarProperties : IBarProperties, IParentSeries
     {
         public double BarWidth { get; set; }
+
         [XmlIgnore]
-        public Color Color { get { return Color.FromArgb(ColorArgb); } }
+        public Color Color
+        {
+            get { return Color.FromArgb(ColorArgb); }
+        }
+
         public int ColorArgb { get; set; }
         public int FillMode { get; set; }
 
@@ -19,6 +24,7 @@ namespace eidss.model.Avr.Chart
             FillMode = 1; //Solid
             ColorArgb = Color.Blue.ToArgb();
         }
+
         [XmlIgnore]
         public SeriesProperties ParentSeries { get; set; }
 

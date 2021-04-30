@@ -120,37 +120,98 @@
   <data name="lblReportName.Text" xml:space="preserve">
     <value>บันทึกเหตุการณ์</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="HeaderCell1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 14pt</value>
+  </data>
   <data name="HeaderCell1.Text" xml:space="preserve">
     <value>จำนวนผู้ป่วย,ผู้เสียชีวิต,อัตราป่วย,อัตราตาย,อัตราการป่วยตาย</value>
+  </data>
+  <data name="HeaderCell2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 14pt</value>
   </data>
   <data name="HeaderCell2.Text" xml:space="preserve">
     <value>ประเทศไทย, {0}</value>
   </data>
+  <data name="HeaderCell3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 14pt</value>
+  </data>
   <data name="HeaderCell3.Text" xml:space="preserve">
     <value>การวินิจฉัย: {0}</value>
+  </data>
+  <data name="cellDateTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
   </data>
   <data name="cellDateTime.Text" xml:space="preserve">
     <value>อัตรา\พื้นที่ที่รายงาน</value>
   </data>
+  <data name="xrTableCell5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
   <data name="xrTableCell5.Text" xml:space="preserve">
     <value>จำนวนผู้ป่วย</value>
+  </data>
+  <data name="xrTableCell3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
   </data>
   <data name="xrTableCell3.Text" xml:space="preserve">
     <value>อัตราป่วย/100000 คน</value>
   </data>
+  <data name="DeathsHeaderCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
   <data name="DeathsHeaderCell.Text" xml:space="preserve">
     <value>จำนวนผู้เสียชีวิต</value>
   </data>
-  <data name="cellType.Text" xml:space="preserve">
-    <value>CFR (%)</value>
+  <data name="cellType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
+  <data name="xrTableCell4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
   </data>
   <data name="xrTableCell4.Text" xml:space="preserve">
     <value>อัตราตาย/100000 คน</value>
   </data>
+  <data name="cellPerson.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
   <data name="cellPerson.Text" xml:space="preserve">
     <value>จำนวนประชากร</value>
   </data>
+  <data name="xrPageInfo1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 11pt</value>
+  </data>
+  <data name="ReportingAreaCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="CasesCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="MorbidityRateCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="DeathsCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="CFRCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="MortalityRateCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="PopulationCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="OrganizationNameCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
   <data name="xrTableCell1.Text" xml:space="preserve">
     <value>พิมพ์จากEIDSS:</value>
+  </data>
+  <data name="DateTimeCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
   </data>
 </root>

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseMultilineFilter));
             this.checkedComboBox = new DevExpress.XtraEditors.CheckedComboBoxEdit();
-            this.lblcheckedComboBoxName = new DevExpress.XtraEditors.LabelControl();
+            this.lblcheckedComboBoxName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.checkedComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(BaseMultilineFilter), out resources);
@@ -40,6 +40,8 @@
             // 
             resources.ApplyResources(this.checkedComboBox, "checkedComboBox");
             this.checkedComboBox.Name = "checkedComboBox";
+            this.checkedComboBox.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("checkedComboBox.Properties.Appearance.Font")));
+            this.checkedComboBox.Properties.Appearance.Options.UseFont = true;
             this.checkedComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("checkedComboBox.Properties.Buttons"))))});
             this.checkedComboBox.Properties.NullText = resources.GetString("checkedComboBox.Properties.NullText");
@@ -58,17 +60,17 @@
             this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblcheckedComboBoxName);
             this.Controls.Add(this.checkedComboBox);
+            this.Controls.Add(this.lblcheckedComboBoxName);
             this.Name = "BaseMultilineFilter";
             ((System.ComponentModel.ISupportInitialize)(this.checkedComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        protected DevExpress.XtraEditors.LabelControl lblcheckedComboBoxName;
+
         protected DevExpress.XtraEditors.CheckedComboBoxEdit checkedComboBox;
+        protected System.Windows.Forms.Label lblcheckedComboBoxName;
     }
 }

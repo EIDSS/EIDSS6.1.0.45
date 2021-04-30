@@ -45,6 +45,7 @@
   <String Id="Ukraine" Overridable="yes" Localizable="yes">Ukraine</String>
   <String Id="Vietnam" Overridable="yes" Localizable="yes">Vietnam</String>
   <String Id="Thailand" Overridable="yes" Localizable="yes">Thailand</String>
+  <String Id="UnitedStates" Overridable="yes" Localizable="yes">United States of America</String>
 
   <String Id="LanguageDlg_Title" Overridable="yes">[ProductName] Setup</String>
   <String Id="LanguageDlgTitle" Overridable="yes">{\WixUI_Font_Title}Language Settings</String>

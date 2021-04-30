@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -31,6 +30,7 @@ namespace eidss.model.Avr.Export
         private readonly CultureInfo m_CurrentCulture;
         private readonly Dictionary<CellType, ICellStyle> m_CellTypes = new Dictionary<CellType, ICellStyle>();
         public IWorkbook Workbook { get; private set; }
+
         private void ResetWorkbook(ExportType type)
         {
             m_CellTypes.Clear();
@@ -46,7 +46,6 @@ namespace eidss.model.Avr.Export
                 default:
                     throw new ArgumentOutOfRangeException("type", string.Format("Unsupported Export type {0}", type));
             }
-           
         }
 
         public NpoiExcelWrapper(ExportType type)
@@ -60,6 +59,7 @@ namespace eidss.model.Avr.Export
                     m_MaxRowsCount = MaximumNumberOfRowsForOpenXml;
                     break;
             }
+
             ResetWorkbook(type);
             m_ShortDatePattern = Thread.CurrentThread.CurrentCulture
                 .DateTimeFormat.ShortDatePattern;
@@ -91,12 +91,12 @@ namespace eidss.model.Avr.Export
 
         public void Export(string fileName, AvrDataTable data)
         {
-            Dictionary<string, byte[]> exportDictionary = ExportToByteArrays(fileName, data);
-            foreach (KeyValuePair<string, byte[]> export in exportDictionary)
+            var exportDictionary = ExportToByteArrays(fileName, data);
+            foreach (var export in exportDictionary)
             {
                 using (var stream = new FileStream(export.Key, FileMode.Create))
                 {
-                    byte[] xlsBytes = export.Value;
+                    var xlsBytes = export.Value;
                     stream.Write(xlsBytes, 0, xlsBytes.Length);
                     stream.Close();
                 }
@@ -105,7 +105,7 @@ namespace eidss.model.Avr.Export
 
         public List<byte[]> Export(AvrDataTable data)
         {
-            Dictionary<string, byte[]> exportDictionary = ExportToByteArrays(string.Empty, data);
+            var exportDictionary = ExportToByteArrays(string.Empty, data);
             return exportDictionary.Values.ToList();
         }
 
@@ -113,13 +113,13 @@ namespace eidss.model.Avr.Export
         {
             using (new CultureInfoTransaction(new CultureInfo("en-US")))
             {
-                string sheetName = GetSheetName(data);
-                ISheet sheet = CreateNewSheet(sheetName, 0, data);
-                int currentNpoiRowIndex = 1;
-                int sheetIndex = 0;
-                string fileNameSuffix = "";
+                var sheetName = GetSheetName(data);
+                var sheet = CreateNewSheet(sheetName, 0, data);
+                var currentNpoiRowIndex = 1;
+                var sheetIndex = 0;
+                var fileNameSuffix = "";
                 var result = new Dictionary<string, byte[]>();
-                for (int rowIndex = 0; rowIndex < data.Rows.Count; rowIndex++)
+                for (var rowIndex = 0; rowIndex < data.Rows.Count; rowIndex++)
                 {
                     if (currentNpoiRowIndex >= m_MaxRowsCount)
                     {
@@ -138,12 +138,12 @@ namespace eidss.model.Avr.Export
                         }
                     }
 
-                    IRow excelRow = sheet.CreateRow(currentNpoiRowIndex++);
+                    var excelRow = sheet.CreateRow(currentNpoiRowIndex++);
 
-                    int colIndex = 0;
-                    foreach (AvrDataColumn column in data.Columns)
+                    var colIndex = 0;
+                    foreach (var column in data.Columns)
                     {
-                        ICell cell = excelRow.CreateCell(colIndex);
+                        var cell = excelRow.CreateCell(colIndex);
                         colIndex++;
                         cell.CellStyle = GetCellStyle(CellType.Normal);
                         var row = data.Rows[rowIndex];
@@ -152,9 +152,11 @@ namespace eidss.model.Avr.Export
                             SetEmptyCellFormat(cell, column.DataType);
                             continue;
                         }
+
                         SetCellValue(cell, row[column.Ordinal]);
                     }
                 }
+
                 if (fileNameSuffix != "")
                 {
                     fileNameSuffix = (++sheetIndex).ToString(CultureInfo.InvariantCulture);
@@ -178,7 +180,8 @@ namespace eidss.model.Avr.Export
                 {
                     stream.Seek(0, SeekOrigin.Begin);
                 }
-                byte[] array = stream.ToArray();
+
+                var array = stream.ToArray();
                 return array;
             }
         }
@@ -189,10 +192,12 @@ namespace eidss.model.Avr.Export
             {
                 suffix = "_" + suffix;
             }
+
             if (string.IsNullOrEmpty(baseName))
             {
                 return suffix;
             }
+
             return Path.GetDirectoryName(baseName) + "\\" + Path.GetFileNameWithoutExtension(baseName) + suffix +
                    Path.GetExtension(baseName);
         }
@@ -203,6 +208,7 @@ namespace eidss.model.Avr.Export
             {
                 data.TableName = "Sheet";
             }
+
             return EscapeSheetName(data.TableName);
         }
 
@@ -212,15 +218,16 @@ namespace eidss.model.Avr.Export
             {
                 sheetName = string.Format("{0} {1}", sheetName, sheetIndex);
             }
-            ISheet sheet = Workbook.CreateSheet(sheetName);
+
+            var sheet = Workbook.CreateSheet(sheetName);
             // Create the header row
-            IRow excelRow = sheet.CreateRow(0);
-            
-            int colIndex = 0;
+            var excelRow = sheet.CreateRow(0);
+
+            var colIndex = 0;
             foreach (var col in data.Columns)
             {
-                ICell cell = excelRow.CreateCell(colIndex);
-                string caption = col.Caption ?? col.ColumnName;
+                var cell = excelRow.CreateCell(colIndex);
+                var caption = col.Caption ?? col.ColumnName;
                 cell.SetCellValue(caption);
                 cell.CellStyle = GetCellStyle(CellType.Header);
                 if (IsDate(col.DataType) || IsNumeric(col.DataType))
@@ -231,6 +238,7 @@ namespace eidss.model.Avr.Export
                 {
                     cell.CellStyle.Alignment = HorizontalAlignment.Left;
                 }
+
                 sheet.AutoSizeColumn(colIndex);
                 colIndex++;
             }
@@ -245,6 +253,7 @@ namespace eidss.model.Avr.Export
             {
                 return;
             }
+
             if (IsDate(value.GetType()))
             {
                 SetCellDateFormat(cell);
@@ -253,7 +262,7 @@ namespace eidss.model.Avr.Export
             else if (IsNumeric(value.GetType()))
             {
                 cell.SetCellValue(
-                    (double) Convert.ChangeType(value, typeof (double)));
+                    (double) Convert.ChangeType(value, typeof(double)));
             }
             else if (IsBool(value.GetType()))
             {
@@ -280,28 +289,28 @@ namespace eidss.model.Avr.Export
 
         private bool IsNumeric(Type dataType)
         {
-            return typeof (Int16) == dataType
-                   || typeof (Int32) == dataType
-                   || typeof (Int64) == dataType
-                   || typeof (SByte) == dataType
-                   || typeof (float) == dataType
-                   || typeof (Double) == dataType
-                   || typeof (Decimal) == dataType;
+            return typeof(short) == dataType
+                   || typeof(int) == dataType
+                   || typeof(long) == dataType
+                   || typeof(sbyte) == dataType
+                   || typeof(float) == dataType
+                   || typeof(double) == dataType
+                   || typeof(decimal) == dataType;
         }
 
         private static bool IsDate(Type dataType)
         {
-            return typeof (DateTime) == dataType;
+            return typeof(DateTime) == dataType;
         }
 
         private static bool IsBool(Type dataType)
         {
-            return typeof (Boolean) == dataType;
+            return typeof(bool) == dataType;
         }
 
         private static string EscapeSheetName(string sheetName)
         {
-            string escapedSheetName = sheetName
+            var escapedSheetName = sheetName
                 .Replace("/", "-")
                 .Replace("\\", " ")
                 .Replace("?", string.Empty)
@@ -324,10 +333,10 @@ namespace eidss.model.Avr.Export
         {
             if (!m_CellStyleCache.ContainsKey(dataFormat))
             {
-                ICellStyle style = Workbook.CreateCellStyle();
+                var style = Workbook.CreateCellStyle();
 
                 // check if this is a built-in format
-                short builtinFormatId = HSSFDataFormat.GetBuiltinFormat(dataFormat);
+                var builtinFormatId = HSSFDataFormat.GetBuiltinFormat(dataFormat);
 
                 if (builtinFormatId != -1)
                 {
@@ -336,12 +345,13 @@ namespace eidss.model.Avr.Export
                 else
                 {
                     // not a built-in format, so create a new one
-                    IDataFormat newDataFormat = Workbook.CreateDataFormat();
+                    var newDataFormat = Workbook.CreateDataFormat();
                     style.DataFormat = newDataFormat.GetFormat(dataFormat);
                 }
 
                 m_CellStyleCache[dataFormat] = style;
             }
+
             return m_CellStyleCache[dataFormat];
         }
 
@@ -349,17 +359,19 @@ namespace eidss.model.Avr.Export
         {
             if (!m_CellTypes.ContainsKey(cellType))
             {
-                ICellStyle style = Workbook.CreateCellStyle();
+                var style = Workbook.CreateCellStyle();
                 switch (cellType)
                 {
                     case CellType.Header:
-                        IFont font = Workbook.CreateFont();
+                        var font = Workbook.CreateFont();
                         font.Boldweight = (short) FontBoldWeight.Bold;
                         style.SetFont(font);
                         break;
                 }
+
                 m_CellTypes[cellType] = style;
             }
+
             return m_CellTypes[cellType];
         }
     }

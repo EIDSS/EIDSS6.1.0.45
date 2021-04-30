@@ -45,6 +45,10 @@ namespace eidss.webclient.Models.Reports
                 Districts.CheckedItems,
                 CaseClassification,
                 OrganizationId, ForbiddenGroups, UseArchive);
+
+            // Add a copy of the export options chosen
+            baseModel.ExportFormat = this.ExportFormat;
+
             return baseModel;
         }
     }

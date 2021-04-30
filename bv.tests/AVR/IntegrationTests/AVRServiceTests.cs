@@ -90,12 +90,12 @@ namespace bv.tests.AVR.IntegrationTests
             string exeLocation = Path.GetDirectoryName(Utils.ConvertFileName(asm.Location)) ?? string.Empty;
             if (!Directory.Exists(exeLocation))
             {
-                int index = exeLocation.IndexOf("DevelopersBranch_v6", StringComparison.OrdinalIgnoreCase);
+                int index = exeLocation.IndexOf("EIDSSTrunk", StringComparison.OrdinalIgnoreCase);
                 if (index > 0)
                 {
                     Directory.CreateDirectory(exeLocation);
                     string realPath = exeLocation.Substring(0, index) +
-                                      @"DevelopersBranch_v6\eidss.main\bin\Debug\eidss.avr.export.x86.exe";
+                                      @"EIDSSTrunk\EIDSS\eidss.main\bin\Debug\eidss.avr.export.x86.exe";
                     File.Copy(realPath, exeLocation + @"\eidss.avr.export.x86.exe");
                 }
             }
@@ -150,7 +150,7 @@ namespace bv.tests.AVR.IntegrationTests
             exists = ServiceClientHelper.DoesCachedQueryExists(queryId, ModelUserContext.CurrentLanguage, false);
             Assert.IsFalse(exists);
 
-            CachedQueryResult result = ServiceClientHelper.GetAvrServiceQueryResult(queryId, false);
+            CachedQueryResult result = ServiceClientHelper.GetAvrServiceQueryResult(queryId, false, string.Empty);
             Assert.IsNotNull(result);
 
             exists = ServiceClientHelper.DoesCachedQueryExists(queryId, ModelUserContext.CurrentLanguage, false);
@@ -164,7 +164,7 @@ namespace bv.tests.AVR.IntegrationTests
         {
             ServiceClientHelper.CallAvrServiceToForceLOHMemoryAllocations();
 
-            CachedQueryResult result = ServiceClientHelper.GetAvrServiceQueryResult(49539640000000, false);
+            CachedQueryResult result = ServiceClientHelper.GetAvrServiceQueryResult(49539640000000, false, string.Empty);
             Assert.IsNotNull(result);
             Assert.IsNotNull(result.QueryTable);
         }

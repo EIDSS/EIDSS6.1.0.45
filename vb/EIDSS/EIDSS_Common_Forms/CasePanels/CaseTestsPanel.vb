@@ -1912,7 +1912,10 @@ Public Class CaseTestsPanel
 
 
     Public Sub EnableRowAdding(enable As Boolean)
-        If (TestGridView.FocusedRowHandle = GridControl.NewItemRowHandle) Then
+
+        If (TestGridView.FocusedRowHandle = GridControl.NewItemRowHandle) AndAlso _
+           (((m_Loading <> 1) AndAlso ((HACode And EIDSS.HACode.Human) = EIDSS.HACode.Human)) OrElse _
+            ((HACode And EIDSS.HACode.Human) = 0)) Then
             Return
         End If
         If (Not enable) Then

@@ -57,14 +57,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="bvwin_common, Version=6.1.0.35, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\eidss.main\bin\Debug\bvwin_common.dll</HintPath>
-    </Reference>
-    <Reference Include="bv_common, Version=6.1.0.40, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\eidss.main\bin\Debug\bv_common.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -106,9 +98,7 @@
     <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -128,11 +118,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="eidss.winclient, Version=6.1.0.39, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\eidss.winclient\obj\Debug\eidss.winclient.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -160,6 +145,7 @@
     <Compile Include="Barcode\Designer\MenuCommandServiceStub.cs" />
     <Compile Include="Barcode\SampleBarcodeDataSet.cs">
       <DependentUpon>SampleBarcodeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="BaseControls\AccessRigthsRebinder.cs" />
     <Compile Include="BaseControls\ChartHelper.cs" />
@@ -186,6 +172,18 @@
     </Compile>
     <Compile Include="BaseControls\Filters\BaseFilter.designer.cs">
       <DependentUpon>BaseFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.Designer.cs">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseControls\Filters\ThaiProvinceDistrictsGroupsMultiFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseControls\Filters\ThaiProvinceDistrictsGroupsMultiFilter.Designer.cs">
+      <DependentUpon>ThaiProvinceDistrictsGroupsMultiFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseControls\Filters\HumDiagnosisGroupsType.cs" />
     <Compile Include="BaseControls\Filters\ThaiZonesSingleFilter.cs">
@@ -420,16 +418,83 @@
     <Compile Include="BaseControls\Keeper\BaseIntervalLocationKeeper.Designer.cs">
       <DependentUpon>BaseIntervalLocationKeeper.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parameterized\Human\UA\DataSets\EIDSS_UA_Seed_GISDataSet.cs">
-      <DependentUpon>EIDSS_UA_Seed_GISDataSet.xsd</DependentUpon>
+    <Compile Include="BaseControls\ReportUIHelper.cs" />
+    <Compile Include="BaseControls\Report\BaseReportWithoutHeader.cs" />
+    <Compile Include="BaseControls\Report\BaseReportWithoutHeader.designer.cs">
+      <DependentUpon>BaseReportWithoutHeader.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parameterized\Human\UA\DataSets\EIDSS_UA_Seed_GISDataSet.Designer.cs">
+    <Compile Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EIDSS_UA_Seed_GISDataSet.xsd</DependentUpon>
+      <DependentUpon>EmergencyNotificationUkraineDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.designer.cs">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\DataSet\ComparativeKZ.cs">
+      <DependentUpon>ComparativeKZ.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\DataSet\ComparativeKZ.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComparativeKZ.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\DataSet\ComparativeReportByRegionKZDataset.cs">
+      <DependentUpon>ComparativeReportByRegionKZDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\DataSet\ComparativeReportByRegionKZDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComparativeReportByRegionKZDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\DataSet\IncidenceReportByRegionKZDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncidenceReportByRegionKZDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Keeper\IncidenceReportByRegionKeeper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Keeper\IncidenceReportByRegionKeeper.Designer.cs">
+      <DependentUpon>IncidenceReportByRegionKeeper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Keeper\ComparativeReportByRegionKeeper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Keeper\ComparativeReportByRegionKeeper.Designer.cs">
+      <DependentUpon>ComparativeReportByRegionKeeper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Keeper\ComparativeReportKeeper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Keeper\ComparativeReportKeeper.Designer.cs">
+      <DependentUpon>ComparativeReportKeeper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Report\ComparativeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Report\ComparativeReport.Designer.cs">
+      <DependentUpon>ComparativeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Report\ComparativeReportBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Report\ComparativeReportBase.Designer.cs">
+      <DependentUpon>ComparativeReportBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Report\ComparativeReportByRegion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Report\ComparativeReportByRegion.Designer.cs">
+      <DependentUpon>ComparativeReportByRegion.cs</DependentUpon>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetIndicatorsDetailDataSet.cs">
       <DependentUpon>VetIndicatorsDetailDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetIndicatorsDetailDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -438,6 +503,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetIndicatorsSummaryDataSet.cs">
       <DependentUpon>VetIndicatorsSummaryDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetIndicatorsSummaryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -468,6 +534,7 @@
     <Compile Include="BaseControls\XtraReportExtender.cs" />
     <Compile Include="Document\ActiveSurveillance\SessionActionsDataSet.cs">
       <DependentUpon>SessionActionsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\ActiveSurveillance\SessionActionsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -476,6 +543,7 @@
     </Compile>
     <Compile Include="Document\ActiveSurveillance\SessionCasesDataSet.cs">
       <DependentUpon>SessionCasesDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\ActiveSurveillance\SessionCasesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -496,6 +564,7 @@
     </Compile>
     <Compile Include="Document\ActiveSurveillance\SessionSummaryDataSet.cs">
       <DependentUpon>SessionSummaryDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\ActiveSurveillance\SessionSummaryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -510,6 +579,7 @@
     </Compile>
     <Compile Include="Document\ActiveSurveillance\SessionDiagnosisDataSet.cs">
       <DependentUpon>SessionDiagnosisDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\ActiveSurveillance\SessionDiagnosisDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -524,6 +594,7 @@
     </Compile>
     <Compile Include="Document\ActiveSurveillance\SessionFarmReportDataSet.cs">
       <DependentUpon>SessionFarmReportDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\ActiveSurveillance\SessionFarmReportDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -532,6 +603,7 @@
     </Compile>
     <Compile Include="Document\ActiveSurveillance\SessionReportDataSet.cs">
       <DependentUpon>SessionReportDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\ActiveSurveillance\SessionReportDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -540,12 +612,15 @@
     </Compile>
     <Compile Include="Document\Human\CaseInvestigation\CaseInvestigationDataSet.cs">
       <DependentUpon>CaseInvestigationDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Human\CaseInvestigation\ContactListDataSet.cs">
       <DependentUpon>ContactListDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Human\CaseInvestigation\DiagnosisHistory.cs">
       <DependentUpon>DiagnosisHistory.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Human\CaseInvestigation\DiagnosisHistory.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -560,12 +635,15 @@
     </Compile>
     <Compile Include="Document\Human\CaseInvestigation\SpecimenDataSet.cs">
       <DependentUpon>SpecimenDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Human\CaseInvestigation\TherapyDataSet.cs">
       <DependentUpon>TherapyDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Human\EmergencyNotification\EmergencyNotificationDataSet.cs">
       <DependentUpon>EmergencyNotificationDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Human\EmergencyNotification\EmergencyNotificationDTRAReport.cs">
       <SubType>Component</SubType>
@@ -575,6 +653,7 @@
     </Compile>
     <Compile Include="Document\Human\TZ\DataSets\TanzaniaInvestigationDataSet.cs">
       <DependentUpon>TanzaniaInvestigationDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Human\TZ\DataSets\TanzaniaInvestigationDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -594,15 +673,19 @@
     </Compile>
     <Compile Include="Document\Lim\Batch\BatchTestDataSet.cs">
       <DependentUpon>BatchTestDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Lim\Batch\TestDetailsDataSet.cs">
       <DependentUpon>TestDetailsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Lim\Case\TestValidationDataSet.cs">
       <DependentUpon>TestValidationDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Lim\ContainerDetails\SampleDataSet.cs">
       <DependentUpon>SampleDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Lim\ContainerDetails\SampleDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -611,6 +694,7 @@
     </Compile>
     <Compile Include="Document\Lim\SampleDestruction\SampleDestructionDataSet.cs">
       <DependentUpon>SampleDestructionDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Lim\SampleDestruction\SampleDestructionDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -631,6 +715,7 @@
     </Compile>
     <Compile Include="Document\Lim\TestResult\TestResultAmendmentHistoryDataSet.cs">
       <DependentUpon>TestResultAmendmentHistoryDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Lim\TestResult\TestResultAmendmentHistoryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -645,9 +730,11 @@
     </Compile>
     <Compile Include="Document\Lim\TestResult\TestResultDataSet.cs">
       <DependentUpon>TestResultDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Lim\Transfer\TransferDataSet.cs">
       <DependentUpon>TransferDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\VectorSurveillance\SessionReport.cs">
       <SubType>Component</SubType>
@@ -657,6 +744,7 @@
     </Compile>
     <Compile Include="Document\VectorSurveillance\VsSessionDataSet.cs">
       <DependentUpon>VsSessionDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\VectorSurveillance\VsSessionDataSet.Designer.cs">
       <DependentUpon>VsSessionDataSet.xsd</DependentUpon>
@@ -665,21 +753,27 @@
     </Compile>
     <Compile Include="Document\Veterinary\AvianInvestigation\AvianInvestigationDataSet.cs">
       <DependentUpon>AvianInvestigationDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Veterinary\AvianInvestigation\SampleDataSet.cs">
       <DependentUpon>SampleDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Veterinary\LivestockInvestigation\DiagnosisDataSet.cs">
       <DependentUpon>DiagnosisDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Veterinary\LivestockInvestigation\HerdDataSet.cs">
       <DependentUpon>HerdDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Veterinary\LivestockInvestigation\LivestockAnimalCSDataSet.cs">
       <DependentUpon>LivestockAnimalCSDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Veterinary\LivestockInvestigation\LivestockSampleDataSet.cs">
       <DependentUpon>LivestockSampleDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Veterinary\LivestockInvestigation\LivestockSampleDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -689,6 +783,7 @@
     <Compile Include="Document\Veterinary\LivestockInvestigation\PrintMapHelper.cs" />
     <Compile Include="Document\Veterinary\LivestockInvestigation\RapidTestDataSet.cs">
       <DependentUpon>RapidTestDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Veterinary\LivestockInvestigation\LivestockSampleReport.cs">
       <SubType>Component</SubType>
@@ -698,6 +793,7 @@
     </Compile>
     <Compile Include="Document\Veterinary\LivestockInvestigation\VaccinationDataSet.cs">
       <DependentUpon>VaccinationDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Factory\ReportHelper.cs" />
     <Compile Include="Factory\ReportRtlHelper.cs" />
@@ -712,6 +808,7 @@
     </Compile>
     <Compile Include="Parameterized\AberrationAnalysis\DataSets\AberrationDataSet.cs">
       <DependentUpon>AberrationDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\AberrationAnalysis\DataSets\AberrationDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -780,6 +877,7 @@
     </Compile>
     <Compile Include="Parameterized\ActiveSurveillance\ActiveSurveillanceDataSet.cs">
       <DependentUpon>ActiveSurveillanceDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\ActiveSurveillance\ActiveSurveillanceDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -794,6 +892,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\AdditionalAFPIndicatorsDataSet.cs">
       <DependentUpon>AdditionalAFPIndicatorsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\AdditionalAFPIndicatorsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -802,6 +901,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\AssignmentLabDiagnosticDataSet.cs">
       <DependentUpon>AssignmentLabDiagnosticDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\AssignmentLabDiagnosticDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -810,6 +910,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\BorderRayonsComparativeAZDataSet.cs">
       <DependentUpon>BorderRayonsComparativeAZDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\BorderRayonsComparativeAZDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -818,6 +919,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\ComparativeDataSet.cs">
       <DependentUpon>ComparativeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\ComparativeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -826,6 +928,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\ComparativeTroYearsDataSet.cs">
       <DependentUpon>ComparativeTroYearsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\ComparativeTroYearsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -839,6 +942,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\DQIChartDataSet.cs">
       <DependentUpon>DQIChartDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\DQIChartDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -847,6 +951,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\DQIDataSet.cs">
       <DependentUpon>DQIDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\DQIDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -855,6 +960,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\ExternalComparativeDataSet.cs">
       <DependentUpon>ExternalComparativeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\ExternalComparativeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -863,12 +969,15 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\FormN1HeaderDataSet.cs">
       <DependentUpon>FormN1HeaderDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\FormN1InfectiousDataSet.cs">
       <DependentUpon>FormN1InfectiousDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\LabTestingResultDataSet.cs">
       <DependentUpon>LabTestingResultDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\LabTestingResultDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -877,6 +986,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\MainAFPIndicatorsDataSet.cs">
       <DependentUpon>MainAFPIndicatorsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\MainAFPIndicatorsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -885,6 +995,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\SummaryDataSet.cs">
       <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\SummaryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -893,6 +1004,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\TuberculosisCasesTestedDataSet.cs">
       <DependentUpon>TuberculosisCasesTestedDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\TuberculosisCasesTestedDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -901,6 +1013,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetCaseReportDataSet.cs">
       <DependentUpon>VetCaseReportDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetCaseReportDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -909,6 +1022,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetForm1ADataSet.cs">
       <DependentUpon>VetForm1ADataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetForm1ADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -917,6 +1031,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetForm1ReportDataSet.cs">
       <DependentUpon>VetForm1ReportDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetForm1ReportDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -925,6 +1040,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetLabReportDataSet.cs">
       <DependentUpon>VetLabReportDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetLabReportDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -933,6 +1049,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetSummaryDataSet.cs">
       <DependentUpon>VetSummaryDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\VetSummaryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -941,6 +1058,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\WhoMeaslesRubellaDataSet.cs">
       <DependentUpon>WhoMeaslesRubellaDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\WhoMeaslesRubellaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -988,6 +1106,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\ZoonoticMonthsDataSet.cs">
       <DependentUpon>ZoonoticMonthsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\AJ\DataSets\ZoonoticMonthsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1090,6 +1209,7 @@
     <Compile Include="Parameterized\Human\AJ\Reports\ReportArchiveHelper.cs" />
     <Compile Include="Parameterized\Human\ARM\DataSet\FormN85FirstDataSet.cs">
       <DependentUpon>FormN85FirstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\ARM\DataSet\FormN85FirstDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1098,6 +1218,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\ARM\DataSet\FormN85FourthDataSet.cs">
       <DependentUpon>FormN85FourthDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\ARM\DataSet\FormN85FourthDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1106,6 +1227,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\ARM\DataSet\FormN85SecondDataSet.cs">
       <DependentUpon>FormN85SecondDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\ARM\DataSet\FormN85SecondDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1114,6 +1236,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\ARM\DataSet\FormN85ThirdDataSet.cs">
       <DependentUpon>FormN85ThirdDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\ARM\DataSet\FormN85ThirdDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1158,6 +1281,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\ComparativeGGDataSet.cs">
       <DependentUpon>ComparativeGGDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\ComparativeGGDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1166,6 +1290,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\ComparativeSeveralYearsGGDataSet.cs">
       <DependentUpon>ComparativeSeveralYearsGGDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\ComparativeSeveralYearsGGDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1174,6 +1299,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthHeaderV61DataSet.cs">
       <DependentUpon>InfectiousDiseaseMonthHeaderV61DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthHeaderV61DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1182,6 +1308,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthHeaderV6DataSet.cs">
       <DependentUpon>InfectiousDiseaseMonthHeaderV6DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthHeaderV6DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1195,6 +1322,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthV61DataSet.cs">
       <DependentUpon>InfectiousDiseaseMonthV61DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthV61DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1203,6 +1331,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthV6DataSet.cs">
       <DependentUpon>InfectiousDiseaseMonthV6DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthV6DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1249,6 +1378,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\IQ\DataSet\ComparativeDataSet.cs">
       <DependentUpon>ComparativeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\IQ\DataSet\ComparativeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1257,6 +1387,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\IQ\DataSet\WeeklyByAgeGroupAndSexDataSet.cs">
       <DependentUpon>WeeklyByAgeGroupAndSexDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\IQ\DataSet\WeeklyByAgeGroupAndSexDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1265,6 +1396,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\IQ\DataSet\WeeklyByDistricsDataSet.cs">
       <DependentUpon>WeeklyByDistricsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\IQ\DataSet\WeeklyByDistricsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1447,6 +1579,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\AntibioticResistanceCardDataSet.cs">
       <DependentUpon>AntibioticResistanceCardDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\AntibioticResistanceCardDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1467,18 +1600,23 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseDataSet.cs">
       <DependentUpon>InfectiousDiseaseDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthDataSet.cs">
       <DependentUpon>InfectiousDiseaseMonthDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthNewDataSet.cs">
       <DependentUpon>InfectiousDiseaseMonthNewDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\Journal60BDataSet.cs">
       <DependentUpon>Journal60BDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\LaboratoryResearchDataSet.cs">
       <DependentUpon>LaboratoryResearchDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\LaboratoryResearchDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1487,6 +1625,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\RBEAnimalsDataSet.cs">
       <DependentUpon>RBEAnimalsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\RBEAnimalsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1495,6 +1634,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\RBECasesDataSet.cs">
       <DependentUpon>RBECasesDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\RBECasesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1519,6 +1659,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthNewHeaderDataSet.cs">
       <DependentUpon>InfectiousDiseaseMonthNewHeaderDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\InfectiousDiseaseMonthNewHeaderDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1532,9 +1673,11 @@
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\MicrobiologyResearchCardDataSet.cs">
       <DependentUpon>MicrobiologyResearchCardDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\GG\DataSet\SerologyResearchCardDataSet.cs">
       <DependentUpon>SerologyResearchCardDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="BaseControls\Filters\VetOrganizationFilter.cs">
       <SubType>UserControl</SubType>
@@ -1645,6 +1788,7 @@
     </Compile>
     <Compile Include="BaseControls\Aggregate\AggregateDataSet.cs">
       <DependentUpon>AggregateDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="BaseControls\Aggregate\AggregateHelper.cs" />
     <Compile Include="BaseControls\Report\BaseSampleReport.cs">
@@ -1695,6 +1839,7 @@
     </Compile>
     <Compile Include="Document\Lim\Case\CaseTestDataSet.cs">
       <DependentUpon>CaseTestDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Lim\Case\TestReport.cs">
       <SubType>Component</SubType>
@@ -1711,6 +1856,7 @@
     </Compile>
     <Compile Include="Barcode\FreezerBarcodeDataSet.cs">
       <DependentUpon>FreezerBarcodeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Barcode\FreezerBarcodeReport.cs">
       <SubType>Component</SubType>
@@ -1736,6 +1882,7 @@
     </Compile>
     <Compile Include="BaseControls\BaseDataSet.cs">
       <DependentUpon>BaseDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="BaseControls\BaseDataSet.designer.cs">
       <DependentUpon>BaseDataSet.xsd</DependentUpon>
@@ -1745,6 +1892,7 @@
     <Compile Include="BaseControls\FlexFormIntegration\FlexConverter.cs" />
     <Compile Include="BaseControls\FlexFormIntegration\FlexParamDataSet.cs">
       <DependentUpon>FlexParamDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="BaseControls\FlexFormIntegration\FlexParamDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1864,6 +2012,7 @@
     </Compile>
     <Compile Include="BaseControls\Aggregate\AdmUnitDataSet.cs">
       <DependentUpon>AdmUnitDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="BaseControls\Aggregate\AdmUnitDataSet.designer.cs">
       <DependentUpon>AdmUnitDataSet.xsd</DependentUpon>
@@ -1992,6 +2141,7 @@
     </Compile>
     <Compile Include="Document\Lim\ContainerContent\ContainerContentDataSet.cs">
       <DependentUpon>ContainerContentDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Lim\ContainerContent\ContainerContentDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2034,6 +2184,7 @@
     </Compile>
     <Compile Include="Document\Uni\AccessionIn\AccessionInDataSet.cs">
       <DependentUpon>AccessionInDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Uni\AccessionIn\AccessionInDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2048,6 +2199,7 @@
     </Compile>
     <Compile Include="Document\Uni\Outbreak\OutBreakDataSet.cs">
       <DependentUpon>OutBreakDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Uni\Outbreak\OutBreakDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2140,6 +2292,7 @@
       <DependentUpon>LivestockAnimalCSDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Document\Veterinary\LivestockInvestigation\LivestockInvestigationDataSet.cs">
+      <SubType>Component</SubType>
       <DependentUpon>LivestockInvestigationDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Document\Veterinary\LivestockInvestigation\LivestockInvestigationDataSet.Designer.cs">
@@ -2201,6 +2354,7 @@
     <Compile Include="Flexible\Visitors\TableVisitor.cs" />
     <Compile Include="Parameterized\Human\DToChangedD\DToChangedDDataSet.cs">
       <DependentUpon>DToChangedDDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\DToChangedD\DToChangedDDataSet.designer.cs">
       <DependentUpon>DToChangedDDataSet.xsd</DependentUpon>
@@ -2258,6 +2412,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\KZ\DataSet\Form1KZDataDataset.cs">
       <DependentUpon>Form1KZDataDataset.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\KZ\DataSet\Form1KZDataDataset.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2266,6 +2421,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\KZ\DataSet\Form1KZHeaderDataset.cs">
       <DependentUpon>Form1KZHeaderDataset.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\KZ\DataSet\Form1KZHeaderDataset.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2302,6 +2458,12 @@
     <Compile Include="Parameterized\Human\KZ\Report\Form1KZPage2.Designer.cs">
       <DependentUpon>Form1KZPage2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Parameterized\Human\KZ\Report\IncidenceReportByRegion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Human\KZ\Report\IncidenceReportByRegion.Designer.cs">
+      <DependentUpon>IncidenceReportByRegion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Parameterized\Human\KZ\Report\InfectiousParasiticKZReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2310,6 +2472,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\KZ\DataSet\InfectiousParasiticKZDataSet.cs">
       <DependentUpon>InfectiousParasiticKZDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\KZ\DataSet\InfectiousParasiticKZDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2318,6 +2481,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\MMM\MMMDataSet.cs">
       <DependentUpon>MMMDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\MMM\MMMDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2332,6 +2496,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\TH\DataSets\ComparativeSeveralYearsChartTHDataSet.cs">
       <DependentUpon>ComparativeSeveralYearsChartTHDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\TH\DataSets\ComparativeSeveralYearsChartTHDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2340,6 +2505,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\TH\DataSets\ComparativeSeveralYearsTHDataSet.cs">
       <DependentUpon>ComparativeSeveralYearsTHDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\TH\DataSets\ComparativeSeveralYearsTHDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2348,6 +2514,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\TH\DataSets\NumberOfCasesDeathsMonthTHDataSet.cs">
       <DependentUpon>NumberOfCasesDeathsMonthTHDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\TH\DataSets\NumberOfCasesDeathsMonthTHDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2356,6 +2523,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\TH\DataSets\NumberOfCasesDeathsMorbidityMortalityTHDataSet.cs">
       <DependentUpon>NumberOfCasesDeathsMorbidityMortalityTHDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\TH\DataSets\NumberOfCasesDeathsMorbidityMortalityTHDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2364,6 +2532,7 @@
     </Compile>
     <Compile Include="Parameterized\Human\TH\DataSets\OnePageSituationTHDataset.cs">
       <DependentUpon>OnePageSituationTHDataset.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Human\TH\DataSets\OnePageSituationTHDataset.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2419,34 +2588,57 @@
     <Compile Include="Parameterized\Human\TH\Reports\OnePageSituationTHReport.Designer.cs">
       <DependentUpon>OnePageSituationTHReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parameterized\Human\UA\DataSets\EIDSS_UA_Seed_GISDataSet2.cs">
-      <DependentUpon>EIDSS_UA_Seed_GISDataSet2.xsd</DependentUpon>
+    <Compile Include="Parameterized\Human\UA\DataSets\FormNum1.cs">
+      <DependentUpon>FormNum1.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Parameterized\Human\UA\DataSets\EIDSS_UA_Seed_GISDataSet2.Designer.cs">
+    <Compile Include="Parameterized\Human\UA\DataSets\FormNum1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EIDSS_UA_Seed_GISDataSet2.xsd</DependentUpon>
+      <DependentUpon>FormNum1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Parameterized\Human\UA\Keepers\UAFormKeeper.cs">
+    <Compile Include="Parameterized\Human\UA\DataSets\SpecialInfectionAndParazitaryDiseaseReportNo2DataSet.cs">
+      <DependentUpon>SpecialInfectionAndParazitaryDiseaseReportNo2DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Human\UA\DataSets\SpecialInfectionAndParazitaryDiseaseReportNo2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecialInfectionAndParazitaryDiseaseReportNo2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\UA\Keepers\UAFormNo2Keeper.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Parameterized\Human\UA\Keepers\UAFormKeeper.Designer.cs">
-      <DependentUpon>UAFormKeeper.cs</DependentUpon>
+    <Compile Include="Parameterized\Human\UA\Keepers\UAFormNo2Keeper.Designer.cs">
+      <DependentUpon>UAFormNo2Keeper.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parameterized\Human\UA\Reports\FormNo1.cs">
+    <Compile Include="Parameterized\Human\UA\Keepers\UAFormNo1Keeper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Human\UA\Keepers\UAFormNo1Keeper.Designer.cs">
+      <DependentUpon>UAFormNo1Keeper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\UA\Reports\FormNumBase.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Parameterized\Human\UA\Reports\FormNo1.Designer.cs">
-      <DependentUpon>FormNo1.cs</DependentUpon>
+    <Compile Include="Parameterized\Human\UA\Reports\FormNumBase.Designer.cs">
+      <DependentUpon>FormNumBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Parameterized\Human\UA\Reports\FormNo2.cs">
+    <Compile Include="Parameterized\Human\UA\Reports\FormNum2.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Parameterized\Human\UA\Reports\FormNo2.Designer.cs">
-      <DependentUpon>FormNo2.cs</DependentUpon>
+    <Compile Include="Parameterized\Human\UA\Reports\FormNum2.Designer.cs">
+      <DependentUpon>FormNum2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Human\UA\Reports\FormNum1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Human\UA\Reports\FormNum1.Designer.cs">
+      <DependentUpon>FormNum1.cs</DependentUpon>
     </Compile>
     <Compile Include="Parameterized\Uni\EventLog\EventLogDataSet.cs">
       <DependentUpon>EventLogDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Uni\EventLog\EventLogDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2458,6 +2650,17 @@
     </Compile>
     <Compile Include="Parameterized\Uni\EventLog\EventLogReport.designer.cs">
       <DependentUpon>EventLogReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Veterinary\AZ\DataSets\ComparativeReportByMonthsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComparativeReportByMonthsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Parameterized\Veterinary\AZ\Keepers\ComparativeReportByMonthsKeeper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Parameterized\Veterinary\AZ\Reports\ComparativeReportByMonths.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\Filters\DiagnosisMatrixFilter.cs">
       <SubType>UserControl</SubType>
@@ -2503,6 +2706,7 @@
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\VetPlannedDiagnosticCountryDataSet.cs">
       <DependentUpon>VetPlannedDiagnosticCountryDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\VetPlannedDiagnosticCountryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2511,9 +2715,11 @@
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\VetPlannedDiagnosticTestsDataSet.cs">
       <DependentUpon>VetPlannedDiagnosticTestsDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\VetPrevMeasureCountryDataSet.cs">
       <DependentUpon>VetPrevMeasureCountryDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\VetPrevMeasureCountryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2522,6 +2728,7 @@
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\VetProphMeasuresCountryDataSet.cs">
       <DependentUpon>VetProphMeasuresCountryDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\VetProphMeasuresCountryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2553,6 +2760,7 @@
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\VetPrevMeasureDataSet.cs">
       <DependentUpon>VetPrevMeasureDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\VetPrevMeasureDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2567,6 +2775,7 @@
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\VetProphMeasuresDataSet.cs">
       <DependentUpon>VetProphMeasuresDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Veterinary\KZ\VetProphMeasuresDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2587,6 +2796,7 @@
     </Compile>
     <Compile Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountDataSet.cs">
       <DependentUpon>VetSamplesCountDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2601,6 +2811,7 @@
     </Compile>
     <Compile Include="Parameterized\Veterinary\SamplesType\VetSamplesTypeDataSet.cs">
       <DependentUpon>VetSamplesTypeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Veterinary\SamplesType\VetSamplesTypeDataSet.designer.cs">
       <DependentUpon>VetSamplesTypeDataSet.xsd</DependentUpon>
@@ -2615,6 +2826,7 @@
     </Compile>
     <Compile Include="Parameterized\Veterinary\Situation\VetSituationDataSet.cs">
       <DependentUpon>VetSituationDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Veterinary\Situation\VetSituationDataSet.designer.cs">
       <DependentUpon>VetSituationDataSet.xsd</DependentUpon>
@@ -2629,6 +2841,7 @@
     </Compile>
     <Compile Include="Parameterized\Veterinary\TestType\VetTestTypeDataSet.cs">
       <DependentUpon>VetTestTypeDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Parameterized\Veterinary\TestType\VetTestTypeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2653,7 +2866,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -2901,6 +3113,9 @@
     <EmbeddedResource Include="BaseControls\Filters\CounterMultiFilter.th-TH.resx">
       <DependentUpon>CounterMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\CounterMultiFilter.uk-UA.resx">
+      <DependentUpon>CounterMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\DistrictFilter.ar-IQ.resx">
       <DependentUpon>DistrictFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -2933,6 +3148,44 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\GroupsMultiFilter.th-TH.resx">
       <DependentUpon>GroupsMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\GroupsMultiFilter.uk-UA.resx">
+      <DependentUpon>GroupsMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.ar-IQ.resx">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.az-Latn-AZ.resx">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.hy-AM.resx">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.ka-GE.resx">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.kk-KZ.resx">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.resx">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.ru-RU.resx">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.th-TH.resx">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.uk-UA.resx">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\ThaiProvinceDistrictsGroupsMultiFilter.resx">
+      <DependentUpon>ThaiProvinceDistrictsGroupsMultiFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\ThaiProvinceDistrictsGroupsMultiFilter.th-TH.resx">
+      <DependentUpon>ThaiProvinceDistrictsGroupsMultiFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumGenderLookupFilter.hy-AM.resx">
       <DependentUpon>HumGenderLookupFilter.cs</DependentUpon>
@@ -2973,10 +3226,16 @@
     <EmbeddedResource Include="BaseControls\Filters\RegionAZFilter.th-TH.resx">
       <DependentUpon>RegionAZFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RegionAZFilter.uk-UA.resx">
+      <DependentUpon>RegionAZFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\ThaiCaseClassificationFilter.az-Latn-AZ.resx">
       <DependentUpon>ThaiCaseClassificationFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\ThaiProvinceMultiFilter.az-Latn-AZ.resx">
+      <DependentUpon>ThaiProvinceMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\ThaiProvinceMultiFilter.uk-UA.resx">
       <DependentUpon>ThaiProvinceMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\ThaiZonesSingleFilter.resx">
@@ -2985,6 +3244,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\ThaiZonesMultiFilter.az-Latn-AZ.resx">
       <DependentUpon>ThaiZonesMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\ThaiZonesSingleFilter.th-TH.resx">
+      <DependentUpon>ThaiZonesSingleFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\VetOrganizationFilter.uk-UA.resx">
+      <DependentUpon>VetOrganizationFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\VetSingleDiagnosisAZFilter.az-Latn-AZ.resx">
       <DependentUpon>VetSingleDiagnosisAZFilter.cs</DependentUpon>
@@ -3267,6 +3532,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumSingleMeaslesDiagnosisFilter.resx">
       <DependentUpon>HumSingleMeaslesDiagnosisFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumSingleMeaslesDiagnosisFilter.ru-RU.resx">
       <DependentUpon>HumSingleMeaslesDiagnosisFilter.cs</DependentUpon>
@@ -3480,6 +3746,9 @@
     <EmbeddedResource Include="BaseControls\Filters\RayonFilter.en-IQ-Eidss.resx">
       <DependentUpon>RayonFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RayonFilter.en-US-Eidss.resx">
+      <DependentUpon>RayonFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RayonFilter.th-TH.resx">
       <DependentUpon>RayonFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3490,6 +3759,10 @@
       <DependentUpon>RayonMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RayonMultiFilter.en-IQ-Eidss.resx">
+      <DependentUpon>RayonMultiFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RayonMultiFilter.en-US-Eidss.resx">
       <DependentUpon>RayonMultiFilter.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -3515,6 +3788,9 @@
     <EmbeddedResource Include="BaseControls\Filters\RegionFilter.en-IQ-Eidss.resx">
       <DependentUpon>RegionFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RegionFilter.en-US-Eidss.resx">
+      <DependentUpon>RegionFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RegionFilter.ru-KZ-Eidss.resx">
       <DependentUpon>RegionFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3528,6 +3804,9 @@
       <DependentUpon>RegionMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RegionMultiFilter.en-IQ-Eidss.resx">
+      <DependentUpon>RegionMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RegionMultiFilter.en-US-Eidss.resx">
       <DependentUpon>RegionMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RegionMultiFilter.hy-AM.resx">
@@ -3980,6 +4259,27 @@
       <DependentUpon>BaseYearKeeper.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseReportWithoutHeader.hy-am.resx">
+      <DependentUpon>BaseReportWithoutHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseReportWithoutHeader.ka-GE.resx">
+      <DependentUpon>BaseReportWithoutHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseReportWithoutHeader.kk-KZ.resx">
+      <DependentUpon>BaseReportWithoutHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseReportWithoutHeader.resx">
+      <DependentUpon>BaseReportWithoutHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseReportWithoutHeader.ru-RU.resx">
+      <DependentUpon>BaseReportWithoutHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseReportWithoutHeader.th-TH.resx">
+      <DependentUpon>BaseReportWithoutHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseReportWithoutHeader.uk-UA.resx">
+      <DependentUpon>BaseReportWithoutHeader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionActionsReport.th-TH.resx">
       <DependentUpon>SessionActionsReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -4004,6 +4304,9 @@
     <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationDTRAReport.az-Latn-AZ.resx">
       <DependentUpon>EmergencyNotificationDTRAReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationDTRAReport.en-TH-Eidss.resx">
+      <DependentUpon>EmergencyNotificationDTRAReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationDTRAReport.hy-AM.resx">
       <DependentUpon>EmergencyNotificationDTRAReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -4012,6 +4315,56 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationDTRAReport.th-TH.resx">
       <DependentUpon>EmergencyNotificationDTRAReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationDTRAReport.uk-UA.resx">
+      <DependentUpon>EmergencyNotificationDTRAReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.ar-IQ.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.az-Latn-AZ.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.en-IQ-Eidss.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.en-TH-Eidss.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.en-US-Eidss.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.hy-am.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.ka-GE.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.kk-KZ.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.ru-KZ-Eidss.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.ru-RU.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.th-TH.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.uk-UA.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\VectorSurveillance\SessionReport.th-TH.resx">
       <DependentUpon>SessionReport.cs</DependentUpon>
@@ -4447,6 +4800,10 @@
       <DependentUpon>SessionReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\ActiveSurveillance\SessionReport.en-US-Eidss.resx">
+      <DependentUpon>SessionReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionReport.hy-am.resx">
       <DependentUpon>SessionReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -4487,6 +4844,10 @@
       <DependentUpon>CaseInvestigationReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\CaseInvestigation\CaseInvestigationReport.en-IQ-Eidss.resx">
+      <DependentUpon>CaseInvestigationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\CaseInvestigation\CaseInvestigationReport.en-US-Eidss.resx">
       <DependentUpon>CaseInvestigationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -4586,6 +4947,10 @@
       <DependentUpon>EmergencyNotificationReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationReport.en-IQ-Eidss.resx">
+      <DependentUpon>EmergencyNotificationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationReport.en-US-Eidss.resx">
       <DependentUpon>EmergencyNotificationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -4801,6 +5166,10 @@
       <DependentUpon>AccessionInReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Uni\AccessionIn\AccessionInReport.en-IQ-Eidss.resx">
+      <DependentUpon>AccessionInReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Uni\AccessionIn\AccessionInReport.en-US-Eidss.resx">
       <DependentUpon>AccessionInReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -5146,6 +5515,10 @@
       <DependentUpon>HumAberrationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\HumAberrationReport.en-US-Eidss.resx">
+      <DependentUpon>HumAberrationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\HumAberrationReport.en-TH-Eidss.resx">
       <DependentUpon>HumAberrationReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5181,6 +5554,10 @@
       <DependentUpon>ILIAberrationReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\ILIAberrationReport.en-IQ-Eidss.resx">
+      <DependentUpon>ILIAberrationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\ILIAberrationReport.en-US-Eidss.resx">
       <DependentUpon>ILIAberrationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -5224,6 +5601,10 @@
       <DependentUpon>SyndromicAberrationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\SyndromicAberrationReport.en-US-Eidss.resx">
+      <DependentUpon>SyndromicAberrationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\SyndromicAberrationReport.en-TH-Eidss.resx">
       <DependentUpon>SyndromicAberrationReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5260,6 +5641,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\VetAberrationReport.en-IQ-Eidss.resx">
+      <DependentUpon>VetAberrationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\VetAberrationReport.en-US-Eidss.resx">
       <DependentUpon>VetAberrationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -5475,6 +5860,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\BorderRayonsComparativeAZReport.az-Latn-AZ.resx">
       <DependentUpon>BorderRayonsComparativeAZReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\BorderRayonsComparativeAZReport.resx">
       <DependentUpon>BorderRayonsComparativeAZReport.cs</DependentUpon>
@@ -7478,6 +7864,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>LivestockInvestigationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\LivestockInvestigationReport.en-KA-Eidss.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LivestockInvestigationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\LivestockInvestigationReport.ka-GE.resx">
       <SubType>Designer</SubType>
       <DependentUpon>LivestockInvestigationReport.cs</DependentUpon>
@@ -7651,6 +8041,33 @@
     <EmbeddedResource Include="Parameterized\Human\KZ\InfectiousParasiticKZKeeper.ru-RU.resx">
       <DependentUpon>InfectiousParasiticKZKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Keeper\IncidenceReportByRegionKeeper.kk-KZ.resx">
+      <DependentUpon>IncidenceReportByRegionKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Keeper\IncidenceReportByRegionKeeper.resx">
+      <DependentUpon>IncidenceReportByRegionKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Keeper\IncidenceReportByRegionKeeper.ru-RU.resx">
+      <DependentUpon>IncidenceReportByRegionKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Keeper\ComparativeReportByRegionKeeper.kk-KZ.resx">
+      <DependentUpon>ComparativeReportByRegionKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Keeper\ComparativeReportByRegionKeeper.resx">
+      <DependentUpon>ComparativeReportByRegionKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Keeper\ComparativeReportByRegionKeeper.ru-RU.resx">
+      <DependentUpon>ComparativeReportByRegionKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Keeper\ComparativeReportKeeper.kk-KZ.resx">
+      <DependentUpon>ComparativeReportKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Keeper\ComparativeReportKeeper.resx">
+      <DependentUpon>ComparativeReportKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Keeper\ComparativeReportKeeper.ru-RU.resx">
+      <DependentUpon>ComparativeReportKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\KZ\Keeper\Form1KZKeeper.kk-KZ.resx">
       <DependentUpon>Form1KZKeeper.cs</DependentUpon>
     </EmbeddedResource>
@@ -7659,6 +8076,34 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\KZ\Keeper\Form1KZKeeper.ru-RU.resx">
       <DependentUpon>Form1KZKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\ComparativeReport.kk-KZ.resx">
+      <DependentUpon>ComparativeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\ComparativeReport.resx">
+      <DependentUpon>ComparativeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\ComparativeReport.ru-RU.resx">
+      <DependentUpon>ComparativeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\ComparativeReportBase.kk-KZ.resx">
+      <DependentUpon>ComparativeReportBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\ComparativeReportBase.resx">
+      <DependentUpon>ComparativeReportBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\ComparativeReportBase.ru-RU.resx">
+      <DependentUpon>ComparativeReportBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\ComparativeReportByRegion.kk-KZ.resx">
+      <DependentUpon>ComparativeReportByRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\ComparativeReportByRegion.resx">
+      <DependentUpon>ComparativeReportByRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\ComparativeReportByRegion.ru-RU.resx">
+      <DependentUpon>ComparativeReportByRegion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\KZ\Report\Form1KZReport.kk-KZ.resx">
       <DependentUpon>Form1KZReport.cs</DependentUpon>
@@ -7691,6 +8136,15 @@
     <EmbeddedResource Include="Parameterized\Human\KZ\Report\Form1KZPage2.ru-RU.resx">
       <DependentUpon>Form1KZPage2.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\IncidenceReportByRegion.kk-KZ.resx">
+      <DependentUpon>IncidenceReportByRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\IncidenceReportByRegion.resx">
+      <DependentUpon>IncidenceReportByRegion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\KZ\Report\IncidenceReportByRegion.ru-RU.resx">
+      <DependentUpon>IncidenceReportByRegion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\KZ\Report\InfectiousParasiticKZReport.kk-KZ.resx">
       <DependentUpon>InfectiousParasiticKZReport.cs</DependentUpon>
@@ -7747,6 +8201,9 @@
       <DependentUpon>NumberOfCasesDeathsMonthTHReportKeeper.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\TH\Keepers\NumberOfCasesDeathsMonthTHReportKeeper.th-TH.resx">
+      <DependentUpon>NumberOfCasesDeathsMonthTHReportKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\TH\Keepers\NumberOfCasesDeathsMortalityTHReportKeeper.resx">
       <DependentUpon>NumberOfCasesDeathsMortalityTHReportKeeper.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -7783,20 +8240,29 @@
     <EmbeddedResource Include="Parameterized\Human\TH\Reports\OnePageSituationTHReport.th-TH.resx">
       <DependentUpon>OnePageSituationTHReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parameterized\Human\UA\Keepers\UAFormKeeper.resx">
-      <DependentUpon>UAFormKeeper.cs</DependentUpon>
+    <EmbeddedResource Include="Parameterized\Human\UA\Keepers\UAFormNo2Keeper.resx">
+      <DependentUpon>UAFormNo2Keeper.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parameterized\Human\UA\Reports\FormNo1.resx">
-      <DependentUpon>FormNo1.cs</DependentUpon>
+    <EmbeddedResource Include="Parameterized\Human\UA\Keepers\UAFormNo1Keeper.resx">
+      <DependentUpon>UAFormNo1Keeper.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parameterized\Human\UA\Reports\FormNo1.uk-UA.resx">
-      <DependentUpon>FormNo1.cs</DependentUpon>
+    <EmbeddedResource Include="Parameterized\Human\UA\Reports\FormNumBase.resx">
+      <DependentUpon>FormNumBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parameterized\Human\UA\Reports\FormNo2.resx">
-      <DependentUpon>FormNo2.cs</DependentUpon>
+    <EmbeddedResource Include="Parameterized\Human\UA\Reports\FormNumBase.uk-UA.resx">
+      <DependentUpon>FormNumBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Parameterized\Human\UA\Reports\FormNo2.uk-UA.resx">
-      <DependentUpon>FormNo2.cs</DependentUpon>
+    <EmbeddedResource Include="Parameterized\Human\UA\Reports\FormNum2.resx">
+      <DependentUpon>FormNum2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\UA\Reports\FormNum2.uk-UA.resx">
+      <DependentUpon>FormNum2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\UA\Reports\FormNum1.resx">
+      <DependentUpon>FormNum1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\UA\Reports\FormNum1.uk-UA.resx">
+      <DependentUpon>FormNum1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Uni\EventLog\EventLogReport.ar-IQ.resx">
       <DependentUpon>EventLogReport.cs</DependentUpon>
@@ -7830,6 +8296,24 @@
     <EmbeddedResource Include="Parameterized\Uni\EventLog\EventLogReport.uk-UA.resx">
       <DependentUpon>EventLogReport.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\AZ\Keepers\ComparativeReportByMonthsKeeper.az-Latn-AZ.resx">
+      <DependentUpon>ComparativeReportByMonthsKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\AZ\Keepers\ComparativeReportByMonthsKeeper.resx">
+      <DependentUpon>ComparativeReportByMonthsKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\AZ\Keepers\ComparativeReportByMonthsKeeper.ru-RU.resx">
+      <DependentUpon>ComparativeReportByMonthsKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\AZ\Reports\ComparativeReportByMonths.az-Latn-AZ.resx">
+      <DependentUpon>ComparativeReportByMonths.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\AZ\Reports\ComparativeReportByMonths.resx">
+      <DependentUpon>ComparativeReportByMonths.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\AZ\Reports\ComparativeReportByMonths.ru-RU.resx">
+      <DependentUpon>ComparativeReportByMonths.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\DiagnosisMatrixFilter.ar-IQ.resx">
       <DependentUpon>DiagnosisMatrixFilter.cs</DependentUpon>
@@ -8121,6 +8605,9 @@
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountReport.en-IQ-Eidss.resx">
       <DependentUpon>VetSamplesCountReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountReport.en-US-Eidss.resx">
+      <DependentUpon>VetSamplesCountReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountReport.en-TH-Eidss.resx">
       <DependentUpon>VetSamplesCountReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -8161,6 +8648,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesType\VetSamplesTypeReport.en-IQ-Eidss.resx">
+      <DependentUpon>VetSamplesTypeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\SamplesType\VetSamplesTypeReport.en-US-Eidss.resx">
       <DependentUpon>VetSamplesTypeReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesType\VetSamplesTypeReport.en-TH-Eidss.resx">
@@ -8236,6 +8726,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\TestType\VetTestTypeReport.en-IQ-Eidss.resx">
+      <DependentUpon>VetTestTypeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\TestType\VetTestTypeReport.en-US-Eidss.resx">
       <DependentUpon>VetTestTypeReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\TestType\VetTestTypeReport.en-TH-Eidss.resx">
@@ -8355,7 +8848,6 @@
     <None Include="BaseControls\Aggregate\AggregateDataSet.xss">
       <DependentUpon>AggregateDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Document\ActiveSurveillance\SessionActionsDataSet.xsc">
       <DependentUpon>SessionActionsDataSet.xsd</DependentUpon>
     </None>
@@ -8477,6 +8969,17 @@
     </None>
     <None Include="Document\Human\EmergencyNotification\EmergencyNotificationDataSet.xss">
       <DependentUpon>EmergencyNotificationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineDataSet.xsc">
+      <DependentUpon>EmergencyNotificationUkraineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmergencyNotificationUkraineDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineDataSet.xss">
+      <DependentUpon>EmergencyNotificationUkraineDataSet.xsd</DependentUpon>
     </None>
     <None Include="Document\Human\TZ\DataSets\TanzaniaInvestigationDataSet.xsc">
       <DependentUpon>TanzaniaInvestigationDataSet.xsd</DependentUpon>
@@ -8720,16 +9223,16 @@
     <None Include="Document\Veterinary\LivestockInvestigation\VaccinationDataSet.xss">
       <DependentUpon>VaccinationDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Parameterized\Human\UA\DataSets\EIDSS_UA_Seed_GISDataSet.xsc">
-      <DependentUpon>EIDSS_UA_Seed_GISDataSet.xsd</DependentUpon>
+    <None Include="Parameterized\Human\KZ\DataSet\ComparativeKZ.xsc">
+      <DependentUpon>ComparativeKZ.xsd</DependentUpon>
     </None>
-    <None Include="Parameterized\Human\UA\DataSets\EIDSS_UA_Seed_GISDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EIDSS_UA_Seed_GISDataSet.Designer.cs</LastGenOutput>
+    <None Include="Parameterized\Human\KZ\DataSet\ComparativeKZ.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComparativeKZ.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Parameterized\Human\UA\DataSets\EIDSS_UA_Seed_GISDataSet.xss">
-      <DependentUpon>EIDSS_UA_Seed_GISDataSet.xsd</DependentUpon>
+    <None Include="Parameterized\Human\KZ\DataSet\ComparativeKZ.xss">
+      <DependentUpon>ComparativeKZ.xsd</DependentUpon>
     </None>
     <None Include="Migrated rules for EIDSS.Reports.ruleset" />
     <None Include="OutbreakDataSet.xsc">
@@ -9244,6 +9747,17 @@
     <None Include="Parameterized\Human\IQ\DataSet\WeeklyByDistricsDataSet.xss">
       <DependentUpon>WeeklyByDistricsDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Parameterized\Human\KZ\DataSet\ComparativeReportByRegionKZDataset.xsc">
+      <DependentUpon>ComparativeReportByRegionKZDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Parameterized\Human\KZ\DataSet\ComparativeReportByRegionKZDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComparativeReportByRegionKZDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Parameterized\Human\KZ\DataSet\ComparativeReportByRegionKZDataset.xss">
+      <DependentUpon>ComparativeReportByRegionKZDataset.xsd</DependentUpon>
+    </None>
     <None Include="Parameterized\Human\KZ\DataSet\Form1KZDataDataset.xsc">
       <DependentUpon>Form1KZDataDataset.xsd</DependentUpon>
     </None>
@@ -9265,6 +9779,17 @@
     </None>
     <None Include="Parameterized\Human\KZ\DataSet\Form1KZHeaderDataset.xss">
       <DependentUpon>Form1KZHeaderDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Parameterized\Human\KZ\DataSet\IncidenceReportByRegionKZDataset.xsc">
+      <DependentUpon>IncidenceReportByRegionKZDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Parameterized\Human\KZ\DataSet\IncidenceReportByRegionKZDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncidenceReportByRegionKZDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Parameterized\Human\KZ\DataSet\IncidenceReportByRegionKZDataset.xss">
+      <DependentUpon>IncidenceReportByRegionKZDataset.xsd</DependentUpon>
     </None>
     <None Include="Parameterized\Human\KZ\DataSet\InfectiousParasiticKZDataSet.xsc">
       <DependentUpon>InfectiousParasiticKZDataSet.xsd</DependentUpon>
@@ -9343,16 +9868,27 @@
     <None Include="Parameterized\Human\TH\DataSets\OnePageSituationTHDataset.xss">
       <DependentUpon>OnePageSituationTHDataset.xsd</DependentUpon>
     </None>
-    <None Include="Parameterized\Human\UA\DataSets\EIDSS_UA_Seed_GISDataSet2.xsc">
-      <DependentUpon>EIDSS_UA_Seed_GISDataSet2.xsd</DependentUpon>
+    <None Include="Parameterized\Human\UA\DataSets\FormNum1.xsc">
+      <DependentUpon>FormNum1.xsd</DependentUpon>
     </None>
-    <None Include="Parameterized\Human\UA\DataSets\EIDSS_UA_Seed_GISDataSet2.xsd">
+    <None Include="Parameterized\Human\UA\DataSets\FormNum1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EIDSS_UA_Seed_GISDataSet2.Designer.cs</LastGenOutput>
+      <LastGenOutput>FormNum1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Parameterized\Human\UA\DataSets\EIDSS_UA_Seed_GISDataSet2.xss">
-      <DependentUpon>EIDSS_UA_Seed_GISDataSet2.xsd</DependentUpon>
+    <None Include="Parameterized\Human\UA\DataSets\FormNum1.xss">
+      <DependentUpon>FormNum1.xsd</DependentUpon>
+    </None>
+    <None Include="Parameterized\Human\UA\DataSets\SpecialInfectionAndParazitaryDiseaseReportNo2DataSet.xsc">
+      <DependentUpon>SpecialInfectionAndParazitaryDiseaseReportNo2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Parameterized\Human\UA\DataSets\SpecialInfectionAndParazitaryDiseaseReportNo2DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpecialInfectionAndParazitaryDiseaseReportNo2DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Parameterized\Human\UA\DataSets\SpecialInfectionAndParazitaryDiseaseReportNo2DataSet.xss">
+      <DependentUpon>SpecialInfectionAndParazitaryDiseaseReportNo2DataSet.xsd</DependentUpon>
     </None>
     <None Include="Parameterized\Uni\EventLog\EventLogDataSet.xsc">
       <DependentUpon>EventLogDataSet.xsd</DependentUpon>
@@ -9364,6 +9900,17 @@
     </None>
     <None Include="Parameterized\Uni\EventLog\EventLogDataSet.xss">
       <DependentUpon>EventLogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Parameterized\Veterinary\AZ\DataSets\ComparativeReportByMonthsDataSet.xsc">
+      <DependentUpon>ComparativeReportByMonthsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Parameterized\Veterinary\AZ\DataSets\ComparativeReportByMonthsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComparativeReportByMonthsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Parameterized\Veterinary\AZ\DataSets\ComparativeReportByMonthsDataSet.xss">
+      <DependentUpon>ComparativeReportByMonthsDataSet.xsd</DependentUpon>
     </None>
     <None Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountDataSet.xsc">
       <DependentUpon>VetSamplesCountDataSet.xsd</DependentUpon>
@@ -9442,6 +9989,10 @@
       <Project>{E4B87B63-D5F2-4F9F-B39C-A7714896D1DE}</Project>
       <Name>eidss.model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\eidss.winclient\eidss.winclient.csproj">
+      <Project>{428C1EFE-F1A1-441A-9C59-50AE279F887F}</Project>
+      <Name>eidss.winclient</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Shared\bv_common\bvcommon.vbproj">
       <Project>{BA2844A8-F629-4B02-ACD6-B60063E4D27F}</Project>
       <Name>bvcommon</Name>
@@ -9452,14 +10003,14 @@
       <Name>bvdb_common</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\EIDSS.FlexibleForms\EIDSS.FlexibleForms.csproj">
-      <Project>{8040D091-58E8-4FBE-8F46-D5200EEDAF69}</Project>
-      <Name>EIDSS.FlexibleForms</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EIDSS_Common\EIDSS_Common.vbproj">
       <Project>{119CC05A-2F6C-4FC8-AC74-79BB76E3C1C0}</Project>
       <Name>EIDSS_Common</Name>
       <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\EIDSS_Common_Forms\EIDSS_Common_Forms.vbproj">
+      <Project>{389b8f77-0b61-46db-b752-1ecdc502267d}</Project>
+      <Name>EIDSS_Common_Forms</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -9609,7 +10160,9 @@
     <None Include="Resources\FormN1Logo.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Parameterized\Human\AJ\DataSets\FormN1HeaderDataSet.xsc">
       <DependentUpon>FormN1HeaderDataSet.xsd</DependentUpon>
     </None>
@@ -9702,6 +10255,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Parameterized\Human\MMM\Filters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ASA_logo.jpg" />
+    <Content Include="Resources\ASA_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -124,14 +124,11 @@
   <data name="txtDiseaseName.Size" type="System.Drawing.Size, System.Drawing">
     <value>582, 19</value>
   </data>
-  <data name="cbReportType.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtTentativeDiagnoses.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 82</value>
   </data>
-  <data name="cbReportType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 19</value>
-  </data>
-  <data name="txtSessionID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
+  <data name="txtTentativeDiagnoses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>582, 20</value>
   </data>
   <data name="lbSessionID.Text" xml:space="preserve">
     <value>Sessiyanın Q/N-si</value>
@@ -142,14 +139,8 @@
   <data name="txtCaseID.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 30</value>
   </data>
-  <data name="txtCaseID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 20</value>
-  </data>
   <data name="lbCaseClassification.Text" xml:space="preserve">
     <value>Xəstəlik hadisəsinin təsnifatı</value>
-  </data>
-  <data name="txtFieldAccessionID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 20</value>
   </data>
   <data name="lbDiseaseName.Text" xml:space="preserve">
     <value>Diaqnozlar</value>
@@ -169,16 +160,19 @@
   <data name="lbFieldAccessionID.Text" xml:space="preserve">
     <value>Xəstəliyi məntəqədə qeydə alınma nömrəsi</value>
   </data>
+  <data name="lbReportType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 78</value>
+  </data>
   <data name="lbReportType.Text" xml:space="preserve">
     <value>Müşahidə növü</value>
   </data>
-  <data name="GeneralGroup.Text" xml:space="preserve">
-    <value>Xəstəlik hadisəsi haqqında yekun məlumat</value>
-  </data>
-  <data name="lbReportType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 81</value>
+  <data name="lbTentativeDiagnoses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 78</value>
   </data>
   <data name="lbTentativeDiagnoses.Text" xml:space="preserve">
     <value>İlkin diaqnozlar</value>
+  </data>
+  <data name="GeneralGroup.Text" xml:space="preserve">
+    <value>Xəstəlik hadisəsi haqqında yekun məlumat</value>
   </data>
 </root>

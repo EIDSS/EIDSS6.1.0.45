@@ -372,10 +372,14 @@ namespace eidss.smartphone.web.Models
                         else
                             sample = hc.Samples.FirstOrDefault(i => i.idfMaterial == a.idfMaterial);
 
+                        long? idfSendToOffice = null;
+                        if (a.idfSendToOffice > 0)
+                            idfSendToOffice = a.idfSendToOffice;
+
                         if (sample == null)
                         {
                             sample = HumanCaseSample.Accessor.Instance(null).Create(manager, hc,
-                                a.idfSendToOffice, null, null, "_organization", "", "");
+                                idfSendToOffice, null, null, "_organization", "", "");
                             a.FillHumanCaseSample(sample);
                             hc.Samples.Add(sample);
                         }

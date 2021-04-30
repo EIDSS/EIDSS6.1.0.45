@@ -174,13 +174,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="HumDiagnosisFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="HumDiagnosisFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 51</value>
+    <value>31, 52</value>
   </data>
   <data name="HumDiagnosisFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>424, 39</value>
+    <value>424, 43</value>
   </data>
   <data name="HumDiagnosisFilter.TabIndex" type="System.Int32, mscorlib">
     <value>183</value>
@@ -189,7 +189,7 @@
     <value>HumDiagnosisFilter</value>
   </data>
   <data name="&gt;&gt;HumDiagnosisFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.HumDiagnosisMultiFilter, EIDSS.Reports, Version=6.0.72.128, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Filters.HumDiagnosisMultiFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;HumDiagnosisFilter.Parent" xml:space="preserve">
     <value>pnlSettings</value>
@@ -209,8 +209,11 @@
   <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="GenerateReportButton.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
   <data name="GenerateReportButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 67</value>
+    <value>543, 69</value>
   </data>
   <data name="&gt;&gt;GenerateReportButton.Name" xml:space="preserve">
     <value>GenerateReportButton</value>
@@ -228,16 +231,16 @@
     <value>543, 27</value>
   </data>
   <data name="ceUseArchiveData.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceDisabled.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceFocused.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceReadOnly.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 19</value>
@@ -260,16 +263,19 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="HumSummaryReportKeeper.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
   <data name="&gt;&gt;bvResourceManagerChanger1.Name" xml:space="preserve">
     <value>bvResourceManagerChanger1</value>
   </data>
   <data name="&gt;&gt;bvResourceManagerChanger1.Type" xml:space="preserve">
-    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.0.72.128, Culture=neutral, PublicKeyToken=null</value>
+    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>HumSummaryReportKeeper</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Keeper.BaseIntervalKeeper, EIDSS.Reports, Version=6.0.72.128, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Keeper.BaseIntervalKeeper, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

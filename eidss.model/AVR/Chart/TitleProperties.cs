@@ -8,12 +8,17 @@ namespace eidss.model.Avr.Chart
         public FontProperties Font { get; set; }
 
         private string m_Text;
+
         public string Text
         {
             get { return m_Text; }
             set
             {
-                if (m_Text != value) TextWasChanged = true;
+                if (m_Text != value)
+                {
+                    TextWasChanged = true;
+                }
+
                 m_Text = value;
             }
         }
@@ -24,7 +29,7 @@ namespace eidss.model.Avr.Chart
 
         public TitleProperties()
         {
-            m_Text = String.Empty;
+            m_Text = string.Empty;
             Font = new FontProperties();
             Alignment = 1; //Center
             Visibility = true;

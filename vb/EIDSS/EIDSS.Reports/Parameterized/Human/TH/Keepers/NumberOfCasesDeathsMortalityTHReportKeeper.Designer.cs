@@ -91,6 +91,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Keepers
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(NumberOfCasesDeathsMortalityTHReportKeeper), out resources);
             // Form Is Localizable: True
@@ -146,6 +148,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Keepers
             // 
             // NumberOfCasesDeathsMortalityTHReportKeeper
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("NumberOfCasesDeathsMortalityTHReportKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.HeaderHeight = 200;
             this.Name = "NumberOfCasesDeathsMortalityTHReportKeeper";
             ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties.CalendarTimeProperties)).EndInit();

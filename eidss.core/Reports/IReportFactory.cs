@@ -18,7 +18,7 @@ namespace eidss.model.Reports
         [MenuReportCustomization]
         void HumCaseInvestigation(long caseId, long epiId, long csId, long diagnosisId);
 
-        [MenuReportCustomization(Forbidden = new[] { CustomizationPackage.Tanzania })]
+        [MenuReportCustomization(Forbidden = new[] { CustomizationPackage.Tanzania})]
         void HumUrgentyNotification(long caseId);
 
         [MenuReportCustomization(CustomizationPackage.Tanzania)]
@@ -27,12 +27,15 @@ namespace eidss.model.Reports
         [MenuReportCustomization(CustomizationPackage.DTRA)]
         void HumUrgentyNotificationDTRA(long caseId);
 
+        [MenuReportCustomization(CustomizationPackage.Ukraine)]
+        void HumUrgentyNotificationUkraine(long caseId);
+
         [MenuReportDescription(ReportSubMenu.Human, "ReportsHumDiagnosisToChangedDiagnosis", 400)]
-        [MenuReportCustomization(Forbidden = new[] { CustomizationPackage.Azerbaijan })]
+        [MenuReportCustomization(Forbidden = new[] {CustomizationPackage.Azerbaijan, CustomizationPackage.Thailand})]
         void HumDiagnosisToChangedDiagnosis();
 
         [MenuReportDescription(ReportSubMenu.Human, "ReportsHumMonthlyMorbidityAndMortality", 390)]
-        [MenuReportCustomization(Forbidden = new[] { CustomizationPackage.Azerbaijan })]
+        [MenuReportCustomization(Forbidden = new[] {CustomizationPackage.Azerbaijan, CustomizationPackage.Thailand})]
         void HumMonthlyMorbidityAndMortality();
 
         #endregion
@@ -85,33 +88,33 @@ namespace eidss.model.Reports
         void VetSamplesBySampleTypesWithinRegions();
 
         [MenuReportDescription(ReportSubMenu.Vet, "ReportsVetYearlySituation", 1340)]
-        [MenuReportCustomization(Forbidden = new[] { CustomizationPackage.Azerbaijan, CustomizationPackage.Thailand })]
+        [MenuReportCustomization(Forbidden = new[] {CustomizationPackage.Azerbaijan, CustomizationPackage.Thailand})]
         void VetYearlySituation();
 
         [MenuReportDescription(ReportSubMenu.Vet, "ReportsActiveSurveillance", 1350)]
-        [MenuReportCustomization(Forbidden = new[] { CustomizationPackage.Azerbaijan, CustomizationPackage.Thailand })]
+        [MenuReportCustomization(Forbidden = new[] {CustomizationPackage.Azerbaijan, CustomizationPackage.Thailand})]
         void VetActiveSurveillance();
 
         #endregion
 
         #region Common Syndromic Surviellance
 
-        [MenuReportDescription(ReportSubMenu.Aberration, "ReportsHumAberrationAnalysis", 60000, (int)MenuIconsSmall.HumanAberrationReport)]
-        [MenuReportCustomization(AbsentInWeb = true, Forbidden = new[] { CustomizationPackage.Azerbaijan })]
+        [MenuReportDescription(ReportSubMenu.Aberration, "ReportsHumAberrationAnalysis", 60000, (int) MenuIconsSmall.HumanAberrationReport)]
+        [MenuReportCustomization(AbsentInWeb = true, Forbidden = new[] {CustomizationPackage.Azerbaijan})]
         void HumAberrationAnalysis();
 
-        [MenuReportDescription(ReportSubMenu.Aberration, "ReportsVetAberrationAnalysis", 60001, (int)MenuIconsSmall.VetAberrationReport)]
-        [MenuReportCustomization(AbsentInWeb = true, Forbidden = new[] { CustomizationPackage.Thailand, CustomizationPackage.Azerbaijan })]
+        [MenuReportDescription(ReportSubMenu.Aberration, "ReportsVetAberrationAnalysis", 60001, (int) MenuIconsSmall.VetAberrationReport)]
+        [MenuReportCustomization(AbsentInWeb = true, Forbidden = new[] {CustomizationPackage.Thailand, CustomizationPackage.Azerbaijan})]
         void VetAberrationAnalysis();
 
-        [MenuReportDescription(ReportSubMenu.Aberration, "ReportsSyndrAberrationAnalysis", 60002, (int)MenuIconsSmall.BssAberrationReport)]
+        [MenuReportDescription(ReportSubMenu.Aberration, "ReportsSyndrAberrationAnalysis", 60002, (int) MenuIconsSmall.BssAberrationReport)]
         [MenuReportCustomization(AbsentInWeb = true,
-            Forbidden = new[] { CustomizationPackage.Thailand, CustomizationPackage.Armenia, CustomizationPackage.Azerbaijan })]
+            Forbidden = new[] {CustomizationPackage.Thailand, CustomizationPackage.Armenia, CustomizationPackage.Azerbaijan})]
         void SyndrAberrationAnalysis();
 
-        [MenuReportDescription(ReportSubMenu.Aberration, "ReportsILISyndrAberrationAnalysis", 6000, (int)MenuIconsSmall.BssAggregateList)]
+        [MenuReportDescription(ReportSubMenu.Aberration, "ReportsILISyndrAberrationAnalysis", 6000, (int) MenuIconsSmall.BssAggregateList)]
         [MenuReportCustomization(AbsentInWeb = true,
-            Forbidden = new[] { CustomizationPackage.Thailand, CustomizationPackage.Armenia, CustomizationPackage.Azerbaijan })]
+            Forbidden = new[] {CustomizationPackage.Thailand, CustomizationPackage.Armenia, CustomizationPackage.Azerbaijan})]
         void ILISyndrAberrationAnalysis();
 
         #endregion
@@ -159,42 +162,42 @@ namespace eidss.model.Reports
         void Hum60BJournal();
 
         [MenuReportDescription(ReportSubMenu.HumanGGOldRevision, "ReportsHumInfectiousDiseaseMonthV4", 370,
-            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase })]
+            PermissionObjects = new[] {EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase})]
         [MenuReportCustomization(CustomizationPackage.Georgia)]
         void HumMonthInfectiousDiseaseV4();
 
         [MenuReportDescription(ReportSubMenu.HumanGGOldRevision, "ReportsHumInfectiousDiseaseMonthV5", 343,
-            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase })]
+            PermissionObjects = new[] {EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase})]
         [MenuReportCustomization(CustomizationPackage.Georgia)]
         void HumMonthInfectiousDiseaseV5();
 
         [MenuReportDescription(ReportSubMenu.HumanGGOldRevision, "ReportsHumInfectiousDiseaseMonthV6", 333,
-            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase })]
+            PermissionObjects = new[] {EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase})]
         [MenuReportCustomization(CustomizationPackage.Georgia)]
         void HumMonthInfectiousDiseaseV6();
 
         [MenuReportDescription(ReportSubMenu.Human, "ReportsHumInfectiousDiseaseMonthV61", 333,
-            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase })]
+            PermissionObjects = new[] {EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase})]
         [MenuReportCustomization(CustomizationPackage.Georgia)]
         void HumMonthInfectiousDiseaseV61();
 
         [MenuReportDescription(ReportSubMenu.HumanGGOldRevision, "HumInfectiousDiseaseIntermediateMonthV4", 380,
-            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase })]
+            PermissionObjects = new[] {EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase})]
         [MenuReportCustomization(CustomizationPackage.Georgia)]
         void HumIntermediateMonthInfectiousDiseaseV4();
 
         [MenuReportDescription(ReportSubMenu.HumanGGOldRevision, "HumInfectiousDiseaseIntermediateMonthV5", 345,
-            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase })]
+            PermissionObjects = new[] {EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase})]
         [MenuReportCustomization(CustomizationPackage.Georgia)]
         void HumIntermediateMonthInfectiousDiseaseV5();
 
         [MenuReportDescription(ReportSubMenu.HumanGGOldRevision, "HumInfectiousDiseaseIntermediateMonthV6", 335,
-            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase })]
+            PermissionObjects = new[] {EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase})]
         [MenuReportCustomization(CustomizationPackage.Georgia)]
         void HumIntermediateMonthInfectiousDiseaseV6();
 
         [MenuReportDescription(ReportSubMenu.Human, "HumInfectiousDiseaseIntermediateMonthV61", 340,
-            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase })]
+            PermissionObjects = new[] {EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase})]
         [MenuReportCustomization(CustomizationPackage.Georgia)]
         void HumIntermediateMonthInfectiousDiseaseV61();
 
@@ -207,8 +210,8 @@ namespace eidss.model.Reports
         void HumIntermediateAnnualInfectiousDisease();
 
         [MenuReportDescription(ReportSubMenu.Human, "HumComparativeGGReport", 342,
-            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase },
-            PermissionActions = new[] { PermissionHelper.Insert })]
+            PermissionObjects = new[] {EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase},
+            PermissionActions = new[] {PermissionHelper.Insert})]
         [MenuReportCustomization(CustomizationPackage.Georgia)]
         void HumComparativeGGReport();
 
@@ -266,8 +269,8 @@ namespace eidss.model.Reports
 
         [MenuReportCustomization(CustomizationPackage.Azerbaijan)]
         [MenuReportDescription(ReportSubMenu.Human, "HumDataQualityIndicators", 280,
-            PermissionObjects = new[] { EIDSSPermissionObject.CanSignReport },
-            PermissionActions = new[] { PermissionHelper.Execute })]
+            PermissionObjects = new[] {EIDSSPermissionObject.CanSignReport},
+            PermissionActions = new[] {PermissionHelper.Execute})]
         void HumDataQualityIndicators();
 
         [MenuReportDescription(ReportSubMenu.Human, "HumComparativeReport", 320)]
@@ -299,8 +302,8 @@ namespace eidss.model.Reports
         #region Lab AZ reports
 
         [MenuReportDescription(ReportSubMenu.Lab, "AssignmentLabDiagnosticAZ", 360,
-            PermissionObjects = new[] { EIDSSPermissionObject.HumanCase },
-            PermissionActions = new[] { PermissionHelper.Select })]
+            PermissionObjects = new[] {EIDSSPermissionObject.HumanCase},
+            PermissionActions = new[] {PermissionHelper.Select})]
         [MenuReportCustomization(CustomizationPackage.Azerbaijan)]
         void AssignmentLabDiagnosticAZ();
 
@@ -312,7 +315,7 @@ namespace eidss.model.Reports
 
         #region Veterinary AZ reports
 
-        [MenuReportDescription(ReportSubMenu.Vet, "VeterinaryFormVet1", 440, PermissionObjects = new[] { EIDSSPermissionObject.VetCase })]
+        [MenuReportDescription(ReportSubMenu.Vet, "VeterinaryFormVet1", 440, PermissionObjects = new[] {EIDSSPermissionObject.VetCase})]
         [MenuReportCustomization(CustomizationPackage.Azerbaijan)]
         void VeterinaryFormVet1();
 
@@ -330,8 +333,8 @@ namespace eidss.model.Reports
             PermissionObjects =
                 new[]
                 {
-                    EIDSSPermissionObject.AccessToVetAggregateCase, EIDSSPermissionObject.VetCase,
-                    EIDSSPermissionObject.AccessToVetAggregateAction
+                    EIDSSPermissionObject.VetCase, EIDSSPermissionObject.AccessToVetAggregateAction,
+                    EIDSSPermissionObject.MonitoringSession
                 })]
         [MenuReportCustomization(CustomizationPackage.Azerbaijan)]
         void VeterinarySummaryAZ();
@@ -341,13 +344,19 @@ namespace eidss.model.Reports
         void VeterinaryLaboratoriesAZ();
 
         [MenuReportDescription(ReportSubMenu.Vet, "VetIndicators", 480,
-            PermissionObjects = new[] { EIDSSPermissionObject.VetCase, EIDSSPermissionObject.MonitoringSession })]
+            PermissionObjects = new[] {EIDSSPermissionObject.VetCase, EIDSSPermissionObject.MonitoringSession})]
         [MenuReportCustomization(CustomizationPackage.Azerbaijan)]
         void VeterinaryIndicatorsAZ();
 
         [MenuReportDescription(ReportSubMenu.Vet, "VeterinaryCasesReport", 500)]
         [MenuReportCustomization(CustomizationPackage.Azerbaijan)]
         void VeterinaryCasesReportAZ();
+
+        [MenuReportDescription(ReportSubMenu.Vet, "VeterinaryComparativeByMonthReportAZ", 510,
+                        PermissionObjects = new[] { EIDSSPermissionObject.VetCase },
+                        PermissionActions = new[] { PermissionHelper.Select })]
+        [MenuReportCustomization(CustomizationPackage.Azerbaijan)]
+        void VeterinaryComparativeByMonthReportAZ();
 
         #endregion
 
@@ -366,20 +375,20 @@ namespace eidss.model.Reports
         void HumDataQualityIndicatorsRayons();
 
         [MenuReportDescription(ReportSubMenu.Simplified, "HumBorderRayonsComparativeReport", 300,
-            PermissionObjects = new[] { EIDSSPermissionObject.HumanCase },
-            PermissionActions = new[] { PermissionHelper.Insert })]
+            PermissionObjects = new[] {EIDSSPermissionObject.HumanCase},
+            PermissionActions = new[] {PermissionHelper.Insert})]
         [MenuReportCustomization(CustomizationPackage.Azerbaijan)]
         void HumBorderRayonsComparativeReport();
 
         [MenuReportDescription(ReportSubMenu.Simplified, "HumComparativeReportOfTwoYears", 310,
-            PermissionObjects = new[] { EIDSSPermissionObject.HumanCase },
-            PermissionActions = new[] { PermissionHelper.Insert })]
+            PermissionObjects = new[] {EIDSSPermissionObject.HumanCase},
+            PermissionActions = new[] {PermissionHelper.Insert})]
         [MenuReportCustomization(CustomizationPackage.Azerbaijan)]
         void HumComparativeReportOfTwoYears();
 
         [MenuReportDescription(ReportSubMenu.Simplified, "HumTuberculosisCasesTested", 350,
-            PermissionObjects = new[] { EIDSSPermissionObject.HumanCase },
-            PermissionActions = new[] { PermissionHelper.Insert })]
+            PermissionObjects = new[] {EIDSSPermissionObject.HumanCase},
+            PermissionActions = new[] {PermissionHelper.Select})]
         [MenuReportCustomization(CustomizationPackage.Azerbaijan)]
         void HumTuberculosisCasesTested();
 
@@ -393,8 +402,8 @@ namespace eidss.model.Reports
         #region TH reports
 
         [MenuReportDescription(ReportSubMenu.Human, "HumComparativeReportOfSeveralYearsTH", 100,
-            PermissionObjects = new[] { EIDSSPermissionObject.HumanCase },
-            PermissionActions = new[] { PermissionHelper.Insert })]
+            PermissionObjects = new[] {EIDSSPermissionObject.HumanCase},
+            PermissionActions = new[] {PermissionHelper.Insert})]
         [MenuReportCustomization(CustomizationPackage.Thailand)]
         void HumComparativeReportOfSeveralYearsTH();
 
@@ -411,8 +420,8 @@ namespace eidss.model.Reports
         void HumNumberOfCasesDeathsMorbidityMortalityTH();
 
         [MenuReportDescription(ReportSubMenu.Human, "OnePageSituationTH", 400,
-            PermissionObjects = new[] { EIDSSPermissionObject.HumanCase },
-            PermissionActions = new[] { PermissionHelper.Insert })]
+            PermissionObjects = new[] {EIDSSPermissionObject.HumanCase},
+            PermissionActions = new[] {PermissionHelper.Insert})]
         [MenuReportCustomization(CustomizationPackage.Thailand)]
         void OnePageSituationTH();
         #endregion
@@ -420,8 +429,8 @@ namespace eidss.model.Reports
         #region ARM reports
 
         [MenuReportDescription(ReportSubMenu.Human, "HumFormN85", 500,
-            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase },
-            PermissionActions = new[] { PermissionHelper.Insert })]
+            PermissionObjects = new[] {EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase},
+            PermissionActions = new[] {PermissionHelper.Insert})]
         [MenuReportCustomization(CustomizationPackage.Armenia)]
         void HumFormN85();
 
@@ -453,12 +462,33 @@ namespace eidss.model.Reports
 
         #region Human KZ reports
 
-        [MenuReportDescription(ReportSubMenu.Human, "HumInfectiousParasiticKZ", 500)]
-        [MenuReportCustomization(CustomizationPackage.KazakhstanMoH)]
-        void HumInfectiousParasiticKZ();
         [MenuReportDescription(ReportSubMenu.Human, "HumForm1KZ", 500)]
         [MenuReportCustomization(CustomizationPackage.KazakhstanMoH)]
         void HumForm1KZ();
+
+        [MenuReportDescription(ReportSubMenu.Human, "HumanComparativeReportKZ", 510,
+            PermissionObjects = new[] {
+                EIDSSPermissionObject.AccessToHumanAggregateCase,
+                EIDSSPermissionObject.HumanCase },
+            PermissionActions = new[] { PermissionHelper.Insert})]
+        [MenuReportCustomization(CustomizationPackage.KazakhstanMoH)]
+        void HumanComparativeReportKZ();
+
+        [MenuReportDescription(ReportSubMenu.Human, "ComparativeReportByRegionKZ", 520,
+            PermissionObjects = new[] {
+                EIDSSPermissionObject.AccessToHumanAggregateCase,
+                EIDSSPermissionObject.HumanCase },
+            PermissionActions = new[] { PermissionHelper.Insert })]
+        [MenuReportCustomization(CustomizationPackage.KazakhstanMoH)]
+        void ComparativeReportByRegionKZ();
+
+        [MenuReportDescription(ReportSubMenu.Human, "IncidenceReportByRegionKZ", 530,
+            PermissionObjects = new[] {
+                EIDSSPermissionObject.AccessToHumanAggregateCase,
+                EIDSSPermissionObject.HumanCase },
+                PermissionActions = new[]{PermissionHelper.Insert })]
+        [MenuReportCustomization(CustomizationPackage.KazakhstanMoH)]
+        void IncidenceReportByRegionKZ();
 
         #endregion
 
@@ -491,13 +521,19 @@ namespace eidss.model.Reports
         #endregion
 
         #region Human UA reports
-        [MenuReportDescription(ReportSubMenu.Human, "ReportFormNo.1", 520, PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase })]
-        [MenuReportCustomization(CustomizationPackage.Ukraine)]
-        void FormNo1();
 
-        [MenuReportDescription(ReportSubMenu.Human, "ReportFormNo.2", 530, PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase })]
+        [MenuReportDescription(ReportSubMenu.Human, "ReportFormNo.1", 520, 
+            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase },
+            PermissionActions = new[] { PermissionHelper.Insert })]
         [MenuReportCustomization(CustomizationPackage.Ukraine)]
-        void FormNo2();
+        void SpecialInfectionAndParazitaryDiseaseReport();
+
+        [MenuReportDescription(ReportSubMenu.Human, "ReportFormNo.2", 530, 
+            PermissionObjects = new[] { EIDSSPermissionObject.AccessToHumanAggregateCase, EIDSSPermissionObject.HumanCase }, 
+            PermissionActions = new[] { PermissionHelper.Insert })]
+        [MenuReportCustomization(CustomizationPackage.Ukraine)]
+        void SpecialInfectionAndParazitaryDiseaseReportNo2();
+
         #endregion Human UA reports
     }
 }

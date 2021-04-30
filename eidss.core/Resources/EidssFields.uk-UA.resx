@@ -591,6 +591,12 @@
   <data name="PreferredLanguage" xml:space="preserve">
     <value>Мова</value>
   </data>
+  <data name="DescriptionText" xml:space="preserve">
+    <value>Опис</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Місяць</value>
+  </data>
   <data name="QuarterForAggr" xml:space="preserve">
     <value>Квартал</value>
   </data>
@@ -1621,7 +1627,7 @@
     <value>Початкові дані для дослідження</value>
   </data>
   <data name="strBuilding" xml:space="preserve">
-    <value>Корпус</value>
+    <value>Корп.</value>
   </data>
   <data name="CampaignStatus" xml:space="preserve">
     <value>Стан кампанії</value>
@@ -1777,7 +1783,7 @@
     <value>В останнє присутній на роботі</value>
   </data>
   <data name="datInvestigationStartDate" xml:space="preserve">
-    <value>Дата початку розслідування</value>
+    <value>Дата початку епід.розслідування</value>
   </data>
   <data name="strInvestigationStartingDateTime" xml:space="preserve">
     <value>Дата початку розслідування</value>
@@ -1798,7 +1804,7 @@
     <value>Переносник-власник</value>
   </data>
   <data name="idfInvestigatedByOffice" xml:space="preserve">
-    <value>Установа, що розслідує</value>
+    <value>Організація епід.розслідування</value>
   </data>
   <data name="idfParty" xml:space="preserve">
     <value>Пул/Переносник</value>
@@ -3002,5 +3008,11 @@
   </data>
   <data name="idfRootFarm" xml:space="preserve">
     <value>Вибір ферми</value>
+  </data>
+  <data name="strQueryName" xml:space="preserve">
+    <value>Ім'я (англ.)</value>
+  </data>
+  <data name="Form1KZRegion" xml:space="preserve">
+    <value>Область</value>
   </data>
 </root>

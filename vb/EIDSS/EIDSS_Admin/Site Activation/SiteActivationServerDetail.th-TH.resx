@@ -187,7 +187,7 @@
     <value>RC</value>
   </data>
   <data name="btnRemove.Text" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>ลบรายการนี้</value>
   </data>
   <data name="btnAdd.Text" xml:space="preserve">
     <value>เพิ่ม</value>
@@ -226,7 +226,7 @@
     <value>RC</value>
   </data>
   <data name="btnNFromRemove.Text" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>ลบรายการนี้</value>
   </data>
   <data name="btnNFromAdd.Text" xml:space="preserve">
     <value>เพิ่ม</value>
@@ -235,7 +235,7 @@
     <value>แบบฟอร์มแจ้งเตือน</value>
   </data>
   <data name="btnNToRemove.Text" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>ลบรายการนี้</value>
   </data>
   <data name="btnNToAdd.Text" xml:space="preserve">
     <value>เพิ่ม</value>

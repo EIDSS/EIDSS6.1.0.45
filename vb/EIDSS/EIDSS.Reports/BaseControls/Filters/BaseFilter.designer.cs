@@ -35,6 +35,8 @@
             // 
             // BaseFilter
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("BaseFilter.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "BaseFilter";

@@ -306,9 +306,6 @@
   <data name="ReportHeader.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="xrLabel7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9pt</value>
-  </data>
   <data name="xrRichText5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
     <value>0, 178.791748</value>
   </data>

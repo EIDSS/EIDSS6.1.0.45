@@ -4418,7 +4418,7 @@ Otherwise please narrow the search criteria.</value>
     <value>Too many diagnoses are selected for displaying in the report. The number of selected diagnoses shall not exceed twelve. Please clear some diagnoses and try to generate the report again.</value>
   </data>
   <data name="msgTooManySpeciesType" xml:space="preserve">
-    <value>You can specify not more than three species in Species type filter.</value>
+    <value>You can specify not more than six species in Species type filter.</value>
   </data>
   <data name="colPrinterName" xml:space="preserve">
     <value>Printer Name</value>
@@ -4542,14 +4542,27 @@ Otherwise please narrow the search criteria.</value>
 EIDSS will prevent saving of the Human Case containing non-validated PIN of patient/contact.
 </value>
   </data>
+  <data name="strPinNotRespondingNoVerification" xml:space="preserve">
+    <value>Civil Registry Person Identity Service is not responding. Please retry later.</value>
+  </data>
   <data name="strPinWrongFormat" xml:space="preserve">
     <value>Wrong PIN 11-digit format. Please update search criteria and retry.
 EIDSS will prevent saving of the Human Case containing non-validated PIN of patient/contact.
 </value>
   </data>
+  <data name="strPinWrongFormatNoVerification" xml:space="preserve">
+    <value>Wrong PIN 11-digit format. Please update search criteria and retry.</value>
+  </data>
+  <data name="strPinDOB" xml:space="preserve">
+    <value>The field 'Date of Birth' is mandatory. Please update search criteria and retry.</value>
+  </data>
   <data name="strPinNoRecordsFound" xml:space="preserve">
     <value>According to the search criteria no records were found. Please update search criteria and retry.
-EIDSS will prevent saving of the Human Case containing non-validated PIN of patient/contact.</value>
+EIDSS will prevent saving of the Human Case containing non-validated PIN of patient/contact.
+</value>
+  </data>
+  <data name="strPinNoRecordsFoundNoVerification" xml:space="preserve">
+    <value>According to the search criteria no records were found. Please update search criteria and retry.</value>
   </data>
   <data name="strPinNonValidated" xml:space="preserve">
     <value>Non-validated PIN of patient/contact. Please perform search of PIN in Civil Registry.</value>
@@ -4776,5 +4789,43 @@ EIDSS will prevent saving of the Human Case containing non-validated PIN of pati
   </data>
   <data name="msgAvianCaseFormGA" xml:space="preserve">
     <value>Investigation Form For Avian Disease Outbreaks Georgia</value>
+  </data>
+  <data name="rmDistrictsByProvinces" xml:space="preserve">
+    <value>Districts By Provinces</value>
+  </data>
+  <data name="rmProvincesByRegions" xml:space="preserve">
+    <value>Provinces By Regions</value>
+  </data>
+  <data name="rmProvincesByZones" xml:space="preserve">
+    <value>Provinces By Zones</value>
+  </data>
+  <data name="rmSubDistrictsByDistricts" xml:space="preserve">
+    <value>Sub-Districts By Districts</value>
+  </data>
+  <data name="msgTooManyDiagnosisThaiReports" xml:space="preserve">
+    <value>Too many diagnoses are selected for displaying in the report. The number of selected diagnoses shall not exceed {0}. Please clear some diagnoses and try to generate the report again.</value>
+    <comment>{0} - Maximum allowed number of selected diagnoses in the report (by default, 10)</comment>
+  </data>
+  <data name="msgTooManyDistrictsThaiReports" xml:space="preserve">
+    <value>Too many districts are selected for displaying in the report. The number of selected districts shall not exceed {0}. Please clear some districts and try to generate the report again.</value>
+    <comment>{0} - Maximum allowed number of selected districts in the report (by default, 50)</comment>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Rural" xml:space="preserve">
+    <value>Rural</value>
+  </data>
+  <data name="Town" xml:space="preserve">
+    <value>Town</value>
+  </data>
+  <data name="msgComparativeReportKZCorrectYear" xml:space="preserve">
+    <value>The Year selected in the Year 1 filter shall be less than the Year selected in the Year 2 filter.</value>
+  </data>
+  <data name="msgVetComparativeReportAZCorrectYear" xml:space="preserve">
+    <value>The biggest difference between values in From Year and To Year filters can be 2 years</value>
+  </data>
+  <data name="msgTooManySpeciesType3" xml:space="preserve">
+    <value>You can specify not more than three species in Species type filter</value>
   </data>
 </root>

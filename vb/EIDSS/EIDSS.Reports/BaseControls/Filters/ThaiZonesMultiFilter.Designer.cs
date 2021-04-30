@@ -37,15 +37,14 @@
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(ThaiZonesMultiFilter), out resources);
             // Form Is Localizable: True
             // 
-            // ZonesMultiFilter
+            // ThaiZonesMultiFilter
             // 
-            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ZonesMultiFilter.Appearance.Font")));
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ThaiZonesMultiFilter.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.Name = "ThaiZonesMultiFilter";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

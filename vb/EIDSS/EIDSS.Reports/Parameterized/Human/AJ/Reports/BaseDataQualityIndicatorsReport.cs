@@ -27,6 +27,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
         private string m_LastRayon = string.Empty;
         private bool m_IsSubTotalPrinted;
 
+        protected int m_SubTotalCases;
+
         private readonly ComponentResourceManager m_Resources = new ComponentResourceManager(typeof (BaseDataQualityIndicatorsReport));
 
         public BaseDataQualityIndicatorsReport()
@@ -53,7 +55,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
                 BindSummaryMax(maxRow);
             }
 
-            DQIDataSet.spRepHumDataQualityIndicatorsRow averageRow = CalculateAverage(indicatorsTable);
+            DQIDataSet.spRepHumDataQualityIndicatorsRow averageRow = CalculateAverage(indicatorsTable, true);
             BindSummaryAvarage(averageRow);
 
             averageRow = CalculateFilteredAverage(model, chartTable, averageRow);
@@ -109,7 +111,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
                     chartTable.Rows.Remove(row);
                 }
                 chartTable.EndLoadData();
-                chartRow = CalculateAverage(chartTable);
+                chartRow = CalculateAverage(chartTable, true);
             }
             return chartRow;
         }
@@ -249,6 +251,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
 
             DataView rayonView = dataSource.DefaultView.ToTable(true, "idfsRayon").DefaultView;
             rayonView.RowFilter = "idfsRayon > 0";
+            double totalSum = 0;
+            int totalCount = 0;
             foreach (DataRowView rayonRow in rayonView)
             {
                 string rayon = Utils.Str(rayonRow[0]);
@@ -262,10 +266,12 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
                         if (!row.IsdblSummaryScoreByIndicatorsNull() && row.dblSummaryScoreByIndicators > 0)
                         {
                             sum += row.dblSummaryScoreByIndicators;
-                            count++;
+                            count += row.intCaseCount;
                         }
                     }
                     double avg = count == 0 ? 0 : sum / count;
+                    totalSum += sum;
+                    totalCount += count;
                     if (avg > 0)
                     {
                         var firstRow = (DQIDataSet.spRepHumDataQualityIndicatorsRow) rows[0];
@@ -285,7 +291,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
 
             if (chartRows.Count > 0)
             {
-                double avg = chartRows.Cast<DQIChartDataSet.FirstChartDataRow>().Sum(row => row.Value) / chartRows.Count;
+                double avg = totalCount == 0 ? 0 : totalSum / totalCount;//chartRows.Cast<DQIChartDataSet.FirstChartDataRow>().Sum(row => row.Value) / chartRows.Count;
                 foreach (DQIChartDataSet.FirstChartDataRow row in chartRows)
                 {
                     row.AverageValue = avg;
@@ -412,12 +418,30 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
             m_DQIDataSet.spRepHumDataQualityIndicators.DefaultView.RowFilter = "idfsRegion > 0";
         }
 
+        protected int CurrentSubTotalCases
+        {
+            get
+            {
+                return m_SubTotalCases;
+            }
+        }
+
+        private void NumberOfCasesSubTotalCell_SummaryCalculated(object sender, TextFormatEventArgs e)
+        {
+            var cell = (sender as XRTableCell);
+            if (cell != null && !int.TryParse(e.Text, out m_SubTotalCases))
+            {
+                m_SubTotalCases = 0;
+            }
+        }
+
+
         #endregion
 
         #region Calculate max and average
 
         protected static DQIDataSet.spRepHumDataQualityIndicatorsRow CalculateAverage
-            (DQIDataSet.spRepHumDataQualityIndicatorsDataTable source)
+            (DQIDataSet.spRepHumDataQualityIndicatorsDataTable source, bool divByCount = false)
         {
             DQIDataSet.spRepHumDataQualityIndicatorsRow resultRow = source.NewspRepHumDataQualityIndicatorsRow();
             SetNullRowIndicatorsSummary(resultRow);
@@ -438,7 +462,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
                         AddRowIndicatorsSummary(resultRow, row);
                     }
                 }
-                CalculateRowIndicatorsSummary(resultRow);
+                if (divByCount) 
+                    CalculateRowIndicatorsSummary(resultRow);
                 return resultRow;
             }
 
@@ -454,7 +479,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
                     {
                         AddRowIndicatorsSummary(firstRow, row);
                     }
-                    CalculateRowIndicatorsSummary(firstRow);
+                    //CalculateRowIndicatorsSummary(firstRow);
 
                     DQIDataSet.spRepHumDataQualityIndicatorsRow temp = source.NewspRepHumDataQualityIndicatorsRow();
                     SetNullRowIndicatorsSummary(temp);
@@ -462,7 +487,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
                     AddRowIndicatorsSummary(resultRow, temp);
                 }
             }
-            CalculateRowIndicatorsSummary(resultRow);
+            if (divByCount)
+                CalculateRowIndicatorsSummary(resultRow);
 
             return resultRow;
         }
@@ -655,118 +681,37 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
 
         private static void CalculateRowIndicatorsSummary(DQIDataSet.spRepHumDataQualityIndicatorsRow row)
         {
-            if (row.dbl_N__1_NotificationAVG > 0)
+            if (row.int_AVG_CaseCount > 0)
             {
-                row.dbl_AVG__1_NotificationAVG /= row.dbl_N__1_NotificationAVG;
-            }
-            if (row.dbl_N_CaseStatus > 0)
-            {
-                row.dbl_AVG_CaseStatus /= row.dbl_N_CaseStatus;
-            }
-            if (row.dbl_N_DateOfCompletionOfPaperForm > 0)
-            {
-                row.dbl_AVG_DateOfCompletionOfPaperForm /= row.dbl_N_DateOfCompletionOfPaperForm;
-            }
-            if (row.dbl_N_NameOfEmployer > 0)
-            {
-                row.dbl_AVG_NameOfEmployer /= row.dbl_N_NameOfEmployer;
-            }
-            if (row.dbl_N_CurrentLocationOfPatient > 0)
-            {
-                row.dbl_AVG_CurrentLocationOfPatient /= row.dbl_N_CurrentLocationOfPatient;
-            }
-            if (row.dbl_N_NotificationDateTime > 0)
-            {
-                row.dbl_AVG_NotificationDateTime /= row.dbl_N_NotificationDateTime;
-            }
-            if (row.dbl_N_dblNotificationSentByName > 0)
-            {
-                row.dbl_AVG_dblNotificationSentByName /= row.dbl_N_dblNotificationSentByName;
-            }
-            if (row.dbl_N_NotificationReceivedByFacility > 0)
-            {
-                row.dbl_AVG_NotificationReceivedByFacility /= row.dbl_N_NotificationReceivedByFacility;
-            }
-            if (row.dbl_N_NotificationReceivedByName > 0)
-            {
-                row.dbl_AVG_NotificationReceivedByName /= row.dbl_N_NotificationReceivedByName;
-            }
-            if (row.dbl_N_TimelinessofDataEntry > 0)
-            {
-                row.dbl_AVG_TimelinessofDataEntry /= row.dbl_N_TimelinessofDataEntry;
-            }
-            if (row.dbl_N__2_CaseInvestigation > 0)
-            {
-                row.dbl_AVG__2_CaseInvestigation /= row.dbl_N__2_CaseInvestigation;
-            }
-            if (row.dbl_N_DemographicInformationStartingDateTimeOfInvestigation > 0)
-            {
+                row.dbl_AVG__1_NotificationAVG /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_CaseStatus /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_DateOfCompletionOfPaperForm /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_NameOfEmployer /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_CurrentLocationOfPatient /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_NotificationDateTime /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_dblNotificationSentByName /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_NotificationReceivedByFacility /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_NotificationReceivedByName /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_TimelinessofDataEntry /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG__2_CaseInvestigation /= row.int_AVG_CaseCount*1.0;
                 row.dbl_AVG_DemographicInformationStartingDateTimeOfInvestigation /=
-                    row.dbl_N_DemographicInformationStartingDateTimeOfInvestigation;
-            }
-            if (row.dbl_N_DemographicInformationOccupation > 0)
-            {
-                row.dbl_AVG_DemographicInformationOccupation /= row.dbl_N_DemographicInformationOccupation;
-            }
-            if (row.dbl_N_ClinicalInformationInitialCaseClassification > 0)
-            {
-                row.dbl_AVG_ClinicalInformationInitialCaseClassification /= row.dbl_N_ClinicalInformationInitialCaseClassification;
-            }
-            if (row.dbl_N_ClinicalInformationLocationOfExposure > 0)
-            {
-                row.dbl_AVG_ClinicalInformationLocationOfExposure /= row.dbl_N_ClinicalInformationLocationOfExposure;
-            }
-            if (row.dbl_N_ClinicalInformationAntibioticAntiviralTherapy > 0)
-            {
-                row.dbl_AVG_ClinicalInformationAntibioticAntiviralTherapy /= row.dbl_N_ClinicalInformationAntibioticAntiviralTherapy;
-            }
-            if (row.dbl_N_SamplesCollectionSamplesCollected > 0)
-            {
-                row.dbl_AVG_SamplesCollectionSamplesCollected /= row.dbl_N_SamplesCollectionSamplesCollected;
-            }
-            if (row.dbl_N_ContactListAddContact > 0)
-            {
-                row.dbl_AVG_ContactListAddContact /= row.dbl_N_ContactListAddContact;
-            }
-            if (row.dbl_N_CaseClassificationClinicalSigns > 0)
-            {
-                row.dbl_AVG_CaseClassificationClinicalSigns /= row.dbl_N_CaseClassificationClinicalSigns;
-            }
-            if (row.dbl_N_EpidemiologicalLinksAndRiskFactors > 0)
-            {
-                row.dbl_AVG_EpidemiologicalLinksAndRiskFactors /= row.dbl_N_EpidemiologicalLinksAndRiskFactors;
-            }
-            if (row.dbl_N_FinalCaseClassificationBasisOfDiagnosis > 0)
-            {
-                row.dbl_AVG_FinalCaseClassificationBasisOfDiagnosis /= row.dbl_N_FinalCaseClassificationBasisOfDiagnosis;
-            }
-            if (row.dbl_N_FinalCaseClassificationOutcome > 0)
-            {
-                row.dbl_AVG_FinalCaseClassificationOutcome /= row.dbl_N_FinalCaseClassificationOutcome;
-            }
-            if (row.dbl_N_FinalCaseClassificationIsThisCaseOutbreak > 0)
-            {
-                row.dbl_AVG_FinalCaseClassificationIsThisCaseOutbreak /= row.dbl_N_FinalCaseClassificationIsThisCaseOutbreak;
-            }
-            if (row.dbl_N_FinalCaseClassificationEpidemiologistName > 0)
-            {
-                row.dbl_AVG_FinalCaseClassificationEpidemiologistName /= row.dbl_N_FinalCaseClassificationEpidemiologistName;
-            }
-            if (row.dbl_N__3_TheResultsOfLaboratoryTests > 0)
-            {
-                row.dbl_AVG__3_TheResultsOfLaboratoryTests /= row.dbl_N__3_TheResultsOfLaboratoryTests;
-            }
-            if (row.dbl_N_TheResultsOfLaboratoryTestsTestsConducted > 0)
-            {
-                row.dbl_AVG_TheResultsOfLaboratoryTestsTestsConducted /= row.dbl_N_TheResultsOfLaboratoryTestsTestsConducted;
-            }
-            if (row.dbl_N_TheResultsOfLaboratoryTestsResultObservation > 0)
-            {
-                row.dbl_AVG_TheResultsOfLaboratoryTestsResultObservation /= row.dbl_N_TheResultsOfLaboratoryTestsResultObservation;
-            }
-            if (row.dbl_N_SummaryScoreByIndicators > 0)
-            {
-                row.dbl_AVG_SummaryScoreByIndicators /= row.dbl_N_SummaryScoreByIndicators;
+                    row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_DemographicInformationOccupation /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_ClinicalInformationInitialCaseClassification /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_ClinicalInformationLocationOfExposure /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_ClinicalInformationAntibioticAntiviralTherapy /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_SamplesCollectionSamplesCollected /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_ContactListAddContact /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_CaseClassificationClinicalSigns /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_EpidemiologicalLinksAndRiskFactors /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_FinalCaseClassificationBasisOfDiagnosis /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_FinalCaseClassificationOutcome /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_FinalCaseClassificationIsThisCaseOutbreak /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_FinalCaseClassificationEpidemiologistName /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG__3_TheResultsOfLaboratoryTests /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_TheResultsOfLaboratoryTestsTestsConducted /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_TheResultsOfLaboratoryTestsResultObservation /= row.int_AVG_CaseCount*1.0;
+                row.dbl_AVG_SummaryScoreByIndicators /= row.int_AVG_CaseCount*1.0;
             }
         }
 

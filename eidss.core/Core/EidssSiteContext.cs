@@ -24,6 +24,7 @@ namespace eidss.model.Core
         private long m_PermissionSiteID;
         private long m_RealSiteID;
         private SiteType m_RealSiteType;
+        private string m_RealSitePrefix;
         private long m_RegionID;
         private long m_RayonID;
         private string m_SiteCode;
@@ -34,6 +35,7 @@ namespace eidss.model.Core
         private string m_SiteTypeName;
         private string m_OrganizationName;
         private long m_OrganizationID;
+        private static Dictionary<long, string> m_NumberingObjectPrefixes;
         private bool m_IsInitialized;
         private string m_Language = string.Empty;
         private static volatile EidssSiteContext g_Instance;
@@ -184,6 +186,14 @@ namespace eidss.model.Core
             {
                 GetSiteInfo();
                 return m_RealSiteID;
+            }
+        }
+        public string RealSitePrefix
+        {
+            get
+            {
+                GetSiteInfo();
+                return m_RealSitePrefix;
             }
         }
         public string SiteCode
@@ -472,6 +482,14 @@ namespace eidss.model.Core
             }
         }
 
+        public Dictionary<long, string> NumberingObjectPrefixes
+        {
+            get
+            {
+                return m_NumberingObjectPrefixes ?? new Dictionary<long, string>();
+            }
+        }
+
 
         public static IReportFactory ReportFactory
         {
@@ -513,6 +531,11 @@ namespace eidss.model.Core
             culture.DateTimeFormat.CalendarWeekRule = WeekRule;
             culture.DateTimeFormat.FirstDayOfWeek = FirstDayOfWeek;
         }
+        internal void SetNumberingObjectPrefixes(Dictionary<long, string> dict = null)
+        {
+            m_NumberingObjectPrefixes = dict ?? (new EidssSecurityManager()).GetNumberingObjectPrefixes();
+        }
+
         internal void SetCustomMandatoryFields(List<CustomMandatoryField> list = null, long? idfCustomizationPackage = null)
         {
             m_CustomMandatoryFields = list ?? (new EidssSecurityManager()).GetCustomMandatoryFields(idfCustomizationPackage);
@@ -559,6 +582,7 @@ namespace eidss.model.Core
             m_IsInitialized = false;
             m_Language = string.Empty;
             m_RealSiteID = 0;
+            m_RealSitePrefix = string.Empty;
             m_RegionID = 0;
             m_RayonID = 0;
             m_WeekRule = -1;
@@ -594,6 +618,7 @@ namespace eidss.model.Core
                             m_RayonID = (long)(row["idfsRayon"] == DBNull.Value ? 0 : row["idfsRayon"]);
                             m_SiteID = (long)(row["idfsSite"] == DBNull.Value ? 0 : row["idfsSite"]);
                             m_RealSiteID = (long)(row["idfsRealSiteID"] == DBNull.Value ? 0 : row["idfsRealSiteID"]);
+                            m_RealSitePrefix = (row["strRealSitePrefix"] == DBNull.Value ? "" : row["strRealSitePrefix"]).ToString();
                             m_PermissionSiteID = (long)(row["idfsPermissionSite"] == DBNull.Value ? 1 : row["idfsPermissionSite"]);
                             m_SiteCode = (row["strSiteID"] == DBNull.Value ? "" : row["strSiteID"]).ToString();
                             m_SiteHascCode = (row["strHASCsiteID"] == DBNull.Value ? "" : row["strHASCsiteID"]).ToString();

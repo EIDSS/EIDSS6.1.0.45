@@ -110,6 +110,12 @@ namespace eidss.model.WindowsService.Serialization
         public static byte[] Unzip(byte[] sourceBuffer)
         {
             Utils.CheckNotNull(sourceBuffer, "sourceBuffer");
+
+            if (sourceBuffer.Length == 0)
+            {
+                return new byte[] { };
+            }
+
             using (Stream stream = new MemoryStream(sourceBuffer))
             {
                 using (ZipFile zip = ZipFile.Read(stream))

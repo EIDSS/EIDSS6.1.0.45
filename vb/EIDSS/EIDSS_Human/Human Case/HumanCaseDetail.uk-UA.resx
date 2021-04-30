@@ -319,7 +319,7 @@
     <value>Клінічний діагноз</value>
   </data>
   <data name="lblInvestigationStartDate.Text" xml:space="preserve">
-    <value>Дата початку розслідування</value>
+    <value>Дата початку епід.розслідування</value>
   </data>
   <data name="lblInvOrganization.Text" xml:space="preserve">
     <value>Заклад, який проводить дослідження</value>
@@ -453,6 +453,9 @@
   </data>
   <data name="miNotificationFormDTRA.Text" xml:space="preserve">
     <value>Форма екстренного повідомлення</value>
+  </data>
+  <data name="miNotificationFormUkraine.Text" xml:space="preserve">
+    <value>Форма екстренного повідомлення (Україна)</value>
   </data>
   <data name="miNotificationFormTanzania.Text" xml:space="preserve">
     <value>Форма екстренного повідомлення</value>

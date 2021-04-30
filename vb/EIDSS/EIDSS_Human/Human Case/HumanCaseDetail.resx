@@ -10442,6 +10442,9 @@
   <data name="miNotificationFormDTRA.Text" xml:space="preserve">
     <value>Notification Form (customized)</value>
   </data>
+  <data name="miNotificationFormUkraine.Text" xml:space="preserve">
+    <value>Notification Form (Ukraine)</value>
+  </data>
   <data name="miNotificationFormTanzania.Text" xml:space="preserve">
     <value>Urgent Notification Form</value>
   </data>
@@ -11151,6 +11154,12 @@
     <value>miNotificationFormDTRA</value>
   </data>
   <data name="&gt;&gt;miNotificationFormDTRA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;miNotificationFormUkraine.Name" xml:space="preserve">
+    <value>miNotificationFormUkraine</value>
+  </data>
+  <data name="&gt;&gt;miNotificationFormUkraine.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;miNotificationFormTanzania.Name" xml:space="preserve">

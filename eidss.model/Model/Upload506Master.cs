@@ -331,7 +331,11 @@ namespace eidss.model.Schema
         {
             lock (g_listUploadingSessions)
             {
-                return g_listUploadingSessions.Count < BaseSettings.UploadingSessionsCount;
+                var available = g_listUploadingSessions.Count < BaseSettings.UploadingSessionsCount;
+                if (!available) 
+                    LogError.Log("ErrorLog", new ApplicationException(string.Format("List of avaliable upload sessions:{0}",BaseSettings.UploadingSessionsCount)));
+                
+                return available;
             }
         }
 

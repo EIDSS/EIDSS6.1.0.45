@@ -23,7 +23,6 @@ namespace bv.common.Core
         public const string lngVietnam = "vi";
         public const string lngLaos = "lo";
         public const string lngThai = "th";
-        public const string lngUa = "ua";
         private static void AddLanguage(Dictionary<string, string> dict, string langID, string cultureName)
         {
             if (!dict.ContainsKey(langID))

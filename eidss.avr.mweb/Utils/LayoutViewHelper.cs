@@ -17,6 +17,9 @@ using bv.common.Configuration;
 using eidss.model.Resources;
 using eidss.avr.db.AvrEventArgs.DevExpressEventArgsWrappers;
 using System.Threading;
+using System.Drawing;
+
+using eidss.model.Helpers;
 
 namespace eidss.avr.mweb.Utils
 {
@@ -61,20 +64,12 @@ namespace eidss.avr.mweb.Utils
 
         static ActionResult ExportToPdf(GridViewSettings settings, object dataObject)
         {
-            var fontName = BaseSettings.SystemFontName;
-            var ci = Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName;
-
-            if (ci == Localizer.lngGe || ci == Localizer.lngAr)
-            {
-                fontName = BaseSettings.GGSystemFontName;
-            }
-            else if (ci == Localizer.lngThai)
-            {
-                fontName = BaseSettings.THReportsFontName;
-            }
+            var fontName = BaseSettings.GetSystemFont(true).Name;
+            
             settings.SettingsExport.Styles.Title.Font.Name = fontName;
             settings.SettingsExport.Styles.Header.Font.Name = fontName;
             settings.SettingsExport.Styles.Cell.Font.Name = fontName;
+
             return GridViewExtension.ExportToPdf(settings, dataObject);
         }
         #endregion
@@ -166,6 +161,8 @@ namespace eidss.avr.mweb.Utils
             GridViewSettings settings = new GridViewSettings();
             var CanUpdate = !Model.IsReadOnly && eidss.model.Core.AvrPermissions.UpdatePermission;
 
+            settings.Styles.Cell.Wrap = DefaultBoolean.True;
+
             settings.Name = "layoutViewGrid";
             settings.CallbackRouteValues = new { Controller = "ViewLayout", Action = "ViewGridView", layoutId = Model.LayoutID };
             settings.KeyFieldName = "ID";
@@ -198,6 +195,9 @@ namespace eidss.avr.mweb.Utils
             settings.Settings.HorizontalScrollBarMode = ScrollBarMode.Visible;
             settings.Styles.Header.Font.Bold = true;
             settings.Styles.LoadingDiv.CssClass = "center";
+
+            settings.SettingsExport.Landscape = true;
+            settings.StylesPager.PageSizeItem.Wrap = DefaultBoolean.True;
 
             // filtration
             settings.Settings.ShowHeaderFilterButton = true;
@@ -246,17 +246,20 @@ namespace eidss.avr.mweb.Utils
         // create in grid(control) the children of current view
         public static void AddToGrid(BaseBand obj, MVCxGridViewColumnCollection Columns)
         {
+            PdfExportHelper pdfHelper = new PdfExportHelper(
+                obj, BaseSettings.GetSystemFont(true));
+
             // at first put bands that were reordered by user
             // after that put bands that were not reordered by user in pivot order
-            obj.Bands.FindAll(x => !x.IsToDelete).OrderBy(x => x.Order_ForUse).ToList().ForEach(b => AddToGrid(b, Columns));
+            obj.Bands.FindAll(x => !x.IsToDelete).OrderBy(x => x.Order_ForUse).ToList().ForEach(b => AddToGrid(b, Columns, pdfHelper));
             // at first put columns that were reordered by user
             // after that put columns that were not reordered by user in pivot order
-            obj.Columns.FindAll(x => !x.IsToDelete).OrderBy(x => x.Order_ForUse).ToList().ForEach(c => AddToGrid(c, Columns));
+            obj.Columns.FindAll(x => !x.IsToDelete).OrderBy(x => x.Order_ForUse).ToList().ForEach(c => AddToGrid(c, Columns, pdfHelper));
         }
 
         // create in grid(control) the children of current band
         // only here we set properties of grid(control) band
-        private static void AddToGrid(AvrViewBand obj, MVCxGridViewColumnCollection Columns)
+        private static void AddToGrid(AvrViewBand obj, MVCxGridViewColumnCollection Columns, PdfExportHelper pdfHelper)
         {
             Columns.AddBand(newband =>
                 {
@@ -265,22 +268,21 @@ namespace eidss.avr.mweb.Utils
                     newband.Visible = obj.IsVisible;
                     newband.FixedStyle = obj.IsFreezed ? GridViewColumnFixedStyle.Left : GridViewColumnFixedStyle.None;
                     newband.HeaderStyle.HorizontalAlign = HorizontalAlign.Center;
-                    obj.Bands.FindAll(x => !x.IsToDelete).OrderBy(x => x.Order_ForUse).ToList().ForEach(b => AddToGrid(b, newband.Columns));
-                    obj.Columns.FindAll(x => !x.IsToDelete).OrderBy(x => x.Order_ForUse).ToList().ForEach(c => AddToGrid(c, newband.Columns));
+                    obj.Bands.FindAll(x => !x.IsToDelete).OrderBy(x => x.Order_ForUse).ToList().ForEach(b => AddToGrid(b, newband.Columns, pdfHelper));
+                    obj.Columns.FindAll(x => !x.IsToDelete).OrderBy(x => x.Order_ForUse).ToList().ForEach(c => AddToGrid(c, newband.Columns, pdfHelper));
                 });
         }
 
         // create in grid(control) the child - column of current band
-        private static void AddToGrid(AvrViewColumn obj, MVCxGridViewColumnCollection Columns)
+        private static void AddToGrid(AvrViewColumn obj, MVCxGridViewColumnCollection Columns, PdfExportHelper pdfHelper)
         {
             Columns.Add(column => 
             {
-                LayoutViewHelper.SetNewColumn(column, obj);
+                LayoutViewHelper.SetNewColumn(column, obj, pdfHelper);
             });
-
         }
 
-        private static void SetNewColumn(MVCxGridViewColumn column, AvrViewColumn col)
+        private static void SetNewColumn(MVCxGridViewColumn column, AvrViewColumn col, PdfExportHelper pdfHelper)
         {
             column.Name = col.UniquePath;
             column.FieldName = col.UniquePath;
@@ -319,7 +321,7 @@ namespace eidss.avr.mweb.Utils
                 column.Settings.AllowSort = DefaultBoolean.False;
             }
 
-            column.Caption = col.DisplayText;
+            column.Caption = pdfHelper.ProcessString(col.DisplayText);
             column.ReadOnly = true;
             // filtration
             column.Settings.HeaderFilterMode = HeaderFilterMode.List;//CheckedList
@@ -331,8 +333,7 @@ namespace eidss.avr.mweb.Utils
             // width
             column.MinWidth = 30;
             column.Width = Unit.Pixel(col.ColumnWidth);
-
-
+            column.CellStyle.HorizontalAlign = HorizontalAlign.Center;
         }
 
         private static void DisplayAsterisk(AvrView Model, ASPxGridViewTableDataCellEventArgs e)

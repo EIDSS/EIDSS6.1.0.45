@@ -21,14 +21,21 @@ namespace eidss.model.AVR.SourceData
         {
             get
             {
-                object item = Array[index];
+                object item = null;
+                if ((Array != null) && (index < Array.Length))
+                {
+                    item = Array[index];
+                }
                 return item;
             }
         }
 
         public void SetValue(int index, object value)
         {
-            Array[index] = value;
+            if ((Array != null) && (index < Array.Length))
+            {
+                Array[index] = value;
+            }
         }
 
         public override AvrDataRowBase Clone()

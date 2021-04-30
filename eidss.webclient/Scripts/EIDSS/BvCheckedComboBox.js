@@ -76,10 +76,41 @@
                             groupItem[0].checked = false;
                         }
                     }
+                    if (group && chk) {
+                        var childGroupItems = $("#" + controlId + "_listbox").find("." + comboBoxFacade.itemCheckBoxClassName + "[group='" + group + "']");
+                        var childGroupItemsChecked = true;
+                        if (childGroupItems.length > 0) {
+                            for (var i = 0; i < childGroupItems.length; i++) {
+                                if (!childGroupItems[i].checked) {
+                                    childGroupItemsChecked = false;
+                                    break;
+                                }
+                            }
+                            if (childGroupItemsChecked) {
+                                var groupItem = $("#" + controlId + "_listbox").find("." + comboBoxFacade.itemCheckBoxClassName + "[id='chb" + group + "']");
+                                if (groupItem.length == 1) {
+                                    groupItem[0].checked = true;
+                                }
+                            }
+                        }
+                    }
+                }
 
-                    var selAll = $("#" + controlId + "_listbox").find("." + comboBoxFacade.itemCheckBoxClassName + "[id='chb0']");
-                    if (selAll && selAll.length == 1 && !chk) {
-                        selAll[0].checked = false;
+                var selAll = $("#" + controlId + "_listbox").find("." + comboBoxFacade.itemCheckBoxClassName + "[id='chb0']");
+                if (selAll && selAll.length == 1 && !chk) {
+                    selAll[0].checked = false;
+                }
+                if (selAll && selAll.length == 1 && chk) {
+                    var allItems = $("#" + controlId + "_listbox").find("." + comboBoxFacade.itemCheckBoxClassName + "[id!='chb0']");
+                    var allItemsChecked = true;
+                    for (var i = 0; i < allItems.length; i++) {
+                        if (!allItems[i].checked) {
+                            allItemsChecked = false;
+                            break;
+                        }
+                    }
+                    if (allItemsChecked) {
+                        selAll[0].checked = true;
                     }
                 }
             }

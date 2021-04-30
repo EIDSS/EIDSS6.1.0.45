@@ -120,139 +120,396 @@
   <data name="lblReportName.Text" xml:space="preserve">
     <value>บันทึกเหตุการณ์</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="HeaderCell1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 14pt</value>
+  </data>
   <data name="HeaderCell1.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วยและผู้เสียชีวิตที่ถูกรายงาน ตามจังหวัด/อำเภอและตามเดือน</value>
+    <value>รายงานจำนวนผู้ป่วยและผู้เสียชีวิต ระดับจังหวัด/อำเภอ/ตำบลและตามเดือน</value>
+  </data>
+  <data name="HeaderCell2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 14pt</value>
   </data>
   <data name="HeaderCell2.Text" xml:space="preserve">
-    <value>ประเทศไทย, {0}</value>
+    <value>ประเทศไทย พ.ศ. {0}</value>
+  </data>
+  <data name="HeaderCell3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 14pt</value>
   </data>
   <data name="HeaderCell3.Text" xml:space="preserve">
     <value>การวินิจฉัย: {0}</value>
   </data>
+  <data name="cellDateTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
   <data name="cellDateTime.Text" xml:space="preserve">
     <value>เดือน</value>
+  </data>
+  <data name="xrTableCell9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
   </data>
   <data name="xrTableCell9.Text" xml:space="preserve">
     <value>รวม</value>
   </data>
+  <data name="xrTableCell10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
   <data name="xrTableCell10.Text" xml:space="preserve">
     <value>ม.ค.</value>
+  </data>
+  <data name="xrTableCell8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
   </data>
   <data name="xrTableCell8.Text" xml:space="preserve">
     <value>ก.พ.</value>
   </data>
+  <data name="xrTableCell5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
   <data name="xrTableCell5.Text" xml:space="preserve">
     <value>มี.ค.</value>
+  </data>
+  <data name="xrTableCell7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
   </data>
   <data name="xrTableCell7.Text" xml:space="preserve">
     <value>เม.ย.</value>
   </data>
+  <data name="xrTableCell3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
   <data name="xrTableCell3.Text" xml:space="preserve">
     <value>พ.ค.</value>
+  </data>
+  <data name="xrTableCell13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
   </data>
   <data name="xrTableCell13.Text" xml:space="preserve">
     <value>มิ.ย.</value>
   </data>
+  <data name="xrTableCell11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
   <data name="xrTableCell11.Text" xml:space="preserve">
     <value>ก.ค.</value>
+  </data>
+  <data name="xrTableCell12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
   </data>
   <data name="xrTableCell12.Text" xml:space="preserve">
     <value>ส.ค.</value>
   </data>
+  <data name="xrTableCell2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
   <data name="xrTableCell2.Text" xml:space="preserve">
     <value>ก.ย.</value>
+  </data>
+  <data name="xrTableCell6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
   </data>
   <data name="xrTableCell6.Text" xml:space="preserve">
     <value>ต.ค.</value>
   </data>
+  <data name="xrTableCell14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
   <data name="xrTableCell14.Text" xml:space="preserve">
     <value>พ.ย.</value>
+  </data>
+  <data name="xrTableCell4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
   </data>
   <data name="xrTableCell4.Text" xml:space="preserve">
     <value>ธ.ค.</value>
   </data>
+  <data name="xrTableCell15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt, style=Bold</value>
+  </data>
   <data name="xrTableCell15.Text" xml:space="preserve">
-    <value>พื้นที่รายงาน</value>
+    <value>จังหวัด</value>
+  </data>
+  <data name="xrTableCell29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell29.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell16.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell33.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell33.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell17.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell34.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell34.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell18.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell35.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell35.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell19.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell36.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell36.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell20.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell37.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell37.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell21.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell38.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell38.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell22.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell39.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell39.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell23.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell40.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell40.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell24.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell41.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell41.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell25.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell42.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell42.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell26.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell43.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell43.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell27.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrTableCell44.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell44.Text" xml:space="preserve">
-    <value>จำนวนผู้ป่วย</value>
+    <value>ป่วย</value>
+  </data>
+  <data name="xrTableCell28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 9pt, style=Bold</value>
   </data>
   <data name="xrTableCell28.Text" xml:space="preserve">
-    <value>จำนวนผู้เสียชีวิต</value>
+    <value>ตาย</value>
+  </data>
+  <data name="xrlReportMode12Header.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 11pt</value>
+  </data>
+  <data name="xrlReportMode12Header.Text" xml:space="preserve">
+    <value>รายงานจำนวนผู้ป่วยและเสียชีวิต จำแนกตามรายเดือน ราย จังหวัด</value>
+  </data>
+  <data name="xrlReportMode3Header.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 11pt</value>
+  </data>
+  <data name="xrlReportMode3Header.Text" xml:space="preserve">
+    <value>รายงานจำนวนผู้ป่วยและเสียชีวิต จำแนกตามรายเดือน ราย อำเภอ</value>
+  </data>
+  <data name="xrlReportMode4Header.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 11pt</value>
+  </data>
+  <data name="xrlReportMode4Header.Text" xml:space="preserve">
+    <value>รายงานจำนวนผู้ป่วยและเสียชีวิต จำแนกตามรายเดือน ราย ตำบล</value>
+  </data>
+  <data name="xrPageInfo1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 11pt</value>
+  </data>
+  <data name="ReportingAreaCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell55.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell46.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell56.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell45.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell57.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell32.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell58.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell48.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell59.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell47.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell60.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell49.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell61.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell31.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell62.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell52.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell63.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell51.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell64.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell50.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell65.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell53.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell66.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell54.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell67.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell30.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="xrTableCell1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
   </data>
   <data name="xrTableCell1.Text" xml:space="preserve">
-    <value>พิมพ์จากEIDSS:</value>
+    <value>ข้อมูลจาก EIDSS:</value>
+  </data>
+  <data name="DateTimeCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="OrganizationNameCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="OrganizationNameCell.Weight" type="System.Double, mscorlib">
+    <value>1.5491110832365485</value>
+  </data>
+  <data name="MinistryOfPublicHealthCell.Font" type="System.Drawing.Font, System.Drawing">
+    <value>TH Sarabun New, 10pt</value>
+  </data>
+  <data name="MinistryOfPublicHealthCell.Text" xml:space="preserve">
+    <value> กรมควบคุมโรค กระทรวงสาธารณสุข</value>
+  </data>
+  <data name="MinistryOfPublicHealthCell.Weight" type="System.Double, mscorlib">
+    <value>0.58091702469314133</value>
   </data>
 </root>

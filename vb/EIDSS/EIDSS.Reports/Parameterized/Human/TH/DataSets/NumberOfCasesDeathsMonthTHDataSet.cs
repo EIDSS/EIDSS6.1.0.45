@@ -1,12 +1,10 @@
 ﻿using System.Data.SqlClient;
 using System.Linq;
 
-namespace EIDSS.Reports.Parameterized.Human.TH.DataSets
-{
-
-
-    public partial class NumberOfCasesDeathsMonthTHDataSet
-    {
+namespace EIDSS.Reports.Parameterized.Human.TH.DataSets {
+    
+    
+    public partial class NumberOfCasesDeathsMonthTHDataSet {
     }
 }
 

@@ -16,7 +16,6 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,7 +25,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,7 +33,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -2836,6 +2833,9 @@
     <EmbeddedResource Include="Location\AddressDetail.en-IQ-Eidss.resx">
       <DependentUpon>AddressDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Location\AddressDetail.en-US-Eidss.resx">
+      <DependentUpon>AddressDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Location\AddressDetail.en-TH-Eidss.resx">
       <DependentUpon>AddressDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -2901,6 +2901,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Location\LocationDetail.en-IQ-Eidss.resx">
+      <DependentUpon>LocationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\LocationDetail.en-US-Eidss.resx">
       <DependentUpon>LocationDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Location\LocationDetail.en-TH-Eidss.resx">
@@ -2997,6 +3000,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Resources\AddressLookup.en-TH-Eidss.resx" />
+    <None Include="Resources\AddressLookup.en-US-Eidss.resx" />
     <EmbeddedResource Include="Security\EventLogListPanel.ar-IQ.resx">
       <DependentUpon>EventLogListPanel.cs</DependentUpon>
     </EmbeddedResource>

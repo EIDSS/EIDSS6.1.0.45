@@ -45,7 +45,6 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.Name = "ThaiRegionMultiFilter";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

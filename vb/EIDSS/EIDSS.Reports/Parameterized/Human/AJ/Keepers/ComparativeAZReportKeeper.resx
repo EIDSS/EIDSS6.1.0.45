@@ -253,7 +253,7 @@
     <value>16</value>
   </data>
   <data name="region1Filter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="&gt;&gt;region1Filter.Name" xml:space="preserve">
     <value>region1Filter</value>
@@ -280,7 +280,7 @@
     <value>8</value>
   </data>
   <data name="region2Filter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="&gt;&gt;region2Filter.Name" xml:space="preserve">
     <value>region2Filter</value>
@@ -346,7 +346,7 @@
     <value>DistrictLabel</value>
   </data>
   <data name="&gt;&gt;DistrictLabel.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;DistrictLabel.Parent" xml:space="preserve">
     <value>pnlSettings</value>
@@ -364,7 +364,7 @@
     <value>ProvinceLabel</value>
   </data>
   <data name="&gt;&gt;ProvinceLabel.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ProvinceLabel.Parent" xml:space="preserve">
     <value>pnlSettings</value>
@@ -424,16 +424,16 @@
     <value>18</value>
   </data>
   <data name="ceUseArchiveData.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceDisabled.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceFocused.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceReadOnly.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.TabIndex" type="System.Int32, mscorlib">
     <value>300</value>

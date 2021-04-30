@@ -1819,7 +1819,7 @@ Namespace Core
         Private Shared Sub FilterThaiDistricts(ByVal cb As LookUpEdit, ByVal region As Object)
             Try
                 CType(cb.Properties.DataSource, DataView).RowFilter =
-               String.Format("(idfsRegion = {0} and intRowStatus = 0 and idfsRayon <> idfsParent) or {1} = {2}", region,
+               String.Format("(idfsRegion = {0} and intRowStatus = 0) or {1} = {2}", region,
                                  cb.Properties.ValueMember, LookupCache.EmptyLineKey)
             Catch ex As Exception
                 CType(cb.Properties.DataSource, DataView).RowFilter =

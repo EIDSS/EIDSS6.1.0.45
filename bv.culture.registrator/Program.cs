@@ -4,7 +4,7 @@ using bv.common.Core;
 namespace bv.culture.registrator
 {
     class Program
-    { 
+    {
         static void Main(string[] args)
         {
             try

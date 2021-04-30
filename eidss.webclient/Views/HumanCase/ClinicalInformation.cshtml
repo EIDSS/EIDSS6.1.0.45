@@ -82,14 +82,16 @@
             <td class="firstLabel">
                 @Html.BvLabel(Model, m => m.strHospitalizationPlace)
             </td>
-            <td class="large">
+            <td class="large" id="HospitalizationPlaceConstantId">
                 @Html.BvEditbox(Model, m => m.strHospitalizationPlace, true)
+                <input id="IsHospitalizationPlaceRequired" type="hidden" value="@ViewBag.IsHospitalizationPlaceRequired.ToString().ToLower()" />
             </td>
             <td class="label">
                 @Html.BvLabel(Model, m => m.datHospitalizationDate)
             </td>
-            <td>
+            <td id="HospitalizationDateConstantId">
                 @Html.BvDatebox(Model, m => m.datHospitalizationDate)
+                <input id="IsHospitalizationDateRequired" type="hidden" value="@ViewBag.IsHospitalizationDateRequired.ToString().ToLower()" />
             </td>
         </tr>
         <tr>

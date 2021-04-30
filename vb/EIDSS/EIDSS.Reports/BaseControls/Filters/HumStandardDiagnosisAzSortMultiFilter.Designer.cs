@@ -39,11 +39,11 @@
             // 
             // HumStandardDiagnosisAzSortMultiFilter
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("HumStandardDiagnosisAzSortMultiFilter.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.Name = "HumStandardDiagnosisAzSortMultiFilter";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

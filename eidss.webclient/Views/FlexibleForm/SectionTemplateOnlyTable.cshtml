@@ -109,13 +109,6 @@
                 var idfsParameter = HelperFunctions.GetColumnParameter(column);
                 var parameter = Model.FFModel.CurrentTemplate.ParameterTemplatesLookup.FirstOrDefault(p => p.idfsParameter == idfsParameter);
                 var paramKey = HelperFunctions.GetParameterKey(idObservation, idfsParameter, rowVal, Model.FFModel.CurrentTemplate.idfsFormTemplate);
-                var htmlAttributes = new Dictionary<string, object>();
-                string title = Translator.GetMessageString("strColumnTooltip") + ": " + colTitle[colIndex] + rowTooltip;
-                htmlAttributes.Add("title", title);
-                if (Model.IsReadOnly)
-                {
-                    htmlAttributes.Add("readonly", "readonly");
-                }
                 <td>
                     @if (!HelperFunctions.IsStubColumn(column) && !Model.FFModel.ReadOnly && !Model.FFModel.IsSummary && Model.HasStubChildren)
                     {
@@ -156,7 +149,7 @@
                                         .Max(maxValue)
                                         .Format("n2")
                                         .Decimals(2)
-                                        .HtmlAttributes(htmlAttributes)
+                                        .HtmlAttributes(new { title = Translator.GetMessageString("strColumnTooltip") + ": " + colTitle[colIndex] + rowTooltip })
                                         .Value(valueDouble)
                                         .Render();
 
@@ -169,7 +162,7 @@
                                         valueInt = Convert.ToInt32(row[columnName]);
                                     }
 
-                                    if (parameter.ParameterType.Equals(FFParameterTypes.NumericNatural))
+                                    if (parameter.ParameterType.Equals(FFParameterTypes.NumericNatural) || parameter.ParameterType.Equals(FFParameterTypes.NumericInteger))
                                     {
                                         Html.Kendo().NumericTextBox<int>()
                                             .Name(paramKey)
@@ -179,7 +172,7 @@
                                             .Max(maxValue)
                                             .Format("n0")
                                             .Decimals(0)
-                                            .HtmlAttributes(htmlAttributes)
+                                            .HtmlAttributes(new { title = Translator.GetMessageString("strColumnTooltip") + ": " + colTitle[colIndex] + rowTooltip })
                                             .Value(valueInt)
                                             .Render();
 
@@ -194,7 +187,7 @@
                                             .Max(maxValue)
                                             .Format("n2")
                                             .Decimals(2)
-                                            .HtmlAttributes(htmlAttributes)
+                                            .HtmlAttributes(new { title = Translator.GetMessageString("strColumnTooltip") + ": " + colTitle[colIndex] + rowTooltip })
                                             .Value(valueInt)
                                             .Render();
 
@@ -203,7 +196,7 @@
                                 else if (typeControl == 2)
                                 {
                                     <div class='tdContainer'>
-                                        @Html.TextBox(paramKey, row[columnName], htmlAttributes)
+                                        @Html.TextBox(paramKey, row[columnName], new { title = Translator.GetMessageString("strColumnTooltip") + ": " + colTitle[colIndex] + rowTooltip })
                                     </div>
                                 }
                             }

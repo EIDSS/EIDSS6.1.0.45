@@ -23,12 +23,9 @@
             // 
             // RegionAZFilter
             // 
-            resources.ApplyResources(this, "$this");
-            this.Appearance.FontSizeDelta = ((int)(resources.GetObject("RegionAZFilter.Appearance.FontSizeDelta")));
-            this.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("RegionAZFilter.Appearance.FontStyleDelta")));
-            this.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("RegionAZFilter.Appearance.GradientMode")));
-            this.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("RegionAZFilter.Appearance.Image")));
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("RegionAZFilter.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this, "$this");
             this.Name = "RegionAZFilter";
             this.ResumeLayout(false);
 

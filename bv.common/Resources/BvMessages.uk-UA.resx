@@ -289,10 +289,10 @@
     <value>Запис буде видалено. видалити запис?</value>
   </data>
   <data name="msgEIDSSCopyright" xml:space="preserve">
-    <value>Усі права захищені © 2005-2017 Black &amp;&amp; Veatch Special Projects Corp.</value>
+    <value>Усі права захищені © 2005-2020 Black &amp;&amp; Veatch Special Projects Corp.</value>
   </data>
   <data name="msgEIDSSRunning" xml:space="preserve">
-    <value>Не можливо одночасно відкрити декілька екземплярів ЕЛІССЗ. інший екземпляр ЕЛІССЗ вже відкрито.</value>
+    <value>Не можливо одночасно відкрити декілька екземплярів еіснз. інший екземпляр еіснз вже відкрито.</value>
   </data>
   <data name="msgEmptyLogin" xml:space="preserve">
     <value>Ім'я користувача не визначено</value>
@@ -355,13 +355,13 @@
     <value>Зберегти дані?</value>
   </data>
   <data name="SecurityLog_EIDSS_finished_successfully" xml:space="preserve">
-    <value>ЕЛІССЗ успішно закрито</value>
+    <value>Еіснз успішно закрито</value>
   </data>
   <data name="SecurityLog_EIDSS_started_abnormaly" xml:space="preserve">
-    <value>ЕЛІССЗ стартувала з помилками</value>
+    <value>Еіснз стартувала з помилками</value>
   </data>
   <data name="SecurityLog_EIDSS_started_successfully" xml:space="preserve">
-    <value>ЕЛІССЗ стартувала успішно</value>
+    <value>Еіснз стартувала успішно</value>
   </data>
   <data name="strAdd_Id" xml:space="preserve">
     <value>Додати</value>
@@ -739,7 +739,7 @@
     <value>Перейменувати на «{0}»</value>
   </data>
   <data name="errLoginDisabled" xml:space="preserve">
-    <value>Неможливо встановити зв'язок з базою даних ЕЛІССЗ. Швидше за все в даний момент йде оновлення бази даних. Спробуйте увійти в програму пізніше.</value>
+    <value>Неможливо встановити зв'язок з базою даних еіснз. швидше за все в даний момент йде оновлення бази даних. спробуйте увійти в програму пізніше.</value>
   </data>
   <data name="CurrentDate" xml:space="preserve">
     <value>Поточна дата</value>
@@ -880,7 +880,10 @@
     <value>Даний об'єкт містить внутрішні помилки і відкритий в режимі тільки для читання. якщо вам необхідно змінити цей об'єкт, спробуйте реплицировать дані і відкрити об'єкт на редагування ще раз, або зв'яжіться з вашим системним адміністратором.</value>
   </data>
   <data name="titleEmergencyNotificationDTRAReport" xml:space="preserve">
-    <value>Форма термнового повідомленні (налаштована)</value>
+    <value>Форма екстреного повідомлення (налаштована)</value>
+  </data>
+  <data name="titleEmergencyNotificationUkraineReport" xml:space="preserve">
+    <value>Форма екстреного повідомлення (Україна)</value>
   </data>
   <data name="DoNotShowMessageNextTime" xml:space="preserve">
     <value>Більше не показувати це повідомлення</value>

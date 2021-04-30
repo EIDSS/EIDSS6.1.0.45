@@ -16,6 +16,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
     {
         private readonly ComponentResourceManager m_Resources = new ComponentResourceManager(typeof (DataQualityIndicatorsKeeper));
         private string[] m_DiagnosisItems = new string[0];
+        private string[] m_GroupAndIndividualDiagnosisItems = new string[0];
         private readonly bool m_IsByRayons;
 
         public DataQualityIndicatorsKeeper(bool isByRayons)
@@ -66,7 +67,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
         protected override BaseReport GenerateReport(DbManagerProxy manager, DbManagerProxy archiveManager)
         {
             var model = new DataQualityIndicatorsSurrogateModel(CurrentCulture.ShortName,
-                m_DiagnosisItems, diagnosisFilter.GetDisplayText(),
+                m_GroupAndIndividualDiagnosisItems, diagnosisFilter.GetDisplayText(),
                 YearParam, StartMonthParam, EndMonthParam,
                 m_IsByRayons ? null : RegionIdParam, m_IsByRayons ? null : RayonIdParam,
                 regionFilter.SelectedText, rayonFilter.SelectedText,
@@ -97,7 +98,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
 
         protected override bool CheckBusinessRules(bool printException)
         {
-            if (m_DiagnosisItems.Length > 12)
+            if (m_GroupAndIndividualDiagnosisItems.Length > 12)
             {
                 const string defaultFormat =
                     "Too many diagnoses are selected for displaying in the report. The number of selected diagnoses shall not exceed twelve. Please clear some diagnoses and try to generate the report again.";
@@ -110,6 +111,10 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
         private void diagnosisFilter1_ValueChanged(object sender, MultiFilterEventArgs e)
         {
             m_DiagnosisItems = e.KeyArray;
+        }
+        private void diagnosisFilter1_GroupAndIndividualValueChanged(object sender, MultiFilterEventArgs e)
+        {
+            m_GroupAndIndividualDiagnosisItems = e.KeyArray;
         }
 
         private void regionFilter_ValueChanged(object sender, SingleFilterEventArgs e)

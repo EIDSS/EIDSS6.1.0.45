@@ -85,7 +85,7 @@ namespace eidss.avr.mweb.Utils
             if (data.Columns.Contains(aggrCol.UniquePath))
                 data.Columns.Remove(aggrCol.UniquePath);
 
-            aggrCol.setAggrColumnTypeWeb();
+            aggrCol.SetAggrColumnTypeWeb();
             data.Columns.Add(aggrCol.UniquePath, aggrCol.FieldType);
 
             switch (aggrCol.AggregateFunction)

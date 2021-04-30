@@ -3,10 +3,11 @@ Imports bv.common.db.Core
 Imports bv.common.Core
 Imports bv.common.Diagnostics
 Imports bv.model.Model.Core
-Imports EIDSS.model.Core
-Imports EIDSS.model.Enums
+Imports eidss.model.Core
+Imports eidss.model.Enums
 Imports bv.common.Enums
-Imports EIDSS.model.Resources
+Imports eidss.model.Resources
+Imports bv.common.Configuration
 
 Public Class HumanCase_DB
     Inherits BaseDbService
@@ -318,8 +319,13 @@ Public Class HumanCase_DB
                 If row.RowState <> DataRowState.Deleted AndAlso _
                    row.RowState <> DataRowState.Detached AndAlso _
                    Utils.IsEmpty(row("strCaseID")) Then
-                    row("strCaseID") = _
-                        NumberingService.GetNextNumber(NumberingObject.HumanCase, Connection, m_Error, transaction)
+                    If BaseSettings.GenerateReadableIdByNumericObjectId Then
+                        row("strCaseID") = _
+                            ReadableIdentifierHelper.GetReadableIdentifier(NumberingObjectEnum.HumanCase, CLng(ID))
+                    Else
+                        row("strCaseID") = _
+                            NumberingService.GetNextNumber(NumberingObject.HumanCase, Connection, m_Error, transaction)
+                    End If
                 End If
             Next
             'Replication Events
@@ -405,7 +411,7 @@ Public Class HumanCase_DB
         Dim col As New DataColumn
         If Not Utils.IsEmpty(columnName) Then col.ColumnName = columnName
         If Not dataType Is Nothing Then col.DataType = dataType Else col.DataType = GetType(String)
-        col.AllowDBNull = allowDBNull
+        col.AllowDBNull = allowDbNull
         Return col
     End Function
 

@@ -12,7 +12,8 @@
 
 @(Html.BvDetailsFormGrid<CaseTestValidation.CaseTestValidationGridModel, CaseTestValidation.CaseTestValidationGridModelList>(
       (string)ViewBag.CaseTestValidationsName, Model, "detailsGrid", "sample.showCaseTestValidationGridEditWindow", "sample.onCaseTestValidationGridRowSelect", 
-      (bool)ViewBag.IsReadOnly, false, false, true, false, (string)ViewBag.ExcludeColumns, 
+      (bool)ViewBag.IsReadOnly, true, false, 
+      strExcludeColumns: (string)ViewBag.ExcludeColumns, 
       onDataBound: "sample.updateNewCaseTestValidationButton",
       selectionType: (bool)ViewBag.WithCreateCaseButton ? GridRowSelectionType.Single : GridRowSelectionType.None)
       .ToolBar(toolBar =>
@@ -22,7 +23,7 @@
                                onclick='bvGrid.addRow("@Model.ListKey", "@ViewBag.CaseTestValidationsName", sample.showCaseTestValidationGridEditWindow)'/>
                         @if ((bool)ViewBag.WithCreateCaseButton)
                         {
-                            <input type='button' disabled="disabled" class="button k-state-disabled" data-role='grid-on-row-button' data-disabled='grid-on-row-button-disabled-on-readonly' id="btnCreateCase" value='@Translator.GetMessageString("titleCreateCase")'
+                            <input type='button' disabled="disabled" class="button k-state-disabled" data-role='grid-on-row-button' data-disabled='grid-on-row-button-disabled-on-readonly' id="btnCreateCase" data-grid-name="@ViewBag.CaseTestValidationsName" value='@Translator.GetMessageString("titleCreateCase")'
                                    onclick="@string.Format("asSession.CreateCaseClick('{0}');", gridName)" />
                         }
                     </text>)

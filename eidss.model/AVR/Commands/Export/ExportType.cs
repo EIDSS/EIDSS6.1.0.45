@@ -8,6 +8,6 @@ namespace eidss.model.Avr.Commands.Export
         Rtf,
         Image,
         Html,
-        Mdb,
+        Mdb
     }
 }

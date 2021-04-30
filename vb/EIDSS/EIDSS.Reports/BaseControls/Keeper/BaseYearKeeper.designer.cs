@@ -31,6 +31,7 @@ namespace EIDSS.Reports.BaseControls.Keeper
             // ceUseArchiveData
             // 
             resources.ApplyResources(this.ceUseArchiveData, "ceUseArchiveData");
+            this.ceUseArchiveData.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ceUseArchiveData.Properties.Appearance.Font")));
             this.ceUseArchiveData.Properties.Appearance.Options.UseFont = true;
             this.ceUseArchiveData.Properties.AppearanceDisabled.Options.UseFont = true;
             this.ceUseArchiveData.Properties.AppearanceFocused.Options.UseFont = true;
@@ -38,8 +39,9 @@ namespace EIDSS.Reports.BaseControls.Keeper
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
-            
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(BaseYearKeeper), out resources);
             // Form Is Localizable: True
             // 
@@ -53,6 +55,8 @@ namespace EIDSS.Reports.BaseControls.Keeper
             // 
             resources.ApplyResources(this.spinEdit, "spinEdit");
             this.spinEdit.Name = "spinEdit";
+            this.spinEdit.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("spinEdit.Properties.Appearance.Font")));
+            this.spinEdit.Properties.Appearance.Options.UseFont = true;
             this.spinEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.spinEdit.Properties.Mask.EditMask = resources.GetString("spinEdit.Properties.Mask.EditMask");
@@ -71,7 +75,8 @@ namespace EIDSS.Reports.BaseControls.Keeper
             // 
             // BaseYearKeeper
             // 
-            resources.ApplyResources(this, "$this");
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("BaseYearKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.Name = "BaseYearKeeper";
             this.pnlSettings.ResumeLayout(false);
             this.pnlSettings.PerformLayout();

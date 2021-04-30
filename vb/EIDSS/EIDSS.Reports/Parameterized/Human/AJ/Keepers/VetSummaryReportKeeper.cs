@@ -23,6 +23,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
     {
         private readonly ComponentResourceManager m_Resources = new ComponentResourceManager(typeof (VetSummaryReportKeeper));
 
+        private string ErrorMessage;
         public string[] m_CheckedSpeciesType = new string[0];
         CultureInfo m_CultureInfo = Thread.CurrentThread.CurrentUICulture;
 
@@ -93,7 +94,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             VetDiagnosisFilter.DefineBinding();
             NameOfInvestigationOrMeasure.DefineBinding();
             SpeciesTypeFilter.DefineBinding();
-
+            SpeciesTypeFilter.SelectAllItemVisible = false;
             
             SurveillanceTypeGroup.Properties.Items[(int) VetSummarySurveillanceType.ActiveSurveillanceIndex].Description =
                 m_Resources.GetString("SurveillanceTypeGroup.Properties.Items1");
@@ -108,6 +109,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             dtEnd.Width = 136;
             dtStart.Width = 136;
             lblEnd.Left = VetDiagnosisFilter.Left;
+
+            ErrorMessage = m_Resources.GetString("ErrorMessage_Key");
         }
 
         private void SurveillanceTypeGroup_SelectedIndexChanged(object sender, EventArgs e)
@@ -150,8 +153,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             {
                 if (!Utils.IsReportsServiceRunning && !Utils.IsAvrServiceRunning)
                 {
-                    const string defaultFormat = "You can specify not more than three species in Species type filter.";
-                    ErrorForm.ShowWarningFormat("msgTooManySpeciesType", defaultFormat, VetSummaryModel.VetMaxSpeciesTypeCount);
+                    ErrorForm.ShowWarning(ErrorMessage);
                 }
                 e.Cancel = true;
             }

@@ -3,12 +3,11 @@
     public class RefreshCaptionCommand : Command
     {
         private readonly string m_Caption;
-        
+
 
         public RefreshCaptionCommand(object sender, string caption)
             : base(sender)
         {
-            
             m_Caption = caption;
         }
 

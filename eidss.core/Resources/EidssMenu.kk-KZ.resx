@@ -846,4 +846,16 @@
   <data name="HumForm1KZ" xml:space="preserve">
     <value>1-нысан/2-нысан</value>
   </data>
+  <data name="HumanComparativeReportKZ" xml:space="preserve">
+    <value>Салыстырмалы есеп</value>
+  </data>
+  <data name="ComparativeReportKZ" xml:space="preserve">
+    <value>Салыстырмалы есеп</value>
+  </data>
+  <data name="ComparativeReportByRegionKZ" xml:space="preserve">
+    <value>Әр аудан бойынша салыстырмалы есеп</value>
+  </data>
+  <data name="IncidenceReportByRegionKZ" xml:space="preserve">
+    <value>Әр аудан бойынша жекеленген диагноз туралы есеп</value>
+  </data>
 </root>

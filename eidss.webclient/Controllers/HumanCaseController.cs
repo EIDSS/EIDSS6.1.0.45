@@ -87,11 +87,17 @@ namespace eidss.webclient.Controllers
         [HttpGet]
         public ActionResult Details(long? id)
         {
+            ViewBag.IsHospitalizationPlaceRequired = EidssSiteContext.Instance.CustomMandatoryFields.Contains(
+                CustomMandatoryField.HumanCase_HospitalizationPlace);
+
+            ViewBag.IsHospitalizationDateRequired = EidssSiteContext.Instance.CustomMandatoryFields.Contains(
+                CustomMandatoryField.HumanCase_HospitalizationDate);
+
             return DetailsInternal<HumanCase.Accessor, HumanCase>(id, HumanCase.Accessor.Instance(null),
                  (int) HACode.Human, null, null, null, c => { 
                      ObjectStorage.Put(ModelUserContext.ClientID, c.idfCase, c.idfCase, c.ObjectIdent + "AntimicrobialTherapy", c.AntimicrobialTherapy);
                      ViewBag.IdfEpiObservation = c.idfEpiObservation; ViewBag.IdfCSObservation = c.idfCSObservation;
-                     ViewBag.DiagnosisId = c.idfsFinalDiagnosis.HasValue ? c.idfsFinalDiagnosis : c.idfsTentativeDiagnosis; 
+                     ViewBag.DiagnosisId = c.idfsFinalDiagnosis.HasValue ? c.idfsFinalDiagnosis : c.idfsTentativeDiagnosis;
                  });
         }
 
@@ -673,6 +679,24 @@ namespace eidss.webclient.Controllers
                     report = wrapper.Client.ExportHumUrgentyNotificationDTRA(model);
                 }
                 return ReportResponse(report, "EmergencyNotificationReport.pdf");
+            }
+            catch
+            {
+                return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = null };
+            }
+        }
+        [HttpGet]
+        public ActionResult EmergencyNotificationUkraineReport(long id)
+        {
+            try
+            {
+                byte[] report;
+                using (var wrapper = new ReportClientWrapper())
+                {
+                    var model = new BaseIdModel(ModelUserContext.CurrentLanguage, id, ModelUserContext.Instance.IsArchiveMode);
+                    report = wrapper.Client.ExportHumUrgentyNotificationUkraine(model);
+                }
+                return ReportResponse(report, "EmergencyNotificationUAReport.pdf");
             }
             catch
             {

@@ -73,7 +73,6 @@
     <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
     <DebugType>full</DebugType>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>..\..\..\eidss.main\bin\Release\</OutputPath>
@@ -95,7 +94,6 @@
     <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
     <DebugType>none</DebugType>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\eidss.core\eidss.core.csproj">
@@ -392,6 +390,9 @@
       <DependentUpon>HumanCaseDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Human Case\HumanCaseDetail.en-TH-Eidss.resx">
+      <DependentUpon>HumanCaseDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human Case\HumanCaseDetail.en-US-Eidss.resx">
       <DependentUpon>HumanCaseDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Human Case\HumanCaseDetail.hy-am.resx">

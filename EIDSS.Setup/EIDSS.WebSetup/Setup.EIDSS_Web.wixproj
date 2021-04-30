@@ -141,6 +141,7 @@
     <Compile Include="UI\LanguagesDlg\LaosLanguagesDlg.wxs" />
     <Compile Include="UI\LanguagesDlg\ThailandLanguagesDlg.wxs" />
     <Compile Include="UI\LanguagesDlg\UkraineLanguagesDlg.wxs" />
+    <Compile Include="UI\LanguagesDlg\UnitedStatesLanguagesDlg.wxs" />
     <Compile Include="UI\LanguagesDlg\VietnamLanguagesDlg.wxs" />
     <Content Include="UI\LanguagesDlg\PublishLanguagesDlg.wxi" />
     <Folder Include="UI\WebSettingsDlg" />

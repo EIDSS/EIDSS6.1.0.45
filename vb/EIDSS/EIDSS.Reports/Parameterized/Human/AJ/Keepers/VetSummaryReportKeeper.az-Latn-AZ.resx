@@ -135,4 +135,7 @@
   <data name="SurveillanceTypeGroup.Properties.Items5" xml:space="preserve">
     <value>Qrupşəkilli tədbirlər</value>
   </data>
+  <data name="ErrorMessage_Key" xml:space="preserve">
+    <value>Siz Heyvan növü filtrində altı dəyərdən çox seçə bilməzsiz.</value>
+  </data>
 </root>

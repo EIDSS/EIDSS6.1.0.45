@@ -223,7 +223,7 @@
     <value>&amp;Файл</value>
   </data>
   <data name="MenuFindAggregateCase" xml:space="preserve">
-    <value>Агреговані випадки захворювання людини</value>
+    <value>Агреговані дані про захворювання людини</value>
   </data>
   <data name="MenuFindHumanCase" xml:space="preserve">
     <value>Випадки захворювання людини</value>
@@ -244,7 +244,7 @@
     <value>&amp;Про програму</value>
   </data>
   <data name="MenuHumanAggregateCaseList" xml:space="preserve">
-    <value>Агреговані випадки захворювання людини</value>
+    <value>Агреговані дані про захворювання людини</value>
   </data>
   <data name="MenuHumanCaseDeduplication" xml:space="preserve">
     <value>Повторення випадку захворювання людини</value>

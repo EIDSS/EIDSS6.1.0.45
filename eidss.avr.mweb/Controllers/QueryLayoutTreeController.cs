@@ -756,7 +756,7 @@ namespace eidss.avr.mweb.Controllers
             ExportType type = exportType == 0
                 ? ExportType.Xls
                 : ExportType.Xlsx;
-            CachedQueryResult queryResult = ServiceClientHelper.ExecQuery(queryId, false, true);
+            CachedQueryResult queryResult = ServiceClientHelper.ExecQuery(queryId, false, string.Empty, true);
 
             if (!string.IsNullOrEmpty(queryResult.ErrorMessage))
             {

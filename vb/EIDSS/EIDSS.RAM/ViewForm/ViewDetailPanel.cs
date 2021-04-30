@@ -41,6 +41,7 @@ using eidss.model.Enums;
 using eidss.model.Reports.OperationContext;
 using eidss.model.Resources;
 using Convert = BLToolkit.Common.Convert;
+using eidss.model.Helpers;
 
 namespace eidss.avr.ViewForm
 {
@@ -254,6 +255,11 @@ namespace eidss.avr.ViewForm
 
         private void FillHeadAndData(DataTable data)
         {
+            PdfExportHelper pdfHelper = new PdfExportHelper(
+                m_ViewDetailPresenter.View, BaseSettings.GetSystemFont(true));
+
+            pdfHelper.WordWrapVerticalColumnHeaders(data);
+
             bandedGridView1.BeginUpdate();
 
             using (SharedPresenter.ContextKeeper.CreateNewContext(ContextValue.BindAggregateFunctions))
@@ -388,11 +394,17 @@ namespace eidss.avr.ViewForm
         {
             var view = grid.MainView
                 as GridView;
+
             if (view != null)
             {
                 bool bRah = view.OptionsView.RowAutoHeight;
                 view.OptionsView.RowAutoHeight = true;
-                //view.BestFitColumns();
+                
+                view.Appearance.ViewCaption.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+                view.OptionsView.ShowColumnHeaders = true;
+
+                view.BestFitColumns(true);
+
                 view.ExportToPdf(fileName);
 
                 view.OptionsView.ColumnAutoWidth = false;
@@ -1061,6 +1073,9 @@ namespace eidss.avr.ViewForm
 
             ResetViewButtonEnable(true);
             FillChartMapCombos();
+
+            AvrViewExt.UpdatePdfCaptions(
+                m_ViewDetailPresenter.View, (GridView)grid.MainView);
         }
 
         //  Remove Band
@@ -1090,6 +1105,9 @@ namespace eidss.avr.ViewForm
 
             ResetViewButtonEnable(true);
             FillChartMapCombos();
+
+            AvrViewExt.UpdatePdfCaptions(
+                m_ViewDetailPresenter.View, (GridView)grid.MainView);
         }
 
         //  Rename Band
@@ -1203,6 +1221,9 @@ namespace eidss.avr.ViewForm
                 var gColumn = (GridColumn) ((DXMenuItem) sender).Tag;
                 AddAggregateColumn((BaseBand) gColumn.View.Tag, gColumn.View.Columns);
             }
+
+            AvrViewExt.UpdatePdfCaptions(
+                m_ViewDetailPresenter.View, (GridView)grid.MainView);
         }
 
         private void AddAggregateColumn(BaseBand aBand, CollectionBase columns)
@@ -1237,6 +1258,9 @@ namespace eidss.avr.ViewForm
                         MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     DeleteAggregateColumn((AvrViewColumn) gColumn.Tag, gColumn.AbsoluteIndex);
+
+                    AvrViewExt.UpdatePdfCaptions(
+                        m_ViewDetailPresenter.View, (GridView)grid.MainView);
                 }
             }
         }
@@ -1588,7 +1612,7 @@ namespace eidss.avr.ViewForm
         {
             var col = grCol as BandedGridColumn;
             // Parent is Band
-            if (col != null)
+            if (col != null && col.OwnerBand!=null)
             {
                 GridBand grBand = col.OwnerBand;
                 for (int i = 0; i < grBand.Columns.Count; i++)

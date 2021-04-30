@@ -1,4 +1,4 @@
-﻿using bv.common.db.Core;
+﻿//using bv.common.db.Core;
 using bv.model.BLToolkit;
 using bv.model.Model.Core;
 using eidss.model.Schema;
@@ -27,7 +27,7 @@ namespace eidss.model.Helpers
             List<string> districtID = new List<string>();
 
 
-            list.AddRange(filterList.Where(c => (c.intRowStatus == 0 && c.idfsParent == rayonID) || (c.idfsRayon == district.idfsRayon) || (c.idfsRayon == LookupCache.EmptyLineKey)).ToList());
+            list.AddRange(filterList.Where(c => (c.intRowStatus == 0 && c.idfsParent == rayonID) || (c.idfsRayon == district.idfsRayon) || (c.idfsRayon == -101L/*LookupCache.EmptyLineKey*/)).ToList());
             list.ForEach(c => { districtID.Add(c.idfsRayon.ToString()); });            
 
             string results = string.Join(",", districtID);

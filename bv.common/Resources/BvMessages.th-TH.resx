@@ -328,7 +328,7 @@
     <value>บันทึก {0} จะถูกลบ ลบหรือไม่?</value>
   </data>
   <data name="msgEIDSSCopyright" xml:space="preserve">
-    <value>สงวนลิขสิทธิ์โดย © 2005-2018 Black &amp;&amp; Veatch Special Projects Corp.</value>
+    <value>สงวนลิขสิทธิ์โดย © 2005-2020 Black &amp;&amp; Veatch Special Projects Corp.</value>
   </data>
   <data name="msgEIDSSRunning" xml:space="preserve">
     <value>คุณไม่สามารถทำงานตัวอย่างEIDSS หลายรายการพร้อมกันได้ ตัวอย่างEIDSS นั้นทำงานอยู่แล้ว</value>
@@ -496,7 +496,7 @@
     <value>เลือกการทดสอบ</value>
   </data>
   <data name="strTransferOut_Id" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>โอนย้ายตัวอย่าง</value>
   </data>
   <data name="strView_Id" xml:space="preserve">
     <value>ดู</value>
@@ -505,7 +505,7 @@
     <value>การเริ่มปรากฏของโรค</value>
   </data>
   <data name="titleAddToPreferences" xml:space="preserve">
-    <value>เพิ่มไปที่การตั้งค่ากำหนดเอง</value>
+    <value>เพิ่มเข้าในรายการตัวอย่างของฉัน</value>
   </data>
   <data name="titleASAccessionIn" xml:space="preserve">
     <value>AS การเริ่มปรากฏใน</value>
@@ -565,10 +565,10 @@
     <value>แบบฟอร์ม</value>
   </data>
   <data name="titlePaperForms" xml:space="preserve">
-    <value>แบบฟอร์มเอกสาร</value>
+    <value>แบบฟอร์ม</value>
   </data>
   <data name="titleRemoveFromPreferences" xml:space="preserve">
-    <value>ย้ายออกจากการตั้งค่ากำหนดเอง</value>
+    <value>ลบออกจากรายการตัวอย่างของฉัน</value>
   </data>
   <data name="titleReportAsSampleCollectedList" xml:space="preserve">
     <value>รายการตัวอย่างที่เก็บ AS</value>
@@ -610,7 +610,7 @@
     <value>รีเฟรช</value>
   </data>
   <data name="tooltipReport_Id" xml:space="preserve">
-    <value>แบบฟอร์มเอกสาร</value>
+    <value>แบบฟอร์ม</value>
   </data>
   <data name="tooltipSave_Id" xml:space="preserve">
     <value>บันทึก</value>
@@ -670,7 +670,7 @@
     <value>ไม่</value>
   </data>
   <data name="strRemove_Id" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>ลบรายการนี้</value>
   </data>
   <data name="strRemoveAll_Id" xml:space="preserve">
     <value>ย้ายออกทั้งหมด</value>
@@ -751,7 +751,7 @@
     <value>รายการตัวอย่างของฉัน</value>
   </data>
   <data name="menuAccessionIn" xml:space="preserve">
-    <value>การเริ่มปรากฏของโรคใน</value>
+    <value>ลงรายการรับตัวอย่าง</value>
   </data>
   <data name="menuAccessionInGoodCondition" xml:space="preserve">
     <value>รับตัวอย่างมาในสภาพที่ดี</value>
@@ -784,7 +784,7 @@
     <value>โอนย้ายตัวอย่าง</value>
   </data>
   <data name="titleTransferOutSample" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>โอนย้ายตัวอย่าง</value>
   </data>
   <data name="menuStartTest" xml:space="preserve">
     <value>เริ่มการทดสอบ</value>
@@ -802,7 +802,7 @@
     <value>เพิ่มเข้าในรายการตัวอย่างของฉัน</value>
   </data>
   <data name="menuRemoveFromPreferences" xml:space="preserve">
-    <value>ย้ายออกจากการตั้งค่ากำหนดเอง</value>
+    <value>ลบออกจากรายการตัวอย่างของฉัน</value>
   </data>
   <data name="menuRemove" xml:space="preserve">
     <value>ลบรายการนี้</value>

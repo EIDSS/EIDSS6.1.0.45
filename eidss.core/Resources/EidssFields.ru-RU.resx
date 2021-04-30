@@ -3024,4 +3024,25 @@
   <data name="Form1KZToMonth" xml:space="preserve">
     <value>По месяц</value>
   </data>
+  <data name="strQueryName" xml:space="preserve">
+    <value>Название (рус.)</value>
+  </data>
+  <data name="ComparativeReportByRegionDiagnosis" xml:space="preserve">
+    <value>Диагноз</value>
+  </data>
+  <data name="ComparativeReportByRegionFromMonth" xml:space="preserve">
+    <value>С месяца</value>
+  </data>
+  <data name="ComparativeReportByRegionPopulation" xml:space="preserve">
+    <value>Население</value>
+  </data>
+  <data name="ComparativeReportByRegionToMonth" xml:space="preserve">
+    <value>По месяц</value>
+  </data>
+  <data name="ComparativeReportByRegionYear1" xml:space="preserve">
+    <value>Год 1</value>
+  </data>
+  <data name="ComparativeReportByRegionYear2" xml:space="preserve">
+    <value>Год 2</value>
+  </data>
 </root>

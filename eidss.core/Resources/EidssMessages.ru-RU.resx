@@ -1630,7 +1630,6 @@
   <data name="strMatrixNotActive" xml:space="preserve">
     <value>Не активная</value>
   </data>
-
   <data name="strVeterinaryOrganizations" xml:space="preserve">
     <value>Ветеринарные организации</value>
   </data>
@@ -2726,7 +2725,6 @@
   <data name="msgTooManyViewCells" xml:space="preserve">
     <value>Отчет содержит {0} ячеек.Данные не могут быть показаны для отчета, состоящего более чем из {1} ячеек.</value>
   </data>
-
   <data name="msgBlankDiagnosisFilter" xml:space="preserve">
     <value>все подлежащие извещению диагнозы</value>
   </data>
@@ -4159,7 +4157,7 @@
     <value>Слишком много диагнозов выбрано для отображения в отчёте. Число выбранных диагнозов не должно превышать двенадцати штук. Пожалуйста, очистите несколько диагнозов и попробуйте сформировать отчёт ещё раз.</value>
   </data>
   <data name="msgTooManySpeciesType" xml:space="preserve">
-    <value>Вы можете выбрать не более трёх значений в фильтре Вид животного.</value>
+    <value>Вы можете выбрать не более шести значений в фильтре Вид животного.</value>
   </data>
   <data name="YearsCaption" xml:space="preserve">
     <value>Годы</value>
@@ -4385,5 +4383,23 @@
   </data>
   <data name="kzFormRayon" xml:space="preserve">
     <value>району</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Всего</value>
+  </data>
+  <data name="Rural" xml:space="preserve">
+    <value>Сельское население</value>
+  </data>
+  <data name="Town" xml:space="preserve">
+    <value>Городское население</value>
+  </data>
+  <data name="msgComparativeReportKZCorrectYear" xml:space="preserve">
+    <value>Год выбранный в фильтре «Год 1» должен быть меньше, чем год выбранный в фильтре «Год 2».</value>
+  </data>
+  <data name="msgVetComparativeReportAZCorrectYear" xml:space="preserve">
+    <value>Разница между значениями в фильтрах «С года» и «По год» не должна превышать 2 года</value>
+  </data>
+  <data name="msgTooManySpeciesType3" xml:space="preserve">
+    <value>Вы можете выбрать не более трёх значений в фильтре Вид животного</value>
   </data>
 </root>

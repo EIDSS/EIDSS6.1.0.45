@@ -3,14 +3,12 @@ using System.Data;
 using System.Xml.Serialization;
 using bv.common.Core;
 
-
 namespace eidss.model.Avr.View
 {
     [Serializable]
     public class AvrViewBand : BaseBand, IAvrViewItem
     {
-        [XmlIgnore]
-        private long m_ID;
+        [XmlIgnore] private long m_ID;
 
         private string m_DisplayText;
         private string m_DisplayNamePivot;
@@ -20,6 +18,7 @@ namespace eidss.model.Avr.View
         private int m_Order;
 
         #region Constructors
+
         // .ctor for serializer
         public AvrViewBand()
         {
@@ -43,18 +42,20 @@ namespace eidss.model.Avr.View
         {
             m_ID = (long) row["idfViewBand"];
             m_ViewID = (long) row["idfView"];
-            UniquePath = (string)row["UniquePath"];
-            OriginalName = (string)row["strOriginalName"];
-            object ids = row["idfLayoutSearchField"];
+            UniquePath = (string) row["UniquePath"];
+            OriginalName = (string) row["strOriginalName"];
+            var ids = row["idfLayoutSearchField"];
             if (!Utils.IsEmpty(ids))
             {
-                LayoutSearchFieldId = (long)ids;
+                LayoutSearchFieldId = (long) ids;
             }
+
             ids = row["strDisplayName"];
             if (!Utils.IsEmpty(ids))
             {
                 m_DisplayText = (string) ids;
             }
+
             m_Visible = (bool) row["blnVisible"];
             m_Freeze = (bool) row["blnFreeze"];
             ids = row["intOrder"];
@@ -67,25 +68,27 @@ namespace eidss.model.Avr.View
                 m_Order = 0;
             }
 
-            DataRow[] drChild = ds.Tables[tableBands].Select(string.Format("idfParentViewBand = {0}", row["idfViewBand"]), "intOrder",
+            var drChild = ds.Tables[tableBands].Select(string.Format("idfParentViewBand = {0}", row["idfViewBand"]), "intOrder",
                 DataViewRowState.CurrentRows);
             if (drChild.Length > 0)
             {
-                foreach (DataRow r in drChild)
+                foreach (var r in drChild)
                 {
-                    Bands.Add(new AvrViewBand(r, ds, tableBands, tableColumns) { Owner = this });
+                    Bands.Add(new AvrViewBand(r, ds, tableBands, tableColumns) {Owner = this});
                 }
             }
-            DataRow[] drChildCols = ds.Tables[tableColumns].Select(string.Format("idfViewBand = {0}", row["idfViewBand"]), "intOrder",
+
+            var drChildCols = ds.Tables[tableColumns].Select(string.Format("idfViewBand = {0}", row["idfViewBand"]), "intOrder",
                 DataViewRowState.CurrentRows);
             if (drChildCols.Length > 0)
             {
-                foreach (DataRow r in drChildCols)
+                foreach (var r in drChildCols)
                 {
                     AddColumn(r);
                 }
             }
         }
+
         #endregion
 
         #region Properties
@@ -100,16 +103,13 @@ namespace eidss.model.Avr.View
         public int? Precision { get; set; }
 
         public int ColumnWidth { get; set; }
-       
+
 
         [XmlIgnore]
         public long ID
         {
             get { return m_ID; }
-            set
-            {
-                m_ID = value;
-            }
+            set { m_ID = value; }
         }
 
 
@@ -117,7 +117,7 @@ namespace eidss.model.Avr.View
 
         public string LayoutSearchFieldName { get; set; }
 
-        public string UniquePath { get;  set; }
+        public string UniquePath { get; set; }
 
         [XmlIgnore]
         public long LayoutChildSearchFieldId { get; set; }
@@ -171,8 +171,9 @@ namespace eidss.model.Avr.View
         [XmlIgnore]
         public int Order_ForUse
         {
-            get{
-                return Order_Temp.HasValue ? Order_Temp.Value : (Order > 0 ? Order : Order_Pivot + 1000);
+            get
+            {
+                return Order_Temp ?? (Order > 0 ? Order : Order_Pivot + 1000);
             }
         }
 
@@ -207,8 +208,9 @@ namespace eidss.model.Avr.View
         [XmlIgnore]
         public bool IsSelfChanged
         {
-            get { return m_IsChanged | m_ToDelete | IsOrderChanged | m_ID <= 0; }
+            get { return m_IsChanged | m_ToDelete | IsOrderChanged | (m_ID <= 0); }
         }
+
         #endregion
 
         #region Functions
@@ -216,11 +218,12 @@ namespace eidss.model.Avr.View
         public void SetUnchanged()
         {
             m_IsChanged = false;
-            foreach (AvrViewBand band in Bands)
+            foreach (var band in Bands)
             {
                 band.SetUnchanged();
             }
-            foreach (AvrViewColumn col in Columns)
+
+            foreach (var col in Columns)
             {
                 col.SetUnchanged();
             }
@@ -238,18 +241,19 @@ namespace eidss.model.Avr.View
             Utils.CheckNotNull(pivotBand, "pivotBand");
             Order_Pivot = order;
             m_DisplayNamePivot = Utils.IsEmpty(pivotBand.DisplayText) ? "" : pivotBand.DisplayText;
-            int i = 0;
-            foreach (AvrViewBand band in Bands)
+            var i = 0;
+            foreach (var band in Bands)
             {
-                AvrViewBand childBand = pivotBand.Bands.Find(b => b.UniquePath == band.UniquePath);
+                var childBand = pivotBand.Bands.Find(b => b.UniquePath == band.UniquePath);
                 if (childBand != null)
                 {
                     band.SavePivotSettings(i++, childBand);
                 }
             }
-            foreach (AvrViewColumn col in Columns)
+
+            foreach (var col in Columns)
             {
-                AvrViewColumn pivotCol = pivotBand.Columns.Find(c => c.UniquePath == col.UniquePath);
+                var pivotCol = pivotBand.Columns.Find(c => c.UniquePath == col.UniquePath);
                 if (pivotCol != null) // not aggregate column
                 {
                     col.SavePivotSettings(i++, pivotCol);
@@ -272,25 +276,29 @@ namespace eidss.model.Avr.View
             {
                 return true;
             }
+
             if (Order != 0)
             {
                 return true;
             }
+
             if (!IsVisible)
             {
                 return true;
             }
+
             if (IsFreezed)
             {
                 return true;
             }
+
             return base.IsDiffFromPivot();
         }
 
         public void FillBandsFullPaths(string path)
         {
             FullPath = (path.Length == 0 ? " " : path + "->") + Utils.Str(m_DisplayText);
-            foreach (AvrViewBand band in Bands)
+            foreach (var band in Bands)
             {
                 band.FillBandsFullPaths(FullPath);
             }
@@ -299,26 +307,33 @@ namespace eidss.model.Avr.View
         public new void SetPivotVisible()
         {
             m_Visible = true;
-            ((BaseBand)this).SetPivotVisible();
+            ((BaseBand) this).SetPivotVisible();
         }
 
         public bool Delete()
         {
             //delete all child columns and bands
-            for (int i = 0; i < Columns.Count; i++)
+            for (var i = 0; i < Columns.Count; i++)
             {
                 if (!Columns[i].Delete())
+                {
                     Columns.RemoveAt(i--);
+                }
             }
-            for (int j = 0; j < Bands.Count; j++)
+
+            for (var j = 0; j < Bands.Count; j++)
             {
                 if (!Bands[j].Delete())
+                {
                     Bands.RemoveAt(j--);
+                }
             }
+
             if (m_ID <= 0)
             {
                 return false;
             }
+
             m_ToDelete = true;
             return true;
         }

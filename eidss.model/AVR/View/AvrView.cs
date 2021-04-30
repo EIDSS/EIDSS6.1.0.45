@@ -26,6 +26,7 @@ namespace eidss.model.Avr.View
         private byte[] m_ViewSettingsZip;
 
         #region Constructors
+
         // .ctor for serializer
         public AvrView()
         {
@@ -47,26 +48,30 @@ namespace eidss.model.Avr.View
             var row = ds.Tables[tableView].Rows[0];
             m_ViewID = (long) row["idflLayout"];
             QueryID = (long) row["idflQuery"];
-            object ids = row["ChartXAxisViewColumn"];
+            var ids = row["ChartXAxisViewColumn"];
             if (!Utils.IsEmpty(ids))
             {
-                m_ChartXAxisViewColumn = (string)ids;
+                m_ChartXAxisViewColumn = (string) ids;
             }
+
             ids = row["MapAdminUnitViewColumn"];
             if (!Utils.IsEmpty(ids))
             {
-                m_MapAdminUnitViewColumn = (string)ids;
+                m_MapAdminUnitViewColumn = (string) ids;
             }
+
             ids = row["idfGlobalView"];
             if (!Utils.IsEmpty(ids))
             {
                 m_GlobalView = (long?) ids;
             }
+
             ids = row["intGisLayerPosition"];
             if (!Utils.IsEmpty(ids))
             {
                 m_GisLayerPosition = (int?) ids;
             }
+
             var readOnly = row["blnReadOnly"];
             IsReadOnly = readOnly is bool && (bool) readOnly;
             ids = row["blbChartLocalSettings"];
@@ -74,16 +79,19 @@ namespace eidss.model.Avr.View
             {
                 ChartLocalSettingsZip = (byte[]) ids;
             }
+
             ids = row["blbGisLayerLocalSettings"];
             if (!Utils.IsEmpty(ids))
             {
                 GisLayerLocalSettingsZip = (byte[]) ids;
             }
+
             ids = row["blbGisMapLocalSettings"];
             if (!Utils.IsEmpty(ids))
             {
                 GisMapLocalSettingsZip = (byte[]) ids;
             }
+
             ids = row["blbViewSettings"];
             if (!Utils.IsEmpty(ids))
             {
@@ -94,34 +102,39 @@ namespace eidss.model.Avr.View
             {
                 m_ChartLocalSettingsXml = BinaryCompressor.UnzipString(m_ChartLocalSettingsZip);
             }
+
             if (m_GisLayerLocalSettingsZip != null)
             {
                 m_GisLayerLocalSettingsXml = BinaryCompressor.UnzipString(m_GisLayerLocalSettingsZip);
             }
+
             if (m_GisMapLocalSettingsZip != null)
             {
                 m_GisMapLocalSettingsXml = BinaryCompressor.UnzipString(m_GisMapLocalSettingsZip);
             }
+
             if (m_ViewSettingsZip != null)
             {
                 m_ViewSettingsXml = BinaryCompressor.UnzipString(m_ViewSettingsZip);
             }
-            
 
-            DataRow[] drTop = ds.Tables[tableBands].Select("idfParentViewBand is null", "intOrder", DataViewRowState.CurrentRows);
-            foreach (DataRow r in drTop)
+
+            var drTop = ds.Tables[tableBands].Select("idfParentViewBand is null", "intOrder", DataViewRowState.CurrentRows);
+            foreach (var r in drTop)
             {
-                Bands.Add(new AvrViewBand(r, ds, tableBands, tableColumns) { Owner = this });
+                Bands.Add(new AvrViewBand(r, ds, tableBands, tableColumns) {Owner = this});
             }
-            DataRow[] drChildCols = ds.Tables[tableColumns].Select("idfViewBand is null", "intOrder", DataViewRowState.CurrentRows);
+
+            var drChildCols = ds.Tables[tableColumns].Select("idfViewBand is null", "intOrder", DataViewRowState.CurrentRows);
             if (drChildCols.Length > 0)
             {
-                foreach (DataRow r in drChildCols)
+                foreach (var r in drChildCols)
                 {
                     AddColumn(r);
                 }
             }
         }
+
         #endregion
 
         #region Properties
@@ -151,6 +164,7 @@ namespace eidss.model.Avr.View
                 }
             }
         }
+
         public void SetChartXAxisViewColumn(string value)
         {
             m_ChartXAxisViewColumn = value;
@@ -168,6 +182,7 @@ namespace eidss.model.Avr.View
                 }
             }
         }
+
         public void SetMapAdminUnitViewColumn(string value)
         {
             m_MapAdminUnitViewColumn = value;
@@ -312,18 +327,21 @@ namespace eidss.model.Avr.View
 
         // used only from web
         public string SelectedColBand { get; set; }
+
         public BaseBand SelectedBand
         {
             get
             {
-                BaseBand band = GetCurrentBand(SelectedColBand);
+                var band = GetCurrentBand(SelectedColBand);
                 if (band != null)
                 {
                     return band;
                 }
+
                 return this;
             }
         }
+
         public string ChartType { get; set; }
 
         #endregion
@@ -350,27 +368,37 @@ namespace eidss.model.Avr.View
             pivotView.SetPivotVisible();
 
             // set default xAxis for chart as last column from Row Area
-            if (String.IsNullOrEmpty(ChartXAxisViewColumn) ||
+            if (string.IsNullOrEmpty(ChartXAxisViewColumn) ||
                 pivotView.GetVisibleRowAdminColumns(true, null, false).Count(col => col.UniquePath == ChartXAxisViewColumn) == 0
-               )
+            )
+            {
                 SetChartXAxisViewColumn(pivotView.LastRowAreaColumn());
+            }
 
             // set default adm unit for map
 
             // get row + administrative columns
-            List<AvrViewColumn> visibleRowAColumns = pivotView.GetVisibleRowAdminColumns(true, true, false);
+            var visibleRowAColumns = pivotView.GetVisibleRowAdminColumns(true, true, false);
 
             if (visibleRowAColumns.Count > 0 &&
-                (String.IsNullOrEmpty(MapAdminUnitViewColumn) ||
-                 visibleRowAColumns.Count(col => col.UniquePath == MapAdminUnitViewColumn) == 0
-                )
-               )
+                (string.IsNullOrEmpty(MapAdminUnitViewColumn) ||
+                 visibleRowAColumns.Count(col => col.UniquePath == MapAdminUnitViewColumn) == 0))
                 // set default value
-                SetMapAdminUnitViewColumn(visibleRowAColumns.Find(col => col.MapDisplayOrder == visibleRowAColumns.Max(c => c.MapDisplayOrder)).UniquePath);
-            else if (!String.IsNullOrEmpty(MapAdminUnitViewColumn) && visibleRowAColumns.Count(col => col.UniquePath == MapAdminUnitViewColumn) > 0)
-                SetMapAdminUnitViewColumn(visibleRowAColumns.Find(col => col.UniquePath == MapAdminUnitViewColumn).UniquePath);
+            {
+                var column = visibleRowAColumns.FirstOrDefault(col =>
+                    col.MapDisplayOrder == visibleRowAColumns.Max(c => c.MapDisplayOrder));
+                SetMapAdminUnitViewColumn(column == null ? string.Empty : column.UniquePath);
+            }
+            else if (!string.IsNullOrEmpty(MapAdminUnitViewColumn) &&
+                     visibleRowAColumns.Count(col => col.UniquePath == MapAdminUnitViewColumn) > 0)
+            {
+                var column = visibleRowAColumns.FirstOrDefault(col => col.UniquePath == MapAdminUnitViewColumn);
+                SetMapAdminUnitViewColumn(column == null ? string.Empty : column.UniquePath);
+            }
             else
-                SetMapAdminUnitViewColumn(String.Empty);
+            {
+                SetMapAdminUnitViewColumn(string.Empty);
+            }
 
 
             LayoutName = pivotView.LayoutName;
@@ -379,28 +407,32 @@ namespace eidss.model.Avr.View
             TotalSuffix = pivotView.TotalSuffix;
             QueryID = pivotView.QueryID;
 
-            AdjustToNew((BaseBand)pivotView);
+            AdjustToNew((BaseBand) pivotView);
         }
 
         public override bool IsDiffFromPivot()
         {
-            if (!String.IsNullOrEmpty(m_MapAdminUnitViewColumn) && m_MapAdminUnitViewColumn != GetDefaultMapAdminUnitViewColumn())
+            if (!string.IsNullOrEmpty(m_MapAdminUnitViewColumn) && m_MapAdminUnitViewColumn != GetDefaultMapAdminUnitViewColumn())
+            {
                 return true;
+            }
 
-            if (!String.IsNullOrEmpty(m_ChartXAxisViewColumn) && m_ChartXAxisViewColumn != LastRowAreaColumn())
+            if (!string.IsNullOrEmpty(m_ChartXAxisViewColumn) && m_ChartXAxisViewColumn != LastRowAreaColumn())
+            {
                 return true;
+            }
 
             return base.IsDiffFromPivot();
         }
 
         public override void ResetToPivot()
         {
-           //  m_MapAdminUnitViewColumn = GetDefaultMapAdminUnitViewColumn();
+            m_MapAdminUnitViewColumn = GetDefaultMapAdminUnitViewColumn();
             m_ChartXAxisViewColumn = LastRowAreaColumn();
             base.ResetToPivot();
         }
 
-        public void setColumnsTypes(DataTable viewData)
+        public void SetColumnsTypes(DataTable viewData)
         {
             var num = viewData.Columns.GetEnumerator();
             while (num.MoveNext())
@@ -408,25 +440,27 @@ namespace eidss.model.Avr.View
                 var col = num.Current as DataColumn;
                 if (col != null)
                 {
-                    AvrViewColumn avrCol = GetColumnByOriginalName(col.ColumnName);
+                    var avrCol = GetColumnByOriginalName(col.ColumnName);
                     if (avrCol != null)
                     {
                         avrCol.FieldType = col.DataType;
                     }
                 }
             }
+
             SetAggrColumnsType();
         }
 
         #region Chart/Map combos functions
+
         // get nonrow numeric columns
         public List<AvrViewColumn> GetVisibleNotRowColumns(bool insertEmpty)
         {
             List<AvrViewColumn> result;
             if (insertEmpty)
             {
-                var empty = new AvrViewColumn { FieldType = typeof(string) };
-                result = new List<AvrViewColumn> { empty };
+                var empty = new AvrViewColumn {FieldType = typeof(string)};
+                result = new List<AvrViewColumn> {empty};
             }
             else
             {
@@ -434,7 +468,7 @@ namespace eidss.model.Avr.View
             }
 
             result.AddRange(GetVisibleRowAdminColumns(false, null, false).FindAll(x => x.FieldType.IsNumeric()));
-            return result;//.OrderBy(c => c.Order_ForUse).ToList(); don't order here, because Order_ForUse have sense only inside band
+            return result; //.OrderBy(c => c.Order_ForUse).ToList(); don't order here, because Order_ForUse have sense only inside band
         }
 
         public string GradientColumn
@@ -443,7 +477,10 @@ namespace eidss.model.Avr.View
             {
                 var ret = GetVisibleNotRowColumns(false).FirstOrDefault(c => c.IsMapGradientSeries);
                 if (ret == null)
-                    return String.Empty;
+                {
+                    return string.Empty;
+                }
+
                 return ret.UniquePath;
             }
         }
@@ -452,6 +489,7 @@ namespace eidss.model.Avr.View
         {
             return GetVisibleRowAdminColumns(true, true, true);
         }
+
         public static IEnumerable<AvrViewColumn> GetMapAdminUnitList(AvrView view)
         {
             return view.GetMapAdminUnitList();
@@ -461,6 +499,7 @@ namespace eidss.model.Avr.View
         {
             return GetVisibleNotRowColumns(true);
         }
+
         public static IEnumerable<AvrViewColumn> GetMapDefGradientList(AvrView view)
         {
             return view.GetMapDefGradientList();
@@ -471,10 +510,11 @@ namespace eidss.model.Avr.View
         {
             return GetVisibleNotRowColumns(false);
         }
+
         // used from Web to fill combos "Chart Series" and "Map Diagram Series"
         public static IEnumerable<AvrViewColumn> GetMapDefChartListWeb(AvrView view)
         {
-            List<AvrViewColumn> list = view.GetMapDefChartList();
+            var list = view.GetMapDefChartList();
             list.Insert(0, AvrViewColumn.GetSelectAll(view));
             return list;
         }
@@ -483,6 +523,7 @@ namespace eidss.model.Avr.View
         {
             return GetVisibleRowAdminColumns(true, null, true);
         }
+
         public static IEnumerable<AvrViewColumn> GetChartXAxisList(AvrView view)
         {
             return view.GetChartXAxisList();
@@ -490,22 +531,32 @@ namespace eidss.model.Avr.View
 
         public List<AvrViewColumn> GetVisibleRowAdminColumns(bool? isRow, bool? isAdministrative, bool insertEmpty)
         {
-
             return GetVisibleRowAdminColumns("", isRow, isAdministrative, insertEmpty);
         }
 
-        private String GetDefaultMapAdminUnitViewColumn()
+        private string GetDefaultMapAdminUnitViewColumn()
         {
             // get row + administrative columns
-            List<AvrViewColumn> visibleRowAColumns = GetVisibleRowAdminColumns(true, true, false);
-            return visibleRowAColumns.Find(col => col.MapDisplayOrder == visibleRowAColumns.Max(c => c.MapDisplayOrder)).UniquePath;
+            var visibleRowAColumns = GetVisibleRowAdminColumns(true, true, false);
+            if (visibleRowAColumns.Count > 0)
+            {
+                var column = visibleRowAColumns.FirstOrDefault(col =>
+                    col.MapDisplayOrder == visibleRowAColumns.Max(c => c.MapDisplayOrder));
+                if (column != null)
+                {
+                    return column.UniquePath;
+                }
+            }
+
+            return null;
         }
+
         #endregion
 
         public void FillBandsFullPaths()
         {
             FullPath = "";
-            foreach (AvrViewBand band in Bands)
+            foreach (var band in Bands)
             {
                 band.FillBandsFullPaths("");
             }
@@ -517,6 +568,7 @@ namespace eidss.model.Avr.View
             {
                 col = null;
             }
+
             switch (defName)
             {
                 case "ChartXAxisViewColumn":
@@ -532,13 +584,14 @@ namespace eidss.model.Avr.View
         public bool SetTempOrders(string source, string destination, bool isDropBefore)
         {
             var colSource = GetColumnByOriginalName(source);
-            bool ret = false;
+            var ret = false;
             if (colSource != null)
             {
                 colSource.IsVisible = true;
-                int i = 1;
+                var i = 1;
 
-                foreach (var col in colSource.Owner.Columns.Where(c => c.UniquePath != source).OrderBy(c => c.Order_Temp.HasValue ? c.Order_Temp.Value : c.Order_ForUse))
+                foreach (var col in colSource.Owner.Columns.Where(c => c.UniquePath != source)
+                    .OrderBy(c => c.Order_Temp.HasValue ? c.Order_Temp.Value : c.Order_ForUse))
                 {
                     if (isDropBefore && col.UniquePath == destination)
                     {
@@ -547,6 +600,7 @@ namespace eidss.model.Avr.View
                             colSource.Order_Temp = i;
                             ret = true;
                         }
+
                         i++;
                     }
 
@@ -555,6 +609,7 @@ namespace eidss.model.Avr.View
                         col.Order_Temp = i;
                         ret = true;
                     }
+
                     i++;
 
                     if (!isDropBefore && col.UniquePath == destination)
@@ -564,6 +619,7 @@ namespace eidss.model.Avr.View
                             colSource.Order_Temp = i;
                             ret = true;
                         }
+
                         i++;
                     }
                 }
@@ -573,8 +629,9 @@ namespace eidss.model.Avr.View
                 var bandSource = GetBandByOriginalName(source);
                 if (bandSource != null)
                 {
-                    int i = 1;
-                    foreach (var col in bandSource.Owner.Bands.Where(c => c.UniquePath != source).OrderBy(c => c.Order_Temp.HasValue ? c.Order_Temp.Value : c.Order_ForUse))
+                    var i = 1;
+                    foreach (var col in bandSource.Owner.Bands.Where(c => c.UniquePath != source)
+                        .OrderBy(c => c.Order_Temp.HasValue ? c.Order_Temp.Value : c.Order_ForUse))
                     {
                         if (isDropBefore && col.UniquePath == destination)
                         {
@@ -583,6 +640,7 @@ namespace eidss.model.Avr.View
                                 bandSource.Order_Temp = i;
                                 ret = true;
                             }
+
                             i++;
                         }
 
@@ -591,6 +649,7 @@ namespace eidss.model.Avr.View
                             col.Order_Temp = i;
                             ret = true;
                         }
+
                         i++;
 
                         if (!isDropBefore && col.UniquePath == destination)
@@ -600,11 +659,13 @@ namespace eidss.model.Avr.View
                                 bandSource.Order_Temp = i;
                                 ret = true;
                             }
+
                             i++;
                         }
                     }
                 }
             }
+
             return ret;
         }
 
@@ -615,25 +676,25 @@ namespace eidss.model.Avr.View
 
         public List<AvrViewColumn> GetAllViewColumns()
         {
-            List<AvrViewColumn> viewColumns = (Bands.Count == 0)
+            var viewColumns = Bands.Count == 0
                 ? Columns
                 : GetAllBandColumns(Bands);
 
             return viewColumns;
-        }  
+        }
 
         private static List<AvrViewColumn> GetAllBandColumns(IEnumerable<AvrViewBand> avrViewBands)
         {
             var colums = new List<AvrViewColumn>();
-            foreach (AvrViewBand band in avrViewBands)
+            foreach (var band in avrViewBands)
             {
                 colums.AddRange(band.Columns.Count == 0
                     ? GetAllBandColumns(band.Bands)
                     : band.Columns);
             }
+
             return colums;
         }
-
 
 
         public void AssignOwnerAndUniquePath()
@@ -643,14 +704,15 @@ namespace eidss.model.Avr.View
 
         private static void AssignOwnerAndUniquePath(BaseBand owner)
         {
-            foreach (AvrViewBand band in owner.Bands)
+            foreach (var band in owner.Bands)
             {
                 band.Owner = owner;
                 band.ViewID = owner.ViewID;
                 band.UniquePath = CalculateUniquePath(band);
                 AssignOwnerAndUniquePath(band);
             }
-            foreach (AvrViewColumn column in owner.Columns)
+
+            foreach (var column in owner.Columns)
             {
                 column.Owner = owner;
                 column.ViewID = owner.ViewID;
@@ -660,21 +722,21 @@ namespace eidss.model.Avr.View
 
         private static string CalculateUniquePath(IAvrViewItem band)
         {
-            string combinedName = GetCombinedName(band.LayoutSearchFieldId, band.LayoutSearchFieldName);
-            string encodedText = BinarySerializer.MD5FromString(band.DisplayText);
+            var combinedName = GetCombinedName(band.LayoutSearchFieldId, band.LayoutSearchFieldName);
+            var encodedText = BinarySerializer.MD5FromString(band.DisplayText);
 
             var owner = band.Owner as AvrViewBand;
-            string prefix = owner == null
-                ? String.Empty
-                : String.Format("{0}>>", owner.UniquePath);
+            var prefix = owner == null
+                ? string.Empty
+                : string.Format("{0}>>", owner.UniquePath);
 
-            string uniquePath = String.Format("{0}{1}{2}", prefix, combinedName, encodedText);
+            var uniquePath = string.Format("{0}{1}{2}", prefix, combinedName, encodedText);
             return uniquePath;
         }
 
         private static string GetCombinedName(long fieldId, string fieldAlias)
         {
-            string combinedName = String.IsNullOrEmpty(fieldAlias) ? String.Empty : String.Format("{0}_{1}__", fieldAlias, fieldId);
+            var combinedName = string.IsNullOrEmpty(fieldAlias) ? string.Empty : string.Format("{0}_{1}__", fieldAlias, fieldId);
             return combinedName;
         }
 

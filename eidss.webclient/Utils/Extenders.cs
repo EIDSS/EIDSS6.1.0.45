@@ -93,12 +93,18 @@ namespace eidss.webclient.Utils
 
         public static IHtmlString RenderEidss(params string[] paths)
         {
-            var version = Assembly.GetExecutingAssembly().GetName().Version;
-            string versionCode = string.Format("-{0}-{1}-{2}-{3}", version.Major, version.Minor, version.Build, version.Revision);
+            var versionCode = GetVersionCode();
             paths = paths.Select(c => c + versionCode).ToArray();
             return System.Web.Optimization.Scripts.Render(paths);
         }
-        
+
+        public static string GetVersionCode()
+        {
+            var version = Assembly.GetExecutingAssembly().GetName().Version;
+            string versionCode = string.Format("-{0}-{1}-{2}-{3}", version.Major, version.Minor, version.Build, version.Revision);
+            return versionCode;
+        }
+
         public static MvcHtmlString IncludeVersionedJs(this HtmlHelper helper, string filename)
         {
             string versionCode = VersionCode();
@@ -433,6 +439,82 @@ namespace eidss.webclient.Utils
         }
 
 
+        public static DropDownListBuilder GroupComboboxWithCheckboxes
+        (   this HtmlHelper htmlHelper,
+            string ctlName, long key, string keyName, string textName, string selected,
+            object htmlAttributes,
+            bool enabled = true, BvSelectList items = null,
+            string controller = null, string action = null, EditorControlWidth width = EditorControlWidth.Normal
+        )
+        {
+            var ret = htmlHelper.Kendo().DropDownList()
+                .Name(ctlName)
+                .DataTextField("Text")
+                .DataValueField("Value")
+                .Template("<div class='${data.classname}'><input type='checkbox' checkedname='${data.Text}' group='${data.group}' value='${data.Value}' class='check-item' id='chb${data.Value}'/><span>${data.Text}</span></div>")
+                .Events(e => e.Select("bvCheckedGroupComboBox.onCheckedGroupComboBoxChanged")
+                              .DataBound("function(e) { bvCheckedGroupComboBox.bindCheckedGroupComboBoxClickEvent('" + ctlName + "', '" + selected + "');}")
+                              .Open("function(e) { bvComboBox.onOpen(e, " + (int)width + ", true); }"))
+                .Enable(enabled)
+                .HtmlAttributes(htmlAttributes);
+
+            if (controller != null && action != null)
+            {
+                ret = ret.DataSource(source => source.Read(read => read.Action(action, controller, new { id = key, keyname = keyName, valuename = textName })));
+            }
+            else if (items != null)
+            {
+                ret = ret.BindTo(new SelectList(items.items, keyName, textName, null));
+            }
+
+            return ret;
+
+        }
+
+        public static DropDownListBuilder BvGroupComboboxWithCheckboxes<O>(this HtmlHelper htmlHelper,
+            O obj, Expression<Func<O, object>> expr, string keyName, string textName, string selected,
+            /*bool bBind = true, string clientOnChange = null, */
+            string styleClass = null, string strRight = null, bool readOnly = false, BvSelectList items = null,
+            string controller = null, string action = null, EditorControlWidth width = EditorControlWidth.Normal
+            )
+            where O : IObject
+        {
+            var bindToProp = BindToProp(expr);
+            var cls = String.Empty; // default style - width:100%
+            if (!string.IsNullOrEmpty(styleClass))
+            {
+                cls = styleClass;
+            }
+            if (obj.IsRequired(bindToProp))
+            {
+                cls += " requiredField";
+            }
+            if (obj.IsInvisible(bindToProp))
+            {
+                cls += " invisible";
+            }
+            var bIsAutoTestingVersion = Config.GetBoolSetting("AutoTestingVersion");
+            var htmlAttributes = bIsAutoTestingVersion
+                ? (object)new { @class = cls, bvid = obj.ObjectName + "." + bindToProp }
+                : new { @class = cls };
+
+            var selectlist = items ?? obj.GetList(bindToProp);
+
+            var bEnable = !(obj.IsReadOnly(bindToProp) || readOnly);
+            var permission = obj.GetPermissions();
+            if (permission != null)
+            {
+                bEnable = bEnable && !permission.IsReadOnlyForEdit;
+            }
+            if (strRight != null)
+            {
+                bEnable = bEnable && ModelUserContext.Instance.CanDo(strRight);
+            }
+
+            return GroupComboboxWithCheckboxes(htmlHelper, obj.ObjectIdent + bindToProp, (long)obj.Key, keyName, textName, selected, htmlAttributes, bEnable, selectlist, controller, action, width);
+        }
+
+
 
         /*
         public static Kendo.Mvc.UI.Fluent.DropDownListBuilder BvDropdownList(this HtmlHelper htmlHelper, IObject obj, string bindToProp, bool bBind = true, string clientOnChange = null, string styleClass = null)
@@ -624,9 +706,15 @@ namespace eidss.webclient.Utils
                 cls = "requiredField";
             }
             var bIsAutoTestingVersion = Config.GetBoolSetting("AutoTestingVersion");
+            //TODO: Chrome date problem fix - start
+            //old version//var htmlAttributes = bIsAutoTestingVersion
+            //old version//    ? (object)new { @class = cls, bvid = obj.ObjectName + "." + bindToProp }
+            //old version//    : new { @class = cls };
+
             var htmlAttributes = bIsAutoTestingVersion
-                ? (object)new { @class = cls, bvid = obj.ObjectName + "." + bindToProp }
-                : new { @class = cls };
+                ? (object)new { @class = cls, bvid = obj.ObjectName + "." + bindToProp, type = "text" }
+                : new { @class = cls, type = "text" };
+            //TODO: Chrome date problem fix - end
 
             bool bEnable = !obj.IsReadOnly(bindToProp);
             IObjectPermissions permission = obj.GetPermissions();
@@ -890,7 +978,8 @@ namespace eidss.webclient.Utils
             string format = decimalDigits <= 0 ? "#" : "#.";
             for (int i = 0; i < decimalDigits; i++) format = format + "#";
             var ret = htmlHelper.Kendo()
-                .NumericTextBox().Name(obj.ObjectIdent + bindToProp)
+                .NumericTextBox()
+                .Name(obj.ObjectIdent + bindToProp)
                 .Format(format)
                 .Value(value)
                 .Enable(bEnable)
@@ -899,6 +988,12 @@ namespace eidss.webclient.Utils
                 .Max(maxValue)
                 .Placeholder("")
                 .HtmlAttributes(htmlAttributes);
+            // Because all inputs with of double values must have dot as delimiter)
+            if (Localizer.AllSupportedLanguages.ContainsKey(Localizer.lngEn))
+            {
+                var english = Localizer.AllSupportedLanguages[Localizer.lngEn];
+                ret = ret.Culture(english);
+            }
 
             if (refreshOnLostFocus)
             {

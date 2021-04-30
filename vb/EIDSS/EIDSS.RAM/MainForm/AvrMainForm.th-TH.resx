@@ -259,7 +259,7 @@
     <value>วันที่กลุ่ม</value>
   </data>
   <data name="bcGroupDate_0.Caption" xml:space="preserve">
-    <value>วันที่กลุ่มตั้งต้น</value>
+    <value>ตั้งค่าช่วงเวลา</value>
   </data>
   <data name="bbPopupNewQuery.Caption" xml:space="preserve">
     <value>คำถามใหม่</value>

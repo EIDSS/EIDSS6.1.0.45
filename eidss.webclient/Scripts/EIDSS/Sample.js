@@ -15,6 +15,7 @@
         if (!isTestsGridEnabled) {
             // если табл с тестами задисейблена, то кнопка btnNewCaseTestValidation неактивна
             gridFacade.disableButtons($("#btnNewCaseTestValidation"));
+            gridFacade.disableButtons($("#btnCreateCase"));
             return;
         }
         var isTestsGridHasRows = gridFacade.hasRows(caseTestsGridName);
@@ -23,11 +24,26 @@
             var selectedRow = gridFacade.getSelectedRows(caseTestsGridName);
             if (selectedRow.length > 0) {
                 sample.onCaseTestGridRowSelect(caseTestsGridName, selectedRow);
-                gridFacade.disableButtons($("#btnCreateCase"));
             } else {
                 gridFacade.disableButtons($("#btnNewCaseTestValidation"));
                 gridFacade.disableButtons($("#btnCreateCase"));
             }
+
+            var caseTestValidationsGridName = $("#hdnCaseTestValidationsGridName").val();
+            var isTestValidationsGridHasRows = gridFacade.hasRows(caseTestValidationsGridName);
+            if (isTestValidationsGridHasRows) {
+                // если в табл с валидациями выделена строка
+                var selectedTestValidationsGridRow = gridFacade.getSelectedRows(caseTestValidationsGridName);
+                if (selectedTestValidationsGridRow.length > 0) {
+                    sample.onCaseTestValidationGridRowSelect(caseTestValidationsGridName, selectedTestValidationsGridRow);
+                } else {
+                    gridFacade.disableButtons($("#btnCreateCase"));
+                }
+            }
+            else {
+                gridFacade.disableButtons($("#btnCreateCase"));
+            }
+
             return;
         } else {
             gridFacade.disableButtons($("#btnNewCaseTestValidation"));
@@ -148,15 +164,14 @@
     },
 
     onCaseTestValidationGridRowSelect: function (gridName, slectedRow) {
-        var blnCaseCreated = slectedRow.find("td.gridHidden input[name='blnCaseCreated']").val();
+        //var blnCaseCreated = slectedRow.find("td.gridHidden input[name='blnCaseCreated']").val();
         var blnValidateStatus = slectedRow.find("td.gridHidden input[name='blnValidateStatus2']").val();
         var idfsInterpretedStatus = slectedRow.find("td.gridHidden input[name='idfsInterpretedStatus']").val();
 
-        var buttonAdd = $("#" + gridName + " .k-grid-toolbar input[data-role='grid-add-button']");
-        if (buttonAdd.length == 1 && buttonAdd.attr("disabled") == "disabled") {
+        if (slectedRow.parent().parent().parent().parent()[0].hasAttribute("disabled")) {
             gridFacade.disableButtons($("#btnCreateCase"));
         } else {
-            if (idfsInterpretedStatus == "10104001" && blnValidateStatus == "true" && blnCaseCreated != "true") {
+            if (idfsInterpretedStatus == "10104001" && blnValidateStatus == "true" ) { //&& blnCaseCreated != "true") {
                 gridFacade.enableButtons($("#btnCreateCase"));
             }
             else {

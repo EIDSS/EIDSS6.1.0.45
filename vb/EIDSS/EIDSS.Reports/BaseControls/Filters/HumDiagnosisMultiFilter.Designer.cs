@@ -39,12 +39,12 @@
             // 
             // HumDiagnosisMultiFilter
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("HumDiagnosisMultiFilter.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.Name = "HumDiagnosisMultiFilter";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

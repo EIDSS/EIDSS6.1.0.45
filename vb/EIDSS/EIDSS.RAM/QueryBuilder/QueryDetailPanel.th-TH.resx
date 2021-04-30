@@ -163,7 +163,7 @@
     <value>คำถาม ค้นหาแผนผังวัตถุ</value>
   </data>
   <data name="cmdCancelChanges.Text" xml:space="preserve">
-    <value>ยกเลิกการเปลี่ยนแปลง</value>
+    <value>ยกเลิกการแก้ไข</value>
   </data>
   <data name="cmdCopy.Text" xml:space="preserve">
     <value>คัดลอก</value>

@@ -877,4 +877,7 @@
   <data name="MenuSystemPreferences" xml:space="preserve">
     <value>Sistem kökləmələri</value>
   </data>
+  <data name="VeterinaryComparativeByMonthReportAZ" xml:space="preserve">
+    <value>Aylar üzrə baytarlıq müqayisəli hesabatı</value>
+  </data>
 </root>

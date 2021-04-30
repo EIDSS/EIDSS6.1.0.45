@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.IO;
 using bv.common.Core;
+using System.Threading;
 using bv.common.Diagnostics;
 using System.Text;
 
@@ -18,6 +19,10 @@ namespace bv.common.Configuration
         public static string Uploading506DbfCodePage = "Uploading506DbfCodePage";
         public static string Uploading506ReturnOnlyErrorRows = "Uploading506ReturnOnlyErrorRows";
         public static string Uploading506ResultToExcel = "Uploading506ResultToExcel";
+        public static string GGPinServiceVerification = "GGPinServiceVerification";
+        public const string GenerateReadableIdByNumericObjectId = "GenerateReadableIdByNumericObjectId";
+        public const string AddExtraCharInReadableId = "AddExtraCharInReadableId";
+        public const string ExtraCharInReadableId = "ExtraCharInReadableId";
     }
     public class BaseSettings
     {
@@ -266,7 +271,7 @@ namespace bv.common.Configuration
             {
                 if (Utils.Str(m_THReportsFontName) == "")
                 {
-                    m_THReportsFontName = Config.GetSetting("ThaiReportsFontName");
+                    m_THReportsFontName = Config.GetSetting("ThaiReportsFontName", "TH Sarabun New");
                 }
                 if (Utils.Str(m_THReportsFontName) == "")
                 {
@@ -302,7 +307,7 @@ namespace bv.common.Configuration
             {
                 if (Utils.Str(m_THSystemFontName) == "")
                 {
-                    m_THSystemFontName = Config.GetSetting("ThaiSystemFontName");
+                    m_THSystemFontName = Config.GetSetting("ThaiSystemFontName", "TH SarabunPSK");
                 }
                 if (Utils.Str(m_THSystemFontName) == "")
                 {
@@ -326,7 +331,7 @@ namespace bv.common.Configuration
                 }
                 if (m_THSystemFontSize < 1)
                 {
-                    m_THSystemFontSize = (float) (8.25);
+                    m_THSystemFontSize = (float) (11);
                 }
                 return m_THSystemFontSize;
             }
@@ -745,7 +750,7 @@ namespace bv.common.Configuration
         }
         public static int UploadingSessionsCount 
         {
-            get { return Config.GetIntSetting(SettingName.UploadingSessionsCount, 4); }
+            get { return Config.GetIntSetting(SettingName.UploadingSessionsCount, 50); }
         }
         public static bool Uploading506HSERVUnique 
         {
@@ -764,6 +769,60 @@ namespace bv.common.Configuration
         public static bool Uploading506ResultToExcel 
         {
             get { return Config.GetBoolSetting(SettingName.Uploading506ResultToExcel); }
+        }
+
+        public static bool GGPinServiceVerification
+        {
+            get { return Config.GetBoolSetting(SettingName.GGPinServiceVerification, true); }
+        }
+
+        public static bool GenerateReadableIdByNumericObjectId
+        {
+            get { return Config.GetBoolSetting(SettingName.GenerateReadableIdByNumericObjectId, false); }
+        }
+
+        public static bool AddExtraCharInReadableId
+        {
+            get { return Config.GetBoolSetting(SettingName.AddExtraCharInReadableId, false); }
+        }
+
+        public static string ExtraCharInReadableId
+        {
+            get { return Config.GetSetting(SettingName.ExtraCharInReadableId, "-"); }
+        }
+
+        public static Font GetSystemFont(bool isForReport = false)
+        {
+            string fontName;
+            float fontSize;
+
+            string ci = Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName;
+
+            if (ci == Localizer.lngGe || ci == Localizer.lngAr)
+            {
+                fontName = BaseSettings.GGSystemFontName;
+                fontSize = BaseSettings.GGSystemFontSize;
+            }
+            else if (ci == Localizer.lngThai)
+            {
+                if (isForReport)
+                {
+                    fontName = BaseSettings.THReportsFontName;
+                    fontSize = BaseSettings.THSystemFontSize;
+                }
+                else
+                {
+                    fontName = BaseSettings.THSystemFontName;
+                    fontSize = BaseSettings.THSystemFontSize + BaseSettings.THReportsDeltaFontSize;
+                }
+            }
+            else
+            {
+                fontName = BaseSettings.SystemFontName;
+                fontSize = BaseSettings.SystemFontSize;
+            }
+
+            return new Font(fontName, fontSize);
         }
     }
 }

@@ -1510,19 +1510,19 @@ namespace eidss.model.Schema
           [LocalizedDisplayName(_str_IsFirstCreatedAndGGPin)]
         public bool IsFirstCreatedAndGGPin
         {
-            get { return new Func<Patient, bool>(c => eidss.model.Core.EidssSiteContext.Instance.IsGeorgiaCustomization && c.bFirstCreated && c.idfsPersonIDType == (long)PersonalIDType.PIN_GG)(this); }
-            
+            get { return new Func<Patient, bool>(c => eidss.model.Core.EidssSiteContext.Instance.IsGeorgiaCustomization && c.bFirstCreated && c.idfsPersonIDType == (long)PersonalIDType.PIN_GG && BaseSettings.GGPinServiceVerification)(this); }
+
         }
-        
-          [XmlIgnore]
+
+        [XmlIgnore]
           [LocalizedDisplayName(_str_IsGGPinChangedAndNotValidated)]
         public bool IsGGPinChangedAndNotValidated
         {
-            get { return new Func<Patient, bool>(c => eidss.model.Core.EidssSiteContext.Instance.IsGeorgiaCustomization && c.idfsPersonIDType == (long)PersonalIDType.PIN_GG && c.strPersonID.CompareTo(c.strPinValid) != 0)(this); }
-            
+            get { return new Func<Patient, bool>(c => eidss.model.Core.EidssSiteContext.Instance.IsGeorgiaCustomization && c.idfsPersonIDType == (long)PersonalIDType.PIN_GG && BaseSettings.GGPinServiceVerification && c.strPersonID.CompareTo(c.strPinValid) != 0)(this); }
+
         }
-        
-          [LocalizedDisplayName(_str_bSearchMode)]
+
+        [LocalizedDisplayName(_str_bSearchMode)]
         public bool bSearchMode
         {
             get { return m_bSearchMode; }
@@ -2025,7 +2025,7 @@ namespace eidss.model.Schema
 
         private bool _isReadOnly(string name)
         {
-            if(EidssSiteContext.Instance.IsGeorgiaCustomization)
+            if(EidssSiteContext.Instance.IsGeorgiaCustomization && BaseSettings.GGPinServiceVerification)
             {
                 readonly_names7 = "strLastName,strSecondName,strFirstName,strRegistrationPhone,strEmployerName,strHomePhone,strWorkPhone,idfsOccupationType,OccupationType,idfsNationality,Nationality,idfsHumanGender,Gender,datDateOfDeath".Split(new char[] { ',' });
             }
@@ -2103,7 +2103,7 @@ namespace eidss.model.Schema
         internal Dictionary<string, Func<Patient, bool>> m_isRequired;
         private bool _isRequired(Dictionary<string, Func<Patient, bool>> isRequiredDict, string name)
         {
-            if (EidssSiteContext.Instance.IsGeorgiaCustomization)
+            if (EidssSiteContext.Instance.IsGeorgiaCustomization && BaseSettings.GGPinServiceVerification)
             {
                 if(name == "datDateofBirth")
                 {
@@ -3374,7 +3374,7 @@ namespace eidss.model.Schema
                 obj
                     .AddRequired("datDocumentDate", c => c.bSearchMode && c.idfsSearchMethod == 2 && c.idfsDocumentType == 6);
 
-                if (EidssSiteContext.Instance.IsGeorgiaCustomization)
+                if (EidssSiteContext.Instance.IsGeorgiaCustomization && BaseSettings.GGPinServiceVerification)
                 {
                     obj
                         .AddRequired("datDateofBirth", c => c.IsFirstCreatedAndGGPin);

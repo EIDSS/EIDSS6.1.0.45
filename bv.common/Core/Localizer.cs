@@ -22,7 +22,6 @@ namespace bv.common.Core
         public static string lngVietnam { get { return Core.SupportedLanguages.lngVietnam; } }
         public static string lngLaos { get { return Core.SupportedLanguages.lngLaos; } }
         public static string lngThai { get { return Core.SupportedLanguages.lngThai; } }
-        public static string lngUa { get { return Core.SupportedLanguages.lngUa; } }
 
         public static BaseStringsStorage MenuMessages { get; set; }
 

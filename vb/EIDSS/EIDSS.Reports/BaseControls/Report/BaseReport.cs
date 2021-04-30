@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Text;
 using bv.common.Configuration;
 using bv.common.Core;
 using bv.model.BLToolkit;
@@ -28,6 +29,18 @@ namespace EIDSS.Reports.BaseControls.Report
             InitializeComponent();
             PaperKind = PaperKind.A4;
         }
+
+        #region BaseReport
+
+        public XtraReport ThisReport
+        {
+            get
+            {
+                return (XtraReport)this;
+            }
+        }
+
+        #endregion
 
         [Browsable(true)]
         [DefaultValue(false)]
@@ -111,7 +124,15 @@ namespace EIDSS.Reports.BaseControls.Report
                 m_BaseDataSet.sprepGetBaseParameters[0].strDateFormat = ReportRebinder.DestFormatNational;
             }
 
+            SetEncodingOptions();
+
             ReportRtlHelper.SetRTL(this);
+        }
+
+        protected void SetEncodingOptions()
+        {
+            ExportOptions.Csv.Encoding = Encoding.Unicode;
+            ExportOptions.Text.Encoding = Encoding.Unicode;
         }
 
         protected void AjustLeftHeaderHeight(int delta)
@@ -169,7 +190,7 @@ namespace EIDSS.Reports.BaseControls.Report
             switch (mode)
             {
                 case ReportArchiveMode.ActualOnly:
-                    fillTableAction((SqlConnection) manager.Connection, (SqlTransaction) manager.Transaction);
+                    fillTableAction((SqlConnection)manager.Connection, (SqlTransaction) manager.Transaction);
                     break;
                 case ReportArchiveMode.ArchiveOnly:
                     fillTableAction((SqlConnection) archiveManager.Connection, (SqlTransaction) archiveManager.Transaction);

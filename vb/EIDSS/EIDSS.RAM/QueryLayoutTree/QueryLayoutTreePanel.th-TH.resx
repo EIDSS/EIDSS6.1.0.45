@@ -121,7 +121,7 @@
     <value>ชื่อตั้งต้น</value>
   </data>
   <data name="columnNationalName.Caption" xml:space="preserve">
-    <value>ชื่อ (ภาษาอังกฤษ)</value>
+    <value>ชื่อคิวรี่ภาษาอังกฤษ (ชื่อเลย์เอ้าแสดงชือภาษาไทย)</value>
   </data>
   <data name="columnIsLayout.Caption" xml:space="preserve">
     <value>คือเลย์เอาท์</value>

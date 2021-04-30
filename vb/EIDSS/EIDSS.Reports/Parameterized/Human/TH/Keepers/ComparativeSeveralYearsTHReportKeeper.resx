@@ -117,235 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="CounterLookUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>463, 70</value>
-  </data>
-  <assembly alias="DevExpress.Utils.v15.1" name="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="CounterLookUp.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
-    <value>Combo</value>
-  </data>
-  <data name="CounterLookUp.Properties.Buttons1" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
-    <value>Delete</value>
-  </data>
-  <data name="CounterLookUp.Properties.NullText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CounterLookUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 20</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CounterLookUp.TabIndex" type="System.Int32, mscorlib">
-    <value>950</value>
-  </data>
-  <data name="&gt;&gt;CounterLookUp.Name" xml:space="preserve">
-    <value>CounterLookUp</value>
-  </data>
-  <data name="&gt;&gt;CounterLookUp.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;CounterLookUp.Parent" xml:space="preserve">
-    <value>pnlSettings</value>
-  </data>
-  <data name="&gt;&gt;CounterLookUp.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="CounterLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CounterLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="CounterLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>460, 56</value>
-  </data>
-  <data name="CounterLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 13</value>
-  </data>
-  <data name="CounterLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>187</value>
-  </data>
-  <data name="CounterLabel.Text" xml:space="preserve">
-    <value>Counter</value>
-  </data>
-  <data name="&gt;&gt;CounterLabel.Name" xml:space="preserve">
-    <value>CounterLabel</value>
-  </data>
-  <data name="&gt;&gt;CounterLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CounterLabel.Parent" xml:space="preserve">
-    <value>pnlSettings</value>
-  </data>
-  <data name="&gt;&gt;CounterLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ProvinceLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ProvinceLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ProvinceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>558, 11</value>
-  </data>
-  <data name="ProvinceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
-  </data>
-  <data name="ProvinceLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1004</value>
-  </data>
-  <data name="ProvinceLabel.Text" xml:space="preserve">
-    <value>Province</value>
-  </data>
-  <data name="ProvinceLabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;ProvinceLabel.Name" xml:space="preserve">
-    <value>ProvinceLabel</value>
-  </data>
-  <data name="&gt;&gt;ProvinceLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProvinceLabel.Parent" xml:space="preserve">
-    <value>pnlSettings</value>
-  </data>
-  <data name="&gt;&gt;ProvinceLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ToLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ToLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="ToLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ToLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 10</value>
-  </data>
-  <data name="ToLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 13</value>
-  </data>
-  <data name="ToLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1002</value>
-  </data>
-  <data name="ToLabel.Text" xml:space="preserve">
-    <value>To</value>
-  </data>
-  <data name="&gt;&gt;ToLabel.Name" xml:space="preserve">
-    <value>ToLabel</value>
-  </data>
-  <data name="&gt;&gt;ToLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToLabel.Parent" xml:space="preserve">
-    <value>pnlSettings</value>
-  </data>
-  <data name="&gt;&gt;ToLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="FromLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="FromLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="FromLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="FromLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 10</value>
-  </data>
-  <data name="FromLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
-  </data>
-  <data name="FromLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1001</value>
-  </data>
-  <data name="FromLabel.Text" xml:space="preserve">
-    <value>From</value>
-  </data>
-  <data name="&gt;&gt;FromLabel.Name" xml:space="preserve">
-    <value>FromLabel</value>
-  </data>
-  <data name="&gt;&gt;FromLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FromLabel.Parent" xml:space="preserve">
-    <value>pnlSettings</value>
-  </data>
-  <data name="&gt;&gt;FromLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="DiagnosesFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 56</value>
-  </data>
-  <data name="DiagnosesFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>386, 36</value>
-  </data>
-  <data name="DiagnosesFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>306</value>
-  </data>
-  <data name="&gt;&gt;DiagnosesFilter.Name" xml:space="preserve">
-    <value>DiagnosesFilter</value>
-  </data>
-  <data name="&gt;&gt;DiagnosesFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.HumStandardDiagnosisMultiFilter, EIDSS.Reports, Version=6.0.72.101, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;DiagnosesFilter.Parent" xml:space="preserve">
-    <value>pnlSettings</value>
-  </data>
-  <data name="&gt;&gt;DiagnosesFilter.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="ProvinceFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>463, 11</value>
-  </data>
-  <data name="ProvinceFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 39</value>
-  </data>
-  <data name="ProvinceFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>303</value>
-  </data>
-  <data name="&gt;&gt;ProvinceFilter.Name" xml:space="preserve">
-    <value>ProvinceFilter</value>
-  </data>
-  <data name="&gt;&gt;ProvinceFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.RegionFilter, EIDSS.Reports, Version=6.0.72.101, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ProvinceFilter.Parent" xml:space="preserve">
-    <value>pnlSettings</value>
-  </data>
-  <data name="&gt;&gt;ProvinceFilter.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="DistrictFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 10</value>
-  </data>
-  <data name="DistrictFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 39</value>
-  </data>
-  <data name="DistrictFilter.TabIndex" type="System.Int32, mscorlib">
-    <value>304</value>
-  </data>
-  <data name="&gt;&gt;DistrictFilter.Name" xml:space="preserve">
-    <value>DistrictFilter</value>
-  </data>
-  <data name="&gt;&gt;DistrictFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.DistrictFilter, EIDSS.Reports, Version=6.0.72.101, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;DistrictFilter.Parent" xml:space="preserve">
-    <value>pnlSettings</value>
-  </data>
-  <data name="&gt;&gt;DistrictFilter.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="YearToSpinEdit.EditValue" type="System.Decimal, mscorlib">
     <value>2030</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="YearToSpinEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>343, 26</value>
   </data>
@@ -372,7 +148,7 @@
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;YearToSpinEdit.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>0</value>
   </data>
   <data name="YearFromSpinEdit.EditValue" type="System.Decimal, mscorlib">
     <value>2030</value>
@@ -402,6 +178,230 @@
     <value>pnlSettings</value>
   </data>
   <data name="&gt;&gt;YearFromSpinEdit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CounterLookUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>463, 75</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v15.1" name="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="CounterLookUp.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Combo</value>
+  </data>
+  <data name="CounterLookUp.Properties.Buttons1" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v15.1">
+    <value>Delete</value>
+  </data>
+  <data name="CounterLookUp.Properties.NullText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CounterLookUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 20</value>
+  </data>
+  <data name="CounterLookUp.TabIndex" type="System.Int32, mscorlib">
+    <value>950</value>
+  </data>
+  <data name="&gt;&gt;CounterLookUp.Name" xml:space="preserve">
+    <value>CounterLookUp</value>
+  </data>
+  <data name="&gt;&gt;CounterLookUp.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LookUpEdit, DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CounterLookUp.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;CounterLookUp.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CounterLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CounterLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CounterLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>460, 60</value>
+  </data>
+  <data name="CounterLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 14</value>
+  </data>
+  <data name="CounterLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>187</value>
+  </data>
+  <data name="CounterLabel.Text" xml:space="preserve">
+    <value>Counter</value>
+  </data>
+  <data name="&gt;&gt;CounterLabel.Name" xml:space="preserve">
+    <value>CounterLabel</value>
+  </data>
+  <data name="&gt;&gt;CounterLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CounterLabel.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;CounterLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ProvinceLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProvinceLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ProvinceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>558, 11</value>
+  </data>
+  <data name="ProvinceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 14</value>
+  </data>
+  <data name="ProvinceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1004</value>
+  </data>
+  <data name="ProvinceLabel.Text" xml:space="preserve">
+    <value>Province</value>
+  </data>
+  <data name="ProvinceLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ProvinceLabel.Name" xml:space="preserve">
+    <value>ProvinceLabel</value>
+  </data>
+  <data name="&gt;&gt;ProvinceLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProvinceLabel.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;ProvinceLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ToLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ToLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
+  <data name="ToLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ToLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 10</value>
+  </data>
+  <data name="ToLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 14</value>
+  </data>
+  <data name="ToLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1002</value>
+  </data>
+  <data name="ToLabel.Text" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="&gt;&gt;ToLabel.Name" xml:space="preserve">
+    <value>ToLabel</value>
+  </data>
+  <data name="&gt;&gt;ToLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToLabel.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;ToLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="FromLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FromLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
+  <data name="FromLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="FromLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>231, 10</value>
+  </data>
+  <data name="FromLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 14</value>
+  </data>
+  <data name="FromLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1001</value>
+  </data>
+  <data name="FromLabel.Text" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="&gt;&gt;FromLabel.Name" xml:space="preserve">
+    <value>FromLabel</value>
+  </data>
+  <data name="&gt;&gt;FromLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FromLabel.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;FromLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="DiagnosesFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 59</value>
+  </data>
+  <data name="DiagnosesFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>386, 39</value>
+  </data>
+  <data name="DiagnosesFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>306</value>
+  </data>
+  <data name="&gt;&gt;DiagnosesFilter.Name" xml:space="preserve">
+    <value>DiagnosesFilter</value>
+  </data>
+  <data name="&gt;&gt;DiagnosesFilter.Type" xml:space="preserve">
+    <value>EIDSS.Reports.BaseControls.Filters.HumStandardDiagnosisMultiFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;DiagnosesFilter.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;DiagnosesFilter.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ProvinceFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>463, 9</value>
+  </data>
+  <data name="ProvinceFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 39</value>
+  </data>
+  <data name="ProvinceFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>303</value>
+  </data>
+  <data name="&gt;&gt;ProvinceFilter.Name" xml:space="preserve">
+    <value>ProvinceFilter</value>
+  </data>
+  <data name="&gt;&gt;ProvinceFilter.Type" xml:space="preserve">
+    <value>EIDSS.Reports.BaseControls.Filters.RegionFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ProvinceFilter.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;ProvinceFilter.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="DistrictFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 9</value>
+  </data>
+  <data name="DistrictFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 39</value>
+  </data>
+  <data name="DistrictFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>304</value>
+  </data>
+  <data name="&gt;&gt;DistrictFilter.Name" xml:space="preserve">
+    <value>DistrictFilter</value>
+  </data>
+  <data name="&gt;&gt;DistrictFilter.Type" xml:space="preserve">
+    <value>EIDSS.Reports.BaseControls.Filters.DistrictFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;DistrictFilter.Parent" xml:space="preserve">
+    <value>pnlSettings</value>
+  </data>
+  <data name="&gt;&gt;DistrictFilter.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="pnlSettings.Size" type="System.Drawing.Size, System.Drawing">
@@ -419,8 +419,11 @@
   <data name="&gt;&gt;pnlSettings.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="GenerateReportButton.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
   <data name="GenerateReportButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 67</value>
+    <value>650, 73</value>
   </data>
   <data name="GenerateReportButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 23</value>
@@ -441,16 +444,16 @@
     <value>736, -3</value>
   </data>
   <data name="ceUseArchiveData.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceDisabled.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceFocused.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceReadOnly.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.Caption" xml:space="preserve">
     <value>CheckEdit</value>
@@ -476,19 +479,19 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="ComparativeSeveralYearsTHReportKeeper.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="&gt;&gt;bvResourceManagerChanger1.Name" xml:space="preserve">
     <value>bvResourceManagerChanger1</value>
   </data>
   <data name="&gt;&gt;bvResourceManagerChanger1.Type" xml:space="preserve">
-    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.0.72.101, Culture=neutral, PublicKeyToken=null</value>
+    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ComparativeSeveralYearsTHReportKeeper</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Keeper.BaseReportKeeper, EIDSS.Reports, Version=6.0.72.101, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Keeper.BaseReportKeeper, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

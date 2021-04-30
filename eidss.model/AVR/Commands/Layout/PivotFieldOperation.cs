@@ -7,6 +7,6 @@
         DeleteCopy,
         AddMissedValues,
         EditMissedValues,
-        DeleteMissedValues,
+        DeleteMissedValues
     }
 }

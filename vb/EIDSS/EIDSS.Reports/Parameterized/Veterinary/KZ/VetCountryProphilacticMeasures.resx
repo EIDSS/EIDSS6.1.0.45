@@ -292,9 +292,6 @@
   <metadata name="xrTable1.Name" xml:space="preserve">
     <value>xrTable1</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>Russian (Russia)</value>
-  </metadata>
   <metadata name="m_BaseAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>137, 17</value>
   </metadata>

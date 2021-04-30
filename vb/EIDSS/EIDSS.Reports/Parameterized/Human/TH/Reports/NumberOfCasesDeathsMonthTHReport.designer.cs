@@ -101,12 +101,18 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             this.HeaderCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.HeaderRow3 = new DevExpress.XtraReports.UI.XRTableRow();
             this.HeaderCell3 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrlReportMode4Header = new DevExpress.XtraReports.UI.XRLabel();
+            this.winControlContainer1 = new DevExpress.XtraReports.UI.WinControlContainer();
+            this.baseDetailPanel_NextNumbers1 = new eidss.winclient.Schema.BaseDetailPanel_NextNumbers();
+            this.xrlReportMode12Header = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrlReportMode3Header = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.SignatureTable = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow7 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.DateTimeCell = new DevExpress.XtraReports.UI.XRTableCell();
             this.OrganizationNameCell = new DevExpress.XtraReports.UI.XRTableCell();
+            this.MinistryOfPublicHealthCell = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_BaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBaseHeader)).BeginInit();
@@ -119,12 +125,15 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             // xrTable4
             // 
+            resources.ApplyResources(this.xrTable4, "xrTable4");
             this.xrTable4.StylePriority.UseBorders = false;
             this.xrTable4.StylePriority.UseFont = false;
             this.xrTable4.StylePriority.UsePadding = false;
             // 
             // cellLanguage
             // 
+            resources.ApplyResources(this.cellLanguage, "cellLanguage");
+            this.cellLanguage.StylePriority.UseFont = false;
             this.cellLanguage.StylePriority.UseTextAlignment = false;
             // 
             // lblReportName
@@ -149,14 +158,23 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             // PageFooter
             // 
+            resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.StylePriority.UseBorders = false;
             // 
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.ReportHeaderTable,
-            this.HeaderTable});
+            this.HeaderTable,
+            this.xrlReportMode12Header,
+            this.xrlReportMode3Header,
+            this.xrlReportMode4Header,
+            this.winControlContainer1});
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
+            this.ReportHeader.Controls.SetChildIndex(this.winControlContainer1, 0);
+            this.ReportHeader.Controls.SetChildIndex(this.xrlReportMode4Header, 0);
+            this.ReportHeader.Controls.SetChildIndex(this.xrlReportMode3Header, 0);
+            this.ReportHeader.Controls.SetChildIndex(this.xrlReportMode12Header, 0);
             this.ReportHeader.Controls.SetChildIndex(this.HeaderTable, 0);
             this.ReportHeader.Controls.SetChildIndex(this.tableBaseHeader, 0);
             this.ReportHeader.Controls.SetChildIndex(this.ReportHeaderTable, 0);
@@ -165,25 +183,26 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             resources.ApplyResources(this.xrPageInfo1, "xrPageInfo1");
             this.xrPageInfo1.StylePriority.UseBorders = false;
+            this.xrPageInfo1.StylePriority.UseFont = false;
             // 
             // cellReportHeader
             // 
+            resources.ApplyResources(this.cellReportHeader, "cellReportHeader");
             this.cellReportHeader.StylePriority.UseBorders = false;
             this.cellReportHeader.StylePriority.UseFont = false;
             this.cellReportHeader.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.cellReportHeader, "cellReportHeader");
             // 
             // cellBaseSite
             // 
+            resources.ApplyResources(this.cellBaseSite, "cellBaseSite");
             this.cellBaseSite.StylePriority.UseBorders = false;
             this.cellBaseSite.StylePriority.UseFont = false;
             this.cellBaseSite.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.cellBaseSite, "cellBaseSite");
             // 
             // cellBaseCountry
             // 
-            this.cellBaseCountry.StylePriority.UseFont = false;
             resources.ApplyResources(this.cellBaseCountry, "cellBaseCountry");
+            this.cellBaseCountry.StylePriority.UseFont = false;
             // 
             // cellBaseLeftHeader
             // 
@@ -228,12 +247,12 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             this.xrTableCell6,
             this.xrTableCell14,
             this.xrTableCell4});
+            resources.ApplyResources(this.rowHeader1, "rowHeader1");
             this.rowHeader1.Name = "rowHeader1";
             this.rowHeader1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.rowHeader1.StylePriority.UseFont = false;
             this.rowHeader1.StylePriority.UsePadding = false;
             this.rowHeader1.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.rowHeader1, "rowHeader1");
             // 
             // cellDateTime
             // 
@@ -568,6 +587,7 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             this.DetailReport.DataAdapter = this.m_Adapter;
             this.DetailReport.DataMember = "NumberOfCasesTable";
             this.DetailReport.DataSource = this.m_DataSet;
+            resources.ApplyResources(this.DetailReport, "DetailReport");
             this.DetailReport.Level = 0;
             this.DetailReport.Name = "DetailReport";
             // 
@@ -620,12 +640,12 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             this.xrTableCell54,
             this.xrTableCell67,
             this.xrTableCell30});
+            resources.ApplyResources(this.xrTableRow1, "xrTableRow1");
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrTableRow1.StylePriority.UseFont = false;
             this.xrTableRow1.StylePriority.UsePadding = false;
             this.xrTableRow1.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.xrTableRow1, "xrTableRow1");
             // 
             // ReportingAreaCell
             // 
@@ -908,8 +928,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // xrLine2
             // 
             this.xrLine2.BorderWidth = 0F;
-            this.xrLine2.LineWidth = 0;
             resources.ApplyResources(this.xrLine2, "xrLine2");
+            this.xrLine2.LineWidth = 0;
             this.xrLine2.Name = "xrLine2";
             this.xrLine2.StylePriority.UseBorderWidth = false;
             // 
@@ -936,8 +956,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             this.HeaderRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.HeaderCell1});
-            this.HeaderRow1.Name = "HeaderRow1";
             resources.ApplyResources(this.HeaderRow1, "HeaderRow1");
+            this.HeaderRow1.Name = "HeaderRow1";
             // 
             // HeaderCell1
             // 
@@ -949,8 +969,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             this.HeaderRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.HeaderCell2});
-            this.HeaderRow2.Name = "HeaderRow2";
             resources.ApplyResources(this.HeaderRow2, "HeaderRow2");
+            this.HeaderRow2.Name = "HeaderRow2";
             // 
             // HeaderCell2
             // 
@@ -962,14 +982,50 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // 
             this.HeaderRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.HeaderCell3});
-            this.HeaderRow3.Name = "HeaderRow3";
             resources.ApplyResources(this.HeaderRow3, "HeaderRow3");
+            this.HeaderRow3.Name = "HeaderRow3";
             // 
             // HeaderCell3
             // 
             resources.ApplyResources(this.HeaderCell3, "HeaderCell3");
             this.HeaderCell3.Name = "HeaderCell3";
             this.HeaderCell3.StylePriority.UseFont = false;
+            // 
+            // xrlReportMode4Header
+            // 
+            resources.ApplyResources(this.xrlReportMode4Header, "xrlReportMode4Header");
+            this.xrlReportMode4Header.Name = "xrlReportMode4Header";
+            this.xrlReportMode4Header.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrlReportMode4Header.StylePriority.UseFont = false;
+            // 
+            // winControlContainer1
+            // 
+            resources.ApplyResources(this.winControlContainer1, "winControlContainer1");
+            this.winControlContainer1.Name = "winControlContainer1";
+            this.winControlContainer1.WinControl = this.baseDetailPanel_NextNumbers1;
+            // 
+            // baseDetailPanel_NextNumbers1
+            // 
+            resources.ApplyResources(this.baseDetailPanel_NextNumbers1, "baseDetailPanel_NextNumbers1");
+            this.baseDetailPanel_NextNumbers1.FormID = "C08";
+            this.baseDetailPanel_NextNumbers1.HelpTopicID = "";
+            this.baseDetailPanel_NextNumbers1.Icon = null;
+            this.baseDetailPanel_NextNumbers1.Name = "baseDetailPanel_NextNumbers1";
+            this.baseDetailPanel_NextNumbers1.Sizable = false;
+            // 
+            // xrlReportMode12Header
+            // 
+            resources.ApplyResources(this.xrlReportMode12Header, "xrlReportMode12Header");
+            this.xrlReportMode12Header.Name = "xrlReportMode12Header";
+            this.xrlReportMode12Header.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrlReportMode12Header.StylePriority.UseFont = false;
+            // 
+            // xrlReportMode3Header
+            // 
+            resources.ApplyResources(this.xrlReportMode3Header, "xrlReportMode3Header");
+            this.xrlReportMode3Header.Name = "xrlReportMode3Header";
+            this.xrlReportMode3Header.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrlReportMode3Header.StylePriority.UseFont = false;
             // 
             // ReportFooter
             // 
@@ -994,9 +1050,10 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             this.xrTableRow7.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell1,
             this.DateTimeCell,
-            this.OrganizationNameCell});
-            this.xrTableRow7.Name = "xrTableRow7";
+            this.OrganizationNameCell,
+            this.MinistryOfPublicHealthCell});
             resources.ApplyResources(this.xrTableRow7, "xrTableRow7");
+            this.xrTableRow7.Name = "xrTableRow7";
             // 
             // xrTableCell1
             // 
@@ -1014,11 +1071,22 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             // OrganizationNameCell
             // 
             this.OrganizationNameCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "sprepGetBaseParameters.SiteName", "{0}, Ministry of Public Health")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "sprepGetBaseParameters.SiteName")});
             resources.ApplyResources(this.OrganizationNameCell, "OrganizationNameCell");
             this.OrganizationNameCell.Name = "OrganizationNameCell";
+            this.OrganizationNameCell.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 0, 2, 2, 100F);
             this.OrganizationNameCell.StylePriority.UseFont = false;
+            this.OrganizationNameCell.StylePriority.UsePadding = false;
             this.OrganizationNameCell.StylePriority.UseTextAlignment = false;
+            // 
+            // MinistryOfPublicHealthCell
+            // 
+            resources.ApplyResources(this.MinistryOfPublicHealthCell, "MinistryOfPublicHealthCell");
+            this.MinistryOfPublicHealthCell.Name = "MinistryOfPublicHealthCell";
+            this.MinistryOfPublicHealthCell.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 2, 2, 100F);
+            this.MinistryOfPublicHealthCell.StylePriority.UseFont = false;
+            this.MinistryOfPublicHealthCell.StylePriority.UsePadding = false;
+            this.MinistryOfPublicHealthCell.StylePriority.UseTextAlignment = false;
             // 
             // NumberOfCasesDeathsMonthTHReport
             // 
@@ -1029,6 +1097,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
             this.DetailReport,
             this.ReportHeader,
             this.ReportFooter});
+            this.DataAdapter = this.m_Adapter;
+            resources.ApplyResources(this, "$this");
             this.Version = "15.1";
             this.Controls.SetChildIndex(this.ReportFooter, 0);
             this.Controls.SetChildIndex(this.ReportHeader, 0);
@@ -1142,6 +1212,12 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell67;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell30;
         private DevExpress.XtraReports.UI.XRTableCell OrganizationNameCell;
+        private DevExpress.XtraReports.UI.XRLabel xrlReportMode12Header;
+        private DevExpress.XtraReports.UI.WinControlContainer winControlContainer1;
+        private eidss.winclient.Schema.BaseDetailPanel_NextNumbers baseDetailPanel_NextNumbers1;
+        private DevExpress.XtraReports.UI.XRLabel xrlReportMode3Header;
+        private DevExpress.XtraReports.UI.XRLabel xrlReportMode4Header;
+        private DevExpress.XtraReports.UI.XRTableCell MinistryOfPublicHealthCell;
 
 
     }

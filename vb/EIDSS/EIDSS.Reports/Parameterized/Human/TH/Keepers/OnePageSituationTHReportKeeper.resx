@@ -119,13 +119,13 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ThaiZoneFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ThaiZoneFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>531, 10</value>
+    <value>543, 9</value>
   </data>
   <data name="ThaiZoneFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 36</value>
+    <value>310, 39</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ThaiZoneFilter.TabIndex" type="System.Int32, mscorlib">
@@ -135,7 +135,7 @@
     <value>ThaiZoneFilter</value>
   </data>
   <data name="&gt;&gt;ThaiZoneFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.ThaiZonesSingleFilter, EIDSS.Reports, Version=6.1.0.29, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Filters.ThaiZonesSingleFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ThaiZoneFilter.Parent" xml:space="preserve">
     <value>pnlSettings</value>
@@ -144,13 +144,13 @@
     <value>0</value>
   </data>
   <data name="DiagnosesFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="DiagnosesFilter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 10</value>
+    <value>216, 9</value>
   </data>
   <data name="DiagnosesFilter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 36</value>
+    <value>310, 39</value>
   </data>
   <data name="DiagnosesFilter.TabIndex" type="System.Int32, mscorlib">
     <value>1001</value>
@@ -159,7 +159,7 @@
     <value>DiagnosesFilter</value>
   </data>
   <data name="&gt;&gt;DiagnosesFilter.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Filters.HumSingleDiagnosisFilter, EIDSS.Reports, Version=6.1.0.29, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Filters.HumSingleDiagnosisFilter, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;DiagnosesFilter.Parent" xml:space="preserve">
     <value>pnlSettings</value>
@@ -168,7 +168,7 @@
     <value>1</value>
   </data>
   <data name="pnlSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>868, 103</value>
+    <value>868, 113</value>
   </data>
   <data name="&gt;&gt;pnlSettings.Name" xml:space="preserve">
     <value>pnlSettings</value>
@@ -183,7 +183,10 @@
     <value>0</value>
   </data>
   <data name="ceUseArchiveData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 59</value>
+    <value>31, 64</value>
+  </data>
+  <data name="ceUseArchiveData.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="&gt;&gt;ceUseArchiveData.Name" xml:space="preserve">
     <value>ceUseArchiveData</value>
@@ -197,8 +200,14 @@
   <data name="&gt;&gt;ceUseArchiveData.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="GenerateReportButton.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
   <data name="GenerateReportButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>687, 57</value>
+    <value>687, 61</value>
+  </data>
+  <data name="GenerateReportButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 25</value>
   </data>
   <data name="&gt;&gt;GenerateReportButton.Name" xml:space="preserve">
     <value>GenerateReportButton</value>
@@ -218,19 +227,25 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="OnePageSituationTHReportKeeper.Appearance.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.25pt</value>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>6, 14</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>872, 818</value>
   </data>
   <data name="&gt;&gt;bvResourceManagerChanger1.Name" xml:space="preserve">
     <value>bvResourceManagerChanger1</value>
   </data>
   <data name="&gt;&gt;bvResourceManagerChanger1.Type" xml:space="preserve">
-    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.1.0.29, Culture=neutral, PublicKeyToken=null</value>
+    <value>bv.common.Resources.BvResourceManagerChanger, bv.common, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>OnePageSituationTHReportKeeper</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EIDSS.Reports.BaseControls.Keeper.BaseReportKeeper, EIDSS.Reports, Version=6.1.0.29, Culture=neutral, PublicKeyToken=null</value>
+    <value>EIDSS.Reports.BaseControls.Keeper.BaseReportKeeper, EIDSS.Reports, Version=6.1.0.38, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

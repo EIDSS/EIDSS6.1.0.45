@@ -64,6 +64,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(ComparativeTwoYearsAZReportKeeper), out resources);
             // Form Is Localizable: True
@@ -153,6 +155,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // ComparativeTwoYearsAZReportKeeper
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ComparativeTwoYearsAZReportKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.HeaderHeight = 130;
             this.Name = "ComparativeTwoYearsAZReportKeeper";
             this.pnlSettings.ResumeLayout(false);

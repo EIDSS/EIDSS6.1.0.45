@@ -131,7 +131,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="DateFieldsLookUp.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="&gt;&gt;DateFieldsLookUp.Name" xml:space="preserve">
     <value>DateFieldsLookUp</value>
@@ -146,7 +146,7 @@
     <value>10</value>
   </data>
   <data name="regionFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="regionFilter.Location" type="System.Drawing.Point, System.Drawing">
     <value>31, 99</value>
@@ -327,16 +327,16 @@
     <value>25</value>
   </data>
   <data name="ceUseArchiveData.Properties.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceDisabled.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceFocused.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="ceUseArchiveData.Properties.AppearanceReadOnly.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="&gt;&gt;ceUseArchiveData.Name" xml:space="preserve">
     <value>ceUseArchiveData</value>
@@ -357,7 +357,7 @@
     <value>True</value>
   </metadata>
   <data name="ILISyndromicAberrationKeeper.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+    <value>Arial, 8.25pt</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>

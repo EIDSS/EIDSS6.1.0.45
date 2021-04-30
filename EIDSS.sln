@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DB49D6F0-0E83-4269-9432-6560FFB0287A}"
 	ProjectSection(SolutionItems) = preProject
@@ -425,15 +425,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "az-L", "az-L", "{4359AA23-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "En", "En", "{F723C562-64E3-49FE-AE5D-617F21AB4710}"
 	ProjectSection(SolutionItems) = preProject
+	    Paper Forms\En\General Case Investigation Form IQ.pdf = Paper Forms\En\General Case Investigation Form IQ.pdf
 		Paper Forms\En\General Case Investigation Form.pdf = Paper Forms\En\General Case Investigation Form.pdf
+		Paper Forms\En\Investigation Form For Avian Disease Outbreaks GG.pdf = Paper Forms\En\Investigation Form For Avian Disease Outbreaks GG.pdf
 		Paper Forms\En\Investigation Form For Avian Disease Outbreaks.pdf = Paper Forms\En\Investigation Form For Avian Disease Outbreaks.pdf
+		Paper Forms\En\Investigation Form For Livestock Disease Outbreaks GG.pdf = Paper Forms\En\Investigation Form For Livestock Disease Outbreaks GG.pdf
 		Paper Forms\En\Investigation Form For Livestock Disease Outbreaks.pdf = Paper Forms\En\Investigation Form For Livestock Disease Outbreaks.pdf
+		Paper Forms\En\Urgent Notification Ukraine EN.pdf = Paper Forms\En\Urgent Notification Ukraine EN.pdf
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ka", "ka", "{469C095D-BFF8-474E-ACC3-781A94A95522}"
 	ProjectSection(SolutionItems) = preProject
 		Paper Forms\ka\General Case Investigation Form.pdf = Paper Forms\ka\General Case Investigation Form.pdf
+		Paper Forms\ka\Investigation Form For Avian Disease Outbreaks GG.pdf = Paper Forms\ka\Investigation Form For Avian Disease Outbreaks GG.pdf
 		Paper Forms\ka\Investigation Form For Avian Disease Outbreaks.pdf = Paper Forms\ka\Investigation Form For Avian Disease Outbreaks.pdf
+		Paper Forms\ka\Investigation Form For Livestock Disease Outbreaks GG.pdf = Paper Forms\ka\Investigation Form For Livestock Disease Outbreaks GG.pdf
 		Paper Forms\ka\Investigation Form For Livestock Disease Outbreaks.pdf = Paper Forms\ka\Investigation Form For Livestock Disease Outbreaks.pdf
 	EndProjectSection
 EndProject
@@ -506,7 +512,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eidss.main", "eidss.main\ei
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eidss.webclient", "eidss.webclient\eidss.webclient.csproj", "{E7DA5B3E-72DC-43E1-B02C-926E7954AADE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeospatialServices", "..\Utils\GeospatialServices\GeospatialServices.csproj", "{4FD433D5-7B79-4879-85E8-74B4F977C3F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeospatialServices", "GeospatialServices\GeospatialServices.csproj", "{4FD433D5-7B79-4879-85E8-74B4F977C3F3}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "bvcommon", "vb\Shared\bv_common\bvcommon.vbproj", "{BA2844A8-F629-4B02-ACD6-B60063E4D27F}"
 EndProject
@@ -599,13 +605,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bv.culture.registrator", "bv.culture.registrator\bv.culture.registrator.csproj", "{EB9DDBB3-777F-4186-9DC0-5E09EE0F93C1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eidss.model.customization", "eidss.model.customization\eidss.model.customization.csproj", "{14536936-3E5C-466E-82E4-22ED27B1FF35}"
-	ProjectSection(ProjectDependencies) = postProject
-		{2A4432B2-A686-45F8-9B66-E3BE927656A3} = {2A4432B2-A686-45F8-9B66-E3BE927656A3}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bv.designtime.executable", "bv.designtime.executable\bv.designtime.executable.csproj", "{84AE42FA-C37E-4378-80B5-52C7DB126119}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hmis.Contracts", "Hmis.Contracts\Hmis.Contracts.csproj", "{2A4432B2-A686-45F8-9B66-E3BE927656A3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "uk", "uk", "{FE840092-8224-4D3B-A673-746A204311AA}"
+	ProjectSection(SolutionItems) = preProject
+		Paper Forms\uk\General Case Investigation Form.pdf = Paper Forms\uk\General Case Investigation Form.pdf
+		Paper Forms\uk\Investigation Form For Avian Disease Outbreaks.pdf = Paper Forms\uk\Investigation Form For Avian Disease Outbreaks.pdf
+		Paper Forms\uk\Investigation Form For Livestock Disease Outbreaks.pdf = Paper Forms\uk\Investigation Form For Livestock Disease Outbreaks.pdf
+		Paper Forms\uk\Urgent Notification Ukraine UA.pdf = Paper Forms\uk\Urgent Notification Ukraine UA.pdf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -837,10 +846,6 @@ Global
 		{14536936-3E5C-466E-82E4-22ED27B1FF35}.Release|Any CPU.Build.0 = Release|Any CPU
 		{84AE42FA-C37E-4378-80B5-52C7DB126119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{84AE42FA-C37E-4378-80B5-52C7DB126119}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A4432B2-A686-45F8-9B66-E3BE927656A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A4432B2-A686-45F8-9B66-E3BE927656A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A4432B2-A686-45F8-9B66-E3BE927656A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A4432B2-A686-45F8-9B66-E3BE927656A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -872,53 +877,6 @@ Global
 		{2ACB0BD9-6769-4A85-AD12-B96D8AB5DDBA} = {50040156-1545-43F7-B75F-65D856A81807}
 		{94FFC5A3-B298-4443-9CD6-BA984217BDC5} = {0FF5372B-B9C2-4293-A321-BD7270DE7360}
 		{5685C9AD-85D7-45C9-9D0C-3A269D489D08} = {DB49D6F0-0E83-4269-9432-6560FFB0287A}
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_ExcelExportMode = MultipleSheets
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 10
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://192.255.51.86:8080/tfs/eidss
-		SccProjectUniqueName0 = EIDSS.Reports.Service\\EIDSS.Reports.Service.csproj
-		SccAuxPath0 = http://192.255.51.86:8080/tfs/eidss
-		SccLocalPath0 = EIDSS.Reports.Service
-		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName1 = eidss.webclient\\eidss.webclient.csproj
-		SccAuxPath1 = http://192.255.51.86:8080/tfs/eidss
-		SccLocalPath1 = eidss.webclient
-		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName2 = vb\\EIDSS\\EIDSS.Reports\\EIDSS.Reports.csproj
-		SccAuxPath2 = http://192.255.51.86:8080/tfs/eidss
-		SccLocalPath2 = vb\\EIDSS\\EIDSS.Reports
-		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName3 = bv.tests\\bv.tests.csproj
-		SccAuxPath3 = http://192.255.51.86:8080/tfs/eidss
-		SccLocalPath3 = bv.tests
-		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName4 = ..\\Utils\\GeospatialServices\\GeospatialServices.csproj
-		SccAuxPath4 = http://192.255.51.86:8080/tfs/eidss
-		SccLocalPath4 = ..\\Utils\\GeospatialServices
-		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName5 = eidss.avr.mweb\\eidss.avr.mweb.csproj
-		SccAuxPath5 = http://192.255.51.86:8080/tfs/eidss
-		SccLocalPath5 = eidss.avr.mweb
-		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName6 = bv.WinTests\\bv.WinTests.csproj
-		SccAuxPath6 = http://192.255.51.86:8080/tfs/eidss
-		SccLocalPath6 = bv.WinTests
-		SccProvider6 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName7 = eidss.mobileclient\\eidss.mobileclient.csproj
-		SccAuxPath7 = http://192.255.51.86:8080/tfs/eidss
-		SccLocalPath7 = eidss.mobileclient
-		SccProvider7 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName8 = eidss.smartphone.web\\eidss.smartphone.web.csproj
-		SccAuxPath8 = http://192.255.51.86:8080/tfs/eidss
-		SccLocalPath8 = eidss.smartphone.web
-		SccProvider8 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName9 = eidss.openapi.web\\eidss.openapi.web.csproj
-		SccAuxPath9 = http://192.255.51.86:8080/tfs/eidss
-		SccLocalPath9 = eidss.openapi.web
-		SccProvider9 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		{FE840092-8224-4D3B-A673-746A204311AA} = {50040156-1545-43F7-B75F-65D856A81807}
 	EndGlobalSection
 EndGlobal

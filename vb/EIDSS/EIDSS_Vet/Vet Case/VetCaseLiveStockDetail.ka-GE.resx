@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="$this.Caption" xml:space="preserve">
-    <value>შინაურ ცხოველთა დაავადების კვლევის დგარ ფორმა</value>
+    <value>ცხოველის დაავადების კვლევის ფორმა</value>
   </data>
   <data name="AnimalsPage.Text" xml:space="preserve">
     <value>ცხოველები</value>
@@ -151,7 +151,7 @@
     <value>გააკეთეთ სხვა კომენტარი ან ეპიდაფეთქების მოკლე აღწერა (კონტამინაციის შესაძლო წყარო, ეპიდაფეთქების გავრცელება და რომელიმე სხვა ტერიტორია, რომელიც შესაძლოა ინფიცირებული იყოს, კონტროლის ზომები, ადამიანთა კონტაქტი / ექსპოზიცია და სხვა).</value>
   </data>
   <data name="MenuItem1.Text" xml:space="preserve">
-    <value>შინაური ცხოველის კვლევის ფორმა</value>
+    <value>ცხოველის დაავადების კვლევის ფორმა</value>
   </data>
   <data name="PensideTestPage.Text" xml:space="preserve">
     <value>ექსპრეს ტესტები</value>

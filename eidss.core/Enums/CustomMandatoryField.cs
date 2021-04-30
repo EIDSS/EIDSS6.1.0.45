@@ -63,6 +63,10 @@ namespace eidss.model.Enums
         HumanCase_NotificationDate = 54,
         HumanCase_NotificationReceivedByName = 55,
         HumanCase_NotificationReceivedByFacility = 56,
-        HumanCase_Hospitalization = 57
+        HumanCase_Hospitalization = 57,
+        HumanCase_HospitalizationPlace = 58,
+        HumanCase_HospitalizationDate = 59,
+        HumanCase_SpecimenCollected = 60,
+        HumanCaseSample_LocalID = 61
     }
 }

@@ -7,6 +7,7 @@ using bv.model.BLToolkit;
 using bv.model.Model.Core;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.UI;
+using eidss.model.Reports.Common;
 using eidss.model.Reports.TH;
 using EIDSS.Reports.BaseControls.Report;
 using EIDSS.Reports.Factory;
@@ -44,6 +45,7 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
                 m_Adapter.Transaction = transaction;
                 m_Adapter.CommandTimeout = CommandTimeout;
 
+                var districtsXml = FilterHelper.GetXmlFromList(model.DistrictCheckedItems);
                 m_Adapter.Fill(m_DataSet.NumberOfCasesTable,
                     model.Language,
                     model.Year,
@@ -51,8 +53,9 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
                     model.Regions.ToXml(),
                     model.Zones.ToXml(),
                     model.Provinces.ToXml(),
-                    model.Districts.ToXml(),
-                    model.CaseClassification);
+                    districtsXml,
+                    model.CaseClassification,
+                    model.ReportModeIndex);
             });
 
             FillDataTableWithArchive(action,
@@ -69,6 +72,25 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Reports
 
         private void BindHeader(NumberOfCasesDeathsMonthTHModel model)
         {
+
+            if ((model.ReportModeIndex == 1) || (model.ReportModeIndex == 2))
+            {
+                HeaderCell1.Text = xrlReportMode12Header.Text;
+            }
+            else if (model.ReportModeIndex == 3)
+            {
+                HeaderCell1.Text = xrlReportMode3Header.Text;
+
+            }
+            else if (model.ReportModeIndex == 4)
+            {
+                HeaderCell1.Text = xrlReportMode4Header.Text;
+            }
+            else
+            {
+                HeaderCell1.Text = String.Empty;
+            }
+
             HeaderCell2.Text = string.Format(HeaderCell2.Text, model.Year+ DeltaYear);
 
             if (model.Diagnoses.CheckedItems.Length == 0)

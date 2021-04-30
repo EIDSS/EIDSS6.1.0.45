@@ -179,7 +179,7 @@ namespace eidss.avr.mweb.Utils
                 settings.PivotCustomizationExtensionSettings.Width = Unit.Percentage(100);
             }
             settings.OptionsCustomization.AllowPrefilter = false;
-            settings.Prefilter.Enabled = model.PivotSettings.ApplyFilter;
+            settings.Prefilter.Enabled = false;
             settings.OptionsView.EnableFilterControlPopupMenuScrolling = true;
             settings.Prefilter.Criteria = CriteriaOperator.TryParse(model.PivotSettings.FilterCriteriaString);
             settings.Styles.PrefilterBuilderCloseButtonStyle.CssClass = "invisible";
@@ -252,7 +252,6 @@ namespace eidss.avr.mweb.Utils
                 pivotGrid.HeaderTemplate = new HeaderTemplate(model);
                 pivotGrid.EndUpdate();
             };
-
             
             settings.BeforeGetCallbackResult = (sender, e) =>
             {
@@ -263,7 +262,7 @@ namespace eidss.avr.mweb.Utils
                     CriteriaOperator criteria = CriteriaOperator.TryParse(model.PivotSettings.FilterCriteriaString);
                     criteria = ValidatePrefilterCriteria(criteria);
                     pivotGrid.Prefilter.Criteria = criteria;
-                    //model.PivotSettings.InitialFilterCriteriaString = pivotGrid.Prefilter.CriteriaString;
+                    
                     model.ShowPrefilter = false;
                     model.ShowingPrefilter = true;
                     return;
@@ -272,7 +271,7 @@ namespace eidss.avr.mweb.Utils
                 pivotGrid.BeginUpdate();
                 try
                 {
-                    setPrefilterEnabled(pivotGrid, model.PivotSettings.ApplyFilter);
+                    pivotGrid.Prefilter.Enabled = false;
                     UpdatePivotGridField(pivotGrid, model);
 
                     model.PivotSettings.UpdatedField = null;
@@ -283,8 +282,7 @@ namespace eidss.avr.mweb.Utils
                         model.PivotSettings.UpdateGroupInterval = false;
                     }
                     SetTotalSettings(pivotGrid.OptionsView, model.PivotSettings);
-                    //if (pivotGrid.OptionsView.ShowHorizontalScrollBar != model.PivotSettings.FreezeRowHeaders)
-                    //{
+
                     pivotGrid.OptionsView.HorizontalScrollBarMode = model.PivotSettings.FreezeRowHeaders ? ScrollBarMode.Auto : ScrollBarMode.Hidden;
                     if (model.PivotSettings.FreezeRowHeaders)
                         pivotGrid.Width = Unit.Percentage(99);
@@ -419,17 +417,14 @@ namespace eidss.avr.mweb.Utils
             settings.CustomCellStyle = (sender, args) =>
             {
                 var pivotGrid = (MVCxPivotGrid)sender;
-                //pivotGrid.HeaderTemplate = new HeaderTemplate();
             };
             settings.HtmlCellPrepared = (sender, args) =>
             {
                 var pivotGrid = (MVCxPivotGrid)sender;
-                //pivotGrid.HeaderTemplate = new HeaderTemplate();
             };
             settings.HtmlFieldValuePrepared = (sender, args) =>
             {
                 var pivotGrid = (MVCxPivotGrid)sender;
-                //pivotGrid.HeaderTemplate = new HeaderTemplate();
             };
             settings.GridLayout = (sender, args) =>
             {
@@ -495,14 +490,6 @@ namespace eidss.avr.mweb.Utils
             return settings;
         }
 
-        private static void setPrefilterEnabled(MVCxPivotGrid pivotGrid, bool enabled)
-        {
-            //m_SkipFilterChange = true;
-            if (pivotGrid.Prefilter.Enabled != enabled)
-                pivotGrid.Prefilter.Enabled = enabled;
-            //m_SkipFilterChange = false;
-
-        }
 
         private static void PopupMenuCreated(object sender, PivotPopupMenuCreatedEventArgs e)
         {
@@ -602,27 +589,24 @@ namespace eidss.avr.mweb.Utils
 
         private static void PrefilterCriteriaChanged(object sender, EventArgs e)
         {
-            //if (m_SkipFilterChange)
-            //    return;
             var pivotGrid = (MVCxPivotGrid)sender;
             if (pivotGrid.IsCallback || pivotGrid.IsPrefilterPopupVisible)
                 return;
             AvrPivotGridModel model = GetModelFromSession(pivotGrid.Request);
-            if (model.PivotSettings.FilterCriteriaString != pivotGrid.Prefilter.CriteriaString)
-            {
-                model.PivotSettings.FilterCriteriaString = pivotGrid.Prefilter.CriteriaString;
-                if (!string.IsNullOrEmpty(pivotGrid.Prefilter.CriteriaString))
-                {                    
-                    model.PivotSettings.ApplyFilter = true;
-                    pivotGrid.JSProperties["cpApplyFilter"] = true;
-                }
-                setPrefilterEnabled(pivotGrid, model.PivotSettings.ApplyFilter);
-                model.PivotSettings.HasChanges = true;
-                FillEmptyValuesInDataArea(model);
 
-                pivotGrid.JSProperties["cpNeedCallback"] = true;
-                //pivotGrid.ReloadData();
+            bool hasChanges = (model.PivotSettings.FilterCriteriaString != pivotGrid.Prefilter.CriteriaString);
+            if (hasChanges)
+            {
+                model.PivotSettings.HasChanges = true;
+                model.PivotSettings.FilterCriteriaString = pivotGrid.Prefilter.CriteriaString;
+
+                bool isNewObject;
+                string errorMessage;
+                model.PivotData = LayoutPivotGridHelper.GetPivotData(model.PivotSettings, out isNewObject, out errorMessage);
+                LayoutPivotGridHelper.AddMissedValues(model, false);
             }
+            pivotGrid.JSProperties["cpNeedCallback"] = true;
+            pivotGrid.Prefilter.Enabled = false;
         }
 
         private static CriteriaOperator ValidatePrefilterCriteria(CriteriaOperator criteria)
@@ -717,10 +701,19 @@ namespace eidss.avr.mweb.Utils
                 fields = model.PivotSettings.Fields.ToList<IAvrPivotGridField>();
             }
             var avrDataSource = new AvrPivotGridData(model.PivotData);
-            
-            
+
+
+            var result = new LayoutValidateResult();
             LayoutBaseValidator validator = CreateLayoutComplexityValidator();
-            LayoutValidateResult result = AvrPivotGridHelper.FillEmptyValuesAndValidateComplexity(avrDataSource, fields,  validator);
+            if (model.PivotSettings.ShowMissedValues)
+            {
+                result = AvrPivotGridHelper.AddMissedValuesAndValidateComplexity(avrDataSource, fields, validator);
+            }
+            if (!result.IsCancelOrUserDialogCancel())
+            {
+                result = AvrPivotGridHelper.FillEmptyValuesAndValidateComplexity(avrDataSource, fields, validator);
+            }
+            //LayoutValidateResult result = AvrPivotGridHelper.FillEmptyValuesAndValidateComplexity(avrDataSource, fields, validator);
             if (result.IsCancelOrUserDialogCancel())
             {
                 model.HideDataForComplexLayout();
@@ -968,12 +961,31 @@ namespace eidss.avr.mweb.Utils
             }
         }
 
-        public static AvrDataTable GetPivotData(LayoutDetailDataSet ds, long queryId, long layoutId, bool useArchiveData, out bool isNewObject, out string errorMessage)
+        public static AvrDataTable GetPivotData(AvrPivotSettings settings, out bool isNewObject, out string errorMessage)
         {
-            CachedQueryResult queryResult = ServiceClientHelper.ExecQuery(queryId, useArchiveData);
+            return GetPivotData(settings.LayoutDataset,
+                                settings.QueryId,
+                                settings.LayoutId,
+                                settings.UseArchiveData,
+                                settings.ApplyFilter ? settings.FilterCriteriaString :string.Empty,
+                                out isNewObject, out errorMessage);
+        }
+
+        public static AvrDataTable GetPivotData(LayoutDetailDataSet ds, long queryId, long layoutId, bool useArchiveData, string filter, out bool isNewObject, out string errorMessage)
+        {
+            CachedQueryResult queryResult = ServiceClientHelper.ExecQuery(queryId, useArchiveData, filter);
             isNewObject = ds.LayoutSearchField.Count == 0;
             errorMessage = queryResult.ErrorMessage;
             return AvrPivotGridHelper.GetPreparedDataSource(ds.LayoutSearchField, queryId, layoutId, queryResult.QueryTable, isNewObject);
+        }
+
+        private static LayoutDetailDataSet.LayoutRow GetLayoutRow(LayoutDetailDataSet layoutDataSet)
+        {
+            if (layoutDataSet.Layout.Rows.Count == 0)
+            {
+                throw new ArgumentException("Couldn't get Layout from dataset ");
+            }
+            return (LayoutDetailDataSet.LayoutRow)layoutDataSet.Layout.Rows[0];
         }
 
         public static void AddMissedValues(AvrPivotGridModel model, bool forceRefill)
@@ -982,23 +994,17 @@ namespace eidss.avr.mweb.Utils
             {
                 bool isNewObject;
                 string errorMessage;
-                model.PivotData = GetPivotData(model.PivotSettings.LayoutDataset, model.PivotSettings.QueryId,
-                    model.PivotSettings.LayoutId, model.PivotSettings.UseArchiveData, out isNewObject, out errorMessage);
-
-                
-
+                model.PivotData = GetPivotData(model.PivotSettings, out isNewObject, out errorMessage);
                 if (!string.IsNullOrEmpty(errorMessage))
                 {
                     //todo:[mike]     return ErrorMessage to user   
                 }
-                
             }
 
             List<IAvrPivotGridField> fields = model.PivotSettings.Fields.Cast<IAvrPivotGridField>().ToList();
             var result = new LayoutValidateResult() ;
             if (model.PivotSettings.ShowMissedValues)
             {
-               
                 LayoutBaseValidator validator = CreateLayoutComplexityValidator();
                 result = AvrPivotGridHelper.AddMissedValuesAndValidateComplexity(model, fields,  validator);
             }
@@ -1011,7 +1017,6 @@ namespace eidss.avr.mweb.Utils
             {
                 FillEmptyValuesInDataArea(model, fields);
             }
-                
         }
 
         public static int GetDeltaMemory(long initialMemory)

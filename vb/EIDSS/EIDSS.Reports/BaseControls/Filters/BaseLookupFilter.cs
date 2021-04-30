@@ -139,13 +139,21 @@ namespace EIDSS.Reports.BaseControls.Filters
             {
                 return;
             }
-            m_IsClear = true;
 
-            string filter = DataSource.RowFilter;
-            LookUp.EditValue = null;
-            DataSource.RowFilter = filter;
+            try
+            {
+                m_IsClear = true;
 
-            m_IsClear = false;
+                LookUp.ClosePopup();
+                string filter = DataSource.RowFilter;
+                LookUp.EditValue = null;
+                DataSource.RowFilter = filter;
+                LookUp.Reset();
+            }
+            finally
+            {
+                m_IsClear = false;
+            }
         }
     }
 }

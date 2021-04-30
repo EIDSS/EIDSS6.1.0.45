@@ -42,8 +42,8 @@ namespace eidss.model.Schema
                 var master = this.Parent as Upload506Master;
                 validationErrors.Clear();
 
-                //if (iCOMPLICA.HasValue && iCOMPLICA.Value == 0)
-                //    COMPLICA = null;
+                if (iCOMPLICA.HasValue && iCOMPLICA.Value == 0)
+                    COMPLICA = null;
 
                 // step 3
                 validateMandatory(DISEASE, "DISEASE");
@@ -78,7 +78,7 @@ namespace eidss.model.Schema
                 validateRef(METROPOL, "METROPOL", () => master.MunicipalityRefs.Any(i => i.METROPOL == METROPOL));
                 validateRef(HOSPITAL, "HOSPITAL", () => master.HospitalizationRefs.Any(i => i.HOSPITAL == HOSPITAL));
                 validateRef(TYPE, "TYPE", () => master.PatientTypeRefs.Any(i => i.TYPE == TYPE));
-                //validateRef(COMPLICA, "COMPLICA", () => master.ComplicationRefs.Any(i => i.COMPLICA == iCOMPLICA && i.DISEASE == iDISEASE));
+                //check for COMPLICA and DISEASE is not needed anymore //validateRef(COMPLICA, "COMPLICA", () => master.ComplicationRefs.Any(i => i.COMPLICA == iCOMPLICA && i.DISEASE == iDISEASE));
 
                 // step 5
                 DateTime dateOfBirth = DATERECORD.HasValue ? (DATERECORD.Value
@@ -110,7 +110,7 @@ namespace eidss.model.Schema
 
                 if (!DATEDEATH.HasValue && (!RESULT.HasValue || (RESULT.HasValue && RESULT.Value == 2)))
                     AddError("DATEDEATH", EidssMessages.Get("msg506DATEDEATH"));
-                // step 7
+                // step 7 - check for COMPLICA and DISEASE is not needed anymore - 2018-03-26
                 //if (iDISEASE != 71 && iDISEASE != 22 && iCOMPLICA.HasValue)
                 //    AddError("COMPLICA", EidssMessages.Get("msg506COMPLICA"));
 

@@ -114,6 +114,7 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Keepers
 
                 m_Resources.ApplyResources(FromLabel, "FromLabel");
                 m_Resources.ApplyResources(ToLabel, "ToLabel");
+                m_Resources.ApplyResources(CounterLabel, "CounterLabel");
 
                 ApplyYearResources();
 
@@ -143,11 +144,11 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Keepers
                 m_IsThaiCulture = ModelUserContext.CurrentLanguage == Localizer.lngThai;
 
                 YearFromSpinEdit.Properties.MaxValue = DeltaYear + DateTime.Now.Year - 1;
-                YearFromSpinEdit.Properties.MinValue = m_IsThaiCulture ? 2550 : 2000;
+                YearFromSpinEdit.Properties.MinValue = m_IsThaiCulture ? 2543 : 2000;
                 YearFromSpinEdit.Value = m_YearFrom + DeltaYear;
 
                 YearToSpinEdit.Properties.MaxValue = DeltaYear + DateTime.Now.Year;
-                YearToSpinEdit.Properties.MinValue = m_IsThaiCulture ? 2551 : 2001;
+                YearToSpinEdit.Properties.MinValue = m_IsThaiCulture ? 2544 : 2001;
                 YearToSpinEdit.Value = m_YearTo + DeltaYear;
             }
         }

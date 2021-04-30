@@ -4,11 +4,12 @@ using System.Data;
 using System.Linq;
 using System.Xml.Serialization;
 using bv.common.Core;
+using eidss.model.Resources;
 
 namespace eidss.model.Avr.View
 {
     [Serializable]
-    public  class BaseBand : IDisposable
+    public class BaseBand : IDisposable
     {
         public BaseBand()
         {
@@ -39,11 +40,12 @@ namespace eidss.model.Avr.View
             set
             {
                 m_ViewID = value;
-                foreach (AvrViewBand band in Bands)
+                foreach (var band in Bands)
                 {
                     band.ViewID = m_ViewID;
                 }
-                foreach (AvrViewColumn col in Columns)
+
+                foreach (var col in Columns)
                 {
                     col.ViewID = m_ViewID;
                 }
@@ -55,40 +57,63 @@ namespace eidss.model.Avr.View
 
         public bool IsNew
         {
-            get
-            {
-                return m_IsNew;
-            }
+            get { return m_IsNew; }
         }
+
         public bool IsChanged
         {
             get
             {
-                if (!m_ToDelete && (m_IsChanged || IsOrderChanged)) return true;
-                foreach (AvrViewBand band in Bands)
+                if (!m_ToDelete && (m_IsChanged || IsOrderChanged))
                 {
-                    if (band.IsChanged) return true;
+                    return true;
                 }
-                foreach (AvrViewColumn col in Columns)
+
+                foreach (var band in Bands)
                 {
-                    if (col.IsChanged) return true;
+                    if (band.IsChanged)
+                    {
+                        return true;
+                    }
                 }
+
+                foreach (var col in Columns)
+                {
+                    if (col.IsChanged)
+                    {
+                        return true;
+                    }
+                }
+
                 return false;
             }
         }
+
         public bool HasToDelete
         {
             get
             {
-                if (m_ToDelete) return true;
-                foreach (AvrViewBand band in Bands)
+                if (m_ToDelete)
                 {
-                    if (band.IsToDelete) return true;
+                    return true;
                 }
-                foreach (AvrViewColumn col in Columns)
+
+                foreach (var band in Bands)
                 {
-                    if (col.IsToDelete) return true;
+                    if (band.IsToDelete)
+                    {
+                        return true;
+                    }
                 }
+
+                foreach (var col in Columns)
+                {
+                    if (col.IsToDelete)
+                    {
+                        return true;
+                    }
+                }
+
                 return false;
             }
         }
@@ -128,12 +153,12 @@ namespace eidss.model.Avr.View
         protected void AdjustToNew(BaseBand pivotBand)
         {
             //delete deleted in pivot bands, save pivot properties if bands preserved in pivot
-            for (int i = 0; i < Bands.Count; i++)
+            for (var i = 0; i < Bands.Count; i++)
             {
                 if (pivotBand.Bands.Exists(b => b.UniquePath == Bands[i].UniquePath))
                 {
                     // save pivot properties if bands preserved in pivot
-                    AvrViewBand nBand = pivotBand.Bands.Single(b => b.UniquePath == Bands[i].UniquePath);
+                    var nBand = pivotBand.Bands.Single(b => b.UniquePath == Bands[i].UniquePath);
                     Bands[i].SavePivotSettings(pivotBand.Bands.IndexOf(nBand), nBand);
                     Bands[i].AdjustToNew(nBand);
                 }
@@ -146,13 +171,14 @@ namespace eidss.model.Avr.View
                     }
                 }
             }
+
             //delete deleted in pivot columns, save pivot properties if columns preserved in pivot
-            for (int i = 0; i < Columns.Count; i++)
+            for (var i = 0; i < Columns.Count; i++)
             {
                 if (pivotBand.Columns.Exists(c => c.UniquePath == Columns[i].UniquePath))
                 {
                     // save pivot properties if columns were preserved in pivot
-                    AvrViewColumn newCol = pivotBand.Columns.Single(c => c.UniquePath == Columns[i].UniquePath);
+                    var newCol = pivotBand.Columns.Single(c => c.UniquePath == Columns[i].UniquePath);
                     Columns[i].SavePivotSettings(pivotBand.Columns.IndexOf(newCol), newCol);
                 }
                 else
@@ -161,20 +187,29 @@ namespace eidss.model.Avr.View
                     if (!Columns[i].IsAggregate)
                     {
                         if (!Columns[i].Delete())
+                        {
                             Columns.RemoveAt(i--);
+                        }
                     }
                     // delete references of aggregate column if its references died
                     else
                     {
                         if (Columns[i].SourceViewColumn != null && pivotBand.GetColumnByOriginalName(Columns[i].SourceViewColumn) == null)
+                        {
                             Columns[i].SourceViewColumn = null;
-                        if (Columns[i].DenominatorViewColumn != null && pivotBand.GetColumnByOriginalName(Columns[i].DenominatorViewColumn) == null)
+                        }
+
+                        if (Columns[i].DenominatorViewColumn != null &&
+                            pivotBand.GetColumnByOriginalName(Columns[i].DenominatorViewColumn) == null)
+                        {
                             Columns[i].DenominatorViewColumn = null;
+                        }
                     }
                 }
             }
+
             // add new pivot bands
-            for (int i = 0; i < pivotBand.Bands.Count; i++)
+            for (var i = 0; i < pivotBand.Bands.Count; i++)
             {
                 if (!Bands.Exists(b => b.UniquePath == pivotBand.Bands[i].UniquePath))
                 {
@@ -182,8 +217,9 @@ namespace eidss.model.Avr.View
                     AddBand(i, pivotBand.Bands[i]);
                 }
             }
+
             // add new pivot columns
-            for (int i = 0; i < pivotBand.Columns.Count; i++)
+            for (var i = 0; i < pivotBand.Columns.Count; i++)
             {
                 if (!Columns.Exists(c => c.UniquePath == pivotBand.Columns[i].UniquePath))
                 {
@@ -193,9 +229,10 @@ namespace eidss.model.Avr.View
                     AddColumn(pivotBand.Columns[i]);
                 }
             }
+
             // set default order for aggregate columns as last in band
-            int maxNotAggr = Columns.Count(c => !c.IsAggregate);
-            foreach (AvrViewColumn cCol in Columns.FindAll(c => c.IsAggregate))
+            var maxNotAggr = Columns.Count(c => !c.IsAggregate);
+            foreach (var cCol in Columns.FindAll(c => c.IsAggregate))
             {
                 cCol.Order_Pivot = maxNotAggr++;
             }
@@ -203,14 +240,15 @@ namespace eidss.model.Avr.View
 
         public void SetIds(BaseBand band)
         {
-            for (int i = 0; i < Bands.Count; i++)
+            for (var i = 0; i < Bands.Count; i++)
             {
                 if (band.Bands.Exists(b => b.UniquePath == Bands[i].UniquePath))
                 {
                     Bands[i].ID = band.Bands.Single(b => b.UniquePath == Bands[i].UniquePath).ID;
                 }
             }
-            for (int i = 0; i < Columns.Count; i++)
+
+            for (var i = 0; i < Columns.Count; i++)
             {
                 if (band.Columns.Exists(c => c.UniquePath == Columns[i].UniquePath))
                 {
@@ -223,11 +261,12 @@ namespace eidss.model.Avr.View
 
         public void ClearSorting()
         {
-            foreach (AvrViewBand band in Bands)
+            foreach (var band in Bands)
             {
                 band.ClearSorting();
             }
-            foreach (AvrViewColumn col in Columns)
+
+            foreach (var col in Columns)
             {
                 col.SortOrder = null;
                 col.IsSortAscending = true;
@@ -244,16 +283,17 @@ namespace eidss.model.Avr.View
 
         private void GetSortColumns(ref List<AvrViewColumn> list)
         {
-            foreach (AvrViewBand band in Bands.FindAll(x => !x.IsToDelete))
+            foreach (var band in Bands.FindAll(x => !x.IsToDelete))
             {
                 band.GetSortColumns(ref list);
             }
+
             list.AddRange(Columns.FindAll(x => !x.IsToDelete && x.SortOrder != null && x.SortOrder != -1));
         }
 
         public string GetSortExpression()
         {
-            string ret = "";
+            var ret = "";
             var list = GetSortColumns();
             list.Sort((f1, f2) => f1.SortOrder.Value.CompareTo(f2.SortOrder.Value));
             list.ForEach(col => ret += (ret.Length > 0 ? ", " : "") + col.UniquePath + (col.IsSortAscending ? " ASC" : " DESC"));
@@ -264,9 +304,17 @@ namespace eidss.model.Avr.View
 
         public string GetFilterExpression(bool erase = false)
         {
-            string ret = "";
-            Columns.FindAll(x => !x.IsToDelete && x.ColumnFilter != null && x.ColumnFilter.Length > 0).ForEach(col => ret += (ret.Length > 0 ? " AND " : "") + "(" + (erase ? col.ColumnFilterTable : col.ColumnFilter) + ")");
-            Bands.FindAll(x => !x.IsToDelete).ForEach(b => { string temp = b.GetFilterExpression(erase); if (temp.Length > 0) ret += (ret.Length > 2 ? " AND " : "") + "(" + temp + ")"; });
+            var ret = "";
+            Columns.FindAll(x => !x.IsToDelete && x.ColumnFilter != null && x.ColumnFilter.Length > 0).ForEach(col =>
+                ret += (ret.Length > 0 ? " AND " : "") + "(" + (erase ? col.ColumnFilterTable : col.ColumnFilter) + ")");
+            Bands.FindAll(x => !x.IsToDelete).ForEach(b =>
+            {
+                var temp = b.GetFilterExpression(erase);
+                if (temp.Length > 0)
+                {
+                    ret += (ret.Length > 2 ? " AND " : "") + "(" + temp + ")";
+                }
+            });
 
             return ret;
         }
@@ -303,14 +351,14 @@ namespace eidss.model.Avr.View
                 return null;
             }
 
-            string colName = Resources.EidssMessages.Get("AggregateColumn", "Aggregate Column");
-            string colFieldName = "AggregateColumn" + DateTime.Now.TimeOfDay;
+            var colName = EidssMessages.Get("AggregateColumn", "Aggregate Column");
+            var colFieldName = "AggregateColumn" + DateTime.Now.TimeOfDay;
             var newCol = new AvrViewColumn(-1, colFieldName, colName, AvrView.DefaultFieldWidth)
             {
                 IsAggregate = true,
                 Order_Pivot = Columns.Count,
                 OriginalName = colName,
-                UniquePath = colFieldName,
+                UniquePath = colFieldName
             };
 
             AddColumn(newCol);
@@ -319,19 +367,22 @@ namespace eidss.model.Avr.View
 
         public void DeleteAggregateColumn(string path)
         {
-            AvrViewColumn aCol = GetColumnByOriginalName(path);
+            var aCol = GetColumnByOriginalName(path);
             if (aCol != null && !aCol.Delete())
+            {
                 aCol.Owner.Columns.Remove(aCol);
+            }
         }
 
 
         public virtual void ResetToPivot()
         {
-            foreach (AvrViewBand band in Bands)
+            foreach (var band in Bands)
             {
                 band.ResetToPivot();
             }
-            for (int i = 0; i < Columns.Count; i++)
+
+            for (var i = 0; i < Columns.Count; i++)
             {
                 if (Columns[i].IsAggregate)
                 {
@@ -353,7 +404,8 @@ namespace eidss.model.Avr.View
             {
                 return true;
             }
-            foreach (AvrViewColumn column in Columns)
+
+            foreach (var column in Columns)
             {
                 if (column.IsAggregate)
                 {
@@ -370,26 +422,29 @@ namespace eidss.model.Avr.View
                     }
                 }
             }
+
             return false;
         }
 
 
         public List<AvrViewColumn> GetAggregateColumnsList()
         {
-            var result = new List<AvrViewColumn>(); 
+            var result = new List<AvrViewColumn>();
             return GetAggregateColumnsList(result);
         }
+
         public List<AvrViewColumn> GetAggregateColumnsList(List<AvrViewColumn> result)
         {
-            foreach (AvrViewBand band in Bands.FindAll(b => !b.IsToDelete && b.IsVisible))
+            foreach (var band in Bands.FindAll(b => !b.IsToDelete && b.IsVisible))
             {
                 band.GetAggregateColumnsList(result);
             }
+
             Columns.FindAll(c => !c.IsToDelete &&
                                  c.IsVisible &&
                                  c.IsAggregate
-                           )
-                    .ForEach(result.Add);
+                )
+                .ForEach(result.Add);
 
             return result;
         }
@@ -399,7 +454,7 @@ namespace eidss.model.Avr.View
             List<AvrViewColumn> result;
             if (insertEmpty)
             {
-                var empty = new AvrViewColumn {FieldType = typeof (string)};
+                var empty = new AvrViewColumn {FieldType = typeof(string)};
                 result = new List<AvrViewColumn> {empty};
             }
             else
@@ -412,57 +467,60 @@ namespace eidss.model.Avr.View
 
         public List<AvrViewColumn> GetVisibleRowAdminColumns(string path, bool? isRow, bool? isAdministrative, List<AvrViewColumn> result)
         {
-            foreach (AvrViewBand band in Bands.FindAll(b => !b.IsToDelete && b.IsVisible).OrderBy(c => c.Order_ForUse))
+            foreach (var band in Bands.FindAll(b => !b.IsToDelete && b.IsVisible).OrderBy(c => c.Order_ForUse))
             {
                 band.FullPath = (path.Length == 0 ? "" : path + "->") + Utils.Str(band.DisplayText);
                 band.GetVisibleRowAdminColumns(band.FullPath, isRow, isAdministrative, result);
             }
+
             Columns.FindAll(c => !c.IsToDelete &&
                                  c.IsVisible &&
                                  (!isRow.HasValue || c.IsRowArea == isRow.Value) &&
                                  (!isAdministrative.HasValue || c.IsAdministrativeUnit == isAdministrative.Value)
-                           )
-                    .OrderBy(c => c.Order_ForUse).ToList()
-                    .ForEach(c =>
-                    {
-                        c.FullPath = (path.Length == 0 ? "" : path + "->") + Utils.Str(c.DisplayText);
-                        result.Add(c);
-                    });
+                )
+                .OrderBy(c => c.Order_ForUse).ToList()
+                .ForEach(c =>
+                {
+                    c.FullPath = (path.Length == 0 ? "" : path + "->") + Utils.Str(c.DisplayText);
+                    result.Add(c);
+                });
 
-            return result;//.OrderBy(c => c.Order_ForUse).ToList();  don't order here, because Order_ForUse have sense only inside band
+            return result; //.OrderBy(c => c.Order_ForUse).ToList();  don't order here, because Order_ForUse have sense only inside band
         }
 
         // set default xAxis for chart as last column from Row Area
         public string LastRowAreaColumn()
         {
             string ret = null;
-            foreach (AvrViewBand band in Bands.FindAll(x => !x.IsToDelete && x.IsVisible)
-                                              .OrderBy(x => x.Order_ForUse))
+            foreach (var band in Bands.FindAll(x => !x.IsToDelete && x.IsVisible)
+                .OrderBy(x => x.Order_ForUse))
             {
-                string lRow = band.LastRowAreaColumn();
+                var lRow = band.LastRowAreaColumn();
                 if (lRow == null)
                 {
                     break;
                 }
+
                 ret = lRow;
             }
+
             Columns.FindAll(x => !x.IsToDelete && x.IsVisible && x.IsRowArea)
-                   .OrderBy(x => x.Order_ForUse)
-                   .ToList()
-                   .ForEach(c => ret = c.UniquePath);
+                .OrderBy(x => x.Order_ForUse)
+                .ToList()
+                .ForEach(c => ret = c.UniquePath);
             return ret;
         }
 
         public void FillColumnsBooleans(string[] cols, string booleanName)
         {
-            foreach (AvrViewBand band in Bands)
+            foreach (var band in Bands)
             {
                 band.FillColumnsBooleans(cols, booleanName);
             }
 
-            foreach (AvrViewColumn col in Columns)
+            foreach (var col in Columns)
             {
-                bool value = col.ExistsIn(cols);
+                var value = col.ExistsIn(cols);
                 switch (booleanName)
                 {
                     case "IsChartSeries":
@@ -482,9 +540,9 @@ namespace eidss.model.Avr.View
         {
             Bands.ForEach(b => b.FillColumnsBooleans(cols, booleanName));
 
-            foreach (AvrViewColumn col in Columns)
+            foreach (var col in Columns)
             {
-                bool value = cols.Contains(col.UniquePath);
+                var value = cols.Contains(col.UniquePath);
                 switch (booleanName)
                 {
                     case "IsChartSeries":
@@ -504,9 +562,10 @@ namespace eidss.model.Avr.View
         {
             return view.GetColumnsBooleans(booleanName);
         }
+
         public string GetColumnsBooleans(string booleanName)
         {
-            string ret = "";
+            var ret = "";
             switch (booleanName)
             {
                 case "IsChartSeries":
@@ -519,6 +578,7 @@ namespace eidss.model.Avr.View
                     Columns.FindAll(x => !x.IsToDelete && x.IsMapGradientSeries).ForEach(col => ret += ", " + col.UniquePath);
                     break;
             }
+
             Bands.FindAll(x => !x.IsToDelete).ForEach(b => ret += ", " + b.GetColumnsBooleans(booleanName));
             return ret.TrimStart(' ', ',');
         }
@@ -527,9 +587,10 @@ namespace eidss.model.Avr.View
         {
             return view.GetColumnsBooleanTexts(booleanName);
         }
+
         public string GetColumnsBooleanTexts(string booleanName)
         {
-            string ret = "";
+            var ret = "";
             switch (booleanName)
             {
                 case "IsChartSeries":
@@ -542,7 +603,15 @@ namespace eidss.model.Avr.View
                     Columns.FindAll(x => !x.IsToDelete && x.IsMapGradientSeries).ForEach(col => ret += ", " + col.FullPath);
                     break;
             }
-            Bands.FindAll(x => !x.IsToDelete).ForEach(b => { string s = b.GetColumnsBooleanTexts(booleanName); if(s.Length > 0) ret += ", " + s; });
+
+            Bands.FindAll(x => !x.IsToDelete).ForEach(b =>
+            {
+                var s = b.GetColumnsBooleanTexts(booleanName);
+                if (s.Length > 0)
+                {
+                    ret += ", " + s;
+                }
+            });
             return ret.Length > 2 ? ret.Substring(2).Trim() : "";
         }
 
@@ -554,7 +623,7 @@ namespace eidss.model.Avr.View
                 ret = Columns.Find(x => x.ID == id);
                 if (ret == null)
                 {
-                    foreach (AvrViewBand band in Bands)
+                    foreach (var band in Bands)
                     {
                         ret = band.GetColumnByID(id);
                         if (ret != null)
@@ -564,38 +633,43 @@ namespace eidss.model.Avr.View
                     }
                 }
             }
+
             return ret;
         }
 
         // used only from web
         public BaseBand GetCurrentBand(string uniquePath)
         {
-            AvrViewColumn col = GetColumnByOriginalName(uniquePath);
+            var col = GetColumnByOriginalName(uniquePath);
             if (col != null)
             {
                 return col.Owner;
             }
-            AvrViewBand band = GetBandByOriginalName(uniquePath);
+
+            var band = GetBandByOriginalName(uniquePath);
             if (band != null)
             {
                 return band;
             }
+
             return null;
         }
 
         // used only from web
         public BaseBand GetParent(string uniquePath)
         {
-            AvrViewColumn col = GetColumnByOriginalName(uniquePath);
+            var col = GetColumnByOriginalName(uniquePath);
             if (col != null)
             {
                 return col.Owner;
             }
-            AvrViewBand band = GetBandByOriginalName(uniquePath);
+
+            var band = GetBandByOriginalName(uniquePath);
             if (band != null)
             {
                 return band.Owner;
             }
+
             return null;
         }
 
@@ -607,7 +681,7 @@ namespace eidss.model.Avr.View
                 ret = Columns.Find(x => x.UniquePath == origName);
                 if (ret == null)
                 {
-                    foreach (AvrViewBand band in Bands)
+                    foreach (var band in Bands)
                     {
                         ret = band.GetColumnByOriginalName(origName);
                         if (ret != null)
@@ -617,6 +691,7 @@ namespace eidss.model.Avr.View
                     }
                 }
             }
+
             return ret;
         }
 
@@ -628,7 +703,7 @@ namespace eidss.model.Avr.View
                 ret = Bands.Find(x => x.UniquePath == origName);
                 if (ret == null)
                 {
-                    foreach (AvrViewBand band in Bands)
+                    foreach (var band in Bands)
                     {
                         ret = band.GetBandByOriginalName(origName);
                         if (ret != null)
@@ -638,6 +713,7 @@ namespace eidss.model.Avr.View
                     }
                 }
             }
+
             return ret;
         }
 
@@ -649,6 +725,7 @@ namespace eidss.model.Avr.View
                 ret.AddRange(Columns.FindAll(x => origNames.Contains(x.UniquePath)));
                 Bands.ForEach(b => ret.AddRange(b.GetColumnsByOriginalName(origNames)));
             }
+
             return ret;
         }
 
@@ -656,7 +733,7 @@ namespace eidss.model.Avr.View
         //Delete deleted bands and columns
         public void RemoveDeleted()
         {
-            for (int i = 0; i < Bands.Count; i++)
+            for (var i = 0; i < Bands.Count; i++)
             {
                 if (Bands[i].IsToDelete)
                 {
@@ -667,7 +744,8 @@ namespace eidss.model.Avr.View
                     Bands[i].RemoveDeleted();
                 }
             }
-            for (int i = 0; i < Columns.Count; i++)
+
+            for (var i = 0; i < Columns.Count; i++)
             {
                 if (Columns[i].IsToDelete)
                 {
@@ -686,10 +764,12 @@ namespace eidss.model.Avr.View
         {
             Bands.ForEach(b => b.SetAggrColumnsType());
 
-            foreach (AvrViewColumn col in Columns)
+            foreach (var col in Columns)
             {
                 if (col.IsAggregate)
+                {
                     col.FieldType = typeof(string);
+                }
             }
         }
 
@@ -706,32 +786,29 @@ namespace eidss.model.Avr.View
 
         public IEnumerable<AvrViewColumn> GetAllColumns()
         {
-            foreach (AvrViewColumn col in Columns)
+            foreach (var col in Columns)
             {
                 yield return col;
             }
-            foreach (AvrViewBand band in Bands)
+
+            foreach (var band in Bands)
             {
-                foreach (AvrViewColumn c in band.GetAllColumns())
+                foreach (var c in band.GetAllColumns())
+                {
                     yield return c;
+                }
             }
         }
 
         // save Order_Temp to Order
         public void SetOrders()
         {
-            int i = 1;
-            Columns.Where(c => c.Order_Temp.HasValue).OrderBy(c => c.Order_Temp).ToList().ForEach(c =>
-            {
-                c.Order = i++;
-            });
+            var i = 1;
+            Columns.Where(c => c.Order_Temp.HasValue).OrderBy(c => c.Order_Temp).ToList().ForEach(c => { c.Order = i++; });
             Columns.ForEach(c => c.Order_Temp = null);
 
             i = 1;
-            Bands.Where(c => c.Order_Temp.HasValue).OrderBy(b => b.Order_Temp).ToList().ForEach(b =>
-            {
-                b.Order = i++;
-            });
+            Bands.Where(c => c.Order_Temp.HasValue).OrderBy(b => b.Order_Temp).ToList().ForEach(b => { b.Order = i++; });
             Bands.ForEach(c => c.Order_Temp = null);
 
             Bands.ForEach(b => b.SetOrders());

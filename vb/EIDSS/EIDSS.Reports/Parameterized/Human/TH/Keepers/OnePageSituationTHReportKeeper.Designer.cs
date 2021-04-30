@@ -28,63 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OnePageSituationTHReportKeeper));
-			this.DiagnosesFilter = new EIDSS.Reports.BaseControls.Filters.HumSingleDiagnosisFilter();
-			this.ThaiZoneFilter = new EIDSS.Reports.BaseControls.Filters.ThaiZonesSingleFilter();
-			this.pnlSettings.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.ceUseArchiveData.Properties)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// pnlSettings
-			// 
-			this.pnlSettings.Controls.Add(this.ThaiZoneFilter);
-			this.pnlSettings.Controls.Add(this.DiagnosesFilter);
-			resources.ApplyResources(this.pnlSettings, "pnlSettings");
-			this.pnlSettings.Controls.SetChildIndex(this.ceUseArchiveData, 0);
-			this.pnlSettings.Controls.SetChildIndex(this.GenerateReportButton, 0);
-			this.pnlSettings.Controls.SetChildIndex(this.DiagnosesFilter, 0);
-			this.pnlSettings.Controls.SetChildIndex(this.ThaiZoneFilter, 0);
-			// 
-			// ceUseArchiveData
-			// 
-			resources.ApplyResources(this.ceUseArchiveData, "ceUseArchiveData");
-			this.ceUseArchiveData.Properties.Appearance.Options.UseFont = true;
-			this.ceUseArchiveData.Properties.AppearanceDisabled.Options.UseFont = true;
-			this.ceUseArchiveData.Properties.AppearanceFocused.Options.UseFont = true;
-			this.ceUseArchiveData.Properties.AppearanceReadOnly.Options.UseFont = true;
-			// 
-			// GenerateReportButton
-			// 
-			resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
-			bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(OnePageSituationTHReportKeeper), out resources);
-			// Form Is Localizable: True
-			// 
-			// DiagnosesFilter
-			// 
-			this.DiagnosesFilter.AdditionalFilter = null;
-			this.DiagnosesFilter.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("DiagnosesFilter.Appearance.Font")));
-			this.DiagnosesFilter.Appearance.Options.UseFont = true;
-			resources.ApplyResources(this.DiagnosesFilter, "DiagnosesFilter");
-			this.DiagnosesFilter.Name = "DiagnosesFilter";
-			// 
-			// ThaiZoneFilter
-			// 
-			this.ThaiZoneFilter.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ThaiZoneFilter.Appearance.Font")));
-			this.ThaiZoneFilter.Appearance.Options.UseFont = true;
-			this.ThaiZoneFilter.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			resources.ApplyResources(this.ThaiZoneFilter, "ThaiZoneFilter");
-			this.ThaiZoneFilter.Name = "ThaiZoneFilter";
-			// 
-			// OnePageSituationTHReportKeeper
-			// 
-			resources.ApplyResources(this, "$this");
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.HeaderHeight = 125;
-			this.Name = "OnePageSituationTHReportKeeper";
-			this.pnlSettings.ResumeLayout(false);
-			this.pnlSettings.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.ceUseArchiveData.Properties)).EndInit();
-			this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OnePageSituationTHReportKeeper));
+            this.DiagnosesFilter = new EIDSS.Reports.BaseControls.Filters.HumSingleDiagnosisFilter();
+            this.ThaiZoneFilter = new EIDSS.Reports.BaseControls.Filters.ThaiZonesSingleFilter();
+            this.pnlSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ceUseArchiveData.Properties)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pnlSettings
+            // 
+            this.pnlSettings.Controls.Add(this.ThaiZoneFilter);
+            this.pnlSettings.Controls.Add(this.DiagnosesFilter);
+            resources.ApplyResources(this.pnlSettings, "pnlSettings");
+            this.pnlSettings.Controls.SetChildIndex(this.ceUseArchiveData, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.GenerateReportButton, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.DiagnosesFilter, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.ThaiZoneFilter, 0);
+            // 
+            // ceUseArchiveData
+            // 
+            resources.ApplyResources(this.ceUseArchiveData, "ceUseArchiveData");
+            this.ceUseArchiveData.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ceUseArchiveData.Properties.Appearance.Font")));
+            this.ceUseArchiveData.Properties.Appearance.Options.UseFont = true;
+            this.ceUseArchiveData.Properties.AppearanceDisabled.Options.UseFont = true;
+            this.ceUseArchiveData.Properties.AppearanceFocused.Options.UseFont = true;
+            this.ceUseArchiveData.Properties.AppearanceReadOnly.Options.UseFont = true;
+            // 
+            // GenerateReportButton
+            // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
+            bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(OnePageSituationTHReportKeeper), out resources);
+            // Form Is Localizable: True
+            // 
+            // DiagnosesFilter
+            // 
+            this.DiagnosesFilter.AdditionalFilter = null;
+            this.DiagnosesFilter.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("DiagnosesFilter.Appearance.Font")));
+            this.DiagnosesFilter.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this.DiagnosesFilter, "DiagnosesFilter");
+            this.DiagnosesFilter.Name = "DiagnosesFilter";
+            // 
+            // ThaiZoneFilter
+            // 
+            this.ThaiZoneFilter.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ThaiZoneFilter.Appearance.Font")));
+            this.ThaiZoneFilter.Appearance.Options.UseFont = true;
+            this.ThaiZoneFilter.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            resources.ApplyResources(this.ThaiZoneFilter, "ThaiZoneFilter");
+            this.ThaiZoneFilter.Name = "ThaiZoneFilter";
+            // 
+            // OnePageSituationTHReportKeeper
+            // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("OnePageSituationTHReportKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.HeaderHeight = 135;
+            this.Name = "OnePageSituationTHReportKeeper";
+            this.pnlSettings.ResumeLayout(false);
+            this.pnlSettings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ceUseArchiveData.Properties)).EndInit();
+            this.ResumeLayout(false);
 
         }
 

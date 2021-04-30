@@ -15,7 +15,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             this.SampleId = new DevExpress.XtraEditors.TextEdit();
             this.SearchButton = new DevExpress.XtraEditors.SimpleButton();
             this.Department = new EIDSS.Reports.BaseControls.Filters.DepartmentAZLookupFilter();
-            this.lblSampleID = new DevExpress.XtraEditors.LabelControl();
+            this.lblSampleID = new System.Windows.Forms.Label();
             this.pnlSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ceUseArchiveData.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SampleId.Properties)).BeginInit();
@@ -50,6 +50,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(LabTestingTesultsReportKeeper), out resources);
             // Form Is Localizable: True
@@ -78,6 +80,8 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             // 
             // LabTestingTesultsReportKeeper
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("LabTestingTesultsReportKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.HeaderHeight = 130;
             this.Name = "LabTestingTesultsReportKeeper";
             this.pnlSettings.ResumeLayout(false);
@@ -93,7 +97,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
         private DevExpress.XtraEditors.TextEdit SampleId;
         private DevExpress.XtraEditors.SimpleButton SearchButton;
         private BaseControls.Filters.DepartmentAZLookupFilter Department;
-        private DevExpress.XtraEditors.LabelControl lblSampleID;
+        private System.Windows.Forms.Label lblSampleID;
 
     }
 }

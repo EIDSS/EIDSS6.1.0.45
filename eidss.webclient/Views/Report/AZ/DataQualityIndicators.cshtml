@@ -91,7 +91,7 @@
                         @Html.LabelFor(m => m.SelectedDiagnoses)
                     </td>
                     <td class="largereport">
-                        @Html.ComboboxWithCheckboxes("SelectedDiagnoses", Model.Key, "idfsDiagnosisOrDiagnosisGroup", "name",null,
+                        @Html.GroupComboboxWithCheckboxes("SelectedDiagnoses", Model.Key, "idfsDiagnosisOrDiagnosisGroup", "name",null,
                             "",
                             controller: "Report", action: "DataQualityIndicators_SelectDiagOrGroup", width: EditorControlWidth.Large
                             )

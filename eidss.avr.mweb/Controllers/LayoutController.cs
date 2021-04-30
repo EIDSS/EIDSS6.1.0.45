@@ -36,7 +36,7 @@ namespace eidss.avr.mweb.Controllers
         public ActionResult Layout(long layoutId)
         {
             ViewBag.LayoutId = layoutId;
-            if (Request.QueryString.AllKeys.Contains("clearcache") && Request.QueryString["clearcache"] == "1")
+            if (Request.QueryString.AllKeys.Contains("clearcache"))// && Request.QueryString["clearcache"] == "1")
             {
                 RemovePivotViewObjects(layoutId);
             }
@@ -262,28 +262,55 @@ namespace eidss.avr.mweb.Controllers
 
         public ActionResult UseArchiveData(bool value)
         {
+            return RefreshPivotDataWith((AvrPivotGridModel m) =>
+            {
+                m.PivotSettings.HasChanges = true;
+                m.PivotSettings.UseArchiveData = value;
+            });
+        }
+        
+
+        public ActionResult ApplyFilter(bool value)
+        {
+            return RefreshPivotDataWith((AvrPivotGridModel m) =>
+            {
+                m.PivotSettings.HasChanges = true;
+                m.PivotSettings.ApplyFilter = value;
+            });
+        }
+
+        public ActionResult ShowPrefilter()
+        {
             AvrPivotGridModel model = GetModelFromSession();
             if (model == null)
             {
                 return View("AvrServiceError", (object)m_ErrorMessage);
             }
-            model.PivotSettings.HasChanges = true;
-            model.PivotSettings.UseArchiveData = value;
+            model.ShowPrefilter = true;
+            return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = "ok" };
+        }
+
+        private ActionResult RefreshPivotDataWith(Action<AvrPivotGridModel> action)
+        {
+            AvrPivotGridModel model = GetModelFromSession();
+            if (model == null)
+            {
+                return View("AvrServiceError", (object)m_ErrorMessage);
+            }
+            if (action != null)
+            {
+                action(model);
+            }
+
             bool isNewObject;
-
-            
-
-
             string errorMessage;
-            model.PivotData = LayoutPivotGridHelper.GetPivotData(model.PivotSettings.LayoutDataset, model.PivotSettings.QueryId,
-                model.PivotSettings.LayoutId, model.PivotSettings.UseArchiveData, out isNewObject,out errorMessage);
+            model.PivotData = LayoutPivotGridHelper.GetPivotData(model.PivotSettings, out isNewObject, out errorMessage);
             if (!string.IsNullOrEmpty(errorMessage))
             {
                 m_ErrorMessage = errorMessage;
                 return View("AvrServiceError", (object)m_ErrorMessage);
             }
 
-            
             LayoutPivotGridHelper.AddMissedValues(model, false);
             return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = "ok" };
         }
@@ -299,68 +326,6 @@ namespace eidss.avr.mweb.Controllers
             model.PivotSettings.FreezeRowHeaders = value;
             return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = "ok" };
         }
-
-        public ActionResult ApplyFilter(bool value)
-        {
-            AvrPivotGridModel model = GetModelFromSession();
-            if (model == null)
-            {
-                return View("AvrServiceError", (object)m_ErrorMessage);
-            }
-            model.PivotSettings.HasChanges = true;
-            model.PivotSettings.ApplyFilter = value;
-
-            LayoutPivotGridHelper.FillEmptyValuesInDataArea(model);
-
-            return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = "ok" };
-        }
-
-        public ActionResult ShowPrefilter()
-        {
-            AvrPivotGridModel model = GetModelFromSession();
-            if (model == null)
-            {
-                return View("AvrServiceError", (object)m_ErrorMessage);
-            }
-            model.ShowPrefilter = true;
-            return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = "ok" };
-        }
-
-        public static AvrPivotGridModel  FillData(ref long queryId, long layoutId)
-        {
-            var service = new WebLayoutDB();
-            var sessionDataSet = (LayoutDetailDataSet) service.GetDetail(layoutId);
-            if (queryId <= 0)
-            {
-                queryId = ((LayoutDetailDataSet.LayoutRow) sessionDataSet.Layout.Rows[0]).idflQuery;
-            }
-            var helper = new LayoutHelper(sessionDataSet);
-
-            var pivotSettings = new AvrPivotSettings(queryId, layoutId);
-            helper.InitAvrPivotSettings(pivotSettings);
-            bool isNewObject;
-
-            string errorMessage;
-            AvrDataTable data = LayoutPivotGridHelper.GetPivotData(helper.LayoutDataSet, queryId, layoutId, pivotSettings.UseArchiveData,
-                out isNewObject, out errorMessage);
-            if (!string.IsNullOrEmpty(errorMessage))
-            {
-                throw new AvrException(errorMessage);
-            }
-
-            pivotSettings.Fields = AvrPivotGridHelper.CreateFields<WebPivotGridField>(data);
-            helper.PrepareWebFields(pivotSettings);
-            List<IAvrPivotGridField> fields = pivotSettings.Fields.Cast<IAvrPivotGridField>().ToList();
-            LayoutValidateResult result = helper.LoadPivotFromDB(new AvrPivotGridData(data), fields, isNewObject);
-            var model = new AvrPivotGridModel(pivotSettings, data);
-            if (result.IsCancelOrUserDialogCancel())
-            {
-                model.HideDataForComplexLayout();
-            }
-            return model;
-        }
-
-       
 
         [HttpPost]
         public ActionResult HasChanges()
@@ -690,7 +655,7 @@ namespace eidss.avr.mweb.Controllers
             {
                 model.PivotSettings.SelectedField.CancelChanges(model.PivotSettings.LayoutDataset);
             }
-            if (model.PivotSettings.SelectedField.Action != WebFieldAction.Add)
+            if ((model.PivotSettings.SelectedField != null) && (model.PivotSettings.SelectedField.Action != WebFieldAction.Add))
             {
                 return new JsonResult { Data = String.Empty, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
             }
@@ -811,6 +776,45 @@ namespace eidss.avr.mweb.Controllers
             }
             LayoutPivotGridHelper.ResetDisplayTextHandler();
 
+            return model;
+        }
+
+        public static AvrPivotGridModel FillData(ref long queryId, long layoutId)
+        {
+            var service = new WebLayoutDB();
+            var sessionDataSet = (LayoutDetailDataSet)service.GetDetail(layoutId);
+            if (queryId <= 0)
+            {
+                queryId = ((LayoutDetailDataSet.LayoutRow)sessionDataSet.Layout.Rows[0]).idflQuery;
+            }
+            var helper = new LayoutHelper(sessionDataSet);
+
+            var settings = new AvrPivotSettings(queryId, layoutId);
+            helper.InitAvrPivotSettings(settings);
+            bool isNewObject;
+
+            string errorMessage;
+            AvrDataTable data = LayoutPivotGridHelper.GetPivotData(
+                helper.LayoutDataSet,
+                queryId,
+                layoutId,
+                settings.UseArchiveData,
+                settings.ApplyFilter ? settings.FilterCriteriaString :string.Empty,
+                out isNewObject, out errorMessage);
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                throw new AvrException(errorMessage);
+            }
+
+            settings.Fields = AvrPivotGridHelper.CreateFields<WebPivotGridField>(data);
+            helper.PrepareWebFields(settings);
+            List<IAvrPivotGridField> fields = settings.Fields.Cast<IAvrPivotGridField>().ToList();
+            LayoutValidateResult result = helper.LoadPivotFromDB(new AvrPivotGridData(data), fields, isNewObject);
+            var model = new AvrPivotGridModel(settings, data);
+            if (result.IsCancelOrUserDialogCancel())
+            {
+                model.HideDataForComplexLayout();
+            }
             return model;
         }
 

@@ -20,7 +20,12 @@ namespace eidss.model.Reports.AZ
 
         public override List<SelectListItemSurrogate> LoadItemList()
         {
-            return FilterHelper.GetSpeciesTypes(HACode.Livestock);
+            return FilterHelper.GetSpeciesTypes(new FilterHelper.GetSpeciesTypesParam(HACode.Livestock));
+        }
+
+        public List<SelectListItemSurrogate> LoadItemList(HACode code, bool addSelectAll = true)
+        {
+            return FilterHelper.GetSpeciesTypes(new FilterHelper.GetSpeciesTypesParam(code, addSelectAll));
         }
     }
 }

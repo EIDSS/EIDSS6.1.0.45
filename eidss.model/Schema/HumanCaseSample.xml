@@ -151,6 +151,7 @@
           <required_validator target="idfsSampleType" property="SampleType" field="SampleType" />
           <custom_mandatory_validator name="idfSendToOffice" fieldId="HumanCaseSample_SentTo" predicate="c => c.idfsSampleType != (long)SampleTypeEnum.Unknown"/>
           <custom_mandatory_validator name="strSendToOffice" fieldId="HumanCaseSample_SentTo" predicate="c => c.idfsSampleType != (long)SampleTypeEnum.Unknown"/>
+          <custom_mandatory_validator name="strFieldBarcode" fieldId="HumanCaseSample_LocalID" predicate="c => c.idfsSampleType != (long)SampleTypeEnum.Unknown"/>
         </post>
         <delete>
           <predicate_validator predicate="c => c.idfsAccessionCondition == null" message="msgCantDeleteRecord" />

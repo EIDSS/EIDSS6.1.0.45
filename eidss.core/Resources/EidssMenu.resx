@@ -219,7 +219,7 @@
     <comment>AZ Human Report</comment>
   </data>
   <data name="HumBorderRayonsComparativeReport" xml:space="preserve">
-    <value>Comparative report incidence for adjacent rayons</value>
+    <value>Border rayons' incidence comparative report</value>
     <comment>AZ Human Report</comment>
   </data>
   <data name="LabTestingResultsAZ" xml:space="preserve">
@@ -903,7 +903,7 @@
     <value>Comparative Report of several years by months</value>
   </data>
   <data name="HumReportedCasesDeathsByProvinceMonthTH" xml:space="preserve">
-    <value>Reported cases and deaths by Province/District and by Month</value>
+    <value>Reported cases and deaths by Province/District/Sub-District and by Month</value>
   </data>
   <data name="HumNumberOfCasesDeathsMorbidityMortalityTH" xml:space="preserve">
     <value>Number of cases, deaths, morbidity rate, mortality rate, case fatality rate</value>
@@ -976,5 +976,25 @@
   </data>
   <data name="btUkraineNotification" xml:space="preserve">
     <value>Urgent Notification Ukraine</value>
+  </data>
+  <data name="ComparativeReportByRegionKZ" xml:space="preserve">
+    <value>Comparative Report by region</value>
+    <comment>KZ Human Report</comment>
+  </data>
+  <data name="ComparativeReportKZ" xml:space="preserve">
+    <value>Comparative Report</value>
+    <comment>Comparative Report</comment>
+  </data>
+  <data name="HumanComparativeReportKZ" xml:space="preserve">
+    <value>Comparative report</value>
+    <comment>Comparative report</comment>
+  </data>
+  <data name="VeterinaryComparativeByMonthReportAZ" xml:space="preserve">
+    <value>Veterinary Comparative Report by months</value>
+    <comment>AZ Veterinary Comparative Report by month Report</comment>
+  </data>
+  <data name="IncidenceReportByRegionKZ" xml:space="preserve">
+    <value>Incidence report of specific diagnosis by regions</value>
+    <comment>KZ Human Report</comment>
   </data>
 </root>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblReportName.Text" xml:space="preserve">
-    <value>შინაურ ცხოველთა დაავადების კვლევის დგარ ფორმა</value>
+    <value>ცხოველის დაავადების კვლევის ფორმა</value>
   </data>
   <data name="xrTableCell14.Text" xml:space="preserve">
     <value>საკუთრების ფორმა</value>

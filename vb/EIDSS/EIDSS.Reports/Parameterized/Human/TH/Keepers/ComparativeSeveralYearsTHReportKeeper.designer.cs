@@ -32,6 +32,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Keepers
             // 
             // pnlSettings
             // 
+            this.pnlSettings.Controls.Add(this.YearToSpinEdit);
+            this.pnlSettings.Controls.Add(this.YearFromSpinEdit);
             this.pnlSettings.Controls.Add(this.CounterLookUp);
             this.pnlSettings.Controls.Add(this.CounterLabel);
             this.pnlSettings.Controls.Add(this.ProvinceLabel);
@@ -40,13 +42,9 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Keepers
             this.pnlSettings.Controls.Add(this.DiagnosesFilter);
             this.pnlSettings.Controls.Add(this.ProvinceFilter);
             this.pnlSettings.Controls.Add(this.DistrictFilter);
-            this.pnlSettings.Controls.Add(this.YearToSpinEdit);
-            this.pnlSettings.Controls.Add(this.YearFromSpinEdit);
             resources.ApplyResources(this.pnlSettings, "pnlSettings");
             this.pnlSettings.Controls.SetChildIndex(this.GenerateReportButton, 0);
             this.pnlSettings.Controls.SetChildIndex(this.ceUseArchiveData, 0);
-            this.pnlSettings.Controls.SetChildIndex(this.YearFromSpinEdit, 0);
-            this.pnlSettings.Controls.SetChildIndex(this.YearToSpinEdit, 0);
             this.pnlSettings.Controls.SetChildIndex(this.DistrictFilter, 0);
             this.pnlSettings.Controls.SetChildIndex(this.ProvinceFilter, 0);
             this.pnlSettings.Controls.SetChildIndex(this.DiagnosesFilter, 0);
@@ -55,6 +53,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Keepers
             this.pnlSettings.Controls.SetChildIndex(this.ProvinceLabel, 0);
             this.pnlSettings.Controls.SetChildIndex(this.CounterLabel, 0);
             this.pnlSettings.Controls.SetChildIndex(this.CounterLookUp, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.YearFromSpinEdit, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.YearToSpinEdit, 0);
             // 
             // ceUseArchiveData
             // 
@@ -71,6 +71,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Keepers
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(ComparativeSeveralYearsTHReportKeeper), out resources);
             // Form Is Localizable: True
@@ -171,7 +173,8 @@ namespace EIDSS.Reports.Parameterized.Human.TH.Keepers
             // 
             // ComparativeSeveralYearsTHReportKeeper
             // 
-            resources.ApplyResources(this, "$this");
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("ComparativeSeveralYearsTHReportKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.HeaderHeight = 130;
             this.Name = "ComparativeSeveralYearsTHReportKeeper";
             this.pnlSettings.ResumeLayout(false);

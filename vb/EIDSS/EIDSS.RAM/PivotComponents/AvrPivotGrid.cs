@@ -213,9 +213,12 @@ namespace eidss.avr.PivotComponents
                 m_DataSource = value;
                 if (m_DataSource != null && m_DataSource.RealPivotData != null)
                 {
-                    base.DataSource = HideData
-                        ? m_DataSource.ClonedPivotData
-                        : m_DataSource.RealPivotData;
+                    using (m_SharedPresenter.ContextKeeper.CreateNewContext(ContextValue.PivotSuppressRefreshing))
+                    {
+                        base.DataSource = HideData
+                            ? m_DataSource.ClonedPivotData
+                            : m_DataSource.RealPivotData;
+                    }
                 }
             }
         }
@@ -485,7 +488,7 @@ namespace eidss.avr.PivotComponents
 
         public IDisposable BeginTransaction()
         {
-            return DataTransactionStrategy.BeginTransaction(Data);
+            return DataTransactionStrategy.BeginTransaction(m_SharedPresenter.ContextKeeper, Data);
         }
 
         public PivotGridDataLoadedCommand CreatePivotDataLoadedCommand(string layoutName, bool skipData = false)

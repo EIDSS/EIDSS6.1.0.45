@@ -476,7 +476,7 @@ namespace hmis2eidss.service.Import
                 log.intStatus = -1;
                 return log;
             }
-
+                
             //3	Human Case Notification Date	Date		MessageContract.DateCreated	Accept a case	
             hc.datNotificationDate = datNotificationDate(message);
 

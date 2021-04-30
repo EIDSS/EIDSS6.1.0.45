@@ -56,7 +56,7 @@ namespace eidss.avr.export
         {
             //using (new CultureInfoTransaction(new CultureInfo(CustomCultureHelper.SupportedLanguages[lang])))
             ModelUserContext.CurrentLanguage = result.Language;
-            CachedQueryResult queryResult = ServiceClientHelper.ExecQuery(result.QueryId, false, true);
+            CachedQueryResult queryResult = ServiceClientHelper.ExecQuery(result.QueryId, false, string.Empty, true);
             if (string.IsNullOrEmpty(queryResult.ErrorMessage))
             {
                 AccessDataAdapter.QueryLineListToAccess(result.ResultFilePath, queryResult.QueryTable);

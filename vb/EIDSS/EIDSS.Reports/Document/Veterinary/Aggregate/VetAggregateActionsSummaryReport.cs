@@ -24,17 +24,17 @@ namespace EIDSS.Reports.Document.Veterinary.Aggregate
             ((AdmUnitReport)xrSubreportAdmUnit.ReportSource).SetParameters(lang, aggrXml, manager, archiveManager);
 
             const int deltaWidth = 8;
-            List<long> diagnosticObservations = AggregateHelper.GetObservationList(parameters, "@diagnosticObservation");
+            List<long> diagnosticObservations = EIDSS.Reports.BaseControls.Aggregate.AggregateHelper.GetObservationList(parameters, "@diagnosticObservation");
             string diagnosticText = GetStringParameter(parameters, "@diagnosticText" + lang);
             FlexFactory.CreateVetAggregateActionsSummaryReport(FlexSubreport, diagnosticObservations, tableBaseHeader.Width - deltaWidth,
                 diagnosticText);
 
-            List<long> sanitaryObservations = AggregateHelper.GetObservationList(parameters, "@sanitaryObservation");
+            List<long> sanitaryObservations = EIDSS.Reports.BaseControls.Aggregate.AggregateHelper.GetObservationList(parameters, "@sanitaryObservation");
             string sanitaryText = GetStringParameter(parameters, "@sanitaryText" + lang);
             FlexFactory.CreateVetAggregateActionsSummarySanReport(FlexSubreportSan, sanitaryObservations, tableBaseHeader.Width - deltaWidth,
                 sanitaryText);
 
-            List<long> prophylacticObservations = AggregateHelper.GetObservationList(parameters, "@prophylacticObservation");
+            List<long> prophylacticObservations = EIDSS.Reports.BaseControls.Aggregate.AggregateHelper.GetObservationList(parameters, "@prophylacticObservation");
             string prophylacticText = GetStringParameter(parameters, "@prophylacticText" + lang);
             FlexFactory.CreateVetAggregateActionsSummaryProReport(FlexSubreportPro, prophylacticObservations,
                 tableBaseHeader.Width - deltaWidth, prophylacticText);

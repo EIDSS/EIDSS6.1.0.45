@@ -20,6 +20,30 @@
       <Component Id="IDAutomationC128XS.ttf">
         <File Name="IDAutomationC128XS.ttf" TrueType="yes" ReadOnly="yes" KeyPath="yes" />
       </Component>
+      <Component Id="THSarabunNew.ttf">
+        <File Name="THSarabunNew.ttf" TrueType="yes" ReadOnly="yes" KeyPath="yes" />
+      </Component>
+      <Component Id="THSarabunNewBold.ttf">
+        <File Name="THSarabunNewBold.ttf" TrueType="yes" ReadOnly="yes" KeyPath="yes" />
+      </Component>
+      <Component Id="THSarabunNewItalic.ttf">
+        <File Name="THSarabunNewItalic.ttf" TrueType="yes" ReadOnly="yes" KeyPath="yes" />
+      </Component>
+      <Component Id="THSarabunNewBoldItalic.ttf">
+        <File Name="THSarabunNewBoldItalic.ttf" TrueType="yes" ReadOnly="yes" KeyPath="yes" />
+      </Component>
+      <Component Id="THSarabunPSK.ttf">
+        <File Name="THSarabunPSK.ttf" TrueType="yes" ReadOnly="yes" KeyPath="yes" />
+      </Component>
+      <Component Id="THSarabunPSKBold.ttf">
+        <File Name="THSarabunPSKBold.ttf" TrueType="yes" ReadOnly="yes" KeyPath="yes" />
+      </Component>
+      <Component Id="THSarabunPSKItalic.ttf">
+        <File Name="THSarabunPSKItalic.ttf" TrueType="yes" ReadOnly="yes" KeyPath="yes" />
+      </Component>
+      <Component Id="THSarabunPSKBoldItalic.ttf">
+        <File Name="THSarabunPSKBoldItalic.ttf" TrueType="yes" ReadOnly="yes" KeyPath="yes" />
+      </Component>
     </ComponentGroup>
   </Fragment>
 </Wix>

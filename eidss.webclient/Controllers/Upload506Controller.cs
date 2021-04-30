@@ -1,4 +1,5 @@
-﻿using BLToolkit.EditableObjects;
+﻿using System;
+using BLToolkit.EditableObjects;
 using bv.model.BLToolkit;
 using bv.model.Model.Core;
 using eidss.model.Core;
@@ -11,6 +12,8 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using bv.common.Configuration;
+using bv.common.Core;
 
 namespace eidss.webclient.Controllers
 {
@@ -184,13 +187,17 @@ namespace eidss.webclient.Controllers
 			{
 				if (o.GetState() == Upload506MasterState.ReadyForSave)
 				{
-					try
-					{
-						using (var manager = DbManagerFactory.Factory.Create(EidssUserContext.Instance))
-						{
-							Upload506Master.Accessor.Instance(null).Post(manager, o);
-						}
-					}
+				    try
+				    {
+				        using (var manager = DbManagerFactory.Factory.Create(EidssUserContext.Instance))
+				        {
+				            Upload506Master.Accessor.Instance(null).Post(manager, o);
+				        }
+				    }
+				    catch (Exception ex)
+				    {
+				        LogError.Log("ErrorLog", ex);
+				    }
 					finally
 					{
 						o.LeaveUploadingSession();

@@ -29,7 +29,7 @@
                 return new List<SelectListItem> {
                     new SelectListItem { Value = "=", Text = "="},
                     new SelectListItem { Value = "LIKE", Text = "LIKE" },
-                    new SelectListItem { Value = "<>", Text = "<>" }
+                    new SelectListItem { Value = "<>", Text = "<>" } 
                     };
             case bv.model.Model.Core.EditorType.Lookup:
                 return new List<SelectListItem>
@@ -38,7 +38,7 @@
                     new SelectListItem{ Value = "<>", Text = "<>" }
                 };
             default:
-                return new List<SelectListItem>
+                return new List<SelectListItem> 
                 {
                     new SelectListItem{ Value = "=", Text = "=" },
                     new SelectListItem{ Value = "<>", Text = "<>" },
@@ -86,12 +86,14 @@
         {
             attributes.Add("maxlength", "100");
         }
+        
         //TODO: Chrome date problem fix - start
         if ((Model.EditorType == bv.model.Model.Core.EditorType.Date) || (Model.EditorType == bv.model.Model.Core.EditorType.Datetime))
         {
             attributes.Add("type", "text");
         }
         //TODO: Chrome date problem fix - end
+
         if (Model.Mandatory(ViewData["BusinessObject"]) && !(bool)ViewData["IsSimpleMode"])
         {
             attributes.Add("required", "required");
@@ -155,7 +157,7 @@
         }
         return ret;
     }
-
+    
 }
 @switch (Model.EditorType)
 {

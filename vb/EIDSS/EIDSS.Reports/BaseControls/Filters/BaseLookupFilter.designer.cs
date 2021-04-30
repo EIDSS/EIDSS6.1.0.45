@@ -30,14 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseLookupFilter));
             this.LookUp = new DevExpress.XtraEditors.LookUpEdit();
-            this.lblLookupName = new DevExpress.XtraEditors.LabelControl();
+            this.lblLookupName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LookUp.Properties)).BeginInit();
             this.SuspendLayout();
+            bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(BaseLookupFilter), out resources);
+            // Form Is Localizable: True
             // 
             // LookUp
             // 
             resources.ApplyResources(this.LookUp, "LookUp");
             this.LookUp.Name = "LookUp";
+            this.LookUp.Properties.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("LookUp.Properties.Appearance.Font")));
+            this.LookUp.Properties.Appearance.Options.UseFont = true;
             this.LookUp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("LookUp.Properties.Buttons")))),
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("LookUp.Properties.Buttons1"))))});
@@ -52,10 +56,12 @@
             // 
             // BaseLookupFilter
             // 
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("BaseLookupFilter.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblLookupName);
             this.Controls.Add(this.LookUp);
+            this.Controls.Add(this.lblLookupName);
             this.Name = "BaseLookupFilter";
             ((System.ComponentModel.ISupportInitialize)(this.LookUp.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -65,6 +71,6 @@
         #endregion
 
         private DevExpress.XtraEditors.LookUpEdit LookUp;
-        protected DevExpress.XtraEditors.LabelControl lblLookupName;
+        protected System.Windows.Forms.Label lblLookupName;
     }
 }

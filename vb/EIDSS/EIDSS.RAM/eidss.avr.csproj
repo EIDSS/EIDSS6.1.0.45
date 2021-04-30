@@ -884,6 +884,9 @@
     <EmbeddedResource Include="PivotForm\DateDiapasonDialog.th-TH.resx">
       <DependentUpon>DateDiapasonDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PivotForm\DateDiapasonDialog.uk-UA.resx">
+      <DependentUpon>DateDiapasonDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PivotForm\PivotDetailPanel.th-TH.resx">
       <DependentUpon>PivotDetailPanel.cs</DependentUpon>
     </EmbeddedResource>

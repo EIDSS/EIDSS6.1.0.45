@@ -12,7 +12,8 @@ using eidss.avr.mweb.Models;
 using eidss.avr.mweb.Utils;
 using eidss.model.Avr.View;
 using eidss.web.common.Utils;
-
+using bv.common.Configuration;
+using eidss.model.Helpers;
 
 namespace eidss.avr.mweb.Controllers
 {
@@ -23,7 +24,7 @@ namespace eidss.avr.mweb.Controllers
         [HttpGet]
         public ActionResult ViewLayout(long layoutId)
         {
-            if (Request.QueryString.AllKeys.Contains("clearcache") && Request.QueryString["clearcache"] == "1")
+            if (Request.QueryString.AllKeys.Contains("clearcache"))// && Request.QueryString["clearcache"] == "1")
             {
                 RemoveViewObjects(layoutId);
             }
@@ -116,7 +117,7 @@ namespace eidss.avr.mweb.Controllers
             if (viewModel == null)
                 return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = new { result = "error", data = error } };
 
-            viewModel.ViewHeader.FillColumnsBooleans( form.Count == 0 ? "" : form[0], "IsMapDiagramSeries");
+            viewModel.ViewHeader.FillColumnsBooleans(form.Count == 0 ? "" : form[0], "IsMapDiagramSeries");
             return new JsonResult { Data = String.Empty, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
 
@@ -190,7 +191,7 @@ namespace eidss.avr.mweb.Controllers
                 viewModel.ViewHeader.SetOrderChanged();
                 if (viewModel.ViewHeader.SetTempOrders(source, destination, isDropBefore))
                 {
-                //    viewModel.ViewHeader.GridViewSettings = null;
+                    //    viewModel.ViewHeader.GridViewSettings = null;
                     return new JsonResult { Data = new { result = "refresh", Url = "ViewLayout?layoutId=" + LayoutId }, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
                 }
             }
@@ -494,6 +495,12 @@ namespace eidss.avr.mweb.Controllers
             var viewModel = GetModelFromSession(layoutId, out error);
             if (viewModel == null)
                 return View("AvrServiceError", (object)error);
+
+            PdfExportHelper pdfHelper = new PdfExportHelper(
+                viewModel.ViewHeader, BaseSettings.GetSystemFont(true));
+
+            pdfHelper.WordWrapVerticalColumnHeaders(viewModel.ViewData);
+
             return LayoutViewHelper.ExportTypes[typeName].Method(LayoutViewHelper.GetGridViewSettings(viewModel.ViewHeader), viewModel.ViewData);
         }
 
@@ -612,7 +619,7 @@ namespace eidss.avr.mweb.Controllers
         {
             var dbService = new View_DB();
             dbService.GetDetail(layoutId);
-          //  dbService.GetGeneralChartMapSettings();
+            //  dbService.GetGeneralChartMapSettings();
             return dbService.avrView;
         }
 
@@ -688,7 +695,7 @@ namespace eidss.avr.mweb.Controllers
         {
             view.SetOrders();
             view.AdjustToNew(model.ViewHeader);
-            view.setColumnsTypes(model.ViewData);
+            view.SetColumnsTypes(model.ViewData);
 
             view.GetAggregateColumnsList().ForEach(c => AggregateCasheWeb.FillAggregateColumn(model.ViewData, c, view.GetSortExpression()));
 

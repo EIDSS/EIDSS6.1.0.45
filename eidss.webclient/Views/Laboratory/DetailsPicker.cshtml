@@ -344,6 +344,7 @@
                     <tr>
                         <td class="firstLabel">
                             @Html.BvLabel(Model, m => m.strTestStatus)
+                            @Html.BvLabel(Model, m => m.TestStatusShort)
                         </td>
                         <td>
                             @Html.BvCombobox(Model, m => m.TestStatusShort, false, "laboratory.onTestStatusChangedOnDetail")

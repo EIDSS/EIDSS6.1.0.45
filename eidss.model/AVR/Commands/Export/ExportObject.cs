@@ -4,6 +4,6 @@ namespace eidss.avr.db.Common.CommandProcessing.Commands.Export
     {
         View,
         Chart,
-        Map,
+        Map
     }
 }

@@ -202,6 +202,7 @@ namespace EIDSS.Reports.Document.Veterinary.Aggregate
             this.CaseIdBarcodeCell.Name = "CaseIdBarcodeCell";
             this.CaseIdBarcodeCell.StylePriority.UseFont = false;
             this.CaseIdBarcodeCell.StylePriority.UseTextAlignment = false;
+            this.CaseIdBarcodeCell.Tag = "UnchangebleFont";
             // 
             // xrTableCell2
             // 

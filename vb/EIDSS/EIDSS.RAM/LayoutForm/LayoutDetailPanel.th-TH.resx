@@ -133,7 +133,7 @@
     <value>ลบ</value>
   </data>
   <data name="cmdCancelChanges.Text" xml:space="preserve">
-    <value>ยกเลิกการเปลี่ยนแปลง</value>
+    <value>ยกเลิกการแก้ไข</value>
   </data>
   <data name="tabPagePivotGrid.Text" xml:space="preserve">
     <value>ตาราง Pivot</value>

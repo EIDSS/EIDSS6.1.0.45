@@ -3015,4 +3015,10 @@
   <data name="strPIN" xml:space="preserve">
     <value>პირადი ნომერი</value>
   </data>
+  <data name="strQueryName" xml:space="preserve">
+    <value>ქართული მნიშვნელობა</value>
+  </data>
+  <data name="Form1KZRegion" xml:space="preserve">
+    <value>რეგიონი</value>
+  </data>
 </root>

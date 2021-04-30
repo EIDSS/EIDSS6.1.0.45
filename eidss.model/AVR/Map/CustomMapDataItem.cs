@@ -37,13 +37,14 @@ namespace eidss.model.Avr.Map
                 CaptionList.Sort();
                 var captionBuilder = new StringBuilder();
                 captionBuilder.AppendLine();
-                foreach (string id in CaptionList)
+                foreach (var id in CaptionList)
                 {
                     if (!string.IsNullOrEmpty(id))
                     {
                         captionBuilder.AppendLine(id);
                     }
                 }
+
                 return captionBuilder.ToString();
             }
         }

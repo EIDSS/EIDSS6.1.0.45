@@ -41,7 +41,7 @@ body {
 .medium
 {
 	width: 150px;
-	min-width: 150px;
+	/*min-width: 150px;*/
 	max-width: 150px;
 }
 
@@ -88,6 +88,11 @@ body {
 {
 	width: 240px;
 	min-width: 200px;
+}
+
+nopadding 
+{
+    padding:0px;
 }
 
 .mediumandlarge 

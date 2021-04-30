@@ -3980,7 +3980,7 @@ namespace eidss.model.Schema
                             , null
                             , new Func<AggregateCaseHeader, long?>(c => c.idfsAggrCaseType)(obj)
                             )
-                            .Where(c => (c.intRowStatus == 0 && c.idfsRayon != c.idfsParent) || (c.idfsRayon == obj.idfsRayon))
+                            .Where(c => (c.intRowStatus == 0) || (c.idfsRayon == obj.idfsRayon))
                             .ToList());
                     }
                     catch (Exception e)

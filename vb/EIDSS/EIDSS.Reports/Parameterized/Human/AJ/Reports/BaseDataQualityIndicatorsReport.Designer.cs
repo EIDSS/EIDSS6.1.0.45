@@ -30,12 +30,6 @@
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             this.HeaderLabal = new DevExpress.XtraReports.UI.XRLabel();
             this.GroupHeaderRegion = new DevExpress.XtraReports.UI.GroupHeaderBand();
-            this.DetailDynamicTable = new DevExpress.XtraReports.UI.XRTable();
-            this.DetailDynamicTableRow = new DevExpress.XtraReports.UI.XRTableRow();
-            this.RegionDetailCell = new DevExpress.XtraReports.UI.XRTableCell();
-            this.RayonDetailCell = new DevExpress.XtraReports.UI.XRTableCell();
-            this.DiagnosisDetailCell = new DevExpress.XtraReports.UI.XRTableCell();
-            this.NumberOfCasesDetailCell = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.SecondSignatureTable = new DevExpress.XtraReports.UI.XRTable();
             this.SecondSignatureRow = new DevExpress.XtraReports.UI.XRTableRow();
@@ -81,10 +75,15 @@
             this.HeaderDynamicTable = new DevExpress.XtraReports.UI.XRTable();
             this.m_DQIAdapter = new EIDSS.Reports.Parameterized.Human.AJ.DataSets.DQIDataSetTableAdapters.spRepHumDataQualityIndicatorsTableAdapter();
             this.m_DQIDataSet = new EIDSS.Reports.Parameterized.Human.AJ.DataSets.DQIDataSet();
+            this.NumberOfCasesDetailCell = new DevExpress.XtraReports.UI.XRTableCell();
+            this.DiagnosisDetailCell = new DevExpress.XtraReports.UI.XRTableCell();
+            this.RayonDetailCell = new DevExpress.XtraReports.UI.XRTableCell();
+            this.RegionDetailCell = new DevExpress.XtraReports.UI.XRTableCell();
+            this.DetailDynamicTableRow = new DevExpress.XtraReports.UI.XRTableRow();
+            this.DetailDynamicTable = new DevExpress.XtraReports.UI.XRTable();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_BaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBaseHeader)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DetailDynamicTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SecondSignatureTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrChart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -108,6 +107,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MaximumDynamicTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderDynamicTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_DQIDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetailDynamicTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // xrTable4
@@ -218,58 +218,6 @@
             this.GroupHeaderRegion.Name = "GroupHeaderRegion";
             this.GroupHeaderRegion.StylePriority.UseBorderWidth = false;
             this.GroupHeaderRegion.StylePriority.UsePadding = false;
-            // 
-            // DetailDynamicTable
-            // 
-            this.DetailDynamicTable.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right)));
-            resources.ApplyResources(this.DetailDynamicTable, "DetailDynamicTable");
-            this.DetailDynamicTable.Name = "DetailDynamicTable";
-            this.DetailDynamicTable.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
-            this.DetailDynamicTableRow});
-            this.DetailDynamicTable.StylePriority.UseBorders = false;
-            this.DetailDynamicTable.StylePriority.UsePadding = false;
-            this.DetailDynamicTable.StylePriority.UseTextAlignment = false;
-            // 
-            // DetailDynamicTableRow
-            // 
-            this.DetailDynamicTableRow.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.RegionDetailCell,
-            this.RayonDetailCell,
-            this.DiagnosisDetailCell,
-            this.NumberOfCasesDetailCell});
-            this.DetailDynamicTableRow.Name = "DetailDynamicTableRow";
-            resources.ApplyResources(this.DetailDynamicTableRow, "DetailDynamicTableRow");
-            // 
-            // RegionDetailCell
-            // 
-            this.RegionDetailCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.strRegion")});
-            this.RegionDetailCell.Name = "RegionDetailCell";
-            resources.ApplyResources(this.RegionDetailCell, "RegionDetailCell");
-            this.RegionDetailCell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.RegionDetailCell_BeforePrint);
-            // 
-            // RayonDetailCell
-            // 
-            this.RayonDetailCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.strRayon")});
-            this.RayonDetailCell.Name = "RayonDetailCell";
-            resources.ApplyResources(this.RayonDetailCell, "RayonDetailCell");
-            this.RayonDetailCell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.RayonDetailCell_BeforePrint);
-            // 
-            // DiagnosisDetailCell
-            // 
-            this.DiagnosisDetailCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.strDiagnosis")});
-            this.DiagnosisDetailCell.Name = "DiagnosisDetailCell";
-            this.DiagnosisDetailCell.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.DiagnosisDetailCell.StylePriority.UsePadding = false;
-            resources.ApplyResources(this.DiagnosisDetailCell, "DiagnosisDetailCell");
-            // 
-            // NumberOfCasesDetailCell
-            // 
-            this.NumberOfCasesDetailCell.Name = "NumberOfCasesDetailCell";
-            resources.ApplyResources(this.NumberOfCasesDetailCell, "NumberOfCasesDetailCell");
             // 
             // ReportFooter
             // 
@@ -600,6 +548,7 @@
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.NumberOfCasesSubTotalCell.Summary = xrSummary1;
             resources.ApplyResources(this.NumberOfCasesSubTotalCell, "NumberOfCasesSubTotalCell");
+            this.NumberOfCasesSubTotalCell.SummaryCalculated += new DevExpress.XtraReports.UI.TextFormatEventHandler(this.NumberOfCasesSubTotalCell_SummaryCalculated);
             // 
             // xrLine1
             // 
@@ -764,6 +713,58 @@
             this.m_DQIDataSet.DataSetName = "AFPIndicatorsDataSet";
             this.m_DQIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // NumberOfCasesDetailCell
+            // 
+            this.NumberOfCasesDetailCell.Name = "NumberOfCasesDetailCell";
+            resources.ApplyResources(this.NumberOfCasesDetailCell, "NumberOfCasesDetailCell");
+            // 
+            // DiagnosisDetailCell
+            // 
+            this.DiagnosisDetailCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.strDiagnosis")});
+            this.DiagnosisDetailCell.Name = "DiagnosisDetailCell";
+            this.DiagnosisDetailCell.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.DiagnosisDetailCell.StylePriority.UsePadding = false;
+            resources.ApplyResources(this.DiagnosisDetailCell, "DiagnosisDetailCell");
+            // 
+            // RayonDetailCell
+            // 
+            this.RayonDetailCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.strRayon")});
+            this.RayonDetailCell.Name = "RayonDetailCell";
+            resources.ApplyResources(this.RayonDetailCell, "RayonDetailCell");
+            this.RayonDetailCell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.RayonDetailCell_BeforePrint);
+            // 
+            // RegionDetailCell
+            // 
+            this.RegionDetailCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "spRepHumDataQualityIndicators.strRegion")});
+            this.RegionDetailCell.Name = "RegionDetailCell";
+            resources.ApplyResources(this.RegionDetailCell, "RegionDetailCell");
+            this.RegionDetailCell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.RegionDetailCell_BeforePrint);
+            // 
+            // DetailDynamicTableRow
+            // 
+            this.DetailDynamicTableRow.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.RegionDetailCell,
+            this.RayonDetailCell,
+            this.DiagnosisDetailCell,
+            this.NumberOfCasesDetailCell});
+            this.DetailDynamicTableRow.Name = "DetailDynamicTableRow";
+            resources.ApplyResources(this.DetailDynamicTableRow, "DetailDynamicTableRow");
+            // 
+            // DetailDynamicTable
+            // 
+            this.DetailDynamicTable.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right)));
+            resources.ApplyResources(this.DetailDynamicTable, "DetailDynamicTable");
+            this.DetailDynamicTable.Name = "DetailDynamicTable";
+            this.DetailDynamicTable.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
+            this.DetailDynamicTableRow});
+            this.DetailDynamicTable.StylePriority.UseBorders = false;
+            this.DetailDynamicTable.StylePriority.UsePadding = false;
+            this.DetailDynamicTable.StylePriority.UseTextAlignment = false;
+            // 
             // BaseDataQualityIndicatorsReport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -797,7 +798,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_BaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableBaseHeader)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DetailDynamicTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SecondSignatureTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
@@ -821,6 +821,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.MaximumDynamicTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HeaderDynamicTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_DQIDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetailDynamicTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -837,15 +838,10 @@
 
         protected DevExpress.XtraReports.UI.XRLabel HeaderLabal;
         protected DevExpress.XtraReports.UI.GroupHeaderBand GroupHeaderRegion;
-        protected DevExpress.XtraReports.UI.XRTable DetailDynamicTable;
-        protected DevExpress.XtraReports.UI.XRTableRow DetailDynamicTableRow;
         protected DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         protected DevExpress.XtraReports.UI.GroupFooterBand GroupFooterRayon;
         protected DevExpress.XtraReports.UI.XRLine xrLine1;
-        protected DevExpress.XtraReports.UI.XRTableCell RegionDetailCell;
-        protected DevExpress.XtraReports.UI.XRTableCell RayonDetailCell;
         protected DevExpress.XtraReports.UI.XRLabel HeaderPeriodLabel;
-        protected DevExpress.XtraReports.UI.XRTableCell DiagnosisDetailCell;
         protected DevExpress.XtraReports.UI.GroupHeaderBand GroupHeaderRayon;
         protected DevExpress.XtraReports.UI.GroupHeaderBand GroupHeaderLine;
         protected DevExpress.XtraReports.UI.GroupFooterBand GroupFooterLine;
@@ -864,7 +860,6 @@
         protected DevExpress.XtraReports.UI.XRTableCell RayonHeaderCell;
         protected DevExpress.XtraReports.UI.XRTableCell DiagnosisHeaderCell;
         protected DevExpress.XtraReports.UI.XRTableCell NumberOfCasesHeaderCell;
-        public DevExpress.XtraReports.UI.XRTableCell NumberOfCasesDetailCell;
         public DevExpress.XtraReports.UI.XRTableCell NumberOfCasesMaxCell;
         public DevExpress.XtraReports.UI.XRTableCell NumberOfCasesTotalCell;
         protected DevExpress.XtraReports.UI.XRChart xrChart1;
@@ -884,8 +879,14 @@
         protected DevExpress.XtraReports.UI.XRTable SubTotalDynamicTable;
         protected DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
         protected DevExpress.XtraReports.UI.XRTableCell RayonSubTotalCell;
-        
+
         public DevExpress.XtraReports.UI.XRTableCell NumberOfCasesSubTotalCell;
+        protected DevExpress.XtraReports.UI.XRTable DetailDynamicTable;
+        protected DevExpress.XtraReports.UI.XRTableRow DetailDynamicTableRow;
+        protected DevExpress.XtraReports.UI.XRTableCell RegionDetailCell;
+        protected DevExpress.XtraReports.UI.XRTableCell RayonDetailCell;
+        protected DevExpress.XtraReports.UI.XRTableCell DiagnosisDetailCell;
+        public DevExpress.XtraReports.UI.XRTableCell NumberOfCasesDetailCell;
 
     }
 }

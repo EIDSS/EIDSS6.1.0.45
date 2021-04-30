@@ -1044,10 +1044,14 @@
                 var culture = kendo.getCulture("");
                 var shiftYear = (culture.name == "th-TH" || kendo.forceThaiDate) && !kendo.forceGrigDate ? 543 : 0;
                 var shiftDecade = (culture.name == "th-TH" || kendo.forceThaiDate) && !kendo.forceGrigDate ? 3 : 0;
+                var startYear = year - year % 10 - shiftDecade - 1;
+                if (startYear + 10 < year) {
+                    startYear = startYear + 10;
+                }
                 // BV end
 
                 return view({
-                    start: new DATE(year - year % 10 - shiftDecade - 1, 0, 1), // BV
+                    start: new DATE(startYear, 0, 1), // BV
                     min: new DATE(options.min.getFullYear(), 0, 1),
                     max: new DATE(options.max.getFullYear(), 0, 1),
                     setter: this.setDate,
@@ -1105,8 +1109,13 @@
                     maxYear = minYear + 9;
                 }
 
+                var startYear = year - year % 100 - shiftDecade - 10;
+                if (startYear + 100 < year) {
+                    startYear = startYear + 100;
+                }
+
                 return view({
-                    start: new DATE(year - year % 100 - shiftDecade - 10, 0, 1), // BV
+                    start: new DATE(startYear, 0, 1), // BV
                     min: new DATE(minYear, 0, 1),
                     max: new DATE(maxYear, 0, 1),
                     setter: this.setDate,
@@ -1172,6 +1181,11 @@
         }
         if (end > maxYear) {
             end = maxYear;
+        }
+
+        if (date.getFullYear() > end) {
+            start = start + modular;
+            end = end + modular;
         }
 
         return (start + shiftYear) + "-" + (end + shiftYear); // BV

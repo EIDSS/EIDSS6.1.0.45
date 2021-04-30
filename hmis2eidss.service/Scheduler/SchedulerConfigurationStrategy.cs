@@ -6,22 +6,9 @@ using eidss.model.WindowsService;
 
 namespace hmis2eidss.service.Scheduler
 {
-    public class SchedulerConfigurationStrategy //: ISchedulerConfigurationStrategy
+    public class SchedulerConfigurationStrategy 
     {
         private static readonly TraceHelper m_Trace = new TraceHelper(TraceHelper.HMIS2EIDSSCategory);
-
-        /*public IAVRFacade GetAVRFacade()
-        {
-            try
-            {
-                return new AVRFacade();
-            }
-            catch (Exception ex)
-            {
-                m_Trace.TraceError(ex, "Couldn't initialize AVR Facade.");
-                throw;
-            }
-        }*/
 
         public SchedulerConfigurationSection GetConfigurationSection()
         {
@@ -41,18 +28,5 @@ namespace hmis2eidss.service.Scheduler
                 throw;
             }
         }
-
-        /*public IList<string> GetLanguages()
-        {
-            try
-            {
-                return LanguageDbLoader.GetLanguages();
-            }
-            catch (Exception ex)
-            {
-                m_Trace.TraceError(ex, "Couldn't load supported languages from database.");
-                throw;
-            }
-        }*/
     }
 }

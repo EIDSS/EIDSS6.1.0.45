@@ -17,17 +17,16 @@ using eidss.model.Enums;
 using DataException = BLToolkit.Data.DataException;
 
 [assembly: InternalsVisibleTo("bv.tests")]
-
 namespace eidss.model.Core
 {
     namespace Security
     {
         public partial class EidssSecurityManager
         {
-            //private GetPermissionName m_PermissionName;
-
             private const string AccessToPersonalDataString = "Access To Personal Data";
-            private static readonly object m_LockObject = new object();
+            private static readonly object LockObject = new object();
+            private static int DedalockRepeatCount = 3;
+            private int m_LoginTry;
 
             public bool AccessGranted
             {
@@ -51,8 +50,8 @@ namespace eidss.model.Core
                     {
                         continue;
                     }
-                    string sf = ((EIDSSPermissionObject)(Convert.ToInt64(row["idfsSystemFunction"]))).ToString();
-                    var op = (long)(row["idfsObjectOperation"]);
+                    string sf = ((EIDSSPermissionObject) (Convert.ToInt64(row["idfsSystemFunction"]))).ToString();
+                    var op = (long) (row["idfsObjectOperation"]);
                     sf += ("." + operationName[op]);
                     permissions[sf] = (Convert.ToInt32(value) == 2);
                 }
@@ -70,13 +69,9 @@ namespace eidss.model.Core
                                 manager.Parameter("@idfEmployee", userId)
                                 ).ExecuteDataTable());
                     }
-                    catch (Exception e)
+                    catch (DataException e)
                     {
-                        if (e is DataException)
-                        {
-                            throw DbModelException.Create(null, e as DataException);
-                        }
-                        throw;
+                        throw DbModelException.Create(null, e);
                     }
                 }
             }
@@ -94,19 +89,11 @@ namespace eidss.model.Core
                                 manager.Parameter("@Employee", userId)
                                 ).ExecuteDataTable();
                         return (from DataRow row in table.Rows
-                                select (long)row["idfsDiagnosis"]).ToList();
-                        //return manager.SetCommand("select idfsDiagnosis from dbo.fnGetPermissionOnDiagnosis(@ObjectOperation, @Employee) where intPermission = 1",
-                        //                            manager.Parameter("@ObjectOperation", Convert.ToInt64(ObjectOperation.Read)),
-                        //                            manager.Parameter("@Employee", userId)
-                        //    ).ExecuteList<long>();
+                            select (long) row["idfsDiagnosis"]).ToList();
                     }
-                    catch (Exception e)
+                    catch (DataException e)
                     {
-                        if (e is DataException)
-                        {
-                            throw DbModelException.Create(null, e as DataException);
-                        }
-                        throw;
+                        throw DbModelException.Create(null, e);
                     }
                 }
             }
@@ -119,47 +106,43 @@ namespace eidss.model.Core
                     {
                         var avrPermissions = new Dictionary<long, List<EIDSSPermissionObject>>();
                         DataTable table = manager.SetSpCommand("dbo.spAsSearchObjectToSystemFunctionSelectLookup",
-                                manager.Parameter("@LangID", Localizer.lngEn)
-                                ).ExecuteDataTable();
+                            manager.Parameter("@LangID", Localizer.lngEn)
+                            ).ExecuteDataTable();
                         foreach (DataRow row in table.Rows)
                         {
-                            var key = (long)row["idfsSearchObject"];
+                            var key = (long) row["idfsSearchObject"];
                             if (!avrPermissions.ContainsKey(key))
                             {
                                 avrPermissions.Add(key, new List<EIDSSPermissionObject>());
                             }
-                            avrPermissions[key].Add((EIDSSPermissionObject)row["idfsSystemFunction"]);
+                            avrPermissions[key].Add((EIDSSPermissionObject) row["idfsSystemFunction"]);
                         }
                         return avrPermissions;
                     }
-                    catch (Exception e)
+                    catch (DataException e)
                     {
-                        if (e is DataException)
-                        {
-                            throw DbModelException.Create(null, e as DataException);
-                        }
-                        throw;
+                        throw DbModelException.Create(null, e);
                     }
                 }
             }
 
             protected internal object PasswordHash(string password)
             {
-                return SHA1.Create().ComputeHash(Encoding.Unicode.GetBytes(password));
+                return SHA1.Create().ComputeHash(Encoding.Unicode.GetBytes(password ?? string.Empty));
             }
 
             internal object CalculatePassword(string password, byte[] challenge)
             {
                 var total = new List<byte>();
                 SHA1 sha = SHA1.Create();
-                byte[] passwordHash = sha.ComputeHash(Encoding.Unicode.GetBytes(password));
+                byte[] passwordHash = sha.ComputeHash(Encoding.Unicode.GetBytes(password ?? string.Empty));
 
                 int j = 0;
                 int i;
                 for (i = 0; i < passwordHash.Length; i++)
                 {
                     byte current = passwordHash[i];
-                    current = (byte)(current ^ challenge[j]);
+                    current = (byte) (current ^ challenge[j]);
                     total.Add(current);
                     j++;
                     if (j >= challenge.Length)
@@ -172,28 +155,24 @@ namespace eidss.model.Core
 
             internal int EvaluateHash(string password, ref object hash)
             {
-                using (DbManagerProxy manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
+                using (var manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
                 {
                     try
                     {
                         manager.SetSpCommand("dbo.spLoginChallenge",
                             manager.Parameter(ParameterDirection.Output, "@challenge", DbType.Binary, 1000)
                             ).ExecuteNonQuery();
-                        object challenge = manager.Parameter("@challenge").Value;
+                        var challenge = manager.Parameter("@challenge").Value;
                         if (Utils.IsEmpty(challenge))
                         {
                             return 2;
                         }
 
-                        hash = CalculatePassword(password, (byte[])challenge);
+                        hash = CalculatePassword(password, (byte[]) challenge);
                     }
-                    catch (Exception e)
+                    catch (DataException e)
                     {
-                        if (e is DataException)
-                        {
-                            throw DbModelException.Create(null, e as DataException);
-                        }
-                        throw;
+                        throw DbModelException.Create(null, e);
                     }
                 }
 
@@ -213,21 +192,18 @@ namespace eidss.model.Core
                             ).ExecuteNonQuery();
                         return Convert.ToInt32(manager.Parameter("@Result").Value);
                     }
-                    catch (Exception e)
+                    catch (DataException e)
                     {
-                        if (e is DataException)
-                        {
-                            throw DbModelException.Create(null, e as DataException);
-                        }
-                        throw;
+                        throw DbModelException.Create(null, e);
                     }
                 }
             }
 
-            private void setEidssUser(DataTable dt)
+            private void SetEidssUser(DataTable dt)
             {
                 EidssUserContext.User.EmployeeID = Utils.ToNullableLong(dt.Rows[0]["idfPerson"]);
-                EidssUserContext.User.FullName = (Utils.Str(dt.Rows[0]["strFamilyName"]) + " " + Utils.Str(dt.Rows[0]["strFirstName"]) + " " +
+                EidssUserContext.User.FullName = (Utils.Str(dt.Rows[0]["strFamilyName"]) + " " +
+                                                  Utils.Str(dt.Rows[0]["strFirstName"]) + " " +
                                                   Utils.Str(dt.Rows[0]["strSecondName"]));
                 EidssUserContext.User.FirstName = Utils.Str(dt.Rows[0]["strFirstName"]);
                 EidssUserContext.User.SecondName = Utils.Str(dt.Rows[0]["strSecondName"]);
@@ -243,17 +219,19 @@ namespace eidss.model.Core
 
             private void PerformLogin(DataTable loginData)
             {
-                lock (m_LockObject)
+                lock (LockObject)
                 {
-                    setEidssUser(loginData);
+                    SetEidssUser(loginData);
                     ModelUserContext.Instance.CreateContextData();
                     EidssSiteContext.Instance.Load();
+                    EidssSiteContext.Instance.SetNumberingObjectPrefixes(GetNumberingObjectPrefixes());
                     EidssSiteContext.Instance.SetCustomMandatoryFields(GetCustomMandatoryFields());
                     EidssUserContext.User.SetForbiddenPersonalDataGroups(GetPersonalDataGroups());
                     EidssUserContext.User.SetDenyDiagnosis(GetDenyPermissionOnDiagnosis(EidssUserContext.User.EmployeeID));
                     EidssUserContext.User.SetAvrSearchObjectPermissions(GetAvrQueryPermissions());
                 }
             }
+
             public string CreateTicket(long userId)
             {
                 var dbType = DatabaseType.Main;
@@ -283,26 +261,20 @@ namespace eidss.model.Core
                         }
                         return null;
                     }
-                    catch (Exception e)
+                    catch (DataException e)
                     {
-                        if (e is DataException)
-                        {
-                            throw DbModelException.Create(null, e as DataException);
-                        }
-                        throw;
+                        throw DbModelException.Create(null, e);
                     }
                 }
             }
 
-            private static int DedalockRepeatCount = 3;
-            private int m_LoginTry;
+
             public int LogIn(string ticketId, bool repeatAfterDeadlock = true)
             {
                 using (DbManagerProxy manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
                 {
                     try
                     {
-
                         DataTable dt = manager.SetSpCommand("dbo.spLoginByTicket",
                             manager.Parameter("@strTicket", ticketId),
                             manager.Parameter("@intExpirationInterval", BaseSettings.TicketExpiration),
@@ -321,38 +293,46 @@ namespace eidss.model.Core
                         m_LoginTry++;
                         if (DbModelException.IsDeadlockException(e) && m_LoginTry < DedalockRepeatCount)
                         {
-
                             Debug.WriteLine("user login deadlock found");
                             return LogIn(ticketId, m_LoginTry < DedalockRepeatCount - 1);
                         }
-                        if (e is DataException)
+                        var dataException = e as DataException;
+                        if (dataException != null)
                         {
                             m_LoginTry = 0;
-                            throw DbModelException.Create(null, e as DataException);
+                            throw DbModelException.Create(null, dataException);
                         }
                         m_LoginTry = 0;
                         throw;
                     }
                 }
-
             }
 
-            public int LogIn(string organization, string userName, string password, Action onBeforeLogin = null, Action onSuccess = null)
+            public int LogIn(string organization, string userName, string password, Action onBeforeLogin = null,
+                Action onSuccess = null)
             {
-                int res = CheckVersion();
-                if (res != 0)
+                var loginResult = LogInOrgOutput(organization, userName, password, onBeforeLogin, onSuccess);
+                return loginResult.ResultCode;
+            }
+
+            public LoginResult LogInOrgOutput(string organization, string userName, string password,
+                Action onBeforeLogin = null, Action onSuccess = null)
+            {
+                var resultOrg = organization;
+                int resultCode = CheckVersion();
+                if (resultCode != 0)
                 {
-                    return res;
+                    return new LoginResult(resultCode, resultOrg);
                 }
 
                 if (onBeforeLogin != null)
                     onBeforeLogin();
 
                 object hash = null;
-                res = EvaluateHash(password, ref hash);
-                if (res != 0)
+                resultCode = EvaluateHash(password, ref hash);
+                if (resultCode != 0)
                 {
-                    return res;
+                    return new LoginResult(resultCode, resultOrg);
                 }
                 using (DbManagerProxy manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
                 {
@@ -363,12 +343,14 @@ namespace eidss.model.Core
                             manager.Parameter("@Password", hash, DbType.Binary),
                             manager.Parameter(ParameterDirection.Output, "@Result", 0)
                             ).ExecuteDataTable();
-                        res = Convert.ToInt32(manager.Parameter("@Result").Value);
-                        if (res == 0)
+                        resultCode = Convert.ToInt32(manager.Parameter("@Result").Value);
+                        if (resultCode == 0)
                         {
-                            if (BaseSettings.UseOrganizationInLogin && Utils.Str(organization).ToLowerInvariant() != Utils.Str(dt.Rows[0]["strLoginOrganization"]).ToLowerInvariant())
+                            resultOrg = Utils.Str(dt.Rows[0]["strLoginOrganization"]);
+                            if (BaseSettings.UseOrganizationInLogin &&
+                                Utils.Str(organization).ToLowerInvariant() != resultOrg.ToLowerInvariant())
                             {
-                                return 2;
+                                return new LoginResult(2, resultOrg);
                             }
 
                             if (onSuccess != null)
@@ -376,23 +358,18 @@ namespace eidss.model.Core
 
                             PerformLogin(dt);
                         }
-                        return res;
+                        return new LoginResult(resultCode, resultOrg);
                     }
-                    catch (Exception e)
+                    catch (DataException e)
                     {
-                        if (e is DataException)
-                        {
-                            throw DbModelException.Create(null, e as DataException);
-                        }
-                        throw;
+                        throw DbModelException.Create(null, e);
                     }
                 }
             }
 
+
             public int ChangePassword(string organization, string userName, string currentPassword, string newPassword)
             {
-                //ConnectionManager.DefaultInstance.SetCredentials(null, SQLServer, SQLDatabase, SQLUser, SQLPassword);
-
                 int res = CheckVersion();
                 if (res != 0)
                 {
@@ -420,19 +397,13 @@ namespace eidss.model.Core
                         res = Convert.ToInt32(manager.Parameter("@Result").Value);
                         if (res == 0)
                         {
-                            //ConnectionManager.DefaultInstance.Save();
-                            setEidssUser(dt);
-                            //ConfigWriter.Instance.Save();
+                            SetEidssUser(dt);
                         }
                         return res;
                     }
-                    catch (Exception e)
+                    catch (DataException e)
                     {
-                        if (e is DataException)
-                        {
-                            throw DbModelException.Create(null, e as DataException);
-                        }
-                        throw;
+                        throw DbModelException.Create(null, e);
                     }
                 }
             }
@@ -450,13 +421,9 @@ namespace eidss.model.Core
                             ).ExecuteNonQuery();
                         return Convert.ToInt32(manager.Parameter("@Result").Value);
                     }
-                    catch (Exception e)
+                    catch (DataException e)
                     {
-                        if (e is DataException)
-                        {
-                            throw DbModelException.Create(null, e as DataException);
-                        }
-                        throw;
+                        throw DbModelException.Create(null, e);
                     }
                 }
             }
@@ -474,11 +441,13 @@ namespace eidss.model.Core
                         {
                             return defaultValue;
                         }
-                        return (int)dt.Rows[0][name];
+                        return (int) dt.Rows[0][name];
                     }
                     catch (Exception e)
                     {
-                        Dbg.Debug("error during retrieving security policy value {0}, default value {1} is returned. \r\n{2}", name,
+                        Dbg.Debug(
+                            "error during retrieving security policy value {0}, default value {1} is returned. \r\n{2}",
+                            name,
                             defaultValue, e.ToString());
                         return defaultValue;
                     }
@@ -489,12 +458,13 @@ namespace eidss.model.Core
             {
                 if (!(Utils.IsEmpty(EidssUserContext.User.ID)))
                 {
-                    SecurityLog.WriteToEventLogDB(EidssUserContext.User.ID, SecurityAuditEvent.Logoff, true, "EIDSS user log off", null,
+                    SecurityLog.WriteToEventLogDB(EidssUserContext.User.ID, SecurityAuditEvent.Logoff, true,
+                        "EIDSS user log off", null,
                         null, SecurityAuditProcessType.Eidss); //EIDSS user log off
                 }
                 try
                 {
-                    lock (m_LockObject)
+                    lock (LockObject)
                     {
                         if (EidssUserContext.User.IsAuthenticated)
                         {
@@ -504,7 +474,6 @@ namespace eidss.model.Core
                                     manager.Parameter("@ClientID", ModelUserContext.ClientID),
                                     manager.Parameter("@idfUserID", EidssUserContext.User.ID)).ExecuteNonQuery();
                             }
-                            //EidssUserContext.Instance.ClearContext(DbManagerFactory.Factory.Create(EidssUserContext.Instance));
                             EidssUserContext.User.Clear();
                         }
                     }
@@ -529,7 +498,7 @@ namespace eidss.model.Core
                             return false;
                         }
                         DataTable dt = ds.Tables[0];
-                        if ((int)dt.Rows[0]["intForcePasswordComplexity"] == 0)
+                        if ((int) dt.Rows[0]["intForcePasswordComplexity"] == 0)
                         {
                             return true;
                         }
@@ -599,6 +568,41 @@ namespace eidss.model.Core
                 }
             }
 
+            public Dictionary<long, string> GetNumberingObjectPrefixes()
+            {
+                var nop = new Dictionary<long, string>();
+                using (DbManagerProxy manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
+                {
+                    try
+                    {
+                        DataTable dt = manager.SetSpCommand("dbo.spGetNextNumberPrefixes").ExecuteDataTable();
+                        //ToDictionary(kv => Convert.ToInt64(kv.Key), kv => Utils.Str(kv.Value))
+
+                        if ((dt != null) && (dt.Rows.Count > 0))
+                        {
+                            nop = dt.AsEnumerable().ToDictionary<DataRow, long, string>(row => Convert.ToInt64(row["idfsNumberName"]),
+                                row => Utils.Str(row["strPrefix"]));
+                        }
+
+                        foreach (var num in NumberingObjectEnum.GetValues(typeof(NumberingObjectEnum)))
+                        {
+
+                            if (!nop.ContainsKey((long)num))
+                            {
+                                nop.Add((long)num, string.Empty);
+                            } 
+                        }
+
+                        return nop;
+                    }
+                    catch (DataException e)
+                    {
+                        throw DbModelException.Create(null, e);
+                    }
+                }
+            }
+
+
             public List<CustomMandatoryField> GetCustomMandatoryFields(long? idfCustomizationPackage = null)
             {
                 using (DbManagerProxy manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
@@ -610,15 +614,11 @@ namespace eidss.model.Core
                             ).ExecuteDataTable();
 
                         return (from DataRow row in dt.Rows
-                                select (CustomMandatoryField)Convert.ToInt64(row["idfMandatoryField"])).ToList();
+                            select (CustomMandatoryField) Convert.ToInt64(row["idfMandatoryField"])).ToList();
                     }
-                    catch (Exception e)
+                    catch (DataException e)
                     {
-                        if (e is DataException)
-                        {
-                            throw DbModelException.Create(null, e as DataException);
-                        }
-                        throw;
+                        throw DbModelException.Create(null, e);
                     }
                 }
             }
@@ -626,10 +626,11 @@ namespace eidss.model.Core
             private List<PersonalDataGroup> ParsePersonalDataGroups(DataTable dt)
             {
                 return (from DataRow row in dt.Rows
-                        select (PersonalDataGroup)Convert.ToInt64(row["idfPersonalDataGroup"])).ToList();
+                    select (PersonalDataGroup) Convert.ToInt64(row["idfPersonalDataGroup"])).ToList();
             }
 
-            public List<PersonalDataGroup> GetPersonalDataGroups(long? idfUser = null, long? idfCustomizationPackage = null)
+            public List<PersonalDataGroup> GetPersonalDataGroups(long? idfUser = null,
+                long? idfCustomizationPackage = null)
             {
                 using (DbManagerProxy manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
                 {
@@ -647,21 +648,20 @@ namespace eidss.model.Core
                         }
                         else
                         {
-                            permissions = (Dictionary<string, bool>)EidssUserContext.User.Permissions;
+                            permissions = (Dictionary<string, bool>) EidssUserContext.User.Permissions;
                         }
 
                         List<PersonalDataGroup> personalGroups = ParsePersonalDataGroups(
                             manager.SetSpCommand("[dbo].[spContext_GetPersonalDataGroups]",
                                 manager.Parameter("@idfCustomizationPackage", idfCustomizationPackage)
                                 ).ExecuteDataTable());
-                        //return personalGroups;
 
                         if (personalGroups.Count == 0)
                         {
                             return result;
                         }
 
-                        var splitter = new[] { '.' };
+                        var splitter = new[] {'.'};
 
                         foreach (KeyValuePair<string, bool> permission in permissions)
                         {
@@ -693,13 +693,9 @@ namespace eidss.model.Core
 
                         return result;
                     }
-                    catch (Exception e)
+                    catch (DataException e)
                     {
-                        if (e is DataException)
-                        {
-                            throw DbModelException.Create(null, e as DataException);
-                        }
-                        throw;
+                        throw DbModelException.Create(null, e);
                     }
                 }
             }

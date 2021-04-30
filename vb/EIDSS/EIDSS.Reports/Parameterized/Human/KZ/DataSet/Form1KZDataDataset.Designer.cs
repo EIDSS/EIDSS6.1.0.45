@@ -419,7 +419,7 @@ namespace EIDSS.Reports.Parameterized.Human.KZ.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public spRepHumForm1KZDataRow AddspRepHumForm1KZDataRow(long idfsDiagnosis, string strDiagnosis, int intRowNum, string strICD, int intTotal, int int0_14Age, int int15_17Age) {
+            public spRepHumForm1KZDataRow AddspRepHumForm1KZDataRow(long idfsDiagnosis, string strDiagnosis, int intRowNum, string strICD, long intTotal, long int0_14Age, long int15_17Age) {
                 spRepHumForm1KZDataRow rowspRepHumForm1KZDataRow = ((spRepHumForm1KZDataRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idfsDiagnosis,
@@ -471,11 +471,11 @@ namespace EIDSS.Reports.Parameterized.Human.KZ.DataSet {
                 base.Columns.Add(this.columnintRowNum);
                 this.columnstrICD = new global::System.Data.DataColumn("strICD", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstrICD);
-                this.columnintTotal = new global::System.Data.DataColumn("intTotal", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnintTotal = new global::System.Data.DataColumn("intTotal", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnintTotal);
-                this.columnint0_14Age = new global::System.Data.DataColumn("int0_14Age", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnint0_14Age = new global::System.Data.DataColumn("int0_14Age", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnint0_14Age);
-                this.columnint15_17Age = new global::System.Data.DataColumn("int15_17Age", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnint15_17Age = new global::System.Data.DataColumn("int15_17Age", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnint15_17Age);
                 this.columnidfsDiagnosis.ReadOnly = true;
                 this.columnstrDiagnosis.ReadOnly = true;
@@ -690,10 +690,10 @@ namespace EIDSS.Reports.Parameterized.Human.KZ.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int intTotal {
+            public long intTotal {
                 get {
                     try {
-                        return ((int)(this[this.tablespRepHumForm1KZData.intTotalColumn]));
+                        return ((long)(this[this.tablespRepHumForm1KZData.intTotalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'intTotal\' in table \'spRepHumForm1KZData\' is DBNull.", e);
@@ -706,10 +706,10 @@ namespace EIDSS.Reports.Parameterized.Human.KZ.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int int0_14Age {
+            public long int0_14Age {
                 get {
                     try {
-                        return ((int)(this[this.tablespRepHumForm1KZData.int0_14AgeColumn]));
+                        return ((long)(this[this.tablespRepHumForm1KZData.int0_14AgeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'int0_14Age\' in table \'spRepHumForm1KZData\' is DBNull.", e);
@@ -722,10 +722,10 @@ namespace EIDSS.Reports.Parameterized.Human.KZ.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int int15_17Age {
+            public long int15_17Age {
                 get {
                     try {
-                        return ((int)(this[this.tablespRepHumForm1KZData.int15_17AgeColumn]));
+                        return ((long)(this[this.tablespRepHumForm1KZData.int15_17AgeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'int15_17Age\' in table \'spRepHumForm1KZData\' is DBNull.", e);

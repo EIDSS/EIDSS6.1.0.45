@@ -856,10 +856,10 @@
     <value>จำนวนผู้ป่วย,ผู้เสียชีวิต,อัตราป่วย,อัตราตาย,อัตราป่วยตาย</value>
   </data>
   <data name="HumReportedCasesDeathsByProvinceMonthTH" xml:space="preserve">
-    <value>รายงานจำนวนผู้ป่วยและผู้เสียชีวิต ระดับจังหวัด/อำเภอ/ตำบล จำแนกรายเดือน</value>
+    <value>รายงานจำนวนผู้ป่วยและผู้เสียชีวิต ระดับจังหวัด/อำเภอ/ตำบลและตามเดือน</value>
   </data>
   <data name="HumComparativeReportOfSeveralYearsTH" xml:space="preserve">
-    <value>รายงานเปรียบเทียบข้อมูลแต่ละปีจำแนกรายเดือน</value>
+    <value>รายงานเปรียบเทียบข้อมูลรายปีตามเดือน</value>
   </data>
   <data name="MenuSystemPreferences" xml:space="preserve">
     <value>การตั้งค่าระบบ</value>

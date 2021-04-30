@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using bv.model.BLToolkit;
 using eidss.model.Avr.Tree;
 
@@ -23,7 +22,7 @@ namespace eidss.model.Schema
                 layout.idflDescription,
                 layout.strAuthor,
                 layout.blnUseArchivedData
-                );
+            );
             return treeElement;
         }
 
@@ -31,12 +30,13 @@ namespace eidss.model.Schema
         {
             AvrLayoutLookup foundLayout;
             LookupManager.AddObject("Layout", null, Accessor.Instance(null).GetType(), "_SelectListInternal");
-            using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
+            using (var manager = DbManagerFactory.Factory.Create())
             {
-                Accessor accessor = Accessor.Instance(null);
-                List<AvrLayoutLookup> lookup = accessor.SelectLookupList(manager, layoutId, null);
+                var accessor = Accessor.Instance(null);
+                var lookup = accessor.SelectLookupList(manager, layoutId, null);
                 foundLayout = lookup.SingleOrDefault();
             }
+
             return foundLayout;
         }
     }

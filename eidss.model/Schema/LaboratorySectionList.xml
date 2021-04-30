@@ -892,13 +892,13 @@
               <param type="string" lambda="c => c.strBarcode"/>
             </params>
           </predicate_validator>
-
+ 
           <required_validator target="datStartedDate" predicate="c => (c.intNewMode == LabNewModeEnum.AssignTest || c.idfTesting.HasValue) &amp;&amp; !c.bTestDeleted &amp;&amp; (c.idfsTestStatus == (long)eidss.model.Enums.TestStatus.Preliminary || (/*c.blnExternalTest.HasValue &amp;&amp; */c.blnExternalTest/*.Value*/))" />
           <required_validator target="datConcludedDate" predicate="c => ((c.intNewMode == LabNewModeEnum.AssignTest || c.idfTesting.HasValue) &amp;&amp; !c.bTestDeleted &amp;&amp; (c.idfsTestStatus == (long)eidss.model.Enums.TestStatus.Preliminary || (/*c.blnExternalTest.HasValue &amp;&amp; */c.blnExternalTest/*.Value*/))) || (c.intNewMode == LabNewModeEnum.SetTestResult || c.intNewMode == LabNewModeEnum.ValidateTestResult)" />
           <!--required_validator target="idfsDiagnosis" label="TestDiagnosisName" predicate="c => c.idfTesting.HasValue &amp;&amp; !c.bTestDeleted &amp;&amp; (c.blnExternalTest.HasValue &amp;&amp; c.blnExternalTest.Value)" />
           <required_validator target="idfsTestName" label="TestName" predicate="c => c.idfTesting.HasValue &amp;&amp; !c.bTestDeleted &amp;&amp; (c.blnExternalTest.HasValue &amp;&amp; c.blnExternalTest.Value)" /-->
           <required_validator target="idfsTestStatus" label="TestStatus" predicate="c => c.idfTesting.HasValue &amp;&amp; !c.bTestDeleted &amp;&amp; (/*c.blnExternalTest.HasValue &amp;&amp; */c.blnExternalTest/*.Value*/)" />
-          <required_validator target="idfsTestResult" label="TestResult" predicate="c => c.idfTesting.HasValue &amp;&amp; !c.bTestDeleted &amp;&amp; (/*c.blnExternalTest.HasValue &amp;&amp; */c.blnExternalTest/*.Value*/)" />
+          <required_validator target="idfsTestResult" label="TestResult" predicate="c => c.idfTesting.HasValue &amp;&amp; !c.bTestDeleted &amp;&amp; (c.idfsTestStatus == (long)eidss.model.Enums.TestStatus.Preliminary || /*c.blnExternalTest.HasValue &amp;&amp; */c.blnExternalTest/*.Value*/)" />
           <!-- 10417,10418 required_validator target="idfTestedByPerson" predicate="c => c.idfTesting.HasValue &amp;&amp; !c.bTestDeleted &amp;&amp; (c.blnExternalTest.HasValue &amp;&amp; c.blnExternalTest.Value)" /-->
           <required_validator target="strContactPerson" label="strContact" predicate="c => c.idfTesting.HasValue &amp;&amp; !c.bTestDeleted &amp;&amp; (/*c.blnExternalTest.HasValue &amp;&amp; */c.blnExternalTest/*.Value*/)" />
           

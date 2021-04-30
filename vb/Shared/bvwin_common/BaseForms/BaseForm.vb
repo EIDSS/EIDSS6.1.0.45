@@ -1773,6 +1773,48 @@ Public Class BaseForm
         End If
     End Sub
 
+    Public Sub RemoveControlStateFromTag(ByVal c As BaseControl, ByVal state As ControlState)
+        If c.Tag Is Nothing Then
+            Return
+        End If
+        Dim tHelper As TagHelper = Nothing
+        If TypeOf (c.Tag) Is TagHelper Then
+            tHelper = CType(c.Tag, TagHelper)
+        End If
+        If tHelper Is Nothing AndAlso Not TypeOf c.Tag Is String Then
+            Return
+        End If
+
+        Dim tag As String = ""
+        If (state And ControlState.ReadOnly) = ControlState.ReadOnly Then tag += "R"
+        If (state And ControlState.Mandatory) = ControlState.Mandatory Then tag += "M"
+        If (state And ControlState.KeyField) = ControlState.KeyField Then tag += "K"
+        If (state And ControlState.Barcode) = ControlState.KeyField Then tag += "B"
+        If Utils.IsEmpty(tag) Then
+            Return
+        End If
+        tag = String.Format("{{{0}}}", tag)
+
+        Dim NewTag As String = String.Empty
+        If Not tHelper Is Nothing Then
+            NewTag = tHelper.StringTag
+        Else
+            NewTag = Utils.Str(c.Tag)
+        End If
+        If Utils.IsEmpty(NewTag) Then
+            Return
+        End If
+        NewTag = NewTag.Replace(tag, String.Empty)
+        If Utils.IsEmpty(NewTag) Then
+            c.Tag = Nothing
+        ElseIf TypeOf (c.Tag) Is TagHelper Then
+            CType(c.Tag, TagHelper).StringTag = NewTag
+        Else
+            c.Tag = NewTag
+            c.Tag = New TagHelper(c)
+        End If
+    End Sub
+
     Public Sub ApplyControlState(ByVal c As BaseControl, ByVal state As ControlState)
         Dim tag As String = ""
         Dim tHelper As TagHelper = Nothing

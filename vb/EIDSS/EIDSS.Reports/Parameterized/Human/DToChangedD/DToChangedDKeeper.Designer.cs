@@ -40,10 +40,24 @@ namespace EIDSS.Reports.Parameterized.Human.DToChangedD
             this.initialDiagnosisFilter = new EIDSS.Reports.BaseControls.Filters.HumStandardDiagnosisMultiFilter();
             this.finalDiagnosisFilter = new EIDSS.Reports.BaseControls.Filters.HumStandardDiagnosisMultiFilter();
             this.FinalDiagnosisLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.spinEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbMonth.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbMonthEnd.Properties)).BeginInit();
             this.pnlSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ceUseArchiveData.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConcordanceSpinEdit.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // spinEdit
+            // 
+            this.spinEdit.Properties.Mask.EditMask = resources.GetString("spinEdit.Properties.Mask.EditMask");
+            this.spinEdit.Properties.Mask.MaskType = ((DevExpress.XtraEditors.Mask.MaskType)(resources.GetObject("spinEdit.Properties.Mask.MaskType")));
+            // 
+            // cbMonth
+            // 
+            // 
+            // cbMonthEnd
+            // 
             // 
             // pnlSettings
             // 
@@ -57,6 +71,14 @@ namespace EIDSS.Reports.Parameterized.Human.DToChangedD
             this.pnlSettings.Controls.Add(this.regionFilter);
             this.pnlSettings.Controls.Add(this.rayonFilter);
             resources.ApplyResources(this.pnlSettings, "pnlSettings");
+            this.pnlSettings.Controls.SetChildIndex(this.label1, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.label2, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.EndMonthLabel, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.StartMonthLabel, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.MonthLabel, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.spinEdit, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.cbMonth, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.cbMonthEnd, 0);
             this.pnlSettings.Controls.SetChildIndex(this.ceUseArchiveData, 0);
             this.pnlSettings.Controls.SetChildIndex(this.rayonFilter, 0);
             this.pnlSettings.Controls.SetChildIndex(this.regionFilter, 0);
@@ -84,6 +106,8 @@ namespace EIDSS.Reports.Parameterized.Human.DToChangedD
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(DToChangedDKeeper), out resources);
             // Form Is Localizable: True
@@ -157,9 +181,11 @@ namespace EIDSS.Reports.Parameterized.Human.DToChangedD
             // 
             this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("DToChangedDKeeper.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
-            resources.ApplyResources(this, "$this");
             this.HeaderHeight = 220;
             this.Name = "DToChangedDKeeper";
+            ((System.ComponentModel.ISupportInitialize)(this.spinEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbMonth.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbMonthEnd.Properties)).EndInit();
             this.pnlSettings.ResumeLayout(false);
             this.pnlSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ceUseArchiveData.Properties)).EndInit();

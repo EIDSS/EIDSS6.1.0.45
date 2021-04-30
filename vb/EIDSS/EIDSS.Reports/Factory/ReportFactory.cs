@@ -48,6 +48,8 @@ using EIDSS.Reports.Parameterized.Veterinary.SamplesType;
 using EIDSS.Reports.Parameterized.Veterinary.Situation;
 using EIDSS.Reports.Parameterized.Veterinary.TestType;
 using EIDSS.Reports.Parameterized.Human.UA.Keepers;
+using EIDSS.Reports.Parameterized.Human.KZ.Keeper;
+using EIDSS.Reports.Parameterized.Veterinary.AZ.Keepers;
 
 namespace EIDSS.Reports.Factory
 {
@@ -144,6 +146,12 @@ namespace EIDSS.Reports.Factory
         public void HumUrgentyNotificationDTRA(long caseId)
         {
             InitDocumentReport<EmergencyNotificationDTRAReport>(ReportHelper.CreateParameters(caseId));
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public void HumUrgentyNotificationUkraine(long caseId)
+        {
+            InitDocumentReport<EmergencyNotificationUkraineReport>(ReportHelper.CreateParameters(caseId));
         }
 
         #endregion
@@ -512,20 +520,60 @@ namespace EIDSS.Reports.Factory
         #endregion
 
         #region Human UA reports
+        //[MethodImpl(MethodImplOptions.NoInlining)]
+        //public void FormNo1()
+        //{
+        //    BaseReportKeeper reportKeeper = new UAFormKeeper(ReportKeeperNames.Form1);
+        //    PlaceReportKeeper(reportKeeper);
+        //}
+
+        //[MethodImpl(MethodImplOptions.NoInlining)]
+        //public void FormNo2()
+        //{
+        //    BaseReportKeeper reportKeeper = new UAFormKeeper(ReportKeeperNames.Form2);
+        //    PlaceReportKeeper(reportKeeper);
+        //}
+
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public void FormNo1()
+        public void SpecialInfectionAndParazitaryDiseaseReport()
         {
-            BaseReportKeeper reportKeeper = new UAFormKeeper("FormNo1");
+            BaseReportKeeper reportKeeper = new UAFormNo1Keeper();
             PlaceReportKeeper(reportKeeper);
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public void FormNo2()
+        public void SpecialInfectionAndParazitaryDiseaseReportNo2()
         {
-            BaseReportKeeper reportKeeper = new UAFormKeeper("FormNo2");
+            BaseReportKeeper reportKeeper = new UAFormNo2Keeper();
             PlaceReportKeeper(reportKeeper);
         }
+
         #endregion Human UA reports
+
+        #region Human KZ reports
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public void HumanComparativeReportKZ()
+        {
+            var reportKeeper = new EIDSS.Reports.Parameterized.Human.KZ.Keeper.ComparativeReportKeeper();
+            PlaceReportKeeper(reportKeeper);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public void ComparativeReportByRegionKZ()
+        {
+            var reportKeeper = new ComparativeReportByRegionKeeper();
+            PlaceReportKeeper(reportKeeper);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public void IncidenceReportByRegionKZ()
+        {
+            var reportKeeper = new IncidenceReportByRegionKeeper();
+            PlaceReportKeeper(reportKeeper);
+        }
+
+        #endregion
 
         #endregion
 
@@ -624,16 +672,16 @@ namespace EIDSS.Reports.Factory
         #region Human KZ reports
 
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public void HumInfectiousParasiticKZ()
+        public void HumForm1KZ()
         {
-            var reportKeeper = new InfectiousParasiticKZKeeper();
+            var reportKeeper = new Form1KZKeeper();
             PlaceReportKeeper(reportKeeper);
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public void HumForm1KZ()
+        public void HumComparativeKZ()
         {
-            var reportKeeper = new Form1KZKeeper();
+            var reportKeeper = new EIDSS.Reports.Parameterized.Human.KZ.Keeper.ComparativeReportKeeper();
             PlaceReportKeeper(reportKeeper);
         }
 
@@ -691,6 +739,13 @@ namespace EIDSS.Reports.Factory
         public void VeterinaryCasesReportAZ()
         {
             BaseReportKeeper reportKeeper = new VetKeeper(VetReportType.Case);
+            PlaceReportKeeper(reportKeeper);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public void VeterinaryComparativeByMonthReportAZ()
+        {
+            BaseReportKeeper reportKeeper = new ComparativeReportByMonthsKeeper();
             PlaceReportKeeper(reportKeeper);
         }
 

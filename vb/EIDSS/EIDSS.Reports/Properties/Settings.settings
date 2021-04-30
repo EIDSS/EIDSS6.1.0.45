@@ -121,22 +121,6 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=VDOVIN\SQL2008;Initial Catalog=EIDSS_KZ;Integrated Security=True</Value>
     </Setting>
-    <Setting Name="EIDSS_UA_Seed_GISConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">
-        &lt;?xml version="1.0" encoding="utf-16"?&gt;
-        &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-        &lt;ConnectionString&gt;Data Source=192.255.34.106\NGSQL;Initial Catalog=EIDSS_UA_Seed_GIS;Persist Security Info=True;User ID=srvcEIDSS;Password=nBZD66)&lt;/ConnectionString&gt;
-        &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-        &lt;/SerializableConnectionString&gt;
-      </DesignTimeValue>
-      <Value Profile="(Default)">
-        &lt;?xml version="1.0" encoding="utf-16"?&gt;
-        &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-        &lt;ConnectionString&gt;Data Source=192.255.34.106\NGSQL;Initial Catalog=EIDSS_UA_Seed_GIS;Persist Security Info=True;User ID=srvcEIDSS;Password=nBZD66)&lt;/ConnectionString&gt;
-        &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-        &lt;/SerializableConnectionString&gt;
-      </Value>
-    </Setting>
     <Setting Name="EIDSS_THConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
@@ -144,6 +128,46 @@
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=192.255.34.106\ngsql08Dev1;Initial Catalog=EIDSS_TH;Persist Security Info=True;User ID=srvcEIDSSTH;Password=nBZD66)</Value>
+    </Setting>
+    <Setting Name="AZDB_MIKConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-FDQHCBK\EIDSS;Initial Catalog=AZDB_MIK;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DESKTOP-FDQHCBK\EIDSS;Initial Catalog=AZDB_MIK;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="UA_ADBConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=INTEL-PC\EIDSSDB;Initial Catalog=UA_ADB;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=INTEL-PC\EIDSSDB;Initial Catalog=UA_ADB;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="EIDSS_KZConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=INTEL-PC\EIDSSDB;Initial Catalog=EIDSS_KZ;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=INTEL-PC\EIDSSDB;Initial Catalog=EIDSS_KZ;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="eidss_MP" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=MAX-PALAMARCHUK;Initial Catalog=EIDSS_KZ;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=MAX-PALAMARCHUK;Initial Catalog=EIDSS_KZ;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="INTEL_AZ_DBConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=INTEL-PC\EIDSSDB;Initial Catalog=AZ_DB;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=INTEL-PC\EIDSSDB;Initial Catalog=AZ_DB;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

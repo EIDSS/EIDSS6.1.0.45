@@ -4317,4 +4317,16 @@
   <data name="kzFormRayon" xml:space="preserve">
     <value>Аудан бойынша</value>
   </data>
+  <data name="All" xml:space="preserve">
+    <value>Барлығы</value>
+  </data>
+  <data name="Rural" xml:space="preserve">
+    <value>Ауыл түрғындары</value>
+  </data>
+  <data name="Town" xml:space="preserve">
+    <value>Қала тұрғындары</value>
+  </data>
+  <data name="msgComparativeReportKZCorrectYear" xml:space="preserve">
+    <value>«1 Жыл» фильтрдің ішінде «2 жыл» фильтрдін ішіндегі мәнінен төмес болуы тиіс.</value>
+  </data>
 </root>

@@ -10,6 +10,6 @@ namespace eidss.model.Avr.Chart
         gitDateQuarter = 10039006,
         gitDateWeekOfMonth = 10039007,
         gitDateWeekOfYear = 10039008,
-        gitDateYear = 10039009,
+        gitDateYear = 10039009
     }
 }

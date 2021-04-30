@@ -30,7 +30,7 @@
     }
 
     string RenderMainPanel()
-    {
+    {        
         var accessor = GetAccessor();
         if (accessor != null) Html.RenderActionPanel(accessor, Model, ActionsPanelType.Main);
         return String.Empty;
@@ -94,11 +94,11 @@
     <div class="sectionTitle">
         @Translator.GetMessageString("strSelectedAggregateCases")
     </div>
-        
-        @(Html.BvDetailsFormGrid<HumanAggregateCaseListItem.HumanAggregateCaseListItemGridModel, HumanAggregateCaseListItem.HumanAggregateCaseListItemGridModelList>(
-            Model.ObjectIdent + "AggregateCaseListItems", new HumanAggregateCaseListItem.HumanAggregateCaseListItemGridModelList(Model.idfAggrCase, Model.AggregateCaseListItems), 
-            "detailsGrid", bCustomToolbar: true, bEditable: true, bDeletedOnly : true, deleteItemFuncName: "bvGrid.doDeleteRow", tooltipDelete: Translator.GetMessageString("strRemoveTooltip"))
-            )
+
+    @(Html.BvDetailsFormGrid<HumanAggregateCaseListItem.HumanAggregateCaseListItemGridModel, HumanAggregateCaseListItem.HumanAggregateCaseListItemGridModelList>(
+        Model.ObjectIdent + "AggregateCaseListItems", new HumanAggregateCaseListItem.HumanAggregateCaseListItemGridModelList(Model.idfAggrCase, Model.AggregateCaseListItems), 
+        "detailsGrid", bCustomToolbar: true, bEditable: true, bDeletedOnly : true, deleteItemFuncName: "bvGrid.doDeleteRow", tooltipDelete: Translator.GetMessageString("strRemoveTooltip"))
+        )
 
     <div class="sectionTitle">
         @Translator.GetMessageString("titleAggregateSummaryInfo")

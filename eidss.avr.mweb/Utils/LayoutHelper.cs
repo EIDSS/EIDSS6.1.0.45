@@ -194,7 +194,7 @@ namespace eidss.avr.mweb.Utils
             LayoutRow.blnShowDataInPivotGrid = settings.ShowDataInPivot;
             return db.PostDetail(m_DataSet, (int) PostType.FinalPosting);
         }
-
+        
         public void InitAvrPivotSettings(AvrPivotSettings pivotSettings)
         {
             if (LayoutRow != null)

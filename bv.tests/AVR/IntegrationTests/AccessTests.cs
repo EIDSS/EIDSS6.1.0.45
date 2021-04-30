@@ -203,11 +203,11 @@ Values(
 
             if (!Directory.Exists(location))
             {
-                int index = location.IndexOf("DevelopersBranch_v6", StringComparison.OrdinalIgnoreCase);
+                int index = location.IndexOf("EIDSSTrunk", StringComparison.OrdinalIgnoreCase);
                 if (index > 0)
                 {
                     Directory.CreateDirectory(location);
-                    string realPath = location.Substring(0, index) + @"DevelopersBranch_v6\eidss.main\bin\Debug\AVR\db_test.mdb";
+                    string realPath = location.Substring(0, index) + @"EIDSSTrunk\EIDSS\eidss.main\bin\Debug\AVR\db_test.mdb";
                     File.Copy(realPath, location + @"\db_test.mdb");
                 }
             }

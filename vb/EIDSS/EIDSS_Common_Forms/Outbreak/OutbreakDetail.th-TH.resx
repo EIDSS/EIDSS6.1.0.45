@@ -169,7 +169,7 @@
     <value>ผู้ป่วย/เจ้าของฟาร์ม</value>
   </data>
   <data name="btnRemove.Text" xml:space="preserve">
-    <value>ย้ายออก</value>
+    <value>ลบรายการนี้</value>
   </data>
   <data name="btnViewCaseDetails.Text" xml:space="preserve">
     <value>ดูรายละเอียด</value>

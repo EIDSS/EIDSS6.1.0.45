@@ -112,11 +112,11 @@ namespace bv.common.Resources.TranslationTool
 
         private static Dictionary<string, string> g_dirsRes = new Dictionary<string, string>();
             //{
-            //    {"BvMessages", @"App_Data\Translations\Resources\developersbranch_v6\bv.common\Resources\"},
-            //    {"XtraStrings", @"App_Data\Translations\Resources\developersbranch_v6\bv.common\Resources\"},
-            //    {"EidssFields", @"App_Data\Translations\Resources\developersbranch_v6\eidss.core\Resources\"},
-            //    {"EidssMenu", @"App_Data\Translations\Resources\developersbranch_v6\eidss.core\Resources\"},
-            //    {"EidssMessages", @"App_Data\Translations\Resources\developersbranch_v6\eidss.core\Resources\"}
+            //    {"BvMessages", @"App_Data\Translations\Resources\EIDSSTrunk\EIDSS\bv.common\Resources\"},
+            //    {"XtraStrings", @"App_Data\Translations\Resources\EIDSSTrunk\EIDSS\bv.common\Resources\"},
+            //    {"EidssFields", @"App_Data\Translations\Resources\EIDSSTrunk\EIDSS\eidss.core\Resources\"},
+            //    {"EidssMenu", @"App_Data\Translations\Resources\EIDSSTrunk\EIDSS\eidss.core\Resources\"},
+            //    {"EidssMessages", @"App_Data\Translations\Resources\EIDSSTrunk\EIDSS\eidss.core\Resources\"}
             //};
         private static string MakePath(string sourceName, CultureInfo ci)
         {

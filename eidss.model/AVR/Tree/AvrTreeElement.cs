@@ -7,13 +7,12 @@ namespace eidss.model.Avr.Tree
     {
         public AvrTreeElement()
         {
-
         }
 
         public AvrTreeElement
-            (long id, long? parentID, long? globalID, AvrTreeElementType elementType, long queryID, string defaultName,
-                string nationalName, string description, bool readOnly, bool shared = false, string descriptionEnglish = "",
-                long idDescription = -1, string layoutAuthor = "", bool isUseArchiveData = false)
+        (long id, long? parentID, long? globalID, AvrTreeElementType elementType, long queryID, string defaultName,
+            string nationalName, string description, bool readOnly, bool shared = false, string descriptionEnglish = "",
+            long idDescription = -1, string layoutAuthor = "", bool isUseArchiveData = false)
         {
             ID = id;
             ParentID = parentID;
@@ -35,7 +34,7 @@ namespace eidss.model.Avr.Tree
 
         public bool IsShared { get; set; }
 
-        public long ID{ get; set; }
+        public long ID { get; set; }
 
         public long? ParentID { get; set; }
 
@@ -53,7 +52,7 @@ namespace eidss.model.Avr.Tree
 
         public string LayoutAuthor { get; set; }
 
-        public bool ReadOnly{ get; set; }
+        public bool ReadOnly { get; set; }
 
         public long QueryID { get; set; }
 
@@ -85,15 +84,14 @@ namespace eidss.model.Avr.Tree
         public bool IsEqual(AvrTreeElement elem)
         {
             return
-                (DefaultName == elem.DefaultName)
-                && (NationalName == elem.NationalName)
-                && (Description == elem.Description)
-                && (DescriptionEnglish == elem.DescriptionEnglish)
-                && (LayoutAuthor == elem.LayoutAuthor)
-                && (IsUseArchiveData == elem.IsUseArchiveData)
-                && (IsShared == elem.IsShared)
-                && (IsPublished == elem.IsPublished);
-
+                DefaultName == elem.DefaultName
+                && NationalName == elem.NationalName
+                && Description == elem.Description
+                && DescriptionEnglish == elem.DescriptionEnglish
+                && LayoutAuthor == elem.LayoutAuthor
+                && IsUseArchiveData == elem.IsUseArchiveData
+                && IsShared == elem.IsShared
+                && IsPublished == elem.IsPublished;
         }
     }
 }

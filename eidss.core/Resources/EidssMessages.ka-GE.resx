@@ -1885,7 +1885,7 @@
     <value>შინაურ ცხოველთა დაავადების ეპიდაფეთქებები</value>
   </data>
   <data name="pageTitleLvstkDetails" xml:space="preserve">
-    <value>შინაურ ცხოველთა დაავადების კვლევის ფორმა</value>
+    <value>ცხოველის დაავადების კვლევის ფორმა</value>
   </data>
   <data name="AsSession.DetailsTableView.DuplicateSample" xml:space="preserve">
     <value>"ნიმუშის საველე ID"უნიკალური უნდა იყოს ცხოველითვის და ნიმუშის ტიპისთვის.</value>
@@ -1924,7 +1924,7 @@
     <value>შედეგის დამატება</value>
   </data>
   <data name="titleLvstkCaseDetails" xml:space="preserve">
-    <value>შინაური ცხოველის დაავადების შემთხვევა</value>
+    <value>ცხოველის დაავადების კვლევის ფორმა</value>
   </data>
   <data name="strLoadData_Id" xml:space="preserve">
     <value>მონაცემთა ჩატვირთვა</value>
@@ -2331,7 +2331,6 @@
   <data name="VetFarmTree_Total" xml:space="preserve">
     <value>სულ:</value>
   </data>
-
   <data name="msgBlankDiagnosisFilter" xml:space="preserve">
     <value>ანგარიშგებას დაქვემდებარებული ყველა დიაგნოზი</value>
   </data>
@@ -4286,7 +4285,7 @@
     <value>ვეტ აგრეგირებულ ღონისძიებათა შეჯამების ანგარიში</value>
   </data>
   <data name="titleLivestockInvestigationReport" xml:space="preserve">
-    <value>შინაურ ცხოველთა დაავადების კვლევის ფორმა</value>
+    <value>ცხოველის დაავადების კვლევის ფორმა</value>
   </data>
   <data name="titleAvianInvestigationReport" xml:space="preserve">
     <value>ფრინველის დაავადების კვლევის ფორმა</value>
@@ -4299,15 +4298,27 @@
 დზეის-ი არ დაუშვებს ადამიანის დაავადების შემთხვევის დამახსოვრებას პაციენტის/კონტაქტის გადაუმოწმებელი პირადი ნომრით.
 </value>
   </data>
+  <data name="strPinNotRespondingNoVerification" xml:space="preserve">
+    <value>სამოქალაქო რეესტრის სერვისი მიუწვდომელია. სცადეთ მოგვიანებით.</value>
+  </data>
   <data name="strPinWrongFormat" xml:space="preserve">
     <value>11 ნიშნა პირადი ნომერი შეყვანილია არასწორ ფორმატში. შეცვალეთ ძებნის პარამეტრები და ხელახლა სცადეთ ძებნის განხორციელება.
 დზეის-ი არ დაუშვებს ადამიანის დაავადების შემთხვევის დამახსოვრებას პაციენტის/კონტაქტის გადაუმოწმებელი პირადი ნომრით.
 </value>
   </data>
+  <data name="strPinWrongFormatNoVerification" xml:space="preserve">
+    <value>11 ნიშნა პირადი ნომერი შეყვანილია არასწორ ფორმატში. შეცვალეთ ძებნის პარამეტრები და ხელახლა სცადეთ ძებნის განხორციელება.</value>
+  </data>
+  <data name="strPinDOB" xml:space="preserve">
+    <value>'დაბადების თარიღი' ველის შევსება სავალდებულოა. შეცვალეთ ძებნის პარამეტრები და ხელახლა სცადეთ ძებნის განხორციელება.</value>
+  </data>
   <data name="strPinNoRecordsFound" xml:space="preserve">
     <value>ძებნის მოცემული პარამეტრბით ჩანაწერი არ მოიძებნა. შეცვალეთ ძებნის პარამეტრები და ხელახლა სცადეთ ძებნის განხორციელება.
 დზეის-ი არ დაუშვებს ადამიანის დაავადების შემთხვევის დამახსოვრებას პაციენტის/კონტაქტის გადაუმოწმებელი პირადი ნომრით.
 </value>
+  </data>
+  <data name="strPinNoRecordsFoundNoVerification" xml:space="preserve">
+    <value>ძებნის მოცემული პარამეტრბით ჩანაწერი არ მოიძებნა. შეცვალეთ ძებნის პარამეტრები და ხელახლა სცადეთ ძებნის განხორციელება.</value>
   </data>
   <data name="strPinNonValidated" xml:space="preserve">
     <value>პაციენტის/კონტაქტის პირადი ნომერი გადაუმოწმებელია. გთხოვთ განახორციელეთ ძებნა საკარო რეესტრში.</value>

@@ -143,6 +143,9 @@
     <HelpProject Include="$(HelpSource)KZ\WebEIDSS_Main\EIDSS_Web_KZ.hmxz">
       <Culture>kk-KZ</Culture>
     </HelpProject>
+    <HelpProject Include="$(HelpSource)TH\WebEIDSS_Main\EIDSS_Web_TH.hmxz">
+      <Culture>th-TH</Culture>
+    </HelpProject>
   </ItemGroup>
   <Import Project="$(SolutionDir)HelpBuilder.Common.targets" />
   

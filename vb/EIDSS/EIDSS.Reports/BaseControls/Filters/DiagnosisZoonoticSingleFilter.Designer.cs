@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiagnosisZoonoticSingleFilter));
             this.SuspendLayout();
+            // 
+            // lblLookupName
+            // 
+            resources.ApplyResources(this.lblLookupName, "lblLookupName");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(DiagnosisZoonoticSingleFilter), out resources);
             // Form Is Localizable: True
             // 

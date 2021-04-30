@@ -2878,7 +2878,7 @@
     <value>{0}, {2} və {4} qiymətlərinin eyni birləşməsi ilə 2 yazı yaratmaq mümkün deyil. {0}='{1}', {2}='{3}' və {4}='{5} ilə yazı artıq mövcuddur.</value>
   </data>
   <data name="ErrAllMandatoryFieldsRequired" xml:space="preserve">
-    <value>Siz bütün məcburi sahələri məlumatları daxil etməlisiniz.</value>
+    <value>Siz bütün məcburi sahələrin məlumatlarını daxil etməlisiniz.</value>
   </data>
   <data name="errNoDiagnosisForTestResult" xml:space="preserve">
     <value>Test nəticəsi üçün xəstəlik seçilməyib.</value>
@@ -4087,7 +4087,7 @@
     <value>Diaqnozların sayı həddindən artiqdır. Xahiş olunur, diaqnozların sayını azaldın və hesabatı bir daha tərtib etməyə cəhd edin.</value>
   </data>
   <data name="msgTooManySpeciesType" xml:space="preserve">
-    <value>Siz Heyvan növü filtrində üç dəyərdən çox seçə bilməzsiz.</value>
+    <value>Siz Heyvan növü filtrində altı dəyərdən çox seçə bilməzsiz.</value>
   </data>
   <data name="YearsCaption" xml:space="preserve">
     <value>İllər</value>
@@ -4336,5 +4336,11 @@
   </data>
   <data name="msgReportAzSamplesNotFound" xml:space="preserve">
     <value>Daxil edilmiş Hadisənin Q/N ilə hadisə tapıldı, amma onun qeydiyyata alınmış nümunələri yoxdur</value>
+  </data>
+  <data name="msgVetComparativeReportAZCorrectYear" xml:space="preserve">
+    <value>“İldən” və “İlədək” filtrlərdə dəyərlərin fərqi 2 ildən çox olmamalıdır</value>
+  </data>
+  <data name="msgTooManySpeciesType3" xml:space="preserve">
+    <value>Siz Heyvan növü filtrində üç dəyərdən çox seçə bilməzsiz</value>
   </data>
 </root>

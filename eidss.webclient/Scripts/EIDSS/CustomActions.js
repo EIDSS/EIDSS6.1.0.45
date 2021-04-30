@@ -36,6 +36,10 @@ function EmergencyNotificationDTRAReport() {
     humanCase.onENDReportClick();
 }
 
+function EmergencyNotificationUkraineReport() {
+    humanCase.onENDReportClick();
+}
+
 function EmergencyNotificationTanzaniaReport() {
     humanCase.onENTReportClick();
 }

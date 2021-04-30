@@ -84,6 +84,7 @@
         vectorIsPool: "/Vector/GetIsPoolVectorType",
         humanCaseEmergencyNotificationReport: "/HumanCase/EmergencyNotificationReport",
         humanCaseEmergencyNotificationDTRAReport: "/HumanCase/EmergencyNotificationDTRAReport",
+        humanCaseEmergencyNotificationUkraineReport: "/HumanCase/EmergencyNotificationUkraineReport",
         humanCaseEmergencyNotificationTanzaniaReport: "/HumanCase/EmergencyNotificationTanzaniaReport",
         humanInvestigationReport: "/HumanCase/HumanInvestigationReport",
         testsReport: "/LaboratoryReport/TestsReport",
@@ -592,6 +593,9 @@
         },
         getHumanCaseEmergencyNotificationDTRAReportUrl: function (params) {
             return bvUrls.buildUrl(bvUrls.getByPath(paths.humanCaseEmergencyNotificationDTRAReport), params);
+        },
+        getHumanCaseEmergencyNotificationUkraineReportUrl: function (params) {
+            return bvUrls.buildUrl(bvUrls.getByPath(paths.humanCaseEmergencyNotificationUkraineReport), params);
         },
         getHumanCaseEmergencyNotificationTanzaniaReportUrl: function (params) {
             return bvUrls.buildUrl(bvUrls.getByPath(paths.humanCaseEmergencyNotificationTanzaniaReport), params);

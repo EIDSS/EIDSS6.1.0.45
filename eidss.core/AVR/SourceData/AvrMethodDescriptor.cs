@@ -50,7 +50,14 @@ namespace eidss.model.AVR.SourceData
         public override object GetValue(object component)
         {
             var p = (AvrDataRowBase)component;
-            return m_Method(p);
+            if (p != null)
+            {
+                return m_Method(p);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public override void ResetValue(object component)

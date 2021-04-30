@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
-using DevExpress.Utils;
 using DevExpress.XtraCharts;
 using DevExpress.XtraEditors.Controls;
 using eidss.model.Avr.Chart;
@@ -11,6 +10,20 @@ namespace eidss.avr.ChartForm
     public partial class TitleSettings : BaseChartSettings
     {
         public Title CurrentTitle { get; set; }
+
+        private bool m_VisibleChanged = true;
+        private bool TitleVisibleChangedByUser
+        {
+            get { return m_VisibleChanged; }
+            set { m_VisibleChanged = value; }
+        }
+
+        private void SetTitleVisibleValue(bool value)
+        {
+            TitleVisibleChangedByUser = false;
+            cbVisible.Checked = value;
+            TitleVisibleChangedByUser = true;
+        }
 
         public TitleSettings()
         {
@@ -32,7 +45,7 @@ namespace eidss.avr.ChartForm
         {
             if (CurrentTitle == null) return null;
             var p = new TitleProperties();
-            p.Text = CurrentTitle.Text;
+            p.Text = cbVisible.Checked? CurrentTitle.Text : tbText.Text;
             p.Font.FromFont(CurrentTitle.Font, CurrentTitle.TextColor);
             p.Alignment = cbAlignment.SelectedIndex;
             p.Visibility = cbVisible.Checked;
@@ -43,19 +56,20 @@ namespace eidss.avr.ChartForm
         {
             if (CurrentTitle == null) return;
             base.FromProperties(props);
-            var p = (TitleProperties)props;
-            tbText.Text = CurrentTitle.Text = p.Text;
+            var p = (TitleProperties) props;
+            tbText.Text = p.Text;
+            CurrentTitle.Text = p.Visibility ? p.Text : string.Empty;
             ChartDetailPanel.fontDialog.Font = CurrentTitle.Font = p.Font.ToFont();
             beFont.Text = p.Font.FontName;
             cbAlignment.SelectedIndex = p.Alignment;
-            cbVisible.Checked = p.Visibility;
+            SetTitleVisibleValue(p.Visibility);
         }
 
         public static void SetupChart(Title title, object props)
         {
             var p = (TitleProperties)props;
             title.Font = p.Font.ToFont();
-            title.Text = p.Text;
+            title.Text = p.Visibility? p.Text : string.Empty;
             title.TextColor = p.Font.TextColor;
             title.Visible = p.Visibility;
             var al = ChartSettingsHelper.GetAlignment(p.Alignment);
@@ -87,12 +101,11 @@ namespace eidss.avr.ChartForm
             CurrentTitle.TextColor = color;
         }
 
-
         private void cbVisible_CheckedChanged(object sender, EventArgs e)
         {
-            if (CurrentTitle == null) return;
-            CurrentTitle.Text =
-                cbVisible.Checked ? tbText.Text : "";      
+            if ((CurrentTitle == null) || (!TitleVisibleChangedByUser)) return;
+            CurrentTitle.Visible = cbVisible.Checked;
+            CurrentTitle.Text = cbVisible.Checked ? tbText.Text : string.Empty;
         }
 
         private void cbTitleAlignment_SelectedIndexChanged(object sender, EventArgs e)
@@ -112,7 +125,7 @@ namespace eidss.avr.ChartForm
         private void tbChartName_EditValueChanged(object sender, EventArgs e)
         {
             if (CurrentTitle == null) return;
-            CurrentTitle.Text = tbText.Text;
+            CurrentTitle.Text = cbVisible.Checked ? tbText.Text : string.Empty;
         }
     }
 }

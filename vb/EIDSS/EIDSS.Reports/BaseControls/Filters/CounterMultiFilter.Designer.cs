@@ -39,16 +39,12 @@
             // 
             // CounterMultiFilter
             // 
-            resources.ApplyResources(this, "$this");
-            this.Appearance.FontSizeDelta = ((int)(resources.GetObject("CounterMultiFilter.Appearance.FontSizeDelta")));
-            this.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("CounterMultiFilter.Appearance.FontStyleDelta")));
-            this.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("CounterMultiFilter.Appearance.GradientMode")));
-            this.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("CounterMultiFilter.Appearance.Image")));
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("CounterMultiFilter.Appearance.Font")));
             this.Appearance.Options.UseFont = true;
+            resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.Name = "CounterMultiFilter";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

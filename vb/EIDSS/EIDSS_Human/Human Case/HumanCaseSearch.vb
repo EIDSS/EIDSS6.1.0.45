@@ -951,17 +951,17 @@ Public Class HumanCaseSearch
         If Utils.Str(joinType).Trim().ToLower(Globalization.CultureInfo.InvariantCulture) = "inner" Then
             DefaultJoinType = "inner"
         End If
-        Dim From As String = String.Format(
-            "{0} join   ( " +
-            "   tlbHumanCase as {1} " +
-            "   inner join  tlbOffice as {2} " +
-            "   on          {2}.idfOffice = {1}.idfSentByOffice " +
-            "               and {1}.intRowStatus = 0 " +
-            "           ) " +
-            "on         {1}.idfHumanCase = {3}.idfCase ",
-            DefaultJoinType,
-            GetDoublePrefix(HCTable.tlbHumanCase, HCTable.tlbOffice_sent, ObjectName),
-            GetPrefix(HCTable.tlbOffice_sent, ObjectName),
+        Dim From As String = String.Format( _
+            "{0} join   ( " + _
+            "   tlbHumanCase as {1} " + _
+            "   inner join  tlbOffice as {2} " + _
+            "   on          {2}.idfOffice = {1}.idfSentByOffice " + _
+            "               and {1}.intRowStatus = 0 " + _
+            "           ) " + _
+            "on         {1}.idfHumanCase = {3}.idfCase ", _
+            DefaultJoinType, _
+            GetDoublePrefix(HCTable.tlbHumanCase, HCTable.tlbOffice_sent, ObjectName), _
+            GetPrefix(HCTable.tlbOffice_sent, ObjectName), _
             fnSelectList_Name(ObjectName))
         Return From
     End Function
@@ -971,17 +971,17 @@ Public Class HumanCaseSearch
         If Utils.Str(joinType).Trim().ToLower(Globalization.CultureInfo.InvariantCulture) = "inner" Then
             DefaultJoinType = "inner"
         End If
-        Dim From As String = String.Format(
-            "{0} join   ( " +
-            "   tlbHumanCase as {1} " +
-            "   inner join  tlbOffice as {2} " +
-            "   on          {2}.idfOffice = {1}.idfReceivedByOffice " +
-            "               and {1}.intRowStatus = 0 " +
-            "           ) " +
-            "on         {1}.idfHumanCase = {3}.idfCase ",
-            DefaultJoinType,
-            GetDoublePrefix(HCTable.tlbHumanCase, HCTable.tlbOffice_rec, ObjectName),
-            GetPrefix(HCTable.tlbOffice_rec, ObjectName),
+        Dim From As String = String.Format( _
+            "{0} join   ( " + _
+            "   tlbHumanCase as {1} " + _
+            "   inner join  tlbOffice as {2} " + _
+            "   on          {2}.idfOffice = {1}.idfReceivedByOffice " + _
+            "               and {1}.intRowStatus = 0 " + _
+            "           ) " + _
+            "on         {1}.idfHumanCase = {3}.idfCase ", _
+            DefaultJoinType, _
+            GetDoublePrefix(HCTable.tlbHumanCase, HCTable.tlbOffice_rec, ObjectName), _
+            GetPrefix(HCTable.tlbOffice_rec, ObjectName), _
             fnSelectList_Name(ObjectName))
         Return From
     End Function

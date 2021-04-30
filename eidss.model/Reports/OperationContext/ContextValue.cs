@@ -18,7 +18,7 @@ namespace eidss.model.Reports.OperationContext
         public static string ToolbarMenuClicked = "ToolbarClicked";
         public static string PopupMenuRefreshing = "PopupMenuRefreshing";
         public static string PrecisionRefreshing = "PrecisionRefreshing";
-
+        public static string PivotSuppressRefreshing = "PivotSuppressRefreshing";
         // reports constants
         public static string ReportFormLoading = "ReportFormLoading";
         public static string ReportFilterLoading = "ReportFilterLoading";

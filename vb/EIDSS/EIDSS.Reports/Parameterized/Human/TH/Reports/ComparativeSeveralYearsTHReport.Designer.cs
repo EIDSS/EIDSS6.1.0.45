@@ -146,10 +146,13 @@
             // 
             // cellLanguage
             // 
+            resources.ApplyResources(this.cellLanguage, "cellLanguage");
+            this.cellLanguage.StylePriority.UseFont = false;
             this.cellLanguage.StylePriority.UseTextAlignment = false;
             // 
             // lblReportName
             // 
+            resources.ApplyResources(this.lblReportName, "lblReportName");
             this.lblReportName.StylePriority.UseBorders = false;
             this.lblReportName.StylePriority.UseBorderWidth = false;
             this.lblReportName.StylePriority.UseFont = false;
@@ -157,6 +160,7 @@
             // 
             // Detail
             // 
+            resources.ApplyResources(this.Detail, "Detail");
             this.Detail.StylePriority.UseFont = false;
             this.Detail.StylePriority.UsePadding = false;
             // 
@@ -168,33 +172,45 @@
             // 
             // PageFooter
             // 
-            this.PageFooter.StylePriority.UseBorders = false;
             resources.ApplyResources(this.PageFooter, "PageFooter");
+            this.PageFooter.StylePriority.UseBorders = false;
             // 
             // ReportHeader
             // 
-            this.ReportHeader.Expanded = false;
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
             // 
             // xrPageInfo1
             // 
             resources.ApplyResources(this.xrPageInfo1, "xrPageInfo1");
             this.xrPageInfo1.StylePriority.UseBorders = false;
+            this.xrPageInfo1.StylePriority.UseFont = false;
             // 
             // cellReportHeader
             // 
+            resources.ApplyResources(this.cellReportHeader, "cellReportHeader");
             this.cellReportHeader.StylePriority.UseBorders = false;
             this.cellReportHeader.StylePriority.UseFont = false;
             this.cellReportHeader.StylePriority.UseTextAlignment = false;
             // 
             // cellBaseSite
             // 
+            resources.ApplyResources(this.cellBaseSite, "cellBaseSite");
             this.cellBaseSite.StylePriority.UseBorders = false;
             this.cellBaseSite.StylePriority.UseFont = false;
             this.cellBaseSite.StylePriority.UseTextAlignment = false;
             // 
+            // cellBaseCountry
+            // 
+            resources.ApplyResources(this.cellBaseCountry, "cellBaseCountry");
+            this.cellBaseCountry.StylePriority.UseFont = false;
+            // 
+            // cellBaseLeftHeader
+            // 
+            resources.ApplyResources(this.cellBaseLeftHeader, "cellBaseLeftHeader");
+            // 
             // tableBaseHeader
             // 
+            resources.ApplyResources(this.tableBaseHeader, "tableBaseHeader");
             this.tableBaseHeader.StylePriority.UseBorders = false;
             this.tableBaseHeader.StylePriority.UseBorderWidth = false;
             this.tableBaseHeader.StylePriority.UseFont = false;
@@ -214,6 +230,7 @@
             this.DetailReport.DataAdapter = this.m_DataAdapter;
             this.DetailReport.DataMember = "ComparativeTable";
             this.DetailReport.DataSource = this.m_DataSet;
+            resources.ApplyResources(this.DetailReport, "DetailReport");
             this.DetailReport.Level = 0;
             this.DetailReport.Name = "DetailReport";
             // 
@@ -267,8 +284,8 @@
             this.DecemberCell,
             this.DecemberPercentCell,
             this.TotalCell});
-            this.DetailsRow.Name = "DetailsRow";
             resources.ApplyResources(this.DetailsRow, "DetailsRow");
+            this.DetailsRow.Name = "DetailsRow";
             // 
             // YearCell
             // 
@@ -293,7 +310,6 @@
             resources.ApplyResources(this.JanuaryPercentCell, "JanuaryPercentCell");
             this.JanuaryPercentCell.Name = "JanuaryPercentCell";
             this.JanuaryPercentCell.StylePriority.UseFont = false;
-            
             // 
             // FebruaryCell
             // 
@@ -310,7 +326,6 @@
             resources.ApplyResources(this.FebruaryPercentCell, "FebruaryPercentCell");
             this.FebruaryPercentCell.Name = "FebruaryPercentCell";
             this.FebruaryPercentCell.StylePriority.UseFont = false;
-            
             // 
             // MarchCell
             // 
@@ -327,7 +342,6 @@
             resources.ApplyResources(this.MarchPercentCell, "MarchPercentCell");
             this.MarchPercentCell.Name = "MarchPercentCell";
             this.MarchPercentCell.StylePriority.UseFont = false;
-            
             // 
             // AprilCell
             // 
@@ -344,7 +358,6 @@
             resources.ApplyResources(this.AprilPercentCell, "AprilPercentCell");
             this.AprilPercentCell.Name = "AprilPercentCell";
             this.AprilPercentCell.StylePriority.UseFont = false;
-            
             // 
             // MayCell
             // 
@@ -361,7 +374,6 @@
             resources.ApplyResources(this.MayPercentCell, "MayPercentCell");
             this.MayPercentCell.Name = "MayPercentCell";
             this.MayPercentCell.StylePriority.UseFont = false;
-            
             // 
             // JuneCell
             // 
@@ -378,7 +390,6 @@
             resources.ApplyResources(this.JunePercentCell, "JunePercentCell");
             this.JunePercentCell.Name = "JunePercentCell";
             this.JunePercentCell.StylePriority.UseFont = false;
-            
             // 
             // JulyCell
             // 
@@ -395,7 +406,6 @@
             resources.ApplyResources(this.JulyPercentCell, "JulyPercentCell");
             this.JulyPercentCell.Name = "JulyPercentCell";
             this.JulyPercentCell.StylePriority.UseFont = false;
-            
             // 
             // AugustCell
             // 
@@ -412,7 +422,6 @@
             resources.ApplyResources(this.AugustPercentCell, "AugustPercentCell");
             this.AugustPercentCell.Name = "AugustPercentCell";
             this.AugustPercentCell.StylePriority.UseFont = false;
-            
             // 
             // SeptemberCell
             // 
@@ -429,7 +438,6 @@
             resources.ApplyResources(this.SeptemberPercentCell, "SeptemberPercentCell");
             this.SeptemberPercentCell.Name = "SeptemberPercentCell";
             this.SeptemberPercentCell.StylePriority.UseFont = false;
-            
             // 
             // OctoberCell
             // 
@@ -446,7 +454,6 @@
             resources.ApplyResources(this.OctoberPercentCell, "OctoberPercentCell");
             this.OctoberPercentCell.Name = "OctoberPercentCell";
             this.OctoberPercentCell.StylePriority.UseFont = false;
-            
             // 
             // NovemberCell
             // 
@@ -463,7 +470,6 @@
             resources.ApplyResources(this.NovemberPercentCell, "NovemberPercentCell");
             this.NovemberPercentCell.Name = "NovemberPercentCell";
             this.NovemberPercentCell.StylePriority.UseFont = false;
-            
             // 
             // DecemberCell
             // 
@@ -480,7 +486,6 @@
             resources.ApplyResources(this.DecemberPercentCell, "DecemberPercentCell");
             this.DecemberPercentCell.Name = "DecemberPercentCell";
             this.DecemberPercentCell.StylePriority.UseFont = false;
-            
             // 
             // TotalCell
             // 
@@ -511,24 +516,28 @@
             resources.ApplyResources(this.RatePerLabel, "RatePerLabel");
             this.RatePerLabel.Name = "RatePerLabel";
             this.RatePerLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.RatePerLabel.StylePriority.UseFont = false;
             // 
             // PercentageLabel
             // 
             resources.ApplyResources(this.PercentageLabel, "PercentageLabel");
             this.PercentageLabel.Name = "PercentageLabel";
             this.PercentageLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.PercentageLabel.StylePriority.UseFont = false;
             // 
             // AbsoluteNumberLabel
             // 
             resources.ApplyResources(this.AbsoluteNumberLabel, "AbsoluteNumberLabel");
             this.AbsoluteNumberLabel.Name = "AbsoluteNumberLabel";
             this.AbsoluteNumberLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.AbsoluteNumberLabel.StylePriority.UseFont = false;
             // 
             // CountryLabel
             // 
             resources.ApplyResources(this.CountryLabel, "CountryLabel");
             this.CountryLabel.Name = "CountryLabel";
             this.CountryLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.CountryLabel.StylePriority.UseFont = false;
             // 
             // HeaderLabelTable
             // 
@@ -543,8 +552,8 @@
             // 
             this.HeaderLabelRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.HeaderLabelCell1});
-            this.HeaderLabelRow1.Name = "HeaderLabelRow1";
             resources.ApplyResources(this.HeaderLabelRow1, "HeaderLabelRow1");
+            this.HeaderLabelRow1.Name = "HeaderLabelRow1";
             // 
             // HeaderLabelCell1
             // 
@@ -556,8 +565,8 @@
             // 
             this.HeaderLabelRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.HeaderLabelCell2});
-            this.HeaderLabelRow2.Name = "HeaderLabelRow2";
             resources.ApplyResources(this.HeaderLabelRow2, "HeaderLabelRow2");
+            this.HeaderLabelRow2.Name = "HeaderLabelRow2";
             // 
             // HeaderLabelCell2
             // 
@@ -594,8 +603,8 @@
             this.NovemberHeaderCell,
             this.DecemberHeaderCell,
             this.TotalHeaderCell});
-            this.HeaderRow.Name = "HeaderRow";
             resources.ApplyResources(this.HeaderRow, "HeaderRow");
+            this.HeaderRow.Name = "HeaderRow";
             // 
             // MonthYearHeaderCell
             // 
@@ -924,8 +933,8 @@
             this.OrganizationNameCell,
             this.xrTableCell4,
             this.DateTimeCell});
-            this.xrTableRow7.Name = "xrTableRow7";
             resources.ApplyResources(this.xrTableRow7, "xrTableRow7");
+            this.xrTableRow7.Name = "xrTableRow7";
             // 
             // OrganizationNameCell
             // 
@@ -954,7 +963,9 @@
             this.Chart.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Chart.DataSource = this.m_ChartDataSet;
             xyDiagram1.AxisX.Label.Angle = ((int)(resources.GetObject("resource.Angle")));
+            xyDiagram1.AxisX.Label.Font = ((System.Drawing.Font)(resources.GetObject("resource.Font")));
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.Label.Font = ((System.Drawing.Font)(resources.GetObject("resource.Font1")));
             xyDiagram1.AxisY.MinorCount = 3;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.WholeRange.AutoSideMargins = false;
@@ -964,6 +975,7 @@
             xyDiagram1.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.False;
             xyDiagram1.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.False;
             secondaryAxisY1.AxisID = 0;
+            secondaryAxisY1.Label.Font = ((System.Drawing.Font)(resources.GetObject("resource.Font2")));
             secondaryAxisY1.Label.TextPattern = "{V}%";
             secondaryAxisY1.MinorCount = 3;
             secondaryAxisY1.Name = "PercentAxis";
@@ -984,6 +996,7 @@
             this.Chart.Legend.AlignmentHorizontal = ((DevExpress.XtraCharts.LegendAlignmentHorizontal)(resources.GetObject("Chart.Legend.AlignmentHorizontal")));
             this.Chart.Legend.AlignmentVertical = ((DevExpress.XtraCharts.LegendAlignmentVertical)(resources.GetObject("Chart.Legend.AlignmentVertical")));
             this.Chart.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight;
+            this.Chart.Legend.Font = ((System.Drawing.Font)(resources.GetObject("Chart.Legend.Font")));
             this.Chart.Name = "Chart";
             series1.ArgumentDataMember = "ChartData.Month";
             pointSeriesLabel1.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
@@ -1048,6 +1061,7 @@
             this.ReportHeader,
             this.DetailReport,
             this.ReportFooter});
+            resources.ApplyResources(this, "$this");
             this.Version = "15.1";
             this.Controls.SetChildIndex(this.ReportFooter, 0);
             this.Controls.SetChildIndex(this.DetailReport, 0);

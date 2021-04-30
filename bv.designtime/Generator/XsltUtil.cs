@@ -13,7 +13,7 @@ using System.Runtime.InteropServices;
 using bv.common.Configuration;
 
 namespace bv.designtime.Generator
-{ 
+{
     [ComVisible(true)]
     [Guid("7873EEC5-CFFB-4895-B97C-9E8283C9A801")]
 

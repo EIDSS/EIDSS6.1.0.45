@@ -201,11 +201,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
                 base.ApplyResources(manager);
 
                 m_Resources.ApplyResources(PeriodTypeLabel, "PeriodTypeLabel");
-                //  m_Resources.ApplyResources(PeriodTypeLookUp, "PeriodTypeLookUp");
                 m_Resources.ApplyResources(PeriodLabel, "PeriodLabel");
-                //  m_Resources.ApplyResources(MonthLookUp, "MonthLookUp");
-                //   m_Resources.ApplyResources(QuarterLookUp, "QuarterLookUp");
-                //   m_Resources.ApplyResources(HalfYearLookUp, "HalfYearLookUp");
 
                 ApplyLookupResources(PeriodTypeLookUp, PeriodTypeCollection, PeriodTypeParam, PeriodTypeLabel.Text);
                 ApplyLookupResources(MonthLookUp, MonthCollection, MonthParam, PeriodLabel.Text);

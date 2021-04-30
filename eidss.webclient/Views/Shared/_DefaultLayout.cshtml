@@ -30,7 +30,7 @@
         @*Html.IncludeVersionedJs(String.Format("~/Scripts/Messages/EIDSS.BvMessages.{0}.js", selectedLang))*@
         <script src="@Url.Action("MessagesScript", "Account", new { version = Extenders.VersionCode() })"></script>
         <!-- Common -->
-        @Scripts.Render("~/bundles/system")
+        @Extenders.RenderEidss("~/bundles/system")
         @Extenders.RenderEidss("~/bundles/EIDSS")
 
 

@@ -98,7 +98,7 @@ namespace eidss.model.AVR.SourceData
 
             DistinctCount++;
             int index = DistinctCount - 1;
-            AvrMethodDelegate method = p => p[index];
+            AvrMethodDelegate method = p => ((p != null) ? p[index] : null);
 
             Properties.Add(new AvrMethodDescriptor(column.ColumnName, method, column.DataType));
             Properties.Add(new AvrMethodDescriptor(copyColumn.ColumnName, method, column.DataType));
@@ -115,7 +115,8 @@ namespace eidss.model.AVR.SourceData
             }
             if (Contains(copyColumnName))
             {
-                throw new DuplicateNameException("The collection already has a column with the specified name");
+                return this[copyColumnName];
+                //throw new DuplicateNameException("The collection already has a column with the specified name");
             }
 
             AvrDataColumn originalColumn = this[originalColumnName];

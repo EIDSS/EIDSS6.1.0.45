@@ -12,13 +12,13 @@ namespace EIDSS.Reports.BaseControls.Keeper
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseSampleKeeper));
-            this.lblSampleID = new DevExpress.XtraEditors.LabelControl();
-            this.lblLastName = new DevExpress.XtraEditors.LabelControl();
-            this.lblFirstName = new DevExpress.XtraEditors.LabelControl();
+            this.lblSampleID = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.tbSampleId = new DevExpress.XtraEditors.TextEdit();
             this.tbLastName = new DevExpress.XtraEditors.TextEdit();
             this.tbFirstName = new DevExpress.XtraEditors.TextEdit();
-            this.lblCaseID = new DevExpress.XtraEditors.LabelControl();
+            this.lblCaseID = new System.Windows.Forms.Label();
             this.pnlSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ceUseArchiveData.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSampleId.Properties)).BeginInit();
@@ -28,23 +28,23 @@ namespace EIDSS.Reports.BaseControls.Keeper
             // 
             // pnlSettings
             // 
-            this.pnlSettings.Controls.Add(this.lblCaseID);
-            this.pnlSettings.Controls.Add(this.tbSampleId);
+            this.pnlSettings.Controls.Add(this.tbLastName);
             this.pnlSettings.Controls.Add(this.tbFirstName);
+            this.pnlSettings.Controls.Add(this.tbSampleId);
+            this.pnlSettings.Controls.Add(this.lblCaseID);
             this.pnlSettings.Controls.Add(this.lblFirstName);
             this.pnlSettings.Controls.Add(this.lblLastName);
-            this.pnlSettings.Controls.Add(this.tbLastName);
             this.pnlSettings.Controls.Add(this.lblSampleID);
             resources.ApplyResources(this.pnlSettings, "pnlSettings");
             this.pnlSettings.Controls.SetChildIndex(this.GenerateReportButton, 0);
             this.pnlSettings.Controls.SetChildIndex(this.ceUseArchiveData, 0);
             this.pnlSettings.Controls.SetChildIndex(this.lblSampleID, 0);
-            this.pnlSettings.Controls.SetChildIndex(this.tbLastName, 0);
             this.pnlSettings.Controls.SetChildIndex(this.lblLastName, 0);
             this.pnlSettings.Controls.SetChildIndex(this.lblFirstName, 0);
-            this.pnlSettings.Controls.SetChildIndex(this.tbFirstName, 0);
-            this.pnlSettings.Controls.SetChildIndex(this.tbSampleId, 0);
             this.pnlSettings.Controls.SetChildIndex(this.lblCaseID, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.tbSampleId, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.tbFirstName, 0);
+            this.pnlSettings.Controls.SetChildIndex(this.tbLastName, 0);
             // 
             // ceUseArchiveData
             // 
@@ -61,6 +61,8 @@ namespace EIDSS.Reports.BaseControls.Keeper
             // 
             // GenerateReportButton
             // 
+            this.GenerateReportButton.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("GenerateReportButton.Appearance.Font")));
+            this.GenerateReportButton.Appearance.Options.UseFont = true;
             resources.ApplyResources(this.GenerateReportButton, "GenerateReportButton");
             bv.common.Resources.BvResourceManagerChanger.GetResourceManager(typeof(BaseSampleKeeper), out resources);
             // Form Is Localizable: True
@@ -102,7 +104,8 @@ namespace EIDSS.Reports.BaseControls.Keeper
             // 
             // BaseSampleKeeper
             // 
-            resources.ApplyResources(this, "$this");
+            this.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("BaseSampleKeeper.Appearance.Font")));
+            this.Appearance.Options.UseFont = true;
             this.HeaderHeight = 130;
             this.Name = "BaseSampleKeeper";
             this.pnlSettings.ResumeLayout(false);
@@ -119,12 +122,12 @@ namespace EIDSS.Reports.BaseControls.Keeper
 
         private DevExpress.XtraEditors.TextEdit tbSampleId;
         private DevExpress.XtraEditors.TextEdit tbFirstName;
-        private DevExpress.XtraEditors.LabelControl lblFirstName;
-        private DevExpress.XtraEditors.LabelControl lblLastName;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.Label lblLastName;
         private DevExpress.XtraEditors.TextEdit tbLastName;
-        private DevExpress.XtraEditors.LabelControl lblSampleID;
+        private System.Windows.Forms.Label lblSampleID;
 
-        private DevExpress.XtraEditors.LabelControl lblCaseID;
+        private System.Windows.Forms.Label lblCaseID;
 
     }
 }

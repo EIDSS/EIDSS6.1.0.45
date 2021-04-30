@@ -9,7 +9,7 @@ using bv.designtime.Generator;
 namespace bv.designtime.executable
 {
     class Program
-    { 
+    {
         static void Main(string[] args)
         {
             if (args.Length != 1)

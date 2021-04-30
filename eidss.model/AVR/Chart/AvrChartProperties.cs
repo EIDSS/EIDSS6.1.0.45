@@ -15,13 +15,12 @@ namespace eidss.model.Avr.Chart
             LegendVisibility = true;
             SeriesLabelsVisibility = true;
         }
-        
+
         public TitleProperties Title { get; set; }
         public XAxisProperties XAxis { get; set; }
         public List<YAxisProperties> YAxes { get; set; }
         public bool LegendVisibility { get; set; }
         public bool SeriesLabelsVisibility { get; set; }
         public List<SeriesProperties> Series { get; set; }
-
     }
 }

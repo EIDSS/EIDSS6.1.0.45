@@ -129,7 +129,7 @@ namespace eidss.webclient
         #region Bundles
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/system").Include(
+            bundles.Add(new ScriptBundle("~/bundles/system" + Extenders.GetVersionCode()).Include(
                 //"~/Scripts/WidgetsFacades/DateFacade.js",
                 "~/Scripts/jquery-1.9.1.min.js",
                 "~/Scripts/jquery.form.js",
@@ -206,11 +206,10 @@ namespace eidss.webclient
                 "~/Scripts/Kendo/min/kendo.aspnetmvc.min.js"
                 ));
 
-             
 
-            var version = Assembly.GetExecutingAssembly().GetName().Version;
-            string versionCode = string.Format("-{0}-{1}-{2}-{3}", version.Major, version.Minor, version.Build, version.Revision);
-            bundles.Add(new ScriptBundle("~/bundles/EIDSS" + versionCode).Include(
+
+
+            bundles.Add(new ScriptBundle("~/bundles/EIDSS" + Extenders.GetVersionCode()).Include(
                 "~/Scripts/WidgetsFacades/WindowFacade.js",
                 "~/Scripts/WidgetsFacades/GlobalizationFacade.js",
                 "~/Scripts/WidgetsFacades/GridFacade.js",
@@ -243,6 +242,7 @@ namespace eidss.webclient
                 "~/Scripts/EIDSS/FlexForms.js",
                 "~/Scripts/EIDSS/PopupMenu.js",
                 "~/Scripts/EIDSS/BvCheckedComboBox.js",
+                "~/Scripts/EIDSS/BvCheckedGroupComboBox.js",
                 "~/Scripts/EIDSS/Address.js",
                 "~/Scripts/EIDSS/AggregateCase.js",
                 "~/Scripts/EIDSS/AggregateSummary.js",

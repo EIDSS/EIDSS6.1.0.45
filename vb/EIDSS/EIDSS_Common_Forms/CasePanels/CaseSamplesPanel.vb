@@ -1259,20 +1259,36 @@ Public Class CaseSamplesPanel
         Else
             'SamplesGridView.SetColumnError(colPartyID, Nothing)
         End If
-        Dim customMandatoryType As CustomMandatoryField
+        Dim customMandatorySentToType As CustomMandatoryField
         If (HACode And HACode.Human) > 0 Then
-            customMandatoryType = CustomMandatoryField.HumanCaseSample_SentTo
+            customMandatorySentToType = CustomMandatoryField.HumanCaseSample_SentTo
         ElseIf (HACode And (HACode.Avian Or HACode.Livestock)) > 0 Then
-            customMandatoryType = CustomMandatoryField.VetCaseSample_SentTo
+            customMandatorySentToType = CustomMandatoryField.VetCaseSample_SentTo
+        End If
+        Dim customMandatoryFieldBarcodeType As CustomMandatoryField
+        If (HACode And HACode.Human) > 0 Then
+            customMandatoryFieldBarcodeType = CustomMandatoryField.HumanCaseSample_LocalID
         End If
         If _
             colSentToOrganization.Visible AndAlso
-            EidssSiteContext.Instance.CustomMandatoryFields.Contains(customMandatoryType) AndAlso
+            EidssSiteContext.Instance.CustomMandatoryFields.Contains(customMandatorySentToType) AndAlso
             Not True.Equals(row("Used")) AndAlso Utils.IsEmpty(row("idfSendToOffice")) Then
             If showError Then
                 msg += StandardErrorHelper.Error(StandardError.Mandatory, colSentToOrganization.Caption)
                 ErrorForm.ShowWarningDirect(msg)
                 SamplesGridView.FocusedColumn = colSentToOrganization
+                SamplesGridView.FocusedRowHandle = index
+            End If
+            Return False
+        End If
+        If _
+            colSpecimenID.Visible AndAlso (customMandatoryFieldBarcodeType > 0) AndAlso
+            EidssSiteContext.Instance.CustomMandatoryFields.Contains(customMandatoryFieldBarcodeType) AndAlso
+            Utils.IsEmpty(row("strFieldBarcode")) Then
+            If showError Then
+                msg += StandardErrorHelper.Error(StandardError.Mandatory, colSpecimenID.Caption)
+                ErrorForm.ShowWarningDirect(msg)
+                SamplesGridView.FocusedColumn = colSpecimenID
                 SamplesGridView.FocusedRowHandle = index
             End If
             Return False
@@ -1394,72 +1410,6 @@ Public Class CaseSamplesPanel
     Public Function HasSamples() As Boolean
         Return baseDataSet.Tables(CaseSamples_Db.TableSamples).Select(String.Format("idfsSampleType<>{0}", CLng(SampleTypeEnum.Unknown)), "", DataViewRowState.CurrentRows).Length > 0
     End Function
-
-    ' Note [Ivan] Barcode: commented because usages not found
-    'Private Sub MenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem1.Click
-    '    ' Create Tabel
-    '    Dim dr, drNew As DataRow
-    '    Dim CaseID As String
-    '    Dim SampleSiteID As Long = 0
-    '    Dim i As Integer
-    '    Dim dt As New DataTable("SamplesBarcodes")
-    '    Dim blnContinue As Boolean = True
-
-
-    '    If (CType(Me.Parent.Parent.Parent, BaseForm).State And BusinessObjectState.NewObject) <> 0 Then
-    '        blnContinue = CType(Me.Parent.Parent.Parent, BaseForm).Post(PostType.FinalPosting)
-    '        SampleSiteID = EIDSS.model.Core.EidssSiteContext.Instance.SiteID
-    '    End If
-
-    '    CaseID = Me.CaseSamplesDbService.GetCaseBarcode()
-    '    If blnContinue Then
-    '        dt.Columns.Add(New DataColumn("Barcode"))
-    '        dt.Columns.Add(New DataColumn("Description"))
-
-    '        For i = 0 To SamplesGridView.RowCount - 1
-    '            dr = SamplesGridView.GetDataRow(i)
-    '            drNew = dt.NewRow
-    '            drNew.Item("Barcode") = dr.Item("strBarcode")
-
-    '            If CaseSamplesDbService.HasTopString(NumberingObject.Specimen) Then
-
-    '                If SampleSiteID <> 0 Then
-    '                    drNew.Item("Description") = CaseSamplesDbService.GetAdditionalInfoString(NumberingObject.Specimen, SampleSiteID)
-    '                Else
-    '                    drNew.Item("Description") = CaseSamplesDbService.GetAdditionalInfoString(NumberingObject.Specimen, EIDSS.model.Core.EidssSiteContext.Instance.SiteID) 'baseDataSet.Tables(CaseSamplesDetail_Db.TableSamples).Rows(0).Item("idfsSite").ToString
-    '                End If
-
-    '            Else
-    '                drNew.Item("Description") = CaseID
-    '            End If
-
-    '            dt.Rows.Add(drNew)
-    '        Next
-
-    '        ' Call Barcode Printing
-
-    '        Dim eidssStat As Object
-    '        Dim parArr(3) As Object
-
-    '        parArr(0) = dt
-    '        parArr(1) = "Barcode"
-    '        parArr(2) = "Description"
-    '        parArr(3) = "Barcode"
-
-    '        eidssStat = ClassLoader.LoadClass("BarcodePrint")
-    '        Dim mi As System.Reflection.MethodInfo = eidssStat.GetType().GetMethod("PrintSamplesBarcode")
-    '        mi.Invoke(eidssStat, parArr)
-    '    End If
-
-    'End Sub
-
-    'Private Sub MenuItem1_Popup(ByVal sender As Object, ByVal e As System.EventArgs)
-    '    If SamplesGridView.RowCount > 0 Then
-    '        'MenuItem1.Enabled = True
-    '    Else
-    '        'MenuItem1.Enabled = False
-    '    End If
-    'End Sub
 
     Private Sub cbSpecimenType_CloseUp(ByVal sender As Object, ByVal e As CloseUpEventArgs) _
         Handles cbSpecimenType.CloseUp

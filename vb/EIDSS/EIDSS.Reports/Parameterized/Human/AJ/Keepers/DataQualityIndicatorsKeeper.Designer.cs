@@ -79,6 +79,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Keepers
             resources.ApplyResources(this.diagnosisFilter, "diagnosisFilter");
             this.diagnosisFilter.Name = "diagnosisFilter";
             this.diagnosisFilter.ValueChanged += new System.EventHandler<EIDSS.Reports.BaseControls.Filters.MultiFilterEventArgs>(this.diagnosisFilter1_ValueChanged);
+            this.diagnosisFilter.GroupAndIndividualValueChanged += new System.EventHandler<EIDSS.Reports.BaseControls.Filters.MultiFilterEventArgs>(this.diagnosisFilter1_GroupAndIndividualValueChanged);
             // 
             // regionFilter
             // 

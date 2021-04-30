@@ -12,7 +12,7 @@ namespace EIDSS.Reports.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -177,27 +177,62 @@ namespace EIDSS.Reports.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"
-        <?xml version=""1.0"" encoding=""utf-16""?>
-        <SerializableConnectionString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-        <ConnectionString>Data Source=192.255.34.106\NGSQL;Initial Catalog=EIDSS_UA_Seed_GIS;Persist Security Info=True;User ID=srvcEIDSS;Password=nBZD66)</ConnectionString>
-        <ProviderName>System.Data.SqlClient</ProviderName>
-        </SerializableConnectionString>
-      ")]
-        public string EIDSS_UA_Seed_GISConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.255.34.106\\ngsql08Dev1;Initial Catalog=EIDSS_TH;Persist Security " +
+            "Info=True;User ID=srvcEIDSSTH;Password=nBZD66)")]
+        public string EIDSS_THConnectionString {
             get {
-                return ((string)(this["EIDSS_UA_Seed_GISConnectionString"]));
+                return ((string)(this["EIDSS_THConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.255.34.106\\ngsql08Dev1;Initial Catalog=EIDSS_TH;Persist Security " +
-            "Info=True;User ID=srvcEIDSSTH;Password=nBZD66)")]
-        public string EIDSS_THConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-FDQHCBK\\EIDSS;Initial Catalog=AZDB_MIK;Integrated Security=Tr" +
+            "ue")]
+        public string AZDB_MIKConnectionString {
             get {
-                return ((string)(this["EIDSS_THConnectionString"]));
+                return ((string)(this["AZDB_MIKConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=INTEL-PC\\EIDSSDB;Initial Catalog=UA_ADB;Integrated Security=True")]
+        public string UA_ADBConnectionString {
+            get {
+                return ((string)(this["UA_ADBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=INTEL-PC\\EIDSSDB;Initial Catalog=EIDSS_KZ;Integrated Security=True")]
+        public string EIDSS_KZConnectionString {
+            get {
+                return ((string)(this["EIDSS_KZConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MAX-PALAMARCHUK;Initial Catalog=EIDSS_KZ;Integrated Security=True")]
+        public string eidss_MP {
+            get {
+                return ((string)(this["eidss_MP"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=INTEL-PC\\EIDSSDB;Initial Catalog=AZ_DB;Integrated Security=True")]
+        public string INTEL_AZ_DBConnectionString {
+            get {
+                return ((string)(this["INTEL_AZ_DBConnectionString"]));
             }
         }
     }

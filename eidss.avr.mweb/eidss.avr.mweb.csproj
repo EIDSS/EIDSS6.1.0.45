@@ -151,7 +151,7 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <Private>True</Private>
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\dlls\gis\SqlServerTypes\x64\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\dlls\gis\SqlServerTypes\x86\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -221,19 +221,19 @@
   <ItemGroup>
     <Content Include="..\dlls\gis\SqlServerTypes\x64\msvcr100.dll">
       <Link>SqlServerTypes\x64\msvcr100.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\dlls\gis\SqlServerTypes\x64\SqlServerSpatial110.dll">
       <Link>SqlServerTypes\x64\SqlServerSpatial110.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\dlls\gis\SqlServerTypes\x86\msvcr100.dll">
       <Link>SqlServerTypes\x86\msvcr100.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\dlls\gis\SqlServerTypes\x86\SqlServerSpatial110.dll">
       <Link>SqlServerTypes\x86\SqlServerSpatial110.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\avr_map.css" />
     <Content Include="Content\Images\ActionsPanelButtons\add.png" />
@@ -1115,7 +1115,9 @@
     <Compile Include="Utils\WebPivotCellDisplayTextEventArgs.cs" />
     <Compile Include="Utils\WebPivotFieldDisplayTextEventArgs.cs" />
     <Compile Include="Utils\WebPivotGridCustomSummaryEventArgs.cs" />
-    <Compile Include="Utils\WebPivotGridField.cs" />
+    <Compile Include="Utils\WebPivotGridField.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\bltoolkit.3.2.dev\BLToolkit.4.csproj">

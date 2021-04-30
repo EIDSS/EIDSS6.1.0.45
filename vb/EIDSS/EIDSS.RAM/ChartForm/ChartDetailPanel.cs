@@ -447,7 +447,7 @@ namespace eidss.avr.ChartForm
         /// <param name="index">Если кликнули на серию, то индекс этой серии</param>
         private void ShowSettingsPanel(object o, int index)
         {
-            if (o is ChartTitle)
+            if ((o is ChartTitle) || (o is ChartControl))
             {
                 ShowSettings(new TitleSettings(this)
                 {

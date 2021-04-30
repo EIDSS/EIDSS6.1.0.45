@@ -20,22 +20,5 @@
         </td>
         <td></td>
     </tr>
-    @if (Model.IsSettlementVisible)
-    {
-        <tr>
-            <td class="mediumreport">
-                @Html.LabelFor(m => m.SettlementId)
-            </td>
-            <td class="largereport">
-                @{
-                    @(Html.Kendo().ComboBox()
-                          .BindTo(Model.GetSettlements(null).ConvertToSelectListItem())
-                          .HtmlAttributes(Model.IsRequired ? new { @class = "requiredField" } : null)
-                          .Name("Address.SettlementId"))
-                }
-            </td>
-            <td></td>
-        </tr>
-                    }
 
 </table>

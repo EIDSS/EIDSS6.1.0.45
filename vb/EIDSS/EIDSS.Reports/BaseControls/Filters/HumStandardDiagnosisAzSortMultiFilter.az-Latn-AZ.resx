@@ -124,7 +124,4 @@
   <data name="lblcheckedComboBoxName.Text" xml:space="preserve">
     <value>Diaqnoz</value>
   </data>
-  <data name="DataQualityDiseaseFilter.Appearance.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
 </root>

@@ -10,22 +10,33 @@
         </td>
         <td class="largereport">
             @{
-                @(Html.Kendo().DatePicker()
+               @*TODO: Chrome date problem fix - start*@
+               @*old version@(Html.Kendo().DatePicker()
                         .Name("StartDate")
                         .Value(Model.StartDate)
                         .HtmlAttributes(new {@class = "requiredField"})
                         .Events(c => c.Change("paperForm.OnStartDateChangedEx"))
                         .Min(Model.MinStartDate ?? DateTime.MinValue)
                         .Max(Model.MaxStartDate ?? DateTime.MaxValue)
-                      )
-                }
+                      )*@
+                @(Html.Kendo().DatePicker()
+                        .Name("StartDate")
+                        .Value(Model.StartDate)
+                        .HtmlAttributes(new { @class = "requiredField", type = "text" })
+                        .Events(c => c.Change("paperForm.OnStartDateChangedEx"))
+                        .Min(Model.MinStartDate ?? DateTime.MinValue)
+                        .Max(Model.MaxStartDate ?? DateTime.MaxValue)
+                )
+               @*TODO: Chrome date problem fix - end*@
+            }
         </td>
         <td class="mediumreport">
             @Html.LabelFor(m => m.EndDate)
         </td>
         <td class="largereport">
             @{
-                @(
+                @*TODO: Chrome date problem fix - start*@
+                @*old version@(
                     Html.Kendo().DatePicker()
                         .Name("EndDate")
                         .Value(Model.EndDate)
@@ -33,7 +44,16 @@
                         .Events(c => c.Change("paperForm.OnEndDateChangedEx"))
                         .Min(Model.MinEndDate ?? DateTime.MinValue)
                         .Max(Model.MaxEndDate ?? DateTime.MaxValue)
+                      )*@
+                @(Html.Kendo().DatePicker()
+                        .Name("EndDate")
+                        .Value(Model.EndDate)
+                                .HtmlAttributes(new { @class = "requiredField", type = "text" })
+                        .Events(c => c.Change("paperForm.OnEndDateChangedEx"))
+                        .Min(Model.MinEndDate ?? DateTime.MinValue)
+                        .Max(Model.MaxEndDate ?? DateTime.MaxValue)
                       )
+               @*TODO: Chrome date problem fix - end*@
             }
         </td>
         

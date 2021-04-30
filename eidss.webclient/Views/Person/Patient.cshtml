@@ -10,7 +10,6 @@
         patient.pinButtonDuplicateEnabledOrDisabled(@(Model.IsFirstCreatedAndGGPin ? "false" : "true"));
     });
 </script>
-<script type="text/javascript" src="~/Scripts/Kendo/min/cultures/kendo.culture.th-TH.min.js"></script>
 
      
 <table class="level1">    
@@ -161,14 +160,7 @@
                 @Html.BvHiddenPersonalData(Model, m => m.datDateofBirth, "**.**.****")
             }
             else {
-                if (!eidss.model.Core.EidssSiteContext.Instance.IsThaiCustomization)
-                {
-                    @Html.BvDatebox(Model, m => m.datDateofBirth)
-                }
-                else
-                {
-                    @Html.BvDateboxDOB(Model, m => m.datDateofBirth, m => m.intPatientAgeFromCase)
-                }
+                @Html.BvDatebox(Model, m => m.datDateofBirth)
             }
         </td>
         @if((bool)ViewBag.IsAgeVisible)

@@ -12,9 +12,14 @@ namespace eidss.model.Avr.Chart
         public bool IsBold { get; set; }
         public bool IsItalic { get; set; }
         public bool IsUnderline { get; set; }
+
         [XmlIgnore]
-        public Color TextColor {get { return Color.FromArgb(TextColorArgb); }}
-        public int TextColorArgb{ get; set; }
+        public Color TextColor
+        {
+            get { return Color.FromArgb(TextColorArgb); }
+        }
+
+        public int TextColorArgb { get; set; }
 
         public FontProperties()
         {
@@ -28,9 +33,20 @@ namespace eidss.model.Avr.Chart
         {
             var fontFamily = new FontFamily(FontName);
             var fs = FontStyle.Regular;
-            if (IsBold) fs = fs | FontStyle.Bold;
-            if (IsItalic) fs = fs | FontStyle.Italic;
-            if (IsUnderline) fs = fs | FontStyle.Underline;
+            if (IsBold)
+            {
+                fs = fs | FontStyle.Bold;
+            }
+
+            if (IsItalic)
+            {
+                fs = fs | FontStyle.Italic;
+            }
+
+            if (IsUnderline)
+            {
+                fs = fs | FontStyle.Underline;
+            }
 
             var font = new Font(fontFamily, FontSize, fs);
             return font;

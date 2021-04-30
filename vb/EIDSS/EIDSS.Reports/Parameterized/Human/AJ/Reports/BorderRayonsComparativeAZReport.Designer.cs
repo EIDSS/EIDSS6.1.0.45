@@ -205,16 +205,19 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
             // 
             // xrTable4
             // 
+            resources.ApplyResources(this.xrTable4, "xrTable4");
             this.xrTable4.StylePriority.UseBorders = false;
             this.xrTable4.StylePriority.UseFont = false;
             this.xrTable4.StylePriority.UsePadding = false;
             // 
             // cellLanguage
             // 
+            resources.ApplyResources(this.cellLanguage, "cellLanguage");
             this.cellLanguage.StylePriority.UseTextAlignment = false;
             // 
             // lblReportName
             // 
+            resources.ApplyResources(this.lblReportName, "lblReportName");
             this.lblReportName.StylePriority.UseBorders = false;
             this.lblReportName.StylePriority.UseBorderWidth = false;
             this.lblReportName.StylePriority.UseFont = false;
@@ -222,6 +225,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
             // 
             // Detail
             // 
+            resources.ApplyResources(this.Detail, "Detail");
             this.Detail.StylePriority.UseFont = false;
             this.Detail.StylePriority.UsePadding = false;
             // 
@@ -233,11 +237,13 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
             // 
             // PageFooter
             // 
+            resources.ApplyResources(this.PageFooter, "PageFooter");
             this.PageFooter.StylePriority.UseBorders = false;
             // 
             // ReportHeader
             // 
             resources.ApplyResources(this.ReportHeader, "ReportHeader");
+            this.ReportHeader.Expanded = false;
             // 
             // xrPageInfo1
             // 
@@ -246,18 +252,29 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
             // 
             // cellReportHeader
             // 
+            resources.ApplyResources(this.cellReportHeader, "cellReportHeader");
             this.cellReportHeader.StylePriority.UseBorders = false;
             this.cellReportHeader.StylePriority.UseFont = false;
             this.cellReportHeader.StylePriority.UseTextAlignment = false;
             // 
             // cellBaseSite
             // 
+            resources.ApplyResources(this.cellBaseSite, "cellBaseSite");
             this.cellBaseSite.StylePriority.UseBorders = false;
             this.cellBaseSite.StylePriority.UseFont = false;
             this.cellBaseSite.StylePriority.UseTextAlignment = false;
             // 
+            // cellBaseCountry
+            // 
+            resources.ApplyResources(this.cellBaseCountry, "cellBaseCountry");
+            // 
+            // cellBaseLeftHeader
+            // 
+            resources.ApplyResources(this.cellBaseLeftHeader, "cellBaseLeftHeader");
+            // 
             // tableBaseHeader
             // 
+            resources.ApplyResources(this.tableBaseHeader, "tableBaseHeader");
             this.tableBaseHeader.StylePriority.UseBorders = false;
             this.tableBaseHeader.StylePriority.UseBorderWidth = false;
             this.tableBaseHeader.StylePriority.UseFont = false;
@@ -272,6 +289,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
             this.DetailReport.DataAdapter = this.m_Adapter;
             this.DetailReport.DataMember = "BorderRayonsTable";
             this.DetailReport.DataSource = this.m_DataSet;
+            resources.ApplyResources(this.DetailReport, "DetailReport");
             this.DetailReport.Level = 0;
             this.DetailReport.Name = "DetailReport";
             // 
@@ -315,158 +333,158 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
             this.Diagnosis11Cell,
             this.Diagnosis12Cell,
             this.TotalCell});
-            this.DetailRow.Name = "DetailRow";
             resources.ApplyResources(this.DetailRow, "DetailRow");
+            this.DetailRow.Name = "DetailRow";
             // 
             // NumberCell
             // 
+            resources.ApplyResources(this.NumberCell, "NumberCell");
             this.NumberCell.Name = "NumberCell";
             this.NumberCell.StylePriority.UseFont = false;
             this.NumberCell.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.NumberCell, "NumberCell");
             this.NumberCell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.NumberRayonCell_BeforePrint);
             // 
             // RayonCell
             // 
             this.RayonCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strRayonName")});
+            resources.ApplyResources(this.RayonCell, "RayonCell");
             this.RayonCell.Name = "RayonCell";
             this.RayonCell.StylePriority.UseFont = false;
             this.RayonCell.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.RayonCell, "RayonCell");
             this.RayonCell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.NumberRayonCell_BeforePrint);
             // 
             // CounterCell
             // 
             this.CounterCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.intCounter")});
-            this.CounterCell.Name = "CounterCell";
             resources.ApplyResources(this.CounterCell, "CounterCell");
+            this.CounterCell.Name = "CounterCell";
             this.CounterCell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.CounterCell_BeforePrint);
             // 
             // Diagnosis1Cell
             // 
             this.Diagnosis1Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_1", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis1Cell, "Diagnosis1Cell");
             this.Diagnosis1Cell.Name = "Diagnosis1Cell";
             this.Diagnosis1Cell.StylePriority.UseFont = false;
             this.Diagnosis1Cell.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.Diagnosis1Cell, "Diagnosis1Cell");
             this.Diagnosis1Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // Diagnosis2Cell
             // 
             this.Diagnosis2Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_2", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis2Cell, "Diagnosis2Cell");
             this.Diagnosis2Cell.Name = "Diagnosis2Cell";
             this.Diagnosis2Cell.StylePriority.UseFont = false;
             this.Diagnosis2Cell.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.Diagnosis2Cell, "Diagnosis2Cell");
             this.Diagnosis2Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // Diagnosis3Cell
             // 
             this.Diagnosis3Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_3", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis3Cell, "Diagnosis3Cell");
             this.Diagnosis3Cell.Name = "Diagnosis3Cell";
             this.Diagnosis3Cell.StylePriority.UseFont = false;
             this.Diagnosis3Cell.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.Diagnosis3Cell, "Diagnosis3Cell");
             this.Diagnosis3Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // Diagnosis4Cell
             // 
             this.Diagnosis4Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_4", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis4Cell, "Diagnosis4Cell");
             this.Diagnosis4Cell.Name = "Diagnosis4Cell";
             this.Diagnosis4Cell.StylePriority.UseFont = false;
             this.Diagnosis4Cell.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.Diagnosis4Cell, "Diagnosis4Cell");
             this.Diagnosis4Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // Diagnosis5Cell
             // 
             this.Diagnosis5Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_5", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis5Cell, "Diagnosis5Cell");
             this.Diagnosis5Cell.Name = "Diagnosis5Cell";
             this.Diagnosis5Cell.StylePriority.UseFont = false;
             this.Diagnosis5Cell.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.Diagnosis5Cell, "Diagnosis5Cell");
             this.Diagnosis5Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // Diagnosis6Cell
             // 
             this.Diagnosis6Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_6", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis6Cell, "Diagnosis6Cell");
             this.Diagnosis6Cell.Name = "Diagnosis6Cell";
             this.Diagnosis6Cell.StylePriority.UseFont = false;
             this.Diagnosis6Cell.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.Diagnosis6Cell, "Diagnosis6Cell");
             this.Diagnosis6Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // Diagnosis7Cell
             // 
             this.Diagnosis7Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_7", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis7Cell, "Diagnosis7Cell");
             this.Diagnosis7Cell.Name = "Diagnosis7Cell";
             this.Diagnosis7Cell.StylePriority.UseFont = false;
             this.Diagnosis7Cell.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.Diagnosis7Cell, "Diagnosis7Cell");
             this.Diagnosis7Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // Diagnosis8Cell
             // 
             this.Diagnosis8Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_8", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis8Cell, "Diagnosis8Cell");
             this.Diagnosis8Cell.Name = "Diagnosis8Cell";
             this.Diagnosis8Cell.StylePriority.UseFont = false;
-            resources.ApplyResources(this.Diagnosis8Cell, "Diagnosis8Cell");
             this.Diagnosis8Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // Diagnosis9Cell
             // 
             this.Diagnosis9Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_9", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis9Cell, "Diagnosis9Cell");
             this.Diagnosis9Cell.Name = "Diagnosis9Cell";
             this.Diagnosis9Cell.StylePriority.UseFont = false;
-            resources.ApplyResources(this.Diagnosis9Cell, "Diagnosis9Cell");
             this.Diagnosis9Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // Diagnosis10Cell
             // 
             this.Diagnosis10Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_10", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis10Cell, "Diagnosis10Cell");
             this.Diagnosis10Cell.Name = "Diagnosis10Cell";
             this.Diagnosis10Cell.StylePriority.UseFont = false;
-            resources.ApplyResources(this.Diagnosis10Cell, "Diagnosis10Cell");
             this.Diagnosis10Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // Diagnosis11Cell
             // 
             this.Diagnosis11Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_11", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis11Cell, "Diagnosis11Cell");
             this.Diagnosis11Cell.Name = "Diagnosis11Cell";
             this.Diagnosis11Cell.StylePriority.UseFont = false;
-            resources.ApplyResources(this.Diagnosis11Cell, "Diagnosis11Cell");
             this.Diagnosis11Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // Diagnosis12Cell
             // 
             this.Diagnosis12Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblValue_12", "{0:0.00}")});
+            resources.ApplyResources(this.Diagnosis12Cell, "Diagnosis12Cell");
             this.Diagnosis12Cell.Name = "Diagnosis12Cell";
             this.Diagnosis12Cell.StylePriority.UseFont = false;
-            resources.ApplyResources(this.Diagnosis12Cell, "Diagnosis12Cell");
             this.Diagnosis12Cell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // TotalCell
             // 
             this.TotalCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.dblTotal", "{0:0.00}")});
+            resources.ApplyResources(this.TotalCell, "TotalCell");
             this.TotalCell.Name = "TotalCell";
             this.TotalCell.StylePriority.UseFont = false;
             this.TotalCell.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.TotalCell, "TotalCell");
             this.TotalCell.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.DiagnosisCell_BeforePrint);
             // 
             // ComparativeReportHeader
@@ -528,134 +546,134 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
             this.HeaderDiagnosis11Cell,
             this.HeaderDiagnosis12Cell,
             this.HeaderTotal1Cell});
-            this.HeaderRow1.Name = "HeaderRow1";
             resources.ApplyResources(this.HeaderRow1, "HeaderRow1");
+            this.HeaderRow1.Name = "HeaderRow1";
             // 
             // HeaderNumberCell
             // 
-            this.HeaderNumberCell.Name = "HeaderNumberCell";
             resources.ApplyResources(this.HeaderNumberCell, "HeaderNumberCell");
+            this.HeaderNumberCell.Name = "HeaderNumberCell";
             // 
             // HeaderRayonCell
             // 
+            resources.ApplyResources(this.HeaderRayonCell, "HeaderRayonCell");
             this.HeaderRayonCell.Name = "HeaderRayonCell";
             this.HeaderRayonCell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderRayonCell, "HeaderRayonCell");
             // 
             // HeaderCounter1Cell
             // 
-            this.HeaderCounter1Cell.Name = "HeaderCounter1Cell";
             resources.ApplyResources(this.HeaderCounter1Cell, "HeaderCounter1Cell");
+            this.HeaderCounter1Cell.Name = "HeaderCounter1Cell";
             // 
             // HeaderDiagnosis1Cell
             // 
             this.HeaderDiagnosis1Cell.Angle = 90F;
             this.HeaderDiagnosis1Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_1")});
+            resources.ApplyResources(this.HeaderDiagnosis1Cell, "HeaderDiagnosis1Cell");
             this.HeaderDiagnosis1Cell.Name = "HeaderDiagnosis1Cell";
             this.HeaderDiagnosis1Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderDiagnosis1Cell, "HeaderDiagnosis1Cell");
             // 
             // HeaderDiagnosis2Cell
             // 
             this.HeaderDiagnosis2Cell.Angle = 90F;
             this.HeaderDiagnosis2Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_2")});
+            resources.ApplyResources(this.HeaderDiagnosis2Cell, "HeaderDiagnosis2Cell");
             this.HeaderDiagnosis2Cell.Name = "HeaderDiagnosis2Cell";
             this.HeaderDiagnosis2Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderDiagnosis2Cell, "HeaderDiagnosis2Cell");
             // 
             // HeaderDiagnosis3Cell
             // 
             this.HeaderDiagnosis3Cell.Angle = 90F;
             this.HeaderDiagnosis3Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_3")});
+            resources.ApplyResources(this.HeaderDiagnosis3Cell, "HeaderDiagnosis3Cell");
             this.HeaderDiagnosis3Cell.Name = "HeaderDiagnosis3Cell";
             this.HeaderDiagnosis3Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderDiagnosis3Cell, "HeaderDiagnosis3Cell");
             // 
             // HeaderDiagnosis4Cell
             // 
             this.HeaderDiagnosis4Cell.Angle = 90F;
             this.HeaderDiagnosis4Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_4")});
+            resources.ApplyResources(this.HeaderDiagnosis4Cell, "HeaderDiagnosis4Cell");
             this.HeaderDiagnosis4Cell.Name = "HeaderDiagnosis4Cell";
             this.HeaderDiagnosis4Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderDiagnosis4Cell, "HeaderDiagnosis4Cell");
             // 
             // HeaderDiagnosis5Cell
             // 
             this.HeaderDiagnosis5Cell.Angle = 90F;
             this.HeaderDiagnosis5Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_5")});
+            resources.ApplyResources(this.HeaderDiagnosis5Cell, "HeaderDiagnosis5Cell");
             this.HeaderDiagnosis5Cell.Name = "HeaderDiagnosis5Cell";
             this.HeaderDiagnosis5Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderDiagnosis5Cell, "HeaderDiagnosis5Cell");
             // 
             // HeaderDiagnosis6Cell
             // 
             this.HeaderDiagnosis6Cell.Angle = 90F;
             this.HeaderDiagnosis6Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_6")});
+            resources.ApplyResources(this.HeaderDiagnosis6Cell, "HeaderDiagnosis6Cell");
             this.HeaderDiagnosis6Cell.Name = "HeaderDiagnosis6Cell";
             this.HeaderDiagnosis6Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderDiagnosis6Cell, "HeaderDiagnosis6Cell");
             // 
             // HeaderDiagnosis7Cell
             // 
             this.HeaderDiagnosis7Cell.Angle = 90F;
             this.HeaderDiagnosis7Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_7")});
+            resources.ApplyResources(this.HeaderDiagnosis7Cell, "HeaderDiagnosis7Cell");
             this.HeaderDiagnosis7Cell.Name = "HeaderDiagnosis7Cell";
             this.HeaderDiagnosis7Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderDiagnosis7Cell, "HeaderDiagnosis7Cell");
             // 
             // HeaderDiagnosis8Cell
             // 
             this.HeaderDiagnosis8Cell.Angle = 90F;
             this.HeaderDiagnosis8Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_8")});
-            this.HeaderDiagnosis8Cell.Name = "HeaderDiagnosis8Cell";
             resources.ApplyResources(this.HeaderDiagnosis8Cell, "HeaderDiagnosis8Cell");
+            this.HeaderDiagnosis8Cell.Name = "HeaderDiagnosis8Cell";
             // 
             // HeaderDiagnosis9Cell
             // 
             this.HeaderDiagnosis9Cell.Angle = 90F;
             this.HeaderDiagnosis9Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_9")});
-            this.HeaderDiagnosis9Cell.Name = "HeaderDiagnosis9Cell";
             resources.ApplyResources(this.HeaderDiagnosis9Cell, "HeaderDiagnosis9Cell");
+            this.HeaderDiagnosis9Cell.Name = "HeaderDiagnosis9Cell";
             // 
             // HeaderDiagnosis10Cell
             // 
             this.HeaderDiagnosis10Cell.Angle = 90F;
             this.HeaderDiagnosis10Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_10")});
-            this.HeaderDiagnosis10Cell.Name = "HeaderDiagnosis10Cell";
             resources.ApplyResources(this.HeaderDiagnosis10Cell, "HeaderDiagnosis10Cell");
+            this.HeaderDiagnosis10Cell.Name = "HeaderDiagnosis10Cell";
             // 
             // HeaderDiagnosis11Cell
             // 
             this.HeaderDiagnosis11Cell.Angle = 90F;
             this.HeaderDiagnosis11Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_11")});
-            this.HeaderDiagnosis11Cell.Name = "HeaderDiagnosis11Cell";
             resources.ApplyResources(this.HeaderDiagnosis11Cell, "HeaderDiagnosis11Cell");
+            this.HeaderDiagnosis11Cell.Name = "HeaderDiagnosis11Cell";
             // 
             // HeaderDiagnosis12Cell
             // 
             this.HeaderDiagnosis12Cell.Angle = 90F;
             this.HeaderDiagnosis12Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strDiagnosis_12")});
-            this.HeaderDiagnosis12Cell.Name = "HeaderDiagnosis12Cell";
             resources.ApplyResources(this.HeaderDiagnosis12Cell, "HeaderDiagnosis12Cell");
+            this.HeaderDiagnosis12Cell.Name = "HeaderDiagnosis12Cell";
             // 
             // HeaderTotal1Cell
             // 
             this.HeaderTotal1Cell.Angle = 90F;
+            resources.ApplyResources(this.HeaderTotal1Cell, "HeaderTotal1Cell");
             this.HeaderTotal1Cell.Name = "HeaderTotal1Cell";
             this.HeaderTotal1Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderTotal1Cell, "HeaderTotal1Cell");
             // 
             // HeaderRow2
             // 
@@ -678,123 +696,123 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
             this.HeaderICD11Cell,
             this.HeaderICD12Cell,
             this.HeaderTotal2Cell});
+            resources.ApplyResources(this.HeaderRow2, "HeaderRow2");
             this.HeaderRow2.Name = "HeaderRow2";
             this.HeaderRow2.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderRow2, "HeaderRow2");
             // 
             // xrTableCell1
             // 
-            this.xrTableCell1.Name = "xrTableCell1";
             resources.ApplyResources(this.xrTableCell1, "xrTableCell1");
+            this.xrTableCell1.Name = "xrTableCell1";
             // 
             // HeaderICDCell
             // 
+            resources.ApplyResources(this.HeaderICDCell, "HeaderICDCell");
             this.HeaderICDCell.Name = "HeaderICDCell";
             this.HeaderICDCell.StylePriority.UsePadding = false;
             this.HeaderICDCell.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.HeaderICDCell, "HeaderICDCell");
             // 
             // HeaderCounter2Cell
             // 
-            this.HeaderCounter2Cell.Name = "HeaderCounter2Cell";
             resources.ApplyResources(this.HeaderCounter2Cell, "HeaderCounter2Cell");
+            this.HeaderCounter2Cell.Name = "HeaderCounter2Cell";
             // 
             // HeaderICD1Cell
             // 
             this.HeaderICD1Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_1")});
+            resources.ApplyResources(this.HeaderICD1Cell, "HeaderICD1Cell");
             this.HeaderICD1Cell.Name = "HeaderICD1Cell";
             this.HeaderICD1Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderICD1Cell, "HeaderICD1Cell");
             // 
             // HeaderICD2Cell
             // 
             this.HeaderICD2Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_2")});
+            resources.ApplyResources(this.HeaderICD2Cell, "HeaderICD2Cell");
             this.HeaderICD2Cell.Name = "HeaderICD2Cell";
             this.HeaderICD2Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderICD2Cell, "HeaderICD2Cell");
             // 
             // HeaderICD3Cell
             // 
             this.HeaderICD3Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_3")});
+            resources.ApplyResources(this.HeaderICD3Cell, "HeaderICD3Cell");
             this.HeaderICD3Cell.Name = "HeaderICD3Cell";
             this.HeaderICD3Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderICD3Cell, "HeaderICD3Cell");
             // 
             // HeaderICD4Cell
             // 
             this.HeaderICD4Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_4")});
+            resources.ApplyResources(this.HeaderICD4Cell, "HeaderICD4Cell");
             this.HeaderICD4Cell.Name = "HeaderICD4Cell";
             this.HeaderICD4Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderICD4Cell, "HeaderICD4Cell");
             // 
             // HeaderICD5Cell
             // 
             this.HeaderICD5Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_5")});
+            resources.ApplyResources(this.HeaderICD5Cell, "HeaderICD5Cell");
             this.HeaderICD5Cell.Name = "HeaderICD5Cell";
             this.HeaderICD5Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderICD5Cell, "HeaderICD5Cell");
             // 
             // HeaderICD6Cell
             // 
             this.HeaderICD6Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_6")});
+            resources.ApplyResources(this.HeaderICD6Cell, "HeaderICD6Cell");
             this.HeaderICD6Cell.Name = "HeaderICD6Cell";
             this.HeaderICD6Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderICD6Cell, "HeaderICD6Cell");
             // 
             // HeaderICD7Cell
             // 
             this.HeaderICD7Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_7")});
+            resources.ApplyResources(this.HeaderICD7Cell, "HeaderICD7Cell");
             this.HeaderICD7Cell.Name = "HeaderICD7Cell";
             this.HeaderICD7Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderICD7Cell, "HeaderICD7Cell");
             // 
             // HeaderICD8Cell
             // 
             this.HeaderICD8Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_8")});
-            this.HeaderICD8Cell.Name = "HeaderICD8Cell";
             resources.ApplyResources(this.HeaderICD8Cell, "HeaderICD8Cell");
+            this.HeaderICD8Cell.Name = "HeaderICD8Cell";
             // 
             // HeaderICD9Cell
             // 
             this.HeaderICD9Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_9")});
-            this.HeaderICD9Cell.Name = "HeaderICD9Cell";
             resources.ApplyResources(this.HeaderICD9Cell, "HeaderICD9Cell");
+            this.HeaderICD9Cell.Name = "HeaderICD9Cell";
             // 
             // HeaderICD10Cell
             // 
             this.HeaderICD10Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_10")});
-            this.HeaderICD10Cell.Name = "HeaderICD10Cell";
             resources.ApplyResources(this.HeaderICD10Cell, "HeaderICD10Cell");
+            this.HeaderICD10Cell.Name = "HeaderICD10Cell";
             // 
             // HeaderICD11Cell
             // 
             this.HeaderICD11Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_11")});
-            this.HeaderICD11Cell.Name = "HeaderICD11Cell";
             resources.ApplyResources(this.HeaderICD11Cell, "HeaderICD11Cell");
+            this.HeaderICD11Cell.Name = "HeaderICD11Cell";
             // 
             // HeaderICD12Cell
             // 
             this.HeaderICD12Cell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BorderRayonsTable.strIDCCode_12")});
-            this.HeaderICD12Cell.Name = "HeaderICD12Cell";
             resources.ApplyResources(this.HeaderICD12Cell, "HeaderICD12Cell");
+            this.HeaderICD12Cell.Name = "HeaderICD12Cell";
             // 
             // HeaderTotal2Cell
             // 
+            resources.ApplyResources(this.HeaderTotal2Cell, "HeaderTotal2Cell");
             this.HeaderTotal2Cell.Name = "HeaderTotal2Cell";
             this.HeaderTotal2Cell.StylePriority.UseBorders = false;
-            resources.ApplyResources(this.HeaderTotal2Cell, "HeaderTotal2Cell");
             // 
             // m_Adapter
             // 
@@ -1028,26 +1046,26 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
             this.OrganizationNameCell,
             this.xrTableCell4,
             this.DateTimeCell});
-            this.xrTableRow7.Name = "xrTableRow7";
             resources.ApplyResources(this.xrTableRow7, "xrTableRow7");
+            this.xrTableRow7.Name = "xrTableRow7";
             // 
             // OrganizationNameCell
             // 
             this.OrganizationNameCell.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "sprepGetBaseParameters.SiteName")});
-            this.OrganizationNameCell.Name = "OrganizationNameCell";
             resources.ApplyResources(this.OrganizationNameCell, "OrganizationNameCell");
+            this.OrganizationNameCell.Name = "OrganizationNameCell";
             // 
             // xrTableCell4
             // 
+            resources.ApplyResources(this.xrTableCell4, "xrTableCell4");
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
-            resources.ApplyResources(this.xrTableCell4, "xrTableCell4");
             // 
             // DateTimeCell
             // 
-            this.DateTimeCell.Name = "DateTimeCell";
             resources.ApplyResources(this.DateTimeCell, "DateTimeCell");
+            this.DateTimeCell.Name = "DateTimeCell";
             // 
             // GroupFooter1
             // 
@@ -1087,6 +1105,7 @@ namespace EIDSS.Reports.Parameterized.Human.AJ.Reports
             this.DetailReport,
             this.ReportFooter,
             this.GroupFooter1});
+            resources.ApplyResources(this, "$this");
             this.Version = "15.1";
             this.Controls.SetChildIndex(this.GroupFooter1, 0);
             this.Controls.SetChildIndex(this.ReportFooter, 0);

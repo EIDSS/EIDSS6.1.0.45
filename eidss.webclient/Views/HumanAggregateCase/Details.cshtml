@@ -26,9 +26,9 @@
 @Html.PopupMenu(eidss.model.Schema.HumanAggregateCase.Accessor.Instance(null), "SelectReport")
 
 @using (Html.BeginForm())
-{       
-    @Html.IdentificationAndHeartbeat("idfAggrCase", Model.idfAggrCase)   
-      
+{
+    @Html.IdentificationAndHeartbeat("idfAggrCase", Model.idfAggrCase)
+
     <div class="tabPanelContent bordered">
         @Html.Partial("../HumanAggregateCase/DetailsContent", Model)
     </div>    

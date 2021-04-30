@@ -236,7 +236,7 @@
             if (value != null) {
                 var culture = kendo.getCulture("");
                 if ((culture.name == "th-TH" || kendo.forceThaiDate) && !kendo.forceGrigDate) {
-                    if (value.getFullYear() > 2500) {
+                    if (value.getFullYear() > 2400) {
                         value.setFullYear(value.getFullYear() - 543);
                     }
                 }

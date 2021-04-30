@@ -174,12 +174,19 @@ namespace eidss.avr.PivotForm
 
         public void RefreshPivotData()
         {
-            if (!m_DenyPivotRefresh)
+            if (!m_DenyPivotRefresh && !SharedPresenter.ContextKeeper.ContainsContext(ContextValue.PivotSuppressRefreshing))
             {
                 using (CreateWaitDialog())
                 {
-                    pivotGrid.RefreshData();
+                    PivotGrid.RefreshData();
                 }
+            }
+        }
+        public void RefreshPivotDataWithoutWaitDialog()
+        {
+            if (!m_DenyPivotRefresh && !SharedPresenter.ContextKeeper.ContainsContext(ContextValue.PivotSuppressRefreshing))
+            {
+                PivotGrid.RefreshData();
             }
         }
 
@@ -853,7 +860,8 @@ namespace eidss.avr.PivotForm
                 return;
             }
             ClickOnFocusedCell(false);
-            PivotGrid.Refresh();
+        //    RefreshPivotDataWithoutWaitDialog();
+            
         }
 
         public void ClickOnFocusedCell(bool forceClick)

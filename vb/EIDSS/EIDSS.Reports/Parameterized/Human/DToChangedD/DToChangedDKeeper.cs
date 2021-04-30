@@ -9,6 +9,7 @@ using eidss.model.Reports.OperationContext;
 using EIDSS.Reports.BaseControls.Filters;
 using EIDSS.Reports.BaseControls.Keeper;
 using EIDSS.Reports.BaseControls.Report;
+using eidss.model.Resources;
 
 namespace EIDSS.Reports.Parameterized.Human.DToChangedD
 {
@@ -78,6 +79,7 @@ namespace EIDSS.Reports.Parameterized.Human.DToChangedD
             ConcordanceLabel.Text = m_Resources.GetString("ConcordanceLabel.Text");
             InitialDiagnosisLabel.Text = m_Resources.GetString("InitialDiagnosisLabel.Text");
             FinalDiagnosisLabel.Text = m_Resources.GetString("FinalDiagnosisLabel.Text");
+            regionFilter.Caption = EidssFields.Get("Form1KZRegion");
         }
 
         private void regionFilter_ValueChanged(object sender, SingleFilterEventArgs e)

@@ -25,7 +25,7 @@ namespace EIDSS.Reports.Document.Human.Aggregate
 
             ((AdmUnitReport) xrSubreportAdmUnit.ReportSource).SetParameters(lang, aggrXml, manager, archiveManager);
 
-            List<long> observations = AggregateHelper.GetObservationList(parameters, "@observationId");
+            List<long> observations = EIDSS.Reports.BaseControls.Aggregate.AggregateHelper.GetObservationList(parameters, "@observationId");
             FlexFactory.CreateHumanAggregateSummaryReport(FlexSubreport, observations, tableBaseHeader.Width);
 
             ReportRtlHelper.SetRTL(this);

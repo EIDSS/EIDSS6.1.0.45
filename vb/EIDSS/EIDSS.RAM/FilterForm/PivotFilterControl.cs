@@ -234,6 +234,10 @@ namespace eidss.avr.FilterForm
                     return "strSiteName";
                 case "AccessoryCode":
                     return "CodeName";
+                case "DistrictOnly":
+                    return "strDistrictExtendedName";
+                case "SubDistrictOnly":
+                    return "strDistrictExtendedName";
                 default:
                     return "name";
             }

@@ -117,6 +117,11 @@ namespace bv.common.Core
         /// </remarks>
         public static string Decrypt(string cipherText, string passPhrase, string saltValue, int passwordIterations, string initVector, int keySize)
         {
+            if (String.IsNullOrEmpty(cipherText))
+            {
+                return null;
+            }
+
             try
             {
                 byte[] initVectorBytes = Encoding.ASCII.GetBytes(initVector);
@@ -131,7 +136,7 @@ namespace bv.common.Core
                 ICryptoTransform decryptor = symmetricKey.CreateDecryptor(keyBytes, initVectorBytes);
                 var memoryStream = new MemoryStream(cipherTextBytes);
                 var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read);
-                var plainTextBytes = new byte[cipherTextBytes.Length - 1 + 1];
+                var plainTextBytes = new byte[cipherTextBytes.Length];
 
                 int decryptedByteCount = cryptoStream.Read(plainTextBytes, 0, plainTextBytes.Length);
 
