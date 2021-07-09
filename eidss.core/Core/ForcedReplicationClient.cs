@@ -45,7 +45,7 @@ namespace eidss.model.Core
             else
                 m_ClientID = clientID;
             if(credentials!=null)
-                DbManagerFactory.SetSqlFactory(credentials.ConnectionString);
+                DbManagerFactory.SetSqlFactory(credentials.ConnectionString, DatabaseType.Main, credentials.CommandTimeout);
             SubscribeToEvent((long) EventType.ForcedReplicationConfirmed);
             SubscribeToEvent((long) EventType.ForcedReplicationExpired);
 

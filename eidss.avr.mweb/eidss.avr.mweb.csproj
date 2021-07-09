@@ -252,10 +252,12 @@
     <Content Include="Content\Images\edit_readonly.png" />
     <Content Include="Content\Images\export_query_16x16.png" />
     <Content Include="Content\Images\Flags\ar-IQ.png" />
+    <Content Include="Content\Images\Flags\ar-JO.png" />
     <Content Include="Content\Images\Flags\az-Latn-AZ.png" />
     <Content Include="Content\Images\Flags\en-AZ-Eidss.png" />
     <Content Include="Content\Images\Flags\en-HY-Eidss.png" />
     <Content Include="Content\Images\Flags\en-IQ-Eidss.png" />
+    <Content Include="Content\Images\Flags\en-JO-Eidss.png" />
     <Content Include="Content\Images\Flags\en-KA-Eidss.png" />
     <Content Include="Content\Images\Flags\en-KZ-Eidss.png" />
     <Content Include="Content\Images\Flags\hy-AM.png" />

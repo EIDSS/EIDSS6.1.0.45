@@ -144,7 +144,17 @@ namespace eidss.webclient.ReportService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eidss.model.Reports.Common.LimBatchTestModel))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eidss.model.Reports.Common.AggregateModel))]
         byte[] ExportHumUrgentyNotificationUkraine(eidss.model.Reports.Common.BaseIdModel model);
-        
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IReportFacade/ExportVetUrgentNotificationJo", ReplyAction = "http://tempuri.org/IReportFacade/ExportVetUrgentNotificationJoResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eidss.model.Reports.Common.HumIdModel))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eidss.model.Reports.Common.AggregateActionsModel))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eidss.model.Reports.Common.VetIdModel))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eidss.model.Reports.Common.LimTestResultModel))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eidss.model.Reports.Common.LimTestModel))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eidss.model.Reports.Common.LimBatchTestModel))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eidss.model.Reports.Common.AggregateModel))]
+        byte[] ExportVetUrgentNotificationJo(eidss.model.Reports.Common.BaseIdModel model);
+
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationTanzania", ReplyAction="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationTanzaniaResponse")]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eidss.model.Reports.Common.HumIdModel))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(eidss.model.Reports.Common.AggregateActionsModel))]
@@ -622,6 +632,11 @@ namespace eidss.webclient.ReportService {
         
         public byte[] ExportHumUrgentyNotificationUkraine(eidss.model.Reports.Common.BaseIdModel model) {
             return base.Channel.ExportHumUrgentyNotificationUkraine(model);
+        }
+
+        public byte[] ExportVetUrgentNotificationJo(eidss.model.Reports.Common.BaseIdModel model)
+        {
+            return base.Channel.ExportVetUrgentNotificationJo(model);
         }
         
         public byte[] ExportHumUrgentyNotificationTanzania(eidss.model.Reports.Common.BaseIdModel model) {

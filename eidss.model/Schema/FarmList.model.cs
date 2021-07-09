@@ -27,7 +27,7 @@ using bv.model.Model.Handlers;
 using bv.model.Model.Validators;
 using eidss.model.Core;
 using eidss.model.Enums;
-using eidss.model.Helpers;
+		
 
 namespace eidss.model.Schema
 {
@@ -1482,9 +1482,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfFarm") ? " or " : " and ");
                         
                         if (filters.Operation("idfFarm", i) == "&")
-                          sql.AppendFormat("(isnull(fn_Farm_SelectList.idfFarm,0) {0} @idfFarm_{1} = @idfFarm_{1})", filters.Operation("idfFarm", i), i);
+                          sql.AppendFormat("(fn_Farm_SelectList.idfFarm {0} @idfFarm_{1} = @idfFarm_{1})", filters.Operation("idfFarm", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_Farm_SelectList.idfFarm,0) {0} @idfFarm_{1}", filters.Operation("idfFarm", i), i);
+                          sql.AppendFormat("fn_Farm_SelectList.idfFarm {0} @idfFarm_{1}", filters.Operation("idfFarm", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1555,9 +1555,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsOwnershipStructure") ? " or " : " and ");
                         
                         if (filters.Operation("idfsOwnershipStructure", i) == "&")
-                          sql.AppendFormat("(isnull(fn_Farm_SelectList.idfsOwnershipStructure,0) {0} @idfsOwnershipStructure_{1} = @idfsOwnershipStructure_{1})", filters.Operation("idfsOwnershipStructure", i), i);
+                          sql.AppendFormat("(fn_Farm_SelectList.idfsOwnershipStructure {0} @idfsOwnershipStructure_{1} = @idfsOwnershipStructure_{1})", filters.Operation("idfsOwnershipStructure", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_Farm_SelectList.idfsOwnershipStructure,0) {0} @idfsOwnershipStructure_{1}", filters.Operation("idfsOwnershipStructure", i), i);
+                          sql.AppendFormat("fn_Farm_SelectList.idfsOwnershipStructure {0} @idfsOwnershipStructure_{1}", filters.Operation("idfsOwnershipStructure", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1572,9 +1572,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsLivestockProductionType") ? " or " : " and ");
                         
                         if (filters.Operation("idfsLivestockProductionType", i) == "&")
-                          sql.AppendFormat("(isnull(fn_Farm_SelectList.idfsLivestockProductionType,0) {0} @idfsLivestockProductionType_{1} = @idfsLivestockProductionType_{1})", filters.Operation("idfsLivestockProductionType", i), i);
+                          sql.AppendFormat("(fn_Farm_SelectList.idfsLivestockProductionType {0} @idfsLivestockProductionType_{1} = @idfsLivestockProductionType_{1})", filters.Operation("idfsLivestockProductionType", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_Farm_SelectList.idfsLivestockProductionType,0) {0} @idfsLivestockProductionType_{1}", filters.Operation("idfsLivestockProductionType", i), i);
+                          sql.AppendFormat("fn_Farm_SelectList.idfsLivestockProductionType {0} @idfsLivestockProductionType_{1}", filters.Operation("idfsLivestockProductionType", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1589,9 +1589,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsCountry") ? " or " : " and ");
                         
                         if (filters.Operation("idfsCountry", i) == "&")
-                          sql.AppendFormat("(isnull(fn_Farm_SelectList.idfsCountry,0) {0} @idfsCountry_{1} = @idfsCountry_{1})", filters.Operation("idfsCountry", i), i);
+                          sql.AppendFormat("(fn_Farm_SelectList.idfsCountry {0} @idfsCountry_{1} = @idfsCountry_{1})", filters.Operation("idfsCountry", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_Farm_SelectList.idfsCountry,0) {0} @idfsCountry_{1}", filters.Operation("idfsCountry", i), i);
+                          sql.AppendFormat("fn_Farm_SelectList.idfsCountry {0} @idfsCountry_{1}", filters.Operation("idfsCountry", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1606,67 +1606,29 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsRegion") ? " or " : " and ");
                         
                         if (filters.Operation("idfsRegion", i) == "&")
-                          sql.AppendFormat("(isnull(fn_Farm_SelectList.idfsRegion,0) {0} @idfsRegion_{1} = @idfsRegion_{1})", filters.Operation("idfsRegion", i), i);
+                          sql.AppendFormat("(fn_Farm_SelectList.idfsRegion {0} @idfsRegion_{1} = @idfsRegion_{1})", filters.Operation("idfsRegion", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_Farm_SelectList.idfsRegion,0) {0} @idfsRegion_{1}", filters.Operation("idfsRegion", i), i);
+                          sql.AppendFormat("fn_Farm_SelectList.idfsRegion {0} @idfsRegion_{1}", filters.Operation("idfsRegion", i), i);
                             
                     }
                     sql.AppendFormat(")");
                 }
                   
-                if(EidssSiteContext.Instance.IsThaiCustomization)
+                if (filters.Contains("idfsRayon"))
                 {
-                    try
+                    sql.AppendFormat(" and (");
+                    for (int i = 0; i < filters.Count("idfsRayon"); i++)
                     {
-                        if (filters.Contains("idfsRayon"))
-                        {
-                            Int64 regionID = Convert.ToInt64(filters.Value("idfsRegion"));
-                            Int64 rayonID = Convert.ToInt64(filters.Value("idfsRayon"));
-                            string list = ThaiDistrictHelper.FilterThaiDistricts(manager, regionID, rayonID);
-
-                            sql.AppendFormat(" and (");
-                            sql.AppendFormat("((Cast(isnull(fn_Farm_SelectList.idfsRayon,0) as varchar(100)) in (select[Value] from fnsysSplitList(\'{0}\', 0, ','))))", list);
-                            sql.AppendFormat(")");
-                        }
+                        if (i > 0) 
+                          sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
+                        
+                        if (filters.Operation("idfsRayon", i) == "&")
+                          sql.AppendFormat("(fn_Farm_SelectList.idfsRayon {0} @idfsRayon_{1} = @idfsRayon_{1})", filters.Operation("idfsRayon", i), i);
+                        else
+                          sql.AppendFormat("fn_Farm_SelectList.idfsRayon {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
+                            
                     }
-                    catch (Exception e)
-                    {
-                        if (filters.Contains("idfsRayon"))
-                        {
-                            sql.AppendFormat(" and (");
-                            for (int i = 0; i < filters.Count("idfsRayon"); i++)
-                            {
-                                if (i > 0)
-                                    sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
-
-                                if (filters.Operation("idfsRayon", i) == "&")
-                                    sql.AppendFormat("(isnull(fn_Farm_SelectList.idfsRayon,0) {0} @idfsRayon_{1} = @idfsRayon_{1})", filters.Operation("idfsRayon", i), i);
-                                else
-                                    sql.AppendFormat("isnull(fn_Farm_SelectList.idfsRayon,0) {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
-
-                            }
-                            sql.AppendFormat(")");
-                        }
-                    }
-                }
-                else
-                {
-                    if (filters.Contains("idfsRayon"))
-                    {
-                        sql.AppendFormat(" and (");
-                        for (int i = 0; i < filters.Count("idfsRayon"); i++)
-                        {
-                            if (i > 0)
-                                sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
-
-                            if (filters.Operation("idfsRayon", i) == "&")
-                                sql.AppendFormat("(isnull(fn_Farm_SelectList.idfsRayon,0) {0} @idfsRayon_{1} = @idfsRayon_{1})", filters.Operation("idfsRayon", i), i);
-                            else
-                                sql.AppendFormat("isnull(fn_Farm_SelectList.idfsRayon,0) {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
-
-                        }
-                        sql.AppendFormat(")");
-                    }
+                    sql.AppendFormat(")");
                 }
                   
                 if (filters.Contains("idfsSettlement"))
@@ -1678,9 +1640,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsSettlement") ? " or " : " and ");
                         
                         if (filters.Operation("idfsSettlement", i) == "&")
-                          sql.AppendFormat("(isnull(fn_Farm_SelectList.idfsSettlement,0) {0} @idfsSettlement_{1} = @idfsSettlement_{1})", filters.Operation("idfsSettlement", i), i);
+                          sql.AppendFormat("(fn_Farm_SelectList.idfsSettlement {0} @idfsSettlement_{1} = @idfsSettlement_{1})", filters.Operation("idfsSettlement", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_Farm_SelectList.idfsSettlement,0) {0} @idfsSettlement_{1}", filters.Operation("idfsSettlement", i), i);
+                          sql.AppendFormat("fn_Farm_SelectList.idfsSettlement {0} @idfsSettlement_{1}", filters.Operation("idfsSettlement", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1807,9 +1769,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("intHACode") ? " or " : " and ");
                         
                         if (filters.Operation("intHACode", i) == "&")
-                          sql.AppendFormat("(isnull(fn_Farm_SelectList.intHACode,0) {0} @intHACode_{1} = @intHACode_{1})", filters.Operation("intHACode", i), i);
+                          sql.AppendFormat("(fn_Farm_SelectList.intHACode {0} @intHACode_{1} = @intHACode_{1})", filters.Operation("intHACode", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_Farm_SelectList.intHACode,0) {0} @intHACode_{1}", filters.Operation("intHACode", i), i);
+                          sql.AppendFormat("fn_Farm_SelectList.intHACode {0} @intHACode_{1}", filters.Operation("intHACode", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2802,7 +2764,7 @@ namespace eidss.model.Schema
                     "FarmOwner.strLastName",
                     null, null, c => false, false, SearchPanelLocation.Main, false, null, null, null, null, null, null,false
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!EidssSiteContext.Instance.IsIraqCustomization))())
                 SearchPanelMeta.Add(new SearchPanelMetaItem(
                     "strFirstName",
                     EditorType.Text,
@@ -2810,7 +2772,7 @@ namespace eidss.model.Schema
                     "FarmOwner.strFirstName",
                     null, null, c => false, false, SearchPanelLocation.Main, false, null, null, null, null, null, null,false
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!EidssSiteContext.Instance.IsIraqCustomization))())
                 SearchPanelMeta.Add(new SearchPanelMetaItem(
                     "strSecondName",
                     EditorType.Text,

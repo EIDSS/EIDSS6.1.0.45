@@ -25,8 +25,8 @@
         <item name="idfsSettlement" editor="Lookup" labelId="strTownOrVillage" isParam="true"
               lookupName="SettlementLookup" lookupType="SettlementLookup" lookupText="c.strSettlementName" lookupValue="c.idfsSettlement"/>
         <item name="strLastName" editor="Text" labelId="FarmOwner.strLastName" />
-        <item name="strFirstName" editor="Text" labelId="FarmOwner.strFirstName" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization"/>
-        <item name="strSecondName" editor="Text" labelId="FarmOwner.strSecondName" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization"/>
+        <item name="strFirstName" editor="Text" labelId="FarmOwner.strFirstName" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)"/>
+        <item name="strSecondName" editor="Text" labelId="FarmOwner.strSecondName" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)"/>
         <item name="intHACode" editor="Lookup" labelId="strFarmType" multiple="true" bitmask="true"
               lookupName="HACodeLookup" lookupType="HACodeLookup" lookupText="c.CodeName" lookupValue="c.intHACode"/>
 

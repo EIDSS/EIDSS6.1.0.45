@@ -168,6 +168,7 @@ namespace eidss.gis.Forms
                 //countryBox = GeometryTransform.TransformBox(countryBox, CoordinateSystems.WGS84,
                 //                               CoordinateSystems.SphericalMercatorCS);
                 mtFixedExtent.Extent = countryBox;
+                conn.Close();
             }
            
             mtFixedExtent.MapImage = m_mapImage;

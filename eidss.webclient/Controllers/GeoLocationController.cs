@@ -43,6 +43,7 @@ namespace eidss.webclient.Controllers
             return 0;
         }
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetFromMap(long idfGeoLocation, string strLatitude, string strLongitude)
         {
             //eidss.model.Schema.GeoLocation location = ModelStorage.Get(ModelUserContext.ClientID, idfGeoLocation, null) as eidss.model.Schema.GeoLocation;

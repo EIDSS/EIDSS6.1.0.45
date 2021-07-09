@@ -399,6 +399,7 @@
             this.SmallImages.Images.SetKeyName(98, "replicate_data_16x16.png");
             this.SmallImages.Images.SetKeyName(99, "aberration_report_16x16.png");
             this.SmallImages.Images.SetKeyName(100, "thailand_flag_16.png");
+            this.SmallImages.Images.SetKeyName(101, "JO-Jordan-Flag-icon-16.png");
             // 
             // BigImages
             // 
@@ -445,6 +446,7 @@
             this.BigImages.Images.SetKeyName(38, "bss_aggregate_list_32x32.png");
             this.BigImages.Images.SetKeyName(39, "AsSessionList_32x32.png");
             this.BigImages.Images.SetKeyName(40, "thailand_flag_32.png");
+            this.BigImages.Images.SetKeyName(41, "JO-Jordan-Flag-icon-32.png");
             // 
             // Timer1
             // 

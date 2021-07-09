@@ -39,6 +39,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         [CompressFilter]
         public ActionResult Details(FormCollection form)
         {
@@ -154,12 +155,14 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetSelectedOutbreak(string objectId, string idfsOutbreakPropertyName, string strOutbreakPropertyName, string selectedItemId)
         {
             return SetSelectedOutbreakWithIgnore(objectId, idfsOutbreakPropertyName, strOutbreakPropertyName, selectedItemId, 0);
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetSelectedOutbreakWithIgnore(string objectId, string idfsOutbreakPropertyName, string strOutbreakPropertyName, string selectedItemId, int ignoreErr)
         {
             long key = long.Parse(objectId);
@@ -222,6 +225,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetPrimaryCase(long objectId, long caseId)
         {
             //var rootObject = (Outbreak)ModelStorage.Get(ModelUserContext.ClientID, objectId, null);
@@ -246,6 +250,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult DeleteCase(long outbreakId, long caseId)
         {
             //var rootObject = (Outbreak)ModelStorage.Get(ModelUserContext.ClientID, outbreakId, null);
@@ -281,12 +286,14 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult AddCase(long outbreakId, long caseId)
         {
             return AddCaseWithIgnore(outbreakId, caseId, 0);
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult AddCaseWithIgnore(long outbreakId, long caseId, int ignoreErr)
         {
             //var rootObject = (Outbreak)ModelStorage.Get(ModelUserContext.ClientID, outbreakId, null);
@@ -348,6 +355,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetOutbreakNote(FormCollection form)
         {
             return PickerInternal<OutbreakNote.Accessor, OutbreakNote, Outbreak>(form, OutbreakNote.Accessor.Instance(null), null,

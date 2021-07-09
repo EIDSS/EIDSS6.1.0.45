@@ -771,6 +771,9 @@
   <data name="MenuIraq" xml:space="preserve">
     <value>อราบิค (อิรัก)</value>
   </data>
+  <data name="MenuJordan" xml:space="preserve">
+    <value>อราบิค (จอร์แดน)</value>
+  </data>
   <data name="MenuLaunchEpiInfo" xml:space="preserve">
     <value>ใช้งานข้อมูล EPI</value>
   </data>

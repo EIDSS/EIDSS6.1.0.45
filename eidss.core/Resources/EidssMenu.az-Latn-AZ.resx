@@ -651,6 +651,9 @@
   <data name="MenuIraq" xml:space="preserve">
     <value>Ərəb (&amp;İraq)</value>
   </data>
+  <data name="MenuJordan" xml:space="preserve">
+    <value>Ərəb (&amp;Jordan)</value>
+  </data>
   <data name="MenuDatabase" xml:space="preserve">
     <value>Məlumatlar bazası</value>
   </data>

@@ -22,7 +22,7 @@ namespace eidss.model.AVR.DataBase
             m_CommandTimeout = Config.GetIntSetting("AvrCommandTimeout", 2400);
         }
 
-        public static T GetInnerQueryResult<T>(DbManagerProxy manager, string queryString, string lang, Func<DbManager, T> commandExecutor)
+        public static T GetInnerQueryResult<T>(DbManagerProxy manager, string queryString, string lang, long? userId, Func<DbManager, T> commandExecutor)
         {
             Utils.CheckNotNull(manager, "manager");
             Utils.CheckNotNull(lang, "lang");
@@ -34,8 +34,16 @@ namespace eidss.model.AVR.DataBase
             {
                 manager.CommandTimeout = m_CommandTimeout;
                 manager.BeginTransaction(IsolationLevel.ReadUncommitted);
+
+                var param = new List<IDbDataParameter>();
+                param.Add(manager.Parameter("LangID", lang));
+                if (userId.HasValue)
+                    param.Add(manager.Parameter("UserID", userId.Value));
+                else
+                    param.Add(manager.Parameter("UserID", DBNull.Value));
+
                 DbManager command = manager.SetCommand(queryString,
-                    manager.Parameter("LangID", lang));
+                    param.ToArray());
                 T result = commandExecutor(command);
 
                 manager.CommitTransaction();
@@ -79,13 +87,25 @@ namespace eidss.model.AVR.DataBase
                     throw new AvrDbException(string.Format("Query function {0} should starts with 'fn'", queryFunctionName));
                 }
                 string queryViewName = "vw" + queryFunctionName.Remove(0, 2);
+                string userParamFunctionName = string.Format("fn{0}_for_user", queryViewName);
+                
                 string dropFunctionText = string.Format(dropFunctionFormat, queryFunctionName);
+                string dropUserParamFunctionText = string.Format(dropFunctionFormat, userParamFunctionName);
                 string dropViewText = string.Format(dropViewFormat, queryViewName);
-                string createFunctionText = GetQueryFunctionText(manager, queryFunctionName);
+
                 string createViewText = GetQueryFunctionText(manager, queryViewName);
+                string createUserParamFunctionText = GetQueryFunctionText(manager, userParamFunctionName);
+                string createFunctionText = GetQueryFunctionText(manager, queryFunctionName);
 
                 archiveManager.SetCommand(dropViewText).ExecuteNonQuery();
                 archiveManager.SetCommand(createViewText).ExecuteNonQuery();
+
+                archiveManager.SetCommand(dropUserParamFunctionText).ExecuteNonQuery();
+                if (!string.IsNullOrEmpty(createUserParamFunctionText))
+                {
+                    archiveManager.SetCommand(createUserParamFunctionText).ExecuteNonQuery();
+                }
+
                 archiveManager.SetCommand(dropFunctionText).ExecuteNonQuery();
                 if (!string.IsNullOrEmpty(createFunctionText))
                 {
@@ -131,7 +151,7 @@ namespace eidss.model.AVR.DataBase
                 }
 
                 string functionName = GetQueryFunctionName(manager, queryId);
-                queryText = String.Format("select {0} from {1}(@LangID) ", fieldList, functionName);
+                queryText = String.Format("select {0} from {1}(@LangID, @UserID) ", fieldList, functionName);
             }
             return queryText;
         }

@@ -232,6 +232,9 @@
     <EmbeddedResource Include="FreezerTree.ar-IQ.resx">
       <DependentUpon>FreezerTree.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FreezerTree.ar-JO.resx">
+      <DependentUpon>FreezerTree.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FreezerTree.az-Latn-AZ.resx">
       <DependentUpon>FreezerTree.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -264,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="licenses.licx" />
     <EmbeddedResource Include="ObjectAccessDetail.ar-IQ.resx">
+      <DependentUpon>ObjectAccessDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectAccessDetail.ar-JO.resx">
       <DependentUpon>ObjectAccessDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ObjectAccessDetail.az-Latn-AZ.resx">
@@ -299,6 +305,9 @@
     <EmbeddedResource Include="ObjectAccessPanel.ar-IQ.resx">
       <DependentUpon>ObjectAccessPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ObjectAccessPanel.ar-JO.resx">
+      <DependentUpon>ObjectAccessPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ObjectAccessPanel.az-Latn-AZ.resx">
       <DependentUpon>ObjectAccessPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -332,6 +341,9 @@
     <EmbeddedResource Include="ObjectTypeDetail.ar-IQ.resx">
       <DependentUpon>ObjectTypeDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ObjectTypeDetail.ar-JO.resx">
+      <DependentUpon>ObjectTypeDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ObjectTypeDetail.az-Latn-AZ.resx">
       <DependentUpon>ObjectTypeDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -363,6 +375,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ObjectTypeList.ar-IQ.resx">
+      <DependentUpon>ObjectTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectTypeList.ar-JO.resx">
       <DependentUpon>ObjectTypeList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ObjectTypeList.az-Latn-AZ.resx">

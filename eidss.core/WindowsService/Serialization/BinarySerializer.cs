@@ -36,7 +36,7 @@ namespace eidss.model.WindowsService.Serialization
         #region Serialize from DB Command
 
         public static QueryTableModel SerializeFromCommand
-            (DbManager command, long queryId, string lang, bool isArchive, int maxPacketRows = 0)
+            (DbManager command, long queryId, string lang, bool isArchive, int maxPacketRows = 0, long? userId = null)
         {
             if (maxPacketRows <= 0)
             {
@@ -53,7 +53,7 @@ namespace eidss.model.WindowsService.Serialization
 
                 List<BaseColumnModel> columnModels = GetSchemaColumnModels(reader.GetSchemaTable());
 
-                var result = new QueryTableModel(queryId, lang) {UseArchivedData = isArchive};
+                var result = new QueryTableModel(queryId, lang, userId) {UseArchivedData = isArchive};
 
                 QueryTablePacketDTO packet = SerializeBodyPacket(reader, columnModels, isArchive, maxPacketRows);
                 while (packet.RowCount != 0)

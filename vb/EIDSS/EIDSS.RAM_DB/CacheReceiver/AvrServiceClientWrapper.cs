@@ -35,9 +35,9 @@ namespace eidss.avr.db.CacheReceiver
             return m_Client.ExportChartToJpg(zippedData);
         }
 
-        public ViewDTO GetCachedView(string sessionId, long layoutId, string lang)
+        public ViewDTO GetCachedView(string sessionId, long layoutId, string lang, long? userId = null)
         {
-            return m_Client.GetCachedView(sessionId, layoutId, lang);
+            return m_Client.GetCachedView(sessionId, layoutId, lang, userId);
         }
 
         public void InvalidateViewCache(long layoutId)
@@ -45,35 +45,35 @@ namespace eidss.avr.db.CacheReceiver
            m_Client.InvalidateViewCache(layoutId);
         }
 
-        public QueryTableHeaderDTO GetCachedQueryTableHeader(long queryId, string lang, bool isArchive)
+        public QueryTableHeaderDTO GetCachedQueryTableHeader(long queryId, string lang, bool isArchive, long? userId = null)
         {
-            return m_Client.GetCachedQueryTableHeader(queryId, lang, isArchive);
+            return m_Client.GetCachedQueryTableHeader(queryId, lang, isArchive, userId);
         }
 
 
-        public bool DoesCachedQueryExists(long queryId, string lang, bool isArchive)
+        public bool DoesCachedQueryExists(long queryId, string lang, bool isArchive, long? userId = null)
         {
-            return m_Client.DoesCachedQueryExists(queryId, lang, isArchive);
+            return m_Client.DoesCachedQueryExists(queryId, lang, isArchive, userId);
         }
 
-        public void RefreshCachedQueryTableByScheduler(long queryId, string lang, bool isArchive)
+        public void RefreshCachedQueryTableByScheduler(long queryId, string lang, bool isArchive, long? userId = null)
         {
             throw new InvalidOperationException(MethodFromSchedulerOnly);
         }
 
-        public QueryTableHeaderDTO GetConcreteCachedQueryTableHeader(long queryCacheId, long queryId, string lang, bool isArchive)
+        public QueryTableHeaderDTO GetConcreteCachedQueryTableHeader(long queryCacheId, long queryId, string lang, bool isArchive, long? userId = null)
         {
-            return m_Client.GetConcreteCachedQueryTableHeader(queryCacheId, queryId, lang, isArchive);
+            return m_Client.GetConcreteCachedQueryTableHeader(queryCacheId, queryId, lang, isArchive, userId);
         }
 
-        public QueryTablePacketDTO GetCachedQueryTablePacket(long queryCacheId, int packetNumber, int totalPacketCount)
+        public QueryTablePacketDTO GetCachedQueryTablePacket(long queryCacheId, int packetNumber, int totalPacketCount, long? userId = null)
         {
-            return m_Client.GetCachedQueryTablePacket(queryCacheId, packetNumber, totalPacketCount);
+            return m_Client.GetCachedQueryTablePacket(queryCacheId, packetNumber, totalPacketCount, userId);
         }
 
-        public void InvalidateQueryCacheForLanguage(long queryId, string lang)
+        public void InvalidateQueryCacheForLanguage(long queryId, string lang, long? userId = null)
         {
-            m_Client.InvalidateQueryCacheForLanguage(queryId, lang);
+            m_Client.InvalidateQueryCacheForLanguage(queryId, lang, userId);
         }
 
         public void InvalidateQueryCache(long queryId)
@@ -81,12 +81,22 @@ namespace eidss.avr.db.CacheReceiver
             m_Client.InvalidateQueryCache(queryId);
         }
 
-        public void DeleteQueryCacheForLanguage(long queryId, string lang, bool leaveLastRecord)
+        public void DeleteQueryCacheForLanguage(long queryId, string lang, bool leaveLastRecord, long? userId = null)
         {
             throw new InvalidOperationException(MethodFromSchedulerOnly);
         }
 
-        public DateTime? GetsQueryCacheUserRequestDate(long queryId)
+        public DateTime? GetsQueryCacheUserRequestDate(long queryId, long? userId = null)
+        {
+            throw new InvalidOperationException(MethodFromSchedulerOnly);
+        }
+
+        public List<long?> GetQueryCacheValidUsers(long queryId, DateTime? requestedLaterThanDate)
+        {
+            throw new InvalidOperationException(MethodFromSchedulerOnly);
+        }
+
+        public List<long> GetQueryCacheInvalidUsers(long queryId, DateTime requestedLaterThanDate)
         {
             throw new InvalidOperationException(MethodFromSchedulerOnly);
         }
@@ -101,9 +111,9 @@ namespace eidss.avr.db.CacheReceiver
             return m_Client.GetDatabaseName();
         }
 
-        public DateTime GetQueryRefreshDateTime(long queryId, string lang)
+        public DateTime GetQueryRefreshDateTime(long queryId, string lang, long? userId = null)
         {
-            return m_Client.GetQueryRefreshDateTime(queryId, lang);
+            return m_Client.GetQueryRefreshDateTime(queryId, lang, userId);
         }
 
         public List<long> GetQueryIdList()

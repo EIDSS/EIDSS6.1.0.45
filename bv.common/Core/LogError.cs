@@ -12,6 +12,7 @@ namespace bv.common.Core
         public static void Log(string filenamePrefix, Exception ex, Action<StreamWriter> callback = null, string formatFileName = null)
         {
             string path = Config.GetSetting("ErrorLogPath");
+            var exTime = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff");
             if (!String.IsNullOrEmpty(path))
             {
                 if (!Directory.Exists(path))
@@ -37,7 +38,19 @@ namespace bv.common.Core
                         }
                         if (ex != null)
                         {
-                            stream.Write(String.Format("{0} {1}\r\n {2}\r\n", DateTime.Now.ToString("MM/dd/yyyy hh:mm"), ex.Message, ex.StackTrace));
+                            var exMessage = ex.Message;
+                            var innerEx = ex.InnerException;
+                            var deep = 1;
+                            while ((deep < 5) && (innerEx != null))
+                            {
+                                if (!string.IsNullOrEmpty(innerEx.Message))
+                                {
+                                    exMessage = string.Format("{0}\r\n {1}", exMessage, innerEx.Message);
+                                }
+                                innerEx = innerEx.InnerException;
+                                deep++;
+                            }
+                            stream.Write(String.Format("{0} {1}\r\n {2}\r\n", exTime/*DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff")*/, exMessage/*ex.Message*/, ex.StackTrace));
                             stream.WriteLine("--------------------------------------------------\r\n");
                         }
                         stream.Flush();
@@ -48,5 +61,6 @@ namespace bv.common.Core
                 }
             }
         }
+
     }
 }

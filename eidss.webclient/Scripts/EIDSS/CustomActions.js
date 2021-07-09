@@ -40,6 +40,10 @@ function EmergencyNotificationUkraineReport() {
     humanCase.onENDReportClick();
 }
 
+function UrgentNotificationReportJo() {
+    vetCase.onUNRReportClick();
+}
+
 function EmergencyNotificationTanzaniaReport() {
     humanCase.onENTReportClick();
 }

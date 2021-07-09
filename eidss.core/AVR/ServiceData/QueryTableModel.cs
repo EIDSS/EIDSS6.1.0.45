@@ -4,10 +4,11 @@ namespace eidss.model.AVR.ServiceData
 {
     public class QueryTableModel
     {
-        public QueryTableModel(long queryId, string language)
+        public QueryTableModel(long queryId, string language, long? userId = null)
         {
             QueryId = queryId;
             Language = language;
+            UserId = userId;
             Header = new QueryTablePacketDTO();
             BodyPackets = new List<QueryTablePacketDTO>();
         }
@@ -17,5 +18,6 @@ namespace eidss.model.AVR.ServiceData
         public long QueryId { get; set; }
         public string Language { get; set; }
         public bool UseArchivedData { get; set; }
+        public long? UserId { get; set; }
     }
 }

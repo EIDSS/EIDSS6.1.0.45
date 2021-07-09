@@ -176,6 +176,10 @@
       <DependentUpon>WhoExportMasterDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="WhoExportMasterDetail.ar-JO.resx">
+      <DependentUpon>WhoExportMasterDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="WhoExportMasterDetail.az-latn-az.resx">
       <DependentUpon>WhoExportMasterDetail.cs</DependentUpon>
       <SubType>Designer</SubType>

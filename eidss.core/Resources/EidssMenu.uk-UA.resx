@@ -795,6 +795,9 @@
   <data name="MenuIraq" xml:space="preserve">
     <value>Арабська (Ірак)</value>
   </data>
+  <data name="MenuJordan" xml:space="preserve">
+    <value>Арабська (Йорданія)</value>
+  </data>
   <data name="MenuLaos" xml:space="preserve">
     <value>Лаос</value>
   </data>
@@ -887,5 +890,8 @@
   </data>
   <data name="btUkraineNotification" xml:space="preserve">
     <value>Термінове сповіщення Україна</value>
+  </data>
+  <data name="MenuUploadEhsFile" xml:space="preserve">
+    <value>eHealth Імпорт</value>
   </data>
 </root>

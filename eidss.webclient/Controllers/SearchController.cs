@@ -34,13 +34,23 @@ namespace eidss.webclient.Controllers
         public ActionResult GetLookupSourceNew(string modelGuid, string fieldName, string parameterName = null, long? parameterValue = null,
              string initValue = null)
         {
-            //var model = ModelStorage.Get(ModelUserContext.ClientID, 0, modelGuid) as SearchPanelModel;
-            return ObjectStorage.Using<SearchPanelModel, ActionResult>(model =>
-                {
-                    var lookup = model.SearchPanelItems.Single(x => x.Name == fieldName && x.Location != SearchPanelLocation.Combobox);
-                    var data = SearchPanelDataExtractor.GetLookup(model.ResultObjectInstance, lookup, parameterName, parameterValue, initValue);
-                    return Json(data, JsonRequestBehavior.AllowGet);
-                }, ModelUserContext.ClientID, 0, modelGuid);
+
+            List<SelectListItem> data = null;
+            if (!ObjectStorage.Contains(ModelUserContext.ClientID, 0, modelGuid))
+            {
+                data = new List<SelectListItem>();
+                return new JsonResult { Data = data, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+            }
+            else
+            {
+                //var model = ModelStorage.Get(ModelUserContext.ClientID, 0, modelGuid) as SearchPanelModel;
+                return ObjectStorage.Using<SearchPanelModel, ActionResult>(model =>
+                    {
+                        var lookup = model.SearchPanelItems.Single(x => x.Name == fieldName && x.Location != SearchPanelLocation.Combobox);
+                        data = SearchPanelDataExtractor.GetLookup(model.ResultObjectInstance, lookup, parameterName, parameterValue, initValue);
+                        return Json(data, JsonRequestBehavior.AllowGet);
+                    }, ModelUserContext.ClientID, 0, modelGuid);
+            }
         }
     }
 }

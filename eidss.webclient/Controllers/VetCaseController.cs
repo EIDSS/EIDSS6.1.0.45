@@ -58,6 +58,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         [CompressFilter]
         public ActionResult Details(FormCollection form)
         {
@@ -91,6 +92,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult StoreCase(FormCollection form)
         {
             var key = long.Parse(form["idfCase"]);
@@ -202,6 +204,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult CreateHerdOrFlock(long key, string listName, bool isFlock = false)
         {
             string errorMsg = string.Empty;
@@ -253,6 +256,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SpeciesDetail(long idfCase, long? idfSpecies, string gridName, FormCollection form)
         {
             bool bEdit = false;
@@ -277,6 +281,25 @@ namespace eidss.webclient.Controllers
                     },
                 null
                 );
+        }
+
+        [HttpGet]
+        public ActionResult UrgentNotificationReportJo(long id)
+        {
+            try
+            {
+                byte[] report;
+                using (var wrapper = new ReportClientWrapper())
+                {
+                    var model = new BaseIdModel(ModelUserContext.CurrentLanguage, id, ModelUserContext.Instance.IsArchiveMode);
+                    report = wrapper.Client.ExportVetUrgentNotificationJo(model);
+                }
+                return ReportResponse(report, "UrgentNotificationReportJo.pdf");
+            }
+            catch
+            {
+                return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = null };
+            }
         }
 
         [HttpGet]

@@ -639,6 +639,9 @@
   <data name="MenuIraq" xml:space="preserve">
     <value>Արաբերեն (&amp;Իրաք)</value>
   </data>
+  <data name="MenuJordan" xml:space="preserve">
+    <value>Արաբերեն (&amp;Հորդանան)</value>
+  </data>
   <data name="MenuDatabase" xml:space="preserve">
     <value>Տվյալների բազա</value>
   </data>

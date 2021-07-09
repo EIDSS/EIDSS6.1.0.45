@@ -34,7 +34,7 @@ namespace eidss.openapi.web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             var connectionCredentials = new ConnectionCredentials();
-            DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString);
+            DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString, DatabaseType.Main, connectionCredentials.CommandTimeout);
             EidssUserContext.Init();
 
             log4net.Config.XmlConfigurator.Configure();

@@ -554,15 +554,24 @@
                 </run>
               </action>
 
-            <action name="TestsReport" type="Action">
-              <visual panel="ContextMenuAdditional">
-                <regular caption="titleLabTestReport" icon="" tooltip=""/>
-              </visual>
-              <run>
-                <preUI webType="JScript" methodName="vetCase.TestsReportRun"/>
-              </run>
-            </action>
-              
+              <action name="TestsReport" type="Action">
+                <visual panel="ContextMenuAdditional">
+                  <regular caption="titleLabTestReport" icon="" tooltip=""/>
+                </visual>
+                <run>
+                  <preUI webType="JScript" methodName="vetCase.TestsReportRun"/>
+                </run>
+              </action>
+              <action name="UrgentNotificationReportJo" type="Action">
+                <visual panel="ContextMenu" visiblePredicate="(o1, o2, p, r) => (o1 as VetCase).IsLiveStock &amp;&amp;  eidss.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed(&quot;VetUrgentNotificationJo&quot;)">
+                  <regular caption="titleUrgentNotificationReportJo" icon="" tooltip=""/>
+                </visual>
+                <run>
+                  <preUI webType="JScript"/>
+                </run>
+              </action>
+
+
             </actions>
         </table>
     </tables>

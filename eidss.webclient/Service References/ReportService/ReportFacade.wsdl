@@ -621,6 +621,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationUkraine" message="tns:IReportFacade_ExportHumUrgentyNotificationUkraine_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationUkraineResponse" message="tns:IReportFacade_ExportHumUrgentyNotificationUkraine_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="ExportVetUrgentNotificationJo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReportFacade/ExportVetUrgentNotificationJo" message="tns:IReportFacade_ExportVetUrgentNotificationJo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReportFacade/ExportVetUrgentNotificationJoResponse" message="tns:IReportFacade_ExportVetUrgentNotificationJo_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="ExportHumUrgentyNotificationTanzania">
       <wsdl:input wsaw:Action="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationTanzania" message="tns:IReportFacade_ExportHumUrgentyNotificationTanzania_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationTanzaniaResponse" message="tns:IReportFacade_ExportHumUrgentyNotificationTanzania_OutputMessage" />
@@ -1035,6 +1039,15 @@
     </wsdl:operation>
     <wsdl:operation name="ExportHumUrgentyNotificationUkraine">
       <soap:operation soapAction="http://tempuri.org/IReportFacade/ExportHumUrgentyNotificationUkraine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportVetUrgentNotificationJo">
+      <soap:operation soapAction="http://tempuri.org/IReportFacade/ExportVetUrgentNotificationJo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

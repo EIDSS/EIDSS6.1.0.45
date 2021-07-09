@@ -38,6 +38,7 @@ namespace eidss.webclient.Controllers
                         SharpMap.Geometries.Point center_point = feature.GetBoundingBox().GetCentroid();
                         llon = center_point.X;
                         llat = center_point.Y;
+                        sqlConnection.Close();
                     }
                     catch (System.Exception) {}
                 }

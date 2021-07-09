@@ -236,8 +236,10 @@ namespace eidss.webclient.Utils
                 stl = "display: none;";
             }
             var bIsAutoTestingVersion = Config.GetBoolSetting("AutoTestingVersion");
+            var objValue = bIsAutoTestingVersion ? obj.GetValue(bindToProp) : null;
+            var strValue = objValue == null ? string.Empty : objValue.ToString();
             var htmlAttributes = bIsAutoTestingVersion
-                ? (object) new { @class = cls, style = stl, bvid = obj.ObjectName + "." + bindToProp }
+                ? (object)new { @class = cls, style = stl, bvid = obj.ObjectName + "." + bindToProp, value = strValue }
                 : new { @class = cls, style = stl };
             //if (obj.IsHiddenPersonalData(bindToProp))
             //{                

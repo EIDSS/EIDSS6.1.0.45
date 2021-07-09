@@ -968,6 +968,9 @@
     <EmbeddedResource Include="ActiveSurveillance\AsCampaignListPanel.ar-IQ.resx">
       <DependentUpon>AsCampaignListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ActiveSurveillance\AsCampaignListPanel.ar-JO.resx">
+      <DependentUpon>AsCampaignListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActiveSurveillance\AsCampaignListPanel.az-Latn-AZ.resx">
       <DependentUpon>AsCampaignListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -993,6 +996,9 @@
       <DependentUpon>AsCampaignListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActiveSurveillance\AsSessionListPanel.ar-IQ.resx">
+      <DependentUpon>AsSessionListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveSurveillance\AsSessionListPanel.ar-JO.resx">
       <DependentUpon>AsSessionListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActiveSurveillance\AsSessionListPanel.az-Latn-AZ.resx">
@@ -1025,6 +1031,9 @@
     <EmbeddedResource Include="Administration\CaseClassificationMasterDetail.ar-IQ.resx">
       <DependentUpon>CaseClassificationMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\CaseClassificationMasterDetail.ar-JO.resx">
+      <DependentUpon>CaseClassificationMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\CaseClassificationMasterDetail.az-latn-az.resx">
       <DependentUpon>CaseClassificationMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -1055,6 +1064,9 @@
     <EmbeddedResource Include="Administration\CustomReportRowsMasterDetail.ar-IQ.resx">
       <DependentUpon>CustomReportRowsMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\CustomReportRowsMasterDetail.ar-JO.resx">
+      <DependentUpon>CustomReportRowsMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\CustomReportRowsMasterDetail.az-latn-az.resx">
       <DependentUpon>CustomReportRowsMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -1082,6 +1094,9 @@
     <EmbeddedResource Include="Administration\DAG2SAGMasterDetail.ar-IQ.resx">
       <DependentUpon>DAG2SAGMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\DAG2SAGMasterDetail.ar-JO.resx">
+      <DependentUpon>DAG2SAGMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\DAG2SAGMasterDetail.th-TH.resx">
       <DependentUpon>DAG2SAGMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -1091,10 +1106,16 @@
     <EmbeddedResource Include="Administration\Diagnosis2DiagnosisAgeGroupMasterDetail.ar-IQ.resx">
       <DependentUpon>Diagnosis2DiagnosisAgeGroupMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Diagnosis2DiagnosisAgeGroupMasterDetail.ar-JO.resx">
+      <DependentUpon>Diagnosis2DiagnosisAgeGroupMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\Diagnosis2DiagnosisAgeGroupMasterDetail.th-TH.resx">
       <DependentUpon>Diagnosis2DiagnosisAgeGroupMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\Diagnosis2DiagnosisGroupMasterDetail.ar-IQ.resx">
+      <DependentUpon>Diagnosis2DiagnosisGroupMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Diagnosis2DiagnosisGroupMasterDetail.ar-JO.resx">
       <DependentUpon>Diagnosis2DiagnosisGroupMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\Diagnosis2DiagnosisGroupMasterDetail.th-TH.resx">
@@ -1106,10 +1127,16 @@
     <EmbeddedResource Include="Administration\DiagnosisAgeGroupMasterDetail.ar-IQ.resx">
       <DependentUpon>DiagnosisAgeGroupMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\DiagnosisAgeGroupMasterDetail.ar-JO.resx">
+      <DependentUpon>DiagnosisAgeGroupMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\DiagnosisAgeGroupMasterDetail.th-TH.resx">
       <DependentUpon>DiagnosisAgeGroupMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\LoginInfoDetail.ar-IQ.resx">
+      <DependentUpon>LoginInfoDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\LoginInfoDetail.ar-JO.resx">
       <DependentUpon>LoginInfoDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\LoginInfoDetail.th-TH.resx">
@@ -1119,6 +1146,9 @@
       <DependentUpon>OrganizationListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\PersonDetailPanel.ar-IQ.resx">
+      <DependentUpon>PersonDetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\PersonDetailPanel.ar-JO.resx">
       <DependentUpon>PersonDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\PersonDetailPanel.th-TH.resx">
@@ -1131,6 +1161,9 @@
       <DependentUpon>ReportDiagnosesGroup2DiagnosisDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\ReportDiagnosesGroup2DiagnosisMasterDetail.ar-IQ.resx">
+      <DependentUpon>ReportDiagnosesGroup2DiagnosisMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\ReportDiagnosesGroup2DiagnosisMasterDetail.ar-JO.resx">
       <DependentUpon>ReportDiagnosesGroup2DiagnosisMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\ReportDiagnosesGroup2DiagnosisMasterDetail.az-latn-az.resx">
@@ -1161,6 +1194,9 @@
       <DependentUpon>ReportDiagnosesGroupDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\ReportDiagnosesGroupMasterDetail.ar-IQ.resx">
+      <DependentUpon>ReportDiagnosesGroupMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\ReportDiagnosesGroupMasterDetail.ar-JO.resx">
       <DependentUpon>ReportDiagnosesGroupMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\ReportDiagnosesGroupMasterDetail.az-latn-az.resx">
@@ -1286,6 +1322,9 @@
     <EmbeddedResource Include="Administration\DataArchiveSettings.ar-IQ.resx">
       <DependentUpon>DataArchiveSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\DataArchiveSettings.ar-JO.resx">
+      <DependentUpon>DataArchiveSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\DataArchiveSettings.az-latn-az.resx">
       <DependentUpon>DataArchiveSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -1305,6 +1344,9 @@
       <DependentUpon>DataArchiveSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\Diagnosis2PensideTestMasterDetail.ar-IQ.resx">
+      <DependentUpon>Diagnosis2PensideTestMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Diagnosis2PensideTestMasterDetail.ar-JO.resx">
       <DependentUpon>Diagnosis2PensideTestMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\Diagnosis2PensideTestMasterDetail.az-latn-az.resx">
@@ -1350,6 +1392,9 @@
       <DependentUpon>LoginInfoGroupPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\OrganizationListPanel.ar-IQ.resx">
+      <DependentUpon>OrganizationListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\OrganizationListPanel.ar-JO.resx">
       <DependentUpon>OrganizationListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\OrganizationListPanel.az-Latn-AZ.resx">
@@ -1400,6 +1445,9 @@
     <EmbeddedResource Include="Administration\PersonListPanel.ar-IQ.resx">
       <DependentUpon>PersonListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\PersonListPanel.ar-JO.resx">
+      <DependentUpon>PersonListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\PersonListPanel.az-Latn-AZ.resx">
       <DependentUpon>PersonListPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1429,6 +1477,9 @@
     <EmbeddedResource Include="Administration\SettlementListPanel.ar-IQ.resx">
       <DependentUpon>SettlementListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\SettlementListPanel.ar-JO.resx">
+      <DependentUpon>SettlementListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\SettlementListPanel.az-Latn-AZ.resx">
       <DependentUpon>SettlementListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -1454,6 +1505,9 @@
       <DependentUpon>SettlementListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\StatisticAbort.ar-IQ.resx">
+      <DependentUpon>StatisticAbort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\StatisticAbort.ar-JO.resx">
       <DependentUpon>StatisticAbort.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\StatisticAbort.az-latn-az.resx">
@@ -1489,6 +1543,9 @@
     <EmbeddedResource Include="Administration\StatisticListPanel.ar-IQ.resx">
       <DependentUpon>StatisticListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\StatisticListPanel.ar-JO.resx">
+      <DependentUpon>StatisticListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\StatisticListPanel.hy-am.resx">
       <DependentUpon>StatisticListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -1496,6 +1553,9 @@
       <DependentUpon>StatisticListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\VectorSubTypeMasterDetail.ar-IQ.resx">
+      <DependentUpon>VectorSubTypeMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\VectorSubTypeMasterDetail.ar-JO.resx">
       <DependentUpon>VectorSubTypeMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\VectorSubTypeMasterDetail.az-latn-az.resx">
@@ -1522,6 +1582,9 @@
     <EmbeddedResource Include="Administration\VectorType2CollectionMethodMasterDetail.ar-IQ.resx">
       <DependentUpon>VectorType2CollectionMethodMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\VectorType2CollectionMethodMasterDetail.ar-JO.resx">
+      <DependentUpon>VectorType2CollectionMethodMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\VectorType2CollectionMethodMasterDetail.az-latn-az.resx">
       <DependentUpon>VectorType2CollectionMethodMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -1544,6 +1607,9 @@
       <DependentUpon>VectorType2CollectionMethodMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\VectorType2PensideTestMasterDetail.ar-IQ.resx">
+      <DependentUpon>VectorType2PensideTestMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\VectorType2PensideTestMasterDetail.ar-JO.resx">
       <DependentUpon>VectorType2PensideTestMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\VectorType2PensideTestMasterDetail.az-latn-az.resx">
@@ -1570,6 +1636,9 @@
     <EmbeddedResource Include="Administration\VectorType2SampleTypeMasterDetail.ar-IQ.resx">
       <DependentUpon>VectorType2SampleTypeMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\VectorType2SampleTypeMasterDetail.ar-JO.resx">
+      <DependentUpon>VectorType2SampleTypeMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\VectorType2SampleTypeMasterDetail.az-latn-az.resx">
       <DependentUpon>VectorType2SampleTypeMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -1594,6 +1663,9 @@
     <EmbeddedResource Include="Administration\VectorTypeReferenceMasterDetail.ar-IQ.resx">
       <DependentUpon>VectorTypeReferenceMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\VectorTypeReferenceMasterDetail.ar-JO.resx">
+      <DependentUpon>VectorTypeReferenceMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\VectorTypeReferenceMasterDetail.az-latn-az.resx">
       <DependentUpon>VectorTypeReferenceMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -1616,6 +1688,9 @@
       <DependentUpon>VectorTypeReferenceMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\AggregateSummaryHeader.ar-IQ.resx">
+      <DependentUpon>AggregateSummaryHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\AggregateSummaryHeader.ar-JO.resx">
       <DependentUpon>AggregateSummaryHeader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\AggregateSummaryHeader.az-latn-az.resx">
@@ -1646,6 +1721,9 @@
     <EmbeddedResource Include="AggregateCase\HumanAggregateCaseDeduplicationList.ar-IQ.resx">
       <DependentUpon>HumanAggregateCaseDeduplicationList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\HumanAggregateCaseDeduplicationList.ar-JO.resx">
+      <DependentUpon>HumanAggregateCaseDeduplicationList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\HumanAggregateCaseDeduplicationList.az-Latn-AZ.resx">
       <DependentUpon>HumanAggregateCaseDeduplicationList.cs</DependentUpon>
     </EmbeddedResource>
@@ -1673,6 +1751,9 @@
     <EmbeddedResource Include="AggregateCase\HumanAggregateCaseList.ar-IQ.resx">
       <DependentUpon>HumanAggregateCaseList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\HumanAggregateCaseList.ar-JO.resx">
+      <DependentUpon>HumanAggregateCaseList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\HumanAggregateCaseList.az-latn-az.resx">
       <DependentUpon>HumanAggregateCaseList.cs</DependentUpon>
     </EmbeddedResource>
@@ -1695,6 +1776,9 @@
       <DependentUpon>HumanAggregateCaseList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateActionDeduplicationList.ar-IQ.resx">
+      <DependentUpon>VetAggregateActionDeduplicationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\VetAggregateActionDeduplicationList.ar-JO.resx">
       <DependentUpon>VetAggregateActionDeduplicationList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateActionDeduplicationList.az-Latn-AZ.resx">
@@ -1724,6 +1808,9 @@
     <EmbeddedResource Include="AggregateCase\VetAggregateActionList.ar-IQ.resx">
       <DependentUpon>VetAggregateActionList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\VetAggregateActionList.ar-JO.resx">
+      <DependentUpon>VetAggregateActionList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateActionList.az-Latn-AZ.resx">
       <DependentUpon>VetAggregateActionList.cs</DependentUpon>
     </EmbeddedResource>
@@ -1746,6 +1833,9 @@
       <DependentUpon>VetAggregateActionList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateCaseDeduplicationList.ar-IQ.resx">
+      <DependentUpon>VetAggregateCaseDeduplicationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\VetAggregateCaseDeduplicationList.ar-JO.resx">
       <DependentUpon>VetAggregateCaseDeduplicationList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateCaseDeduplicationList.az-Latn-AZ.resx">
@@ -1775,6 +1865,9 @@
     <EmbeddedResource Include="AggregateCase\VetAggregateCaseList.ar-IQ.resx">
       <DependentUpon>VetAggregateCaseList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\VetAggregateCaseList.ar-JO.resx">
+      <DependentUpon>VetAggregateCaseList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateCaseList.az-latn-az.resx">
       <DependentUpon>VetAggregateCaseList.cs</DependentUpon>
     </EmbeddedResource>
@@ -1797,6 +1890,9 @@
       <DependentUpon>VetAggregateCaseList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Audit\DataAuditListPanel.ar-IQ.resx">
+      <DependentUpon>DataAuditListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audit\DataAuditListPanel.ar-JO.resx">
       <DependentUpon>DataAuditListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Audit\DataAuditListPanel.az-Latn-AZ.resx">
@@ -1842,6 +1938,10 @@
       <DependentUpon>BasicSyndromicSurveillanceAggregateListPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="BasicSyndromicSurveillance\BasicSyndromicSurveillanceAggregateListPanel.ar-JO.resx">
+      <DependentUpon>BasicSyndromicSurveillanceAggregateListPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="BasicSyndromicSurveillance\BasicSyndromicSurveillanceAggregateListPanel.th-TH.resx">
       <DependentUpon>BasicSyndromicSurveillanceAggregateListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -1849,10 +1949,17 @@
       <DependentUpon>BasicSyndromicSurveillanceItemDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="BasicSyndromicSurveillance\BasicSyndromicSurveillanceItemDetail.en-JO-Eidss.resx">
+      <DependentUpon>BasicSyndromicSurveillanceItemDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="BasicSyndromicSurveillance\BasicSyndromicSurveillanceItemDetail.th-TH.resx">
       <DependentUpon>BasicSyndromicSurveillanceItemDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BasicSyndromicSurveillance\BasicSyndromicSurveillanceListPanel.ar-IQ.resx">
+      <DependentUpon>BasicSyndromicSurveillanceListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicSyndromicSurveillance\BasicSyndromicSurveillanceListPanel.ar-JO.resx">
       <DependentUpon>BasicSyndromicSurveillanceListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BasicSyndromicSurveillance\BasicSyndromicSurveillanceListPanel.az-latn-az.resx">
@@ -1883,6 +1990,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BasicSyndromicSurveillance\BasicSyndromicSurveillanceItemDetail.ar-IQ.resx">
+      <DependentUpon>BasicSyndromicSurveillanceItemDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicSyndromicSurveillance\BasicSyndromicSurveillanceItemDetail.ar-JO.resx">
       <DependentUpon>BasicSyndromicSurveillanceItemDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -1939,6 +2050,10 @@
       <DependentUpon>BasicSyndromicSurveillanceAggregateHeaderDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="BasicSyndromicSurveillance\BasicSyndromicSurveillanceAggregateHeaderDetail.ar-JO.resx">
+      <DependentUpon>BasicSyndromicSurveillanceAggregateHeaderDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="BasicSyndromicSurveillance\BasicSyndromicSurveillanceAggregateHeaderDetail.az-latn-az.resx">
       <DependentUpon>BasicSyndromicSurveillanceAggregateHeaderDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1979,6 +2094,9 @@
     <EmbeddedResource Include="Human\DeduplicationLayout.ar-IQ.resx">
       <DependentUpon>DeduplicationLayout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Human\DeduplicationLayout.ar-JO.resx">
+      <DependentUpon>DeduplicationLayout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Human\DeduplicationLayout.az-Latn-AZ.resx">
       <DependentUpon>DeduplicationLayout.cs</DependentUpon>
     </EmbeddedResource>
@@ -2007,6 +2125,9 @@
     <EmbeddedResource Include="Human\HumanCaseDeduplicationList.ar-IQ.resx">
       <DependentUpon>HumanCaseDeduplicationList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Human\HumanCaseDeduplicationList.ar-JO.resx">
+      <DependentUpon>HumanCaseDeduplicationList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Human\HumanCaseDeduplicationList.az-Latn-AZ.resx">
       <DependentUpon>HumanCaseDeduplicationList.cs</DependentUpon>
     </EmbeddedResource>
@@ -2033,6 +2154,9 @@
       <DependentUpon>HumanCaseDeduplicationList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Human\HumanCaseListPanel.ar-IQ.resx">
+      <DependentUpon>HumanCaseListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human\HumanCaseListPanel.ar-JO.resx">
       <DependentUpon>HumanCaseListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Human\HumanCaseListPanel.az-Latn-AZ.resx">
@@ -2064,6 +2188,9 @@
     <EmbeddedResource Include="Human\PatientListPanel.ar-IQ.resx">
       <DependentUpon>PatientListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Human\PatientListPanel.ar-JO.resx">
+      <DependentUpon>PatientListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Human\PatientListPanel.az-Latn-AZ.resx">
       <DependentUpon>PatientListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -2090,6 +2217,9 @@
       <DependentUpon>PatientListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\BatchListPanel.ar-IQ.resx">
+      <DependentUpon>BatchListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\BatchListPanel.ar-JO.resx">
       <DependentUpon>BatchListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\BatchListPanel.az-Latn-AZ.resx">
@@ -2144,6 +2274,10 @@
       <DependentUpon>LaboratorySectionGetByFieldBarcodeListPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionGetByFieldBarcodeListPanel.ar-JO.resx">
+      <DependentUpon>LaboratorySectionGetByFieldBarcodeListPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionGetByFieldBarcodeListPanel.az-Latn-AZ.resx">
       <DependentUpon>LaboratorySectionGetByFieldBarcodeListPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -2193,6 +2327,10 @@
       <DependentUpon>LaboratorySectionValidateTestResult.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionValidateTestResult.ar-JO.resx">
+      <DependentUpon>LaboratorySectionValidateTestResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionValidateTestResult.az-Latn-AZ.resx">
       <DependentUpon>LaboratorySectionValidateTestResult.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -2228,6 +2366,10 @@
       <DependentUpon>LaboratorySectionSetTestResult.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionSetTestResult.ar-JO.resx">
+      <DependentUpon>LaboratorySectionSetTestResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionSetTestResult.az-Latn-AZ.resx">
       <DependentUpon>LaboratorySectionSetTestResult.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -2257,6 +2399,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionStartTest.ar-IQ.resx">
+      <DependentUpon>LaboratorySectionStartTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionStartTest.ar-JO.resx">
       <DependentUpon>LaboratorySectionStartTest.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -2292,6 +2438,10 @@
       <DependentUpon>LaboratorySectionAcceptedInGoodCondition.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionAcceptedInGoodCondition.ar-JO.resx">
+      <DependentUpon>LaboratorySectionAcceptedInGoodCondition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionAcceptedInGoodCondition.az-Latn-AZ.resx">
       <DependentUpon>LaboratorySectionAcceptedInGoodCondition.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -2323,13 +2473,25 @@
     <EmbeddedResource Include="Lab\LaboratorySectionAcceptedInPoorCondition.ar-IQ.resx">
       <DependentUpon>LaboratorySectionAcceptedInPoorCondition.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionAcceptedInPoorCondition.ar-JO.resx">
+      <DependentUpon>LaboratorySectionAcceptedInPoorCondition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionAcceptedReject.ar-IQ.resx">
+      <DependentUpon>LaboratorySectionAcceptedReject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionAcceptedReject.ar-JO.resx">
       <DependentUpon>LaboratorySectionAcceptedReject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionAmendTestResult.ar-IQ.resx">
       <DependentUpon>LaboratorySectionAmendTestResult.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionAmendTestResult.ar-JO.resx">
+      <DependentUpon>LaboratorySectionAmendTestResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionAssignTest.ar-IQ.resx">
+      <DependentUpon>LaboratorySectionAssignTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionAssignTest.ar-JO.resx">
       <DependentUpon>LaboratorySectionAssignTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionAssignTest.az-Latn-AZ.resx">
@@ -2391,19 +2553,37 @@
     <EmbeddedResource Include="Lab\LaboratorySectionCreateAliquot.ar-IQ.resx">
       <DependentUpon>LaboratorySectionCreateAliquot.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionCreateAliquot.ar-JO.resx">
+      <DependentUpon>LaboratorySectionCreateAliquot.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionCreateDerivative.ar-IQ.resx">
+      <DependentUpon>LaboratorySectionCreateDerivative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionCreateDerivative.ar-JO.resx">
       <DependentUpon>LaboratorySectionCreateDerivative.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionCreateNew.ar-IQ.resx">
       <DependentUpon>LaboratorySectionCreateNew.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionCreateNew.ar-JO.resx">
+      <DependentUpon>LaboratorySectionCreateNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionGroupAccessionIn.ar-IQ.resx">
+      <DependentUpon>LaboratorySectionGroupAccessionIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionGroupAccessionIn.ar-JO.resx">
       <DependentUpon>LaboratorySectionGroupAccessionIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionMasterDetail.ar-IQ.resx">
       <DependentUpon>LaboratorySectionMasterDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionMasterDetail.ar-JO.resx">
+      <DependentUpon>LaboratorySectionMasterDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionTransferOut.ar-IQ.resx">
+      <DependentUpon>LaboratorySectionTransferOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionTransferOut.ar-JO.resx">
       <DependentUpon>LaboratorySectionTransferOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionTransferOut.az-Latn-AZ.resx">
@@ -2578,6 +2758,10 @@
       <DependentUpon>LaboratorySectionMyPrefItemListPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionMyPrefItemListPanel.ar-JO.resx">
+      <DependentUpon>LaboratorySectionMyPrefItemListPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionMyPrefItemListPanel.az-Latn-AZ.resx">
       <DependentUpon>LaboratorySectionMyPrefItemListPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -2607,6 +2791,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\LaboratorySectionItemListPanel.ar-IQ.resx">
+      <DependentUpon>LaboratorySectionItemListPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LaboratorySectionItemListPanel.ar-JO.resx">
       <DependentUpon>LaboratorySectionItemListPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -2663,6 +2851,9 @@
     <EmbeddedResource Include="Lab\LabTestAmendmentHistoryPanel.ar-IQ.resx">
       <DependentUpon>LabTestAmendmentHistoryPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\LabTestAmendmentHistoryPanel.ar-JO.resx">
+      <DependentUpon>LabTestAmendmentHistoryPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\LabTestAmendmentHistoryPanel.az-latn-az.resx">
       <DependentUpon>LabTestAmendmentHistoryPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -2715,6 +2906,9 @@
     <EmbeddedResource Include="Lab\SampleDispositionListPanel.ar-IQ.resx">
       <DependentUpon>SampleDispositionListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\SampleDispositionListPanel.ar-JO.resx">
+      <DependentUpon>SampleDispositionListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\SampleDispositionListPanel.hy-am.resx">
       <DependentUpon>SampleDispositionListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -2722,6 +2916,9 @@
       <DependentUpon>SampleDispositionListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\SampleListPanel.ar-IQ.resx">
+      <DependentUpon>SampleListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\SampleListPanel.ar-JO.resx">
       <DependentUpon>SampleListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\SampleListPanel.hy-am.resx">
@@ -2772,6 +2969,9 @@
     <EmbeddedResource Include="Lab\SampleTransferListPanel.ar-IQ.resx">
       <DependentUpon>SampleTransferListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lab\SampleTransferListPanel.ar-JO.resx">
+      <DependentUpon>SampleTransferListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lab\SampleTransferListPanel.az-Latn-AZ.resx">
       <DependentUpon>SampleTransferListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -2797,6 +2997,9 @@
       <DependentUpon>SampleTransferListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\TestListPanel.ar-IQ.resx">
+      <DependentUpon>TestListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\TestListPanel.ar-JO.resx">
       <DependentUpon>TestListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lab\TestListPanel.az-Latn-AZ.resx">
@@ -2826,11 +3029,17 @@
     <EmbeddedResource Include="Location\AddressDetail.ar-IQ.resx">
       <DependentUpon>AddressDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Location\AddressDetail.ar-JO.resx">
+      <DependentUpon>AddressDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Location\AddressDetail.az-Latn-AZ.resx">
       <DependentUpon>AddressDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Location\AddressDetail.en-IQ-Eidss.resx">
+      <DependentUpon>AddressDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\AddressDetail.en-JO-Eidss.resx">
       <DependentUpon>AddressDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Location\AddressDetail.en-US-Eidss.resx">
@@ -2868,6 +3077,9 @@
     <EmbeddedResource Include="Location\Location.ar-IQ.resx">
       <DependentUpon>Location.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Location\Location.ar-JO.resx">
+      <DependentUpon>Location.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Location\Location.az-Latn-AZ.resx">
       <DependentUpon>Location.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -2896,11 +3108,17 @@
     <EmbeddedResource Include="Location\LocationDetail.ar-IQ.resx">
       <DependentUpon>LocationDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Location\LocationDetail.ar-JO.resx">
+      <DependentUpon>LocationDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Location\LocationDetail.az-Latn-AZ.resx">
       <DependentUpon>LocationDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Location\LocationDetail.en-IQ-Eidss.resx">
+      <DependentUpon>LocationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\LocationDetail.en-JO-Eidss.resx">
       <DependentUpon>LocationDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Location\LocationDetail.en-US-Eidss.resx">
@@ -2938,6 +3156,9 @@
     <EmbeddedResource Include="Outbreaks\OutbreakListPanel.ar-IQ.resx">
       <DependentUpon>OutbreakListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Outbreaks\OutbreakListPanel.ar-JO.resx">
+      <DependentUpon>OutbreakListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Outbreaks\OutbreakListPanel.az-Latn-AZ.resx">
       <DependentUpon>OutbreakListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -2969,6 +3190,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="RepositorySchemes\RepositorySchemeListPanel.ar-IQ.resx">
+      <DependentUpon>RepositorySchemeListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepositorySchemes\RepositorySchemeListPanel.ar-JO.resx">
       <DependentUpon>RepositorySchemeListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RepositorySchemes\RepositorySchemeListPanel.az-Latn-AZ.resx">
@@ -3004,6 +3228,9 @@
     <EmbeddedResource Include="Security\EventLogListPanel.ar-IQ.resx">
       <DependentUpon>EventLogListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Security\EventLogListPanel.ar-JO.resx">
+      <DependentUpon>EventLogListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Security\EventLogListPanel.az-Latn-AZ.resx">
       <DependentUpon>EventLogListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -3029,6 +3256,9 @@
       <DependentUpon>EventLogListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Security\NextNumbersListPanel.ar-IQ.resx">
+      <DependentUpon>NextNumbersListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\NextNumbersListPanel.ar-JO.resx">
       <DependentUpon>NextNumbersListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Security\NextNumbersListPanel.az-Latn-AZ.resx">
@@ -3061,6 +3291,9 @@
     <EmbeddedResource Include="Security\SecurityEventLogListPanel.ar-IQ.resx">
       <DependentUpon>SecurityEventLogListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Security\SecurityEventLogListPanel.ar-JO.resx">
+      <DependentUpon>SecurityEventLogListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Security\SecurityEventLogListPanel.az-Latn-AZ.resx">
       <DependentUpon>SecurityEventLogListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -3086,6 +3319,9 @@
       <DependentUpon>SecurityEventLogListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Security\SiteListPanel.ar-IQ.resx">
+      <DependentUpon>SiteListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\SiteListPanel.ar-JO.resx">
       <DependentUpon>SiteListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Security\SiteListPanel.az-Latn-AZ.resx">
@@ -3115,6 +3351,9 @@
     <EmbeddedResource Include="Security\UserGroupDetailPanel.ar-IQ.resx">
       <DependentUpon>UserGroupDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Security\UserGroupDetailPanel.ar-JO.resx">
+      <DependentUpon>UserGroupDetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Security\UserGroupDetailPanel.az-Latn-AZ.resx">
       <DependentUpon>UserGroupDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -3140,6 +3379,9 @@
       <DependentUpon>UserGroupDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Security\UserGroupListPanel.ar-IQ.resx">
+      <DependentUpon>UserGroupListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\UserGroupListPanel.ar-JO.resx">
       <DependentUpon>UserGroupListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Security\UserGroupListPanel.az-Latn-AZ.resx">
@@ -3185,6 +3427,9 @@
       <DependentUpon>StatisticListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Security\UserGroupMemberListPanel.ar-IQ.resx">
+      <DependentUpon>UserGroupMemberListPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\UserGroupMemberListPanel.ar-JO.resx">
       <DependentUpon>UserGroupMemberListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Security\UserGroupMemberListPanel.az-Latn-AZ.resx">
@@ -3233,6 +3478,9 @@
     <EmbeddedResource Include="Security\UsersAndGroupsListPanel.ar-IQ.resx">
       <DependentUpon>UsersAndGroupsListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Security\UsersAndGroupsListPanel.ar-JO.resx">
+      <DependentUpon>UsersAndGroupsListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Security\UsersAndGroupsListPanel.az-Latn-AZ.resx">
       <DependentUpon>UsersAndGroupsListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -3258,6 +3506,9 @@
       <DependentUpon>UsersAndGroupsListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VectorSurveillance\CopyDialogWindow.ar-IQ.resx">
+      <DependentUpon>CopyDialogWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VectorSurveillance\CopyDialogWindow.ar-JO.resx">
       <DependentUpon>CopyDialogWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VectorSurveillance\CopyDialogWindow.az-Latn-AZ.resx">
@@ -3290,6 +3541,9 @@
     <EmbeddedResource Include="VectorSurveillance\VsSessionListPanel.ar-IQ.resx">
       <DependentUpon>VsSessionListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VectorSurveillance\VsSessionListPanel.ar-JO.resx">
+      <DependentUpon>VsSessionListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VectorSurveillance\VsSessionListPanel.th-TH.resx">
       <DependentUpon>VsSessionListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -3300,6 +3554,9 @@
       <DependentUpon>CopyDialogWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VectorSurveillance\VectorDetail.ar-IQ.resx">
+      <DependentUpon>VectorDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VectorSurveillance\VectorDetail.ar-JO.resx">
       <DependentUpon>VectorDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VectorSurveillance\VectorDetail.az-latn-az.resx">
@@ -3346,6 +3603,9 @@
     <EmbeddedResource Include="VectorSurveillance\VectorSampleListPanel.ar-IQ.resx">
       <DependentUpon>VectorSampleListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VectorSurveillance\VectorSampleListPanel.ar-JO.resx">
+      <DependentUpon>VectorSampleListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VectorSurveillance\VectorSampleListPanel.az-Latn-AZ.resx">
       <DependentUpon>VectorSampleListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -3369,6 +3629,9 @@
       <DependentUpon>VectorSampleListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VectorSurveillance\VsSessionDetail.ar-IQ.resx">
+      <DependentUpon>VsSessionDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VectorSurveillance\VsSessionDetail.ar-JO.resx">
       <DependentUpon>VsSessionDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VectorSurveillance\VsSessionDetail.az-latn-az.resx">
@@ -3420,6 +3683,9 @@
     <EmbeddedResource Include="Vet\FarmListPanel.ar-IQ.resx">
       <DependentUpon>FarmListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vet\FarmListPanel.ar-JO.resx">
+      <DependentUpon>FarmListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vet\FarmListPanel.az-Latn-AZ.resx">
       <DependentUpon>FarmListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -3445,6 +3711,9 @@
       <DependentUpon>FarmListPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet\FarmRootDetail.ar-IQ.resx">
+      <DependentUpon>FarmRootDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet\FarmRootDetail.ar-JO.resx">
       <DependentUpon>FarmRootDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet\FarmRootDetail.az-Latn-AZ.resx">
@@ -3475,6 +3744,9 @@
     <EmbeddedResource Include="Vet\VetCaseListPanel.ar-IQ.resx">
       <DependentUpon>VetCaseListPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vet\VetCaseListPanel.ar-JO.resx">
+      <DependentUpon>VetCaseListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vet\VetCaseListPanel.az-Latn-AZ.resx">
       <DependentUpon>VetCaseListPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -3500,7 +3772,6 @@
       <DependentUpon>VetCaseListPanel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

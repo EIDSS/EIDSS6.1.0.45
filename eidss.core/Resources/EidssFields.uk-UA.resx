@@ -3015,4 +3015,10 @@
   <data name="Form1KZRegion" xml:space="preserve">
     <value>Область</value>
   </data>
+  <data name="ehsPatientId" xml:space="preserve">
+    <value>EHS Ідентифікатор пацієнта</value>
+  </data>
+  <data name="Resolution" xml:space="preserve">
+    <value>Резолюція</value>
+  </data>
 </root>

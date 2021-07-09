@@ -1334,17 +1334,34 @@ namespace EIDSS.FlexibleForms
             {
                 DataRow row = null;
 
-                switch (lang.Culture.TwoLetterISOLanguageName)
+                if (lang.Culture.TwoLetterISOLanguageName.Equals("ar", StringComparison.InvariantCultureIgnoreCase))
                 {
-                    case "uz":
-                        row = CreateRowForLang(tableLanguages, lang.Culture.Name.IndexOf("Cyrl") > 0 ? bv.common.Core.Localizer.lngUzCyr : bv.common.Core.Localizer.lngUzLat);
-                        break;
-                    case "az":
-                        row = CreateRowForLang(tableLanguages, bv.common.Core.Localizer.lngAzLat);
-                        break;
-                    default:
-                        row = CreateRowForLang(tableLanguages, lang.Culture.TwoLetterISOLanguageName);
-                        break;
+                    switch (lang.Culture.Name)
+                    {
+                        case "ar-JO":
+                            row = CreateRowForLang(tableLanguages, bv.common.Core.Localizer.lngJordan);
+                            break;
+                        case "ar-IQ":
+                            row = CreateRowForLang(tableLanguages, bv.common.Core.Localizer.lngIraq);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (lang.Culture.TwoLetterISOLanguageName)
+                    {
+                        case "uz":
+                            row = CreateRowForLang(tableLanguages, lang.Culture.Name.IndexOf("Cyrl") > 0 ? bv.common.Core.Localizer.lngUzCyr : bv.common.Core.Localizer.lngUzLat);
+                            break;
+                        case "az":
+                            row = CreateRowForLang(tableLanguages, bv.common.Core.Localizer.lngAzLat);
+                            break;
+                        default:
+                            row = CreateRowForLang(tableLanguages, lang.Culture.TwoLetterISOLanguageName);
+                            break;
+                    }
                 }
 
                 if (row != null)

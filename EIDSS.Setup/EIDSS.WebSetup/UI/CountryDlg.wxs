@@ -8,8 +8,10 @@
     <UI>
       <Dialog Id="CountryDlg" Width="370" Height="270" Title="!(loc.CountryDlg_Title)">
         <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)">
-          <Publish Property="Arabic" Value="ar" Order="1"><![CDATA[COUNTRY = "!(loc.Iraq)"]]></Publish>
-          <Publish Property="Arabic" Value="{}" Order="1"><![CDATA[COUNTRY <> "!(loc.Iraq)"]]></Publish>
+          <Publish Property="Arabic_Iraq" Value="ar-IQ" Order="1"><![CDATA[COUNTRY = "!(loc.Iraq)"]]></Publish>
+          <Publish Property="Arabic_Iraq" Value="{}" Order="1"><![CDATA[COUNTRY <> "!(loc.Iraq)"]]></Publish>
+          <Publish Property="Arabic_Jordan" Value="ar" Order="1"><![CDATA[COUNTRY = "!(loc.Jordan)"]]></Publish>
+          <Publish Property="Arabic_Jordan" Value="{}" Order="1"><![CDATA[COUNTRY <> "!(loc.Jordan)"]]></Publish>
           <Publish Property="Armenian" Value="hy" Order="2"><![CDATA[COUNTRY = "!(loc.Armenia)"]]></Publish>
           <Publish Property="Armenian" Value="{}" Order="2"><![CDATA[COUNTRY <> "!(loc.Armenia)"]]></Publish>
           <Publish Property="Azeri" Value="az-L" Order="3"><![CDATA[COUNTRY = "!(loc.Azerbaijan)"]]></Publish>
@@ -20,10 +22,10 @@
           <Publish Property="Kazakh" Value="kk" Order="6"><![CDATA[COUNTRY = "!(loc.Kazakhstan)"]]></Publish>
           <Publish Property="Kazakh" Value="{}" Order="6"><![CDATA[COUNTRY <> "!(loc.Kazakhstan)"]]></Publish>
           <Publish Property="Russian" Value="ru" Order="7">
-            <![CDATA[COUNTRY <> "!(loc.Iraq)" And COUNTRY <> "!(loc.Tanzania)" And COUNTRY <> "!(loc.UnitedStates)"]]>
+            <![CDATA[COUNTRY <> "!(loc.Iraq)" And COUNTRY <> "!(loc.Jordan)" And COUNTRY <> "!(loc.Tanzania)" And COUNTRY <> "!(loc.UnitedStates)"]]>
           </Publish>
           <Publish Property="Russian" Value="{}" Order="7">
-            <![CDATA[COUNTRY = "!(loc.Iraq)" Or COUNTRY = "!(loc.Tanzania)" Or COUNTRY = "!(loc.UnitedStates)"]]>
+            <![CDATA[COUNTRY = "!(loc.Iraq)" Or COUNTRY = "!(loc.Jordan)" Or COUNTRY = "!(loc.Tanzania)" Or COUNTRY = "!(loc.UnitedStates)"]]>
           </Publish>
           <Publish Property="DEFAULTLANGUAGE" Value="en" Order="8"><![CDATA[COUNTRY = "!(loc.Tanzania)" Or COUNTRY = "!(loc.UnitedStates)"]]></Publish>
           <Publish Property="SUPPORTEDLANGUAGES" Value="en" Order="8"><![CDATA[COUNTRY = "!(loc.Tanzania)" Or COUNTRY = "!(loc.UnitedStates)"]]></Publish>
@@ -67,6 +69,7 @@
             <ListItem Text="Azerbaijan" Value="!(loc.Azerbaijan)" />
             <ListItem Text="Georgia" Value="!(loc.Georgia)" />
             <ListItem Text="Iraq" Value="!(loc.Iraq)" />
+            <ListItem Text="Jordan" Value="!(loc.Jordan)" />
             <ListItem Text="Kazakhstan" Value="!(loc.Kazakhstan)" />
             <ListItem Text="Laos" Value="!(loc.Laos)" />
             <ListItem Text="Tanzania" Value="!(loc.Tanzania)" />

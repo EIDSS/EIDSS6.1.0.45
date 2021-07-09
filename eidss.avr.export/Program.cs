@@ -47,7 +47,8 @@ namespace eidss.avr.export
         private static void Init()
         {
             Config.DefaultGlobalConfigFileName = Constants.GlobalEidssConfigName;
-            DbManagerFactory.SetSqlFactory(new ConnectionCredentials().ConnectionString);
+            var cc = new ConnectionCredentials();
+            DbManagerFactory.SetSqlFactory(cc.ConnectionString, DatabaseType.Main, cc.CommandTimeout);
             EidssUserContext.Init();
             EIDSS_LookupCacheHelper.Init();
         }

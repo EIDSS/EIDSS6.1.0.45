@@ -13,6 +13,10 @@
       <?define CultureSourceFolder = ar-IQ?>
       <?include "$(var.ProjectDir)WHO resources.wxi"?>
 
+      <?define CultureID = AR_JO?>
+      <?define CultureSourceFolder = ar-JO?>
+      <?include "$(var.ProjectDir)WHO resources.wxi"?>
+
       <?define CultureID = AZ_LATN_AZ?>
       <?define CultureSourceFolder = az-Latn-AZ?>
       <?include "$(var.ProjectDir)WHO resources.wxi"?>

@@ -30,6 +30,9 @@ namespace eidss.model.Reports
         [MenuReportCustomization(CustomizationPackage.Ukraine)]
         void HumUrgentyNotificationUkraine(long caseId);
 
+        [MenuReportCustomization(CustomizationPackage.JordanMoA)]
+        void VetUrgentNotificationJo(long caseId);
+
         [MenuReportDescription(ReportSubMenu.Human, "ReportsHumDiagnosisToChangedDiagnosis", 400)]
         [MenuReportCustomization(Forbidden = new[] {CustomizationPackage.Azerbaijan, CustomizationPackage.Thailand})]
         void HumDiagnosisToChangedDiagnosis();

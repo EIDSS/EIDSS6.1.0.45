@@ -32,6 +32,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SummaryDetail(long idfMonitoringSession, long idfSummary, string gridName, FormCollection form)
         {
             return PickerInternal<AsSessionSummary.Accessor, AsSessionSummary, AsSession>(form, AsSessionSummary.Accessor.Instance(null),

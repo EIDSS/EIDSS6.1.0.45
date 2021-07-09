@@ -27,7 +27,7 @@ using bv.model.Model.Handlers;
 using bv.model.Model.Validators;
 using eidss.model.Core;
 using eidss.model.Enums;
-using eidss.model.Helpers;
+		
 
 namespace eidss.model.Schema
 {
@@ -3449,9 +3449,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfCase") ? " or " : " and ");
                         
                         if (filters.Operation("idfCase", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfCase,0) {0} @idfCase_{1} = @idfCase_{1})", filters.Operation("idfCase", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfCase {0} @idfCase_{1} = @idfCase_{1})", filters.Operation("idfCase", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfCase,0) {0} @idfCase_{1}", filters.Operation("idfCase", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfCase {0} @idfCase_{1}", filters.Operation("idfCase", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3465,7 +3465,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datAssignedDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_VetCase_SelectList.datAssignedDate, 112) {0} CONVERT(NVARCHAR(8), @datAssignedDate_{1}, 112)", filters.Operation("datAssignedDate", i), i);
+                        sql.AppendFormat("fn_VetCase_SelectList.datAssignedDate {0} @datAssignedDate_{1}", filters.Operation("datAssignedDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3479,7 +3479,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datEnteredDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_VetCase_SelectList.datEnteredDate, 112) {0} CONVERT(NVARCHAR(8), @datEnteredDate_{1}, 112)", filters.Operation("datEnteredDate", i), i);
+                        sql.AppendFormat("fn_VetCase_SelectList.datEnteredDate {0} @datEnteredDate_{1}", filters.Operation("datEnteredDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3507,7 +3507,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datReportDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_VetCase_SelectList.datReportDate, 112) {0} CONVERT(NVARCHAR(8), @datReportDate_{1}, 112)", filters.Operation("datReportDate", i), i);
+                        sql.AppendFormat("fn_VetCase_SelectList.datReportDate {0} @datReportDate_{1}", filters.Operation("datReportDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3521,7 +3521,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datInvestigationDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_VetCase_SelectList.datInvestigationDate, 112) {0} CONVERT(NVARCHAR(8), @datInvestigationDate_{1}, 112)", filters.Operation("datInvestigationDate", i), i);
+                        sql.AppendFormat("fn_VetCase_SelectList.datInvestigationDate {0} @datInvestigationDate_{1}", filters.Operation("datInvestigationDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3536,9 +3536,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsShowDiagnosis") ? " or " : " and ");
                         
                         if (filters.Operation("idfsShowDiagnosis", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsShowDiagnosis,0) {0} @idfsShowDiagnosis_{1} = @idfsShowDiagnosis_{1})", filters.Operation("idfsShowDiagnosis", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsShowDiagnosis {0} @idfsShowDiagnosis_{1} = @idfsShowDiagnosis_{1})", filters.Operation("idfsShowDiagnosis", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsShowDiagnosis,0) {0} @idfsShowDiagnosis_{1}", filters.Operation("idfsShowDiagnosis", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsShowDiagnosis {0} @idfsShowDiagnosis_{1}", filters.Operation("idfsShowDiagnosis", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3552,7 +3552,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datDiagnosisDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_VetCase_SelectList.datDiagnosisDate, 112) {0} CONVERT(NVARCHAR(8), @datDiagnosisDate_{1}, 112)", filters.Operation("datDiagnosisDate", i), i);
+                        sql.AppendFormat("fn_VetCase_SelectList.datDiagnosisDate {0} @datDiagnosisDate_{1}", filters.Operation("datDiagnosisDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3567,9 +3567,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsTentativeDiagnosis1") ? " or " : " and ");
                         
                         if (filters.Operation("idfsTentativeDiagnosis1", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsTentativeDiagnosis1,0) {0} @idfsTentativeDiagnosis1_{1} = @idfsTentativeDiagnosis1_{1})", filters.Operation("idfsTentativeDiagnosis1", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsTentativeDiagnosis1 {0} @idfsTentativeDiagnosis1_{1} = @idfsTentativeDiagnosis1_{1})", filters.Operation("idfsTentativeDiagnosis1", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsTentativeDiagnosis1,0) {0} @idfsTentativeDiagnosis1_{1}", filters.Operation("idfsTentativeDiagnosis1", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsTentativeDiagnosis1 {0} @idfsTentativeDiagnosis1_{1}", filters.Operation("idfsTentativeDiagnosis1", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3584,9 +3584,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsTentativeDiagnosis2") ? " or " : " and ");
                         
                         if (filters.Operation("idfsTentativeDiagnosis2", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsTentativeDiagnosis2,0) {0} @idfsTentativeDiagnosis2_{1} = @idfsTentativeDiagnosis2_{1})", filters.Operation("idfsTentativeDiagnosis2", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsTentativeDiagnosis2 {0} @idfsTentativeDiagnosis2_{1} = @idfsTentativeDiagnosis2_{1})", filters.Operation("idfsTentativeDiagnosis2", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsTentativeDiagnosis2,0) {0} @idfsTentativeDiagnosis2_{1}", filters.Operation("idfsTentativeDiagnosis2", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsTentativeDiagnosis2 {0} @idfsTentativeDiagnosis2_{1}", filters.Operation("idfsTentativeDiagnosis2", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3601,9 +3601,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsFinalDiagnosis") ? " or " : " and ");
                         
                         if (filters.Operation("idfsFinalDiagnosis", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsFinalDiagnosis,0) {0} @idfsFinalDiagnosis_{1} = @idfsFinalDiagnosis_{1})", filters.Operation("idfsFinalDiagnosis", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsFinalDiagnosis {0} @idfsFinalDiagnosis_{1} = @idfsFinalDiagnosis_{1})", filters.Operation("idfsFinalDiagnosis", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsFinalDiagnosis,0) {0} @idfsFinalDiagnosis_{1}", filters.Operation("idfsFinalDiagnosis", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsFinalDiagnosis {0} @idfsFinalDiagnosis_{1}", filters.Operation("idfsFinalDiagnosis", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3618,9 +3618,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfPersonEnteredBy") ? " or " : " and ");
                         
                         if (filters.Operation("idfPersonEnteredBy", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfPersonEnteredBy,0) {0} @idfPersonEnteredBy_{1} = @idfPersonEnteredBy_{1})", filters.Operation("idfPersonEnteredBy", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfPersonEnteredBy {0} @idfPersonEnteredBy_{1} = @idfPersonEnteredBy_{1})", filters.Operation("idfPersonEnteredBy", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfPersonEnteredBy,0) {0} @idfPersonEnteredBy_{1}", filters.Operation("idfPersonEnteredBy", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfPersonEnteredBy {0} @idfPersonEnteredBy_{1}", filters.Operation("idfPersonEnteredBy", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3635,9 +3635,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsCaseClassification") ? " or " : " and ");
                         
                         if (filters.Operation("idfsCaseClassification", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsCaseClassification,0) {0} @idfsCaseClassification_{1} = @idfsCaseClassification_{1})", filters.Operation("idfsCaseClassification", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsCaseClassification {0} @idfsCaseClassification_{1} = @idfsCaseClassification_{1})", filters.Operation("idfsCaseClassification", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsCaseClassification,0) {0} @idfsCaseClassification_{1}", filters.Operation("idfsCaseClassification", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsCaseClassification {0} @idfsCaseClassification_{1}", filters.Operation("idfsCaseClassification", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3652,9 +3652,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsCaseProgressStatus") ? " or " : " and ");
                         
                         if (filters.Operation("idfsCaseProgressStatus", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsCaseProgressStatus,0) {0} @idfsCaseProgressStatus_{1} = @idfsCaseProgressStatus_{1})", filters.Operation("idfsCaseProgressStatus", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsCaseProgressStatus {0} @idfsCaseProgressStatus_{1} = @idfsCaseProgressStatus_{1})", filters.Operation("idfsCaseProgressStatus", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsCaseProgressStatus,0) {0} @idfsCaseProgressStatus_{1}", filters.Operation("idfsCaseProgressStatus", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsCaseProgressStatus {0} @idfsCaseProgressStatus_{1}", filters.Operation("idfsCaseProgressStatus", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3669,9 +3669,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsCaseReportType") ? " or " : " and ");
                         
                         if (filters.Operation("idfsCaseReportType", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsCaseReportType,0) {0} @idfsCaseReportType_{1} = @idfsCaseReportType_{1})", filters.Operation("idfsCaseReportType", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsCaseReportType {0} @idfsCaseReportType_{1} = @idfsCaseReportType_{1})", filters.Operation("idfsCaseReportType", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsCaseReportType,0) {0} @idfsCaseReportType_{1}", filters.Operation("idfsCaseReportType", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsCaseReportType {0} @idfsCaseReportType_{1}", filters.Operation("idfsCaseReportType", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3770,9 +3770,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsCaseType") ? " or " : " and ");
                         
                         if (filters.Operation("idfsCaseType", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsCaseType,0) {0} @idfsCaseType_{1} = @idfsCaseType_{1})", filters.Operation("idfsCaseType", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsCaseType {0} @idfsCaseType_{1} = @idfsCaseType_{1})", filters.Operation("idfsCaseType", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsCaseType,0) {0} @idfsCaseType_{1}", filters.Operation("idfsCaseType", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsCaseType {0} @idfsCaseType_{1}", filters.Operation("idfsCaseType", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3787,9 +3787,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsCaseTypeNullable") ? " or " : " and ");
                         
                         if (filters.Operation("idfsCaseTypeNullable", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsCaseTypeNullable,0) {0} @idfsCaseTypeNullable_{1} = @idfsCaseTypeNullable_{1})", filters.Operation("idfsCaseTypeNullable", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsCaseTypeNullable {0} @idfsCaseTypeNullable_{1} = @idfsCaseTypeNullable_{1})", filters.Operation("idfsCaseTypeNullable", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsCaseTypeNullable,0) {0} @idfsCaseTypeNullable_{1}", filters.Operation("idfsCaseTypeNullable", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsCaseTypeNullable {0} @idfsCaseTypeNullable_{1}", filters.Operation("idfsCaseTypeNullable", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3818,9 +3818,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfAddress") ? " or " : " and ");
                         
                         if (filters.Operation("idfAddress", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfAddress,0) {0} @idfAddress_{1} = @idfAddress_{1})", filters.Operation("idfAddress", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfAddress {0} @idfAddress_{1} = @idfAddress_{1})", filters.Operation("idfAddress", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfAddress,0) {0} @idfAddress_{1}", filters.Operation("idfAddress", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfAddress {0} @idfAddress_{1}", filters.Operation("idfAddress", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3849,9 +3849,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsCountry") ? " or " : " and ");
                         
                         if (filters.Operation("idfsCountry", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsCountry,0) {0} @idfsCountry_{1} = @idfsCountry_{1})", filters.Operation("idfsCountry", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsCountry {0} @idfsCountry_{1} = @idfsCountry_{1})", filters.Operation("idfsCountry", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsCountry,0) {0} @idfsCountry_{1}", filters.Operation("idfsCountry", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsCountry {0} @idfsCountry_{1}", filters.Operation("idfsCountry", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3866,67 +3866,29 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsRegion") ? " or " : " and ");
                         
                         if (filters.Operation("idfsRegion", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsRegion,0) {0} @idfsRegion_{1} = @idfsRegion_{1})", filters.Operation("idfsRegion", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsRegion {0} @idfsRegion_{1} = @idfsRegion_{1})", filters.Operation("idfsRegion", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsRegion,0) {0} @idfsRegion_{1}", filters.Operation("idfsRegion", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsRegion {0} @idfsRegion_{1}", filters.Operation("idfsRegion", i), i);
                             
                     }
                     sql.AppendFormat(")");
                 }
                   
-                if(EidssSiteContext.Instance.IsThaiCustomization)
+                if (filters.Contains("idfsRayon"))
                 {
-                    try
+                    sql.AppendFormat(" and (");
+                    for (int i = 0; i < filters.Count("idfsRayon"); i++)
                     {
-                        if (filters.Contains("idfsRayon"))
-                        {
-                            Int64 regionID = Convert.ToInt64(filters.Value("idfsRegion"));
-                            Int64 rayonID = Convert.ToInt64(filters.Value("idfsRayon"));
-                            string list = ThaiDistrictHelper.FilterThaiDistricts(manager, regionID, rayonID);
-
-                            sql.AppendFormat(" and (");
-                            sql.AppendFormat("((Cast(isnull(fn_VetCase_SelectList.idfsRayon,0) as varchar(100)) in (select[Value] from fnsysSplitList(\'{0}\', 0, ','))))", list);
-                            sql.AppendFormat(")");
-                        }
+                        if (i > 0) 
+                          sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
+                        
+                        if (filters.Operation("idfsRayon", i) == "&")
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsRayon {0} @idfsRayon_{1} = @idfsRayon_{1})", filters.Operation("idfsRayon", i), i);
+                        else
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsRayon {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
+                            
                     }
-                    catch (Exception e)
-                    {
-                        if (filters.Contains("idfsRayon"))
-                        {
-                            sql.AppendFormat(" and (");
-                            for (int i = 0; i < filters.Count("idfsRayon"); i++)
-                            {
-                                if (i > 0)
-                                    sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
-
-                                if (filters.Operation("idfsRayon", i) == "&")
-                                    sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsRayon,0) {0} @idfsRayon_{1} = @idfsRayon_{1})", filters.Operation("idfsRayon", i), i);
-                                else
-                                    sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsRayon,0) {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
-
-                            }
-                            sql.AppendFormat(")");
-                        }
-                    }
-                }
-                else
-                {
-                    if (filters.Contains("idfsRayon"))
-                    {
-                        sql.AppendFormat(" and (");
-                        for (int i = 0; i < filters.Count("idfsRayon"); i++)
-                        {
-                            if (i > 0)
-                                sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
-
-                            if (filters.Operation("idfsRayon", i) == "&")
-                                sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsRayon,0) {0} @idfsRayon_{1} = @idfsRayon_{1})", filters.Operation("idfsRayon", i), i);
-                            else
-                                sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsRayon,0) {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
-
-                        }
-                        sql.AppendFormat(")");
-                    }
+                    sql.AppendFormat(")");
                 }
                   
                 if (filters.Contains("idfsSettlement"))
@@ -3938,9 +3900,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsSettlement") ? " or " : " and ");
                         
                         if (filters.Operation("idfsSettlement", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsSettlement,0) {0} @idfsSettlement_{1} = @idfsSettlement_{1})", filters.Operation("idfsSettlement", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsSettlement {0} @idfsSettlement_{1} = @idfsSettlement_{1})", filters.Operation("idfsSettlement", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsSettlement,0) {0} @idfsSettlement_{1}", filters.Operation("idfsSettlement", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsSettlement {0} @idfsSettlement_{1}", filters.Operation("idfsSettlement", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3955,9 +3917,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfFarm") ? " or " : " and ");
                         
                         if (filters.Operation("idfFarm", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfFarm,0) {0} @idfFarm_{1} = @idfFarm_{1})", filters.Operation("idfFarm", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfFarm {0} @idfFarm_{1} = @idfFarm_{1})", filters.Operation("idfFarm", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfFarm,0) {0} @idfFarm_{1}", filters.Operation("idfFarm", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfFarm {0} @idfFarm_{1}", filters.Operation("idfFarm", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3986,9 +3948,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsAvianFarmType") ? " or " : " and ");
                         
                         if (filters.Operation("idfsAvianFarmType", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsAvianFarmType,0) {0} @idfsAvianFarmType_{1} = @idfsAvianFarmType_{1})", filters.Operation("idfsAvianFarmType", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsAvianFarmType {0} @idfsAvianFarmType_{1} = @idfsAvianFarmType_{1})", filters.Operation("idfsAvianFarmType", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsAvianFarmType,0) {0} @idfsAvianFarmType_{1}", filters.Operation("idfsAvianFarmType", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsAvianFarmType {0} @idfsAvianFarmType_{1}", filters.Operation("idfsAvianFarmType", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4003,9 +3965,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsAvianProductionType") ? " or " : " and ");
                         
                         if (filters.Operation("idfsAvianProductionType", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsAvianProductionType,0) {0} @idfsAvianProductionType_{1} = @idfsAvianProductionType_{1})", filters.Operation("idfsAvianProductionType", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsAvianProductionType {0} @idfsAvianProductionType_{1} = @idfsAvianProductionType_{1})", filters.Operation("idfsAvianProductionType", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsAvianProductionType,0) {0} @idfsAvianProductionType_{1}", filters.Operation("idfsAvianProductionType", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsAvianProductionType {0} @idfsAvianProductionType_{1}", filters.Operation("idfsAvianProductionType", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4020,9 +3982,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsFarmCategory") ? " or " : " and ");
                         
                         if (filters.Operation("idfsFarmCategory", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsFarmCategory,0) {0} @idfsFarmCategory_{1} = @idfsFarmCategory_{1})", filters.Operation("idfsFarmCategory", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsFarmCategory {0} @idfsFarmCategory_{1} = @idfsFarmCategory_{1})", filters.Operation("idfsFarmCategory", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsFarmCategory,0) {0} @idfsFarmCategory_{1}", filters.Operation("idfsFarmCategory", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsFarmCategory {0} @idfsFarmCategory_{1}", filters.Operation("idfsFarmCategory", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4037,9 +3999,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsOwnershipStructure") ? " or " : " and ");
                         
                         if (filters.Operation("idfsOwnershipStructure", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsOwnershipStructure,0) {0} @idfsOwnershipStructure_{1} = @idfsOwnershipStructure_{1})", filters.Operation("idfsOwnershipStructure", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsOwnershipStructure {0} @idfsOwnershipStructure_{1} = @idfsOwnershipStructure_{1})", filters.Operation("idfsOwnershipStructure", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsOwnershipStructure,0) {0} @idfsOwnershipStructure_{1}", filters.Operation("idfsOwnershipStructure", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsOwnershipStructure {0} @idfsOwnershipStructure_{1}", filters.Operation("idfsOwnershipStructure", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4054,9 +4016,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsMovementPattern") ? " or " : " and ");
                         
                         if (filters.Operation("idfsMovementPattern", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsMovementPattern,0) {0} @idfsMovementPattern_{1} = @idfsMovementPattern_{1})", filters.Operation("idfsMovementPattern", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsMovementPattern {0} @idfsMovementPattern_{1} = @idfsMovementPattern_{1})", filters.Operation("idfsMovementPattern", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsMovementPattern,0) {0} @idfsMovementPattern_{1}", filters.Operation("idfsMovementPattern", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsMovementPattern {0} @idfsMovementPattern_{1}", filters.Operation("idfsMovementPattern", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4071,9 +4033,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsIntendedUse") ? " or " : " and ");
                         
                         if (filters.Operation("idfsIntendedUse", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsIntendedUse,0) {0} @idfsIntendedUse_{1} = @idfsIntendedUse_{1})", filters.Operation("idfsIntendedUse", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsIntendedUse {0} @idfsIntendedUse_{1} = @idfsIntendedUse_{1})", filters.Operation("idfsIntendedUse", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsIntendedUse,0) {0} @idfsIntendedUse_{1}", filters.Operation("idfsIntendedUse", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsIntendedUse {0} @idfsIntendedUse_{1}", filters.Operation("idfsIntendedUse", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4088,9 +4050,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsGrazingPattern") ? " or " : " and ");
                         
                         if (filters.Operation("idfsGrazingPattern", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsGrazingPattern,0) {0} @idfsGrazingPattern_{1} = @idfsGrazingPattern_{1})", filters.Operation("idfsGrazingPattern", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsGrazingPattern {0} @idfsGrazingPattern_{1} = @idfsGrazingPattern_{1})", filters.Operation("idfsGrazingPattern", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsGrazingPattern,0) {0} @idfsGrazingPattern_{1}", filters.Operation("idfsGrazingPattern", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsGrazingPattern {0} @idfsGrazingPattern_{1}", filters.Operation("idfsGrazingPattern", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4105,9 +4067,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsLivestockProductionType") ? " or " : " and ");
                         
                         if (filters.Operation("idfsLivestockProductionType", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsLivestockProductionType,0) {0} @idfsLivestockProductionType_{1} = @idfsLivestockProductionType_{1})", filters.Operation("idfsLivestockProductionType", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsLivestockProductionType {0} @idfsLivestockProductionType_{1} = @idfsLivestockProductionType_{1})", filters.Operation("idfsLivestockProductionType", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsLivestockProductionType,0) {0} @idfsLivestockProductionType_{1}", filters.Operation("idfsLivestockProductionType", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsLivestockProductionType {0} @idfsLivestockProductionType_{1}", filters.Operation("idfsLivestockProductionType", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4248,9 +4210,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("intSickAnimalQty") ? " or " : " and ");
                         
                         if (filters.Operation("intSickAnimalQty", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.intSickAnimalQty,0) {0} @intSickAnimalQty_{1} = @intSickAnimalQty_{1})", filters.Operation("intSickAnimalQty", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.intSickAnimalQty {0} @intSickAnimalQty_{1} = @intSickAnimalQty_{1})", filters.Operation("intSickAnimalQty", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.intSickAnimalQty,0) {0} @intSickAnimalQty_{1}", filters.Operation("intSickAnimalQty", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.intSickAnimalQty {0} @intSickAnimalQty_{1}", filters.Operation("intSickAnimalQty", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4265,9 +4227,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("intTotalAnimalQty") ? " or " : " and ");
                         
                         if (filters.Operation("intTotalAnimalQty", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.intTotalAnimalQty,0) {0} @intTotalAnimalQty_{1} = @intTotalAnimalQty_{1})", filters.Operation("intTotalAnimalQty", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.intTotalAnimalQty {0} @intTotalAnimalQty_{1} = @intTotalAnimalQty_{1})", filters.Operation("intTotalAnimalQty", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.intTotalAnimalQty,0) {0} @intTotalAnimalQty_{1}", filters.Operation("intTotalAnimalQty", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.intTotalAnimalQty {0} @intTotalAnimalQty_{1}", filters.Operation("intTotalAnimalQty", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4282,9 +4244,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("intDeadAnimalQty") ? " or " : " and ");
                         
                         if (filters.Operation("intDeadAnimalQty", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.intDeadAnimalQty,0) {0} @intDeadAnimalQty_{1} = @intDeadAnimalQty_{1})", filters.Operation("intDeadAnimalQty", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.intDeadAnimalQty {0} @intDeadAnimalQty_{1} = @intDeadAnimalQty_{1})", filters.Operation("intDeadAnimalQty", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.intDeadAnimalQty,0) {0} @intDeadAnimalQty_{1}", filters.Operation("intDeadAnimalQty", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.intDeadAnimalQty {0} @intDeadAnimalQty_{1}", filters.Operation("intDeadAnimalQty", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4299,9 +4261,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsSite") ? " or " : " and ");
                         
                         if (filters.Operation("idfsSite", i) == "&")
-                          sql.AppendFormat("(isnull(fn_VetCase_SelectList.idfsSite,0) {0} @idfsSite_{1} = @idfsSite_{1})", filters.Operation("idfsSite", i), i);
+                          sql.AppendFormat("(fn_VetCase_SelectList.idfsSite {0} @idfsSite_{1} = @idfsSite_{1})", filters.Operation("idfsSite", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_VetCase_SelectList.idfsSite,0) {0} @idfsSite_{1}", filters.Operation("idfsSite", i), i);
+                          sql.AppendFormat("fn_VetCase_SelectList.idfsSite {0} @idfsSite_{1}", filters.Operation("idfsSite", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -6074,7 +6036,7 @@ namespace eidss.model.Schema
                     "intTotalAnimalQtyFull",
                     null, null, c => false, false, SearchPanelLocation.Main, false, null, null, null, null, null, null,false
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!EidssSiteContext.Instance.IsIraqCustomization))())
                 SearchPanelMeta.Add(new SearchPanelMetaItem(
                     "strOwnerFirstName",
                     EditorType.Text,
@@ -6208,7 +6170,7 @@ namespace eidss.model.Schema
                     "strFarmFullName",
                     null, "=", c => false, false, SearchPanelLocation.Combobox, false, null, null, null, null, null, null,false
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!EidssSiteContext.Instance.IsIraqCustomization))())
                 SearchPanelMeta.Add(new SearchPanelMetaItem(
                     "strOwnerMiddleName",
                     EditorType.Text,

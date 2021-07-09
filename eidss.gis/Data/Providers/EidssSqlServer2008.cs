@@ -40,19 +40,31 @@ namespace eidss.gis.Data.Providers
             {
                 var strSQL = string.Format("SELECT TOP 1 {0}.STAsBinary() FROM {1} WHERE {2} = '{3}' AND {0} IS NOT NULL",
                                            GeometryColumn, Table, ObjectIdColumn, oid);
-                conn.Open();
-                using (var command = new SqlCommand(strSQL, conn))
+                try
                 {
-                    using (var dr = command.ExecuteReader())
+                    conn.Open();
+                    using (var command = new SqlCommand(strSQL, conn))
                     {
-                        while (dr.Read())
+                        using (var dr = command.ExecuteReader())
                         {
-                            if (dr[0] != DBNull.Value)
-                                geom = SharpMap.Converters.WellKnownBinary.GeometryFromWKB.Parse((byte[])dr[0]);
+                            while (dr.Read())
+                            {
+                                if (dr[0] != DBNull.Value)
+                                    geom = SharpMap.Converters.WellKnownBinary.GeometryFromWKB.Parse((byte[])dr[0]);
+                            }
                         }
                     }
+                    conn.Close();
                 }
-                conn.Close();
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if ((conn != null) && (conn.State == ConnectionState.Open)) conn.Close();
+                }
+
             }
             return geom;
         }
@@ -153,10 +165,21 @@ namespace eidss.gis.Data.Providers
 
                     using (var adapter = new SqlDataAdapter(strSQL, conn))
                     {
-                        conn.Open();
                         var ds2 = new DataSet();
-                        adapter.Fill(ds2);
-                        conn.Close();
+                        try
+                        {
+                            conn.Open();
+                            adapter.Fill(ds2);
+                            conn.Close();
+                        }
+                        catch (Exception)
+                        {
+                            throw;
+                        }
+                        finally
+                        {
+                            if ((conn != null) && (conn.State == ConnectionState.Open)) conn.Close();
+                        }
                         if (ds2.Tables.Count > 0)
                         {
                             var fdt = new FeatureDataTable(ds2.Tables[0]);

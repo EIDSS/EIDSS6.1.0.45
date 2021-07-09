@@ -52,6 +52,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult CaseTestValidationItemPicker(FormCollection form)
         {
             return PickerInternal<CaseTestValidation.Accessor, CaseTestValidation, IObject>(form, CaseTestValidation.Accessor.Instance(null), null,
@@ -121,6 +122,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult CaseTestItemPicker(FormCollection form)
         {
             return PickerInternal<CaseTest.Accessor, CaseTest, IObject>(form, CaseTest.Accessor.Instance(null), null,
@@ -196,6 +198,8 @@ namespace eidss.webclient.Controllers
 
 
         [HttpPost]
+        [ValidateInput(false)]
+
         public ActionResult SetHumanSample(FormCollection form)
         {
             return PickerInternal<HumanCaseSample.Accessor, HumanCaseSample, HumanCase>(form, HumanCaseSample.Accessor.Instance(null), null,
@@ -233,6 +237,8 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
+
         public ActionResult SetVetSample(FormCollection form)
         {
             return PickerInternal<VetCaseSample.Accessor, VetCaseSample, VetCase>(form, VetCaseSample.Accessor.Instance(null), null,

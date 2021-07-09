@@ -289,7 +289,7 @@
     <value>Запис буде видалено. видалити запис?</value>
   </data>
   <data name="msgEIDSSCopyright" xml:space="preserve">
-    <value>Усі права захищені © 2005-2020 Black &amp;&amp; Veatch Special Projects Corp.</value>
+    <value>Усі права захищені © 2005-2021 Black &amp;&amp; Veatch Special Projects Corp.</value>
   </data>
   <data name="msgEIDSSRunning" xml:space="preserve">
     <value>Не можливо одночасно відкрити декілька екземплярів еіснз. інший екземпляр еіснз вже відкрито.</value>

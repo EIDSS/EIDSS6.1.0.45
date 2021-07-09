@@ -408,6 +408,9 @@
     <EmbeddedResource Include="Core\ErrorForm.ar-IQ.resx">
       <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Core\ErrorForm.ar-JO.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Core\ErrorForm.az-Latn-AZ.resx">
       <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -444,6 +447,9 @@
     <EmbeddedResource Include="Core\PopUpButton.ar-IQ.resx">
       <DependentUpon>PopUpButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Core\PopUpButton.ar-JO.resx">
+      <DependentUpon>PopUpButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Core\PopUpButton.az-Latn-AZ.resx">
       <DependentUpon>PopUpButton.cs</DependentUpon>
     </EmbeddedResource>
@@ -469,6 +475,9 @@
       <DependentUpon>PopUpButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Core\Splash.ar-IQ.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Splash.ar-JO.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Core\Splash.az-Latn-AZ.resx">
@@ -514,6 +523,9 @@
     <EmbeddedResource Include="Layout\LayoutAdvanced.ar-IQ.resx">
       <DependentUpon>LayoutAdvanced.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Layout\LayoutAdvanced.ar-JO.resx">
+      <DependentUpon>LayoutAdvanced.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layout\LayoutAdvanced.az-latn-az.resx">
       <DependentUpon>LayoutAdvanced.cs</DependentUpon>
     </EmbeddedResource>
@@ -539,6 +551,9 @@
       <DependentUpon>LayoutEmpty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\LayoutGroup.ar-IQ.resx">
+      <DependentUpon>LayoutGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\LayoutGroup.ar-JO.resx">
       <DependentUpon>LayoutGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\LayoutGroup.az-latn-az.resx">
@@ -578,6 +593,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchPanel\BaseSearchPanel.ar-IQ.resx">
+      <DependentUpon>BaseSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchPanel\BaseSearchPanel.ar-JO.resx">
       <DependentUpon>BaseSearchPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchPanel\BaseSearchPanel.az-latn-az.resx">

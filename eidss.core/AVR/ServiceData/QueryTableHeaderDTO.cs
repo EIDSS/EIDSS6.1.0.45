@@ -10,15 +10,18 @@ namespace eidss.model.AVR.ServiceData
             BinaryHeader = new QueryTablePacketDTO();
         }
 
-        public QueryTableHeaderDTO(QueryTablePacketDTO binaryHeader, long queryCacheId, int packetCount)
+        public QueryTableHeaderDTO(QueryTablePacketDTO binaryHeader, long queryCacheId, int packetCount, long? userId = null)
         {
             BinaryHeader = binaryHeader;
             PacketCount = packetCount;
             QueryCacheId = queryCacheId;
+            UserId = userId;
         }
 
         public QueryTablePacketDTO BinaryHeader { get; set; }
         public int PacketCount { get; set; }
         public long QueryCacheId { get; set; }
+        public long? UserId { get; set; }
+
     }
 }

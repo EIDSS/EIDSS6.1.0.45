@@ -44,6 +44,7 @@ namespace eidss.webclient.Controllers
         
 
         [HttpPost]
+        [ValidateInput(false)]
         [CompressFilter]
         public ActionResult Details(FormCollection form)
         {
@@ -78,6 +79,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetASCampaignDiseases(FormCollection form)
         {
             return PickerInternal<AsDisease.Accessor, AsDisease, AsCampaign>(form, AsDisease.Accessor.Instance(null), null,
@@ -108,6 +110,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult MoveItem(long key, string name, long? idfAsDisease, int moveDirection)
         {
             //var list = ModelStorage.Get(ModelUserContext.ClientID, key, name) as EditableList<AsDisease>;
@@ -145,6 +148,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetSelectedASSession(string root, string selectedId)
         {
             long key = long.Parse(root);
@@ -248,6 +252,7 @@ namespace eidss.webclient.Controllers
         }
         
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetSelectedASCampaign(string objectId, string idfsASCampaignPropertyName, string strASCampaignPropertyName,
             string strASCampaignIdPropertyName, string selectedItemId, int ignoreErr)
         {
@@ -299,6 +304,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult StoreInSession(FormCollection form)
         {
             if (form.AllKeys.Contains("idfCampaign"))

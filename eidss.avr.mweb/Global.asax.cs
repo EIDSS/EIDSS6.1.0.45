@@ -172,7 +172,7 @@ namespace eidss.avr.mweb
         {
             var connectionCredentials = new ConnectionCredentials();
             TranslationToolHelper.SetDefaultTranslationPath();
-            DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString);
+            DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString, DatabaseType.Main, connectionCredentials.CommandTimeout);
             EidssUserContext.Init();
             CustomCultureHelper.CurrentCountry = EidssSiteContext.Instance.CountryID;
 

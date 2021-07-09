@@ -24,9 +24,10 @@ namespace bv.tests.Reports
         [TestInitialize]
         public override void MyTestInitialize()
         {
-          
-            DbManagerFactory.SetSqlFactory(new ConnectionCredentials().ConnectionString);
-            DbManagerFactory.SetSqlFactory(new ConnectionCredentials(null, "Archive").ConnectionString, DatabaseType.Archive);
+
+            var cc = new ConnectionCredentials();
+            DbManagerFactory.SetSqlFactory(cc.ConnectionString, DatabaseType.Main, cc.CommandTimeout);
+            DbManagerFactory.SetSqlFactory(new ConnectionCredentials(null, "Archive").ConnectionString, DatabaseType.Archive, cc.CommandTimeout);
            
         }
         [TestMethod]

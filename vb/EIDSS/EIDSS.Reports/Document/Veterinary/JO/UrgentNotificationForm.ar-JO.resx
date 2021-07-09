@@ -1,0 +1,1331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xrLabel128.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt, style=Bold</value>
+  </data>
+  <data name="xrLabel128.Text" xml:space="preserve">
+    <value>ملاحظة: تصوير النموذج نسختين و ارساله الى مديرية مختبرات الثروة الحيوانية مع العينات المرسلة و النسخة الأخرى الى مديرية البيطرة و الصحة الحيوانية</value>
+  </data>
+  <assembly alias="DevExpress.Data.v15.1" name="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrLabel128.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>TopRight</value>
+  </data>
+  <data name="xrLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 14.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel4.Text" xml:space="preserve">
+    <value>نموذج تبليغ طارئ</value>
+  </data>
+  <data name="xrLabel4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xrLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 14.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>514.3332, 50.5000038</value>
+  </data>
+  <data name="xrLabel3.Text" xml:space="preserve">
+    <value>مديرية البيطرة والصحة الحيوانية</value>
+  </data>
+  <data name="xrLabel3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 14.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>529.3332, 27.5000248</value>
+  </data>
+  <data name="xrLabel2.Text" xml:space="preserve">
+    <value>وزارة الزراعة الأردنية</value>
+  </data>
+  <data name="xrLabel2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="xrLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 14.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>50.5262756, 38.0000038</value>
+  </data>
+  <data name="xrLabel1.Text" xml:space="preserve">
+    <value>قسم الصحة الحيوانية</value>
+  </data>
+  <data name="xrLabel1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrLabel126.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel126.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>13.5002136, 44.1665649</value>
+  </data>
+  <data name="xrLabel127.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel127.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>663.861, 44.1664619</value>
+  </data>
+  <data name="xrLabel127.Text" xml:space="preserve">
+    <value>التشخيص النهائي</value>
+  </data>
+  <data name="xrLabel122.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel122.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>275.000061, 10</value>
+  </data>
+  <data name="xrLabel122.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>375.7599, 23</value>
+  </data>
+  <data name="xrLabel123.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel123.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>650.76, 10</value>
+  </data>
+  <data name="xrLabel123.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>112.739868, 23</value>
+  </data>
+  <data name="xrLabel123.Text" xml:space="preserve">
+    <value>اسم الطبيب البيطري</value>
+  </data>
+  <data name="xrLabel124.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel124.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>206.359558, 10</value>
+  </data>
+  <data name="xrLabel124.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>46.31, 23</value>
+  </data>
+  <data name="xrLabel124.Text" xml:space="preserve">
+    <value>التوقيع</value>
+  </data>
+  <data name="xrLabel125.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel125.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>14.3332415, 10</value>
+  </data>
+  <data name="xrLabel125.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>192.026337, 22.9999962</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Detail1.HeightF" type="System.Single, mscorlib">
+    <value>77.5</value>
+  </data>
+  <data name="xrTable2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrTable2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>13.5001287, 188.0951</value>
+  </data>
+  <data name="xrOtherHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrOtherHeader.Text" xml:space="preserve">
+    <value>أخرى</value>
+  </data>
+  <data name="xrEquineHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrEquineHeader.Text" xml:space="preserve">
+    <value>خيل</value>
+  </data>
+  <data name="xrCamelusHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrCamelusHeader.Text" xml:space="preserve">
+    <value>جمال</value>
+  </data>
+  <data name="xrBovineHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrBovineHeader.Text" xml:space="preserve">
+    <value>أبقار</value>
+  </data>
+  <data name="xrCaprineHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrCaprineHeader.Text" xml:space="preserve">
+    <value>ماعز</value>
+  </data>
+  <data name="xrOvineHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrOvineHeader.Text" xml:space="preserve">
+    <value>ضأن</value>
+  </data>
+  <data name="xrAttrHeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrAttrHeader.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrTableRow2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrOtherTotalAnimals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrEquineTotalAnimals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCamelusTotalAnimals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrBovineTotalAnimals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCaprineTotalAnimals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrOvineTotalAnimals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrAttrTotalAnimals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrAttrTotalAnimals.Text" xml:space="preserve">
+    <value>عدد الحيوانات ضمن الحيازة</value>
+  </data>
+  <data name="xrAttrTotalAnimals.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrOtherTotalSick.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrEquineTotalSick.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCamelusTotalSick.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrBovineTotalSick.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCaprineTotalSick.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrOvineTotalSick.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrAttrTotalSick.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrAttrTotalSick.Text" xml:space="preserve">
+    <value>عدد الحيوانات المصابة</value>
+  </data>
+  <data name="xrAttrTotalSick.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrOtherTotalDead.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrEquineTotalDead.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCamelusTotalDead.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrBovineTotalDead.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCaprineTotalDead.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrOvineTotalDead.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrAttrTotalDead.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrAttrTotalDead.Text" xml:space="preserve">
+    <value>عدد الحيوانات النافقة</value>
+  </data>
+  <data name="xrAttrTotalDead.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrOtherTotalAborted.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrEquineTotalAborted.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCamelusTotalAborted.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrBovineTotalAborted.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCaprineTotalAborted.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrOvineTotalAborted.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrAttrTotalAborted.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrAttrTotalAborted.Text" xml:space="preserve">
+    <value>عدد الحيوانات المجهضة</value>
+  </data>
+  <data name="xrAttrTotalAborted.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrOtherTotalVaccinated.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrEquineTotalVaccinated.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCamelusTotalVaccinated.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrBovineTotalVaccinated.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCaprineTotalVaccinated.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrOvineTotalVaccinated.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrAttrTotalVaccinated.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrAttrTotalVaccinated.Text" xml:space="preserve">
+    <value>عدد الحيوانات المحصنة للمرض المشتبه به</value>
+  </data>
+  <data name="xrAttrTotalVaccinated.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrOtherSickAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrEquineSickAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCamelusSickAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrBovineSickAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCaprineSickAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrOvineSickAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrAttrSickAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrAttrSickAgeRange.Text" xml:space="preserve">
+    <value>الفئة العمرية للحيوانات المريضة</value>
+  </data>
+  <data name="xrAttrSickAgeRange.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrOtherDeadAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrEquineDeadAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCamelusDeadAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrBovineDeadAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrCaprineDeadAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrOvineDeadAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrAttrDeadAgeRange.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrAttrDeadAgeRange.Text" xml:space="preserve">
+    <value>الفئة العمرية للحيوانات النافقة</value>
+  </data>
+  <data name="xrAttrDeadAgeRange.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrLabel17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel17.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>293.5001, 161.148132</value>
+  </data>
+  <data name="xrLabel17.Text" xml:space="preserve">
+    <value>تفاصيل الحيازة</value>
+  </data>
+  <data name="xrLabel77.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel77.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>23.5001183, 388.0951</value>
+  </data>
+  <data name="xrLabel77.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>607.029968, 23.00003</value>
+  </data>
+  <data name="xrLabel76.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel76.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>630.530151, 388.095154</value>
+  </data>
+  <data name="xrLabel76.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>132.97, 23</value>
+  </data>
+  <data name="xrLabel76.Text" xml:space="preserve">
+    <value>اسم المرض المشتبه به</value>
+  </data>
+  <data name="xrLabel75.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel75.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>595.529846, 411.095184</value>
+  </data>
+  <data name="xrLabel75.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>167.97, 23</value>
+  </data>
+  <data name="xrLabel75.Text" xml:space="preserve">
+    <value>تاريخ ظهور الأعراض المرضية</value>
+  </data>
+  <data name="xrLabel74.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel74.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>406.029816, 411.095184</value>
+  </data>
+  <data name="xrLabel74.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>189.5, 23</value>
+  </data>
+  <data name="xrLabel78.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel78.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>14.3333721, 442.314758</value>
+  </data>
+  <data name="xrLabel78.Text" xml:space="preserve">
+    <value>الأعراض</value>
+  </data>
+  <data name="xrLabel79.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel79.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>14.3333721, 465.3148</value>
+  </data>
+  <data name="xrLabel79.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="xrLabel80.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel80.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>46.33337, 465.3148</value>
+  </data>
+  <data name="xrLabel80.Text" xml:space="preserve">
+    <value>حمى</value>
+  </data>
+  <data name="xrLabel82.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel82.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>46.33337, 488.314758</value>
+  </data>
+  <data name="xrLabel82.Text" xml:space="preserve">
+    <value>العرج</value>
+  </data>
+  <data name="xrLabel81.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel81.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>14.3333721, 488.314758</value>
+  </data>
+  <data name="xrLabel81.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="xrLabel84.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel84.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>46.33337, 511.31485</value>
+  </data>
+  <data name="xrLabel84.Text" xml:space="preserve">
+    <value>ضيق التنفس</value>
+  </data>
+  <data name="xrLabel83.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel83.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>14.3333721, 511.31485</value>
+  </data>
+  <data name="xrLabel83.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="xrLabel86.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel86.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>218.333374, 465.3148</value>
+  </data>
+  <data name="xrLabel86.Text" xml:space="preserve">
+    <value>إفرازات الأنف</value>
+  </data>
+  <data name="xrLabel85.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel85.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>186.333374, 465.3148</value>
+  </data>
+  <data name="xrLabel85.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="xrLabel88.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel88.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>186.333374, 488.314758</value>
+  </data>
+  <data name="xrLabel88.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="xrLabel87.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel87.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>218.333374, 488.314758</value>
+  </data>
+  <data name="xrLabel87.Text" xml:space="preserve">
+    <value>إفرازات بصرية</value>
+  </data>
+  <data name="xrLabel90.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel90.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>186.333374, 511.31485</value>
+  </data>
+  <data name="xrLabel90.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="xrLabel89.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel89.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>218.333374, 511.31485</value>
+  </data>
+  <data name="xrLabel89.Text" xml:space="preserve">
+    <value>سيلان اللعاب</value>
+  </data>
+  <data name="xrLabel92.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel92.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>358.333344, 465.3148</value>
+  </data>
+  <data name="xrLabel92.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="xrLabel91.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel91.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>390.333374, 465.3148</value>
+  </data>
+  <data name="xrLabel91.Text" xml:space="preserve">
+    <value>إسهال</value>
+  </data>
+  <data name="xrLabel94.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel94.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>390.333374, 488.314758</value>
+  </data>
+  <data name="xrLabel94.Text" xml:space="preserve">
+    <value>الجروح الجلدية</value>
+  </data>
+  <data name="xrLabel93.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel93.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>358.333344, 488.314758</value>
+  </data>
+  <data name="xrLabel93.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="xrLabel96.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel96.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>358.333344, 511.31485</value>
+  </data>
+  <data name="xrLabel96.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="xrLabel95.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel95.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>390.333374, 511.31485</value>
+  </data>
+  <data name="xrLabel95.Text" xml:space="preserve">
+    <value>إجهاضات</value>
+  </data>
+  <data name="xrLabel97.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel97.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>530.3333, 465.3148</value>
+  </data>
+  <data name="xrLabel97.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="xrLabel98.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel98.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>562.3333, 465.3148</value>
+  </data>
+  <data name="xrLabel98.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>202, 23</value>
+  </data>
+  <data name="xrLabel98.Text" xml:space="preserve">
+    <value>علامات عصبية</value>
+  </data>
+  <data name="xrLabel100.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9pt</value>
+  </data>
+  <data name="xrLabel100.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>14.3333435, 534.3148</value>
+  </data>
+  <data name="xrLabel100.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>750, 32</value>
+  </data>
+  <data name="xrLabel101.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel101.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>27.0000877, 578.2484</value>
+  </data>
+  <data name="xrLabel101.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>613, 23</value>
+  </data>
+  <data name="xrLabel102.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel102.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>640.330139, 578.2484</value>
+  </data>
+  <data name="xrLabel102.Text" xml:space="preserve">
+    <value>العينات التي جمعها</value>
+  </data>
+  <data name="xrLabel13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel13.Text" xml:space="preserve">
+    <value>اسم مالك القطيع</value>
+  </data>
+  <data name="xrLabel12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel12.Text" xml:space="preserve">
+    <value>عنوانه</value>
+  </data>
+  <data name="xrLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel11.Text" xml:space="preserve">
+    <value>الهاتف</value>
+  </data>
+  <data name="xrLabel9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>678.03, 16.42</value>
+  </data>
+  <data name="xrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>80.5, 23</value>
+  </data>
+  <data name="xrLabel9.Text" xml:space="preserve">
+    <value>مديرية زراعة</value>
+  </data>
+  <data name="xrLabel10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel10.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>164.53, 23</value>
+  </data>
+  <data name="xrLabel8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>423.03, 16.42</value>
+  </data>
+  <data name="xrLabel8.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="xrLabel8.Text" xml:space="preserve">
+    <value>العيادة البيطرية</value>
+  </data>
+  <data name="xrLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel7.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>159.53, 23</value>
+  </data>
+  <data name="xrLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>198.03, 16.42</value>
+  </data>
+  <data name="xrLabel6.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>45, 23</value>
+  </data>
+  <data name="xrLabel6.Text" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="xrLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrLabel5.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>184.53, 23</value>
+  </data>
+  <data name="xrLabel99.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel99.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>530.3333, 488.314758</value>
+  </data>
+  <data name="xrLabel99.SizeF" type="System.Drawing.SizeF, System.Drawing">
+    <value>234, 46</value>
+  </data>
+  <data name="xrLabel99.Text" xml:space="preserve">
+    <value>علامات سريرية أخرى:</value>
+  </data>
+  <data name="xrLabel103.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel103.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>288.499969, 615.7484</value>
+  </data>
+  <data name="xrLabel103.Text" xml:space="preserve">
+    <value>نتيجة فحص المختبر</value>
+  </data>
+  <data name="Detail2.HeightF" type="System.Single, mscorlib">
+    <value>645.970642</value>
+  </data>
+  <data name="xrTable1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrTableCell2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrTableCell3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrTableCell3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrTableCell1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt</value>
+  </data>
+  <data name="xrTableCell1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v15.1">
+    <value>MiddleRight</value>
+  </data>
+  <data name="xrLabel106.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel106.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>514.3332, 0</value>
+  </data>
+  <data name="xrLabel106.Text" xml:space="preserve">
+    <value>العينات نوعها/عددها</value>
+  </data>
+  <data name="xrLabel104.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel104.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>14.3332415, 0</value>
+  </data>
+  <data name="xrLabel104.Text" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="xrLabel105.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+  <data name="xrLabel105.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v15.1">
+    <value>264.333252, 0</value>
+  </data>
+  <data name="xrLabel105.Text" xml:space="preserve">
+    <value>الفحص المستخدم</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 11.25pt, style=Bold</value>
+  </data>
+</root>

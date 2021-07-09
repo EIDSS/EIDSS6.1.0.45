@@ -969,7 +969,7 @@ Public Class FarmPanel
     End Sub
 
     Private Sub OwnerNamePanel_Resize(ByVal sender As Object, ByVal e As EventArgs) Handles PanelControl1.Resize
-        If (Not IsDesignMode() AndAlso EidssSiteContext.Instance.IsIraqCustomization) Then
+        If (Not IsDesignMode() AndAlso (EidssSiteContext.Instance.IsIraqCustomization)) Then
             txtFarmOwnerLast.Left = 0
             txtFarmOwnerLast.Width = PanelControl1.ClientSize.Width - txtFarmOwnerMiddle.Width
             txtFarmOwnerMiddle.Left = PanelControl1.ClientSize.Width - txtFarmOwnerMiddle.Width

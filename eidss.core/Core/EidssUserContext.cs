@@ -9,6 +9,8 @@ using bv.model.BLToolkit;
 using bv.model.Model.Core;
 using eidss.model.Enums;
 using DataException = BLToolkit.Data.DataException;
+using bv.common.Configuration;
+using System.Threading;
 
 namespace eidss.model.Core
 {
@@ -192,6 +194,43 @@ namespace eidss.model.Core
             (DbManagerProxy manager, AuditEventType auditEventType, EIDSSAuditObject eidssAuditObject, AuditTable auditTable,
                 long? objectId)
         {
+            //Exception lastEx = null;
+            //int iDeadlockAttemptsCount = BaseSettings.DeadlockAttemptsCount;
+            //for (int iAttemptNumber = 0; iAttemptNumber < iDeadlockAttemptsCount; iAttemptNumber++)
+            //{
+            //    try
+            //    {
+            //        DataAuditEvent = manager.SetSpCommand("dbo.spAudit_CreateNewEvent",
+            //            auditEventType,
+            //            eidssAuditObject,
+            //            auditTable,
+            //            objectId,
+            //            DBNull.Value,
+            //            DBNull.Value
+            //            ).ExecuteScalar<long>(ScalarSourceType.OutputParameter, "idfDataAuditEvent");
+            //        return DataAuditEvent;
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        lastEx = e;
+            //        if (!manager.IsTransactionStarted)
+            //        {
+            //            if (DbModelException.IsDeadlockException(e))
+            //            {
+            //                Thread.Sleep(BaseSettings.DeadlockDelay);
+            //                continue;
+            //            }
+            //        }
+
+            //        if (e is DataException)
+            //        {
+            //            throw DbModelException.Create(null, e as DataException);
+            //        }
+            //        throw;
+            //    }
+            //}
+
+            //throw lastEx;
             try
             {
                 DataAuditEvent = manager.SetSpCommand("dbo.spAudit_CreateNewEvent",

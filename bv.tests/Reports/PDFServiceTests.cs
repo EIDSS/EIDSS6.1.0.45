@@ -76,7 +76,8 @@ namespace bv.tests.Reports
         [TestInitialize]
         public void TestInit()
         {
-            DbManagerFactory.SetSqlFactory(new ConnectionCredentials().ConnectionString);
+            var cc = new ConnectionCredentials();
+            DbManagerFactory.SetSqlFactory(cc.ConnectionString, DatabaseType.Main, cc.CommandTimeout);
             EidssUserContext.Init();
         }
 

@@ -9,6 +9,7 @@
           <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/eidss.model.Avr.Chart" name="_x003C_ChartType_x003E_k__BackingField" nillable="true" type="q1:DBChartType" />
           <xs:element name="_x003C_Height_x003E_k__BackingField" type="xs:int" />
           <xs:element name="_x003C_Lang_x003E_k__BackingField" nillable="true" type="xs:string" />
+		  <xs:element name="_x003C_UserId_x003E_k__BackingField" nillable="true" type="xs:long" />
           <xs:element name="_x003C_ViewId_x003E_k__BackingField" type="xs:long" />
           <xs:element name="_x003C_Width_x003E_k__BackingField" type="xs:int" />
         </xs:sequence>
@@ -59,6 +60,7 @@
       <xs:element name="_x003C_BinaryHeader_x003E_k__BackingField" nillable="true" type="tns:QueryTablePacketDTO" />
       <xs:element name="_x003C_PacketCount_x003E_k__BackingField" type="xs:int" />
       <xs:element name="_x003C_QueryCacheId_x003E_k__BackingField" type="xs:long" />
+	  <xs:element name="_x003C_UserId_x003E_k__BackingField" nillable="true" type="xs:long" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="QueryTableHeaderDTO" nillable="true" type="tns:QueryTableHeaderDTO" />

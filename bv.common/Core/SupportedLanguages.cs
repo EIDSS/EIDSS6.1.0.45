@@ -19,7 +19,8 @@ namespace bv.common.Core
         public const string lngAzLat = "az-L";
         public const string lngAr = "hy";
         public const string lngUk = "uk";
-        public const string lngIraq = "ar";
+        public const string lngIraq = "ar-IQ";
+        public const string lngJordan = "ar";
         public const string lngVietnam = "vi";
         public const string lngLaos = "lo";
         public const string lngThai = "th";
@@ -72,6 +73,7 @@ namespace bv.common.Core
             AddLanguage(All, lngKz, "kk-KZ");
             AddLanguage(All, lngAr, "hy-AM");
             AddLanguage(All, lngIraq, "ar-IQ");
+            AddLanguage(All, lngJordan, "ar-JO");
             AddLanguage(All, lngLaos, "lo-LA");
             AddLanguage(All, lngVietnam, "vi-VN");
             AddLanguage(All, lngThai, "th-TH");
@@ -120,6 +122,9 @@ namespace bv.common.Core
                         case "ar-IQ":
                             AddLanguage(Installed, lngIraq, language.Culture.Name);
                             break;
+                        case "ar-JO":
+                            AddLanguage(Installed, lngJordan, language.Culture.Name);
+                            break;
                         case "th-TH":
                             AddLanguage(Installed, lngThai, language.Culture.Name);
                             break;
@@ -138,6 +143,7 @@ namespace bv.common.Core
                 AddLanguage(Installed, lngKz, "kk-KZ");
                 AddLanguage(Installed, lngAr, "hy-AM");
                 AddLanguage(Installed, lngIraq, "ar-IQ");
+                AddLanguage(Installed, lngJordan, "ar-JO");
                 AddLanguage(Installed, lngLaos, "lo-LA");
                 AddLanguage(Installed, lngVietnam, "vi-VN");
                 AddLanguage(Installed, lngThai, "th-TH");
@@ -167,7 +173,9 @@ namespace bv.common.Core
                 case lngUk:
                     return "Ukrainian";
                 case lngIraq:
-                    return "Arabic";
+                    return "Arabic (Iraq)";
+                case lngJordan:
+                    return "Arabic (Jordan)";
                 case lngLaos:
                     return "Laos";
                 case lngVietnam:

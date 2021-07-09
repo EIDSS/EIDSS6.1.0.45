@@ -173,9 +173,7 @@
     <Compile Include="BaseControls\Filters\BaseFilter.designer.cs">
       <DependentUpon>BaseFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.cs" />
     <Compile Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.Designer.cs">
       <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
     </Compile>
@@ -433,6 +431,17 @@
     </Compile>
     <Compile Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.designer.cs">
       <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document\Veterinary\JO\UrgentNotificationForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Document\Veterinary\JO\UrgentNotificationForm.Designer.cs">
+      <DependentUpon>UrgentNotificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document\Veterinary\JO\UrgentNotificationFormDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UrgentNotificationFormDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Parameterized\Human\KZ\DataSet\ComparativeKZ.cs">
       <DependentUpon>ComparativeKZ.xsd</DependentUpon>
@@ -2292,8 +2301,8 @@
       <DependentUpon>LivestockAnimalCSDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Document\Veterinary\LivestockInvestigation\LivestockInvestigationDataSet.cs">
-      <SubType>Component</SubType>
       <DependentUpon>LivestockInvestigationDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Document\Veterinary\LivestockInvestigation\LivestockInvestigationDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2902,6 +2911,9 @@
     <EmbeddedResource Include="Barcode\Designer\DesignForm.ar-IQ.resx">
       <DependentUpon>DesignForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Barcode\Designer\DesignForm.ar-JO.resx">
+      <DependentUpon>DesignForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Barcode\Designer\DesignForm.hy-am.resx">
       <DependentUpon>DesignForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -2962,6 +2974,9 @@
     <EmbeddedResource Include="BaseControls\Aggregate\AdmUnitReport.ar-IQ.resx">
       <DependentUpon>AdmUnitReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Aggregate\AdmUnitReport.ar-JO.resx">
+      <DependentUpon>AdmUnitReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Aggregate\AdmUnitReport.az-Latn-AZ.resx">
       <DependentUpon>AdmUnitReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -2984,6 +2999,9 @@
       <DependentUpon>AdmUnitReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\AgeGroupLookupFilter.ar-IQ.resx">
+      <DependentUpon>AgeGroupLookupFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\AgeGroupLookupFilter.ar-JO.resx">
       <DependentUpon>AgeGroupLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\AgeGroupLookupFilter.az-Latn-AZ.resx">
@@ -3011,6 +3029,9 @@
       <DependentUpon>AgeGroupLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\BaseLookupFilter.ar-IQ.resx">
+      <DependentUpon>BaseLookupFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\BaseLookupFilter.ar-JO.resx">
       <DependentUpon>BaseLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\BaseLookupFilter.az-Latn-AZ.resx">
@@ -3050,6 +3071,9 @@
     <EmbeddedResource Include="BaseControls\Filters\CaseClassificationMultiFilter.ar-IQ.resx">
       <DependentUpon>CaseClassificationMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\CaseClassificationMultiFilter.ar-JO.resx">
+      <DependentUpon>CaseClassificationMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\CaseClassificationMultiFilter.az-Latn-AZ.resx">
       <DependentUpon>CaseClassificationMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3079,6 +3103,9 @@
     <EmbeddedResource Include="BaseControls\Filters\CaseReportTypeLookupFilter.ar-IQ.resx">
       <DependentUpon>CaseReportTypeLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\CaseReportTypeLookupFilter.ar-JO.resx">
+      <DependentUpon>CaseReportTypeLookupFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\CaseReportTypeLookupFilter.az-Latn-AZ.resx">
       <DependentUpon>CaseReportTypeLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3101,6 +3128,9 @@
     <EmbeddedResource Include="BaseControls\Filters\CounterMultiFilter.ar-IQ.resx">
       <DependentUpon>CounterMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\CounterMultiFilter.ar-JO.resx">
+      <DependentUpon>CounterMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\CounterMultiFilter.hy-AM.resx">
       <DependentUpon>CounterMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3119,6 +3149,9 @@
     <EmbeddedResource Include="BaseControls\Filters\DistrictFilter.ar-IQ.resx">
       <DependentUpon>DistrictFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\DistrictFilter.ar-JO.resx">
+      <DependentUpon>DistrictFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\DistrictFilter.az-Latn-AZ.resx">
       <DependentUpon>DistrictFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3129,6 +3162,9 @@
       <DependentUpon>DistrictFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\GroupsMultiFilter.ar-IQ.resx">
+      <DependentUpon>GroupsMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\GroupsMultiFilter.ar-JO.resx">
       <DependentUpon>GroupsMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\GroupsMultiFilter.az-Latn-AZ.resx">
@@ -3153,6 +3189,9 @@
       <DependentUpon>GroupsMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.ar-IQ.resx">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.ar-JO.resx">
       <DependentUpon>HumDiagnosisGroupsDiagnosesFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesFilter.az-Latn-AZ.resx">
@@ -3193,6 +3232,9 @@
     <EmbeddedResource Include="BaseControls\Filters\HumSingleMeaslesDiagnosisFilter.ar-IQ.resx">
       <DependentUpon>HumSingleMeaslesDiagnosisFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumSingleMeaslesDiagnosisFilter.ar-JO.resx">
+      <DependentUpon>HumSingleMeaslesDiagnosisFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumSingleMeaslesDiagnosisFilter.hy-AM.resx">
       <DependentUpon>HumSingleMeaslesDiagnosisFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3206,6 +3248,9 @@
       <DependentUpon>HumSingleMeaslesDiagnosisFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumSingleTubDiagnosisFilter.ar-IQ.resx">
+      <DependentUpon>HumSingleTubDiagnosisFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumSingleTubDiagnosisFilter.ar-JO.resx">
       <DependentUpon>HumSingleTubDiagnosisFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumSingleTubDiagnosisFilter.hy-AM.resx">
@@ -3266,6 +3311,9 @@
       <DependentUpon>QuarterMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RegionAZFilter.ar-IQ.resx">
+      <DependentUpon>RegionAZFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RegionAZFilter.ar-JO.resx">
       <DependentUpon>RegionAZFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\SpeciesTypeAZMultiFilter.az-Latn-AZ.resx">
@@ -3372,6 +3420,9 @@
     <EmbeddedResource Include="BaseControls\Filters\HumZoonoticGroupsDiagnosesMultiFilter.ar-IQ.resx">
       <DependentUpon>HumZoonoticGroupsDiagnosesMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumZoonoticGroupsDiagnosesMultiFilter.ar-JO.resx">
+      <DependentUpon>HumZoonoticGroupsDiagnosesMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumZoonoticGroupsDiagnosesMultiFilter.az-Latn-AZ.resx">
       <DependentUpon>HumZoonoticGroupsDiagnosesMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3434,6 +3485,9 @@
     <EmbeddedResource Include="BaseControls\Filters\SyndrOrganizationFilter.ar-IQ.resx">
       <DependentUpon>SyndrOrganizationFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\SyndrOrganizationFilter.ar-JO.resx">
+      <DependentUpon>SyndrOrganizationFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\SyndrOrganizationFilter.hy-AM.resx">
       <DependentUpon>SyndrOrganizationFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3441,6 +3495,9 @@
       <DependentUpon>SyndrOrganizationFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\ThaiCaseClassificationFilter.ar-IQ.resx">
+      <DependentUpon>ThaiCaseClassificationFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\ThaiCaseClassificationFilter.ar-JO.resx">
       <DependentUpon>ThaiCaseClassificationFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\ThaiCaseClassificationFilter.hy-AM.resx">
@@ -3453,6 +3510,9 @@
       <DependentUpon>ThaiCaseClassificationFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\ThaiProvinceMultiFilter.ar-IQ.resx">
+      <DependentUpon>ThaiProvinceMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\ThaiProvinceMultiFilter.ar-JO.resx">
       <DependentUpon>ThaiProvinceMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\ThaiProvinceMultiFilter.en-TH-Eidss.resx">
@@ -3482,6 +3542,9 @@
     <EmbeddedResource Include="BaseControls\Filters\ThaiRegionMultiFilter.ar-IQ.resx">
       <DependentUpon>ThaiRegionMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\ThaiRegionMultiFilter.ar-JO.resx">
+      <DependentUpon>ThaiRegionMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\ThaiRegionMultiFilter.hy-AM.resx">
       <DependentUpon>ThaiRegionMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3500,6 +3563,9 @@
       <DependentUpon>ThaiRegionMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\ThaiZonesMultiFilter.ar-IQ.resx">
+      <DependentUpon>ThaiZonesMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\ThaiZonesMultiFilter.ar-JO.resx">
       <DependentUpon>ThaiZonesMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\ThaiZonesMultiFilter.hy-AM.resx">
@@ -3577,6 +3643,9 @@
     <EmbeddedResource Include="BaseControls\Filters\YearMultiFilter.ar-IQ.resx">
       <DependentUpon>YearMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\YearMultiFilter.ar-JO.resx">
+      <DependentUpon>YearMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\YearMultiFilter.az-Latn-AZ.resx">
       <DependentUpon>YearMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3602,6 +3671,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesMultiFilter.ar-IQ.resx">
+      <DependentUpon>HumDiagnosisGroupsDiagnosesMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesMultiFilter.ar-JO.resx">
       <DependentUpon>HumDiagnosisGroupsDiagnosesMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisGroupsDiagnosesMultiFilter.az-Latn-AZ.resx">
@@ -3646,6 +3718,9 @@
     <EmbeddedResource Include="BaseControls\Filters\HumStandardDiagnosisAzSortMultiFilter.ar-IQ.resx">
       <DependentUpon>HumStandardDiagnosisAzSortMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumStandardDiagnosisAzSortMultiFilter.ar-JO.resx">
+      <DependentUpon>HumStandardDiagnosisAzSortMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumStandardDiagnosisAzSortMultiFilter.az-Latn-AZ.resx">
       <DependentUpon>HumStandardDiagnosisAzSortMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3675,6 +3750,9 @@
     <EmbeddedResource Include="BaseControls\Filters\HumGenderLookupFilter.ar-IQ.resx">
       <DependentUpon>HumGenderLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumGenderLookupFilter.ar-JO.resx">
+      <DependentUpon>HumGenderLookupFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumGenderLookupFilter.az-Latn-AZ.resx">
       <DependentUpon>HumGenderLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3689,6 +3767,9 @@
       <DependentUpon>HumStandardDiagnosisMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\QuarterMultiFilter.ar-IQ.resx">
+      <DependentUpon>QuarterMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\QuarterMultiFilter.ar-JO.resx">
       <DependentUpon>QuarterMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\QuarterMultiFilter.az-Latn-AZ.resx">
@@ -3707,6 +3788,9 @@
     <EmbeddedResource Include="BaseControls\Filters\HumOrganizationFilter.ar-IQ.resx">
       <DependentUpon>HumOrganizationFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumOrganizationFilter.ar-JO.resx">
+      <DependentUpon>HumOrganizationFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumOrganizationFilter.hy-AM.resx">
       <DependentUpon>HumOrganizationFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3719,6 +3803,9 @@
     <EmbeddedResource Include="BaseControls\Filters\HumSingleDiagnosisFilter.ar-IQ.resx">
       <DependentUpon>HumSingleDiagnosisFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumSingleDiagnosisFilter.ar-JO.resx">
+      <DependentUpon>HumSingleDiagnosisFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumSingleDiagnosisFilter.hy-AM.resx">
       <DependentUpon>HumSingleDiagnosisFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3729,6 +3816,9 @@
       <DependentUpon>HumSingleDiagnosisFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumStandardDiagnosisMultiFilter.ar-IQ.resx">
+      <DependentUpon>HumStandardDiagnosisMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumStandardDiagnosisMultiFilter.ar-JO.resx">
       <DependentUpon>HumStandardDiagnosisMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumStandardDiagnosisMultiFilter.hy-AM.resx">
@@ -3746,6 +3836,9 @@
     <EmbeddedResource Include="BaseControls\Filters\RayonFilter.en-IQ-Eidss.resx">
       <DependentUpon>RayonFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RayonFilter.en-JO-Eidss.resx">
+      <DependentUpon>RayonFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RayonFilter.en-US-Eidss.resx">
       <DependentUpon>RayonFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3755,10 +3848,17 @@
     <EmbeddedResource Include="BaseControls\Filters\RayonMultiFilter.ar-IQ.resx">
       <DependentUpon>RayonMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RayonMultiFilter.ar-JO.resx">
+      <DependentUpon>RayonMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RayonMultiFilter.az-Latn-AZ.resx">
       <DependentUpon>RayonMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RayonMultiFilter.en-IQ-Eidss.resx">
+      <DependentUpon>RayonMultiFilter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RayonMultiFilter.en-JO-Eidss.resx">
       <DependentUpon>RayonMultiFilter.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -3788,6 +3888,9 @@
     <EmbeddedResource Include="BaseControls\Filters\RegionFilter.en-IQ-Eidss.resx">
       <DependentUpon>RegionFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RegionFilter.en-JO-Eidss.resx">
+      <DependentUpon>RegionFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RegionFilter.en-US-Eidss.resx">
       <DependentUpon>RegionFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3800,10 +3903,16 @@
     <EmbeddedResource Include="BaseControls\Filters\RegionMultiFilter.ar-IQ.resx">
       <DependentUpon>RegionMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RegionMultiFilter.ar-JO.resx">
+      <DependentUpon>RegionMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RegionMultiFilter.az-Latn-AZ.resx">
       <DependentUpon>RegionMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RegionMultiFilter.en-IQ-Eidss.resx">
+      <DependentUpon>RegionMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RegionMultiFilter.en-JO-Eidss.resx">
       <DependentUpon>RegionMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RegionMultiFilter.en-US-Eidss.resx">
@@ -3834,6 +3943,9 @@
     <EmbeddedResource Include="BaseControls\Filters\SettlementFilter.ar-IQ.resx">
       <DependentUpon>SettlementFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\SettlementFilter.ar-JO.resx">
+      <DependentUpon>SettlementFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\SettlementFilter.az-Latn-AZ.resx">
       <DependentUpon>SettlementFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3853,6 +3965,9 @@
     <EmbeddedResource Include="BaseControls\Filters\SiteLookupFilter.ar-IQ.resx">
       <DependentUpon>SiteLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\SiteLookupFilter.ar-JO.resx">
+      <DependentUpon>SiteLookupFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\SiteLookupFilter.az-Latn-AZ.resx">
       <DependentUpon>SiteLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -3869,6 +3984,9 @@
       <DependentUpon>SiteLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\SourceDateMultiFilter.ar-IQ.resx">
+      <DependentUpon>SourceDateMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\SourceDateMultiFilter.ar-JO.resx">
       <DependentUpon>SourceDateMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\SourceDateMultiFilter.az-Latn-AZ.resx">
@@ -3895,6 +4013,9 @@
       <DependentUpon>SourceDateMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\SyndromicTypeLookupFilter.ar-IQ.resx">
+      <DependentUpon>SyndromicTypeLookupFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\SyndromicTypeLookupFilter.ar-JO.resx">
       <DependentUpon>SyndromicTypeLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\SyndromicTypeLookupFilter.az-Latn-AZ.resx">
@@ -3929,6 +4050,9 @@
       <DependentUpon>SyndrOrganizationFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\VetCaseTypeLookupFilter.ar-IQ.resx">
+      <DependentUpon>VetCaseTypeLookupFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\VetCaseTypeLookupFilter.ar-JO.resx">
       <DependentUpon>VetCaseTypeLookupFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\VetCaseTypeLookupFilter.az-Latn-AZ.resx">
@@ -3979,6 +4103,9 @@
     <EmbeddedResource Include="BaseControls\Filters\VetDiagnosisMultiFilter.ar-IQ.resx">
       <DependentUpon>VetDiagnosisMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\VetDiagnosisMultiFilter.ar-JO.resx">
+      <DependentUpon>VetDiagnosisMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\VetDiagnosisMultiFilter.az-Latn-AZ.resx">
       <DependentUpon>VetDiagnosisMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -4000,6 +4127,9 @@
     <EmbeddedResource Include="BaseControls\Filters\VetOrganizationFilter.ar-IQ.resx">
       <DependentUpon>VetOrganizationFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\VetOrganizationFilter.ar-JO.resx">
+      <DependentUpon>VetOrganizationFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\VetOrganizationFilter.hy-AM.resx">
       <DependentUpon>VetOrganizationFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -4016,6 +4146,9 @@
       <DependentUpon>YearMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Form\BarCodeForm.ar-IQ.resx">
+      <DependentUpon>BarCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Form\BarCodeForm.ar-JO.resx">
       <DependentUpon>BarCodeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Form\BarCodeForm.az-Latn-AZ.resx">
@@ -4051,6 +4184,9 @@
     <EmbeddedResource Include="BaseControls\Form\ReportForm.ar-IQ.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Form\ReportForm.ar-JO.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Form\ReportForm.az-Latn-AZ.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4084,6 +4220,9 @@
     <EmbeddedResource Include="BaseControls\Keeper\BaseBarcodeKeeper.ar-IQ.resx">
       <DependentUpon>BaseBarcodeKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Keeper\BaseBarcodeKeeper.ar-JO.resx">
+      <DependentUpon>BaseBarcodeKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Keeper\BaseBarcodeKeeper.az-Latn-AZ.resx">
       <SubType>Designer</SubType>
       <DependentUpon>BaseBarcodeKeeper.cs</DependentUpon>
@@ -4115,6 +4254,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Keeper\BaseDateKeeper.ar-IQ.resx">
+      <DependentUpon>BaseDateKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Keeper\BaseDateKeeper.ar-JO.resx">
       <DependentUpon>BaseDateKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Keeper\BaseDateKeeper.az-Latn-AZ.resx">
@@ -4157,6 +4299,9 @@
     <EmbeddedResource Include="BaseControls\Keeper\BaseIntervalKeeper.ar-IQ.resx">
       <DependentUpon>BaseIntervalKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Keeper\BaseIntervalKeeper.ar-JO.resx">
+      <DependentUpon>BaseIntervalKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Keeper\BaseIntervalKeeper.az-Latn-AZ.resx">
       <DependentUpon>BaseIntervalKeeper.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4193,6 +4338,9 @@
     <EmbeddedResource Include="BaseControls\Keeper\BaseReportKeeper.ar-IQ.resx">
       <DependentUpon>BaseReportKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Keeper\BaseReportKeeper.ar-JO.resx">
+      <DependentUpon>BaseReportKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Keeper\BaseReportKeeper.az-Latn-AZ.resx">
       <DependentUpon>BaseReportKeeper.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4227,6 +4375,9 @@
       <DependentUpon>BaseSampleKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Keeper\BaseYearKeeper.ar-IQ.resx">
+      <DependentUpon>BaseYearKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Keeper\BaseYearKeeper.ar-JO.resx">
       <DependentUpon>BaseYearKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Keeper\BaseYearKeeper.az-Latn-AZ.resx">
@@ -4301,6 +4452,9 @@
     <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationDTRAReport.ar-IQ.resx">
       <DependentUpon>EmergencyNotificationDTRAReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationDTRAReport.ar-JO.resx">
+      <DependentUpon>EmergencyNotificationDTRAReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationDTRAReport.az-Latn-AZ.resx">
       <DependentUpon>EmergencyNotificationDTRAReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -4322,11 +4476,18 @@
     <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.ar-IQ.resx">
       <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.ar-JO.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.az-Latn-AZ.resx">
       <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.en-IQ-Eidss.resx">
+      <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationUkraineReport.en-JO-Eidss.resx">
       <DependentUpon>EmergencyNotificationUkraineReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -4390,6 +4551,12 @@
     <EmbeddedResource Include="Document\Veterinary\AvianInvestigation\SampleReport.th-TH.resx">
       <DependentUpon>SampleReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\JO\UrgentNotificationForm.ar-JO.resx">
+      <DependentUpon>UrgentNotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\JO\UrgentNotificationForm.resx">
+      <DependentUpon>UrgentNotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\DiagnosisReport.th-TH.resx">
       <DependentUpon>DiagnosisReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -4441,6 +4608,9 @@
     <EmbeddedResource Include="BaseControls\ReportView.ar-IQ.resx">
       <DependentUpon>ReportView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\ReportView.ar-JO.resx">
+      <DependentUpon>ReportView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\ReportView.az-Latn-AZ.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ReportView.cs</DependentUpon>
@@ -4478,6 +4648,9 @@
     <EmbeddedResource Include="BaseControls\Report\BaseDateReport.ar-IQ.resx">
       <DependentUpon>BaseDateReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseDateReport.ar-JO.resx">
+      <DependentUpon>BaseDateReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Report\BaseDateReport.az-Latn-AZ.resx">
       <DependentUpon>BaseDateReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4509,6 +4682,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Report\BaseDocumentReport.ar-IQ.resx">
+      <DependentUpon>BaseDocumentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseDocumentReport.ar-JO.resx">
       <DependentUpon>BaseDocumentReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Report\BaseDocumentReport.az-Latn-AZ.resx">
@@ -4544,6 +4720,9 @@
     <EmbeddedResource Include="BaseControls\Report\BaseIntervalReport.ar-IQ.resx">
       <DependentUpon>BaseIntervalReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseIntervalReport.ar-JO.resx">
+      <DependentUpon>BaseIntervalReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Report\BaseIntervalReport.az-Latn-AZ.resx">
       <DependentUpon>BaseIntervalReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4575,6 +4754,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Report\BaseReport.ar-IQ.resx">
+      <DependentUpon>BaseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseReport.ar-JO.resx">
       <DependentUpon>BaseReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Report\BaseReport.az-Latn-AZ.resx">
@@ -4613,6 +4795,9 @@
     <EmbeddedResource Include="BaseControls\Report\BaseYearReport.ar-IQ.resx">
       <DependentUpon>BaseYearReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseYearReport.ar-JO.resx">
+      <DependentUpon>BaseYearReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Report\BaseYearReport.az-Latn-AZ.resx">
       <DependentUpon>BaseYearReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4646,6 +4831,9 @@
     <EmbeddedResource Include="BaseControls\Report\ErrorReport.ar-IQ.resx">
       <DependentUpon>ErrorReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\ErrorReport.ar-JO.resx">
+      <DependentUpon>ErrorReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Report\ErrorReport.hy-am.resx">
       <DependentUpon>ErrorReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -4664,6 +4852,9 @@
       <DependentUpon>SessionActionsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionCasesReport.ar-IQ.resx">
+      <DependentUpon>SessionCasesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\ActiveSurveillance\SessionCasesReport.ar-JO.resx">
       <DependentUpon>SessionCasesReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionCasesReport.az-Latn-AZ.resx">
@@ -4690,6 +4881,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionActionsReport.ar-IQ.resx">
+      <DependentUpon>SessionActionsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\ActiveSurveillance\SessionActionsReport.ar-JO.resx">
       <DependentUpon>SessionActionsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionActionsReport.az-Latn-AZ.resx">
@@ -4724,6 +4918,9 @@
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionSummaryReport.ar-IQ.resx">
       <DependentUpon>SessionSummaryReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\ActiveSurveillance\SessionSummaryReport.ar-JO.resx">
+      <DependentUpon>SessionSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionSummaryReport.az-Latn-AZ.resx">
       <DependentUpon>SessionSummaryReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4753,6 +4950,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionDiagnosisReport.ar-IQ.resx">
+      <DependentUpon>SessionDiagnosisReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\ActiveSurveillance\SessionDiagnosisReport.ar-JO.resx">
       <DependentUpon>SessionDiagnosisReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionDiagnosisReport.az-Latn-AZ.resx">
@@ -4785,6 +4985,9 @@
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionFarmReport.ar-IQ.resx">
       <DependentUpon>SessionFarmReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\ActiveSurveillance\SessionFarmReport.ar-JO.resx">
+      <DependentUpon>SessionFarmReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionFarmReport.hy-am.resx">
       <DependentUpon>SessionFarmReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -4796,7 +4999,14 @@
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionReport.ar-IQ.resx">
       <DependentUpon>SessionReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\ActiveSurveillance\SessionReport.ar-JO.resx">
+      <DependentUpon>SessionReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\ActiveSurveillance\SessionReport.en-IQ-Eidss.resx">
+      <DependentUpon>SessionReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\ActiveSurveillance\SessionReport.en-JO-Eidss.resx">
       <DependentUpon>SessionReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -4817,6 +5027,9 @@
     <EmbeddedResource Include="Document\Human\Aggregate\CaseAggregateReport.ar-IQ.resx">
       <DependentUpon>CaseAggregateReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\Aggregate\CaseAggregateReport.ar-JO.resx">
+      <DependentUpon>CaseAggregateReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\Aggregate\CaseAggregateReport.hy-am.resx">
       <DependentUpon>CaseAggregateReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -4828,6 +5041,9 @@
       <DependentUpon>CaseAggregateReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\Aggregate\SummaryAggregateReport.ar-IQ.resx">
+      <DependentUpon>SummaryAggregateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\Aggregate\SummaryAggregateReport.ar-JO.resx">
       <DependentUpon>SummaryAggregateReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\Aggregate\SummaryAggregateReport.hy-am.resx">
@@ -4843,7 +5059,14 @@
     <EmbeddedResource Include="Document\Human\CaseInvestigation\CaseInvestigationReport.ar-IQ.resx">
       <DependentUpon>CaseInvestigationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\CaseInvestigation\CaseInvestigationReport.ar-JO.resx">
+      <DependentUpon>CaseInvestigationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\CaseInvestigation\CaseInvestigationReport.en-IQ-Eidss.resx">
+      <DependentUpon>CaseInvestigationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\CaseInvestigation\CaseInvestigationReport.en-JO-Eidss.resx">
       <DependentUpon>CaseInvestigationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -4871,6 +5094,9 @@
     <EmbeddedResource Include="Document\Human\CaseInvestigation\ContactListReport.ar-IQ.resx">
       <DependentUpon>ContactListReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\CaseInvestigation\ContactListReport.ar-JO.resx">
+      <DependentUpon>ContactListReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\CaseInvestigation\ContactListReport.hy-am.resx">
       <DependentUpon>ContactListReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -4882,6 +5108,9 @@
       <DependentUpon>ContactListReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\CaseInvestigation\DiagnosisHistoryReport.ar-IQ.resx">
+      <DependentUpon>DiagnosisHistoryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\CaseInvestigation\DiagnosisHistoryReport.ar-JO.resx">
       <DependentUpon>DiagnosisHistoryReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\CaseInvestigation\DiagnosisHistoryReport.az-Latn-AZ.resx">
@@ -4916,6 +5145,9 @@
     <EmbeddedResource Include="Document\Human\CaseInvestigation\SpecimenReport.ar-IQ.resx">
       <DependentUpon>SpecimenReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\CaseInvestigation\SpecimenReport.ar-JO.resx">
+      <DependentUpon>SpecimenReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\CaseInvestigation\SpecimenReport.hy-am.resx">
       <DependentUpon>SpecimenReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -4927,6 +5159,9 @@
       <DependentUpon>SpecimenReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\CaseInvestigation\TherapyReport.ar-IQ.resx">
+      <DependentUpon>TherapyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\CaseInvestigation\TherapyReport.ar-JO.resx">
       <DependentUpon>TherapyReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\CaseInvestigation\TherapyReport.hy-am.resx">
@@ -4946,7 +5181,14 @@
     <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationReport.ar-IQ.resx">
       <DependentUpon>EmergencyNotificationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationReport.ar-JO.resx">
+      <DependentUpon>EmergencyNotificationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationReport.en-IQ-Eidss.resx">
+      <DependentUpon>EmergencyNotificationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Human\EmergencyNotification\EmergencyNotificationReport.en-JO-Eidss.resx">
       <DependentUpon>EmergencyNotificationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -4976,6 +5218,9 @@
     <EmbeddedResource Include="Document\Lim\Batch\BatchTestReport.ar-IQ.resx">
       <DependentUpon>BatchTestReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Lim\Batch\BatchTestReport.ar-JO.resx">
+      <DependentUpon>BatchTestReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\Batch\BatchTestReport.hy-am.resx">
       <DependentUpon>BatchTestReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -4987,6 +5232,9 @@
       <DependentUpon>BatchTestReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\Batch\TestDetailsReport.ar-IQ.resx">
+      <DependentUpon>TestDetailsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Lim\Batch\TestDetailsReport.ar-JO.resx">
       <DependentUpon>TestDetailsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\Batch\TestDetailsReport.hy-am.resx">
@@ -5008,6 +5256,9 @@
     <EmbeddedResource Include="Document\Lim\Case\TestReport.ar-IQ.resx">
       <DependentUpon>TestReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Lim\Case\TestReport.ar-JO.resx">
+      <DependentUpon>TestReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\Case\TestReport.hy-am.resx">
       <DependentUpon>TestReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5021,6 +5272,9 @@
     <EmbeddedResource Include="Document\Lim\Case\TestValidationReport.ar-IQ.resx">
       <DependentUpon>TestValidationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Lim\Case\TestValidationReport.ar-JO.resx">
+      <DependentUpon>TestValidationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\Case\TestValidationReport.hy-am.resx">
       <DependentUpon>TestValidationReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5032,6 +5286,9 @@
       <DependentUpon>TestValidationReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\ContainerContent\ContainerContentReport.ar-IQ.resx">
+      <DependentUpon>ContainerContentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Lim\ContainerContent\ContainerContentReport.ar-JO.resx">
       <DependentUpon>ContainerContentReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\ContainerContent\ContainerContentReport.hy-am.resx">
@@ -5048,6 +5305,10 @@
       <DependentUpon>LimSampleReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Lim\ContainerDetails\LimSampleReport.ar-JO.resx">
+      <DependentUpon>LimSampleReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\ContainerDetails\LimSampleReport.hy-am.resx">
       <DependentUpon>LimSampleReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -5060,6 +5321,9 @@
       <DependentUpon>LimSampleReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\SampleDestruction\SampleDestructionReport.ar-IQ.resx">
+      <DependentUpon>SampleDestructionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Lim\SampleDestruction\SampleDestructionReport.ar-JO.resx">
       <DependentUpon>SampleDestructionReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\SampleDestruction\SampleDestructionReport.az-Latn-AZ.resx">
@@ -5082,6 +5346,9 @@
       <DependentUpon>SampleDestructionReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\Case\TestAmendmentHistoryReport.ar-IQ.resx">
+      <DependentUpon>TestAmendmentHistoryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Lim\Case\TestAmendmentHistoryReport.ar-JO.resx">
       <DependentUpon>TestAmendmentHistoryReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\Case\TestAmendmentHistoryReport.az-Latn-AZ.resx">
@@ -5112,6 +5379,9 @@
     <EmbeddedResource Include="Document\Lim\TestResult\TestResultAmendmentHistoryReport.ar-IQ.resx">
       <DependentUpon>TestResultAmendmentHistoryReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Lim\TestResult\TestResultAmendmentHistoryReport.ar-JO.resx">
+      <DependentUpon>TestResultAmendmentHistoryReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\TestResult\TestResultAmendmentHistoryReport.az-Latn-AZ.resx">
       <DependentUpon>TestResultAmendmentHistoryReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5139,6 +5409,9 @@
     <EmbeddedResource Include="Document\Lim\TestResult\TestResultReport.ar-IQ.resx">
       <DependentUpon>TestResultReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Lim\TestResult\TestResultReport.ar-JO.resx">
+      <DependentUpon>TestResultReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\TestResult\TestResultReport.hy-am.resx">
       <DependentUpon>TestResultReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5150,6 +5423,9 @@
       <DependentUpon>TestResultReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\Transfer\TransferReport.ar-IQ.resx">
+      <DependentUpon>TransferReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Lim\Transfer\TransferReport.ar-JO.resx">
       <DependentUpon>TransferReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Lim\Transfer\TransferReport.hy-am.resx">
@@ -5165,7 +5441,14 @@
     <EmbeddedResource Include="Document\Uni\AccessionIn\AccessionInReport.ar-IQ.resx">
       <DependentUpon>AccessionInReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Uni\AccessionIn\AccessionInReport.ar-JO.resx">
+      <DependentUpon>AccessionInReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Uni\AccessionIn\AccessionInReport.en-IQ-Eidss.resx">
+      <DependentUpon>AccessionInReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Uni\AccessionIn\AccessionInReport.en-JO-Eidss.resx">
       <DependentUpon>AccessionInReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -5192,6 +5475,9 @@
     <EmbeddedResource Include="Document\Uni\Outbreak\OutbreakReport.ar-IQ.resx">
       <DependentUpon>OutbreakReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Uni\Outbreak\OutbreakReport.ar-JO.resx">
+      <DependentUpon>OutbreakReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Uni\Outbreak\OutbreakReport.hy-am.resx">
       <DependentUpon>OutbreakReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5203,6 +5489,9 @@
       <DependentUpon>OutbreakReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\VectorSurveillance\SessionReport.ar-IQ.resx">
+      <DependentUpon>SessionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\VectorSurveillance\SessionReport.ar-JO.resx">
       <DependentUpon>SessionReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\VectorSurveillance\SessionReport.az-Latn-AZ.resx">
@@ -5229,6 +5518,9 @@
     <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateActionsReport.ar-IQ.resx">
       <DependentUpon>VetAggregateActionsReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateActionsReport.ar-JO.resx">
+      <DependentUpon>VetAggregateActionsReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateActionsReport.hy-am.resx">
       <DependentUpon>VetAggregateActionsReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5237,6 +5529,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateActionsSummaryReport.ar-IQ.resx">
+      <DependentUpon>VetAggregateActionsSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateActionsSummaryReport.ar-JO.resx">
       <DependentUpon>VetAggregateActionsSummaryReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateActionsSummaryReport.hy-am.resx">
@@ -5249,6 +5544,9 @@
     <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateCaseSummaryReport.ar-IQ.resx">
       <DependentUpon>VetAggregateCaseSummaryReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateCaseSummaryReport.ar-JO.resx">
+      <DependentUpon>VetAggregateCaseSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateCaseSummaryReport.hy-am.resx">
       <DependentUpon>VetAggregateCaseSummaryReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5257,6 +5555,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateReport.ar-IQ.resx">
+      <DependentUpon>VetAggregateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateReport.ar-JO.resx">
       <DependentUpon>VetAggregateReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\Aggregate\VetAggregateReport.hy-am.resx">
@@ -5269,6 +5570,9 @@
     <EmbeddedResource Include="Document\Veterinary\AvianInvestigation\AvianInvestigationReport.ar-IQ.resx">
       <DependentUpon>AvianInvestigationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\AvianInvestigation\AvianInvestigationReport.ar-JO.resx">
+      <DependentUpon>AvianInvestigationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\AvianInvestigation\AvianInvestigationReport.hy-am.resx">
       <DependentUpon>AvianInvestigationReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5277,6 +5581,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\AvianInvestigation\FlockReport.ar-IQ.resx">
+      <DependentUpon>FlockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\AvianInvestigation\FlockReport.ar-JO.resx">
       <DependentUpon>FlockReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\AvianInvestigation\FlockReport.hy-am.resx">
@@ -5289,6 +5596,9 @@
     <EmbeddedResource Include="Document\Veterinary\AvianInvestigation\SampleReport.ar-IQ.resx">
       <DependentUpon>SampleReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\AvianInvestigation\SampleReport.ar-JO.resx">
+      <DependentUpon>SampleReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\AvianInvestigation\SampleReport.hy-am.resx">
       <DependentUpon>SampleReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5297,6 +5607,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\DiagnosisReport.ar-IQ.resx">
+      <DependentUpon>DiagnosisReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\DiagnosisReport.ar-JO.resx">
       <DependentUpon>DiagnosisReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\DiagnosisReport.hy-am.resx">
@@ -5309,6 +5622,9 @@
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\HerdReport.ar-IQ.resx">
       <DependentUpon>HerdReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\HerdReport.ar-JO.resx">
+      <DependentUpon>HerdReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\HerdReport.hy-am.resx">
       <DependentUpon>HerdReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5317,6 +5633,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\LivestockAnimalCSReport.ar-IQ.resx">
+      <DependentUpon>LivestockAnimalCSReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\LivestockAnimalCSReport.ar-JO.resx">
       <DependentUpon>LivestockAnimalCSReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\LivestockAnimalCSReport.hy-am.resx">
@@ -5329,6 +5648,9 @@
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\LivestockInvestigationReport.ar-IQ.resx">
       <DependentUpon>LivestockInvestigationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\LivestockInvestigationReport.ar-JO.resx">
+      <DependentUpon>LivestockInvestigationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\LivestockInvestigationReport.hy-am.resx">
       <DependentUpon>LivestockInvestigationReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5339,6 +5661,9 @@
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\RapidTestReport.ar-IQ.resx">
       <DependentUpon>RapidTestReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\RapidTestReport.ar-JO.resx">
+      <DependentUpon>RapidTestReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\RapidTestReport.hy-am.resx">
       <DependentUpon>RapidTestReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5347,6 +5672,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\LivestockSampleReport.ar-IQ.resx">
+      <DependentUpon>LivestockSampleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\LivestockSampleReport.ar-JO.resx">
       <DependentUpon>LivestockSampleReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\LivestockSampleReport.az-Latn-AZ.resx">
@@ -5379,6 +5707,9 @@
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\VaccinationReport.ar-IQ.resx">
       <DependentUpon>VaccinationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\VaccinationReport.ar-JO.resx">
+      <DependentUpon>VaccinationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Document\Veterinary\LivestockInvestigation\VaccinationReport.hy-am.resx">
       <DependentUpon>VaccinationReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5387,6 +5718,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Keepers\AberrationKeeper.ar-IQ.resx">
+      <DependentUpon>AberrationKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Keepers\AberrationKeeper.ar-JO.resx">
       <DependentUpon>AberrationKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Keepers\AberrationKeeper.az-Latn-AZ.resx">
@@ -5415,6 +5749,9 @@
       <DependentUpon>AberrationKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Keepers\HumAberrationKeeper.ar-IQ.resx">
+      <DependentUpon>HumAberrationKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Keepers\HumAberrationKeeper.ar-JO.resx">
       <DependentUpon>HumAberrationKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Keepers\HumAberrationKeeper.az-Latn-AZ.resx">
@@ -5449,6 +5786,9 @@
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Keepers\SyndromicAberrationKeeper.ar-IQ.resx">
       <DependentUpon>SyndromicAberrationKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Keepers\SyndromicAberrationKeeper.ar-JO.resx">
+      <DependentUpon>SyndromicAberrationKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Keepers\SyndromicAberrationKeeper.az-Latn-AZ.resx">
       <DependentUpon>SyndromicAberrationKeeper.cs</DependentUpon>
     </EmbeddedResource>
@@ -5481,6 +5821,9 @@
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\AberrationReport.ar-IQ.resx">
       <DependentUpon>AberrationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\AberrationReport.ar-JO.resx">
+      <DependentUpon>AberrationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\AberrationReport.az-Latn-AZ.resx">
       <DependentUpon>AberrationReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -5508,10 +5851,17 @@
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\HumAberrationReport.ar-IQ.resx">
       <DependentUpon>HumAberrationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\HumAberrationReport.ar-JO.resx">
+      <DependentUpon>HumAberrationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\HumAberrationReport.az-Latn-AZ.resx">
       <DependentUpon>HumAberrationReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\HumAberrationReport.en-IQ-Eidss.resx">
+      <DependentUpon>HumAberrationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\HumAberrationReport.en-JO-Eidss.resx">
       <DependentUpon>HumAberrationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -5550,10 +5900,17 @@
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\ILIAberrationReport.ar-IQ.resx">
       <DependentUpon>ILIAberrationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\ILIAberrationReport.ar-JO.resx">
+      <DependentUpon>ILIAberrationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\ILIAberrationReport.az-Latn-AZ.resx">
       <DependentUpon>ILIAberrationReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\ILIAberrationReport.en-IQ-Eidss.resx">
+      <DependentUpon>ILIAberrationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\ILIAberrationReport.en-JO-Eidss.resx">
       <DependentUpon>ILIAberrationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -5593,11 +5950,18 @@
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\SyndromicAberrationReport.ar-IQ.resx">
       <DependentUpon>SyndromicAberrationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\SyndromicAberrationReport.ar-JO.resx">
+      <DependentUpon>SyndromicAberrationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\SyndromicAberrationReport.az-Latn-AZ.resx">
       <DependentUpon>SyndromicAberrationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\SyndromicAberrationReport.en-IQ-Eidss.resx">
+      <DependentUpon>SyndromicAberrationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\SyndromicAberrationReport.en-JO-Eidss.resx">
       <DependentUpon>SyndromicAberrationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -5636,11 +6000,18 @@
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\VetAberrationReport.ar-IQ.resx">
       <DependentUpon>VetAberrationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\VetAberrationReport.ar-JO.resx">
+      <DependentUpon>VetAberrationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\VetAberrationReport.az-Latn-AZ.resx">
       <DependentUpon>VetAberrationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\VetAberrationReport.en-IQ-Eidss.resx">
+      <DependentUpon>VetAberrationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\AberrationAnalysis\Reports\VetAberrationReport.en-JO-Eidss.resx">
       <DependentUpon>VetAberrationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -5677,6 +6048,9 @@
       <DependentUpon>VetAberrationReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\ActiveSurveillance\ActiveSurveillanceReport.ar-IQ.resx">
+      <DependentUpon>ActiveSurveillanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\ActiveSurveillance\ActiveSurveillanceReport.ar-JO.resx">
       <DependentUpon>ActiveSurveillanceReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\ActiveSurveillance\ActiveSurveillanceReport.az-latn-az.resx">
@@ -5826,6 +6200,9 @@
       <DependentUpon>LabTestingTesultsReportNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\TuberculosisCasesTestedReport.ar-IQ.resx">
+      <DependentUpon>TuberculosisCasesTestedReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\TuberculosisCasesTestedReport.ar-JO.resx">
       <DependentUpon>TuberculosisCasesTestedReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\TuberculosisCasesTestedReport.az-Latn-AZ.resx">
@@ -5999,6 +6376,9 @@
     <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesMonthV61.ar-IQ.resx">
       <DependentUpon>InfectiousDiseasesMonthV61.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesMonthV61.ar-JO.resx">
+      <DependentUpon>InfectiousDiseasesMonthV61.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesMonthV61.az-Latn-AZ.resx">
       <DependentUpon>InfectiousDiseasesMonthV61.cs</DependentUpon>
     </EmbeddedResource>
@@ -6023,6 +6403,9 @@
       <DependentUpon>InfectiousDiseasesMonthV61.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesMonthV6.ar-IQ.resx">
+      <DependentUpon>InfectiousDiseasesMonthV6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesMonthV6.ar-JO.resx">
       <DependentUpon>InfectiousDiseasesMonthV6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesMonthV6.az-Latn-AZ.resx">
@@ -6051,10 +6434,16 @@
     <EmbeddedResource Include="Parameterized\Human\IQ\Keepers\ComparativeIQReportKeeper.ar-IQ.resx">
       <DependentUpon>ComparativeIQReportKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\IQ\Keepers\ComparativeIQReportKeeper.ar-JO.resx">
+      <DependentUpon>ComparativeIQReportKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\IQ\Keepers\ComparativeIQReportKeeper.resx">
       <DependentUpon>ComparativeIQReportKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\ComparativeTwoYearsAZReportKeeper.ar-IQ.resx">
+      <DependentUpon>ComparativeTwoYearsAZReportKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\ComparativeTwoYearsAZReportKeeper.ar-JO.resx">
       <DependentUpon>ComparativeTwoYearsAZReportKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\ComparativeTwoYearsAZReportKeeper.az-Latn-AZ.resx">
@@ -6085,10 +6474,16 @@
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\DataQualityIndicatorsKeeper.ar-IQ.resx">
       <DependentUpon>DataQualityIndicatorsKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\DataQualityIndicatorsKeeper.ar-JO.resx">
+      <DependentUpon>DataQualityIndicatorsKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\DataQualityIndicatorsKeeper.ka-GE.resx">
       <DependentUpon>DataQualityIndicatorsKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\ExternalComparativeReportKeeper.ar-IQ.resx">
+      <DependentUpon>ExternalComparativeReportKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\ExternalComparativeReportKeeper.ar-JO.resx">
       <DependentUpon>ExternalComparativeReportKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\ExternalComparativeReportKeeper.hy-AM.resx">
@@ -6098,6 +6493,9 @@
       <DependentUpon>ExternalComparativeReportKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\VetKeeper.ar-IQ.resx">
+      <DependentUpon>VetKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\VetKeeper.ar-JO.resx">
       <DependentUpon>VetKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\VetKeeper.hy-AM.resx">
@@ -6110,6 +6508,9 @@
       <DependentUpon>VetKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\VetLabsKeeper.ar-IQ.resx">
+      <DependentUpon>VetLabsKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\VetLabsKeeper.ar-JO.resx">
       <DependentUpon>VetLabsKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\VetLabsKeeper.az-Latn-AZ.resx">
@@ -6134,6 +6535,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\AdditionalAFPIndicatorsReport.ar-IQ.resx">
+      <DependentUpon>AdditionalAFPIndicatorsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\AdditionalAFPIndicatorsReport.ar-JO.resx">
       <DependentUpon>AdditionalAFPIndicatorsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\DataQualityIndicatorsReport.ka-GE.resx">
@@ -6175,6 +6579,9 @@
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\BaseDataQualityIndicatorsReport.ar-IQ.resx">
       <DependentUpon>BaseDataQualityIndicatorsReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\BaseDataQualityIndicatorsReport.ar-JO.resx">
+      <DependentUpon>BaseDataQualityIndicatorsReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\BaseDataQualityIndicatorsReport.az-Latn-AZ.resx">
       <DependentUpon>BaseDataQualityIndicatorsReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -6202,6 +6609,9 @@
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\ComparativeAZReport.ar-IQ.resx">
       <DependentUpon>ComparativeAZReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\ComparativeAZReport.ar-JO.resx">
+      <DependentUpon>ComparativeAZReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\ComparativeAZReport.hy-AM.resx">
       <DependentUpon>ComparativeAZReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -6212,6 +6622,9 @@
       <DependentUpon>ComparativeAZReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\ComparativeTwoYearsAZReport.ar-IQ.resx">
+      <DependentUpon>ComparativeTwoYearsAZReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\ComparativeTwoYearsAZReport.ar-JO.resx">
       <DependentUpon>ComparativeTwoYearsAZReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\ComparativeTwoYearsAZReport.az-Latn-AZ.resx">
@@ -6249,6 +6662,9 @@
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\DataQualityIndicatorsRayonsReport.ar-IQ.resx">
       <DependentUpon>DataQualityIndicatorsRayonsReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\DataQualityIndicatorsRayonsReport.ar-JO.resx">
+      <DependentUpon>DataQualityIndicatorsRayonsReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\DataQualityIndicatorsRayonsReport.hy-AM.resx">
       <DependentUpon>DataQualityIndicatorsRayonsReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -6256,6 +6672,9 @@
       <DependentUpon>DataQualityIndicatorsRayonsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\ExternalComparativeReport.ar-IQ.resx">
+      <DependentUpon>ExternalComparativeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\ExternalComparativeReport.ar-JO.resx">
       <DependentUpon>ExternalComparativeReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\ExternalComparativeReport.hy-AM.resx">
@@ -6267,13 +6686,25 @@
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormN1Page1.ar-IQ.resx">
       <DependentUpon>FormN1Page1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormN1Page1.ar-JO.resx">
+      <DependentUpon>FormN1Page1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormN1Page2.ar-IQ.resx">
+      <DependentUpon>FormN1Page2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormN1Page2.ar-JO.resx">
       <DependentUpon>FormN1Page2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormN1Page3.ar-IQ.resx">
       <DependentUpon>FormN1Page3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormN1Page3.ar-JO.resx">
+      <DependentUpon>FormN1Page3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormN1Page4.ar-IQ.resx">
+      <DependentUpon>FormN1Page4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormN1Page4.ar-JO.resx">
       <DependentUpon>FormN1Page4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormN1Page4.hy-AM.resx">
@@ -6288,6 +6719,9 @@
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormN1Report.ar-IQ.resx">
       <DependentUpon>FormN1Report.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormN1Report.ar-JO.resx">
+      <DependentUpon>FormN1Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\FormVet1.ru-RU.resx">
       <DependentUpon>FormVet1.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -6295,10 +6729,19 @@
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\MainAFPIndicatorsReport.ar-IQ.resx">
       <DependentUpon>MainAFPIndicatorsReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\MainAFPIndicatorsReport.ar-JO.resx">
+      <DependentUpon>MainAFPIndicatorsReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\HumSummaryReport.ar-IQ.resx">
       <DependentUpon>HumSummaryReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\HumSummaryReport.ar-JO.resx">
+      <DependentUpon>HumSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\VetCaseReport.ar-IQ.resx">
+      <DependentUpon>VetCaseReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\VetCaseReport.ar-JO.resx">
       <DependentUpon>VetCaseReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\VetCaseReport.hy-AM.resx">
@@ -6311,6 +6754,9 @@
       <DependentUpon>VetCaseReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\VetLabReport.ar-IQ.resx">
+      <DependentUpon>VetLabReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\VetLabReport.ar-JO.resx">
       <DependentUpon>VetLabReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\VetLabReport.az-Latn-AZ.resx">
@@ -6359,6 +6805,9 @@
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\WhoMeaslesRubellaReport.ar-IQ.resx">
       <DependentUpon>WhoMeaslesRubellaReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Reports\WhoMeaslesRubellaReport.ar-JO.resx">
+      <DependentUpon>WhoMeaslesRubellaReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Reports\WhoMeaslesRubellaReport.hy-AM.resx">
       <DependentUpon>WhoMeaslesRubellaReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -6366,6 +6815,9 @@
       <DependentUpon>WhoMeaslesRubellaReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\DToChangedD\DToChangedDKeeper.ar-IQ.resx">
+      <DependentUpon>DToChangedDKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\DToChangedD\DToChangedDKeeper.ar-JO.resx">
       <DependentUpon>DToChangedDKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\DToChangedD\DToChangedDKeeper.az-Latn-AZ.resx">
@@ -6389,6 +6841,9 @@
     <EmbeddedResource Include="Parameterized\Human\DToChangedD\DToChangedDReport.ar-IQ.resx">
       <DependentUpon>DToChangedDReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\DToChangedD\DToChangedDReport.ar-JO.resx">
+      <DependentUpon>DToChangedDReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\DToChangedD\DToChangedDReport.az-Latn-AZ.resx">
       <DependentUpon>DToChangedDReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -6407,6 +6862,9 @@
     <EmbeddedResource Include="Parameterized\Human\GG\Filter\Journal60Filter.ar-IQ.resx">
       <DependentUpon>Journal60Filter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Filter\Journal60Filter.ar-JO.resx">
+      <DependentUpon>Journal60Filter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Filter\Journal60Filter.az-Latn-AZ.resx">
       <DependentUpon>Journal60Filter.cs</DependentUpon>
     </EmbeddedResource>
@@ -6422,6 +6880,9 @@
     <EmbeddedResource Include="BaseControls\Filters\RayonFilter.ar-IQ.resx">
       <DependentUpon>RayonFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RayonFilter.ar-JO.resx">
+      <DependentUpon>RayonFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RayonFilter.az-latn-az.resx">
       <DependentUpon>RayonFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -6435,6 +6896,9 @@
       <DependentUpon>RayonFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RegionFilter.ar-IQ.resx">
+      <DependentUpon>RegionFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\RegionFilter.ar-JO.resx">
       <DependentUpon>RegionFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\RegionFilter.az-latn-az.resx">
@@ -6471,6 +6935,9 @@
     <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisMultiFilter.ar-IQ.resx">
       <DependentUpon>HumDiagnosisMultiFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisMultiFilter.ar-JO.resx">
+      <DependentUpon>HumDiagnosisMultiFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Filters\HumDiagnosisMultiFilter.az-Latn-AZ.resx">
       <DependentUpon>HumDiagnosisMultiFilter.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -6499,6 +6966,9 @@
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\AFPIndicatorsReportKeeper.ar-IQ.resx">
       <DependentUpon>AFPIndicatorsReportKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\AFPIndicatorsReportKeeper.ar-JO.resx">
+      <DependentUpon>AFPIndicatorsReportKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\AFPIndicatorsReportKeeper.hy-AM.resx">
       <DependentUpon>AFPIndicatorsReportKeeper.cs</DependentUpon>
     </EmbeddedResource>
@@ -6512,6 +6982,9 @@
       <DependentUpon>AFPIndicatorsReportKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\BaseComparativeReportKeeper.ar-IQ.resx">
+      <DependentUpon>BaseComparativeReportKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\BaseComparativeReportKeeper.ar-JO.resx">
       <DependentUpon>BaseComparativeReportKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\AJ\Keepers\BaseComparativeReportKeeper.az-Latn-AZ.resx">
@@ -6871,10 +7344,19 @@
     <EmbeddedResource Include="BaseControls\Keeper\BaseSampleKeeper.ar-IQ.resx">
       <DependentUpon>BaseSampleKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Keeper\BaseSampleKeeper.ar-JO.resx">
+      <DependentUpon>BaseSampleKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Keeper\InfectiousDiseasesMonthKeeper.ar-IQ.resx">
       <DependentUpon>InfectiousDiseasesMonthKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Keeper\InfectiousDiseasesMonthKeeper.ar-JO.resx">
+      <DependentUpon>InfectiousDiseasesMonthKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Keeper\LaboratoryResearchKeeper.ar-IQ.resx">
+      <DependentUpon>LaboratoryResearchKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Keeper\LaboratoryResearchKeeper.ar-JO.resx">
       <DependentUpon>LaboratoryResearchKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Keeper\LaboratoryResearchKeeper.az-Latn-AZ.resx">
@@ -6887,6 +7369,9 @@
       <DependentUpon>LaboratoryResearchKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Keeper\RBEReportKeeper.ar-IQ.resx">
+      <DependentUpon>RBEReportKeeper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Keeper\RBEReportKeeper.ar-JO.resx">
       <DependentUpon>RBEReportKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Keeper\RBEReportKeeper.az-Latn-AZ.resx">
@@ -6959,6 +7444,9 @@
     <EmbeddedResource Include="Parameterized\Human\GG\Report\AntibioticResistanceCardReport.ar-IQ.resx">
       <DependentUpon>AntibioticResistanceCardReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Report\AntibioticResistanceCardReport.ar-JO.resx">
+      <DependentUpon>AntibioticResistanceCardReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\AntibioticResistanceCardReport.az-Latn-AZ.resx">
       <DependentUpon>AntibioticResistanceCardReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -6975,6 +7463,9 @@
       <DependentUpon>AntibioticResistanceCardReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Report\BaseSampleReport.ar-IQ.resx">
+      <DependentUpon>BaseSampleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseControls\Report\BaseSampleReport.ar-JO.resx">
       <DependentUpon>BaseSampleReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseControls\Report\BaseSampleReport.az-Latn-AZ.resx">
@@ -7015,16 +7506,31 @@
     <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesMonthV4.ar-IQ.resx">
       <DependentUpon>InfectiousDiseasesMonthV4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesMonthV4.ar-JO.resx">
+      <DependentUpon>InfectiousDiseasesMonthV4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesMonthV5.ar-IQ.resx">
+      <DependentUpon>InfectiousDiseasesMonthV5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesMonthV5.ar-JO.resx">
       <DependentUpon>InfectiousDiseasesMonthV5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesYear.ar-IQ.resx">
       <DependentUpon>InfectiousDiseasesYear.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Report\InfectiousDiseasesYear.ar-JO.resx">
+      <DependentUpon>InfectiousDiseasesYear.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\Journal60BReport.ar-IQ.resx">
       <DependentUpon>Journal60BReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Report\Journal60BReport.ar-JO.resx">
+      <DependentUpon>Journal60BReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\LaboratoryResearchReport.ar-IQ.resx">
+      <DependentUpon>LaboratoryResearchReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Report\LaboratoryResearchReport.ar-JO.resx">
       <DependentUpon>LaboratoryResearchReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\LaboratoryResearchReport.az-Latn-AZ.resx">
@@ -7042,7 +7548,13 @@
     <EmbeddedResource Include="Parameterized\Human\GG\Report\MicrobiologyResearchCardReport.ar-IQ.resx">
       <DependentUpon>MicrobiologyResearchCardReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Report\MicrobiologyResearchCardReport.ar-JO.resx">
+      <DependentUpon>MicrobiologyResearchCardReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\RBEReport.ar-IQ.resx">
+      <DependentUpon>RBEReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Report\RBEReport.ar-JO.resx">
       <DependentUpon>RBEReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\RBEReport.az-Latn-AZ.resx">
@@ -7324,6 +7836,9 @@
       <DependentUpon>RBEReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\SerologyResearchCardReport.ar-IQ.resx">
+      <DependentUpon>SerologyResearchCardReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\GG\Report\SerologyResearchCardReport.ar-JO.resx">
       <DependentUpon>SerologyResearchCardReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\GG\Report\SerologyResearchCardReport.az-Latn-AZ.resx">
@@ -7937,6 +8452,9 @@
     <EmbeddedResource Include="Parameterized\Human\IQ\Filters\WeeklyFilter.ar-IQ.resx">
       <DependentUpon>WeeklyFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\IQ\Filters\WeeklyFilter.ar-JO.resx">
+      <DependentUpon>WeeklyFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\IQ\Filters\WeeklyFilter.az-Latn-AZ.resx">
       <DependentUpon>WeeklyFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -7958,6 +8476,9 @@
     <EmbeddedResource Include="Parameterized\Human\IQ\Keepers\MonthlySituationDiseasesKeeper.ar-IQ.resx">
       <DependentUpon>MonthlySituationDiseasesKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\IQ\Keepers\MonthlySituationDiseasesKeeper.ar-JO.resx">
+      <DependentUpon>MonthlySituationDiseasesKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\IQ\Keepers\MonthlySituationDiseasesKeeper.resx">
       <DependentUpon>MonthlySituationDiseasesKeeper.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -7965,11 +8486,17 @@
     <EmbeddedResource Include="Parameterized\Human\IQ\Keepers\WeeklySituationDiseasesKeeper.ar-IQ.resx">
       <DependentUpon>WeeklySituationDiseasesKeeper.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\IQ\Keepers\WeeklySituationDiseasesKeeper.ar-JO.resx">
+      <DependentUpon>WeeklySituationDiseasesKeeper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\IQ\Keepers\WeeklySituationDiseasesKeeper.resx">
       <DependentUpon>WeeklySituationDiseasesKeeper.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\IQ\Reports\ComparativeIQReport.ar-IQ.resx">
+      <DependentUpon>ComparativeIQReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\IQ\Reports\ComparativeIQReport.ar-JO.resx">
       <DependentUpon>ComparativeIQReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\IQ\Reports\ComparativeIQReport.az-Latn-AZ.resx">
@@ -7993,6 +8520,9 @@
     <EmbeddedResource Include="Parameterized\Human\IQ\Reports\DiseasesByAgeGroupAndSexReport.ar-IQ.resx">
       <DependentUpon>DiseasesByAgeGroupAndSexReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\IQ\Reports\DiseasesByAgeGroupAndSexReport.ar-JO.resx">
+      <DependentUpon>DiseasesByAgeGroupAndSexReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\IQ\Reports\DiseasesByAgeGroupAndSexReport.az-Latn-AZ.resx">
       <DependentUpon>DiseasesByAgeGroupAndSexReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -8012,6 +8542,9 @@
       <DependentUpon>DiseasesByAgeGroupAndSexReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\IQ\Reports\DiseasesByDistrictsReport.ar-IQ.resx">
+      <DependentUpon>DiseasesByDistrictsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\IQ\Reports\DiseasesByDistrictsReport.ar-JO.resx">
       <DependentUpon>DiseasesByDistrictsReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\IQ\Reports\DiseasesByDistrictsReport.az-Latn-AZ.resx">
@@ -8159,6 +8692,9 @@
     <EmbeddedResource Include="Parameterized\Human\MMM\MMMReport.ar-IQ.resx">
       <DependentUpon>MMMReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Human\MMM\MMMReport.ar-JO.resx">
+      <DependentUpon>MMMReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Human\MMM\MMMReport.az-Latn-AZ.resx">
       <DependentUpon>MMMReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -8267,6 +8803,9 @@
     <EmbeddedResource Include="Parameterized\Uni\EventLog\EventLogReport.ar-IQ.resx">
       <DependentUpon>EventLogReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Uni\EventLog\EventLogReport.ar-JO.resx">
+      <DependentUpon>EventLogReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Uni\EventLog\EventLogReport.az-Latn-AZ.resx">
       <DependentUpon>EventLogReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -8318,6 +8857,9 @@
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\DiagnosisMatrixFilter.ar-IQ.resx">
       <DependentUpon>DiagnosisMatrixFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\DiagnosisMatrixFilter.ar-JO.resx">
+      <DependentUpon>DiagnosisMatrixFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\DiagnosisMatrixFilter.az-Latn-AZ.resx">
       <DependentUpon>DiagnosisMatrixFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -8343,6 +8885,9 @@
       <DependentUpon>DiagnosisMatrixFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\InvestigationTypeFilter.ar-IQ.resx">
+      <DependentUpon>InvestigationTypeFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\InvestigationTypeFilter.ar-JO.resx">
       <DependentUpon>InvestigationTypeFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\InvestigationTypeFilter.az-Latn-AZ.resx">
@@ -8372,6 +8917,9 @@
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\MeasureTypeFilter.ar-IQ.resx">
       <DependentUpon>MeasureTypeFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\MeasureTypeFilter.ar-JO.resx">
+      <DependentUpon>MeasureTypeFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\MeasureTypeFilter.az-Latn-AZ.resx">
       <DependentUpon>MeasureTypeFilter.cs</DependentUpon>
     </EmbeddedResource>
@@ -8397,6 +8945,9 @@
       <DependentUpon>MeasureTypeFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\SpeciesFilter.ar-IQ.resx">
+      <DependentUpon>SpeciesFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\SpeciesFilter.ar-JO.resx">
       <DependentUpon>SpeciesFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\Filters\SpeciesFilter.az-Latn-AZ.resx">
@@ -8438,6 +8989,9 @@
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetCountryPlannedDiagnostic.ar-IQ.resx">
       <DependentUpon>VetCountryPlannedDiagnostic.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetCountryPlannedDiagnostic.ar-JO.resx">
+      <DependentUpon>VetCountryPlannedDiagnostic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetCountryPlannedDiagnostic.az-Latn-AZ.resx">
       <DependentUpon>VetCountryPlannedDiagnostic.cs</DependentUpon>
     </EmbeddedResource>
@@ -8451,6 +9005,9 @@
       <DependentUpon>VetCountryPlannedDiagnostic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetCountryPreventiveMeasures.ar-IQ.resx">
+      <DependentUpon>VetCountryPreventiveMeasures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetCountryPreventiveMeasures.ar-JO.resx">
       <DependentUpon>VetCountryPreventiveMeasures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetCountryPreventiveMeasures.az-Latn-AZ.resx">
@@ -8471,6 +9028,9 @@
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetCountryProphilacticMeasures.ar-IQ.resx">
       <DependentUpon>VetCountryProphilacticMeasures.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetCountryProphilacticMeasures.ar-JO.resx">
+      <DependentUpon>VetCountryProphilacticMeasures.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetCountryProphilacticMeasures.az-Latn-AZ.resx">
       <DependentUpon>VetCountryProphilacticMeasures.cs</DependentUpon>
     </EmbeddedResource>
@@ -8484,6 +9044,9 @@
       <DependentUpon>VetCountryProphilacticMeasures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetRegionPlannedDiagnostic.ar-IQ.resx">
+      <DependentUpon>VetRegionPlannedDiagnostic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetRegionPlannedDiagnostic.ar-JO.resx">
       <DependentUpon>VetRegionPlannedDiagnostic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetRegionPlannedDiagnostic.az-Latn-AZ.resx">
@@ -8544,6 +9107,9 @@
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetRegionPreventiveMeasures.ar-IQ.resx">
       <DependentUpon>VetRegionPreventiveMeasures.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetRegionPreventiveMeasures.ar-JO.resx">
+      <DependentUpon>VetRegionPreventiveMeasures.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetRegionPreventiveMeasures.az-Latn-AZ.resx">
       <DependentUpon>VetRegionPreventiveMeasures.cs</DependentUpon>
     </EmbeddedResource>
@@ -8569,6 +9135,9 @@
       <DependentUpon>VetRegionPreventiveMeasures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetRegionProphilacticMeasures.ar-IQ.resx">
+      <DependentUpon>VetRegionProphilacticMeasures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetRegionProphilacticMeasures.ar-JO.resx">
       <DependentUpon>VetRegionProphilacticMeasures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\KZ\VetRegionProphilacticMeasures.az-Latn-AZ.resx">
@@ -8598,11 +9167,17 @@
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountReport.ar-IQ.resx">
       <DependentUpon>VetSamplesCountReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountReport.ar-JO.resx">
+      <DependentUpon>VetSamplesCountReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountReport.az-Latn-AZ.resx">
       <DependentUpon>VetSamplesCountReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountReport.en-IQ-Eidss.resx">
+      <DependentUpon>VetSamplesCountReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountReport.en-JO-Eidss.resx">
       <DependentUpon>VetSamplesCountReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesCount\VetSamplesCountReport.en-US-Eidss.resx">
@@ -8643,11 +9218,17 @@
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesType\VetSamplesTypeReport.ar-IQ.resx">
       <DependentUpon>VetSamplesTypeReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\SamplesType\VetSamplesTypeReport.ar-JO.resx">
+      <DependentUpon>VetSamplesTypeReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesType\VetSamplesTypeReport.az-Latn-AZ.resx">
       <DependentUpon>VetSamplesTypeReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesType\VetSamplesTypeReport.en-IQ-Eidss.resx">
+      <DependentUpon>VetSamplesTypeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\SamplesType\VetSamplesTypeReport.en-JO-Eidss.resx">
       <DependentUpon>VetSamplesTypeReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\SamplesType\VetSamplesTypeReport.en-US-Eidss.resx">
@@ -8688,6 +9269,9 @@
     <EmbeddedResource Include="Parameterized\Veterinary\Situation\VetSituationReport.ar-IQ.resx">
       <DependentUpon>VetSituationReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\Situation\VetSituationReport.ar-JO.resx">
+      <DependentUpon>VetSituationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\Situation\VetSituationReport.az-Latn-AZ.resx">
       <DependentUpon>VetSituationReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -8721,11 +9305,17 @@
     <EmbeddedResource Include="Parameterized\Veterinary\TestType\VetTestTypeReport.ar-IQ.resx">
       <DependentUpon>VetTestTypeReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\TestType\VetTestTypeReport.ar-JO.resx">
+      <DependentUpon>VetTestTypeReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\TestType\VetTestTypeReport.az-Latn-AZ.resx">
       <DependentUpon>VetTestTypeReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\TestType\VetTestTypeReport.en-IQ-Eidss.resx">
+      <DependentUpon>VetTestTypeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameterized\Veterinary\TestType\VetTestTypeReport.en-JO-Eidss.resx">
       <DependentUpon>VetTestTypeReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parameterized\Veterinary\TestType\VetTestTypeReport.en-US-Eidss.resx">
@@ -9145,6 +9735,17 @@
     </None>
     <None Include="Document\Veterinary\AvianInvestigation\SampleDataSet.xss">
       <DependentUpon>SampleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Document\Veterinary\JO\UrgentNotificationFormDataSet.xsc">
+      <DependentUpon>UrgentNotificationFormDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Document\Veterinary\JO\UrgentNotificationFormDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UrgentNotificationFormDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Document\Veterinary\JO\UrgentNotificationFormDataSet.xss">
+      <DependentUpon>UrgentNotificationFormDataSet.xsd</DependentUpon>
     </None>
     <None Include="Document\Veterinary\LivestockInvestigation\DiagnosisDataSet.xsc">
       <DependentUpon>DiagnosisDataSet.xsd</DependentUpon>

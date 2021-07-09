@@ -337,7 +337,7 @@
     <value>The record(s) will be deleted. Delete?</value>
   </data>
   <data name="msgEIDSSCopyright" xml:space="preserve">
-    <value>Copyright © 2005-2020 Black &amp;&amp; Veatch Special Projects Corp.</value>
+    <value>Copyright © 2005-2021 Black &amp;&amp; Veatch Special Projects Corp.</value>
   </data>
   <data name="msgEIDSSRunning" xml:space="preserve">
     <value>You can't run multiple EIDSS instances simultaneously. Other instance of EIDSS is running already</value>
@@ -793,6 +793,9 @@
   <data name="titleCreateAliquot" xml:space="preserve">
     <value>Create Aliquots</value>
   </data>
+  <data name="titleUrgentNotificationReportJo" xml:space="preserve">
+    <value>Urgent Notification Form</value>
+  </data>
   <data name="titleCreateDerivative" xml:space="preserve">
     <value>Create Derivatives</value>
   </data>
@@ -895,5 +898,4 @@
       {0} - maximum count of check items that can be selected in dropdown check lict
     </comment>
   </data>
-
 </root>

@@ -27,7 +27,7 @@ using bv.model.Model.Handlers;
 using bv.model.Model.Validators;
 using eidss.model.Core;
 using eidss.model.Enums;
-using eidss.model.Helpers;
+		
 
 namespace eidss.model.Schema
 {
@@ -2516,9 +2516,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfBasicSyndromicSurveillance") ? " or " : " and ");
                         
                         if (filters.Operation("idfBasicSyndromicSurveillance", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfBasicSyndromicSurveillance,0) {0} @idfBasicSyndromicSurveillance_{1} = @idfBasicSyndromicSurveillance_{1})", filters.Operation("idfBasicSyndromicSurveillance", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfBasicSyndromicSurveillance {0} @idfBasicSyndromicSurveillance_{1} = @idfBasicSyndromicSurveillance_{1})", filters.Operation("idfBasicSyndromicSurveillance", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfBasicSyndromicSurveillance,0) {0} @idfBasicSyndromicSurveillance_{1}", filters.Operation("idfBasicSyndromicSurveillance", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfBasicSyndromicSurveillance {0} @idfBasicSyndromicSurveillance_{1}", filters.Operation("idfBasicSyndromicSurveillance", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2546,7 +2546,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datDateEntered") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_BasicSyndromicSurveillance_SelectList.datDateEntered, 112) {0} CONVERT(NVARCHAR(8), @datDateEntered_{1}, 112)", filters.Operation("datDateEntered", i), i);
+                        sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.datDateEntered {0} @datDateEntered_{1}", filters.Operation("datDateEntered", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2560,7 +2560,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datDateLastSaved") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_BasicSyndromicSurveillance_SelectList.datDateLastSaved, 112) {0} CONVERT(NVARCHAR(8), @datDateLastSaved_{1}, 112)", filters.Operation("datDateLastSaved", i), i);
+                        sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.datDateLastSaved {0} @datDateLastSaved_{1}", filters.Operation("datDateLastSaved", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2575,9 +2575,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfEnteredBy") ? " or " : " and ");
                         
                         if (filters.Operation("idfEnteredBy", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfEnteredBy,0) {0} @idfEnteredBy_{1} = @idfEnteredBy_{1})", filters.Operation("idfEnteredBy", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfEnteredBy {0} @idfEnteredBy_{1} = @idfEnteredBy_{1})", filters.Operation("idfEnteredBy", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfEnteredBy,0) {0} @idfEnteredBy_{1}", filters.Operation("idfEnteredBy", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfEnteredBy {0} @idfEnteredBy_{1}", filters.Operation("idfEnteredBy", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2592,9 +2592,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsSite") ? " or " : " and ");
                         
                         if (filters.Operation("idfsSite", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsSite,0) {0} @idfsSite_{1} = @idfsSite_{1})", filters.Operation("idfsSite", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsSite {0} @idfsSite_{1} = @idfsSite_{1})", filters.Operation("idfsSite", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsSite,0) {0} @idfsSite_{1}", filters.Operation("idfsSite", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsSite {0} @idfsSite_{1}", filters.Operation("idfsSite", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2609,9 +2609,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsBasicSyndromicSurveillanceType") ? " or " : " and ");
                         
                         if (filters.Operation("idfsBasicSyndromicSurveillanceType", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsBasicSyndromicSurveillanceType,0) {0} @idfsBasicSyndromicSurveillanceType_{1} = @idfsBasicSyndromicSurveillanceType_{1})", filters.Operation("idfsBasicSyndromicSurveillanceType", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsBasicSyndromicSurveillanceType {0} @idfsBasicSyndromicSurveillanceType_{1} = @idfsBasicSyndromicSurveillanceType_{1})", filters.Operation("idfsBasicSyndromicSurveillanceType", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsBasicSyndromicSurveillanceType,0) {0} @idfsBasicSyndromicSurveillanceType_{1}", filters.Operation("idfsBasicSyndromicSurveillanceType", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsBasicSyndromicSurveillanceType {0} @idfsBasicSyndromicSurveillanceType_{1}", filters.Operation("idfsBasicSyndromicSurveillanceType", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2640,9 +2640,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfHospital") ? " or " : " and ");
                         
                         if (filters.Operation("idfHospital", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfHospital,0) {0} @idfHospital_{1} = @idfHospital_{1})", filters.Operation("idfHospital", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfHospital {0} @idfHospital_{1} = @idfHospital_{1})", filters.Operation("idfHospital", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfHospital,0) {0} @idfHospital_{1}", filters.Operation("idfHospital", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfHospital {0} @idfHospital_{1}", filters.Operation("idfHospital", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2670,7 +2670,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datReportDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_BasicSyndromicSurveillance_SelectList.datReportDate, 112) {0} CONVERT(NVARCHAR(8), @datReportDate_{1}, 112)", filters.Operation("datReportDate", i), i);
+                        sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.datReportDate {0} @datReportDate_{1}", filters.Operation("datReportDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2727,9 +2727,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("intAgeYear") ? " or " : " and ");
                         
                         if (filters.Operation("intAgeYear", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.intAgeYear,0) {0} @intAgeYear_{1} = @intAgeYear_{1})", filters.Operation("intAgeYear", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.intAgeYear {0} @intAgeYear_{1} = @intAgeYear_{1})", filters.Operation("intAgeYear", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.intAgeYear,0) {0} @intAgeYear_{1}", filters.Operation("intAgeYear", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.intAgeYear {0} @intAgeYear_{1}", filters.Operation("intAgeYear", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2744,9 +2744,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("intAgeMonth") ? " or " : " and ");
                         
                         if (filters.Operation("intAgeMonth", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.intAgeMonth,0) {0} @intAgeMonth_{1} = @intAgeMonth_{1})", filters.Operation("intAgeMonth", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.intAgeMonth {0} @intAgeMonth_{1} = @intAgeMonth_{1})", filters.Operation("intAgeMonth", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.intAgeMonth,0) {0} @intAgeMonth_{1}", filters.Operation("intAgeMonth", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.intAgeMonth {0} @intAgeMonth_{1}", filters.Operation("intAgeMonth", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2761,9 +2761,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("intAgeFullYear") ? " or " : " and ");
                         
                         if (filters.Operation("intAgeFullYear", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.intAgeFullYear,0) {0} @intAgeFullYear_{1} = @intAgeFullYear_{1})", filters.Operation("intAgeFullYear", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.intAgeFullYear {0} @intAgeFullYear_{1} = @intAgeFullYear_{1})", filters.Operation("intAgeFullYear", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.intAgeFullYear,0) {0} @intAgeFullYear_{1}", filters.Operation("intAgeFullYear", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.intAgeFullYear {0} @intAgeFullYear_{1}", filters.Operation("intAgeFullYear", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2778,9 +2778,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("intAgeFullMonth") ? " or " : " and ");
                         
                         if (filters.Operation("intAgeFullMonth", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.intAgeFullMonth,0) {0} @intAgeFullMonth_{1} = @intAgeFullMonth_{1})", filters.Operation("intAgeFullMonth", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.intAgeFullMonth {0} @intAgeFullMonth_{1} = @intAgeFullMonth_{1})", filters.Operation("intAgeFullMonth", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.intAgeFullMonth,0) {0} @intAgeFullMonth_{1}", filters.Operation("intAgeFullMonth", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.intAgeFullMonth {0} @intAgeFullMonth_{1}", filters.Operation("intAgeFullMonth", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2809,9 +2809,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsYNPregnant") ? " or " : " and ");
                         
                         if (filters.Operation("idfsYNPregnant", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNPregnant,0) {0} @idfsYNPregnant_{1} = @idfsYNPregnant_{1})", filters.Operation("idfsYNPregnant", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsYNPregnant {0} @idfsYNPregnant_{1} = @idfsYNPregnant_{1})", filters.Operation("idfsYNPregnant", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNPregnant,0) {0} @idfsYNPregnant_{1}", filters.Operation("idfsYNPregnant", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsYNPregnant {0} @idfsYNPregnant_{1}", filters.Operation("idfsYNPregnant", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2826,9 +2826,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsYNPostpartumPeriod") ? " or " : " and ");
                         
                         if (filters.Operation("idfsYNPostpartumPeriod", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNPostpartumPeriod,0) {0} @idfsYNPostpartumPeriod_{1} = @idfsYNPostpartumPeriod_{1})", filters.Operation("idfsYNPostpartumPeriod", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsYNPostpartumPeriod {0} @idfsYNPostpartumPeriod_{1} = @idfsYNPostpartumPeriod_{1})", filters.Operation("idfsYNPostpartumPeriod", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNPostpartumPeriod,0) {0} @idfsYNPostpartumPeriod_{1}", filters.Operation("idfsYNPostpartumPeriod", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsYNPostpartumPeriod {0} @idfsYNPostpartumPeriod_{1}", filters.Operation("idfsYNPostpartumPeriod", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2842,7 +2842,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datDateOfSymptomsOnset") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_BasicSyndromicSurveillance_SelectList.datDateOfSymptomsOnset, 112) {0} CONVERT(NVARCHAR(8), @datDateOfSymptomsOnset_{1}, 112)", filters.Operation("datDateOfSymptomsOnset", i), i);
+                        sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.datDateOfSymptomsOnset {0} @datDateOfSymptomsOnset_{1}", filters.Operation("datDateOfSymptomsOnset", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2857,9 +2857,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsYNFever") ? " or " : " and ");
                         
                         if (filters.Operation("idfsYNFever", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNFever,0) {0} @idfsYNFever_{1} = @idfsYNFever_{1})", filters.Operation("idfsYNFever", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsYNFever {0} @idfsYNFever_{1} = @idfsYNFever_{1})", filters.Operation("idfsYNFever", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNFever,0) {0} @idfsYNFever_{1}", filters.Operation("idfsYNFever", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsYNFever {0} @idfsYNFever_{1}", filters.Operation("idfsYNFever", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2874,9 +2874,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsMethodOfMeasurement") ? " or " : " and ");
                         
                         if (filters.Operation("idfsMethodOfMeasurement", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsMethodOfMeasurement,0) {0} @idfsMethodOfMeasurement_{1} = @idfsMethodOfMeasurement_{1})", filters.Operation("idfsMethodOfMeasurement", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsMethodOfMeasurement {0} @idfsMethodOfMeasurement_{1} = @idfsMethodOfMeasurement_{1})", filters.Operation("idfsMethodOfMeasurement", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsMethodOfMeasurement,0) {0} @idfsMethodOfMeasurement_{1}", filters.Operation("idfsMethodOfMeasurement", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsMethodOfMeasurement {0} @idfsMethodOfMeasurement_{1}", filters.Operation("idfsMethodOfMeasurement", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2919,9 +2919,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsYNCough") ? " or " : " and ");
                         
                         if (filters.Operation("idfsYNCough", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNCough,0) {0} @idfsYNCough_{1} = @idfsYNCough_{1})", filters.Operation("idfsYNCough", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsYNCough {0} @idfsYNCough_{1} = @idfsYNCough_{1})", filters.Operation("idfsYNCough", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNCough,0) {0} @idfsYNCough_{1}", filters.Operation("idfsYNCough", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsYNCough {0} @idfsYNCough_{1}", filters.Operation("idfsYNCough", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2936,9 +2936,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsYNShortnessOfBreath") ? " or " : " and ");
                         
                         if (filters.Operation("idfsYNShortnessOfBreath", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNShortnessOfBreath,0) {0} @idfsYNShortnessOfBreath_{1} = @idfsYNShortnessOfBreath_{1})", filters.Operation("idfsYNShortnessOfBreath", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsYNShortnessOfBreath {0} @idfsYNShortnessOfBreath_{1} = @idfsYNShortnessOfBreath_{1})", filters.Operation("idfsYNShortnessOfBreath", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNShortnessOfBreath,0) {0} @idfsYNShortnessOfBreath_{1}", filters.Operation("idfsYNShortnessOfBreath", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsYNShortnessOfBreath {0} @idfsYNShortnessOfBreath_{1}", filters.Operation("idfsYNShortnessOfBreath", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2953,9 +2953,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsYNSeasonalFluVaccine") ? " or " : " and ");
                         
                         if (filters.Operation("idfsYNSeasonalFluVaccine", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNSeasonalFluVaccine,0) {0} @idfsYNSeasonalFluVaccine_{1} = @idfsYNSeasonalFluVaccine_{1})", filters.Operation("idfsYNSeasonalFluVaccine", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsYNSeasonalFluVaccine {0} @idfsYNSeasonalFluVaccine_{1} = @idfsYNSeasonalFluVaccine_{1})", filters.Operation("idfsYNSeasonalFluVaccine", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNSeasonalFluVaccine,0) {0} @idfsYNSeasonalFluVaccine_{1}", filters.Operation("idfsYNSeasonalFluVaccine", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsYNSeasonalFluVaccine {0} @idfsYNSeasonalFluVaccine_{1}", filters.Operation("idfsYNSeasonalFluVaccine", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2969,7 +2969,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datDateOfCare") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_BasicSyndromicSurveillance_SelectList.datDateOfCare, 112) {0} CONVERT(NVARCHAR(8), @datDateOfCare_{1}, 112)", filters.Operation("datDateOfCare", i), i);
+                        sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.datDateOfCare {0} @datDateOfCare_{1}", filters.Operation("datDateOfCare", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2984,9 +2984,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsYNPatientWasHospitalized") ? " or " : " and ");
                         
                         if (filters.Operation("idfsYNPatientWasHospitalized", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNPatientWasHospitalized,0) {0} @idfsYNPatientWasHospitalized_{1} = @idfsYNPatientWasHospitalized_{1})", filters.Operation("idfsYNPatientWasHospitalized", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsYNPatientWasHospitalized {0} @idfsYNPatientWasHospitalized_{1} = @idfsYNPatientWasHospitalized_{1})", filters.Operation("idfsYNPatientWasHospitalized", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNPatientWasHospitalized,0) {0} @idfsYNPatientWasHospitalized_{1}", filters.Operation("idfsYNPatientWasHospitalized", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsYNPatientWasHospitalized {0} @idfsYNPatientWasHospitalized_{1}", filters.Operation("idfsYNPatientWasHospitalized", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3001,9 +3001,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsOutcome") ? " or " : " and ");
                         
                         if (filters.Operation("idfsOutcome", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsOutcome,0) {0} @idfsOutcome_{1} = @idfsOutcome_{1})", filters.Operation("idfsOutcome", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsOutcome {0} @idfsOutcome_{1} = @idfsOutcome_{1})", filters.Operation("idfsOutcome", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsOutcome,0) {0} @idfsOutcome_{1}", filters.Operation("idfsOutcome", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsOutcome {0} @idfsOutcome_{1}", filters.Operation("idfsOutcome", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3018,9 +3018,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsYNPatientWasInER") ? " or " : " and ");
                         
                         if (filters.Operation("idfsYNPatientWasInER", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNPatientWasInER,0) {0} @idfsYNPatientWasInER_{1} = @idfsYNPatientWasInER_{1})", filters.Operation("idfsYNPatientWasInER", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsYNPatientWasInER {0} @idfsYNPatientWasInER_{1} = @idfsYNPatientWasInER_{1})", filters.Operation("idfsYNPatientWasInER", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNPatientWasInER,0) {0} @idfsYNPatientWasInER_{1}", filters.Operation("idfsYNPatientWasInER", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsYNPatientWasInER {0} @idfsYNPatientWasInER_{1}", filters.Operation("idfsYNPatientWasInER", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3035,9 +3035,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsYNTreatment") ? " or " : " and ");
                         
                         if (filters.Operation("idfsYNTreatment", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNTreatment,0) {0} @idfsYNTreatment_{1} = @idfsYNTreatment_{1})", filters.Operation("idfsYNTreatment", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsYNTreatment {0} @idfsYNTreatment_{1} = @idfsYNTreatment_{1})", filters.Operation("idfsYNTreatment", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNTreatment,0) {0} @idfsYNTreatment_{1}", filters.Operation("idfsYNTreatment", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsYNTreatment {0} @idfsYNTreatment_{1}", filters.Operation("idfsYNTreatment", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3052,9 +3052,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsYNAdministratedAntiviralMedication") ? " or " : " and ");
                         
                         if (filters.Operation("idfsYNAdministratedAntiviralMedication", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNAdministratedAntiviralMedication,0) {0} @idfsYNAdministratedAntiviralMedication_{1} = @idfsYNAdministratedAntiviralMedication_{1})", filters.Operation("idfsYNAdministratedAntiviralMedication", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsYNAdministratedAntiviralMedication {0} @idfsYNAdministratedAntiviralMedication_{1} = @idfsYNAdministratedAntiviralMedication_{1})", filters.Operation("idfsYNAdministratedAntiviralMedication", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsYNAdministratedAntiviralMedication,0) {0} @idfsYNAdministratedAntiviralMedication_{1}", filters.Operation("idfsYNAdministratedAntiviralMedication", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsYNAdministratedAntiviralMedication {0} @idfsYNAdministratedAntiviralMedication_{1}", filters.Operation("idfsYNAdministratedAntiviralMedication", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3082,7 +3082,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datDateReceivedAntiviralMedication") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_BasicSyndromicSurveillance_SelectList.datDateReceivedAntiviralMedication, 112) {0} CONVERT(NVARCHAR(8), @datDateReceivedAntiviralMedication_{1}, 112)", filters.Operation("datDateReceivedAntiviralMedication", i), i);
+                        sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.datDateReceivedAntiviralMedication {0} @datDateReceivedAntiviralMedication_{1}", filters.Operation("datDateReceivedAntiviralMedication", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3236,7 +3236,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datSampleCollectionDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_BasicSyndromicSurveillance_SelectList.datSampleCollectionDate, 112) {0} CONVERT(NVARCHAR(8), @datSampleCollectionDate_{1}, 112)", filters.Operation("datSampleCollectionDate", i), i);
+                        sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.datSampleCollectionDate {0} @datSampleCollectionDate_{1}", filters.Operation("datSampleCollectionDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3265,9 +3265,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsTestResult") ? " or " : " and ");
                         
                         if (filters.Operation("idfsTestResult", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsTestResult,0) {0} @idfsTestResult_{1} = @idfsTestResult_{1})", filters.Operation("idfsTestResult", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsTestResult {0} @idfsTestResult_{1} = @idfsTestResult_{1})", filters.Operation("idfsTestResult", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsTestResult,0) {0} @idfsTestResult_{1}", filters.Operation("idfsTestResult", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsTestResult {0} @idfsTestResult_{1}", filters.Operation("idfsTestResult", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3295,7 +3295,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datTestResultDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_BasicSyndromicSurveillance_SelectList.datTestResultDate, 112) {0} CONVERT(NVARCHAR(8), @datTestResultDate_{1}, 112)", filters.Operation("datTestResultDate", i), i);
+                        sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.datTestResultDate {0} @datTestResultDate_{1}", filters.Operation("datTestResultDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3309,7 +3309,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datModificationForArchiveDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_BasicSyndromicSurveillance_SelectList.datModificationForArchiveDate, 112) {0} CONVERT(NVARCHAR(8), @datModificationForArchiveDate_{1}, 112)", filters.Operation("datModificationForArchiveDate", i), i);
+                        sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.datModificationForArchiveDate {0} @datModificationForArchiveDate_{1}", filters.Operation("datModificationForArchiveDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3324,9 +3324,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("intRowStatus") ? " or " : " and ");
                         
                         if (filters.Operation("intRowStatus", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.intRowStatus,0) {0} @intRowStatus_{1} = @intRowStatus_{1})", filters.Operation("intRowStatus", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.intRowStatus {0} @intRowStatus_{1} = @intRowStatus_{1})", filters.Operation("intRowStatus", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.intRowStatus,0) {0} @intRowStatus_{1}", filters.Operation("intRowStatus", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.intRowStatus {0} @intRowStatus_{1}", filters.Operation("intRowStatus", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3341,9 +3341,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfHuman") ? " or " : " and ");
                         
                         if (filters.Operation("idfHuman", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfHuman,0) {0} @idfHuman_{1} = @idfHuman_{1})", filters.Operation("idfHuman", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfHuman {0} @idfHuman_{1} = @idfHuman_{1})", filters.Operation("idfHuman", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfHuman,0) {0} @idfHuman_{1}", filters.Operation("idfHuman", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfHuman {0} @idfHuman_{1}", filters.Operation("idfHuman", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3358,9 +3358,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsHumanGender") ? " or " : " and ");
                         
                         if (filters.Operation("idfsHumanGender", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsHumanGender,0) {0} @idfsHumanGender_{1} = @idfsHumanGender_{1})", filters.Operation("idfsHumanGender", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsHumanGender {0} @idfsHumanGender_{1} = @idfsHumanGender_{1})", filters.Operation("idfsHumanGender", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsHumanGender,0) {0} @idfsHumanGender_{1}", filters.Operation("idfsHumanGender", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsHumanGender {0} @idfsHumanGender_{1}", filters.Operation("idfsHumanGender", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3403,9 +3403,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsSettlement") ? " or " : " and ");
                         
                         if (filters.Operation("idfsSettlement", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsSettlement,0) {0} @idfsSettlement_{1} = @idfsSettlement_{1})", filters.Operation("idfsSettlement", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsSettlement {0} @idfsSettlement_{1} = @idfsSettlement_{1})", filters.Operation("idfsSettlement", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsSettlement,0) {0} @idfsSettlement_{1}", filters.Operation("idfsSettlement", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsSettlement {0} @idfsSettlement_{1}", filters.Operation("idfsSettlement", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3420,67 +3420,29 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsRegion") ? " or " : " and ");
                         
                         if (filters.Operation("idfsRegion", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsRegion,0) {0} @idfsRegion_{1} = @idfsRegion_{1})", filters.Operation("idfsRegion", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsRegion {0} @idfsRegion_{1} = @idfsRegion_{1})", filters.Operation("idfsRegion", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsRegion,0) {0} @idfsRegion_{1}", filters.Operation("idfsRegion", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsRegion {0} @idfsRegion_{1}", filters.Operation("idfsRegion", i), i);
                             
                     }
                     sql.AppendFormat(")");
                 }
                   
-                if(EidssSiteContext.Instance.IsThaiCustomization)
+                if (filters.Contains("idfsRayon"))
                 {
-                    try
+                    sql.AppendFormat(" and (");
+                    for (int i = 0; i < filters.Count("idfsRayon"); i++)
                     {
-                        if (filters.Contains("idfsRayon"))
-                        {
-                            Int64 regionID = Convert.ToInt64(filters.Value("idfsRegion"));
-                            Int64 rayonID = Convert.ToInt64(filters.Value("idfsRayon"));
-                            string list = ThaiDistrictHelper.FilterThaiDistricts(manager, regionID, rayonID);
-
-                            sql.AppendFormat(" and (");
-                            sql.AppendFormat("((Cast(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsRayon,0) as varchar(100)) in (select[Value] from fnsysSplitList(\'{0}\', 0, ','))))", list);
-                            sql.AppendFormat(")");
-                        }
+                        if (i > 0) 
+                          sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
+                        
+                        if (filters.Operation("idfsRayon", i) == "&")
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsRayon {0} @idfsRayon_{1} = @idfsRayon_{1})", filters.Operation("idfsRayon", i), i);
+                        else
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsRayon {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
+                            
                     }
-                    catch (Exception e)
-                    {
-                        if (filters.Contains("idfsRayon"))
-                        {
-                            sql.AppendFormat(" and (");
-                            for (int i = 0; i < filters.Count("idfsRayon"); i++)
-                            {
-                                if (i > 0)
-                                    sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
-
-                                if (filters.Operation("idfsRayon", i) == "&")
-                                    sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsRayon,0) {0} @idfsRayon_{1} = @idfsRayon_{1})", filters.Operation("idfsRayon", i), i);
-                                else
-                                    sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsRayon,0) {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
-
-                            }
-                            sql.AppendFormat(")");
-                        }
-                    }
-                }
-                else
-                {
-                    if (filters.Contains("idfsRayon"))
-                    {
-                        sql.AppendFormat(" and (");
-                        for (int i = 0; i < filters.Count("idfsRayon"); i++)
-                        {
-                            if (i > 0)
-                                sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
-
-                            if (filters.Operation("idfsRayon", i) == "&")
-                                sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsRayon,0) {0} @idfsRayon_{1} = @idfsRayon_{1})", filters.Operation("idfsRayon", i), i);
-                            else
-                                sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsRayon,0) {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
-
-                        }
-                        sql.AppendFormat(")");
-                    }
+                    sql.AppendFormat(")");
                 }
                   
                 if (filters.Contains("idfsCountry"))
@@ -3492,9 +3454,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsCountry") ? " or " : " and ");
                         
                         if (filters.Operation("idfsCountry", i) == "&")
-                          sql.AppendFormat("(isnull(fn_BasicSyndromicSurveillance_SelectList.idfsCountry,0) {0} @idfsCountry_{1} = @idfsCountry_{1})", filters.Operation("idfsCountry", i), i);
+                          sql.AppendFormat("(fn_BasicSyndromicSurveillance_SelectList.idfsCountry {0} @idfsCountry_{1} = @idfsCountry_{1})", filters.Operation("idfsCountry", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_BasicSyndromicSurveillance_SelectList.idfsCountry,0) {0} @idfsCountry_{1}", filters.Operation("idfsCountry", i), i);
+                          sql.AppendFormat("fn_BasicSyndromicSurveillance_SelectList.idfsCountry {0} @idfsCountry_{1}", filters.Operation("idfsCountry", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -4665,7 +4627,7 @@ namespace eidss.model.Schema
                     "HumanCase.strLastName",
                     null, null, c => false, false, SearchPanelLocation.Main, false, null, null, null, null, null, null,false
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!EidssSiteContext.Instance.IsIraqCustomization))())
                 SearchPanelMeta.Add(new SearchPanelMetaItem(
                     "strFirstName",
                     EditorType.Text,

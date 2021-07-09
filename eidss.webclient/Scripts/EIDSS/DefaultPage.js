@@ -84,7 +84,11 @@
 
     initCleanButtons: function () {
         if ($(".k-ie9").length > 0 || $(".k-webkit").length > 0) {
-            $("span.k-textbox").addClass("k-space-right");
+            var isRtl = $("#IsRtl").val();
+            if (isRtl)
+                $("span.k-textbox").addClass("k-space-left");
+            else
+                $("span.k-textbox").addClass("k-space-right");
             $(".k-i-close").click(defaultPage.onCleanButtonClick);
         } else {
             $(".k-i-close").remove();

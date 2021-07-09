@@ -38,6 +38,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         [CompressFilter]
         public ActionResult Details(FormCollection form)
         {

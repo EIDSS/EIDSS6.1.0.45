@@ -31,6 +31,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         [CompressFilter]
         public ActionResult Details(FormCollection form)
         {
@@ -86,6 +87,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Select(string formData)
         {
             FilterParams filter = SearchPanelHelper.SearchPanelParseValues(formData, FarmListItem.Accessor.Instance(null).SearchPanelMeta);

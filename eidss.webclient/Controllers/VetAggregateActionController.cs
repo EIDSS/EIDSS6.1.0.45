@@ -44,6 +44,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         [CompressFilter]
         public ActionResult Details(FormCollection form)
         {
@@ -51,6 +52,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SaveAggregateCase(FormCollection form)
         {
             PostAggregateCase(form);
@@ -141,6 +143,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult VetAggregateActionPicker(string formData)
         {
             return IndexInternal<VetAggregateActionListItem.Accessor, VetAggregateActionListItem, VetAggregateActionListItem.VetAggregateActionListItemGridModelList>

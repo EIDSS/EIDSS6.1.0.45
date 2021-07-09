@@ -106,7 +106,7 @@ namespace bv.tests.AVR.UnitTests
         [TestMethod]
         public void TableCompressTest()
         {
-            var source = new QueryTableModel(123, "en")
+            var source = new QueryTableModel(123, "en", null)
             {
                 Header = new QueryTablePacketDTO
                 {
@@ -159,7 +159,7 @@ namespace bv.tests.AVR.UnitTests
         [TestMethod]
         public void TableEmptyCompressTest()
         {
-            var source = new QueryTableModel(123, "en");
+            var source = new QueryTableModel(123, "en", null);
 
             QueryTableModel zip = BinaryCompressor.Zip(source);
             QueryTableModel result = BinaryCompressor.Unzip(zip);

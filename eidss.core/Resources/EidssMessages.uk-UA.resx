@@ -4515,4 +4515,132 @@
   <data name="String1" xml:space="preserve">
     <value />
   </data>
+  <data name="msgEhsDateBusinessRuleFailed" xml:space="preserve">
+    <value>Дата народження пізніша за дату події</value>
+  </data>
+  <data name="msgEhsDoBFuture" xml:space="preserve">
+    <value>Дата народження пізніше сьогоднішньої дати</value>
+  </data>
+  <data name="msgEhsEventFileName" xml:space="preserve">
+    <value>Файл, що містить Клінічні/Лабораторні дані</value>
+  </data>
+  <data name="msgEhsMandatoryField" xml:space="preserve">
+    <value>Обов’язкове поле {0} не може бути порожнім</value>
+  </data>
+  <data name="msgEhsNotExistingPatient" xml:space="preserve">
+    <value>Невідомий пацієнт (не існує  у файлі з пацієнтами)</value>
+  </data>
+  <data name="msgEhsPatientFileName" xml:space="preserve">
+    <value>Файл, що містить дані Пацієнтів</value>
+  </data>
+  <data name="msgUploadFileSizeExceeded" xml:space="preserve">
+    <value>Розмір файлу перевищує дозволений ліміт та не може бути імпортований. Зменште розмір файлу або оберіть інший</value>
+  </data>
+  <data name="msgEhsUnknownReferenceValue" xml:space="preserve">
+    <value>Невідоме значення довідника - поле {0}</value>
+  </data>
+  <data name="msgEhsUnsupportedExtention" xml:space="preserve">
+    <value>Неправильне розширення файлу. Виберіть файл JSON і повторіть спробу.</value>
+  </data>
+  <data name="msgUploadEhsFileError" xml:space="preserve">
+    <value>Під час завантаження файлу винакла помилка. Будь-ласка, спробуйте ще раз.</value>
+  </data>
+  <data name="msgUploadEhsFileNullFile" xml:space="preserve">
+    <value>Під час завантаження файлу винакла помилка. Будь-ласка, спробуйте ще раз.</value>
+  </data>
+  <data name="msgUploadEhsFileValidationError" xml:space="preserve">
+    <value>Під час перевірки файлу було виявлено помилки. Будь ласка, перегляньте помилки у файлі '{0}'. Виправте помилки та повторіть спробу</value>
+  </data>
+  <data name="msgUploadEhsInvalidFileStructure" xml:space="preserve">
+    <value>Очікувані атрибути {0} відсутні. Вкажіть усі очікувані атрибути або оберіть інший файл.</value>
+  </data>
+  <data name="msgUploadEhsInvalidJSONFormat" xml:space="preserve">
+    <value>Невірний формат файл(у/ів). Будь ласка оберіть інші файли.</value>
+  </data>
+  <data name="msgUploadEhsMaxLengthError" xml:space="preserve">
+    <value>Перевищена максимальна довжина строки - поле {0}</value>
+  </data>
+  <data name="msgUploadEhsTooManyRecords" xml:space="preserve">
+    <value>Розмір файлу перевищує дозволений ліміт та не може бути імпортований. Зменште розмір файлу або оберіть інший.</value>
+  </data>
+  <data name="tabUploadEhsFile" xml:space="preserve">
+    <value>eHealth Імпорт</value>
+  </data>
+  <data name="btnImport" xml:space="preserve">
+    <value>Імпорт</value>
+  </data>
+  <data name="btDismiss" xml:space="preserve">
+    <value>Пропустити</value>
+  </data>
+  <data name="btDismissAll" xml:space="preserve">
+    <value>Пропустити усі</value>
+  </data>
+  <data name="btFinalize" xml:space="preserve">
+    <value>Завершити</value>
+  </data>
+  <data name="btUpdate" xml:space="preserve">
+    <value>Оновити</value>
+  </data>
+  <data name="msgUploadEhsDismissAllExistingPatients" xml:space="preserve">
+    <value>Дані по усім пацієнтам не будуть оновлені. Ви впевнені, що бажаєте пропустити усіх пацієнтів?</value>
+  </data>
+  <data name="msgUploadEhsDismissUnspecifiedExistingPatients" xml:space="preserve">
+    <value>Є пацієнти по яким не прийнято рішення. Бажаєте пропустити?</value>
+  </data>
+  <data name="msgUploadEhsFilesWithSuccess" xml:space="preserve">
+    <value>Будь ласка, перегляньте результати імпорту даних у файлі '{0}'.</value>
+  </data>
+  <data name="titleEhsPatientForUpdate" xml:space="preserve">
+    <value>Пацієнти-Кандидати на оновлення</value>
+  </data>
+  <data name="rsDismiss" xml:space="preserve">
+    <value>Пропустити</value>
+  </data>
+  <data name="rsUpdate" xml:space="preserve">
+    <value>Оновити</value>
+  </data>
+  <data name="rsUnspecified" xml:space="preserve">
+    <value>Не визначено</value>
+  </data>
+  <data name="msgUploadEhsResult0" xml:space="preserve">
+    <value>Невідомо</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsResult1" xml:space="preserve">
+    <value>Створено новий випадок</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsResult2" xml:space="preserve">
+    <value>Оновлено існуючий випадок</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsResult3" xml:space="preserve">
+    <value>Існуючий випадок без оновлень</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsResult_1" xml:space="preserve">
+    <value>Епізод ігноровано</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="rsEhsAttributes" xml:space="preserve">
+    <value>e-Health атрибути</value>
+  </data>
+  <data name="rsEIDSSAttributes" xml:space="preserve">
+    <value>ЕЛІССЗ атрибути</value>
+  </data>
+  <data name="msgUploadEhsConfirmSaveData" xml:space="preserve">
+    <value>Файли успішно перевірені. Бажаєте їх імпортувати?</value>
+  </data>
+  <data name="msgUploadEhsConfirmSaveDataWithExistingPatients" xml:space="preserve">
+    <value>Файли успішно перевірені та всі резолюції по оновленю пацієнтів були надані. Бажаєте імпортувати файли?</value>
+  </data>
+  <data name="msgUploadEhsDataTypeError" xml:space="preserve">
+    <value>Невірний формат дати - поле {0}</value>
+  </data>
+  <data name="msgUploadEhsInvalidFileStructureNoAttributes" xml:space="preserve">
+    <value>Очікувані атрибути відсутні. Вкажіть усі очікувані атрибути або оберіть інший файл.</value>
+  </data>
+  <data name="msgUploadEhsSystemIsBusy" xml:space="preserve">
+    <value>Наразі система зайнята імпортом інших файлів. Будь ласка, повторіть спробу через декілька хвилин.</value>
+  </data>
 </root>

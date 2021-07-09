@@ -98,7 +98,7 @@ namespace eidss.model.WindowsService.Serialization
 
         public static QueryTableModel Zip(QueryTableModel sourceTable)
         {
-            var result = new QueryTableModel(sourceTable.QueryId, sourceTable.Language)
+            var result = new QueryTableModel(sourceTable.QueryId, sourceTable.Language, sourceTable.UserId)
             {
                 Header = Zip(sourceTable.Header),
                 BodyPackets = sourceTable.BodyPackets.Select(Zip).ToList(),
@@ -307,7 +307,7 @@ namespace eidss.model.WindowsService.Serialization
 
         public static QueryTableModel Unzip(QueryTableModel sourceTable)
         {
-            var result = new QueryTableModel(sourceTable.QueryId, sourceTable.Language)
+            var result = new QueryTableModel(sourceTable.QueryId, sourceTable.Language, sourceTable.UserId)
             {
                 Header = Unzip(sourceTable.Header),
                 BodyPackets = sourceTable.BodyPackets.Select(Unzip).ToList(),

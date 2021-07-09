@@ -54,6 +54,20 @@ namespace bv.model.BLToolkit
             }
         }
 
+        internal DbManagerProxy
+            (DataProviderBase provider, string connectionString, ModelUserContext context, CacheScope cacheScope, DatabaseType databaseType, int commandTimeout = 300)
+            : base(provider, connectionString)
+        {
+            CommandTimeout = commandTimeout;
+            m_Context = context;
+            m_CacheScope = cacheScope;
+            m_DatabaseType = databaseType;
+            if (m_Context != null)
+            {
+                m_Context.SetContext(this);
+            }
+        }
+
         internal int IncrementRef()
         {
             return ++m_RefCount;
@@ -272,9 +286,9 @@ namespace bv.model.BLToolkit
             get { return g_Factory[(int)databaseType]; }
         }
 
-        public static void SetSqlFactory(string connectionString, DatabaseType databaseType = DatabaseType.Main)
+        public static void SetSqlFactory(string connectionString, DatabaseType databaseType = DatabaseType.Main, int commandTimeout = 300)
         {
-            g_Factory[(int)databaseType] = new SqlDbManagerFactory(connectionString, databaseType);
+            g_Factory[(int)databaseType] = new SqlDbManagerFactory(connectionString, databaseType, commandTimeout);
 
             LocalDataStoreSlot slot = Thread.GetNamedDataSlot(DbManagerProxy.NameDbManagerSlot(databaseType));
             if (slot != null)
@@ -297,6 +311,7 @@ namespace bv.model.BLToolkit
     {
         private readonly string m_ConnectionString;
         private readonly DatabaseType m_DatabaseType;
+        private readonly int m_CommandTimeout = 300;
 
         internal SqlDbManagerFactory(string connectionString, DatabaseType databaseType)
         {
@@ -304,10 +319,24 @@ namespace bv.model.BLToolkit
             m_DatabaseType = databaseType;
         }
 
+        internal SqlDbManagerFactory(string connectionString, DatabaseType databaseType, int commandTimeout = 300)
+        {
+            m_ConnectionString = connectionString;
+            m_DatabaseType = databaseType;
+            m_CommandTimeout = commandTimeout;
+        }
+
+
         public override string ConnectionString
         {
             get { return m_ConnectionString; }
         }
+
+        public int CommandTimeout
+        {
+            get { return m_CommandTimeout; }
+        }
+
 
         public override DbManagerProxy Create(ModelUserContext context = null, CacheScope cacheScope = null)
         {
@@ -330,7 +359,7 @@ namespace bv.model.BLToolkit
             var connectionString = (context != null && context.IsArchiveMode)
                 ? context.DatabaseConnectionString
                 : m_ConnectionString;
-            ret = new DbManagerProxy(new SqlDataProvider(), connectionString, context, cacheScope, m_DatabaseType);
+            ret = new DbManagerProxy(new SqlDataProvider(), connectionString, context, cacheScope, m_DatabaseType, m_CommandTimeout);
             ret.IncrementRef();
             Thread.SetData(slot, ret);
             return ret;

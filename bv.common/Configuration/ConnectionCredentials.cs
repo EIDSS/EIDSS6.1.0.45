@@ -18,6 +18,8 @@ namespace bv.common.Configuration
         private string m_SQLUser;
         private string m_SQLPassword;
         private string m_Prefix = "SQL";
+        private int m_CommandTimeout = BaseSettings.MinSqlCommandTimeout;
+        private int m_MaxPoolSize = BaseSettings.DefaultSqlConnectionMaxPoolSize;
         public delegate void CredentialChangeHandler(string keyName, string oldValue, string newValue);
         public event CredentialChangeHandler CredentialChange;
         public ConnectionCredentials()
@@ -103,6 +105,12 @@ namespace bv.common.Configuration
                 {
                     baseConnectionString = baseConnectionString.Replace("{3}", m_SQLServer);
                 }
+                var strMaxPoolSize = BaseSettings.DefaultSqlConnectionMaxPoolSize.ToString();
+                if (m_MaxPoolSize > BaseSettings.DefaultSqlConnectionMaxPoolSize)
+                {
+                    strMaxPoolSize = m_MaxPoolSize.ToString();
+                }
+                baseConnectionString = baseConnectionString.Replace("{4}", strMaxPoolSize);
             }
             return (baseConnectionString);
         }
@@ -135,6 +143,30 @@ namespace bv.common.Configuration
             }
         }
 
+        public int CommandTimeout
+        {
+            get
+            {
+                if (m_CommandTimeout < BaseSettings.MinSqlCommandTimeout)
+                {
+                    return BaseSettings.MinSqlCommandTimeout;
+                }
+                return m_CommandTimeout;
+            }
+        }
+
+        public int MaxPoolSize
+        {
+            get
+            {
+                if (m_MaxPoolSize < BaseSettings.DefaultSqlConnectionMaxPoolSize)
+                {
+                    return BaseSettings.DefaultSqlConnectionMaxPoolSize;
+                }
+                return m_MaxPoolSize;
+            }
+        }
+
         private string ReadFromRegistry(string valueName)
         {
             return RegistryHelper.ReadEidssValue(valueName);
@@ -153,7 +185,7 @@ namespace bv.common.Configuration
 
         public void Init
             (string connectionString, string server, string database, string encryptedUser,
-             string enryptedPassword)
+             string enryptedPassword, int? intMaxPoolSize = null)
         {
             m_ConnectionStringFinal = null;
             m_SQLDatabase = database;
@@ -163,13 +195,21 @@ namespace bv.common.Configuration
             {
                 m_SQLPassword = Cryptor.Decrypt(enryptedPassword, m_SQLUser);
             }
+            if ((intMaxPoolSize != null) && (intMaxPoolSize.Value > BaseSettings.DefaultSqlConnectionMaxPoolSize))
+            {
+                m_MaxPoolSize = intMaxPoolSize.Value;
+            }
+            else
+            {
+                m_MaxPoolSize = BaseSettings.DefaultSqlConnectionMaxPoolSize;
+            }
             if (string.IsNullOrEmpty(connectionString))
             {
                 m_SQLConnectionString = m_Config.GetItem(GetKey("ConnectionString"));
             }
             if (string.IsNullOrEmpty(m_SQLConnectionString))
             {
-                m_SQLConnectionString = "Persist Security Info=False;User ID={0};Password={1};Initial Catalog={2};Data Source={3}";
+                m_SQLConnectionString = "Persist Security Info=False;User ID={0};Password={1};Initial Catalog={2};Data Source={3};Max Pool Size={4};";
             }
         }
 
@@ -192,6 +232,8 @@ namespace bv.common.Configuration
                 }
                 m_SQLDatabase = Config.GetSetting(GetKey("Database")); //BaseSettings.SqlDatabase;
                 m_SQLServer = Config.GetSetting(GetKey("Server")); //BaseSettings.SqlServer;
+                m_CommandTimeout = Config.GetIntSetting("SqlCommandTimeout", BaseSettings.MinSqlCommandTimeout); //BaseSettings.SqlCommandTimeout
+                m_MaxPoolSize = Config.GetIntSetting("SqlConnectionMaxPoolSize", BaseSettings.DefaultSqlConnectionMaxPoolSize);
             }
             else
             {
@@ -203,8 +245,24 @@ namespace bv.common.Configuration
                 }
                 m_SQLDatabase = m_Config.GetItem(GetKey("Database"));
                 m_SQLServer = m_Config.GetItem(GetKey("Server"));
+
+                m_CommandTimeout = BaseSettings.MinSqlCommandTimeout;
+                var strCommandTimeout = m_Config.GetItem("SqlCommandTimeout");
+                var intCommandTimeout = m_CommandTimeout;
+                if ((!string.IsNullOrEmpty(strCommandTimeout)) && int.TryParse(strCommandTimeout, out intCommandTimeout))
+                {
+                    m_CommandTimeout = intCommandTimeout > BaseSettings.MinSqlCommandTimeout ? intCommandTimeout : BaseSettings.MinSqlCommandTimeout;
+                }
+
+                m_MaxPoolSize = BaseSettings.DefaultSqlConnectionMaxPoolSize;
+                var strMaxPoolSize = m_Config.GetItem("SqlConnectionMaxPoolSize");
+                var intMaxPoolSize = m_MaxPoolSize;
+                if ((!string.IsNullOrEmpty(strCommandTimeout)) && int.TryParse(strCommandTimeout, out intCommandTimeout))
+                {
+                    m_MaxPoolSize = intMaxPoolSize > BaseSettings.DefaultSqlConnectionMaxPoolSize ? intMaxPoolSize : BaseSettings.DefaultSqlConnectionMaxPoolSize;
+                }
             }
-            Init(m_SQLConnectionString, m_SQLServer, m_SQLDatabase, m_SQLUser, m_SQLPassword);
+            Init(m_SQLConnectionString, m_SQLServer, m_SQLDatabase, m_SQLUser, m_SQLPassword, m_MaxPoolSize);
             //Dbg.Assert(Utils.Str(Me.m_SQLConnectionString) <> "", "connection string is not defined")
             //if (!string.IsNullOrEmpty(m_SQLUser))
             //{
@@ -229,6 +287,7 @@ namespace bv.common.Configuration
             get
             {
                 return m_ConfigFilesToSave;
+
             }
             set
             {

@@ -27,7 +27,7 @@
         <item name="datDateOfSymptomsOnset" editor="Date" labelId="datDateOfSymptomsOnset" range="true"  />
 
         <item name="strLastName" editor="Text" labelId="HumanCase.strLastName" predicate="() => Customization.Instance.VisibilityFeatures.IsLastNameBeforeFirstName"/>
-        <item name="strFirstName" editor="Text" labelId="strFirstName" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization" />
+        <item name="strFirstName" editor="Text" labelId="strFirstName" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)" />
         <item name="strLastName" editor="Text" labelId="HumanCase.strLastName" predicate="() => !Customization.Instance.VisibilityFeatures.IsLastNameBeforeFirstName"/>
 
         <item name="idfsHumanGender" editor="Lookup" labelId="idfsHumanGender"

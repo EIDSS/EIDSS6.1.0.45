@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
   <Fragment>
-    <Property Id="IRAQ_DEFAULTLANGUAGE" Value="ar" Secure="yes" />
-    <Property Id="Arabic" Value="ar" />
-    <Property Id="arEnglish" Value="en" />
+    <Property Id="IRAQ_DEFAULTLANGUAGE" Value="ar-IQ" Secure="yes" />
+    <Property Id="Arabic_Iraq" Value="ar-IQ" />
+    <Property Id="arIqEnglish" Value="en" />
 
     <UI>
       <Dialog Id="IraqLanguagesDlg" Width="370" Height="270" Title="!(loc.LanguageDlg_Title)">
         <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)">
           <Publish Property="DEFAULTLANGUAGE" Value="[IRAQ_DEFAULTLANGUAGE]" Order="1">1</Publish>
-          <Publish Property="SUPPORTEDLANGUAGES" Value="{[Arabic]}{,[arEnglish]}" Order="1">1</Publish>
+          <Publish Property="SUPPORTEDLANGUAGES" Value="{[Arabic_Iraq]}{,[arIqEnglish]}" Order="1">1</Publish>
 
           <Publish Property="ErrorLanguagesText" Value="{}" Order="2">
             <![CDATA[SUPPORTEDLANGUAGES And "" <> SUPPORTEDLANGUAGES And SUPPORTEDLANGUAGES >< DEFAULTLANGUAGE]]>
@@ -43,11 +43,11 @@
         <Control Id="SupportedLanguages" Type="Text" Width="90" Height="17" X="15" Y="90" Text="!(loc.LanguageDlgSupportedLanguages)" />
         <Control Id="Default" Type="Text" Width="90" Height="17" X="115" Y="90" Text="!(loc.LanguageDlgDefault)" />
 
-        <Control Type="CheckBox" Id="Arabic" Width="70" Height="17" X="30" Y="120" Text="!(loc.Arabic)" Property="Arabic" CheckBoxValue="ar" />
-        <Control Type="CheckBox" Id="arEnglish" Width="50" Height="17" X="30" Y="150" Text="!(loc.English)" Property="arEnglish" CheckBoxValue="en" />
+        <Control Type="CheckBox" Id="Arabic_Iraq" Width="70" Height="17" X="30" Y="120" Text="!(loc.Arabic_Iraq)" Property="Arabic_Iraq" CheckBoxValue="ar-IQ" />
+        <Control Type="CheckBox" Id="arIqEnglish" Width="50" Height="17" X="30" Y="150" Text="!(loc.English)" Property="arIqEnglish" CheckBoxValue="en" />
         <Control Id="IraqLanguageGroup" Type="RadioButtonGroup" Property="IRAQ_DEFAULTLANGUAGE" Width="230" Height="100" X="130" Y="120">
           <RadioButtonGroup Property="IRAQ_DEFAULTLANGUAGE">
-            <RadioButton Text="Arabic (Iraq)" Height="17" Value="ar" Width="10" X="0" Y="0" />
+            <RadioButton Text="Arabic (Iraq)" Height="17" Value="ar-IQ" Width="10" X="0" Y="0" />
             <RadioButton Text="English" Height="17" Value="en" Width="10" X="0" Y="30" />
           </RadioButtonGroup>
         </Control>

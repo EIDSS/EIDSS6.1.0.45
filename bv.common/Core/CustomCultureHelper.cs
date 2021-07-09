@@ -77,6 +77,7 @@ namespace bv.common.Core
             AddCountry(780000000, "KA");
             AddCountry(1240000000, "KZ");
             AddCountry(1050000000, "IQ");
+            AddCountry(1110000000, "JO");
             AddCountry(2260000000, "UA");
             AddCountry(2250000000, "TZ");
             AddCountry(2150000000, "TH");
@@ -112,6 +113,7 @@ namespace bv.common.Core
             AddCountryName(780000000, "Georgia");
             AddCountryName(1240000000, "Kazakhstan");
             AddCountryName(1050000000, "Iraq");
+            AddCountryName(1110000000, "Jordan");
             AddCountryName(2260000000, "Ukraine");
             AddCountryName(2250000000, "Tanzania");
             AddCountryName(2150000000, "Thailand");
@@ -152,6 +154,7 @@ namespace bv.common.Core
             AddCustomCulture("en", 1240000000);
             AddCustomCulture("ru", 1240000000);
             AddCustomCulture("en", 1050000000);
+            AddCustomCulture("en", 1110000000);
             AddCustomCulture("en", 2260000000);
             AddCustomCulture("en", 2250000000);
             AddCustomCulture("en", 2150000000);

@@ -11,6 +11,7 @@ namespace eidss.model.Trace
     public class TraceHelper : ITraceStrategy
     {
         public const string ReportsCategory = "EIDSS.Reports";
+        public const string EhsCategory = "EIDSS.EHS";
         public const string AVRCategory = "EIDSS.AVR";
         public const string HMIS2EIDSSCategory = "EIDSS.HMIS2EIDSS";
         public const string GeneralCategory = "General";

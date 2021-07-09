@@ -860,6 +860,9 @@
   <data name="MenuIraq" xml:space="preserve">
     <value>Arabic (&amp;Iraq)</value>
   </data>
+  <data name="MenuJordan" xml:space="preserve">
+    <value>Arabic (&amp;Jordan)</value>
+  </data>
   <data name="MenuLaunchEpiInfo" xml:space="preserve">
     <value>Launch EPI Info</value>
   </data>
@@ -957,6 +960,10 @@
   <data name="MenuUpload506File" xml:space="preserve">
     <value>Upload 506 File</value>
     <comment>Thai customization</comment>
+  </data>
+  <data name="MenuUploadEhsFile" xml:space="preserve">
+    <value>eHealth Import</value>
+    <comment>UA customization</comment>
   </data>
   <data name="OnePageSituationTH" xml:space="preserve">
     <value>1 Page Situation</value>

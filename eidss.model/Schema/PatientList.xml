@@ -27,9 +27,9 @@
 			</extfilters>
 			<searchpanel>
         <item name="strLastName" editor="Text" labelId="strLastName" predicate="() => Customization.Instance.VisibilityFeatures.IsLastNameBeforeFirstName" />
-        <item name="strFirstName" editor="Text" labelId="strFirstName" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization"/>
+        <item name="strFirstName" editor="Text" labelId="strFirstName" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)"/>
         <item name="strLastName" editor="Text" labelId="strLastName" predicate="() => !Customization.Instance.VisibilityFeatures.IsLastNameBeforeFirstName" />
-        <item name="strSecondName" editor="Text" labelId="strSecondName" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization"/>
+        <item name="strSecondName" editor="Text" labelId="strSecondName" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)"/>
         <item name="datDateofBirth" editor="Date" labelId="datDateofBirth" range="true" />
 
 				<item name="idfsRegion" editor="Lookup" labelId="idfsRegion" isParam="true" dependent="idfsRayon"
@@ -45,8 +45,8 @@
 			<grid>
 				<item name="idfHumanActual" visible="false" key="true" />
 				<item name="strLastName" action="ActionEditPerson" required="true" />
-				<item name="strFirstName" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization"/>
-				<item name="strSecondName"  predicate="() => !EidssSiteContext.Instance.IsIraqCustomization"/>
+				<item name="strFirstName" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)"/>
+				<item name="strSecondName"  predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)"/>
 				<item name="datDateofBirth" />
 				<item name="AddressName" />
         <item name="strPersonIDType" />

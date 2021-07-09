@@ -216,6 +216,44 @@ namespace eidss.web.common.Utils
                 : action(o);
         }
 
+        public static bool Contains(string sessionId)
+        {
+            lock (sGStorage)
+            {
+                if (!sGStorage.ContainsKey(sessionId))
+                    return false;
+
+                var s = sGStorage[sessionId];
+
+                if (s != null)
+                    return true;
+            }
+            return false;
+        }
+
+        public static bool Contains(string sessionId, long key, string additionalKey)
+        {
+            if (additionalKey == null)
+                additionalKey = "";
+            string realkey = key + additionalKey;
+            lock (sGStorage)
+            {
+                if (!sGStorage.ContainsKey(sessionId))
+                    return false;
+
+                var s = sGStorage[sessionId];
+                
+                if (s == null)
+                    return false;
+                
+                if (s.ListOfObjects.ContainsKey(realkey))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public static R Using<O, R>(Func<O, R> action, string sessionId, long key, string additionalKey, bool bThrowIfNotFound = true, ForceReadWriteLockType ForceLock = ForceReadWriteLockType.Default)
         {
             if (additionalKey == null)

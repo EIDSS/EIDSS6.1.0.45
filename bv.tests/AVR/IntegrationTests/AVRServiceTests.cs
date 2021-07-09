@@ -39,6 +39,7 @@ using EIDSS.AVR.Service.WcfFacade;
 using EIDSS.AVR.Service.WcfService;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StructureMap;
+using eidss.model.Core;
 
 namespace bv.tests.AVR.IntegrationTests
 {
@@ -184,8 +185,14 @@ namespace bv.tests.AVR.IntegrationTests
         [TestMethod]
         public void AvrServiceHelperGetAvrServiceChartResultTest()
         {
+            long? userId = null;
+            if (EidssSiteContext.Instance.AVRUserSensitiveMode && (EidssUserContext.Instance.CurrentUser.ID != null) && (EidssUserContext.Instance.CurrentUser.ID is long))
+            {
+                userId = (long)EidssUserContext.Instance.CurrentUser.ID;
+            }
+
             var tableModel = new ChartTableModel(-1, ModelUserContext.CurrentLanguage,
-                ExportChartToJpgTests.CreateChartData(), null, null, null, 1000, 750);
+                ExportChartToJpgTests.CreateChartData(), null, null, null, 1000, 750, userId);
             AvrServiceChartResult result = ServiceClientHelper.GetAvrServiceChartResult(tableModel);
 
             Assert.IsNotNull(result);

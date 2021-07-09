@@ -65,6 +65,7 @@
       "az-L",
       "hy",
       "uk",
+      "ar-IQ",
       "ar",
       "lo",
       "vi",

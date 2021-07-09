@@ -41,6 +41,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult StoreInSession(FormCollection form)
         {
             var key = long.Parse(form["idfVector"]);
@@ -53,6 +54,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Details(FormCollection form)
         {
             var result = PickerInternal<Vector.Accessor, Vector, VsSession>(form, Vector.Accessor.Instance(null), null,
@@ -88,6 +90,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetVectorSample(FormCollection form)
         {
             return PickerInternal<VectorSample.Accessor, VectorSample, Vector>(form, VectorSample.Accessor.Instance(null), null,
@@ -107,6 +110,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetCopyVector(FormCollection form)
         {
             var idSession = long.Parse(form["idfVectorSurveillanceSession"]);
@@ -193,6 +197,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetVectorFieldTest(FormCollection form)
         {
             return PickerInternal<VectorFieldTest.Accessor, VectorFieldTest, Vector>(form, VectorFieldTest.Accessor.Instance(null), null,

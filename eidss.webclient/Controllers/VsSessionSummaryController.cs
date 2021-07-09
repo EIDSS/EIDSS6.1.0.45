@@ -33,6 +33,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Details(FormCollection form)
         {
             var result = PickerInternal<VsSessionSummary.Accessor, VsSessionSummary, VsSession>(form, VsSessionSummary.Accessor.Instance(null), null,
@@ -50,6 +51,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetVsVSessionSummary(FormCollection form)
         {
             return PickerInternal<VsSessionSummary.Accessor, VsSessionSummary, VsSession>(form, VsSessionSummary.Accessor.Instance(null), null,
@@ -69,6 +71,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetDiagnosis(FormCollection form)
         {
             return PickerInternal<VsSessionSummaryDiagnosis.Accessor, VsSessionSummaryDiagnosis, VsSessionSummary>(form, VsSessionSummaryDiagnosis.Accessor.Instance(null), null,
@@ -78,6 +81,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult StoreInSession(FormCollection form)
         {
             var key = long.Parse(form["idfsVSSessionSummary"]);

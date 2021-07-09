@@ -158,13 +158,20 @@ namespace eidss.avr.mweb.Controllers
                     textPatterns.Add(col.ColumnName, col.ExtendedProperties["TextPattern"]);
             }
 
+            long? userId = null;
+            if (EidssSiteContext.Instance.AVRUserSensitiveMode && (EidssUserContext.Instance.CurrentUser.ID != null) && 
+                (EidssUserContext.Instance.CurrentUser.ID is long))
+            {
+                userId = (long)EidssUserContext.Instance.CurrentUser.ID;
+            }
+
             var tbl = new ChartTableModel(viewModel.ViewHeader.ViewID,
                                     EidssUserContext.CurrentLanguage,
                                     toTable,
                                     viewModel.ViewHeader.ChartLocalSettingsZip,
                                     chtp,
                                     textPatterns,
-                                    width, height);
+                                    width, height, userId);
 
 
             AvrServiceChartResult result = ServiceClientHelper.GetAvrServiceChartResult(tbl);

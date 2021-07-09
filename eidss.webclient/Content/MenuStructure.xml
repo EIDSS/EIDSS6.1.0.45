@@ -43,4 +43,6 @@
   </item>
   <item ref="MenuUpload506File" reskey="Upload 506 File" permission="HumanCase.Insert" allowCustomization="51577490000000" urlTop="/Upload506/Details" popup="true" notForArchive="true">
   </item>
+  <item ref="MenuUploadEhsFile" reskey="eHealth Import" permission="CanImportExportData.Execute" allowCustomization="51577460000000" urlTop="/UploadEhs/Details" popup="true" notForArchive="true">
+  </item>
 </menu>

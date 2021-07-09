@@ -239,6 +239,10 @@
         <File Name="Microsoft.SqlServer.SqlClrProvider.dll" Checksum="yes" KeyPath="yes" />
       </Component>
 
+      <Component Id="Newtonsoft.Json.dll">
+        <File Name="Newtonsoft.Json.dll" Checksum="yes" KeyPath="yes" />
+      </Component>
+
       <Component Id="NPOI.OOXML.dll">
         <File Name="NPOI.OOXML.dll" Checksum="yes" KeyPath="yes" />
       </Component>

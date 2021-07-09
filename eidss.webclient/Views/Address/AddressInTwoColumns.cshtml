@@ -115,13 +115,13 @@
             }
         }
         <td class="small label">
-            @if (eidss.model.Core.EidssSiteContext.Instance.CustomizationPackageID != (long) eidss.model.Enums.CustomizationPackage.Iraq)
+            @if ((eidss.model.Core.EidssSiteContext.Instance.CustomizationPackageID != (long) eidss.model.Enums.CustomizationPackage.Iraq))
             {
                 @Html.BvLabel(Model, m => m.strPostCode)
             }
         </td>
         <td>
-            @if (eidss.model.Core.EidssSiteContext.Instance.CustomizationPackageID != (long) eidss.model.Enums.CustomizationPackage.Iraq)
+            @if ((eidss.model.Core.EidssSiteContext.Instance.CustomizationPackageID != (long) eidss.model.Enums.CustomizationPackage.Iraq))
             {
                 if (Model.IsHiddenPersonalData("PostCode"))
                 {

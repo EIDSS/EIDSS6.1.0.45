@@ -23,32 +23,32 @@ namespace eidss.avr.db.AVRCacheService
         eidss.model.AVR.ServiceData.ChartExportDTO ExportChartToJpg(eidss.model.AVR.ServiceData.ChartTableDTO zippedData);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAVRFacade/GetCachedView", ReplyAction = "http://tempuri.org/IAVRFacade/GetCachedViewResponse")]
-        eidss.model.AVR.ServiceData.ViewDTO GetCachedView(string sessionId, long layoutId, string lang);
+        eidss.model.AVR.ServiceData.ViewDTO GetCachedView(string sessionId, long layoutId, string lang, long? userId);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAVRFacade/InvalidateViewCache", ReplyAction = "http://tempuri.org/IAVRFacade/InvalidateViewCacheResponse")]
         void InvalidateViewCache(long layoutId);
   
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAVRFacade/GetCachedQueryTableHeader", ReplyAction = "http://tempuri.org/IAVRFacade/GetCachedQueryTableHeaderResponse")]
-        eidss.model.AVR.ServiceData.QueryTableHeaderDTO GetCachedQueryTableHeader(long queryId, string lang, bool isArchive);
+        eidss.model.AVR.ServiceData.QueryTableHeaderDTO GetCachedQueryTableHeader(long queryId, string lang, bool isArchive, long? userId);
 
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAVRFacade/DoesCachedQueryExists", ReplyAction = "http://tempuri.org/IAVRFacade/DoesCachedQueryExistsResponse")]
-        bool DoesCachedQueryExists(long queryId, string lang, bool isArchive);
+        bool DoesCachedQueryExists(long queryId, string lang, bool isArchive, long? userId);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAVRFacade/GetConcreteCachedQueryTableHeader", ReplyAction = "http://tempuri.org/IAVRFacade/GetConcreteCachedQueryTableHeaderResponse")]
-        eidss.model.AVR.ServiceData.QueryTableHeaderDTO GetConcreteCachedQueryTableHeader(long queryCacheId, long queryId, string lang, bool isArchive);
+        eidss.model.AVR.ServiceData.QueryTableHeaderDTO GetConcreteCachedQueryTableHeader(long queryCacheId, long queryId, string lang, bool isArchive, long? userId);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAVRFacade/GetCachedQueryTablePacket", ReplyAction = "http://tempuri.org/IAVRFacade/GetCachedQueryTablePacketResponse")]
-        eidss.model.AVR.ServiceData.QueryTablePacketDTO GetCachedQueryTablePacket(long queryCacheId, int packetNumber, int totalPacketCount);
+        eidss.model.AVR.ServiceData.QueryTablePacketDTO GetCachedQueryTablePacket(long queryCacheId, int packetNumber, int totalPacketCount, long? userId);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAVRFacade/InvalidateQueryCacheForLanguage", ReplyAction = "http://tempuri.org/IAVRFacade/InvalidateQueryCacheForLanguageResponse")]
-        void InvalidateQueryCacheForLanguage(long queryId, string lang);
+        void InvalidateQueryCacheForLanguage(long queryId, string lang, long? userId);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAVRFacade/InvalidateQueryCache", ReplyAction = "http://tempuri.org/IAVRFacade/InvalidateQueryCacheResponse")]
         void InvalidateQueryCache(long queryId);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAVRFacade/GetQueryRefreshDateTime", ReplyAction = "http://tempuri.org/IAVRFacade/GetQueryRefreshDateTimeResponse")]
-        System.DateTime GetQueryRefreshDateTime(long queryId, string lang);
+        System.DateTime GetQueryRefreshDateTime(long queryId, string lang, long? userId);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAVRFacade/GetServiceVersion", ReplyAction = "http://tempuri.org/IAVRFacade/GetServiceVersionResponse")]
         System.Version GetServiceVersion();
@@ -105,34 +105,34 @@ namespace eidss.avr.db.AVRCacheService
             return base.Channel.ExportChartToJpg(zippedData);
         }
 
-        public eidss.model.AVR.ServiceData.ViewDTO GetCachedView(string sessionId, long layoutId, string lang)
+        public eidss.model.AVR.ServiceData.ViewDTO GetCachedView(string sessionId, long layoutId, string lang, long? userId = null)
         {
-            return base.Channel.GetCachedView(sessionId, layoutId, lang);
+            return base.Channel.GetCachedView(sessionId, layoutId, lang, userId);
         }
 
-        public eidss.model.AVR.ServiceData.QueryTableHeaderDTO GetCachedQueryTableHeader(long queryId, string lang, bool isArchive)
+        public eidss.model.AVR.ServiceData.QueryTableHeaderDTO GetCachedQueryTableHeader(long queryId, string lang, bool isArchive, long? userId = null)
         {
-            return base.Channel.GetCachedQueryTableHeader(queryId, lang, isArchive);
+            return base.Channel.GetCachedQueryTableHeader(queryId, lang, isArchive, userId);
         }
 
-        public eidss.model.AVR.ServiceData.QueryTableHeaderDTO GetConcreteCachedQueryTableHeader(long queryCacheId, long queryId, string lang, bool isArchive)
+        public eidss.model.AVR.ServiceData.QueryTableHeaderDTO GetConcreteCachedQueryTableHeader(long queryCacheId, long queryId, string lang, bool isArchive, long? userId = null)
         {
-            return base.Channel.GetConcreteCachedQueryTableHeader(queryCacheId, queryId, lang, isArchive);
+            return base.Channel.GetConcreteCachedQueryTableHeader(queryCacheId, queryId, lang, isArchive, userId);
         }
 
-        public bool DoesCachedQueryExists(long queryId, string lang, bool isArchive)
+        public bool DoesCachedQueryExists(long queryId, string lang, bool isArchive, long? userId = null)
         {
-            return base.Channel.DoesCachedQueryExists(queryId, lang, isArchive);
+            return base.Channel.DoesCachedQueryExists(queryId, lang, isArchive, userId);
         }
 
-        public eidss.model.AVR.ServiceData.QueryTablePacketDTO GetCachedQueryTablePacket(long queryCacheId, int packetNumber, int totalPacketCount)
+        public eidss.model.AVR.ServiceData.QueryTablePacketDTO GetCachedQueryTablePacket(long queryCacheId, int packetNumber, int totalPacketCount, long? userId = null)
         {
-            return base.Channel.GetCachedQueryTablePacket(queryCacheId, packetNumber, totalPacketCount);
+            return base.Channel.GetCachedQueryTablePacket(queryCacheId, packetNumber, totalPacketCount, userId);
         }
 
-        public void InvalidateQueryCacheForLanguage(long queryId, string lang)
+        public void InvalidateQueryCacheForLanguage(long queryId, string lang, long? userId = null)
         {
-            base.Channel.InvalidateQueryCacheForLanguage(queryId, lang);
+            base.Channel.InvalidateQueryCacheForLanguage(queryId, lang, userId);
         }
 
         public void InvalidateQueryCache(long queryId)
@@ -144,9 +144,9 @@ namespace eidss.avr.db.AVRCacheService
         {
             base.Channel.InvalidateViewCache(layoutId);
         }
-        public System.DateTime GetQueryRefreshDateTime(long queryId, string lang)
+        public System.DateTime GetQueryRefreshDateTime(long queryId, string lang, long? userId = null)
         {
-            return base.Channel.GetQueryRefreshDateTime(queryId, lang);
+            return base.Channel.GetQueryRefreshDateTime(queryId, lang, userId);
         }
 
         public System.Version GetServiceVersion()

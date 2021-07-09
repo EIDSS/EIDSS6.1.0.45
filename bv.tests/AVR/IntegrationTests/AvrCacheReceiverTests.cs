@@ -125,7 +125,7 @@ namespace bv.tests.AVR.IntegrationTests
         {
             var facade = new AVRFacadeStub(123);
 
-            ViewDTO model = facade.GetCachedView("xxx", -1, "en");
+            ViewDTO model = facade.GetCachedView("xxx", -1, "en", null);
 
             Assert.IsNotNull(model);
             Assert.IsNotNull(model.BinaryViewHeader);
@@ -155,7 +155,7 @@ namespace bv.tests.AVR.IntegrationTests
             {
                 var number = Interlocked.Increment(ref taskNumber);
                 Console.WriteLine("->View task {0} started", number);
-                ViewDTO model = facade.GetCachedView("xxx", -1, "en");
+                ViewDTO model = facade.GetCachedView("xxx", -1, "en", null);
                 Console.WriteLine("<-View task {0} finished", number);
             };
             Task[] tasks = new Task[taskCount];

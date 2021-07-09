@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="bvResourceManagerChanger1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bvResourceManagerChanger1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
   <data name="TabContol.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt</value>
   </data>
@@ -891,9 +891,9 @@
   <data name="PopUpButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 667</value>
   </data>
-  <metadata name="cmReports.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="cmReports.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>217, 17</value>
-  </metadata>
+  </data>
   <data name="MenuItem1.Text" xml:space="preserve">
     <value>Livestock Investigation Form</value>
   </data>
@@ -915,9 +915,9 @@
   <data name="&gt;&gt;PopUpButton1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="VetCaseLiveStockDetail.Appearance.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt</value>
   </data>
@@ -926,31 +926,31 @@
   </data>
   <data name="$this.LeftIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
@@ -979,5 +979,8 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>bv.common.win.BaseDetailForm, bvwin_common, Version=6.0.72.5, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="miUrgentNotificationReportJo.Text" xml:space="preserve">
+    <value>Urgent Notification Form</value>
   </data>
 </root>

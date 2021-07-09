@@ -4080,6 +4080,24 @@ namespace eidss.model.Schema
             }
             
       
+            public ActResult UrgentNotificationReportJo(DbManagerProxy manager, VetCase obj, List<object> pars)
+            {
+                
+                return UrgentNotificationReportJo(manager, obj
+                    );
+            }
+            public ActResult UrgentNotificationReportJo(DbManagerProxy manager, VetCase obj
+                )
+            {
+                
+                if (obj != null && !obj.GetPermissions().CanExecute("UrgentNotificationReportJo"))
+                    throw new PermissionException("VetCase", "UrgentNotificationReportJo");
+                
+                return true;
+                
+            }
+            
+      
             private void _SetupChildHandlers(VetCase obj, object newobj)
             {
                 
@@ -6307,6 +6325,44 @@ namespace eidss.model.Schema
                     false,
                     false,
                     "vetCase.TestsReportRun",
+                    false,
+                    new ActionMetaItem[] {
+                      
+                      }
+                    
+                    ));
+                  
+                Actions.Add(new ActionMetaItem(
+                    "UrgentNotificationReportJo",
+                    ActionTypes.Action,
+                    true,
+                    "",
+                    "",
+                    
+                    (manager, c, pars) => Accessor.Instance(null).UrgentNotificationReportJo(manager, (VetCase)c, pars),
+                        
+                    null,
+                    
+                    new ActionMetaItem.VisualItem(
+                        /*from BvMessages*/"titleUrgentNotificationReportJo",
+                        "",
+                        /*from BvMessages*/"",
+                        /*from BvMessages*/"",
+                        "",
+                        /*from BvMessages*/"",
+                        ActionsAlignment.Left,
+                        ActionsPanelType.ContextMenu,
+                        ActionsAppType.All
+                        ),
+                      true,
+                    null,
+                    null,
+                    null,
+                    null,
+                    (o1, o2, p, r) => (o1 as VetCase).IsLiveStock &&  eidss.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed("VetUrgentNotificationJo"),
+                    false,
+                    false,
+                    null,
                     false,
                     new ActionMetaItem[] {
                       

@@ -64,6 +64,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         [CompressFilter]
         public ActionResult Details(FormCollection form)
         {
@@ -74,6 +75,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult StoreInSession(FormCollection form)
         {
             var idSessionList = form["idfVectorSurveillanceSession"];

@@ -153,6 +153,7 @@ namespace eidss.model.Schema
             Observations = new List<long>();
             Settings = new FFSettings {WindowMode = true};
             AggregateMatrixVersions = new EditableList<AggregateMatrixVersionLookup>();
+            PredefinedStubRows = new List<PredefinedStub>();
             CurrentDiagnosis = 0;
         }
 

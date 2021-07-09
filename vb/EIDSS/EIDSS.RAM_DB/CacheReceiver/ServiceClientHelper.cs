@@ -11,6 +11,7 @@ using eidss.model.AVR.DataBase;
 using eidss.model.AVR.ServiceData;
 using eidss.model.AVR.SourceData;
 using eidss.model.Resources;
+using eidss.model.Core;
 
 namespace eidss.avr.db.CacheReceiver
 {
@@ -115,7 +116,13 @@ namespace eidss.avr.db.CacheReceiver
         {
             using (var wrapper = new AvrServiceClientWrapper())
             {
-                var exists = wrapper.DoesCachedQueryExists(queryId, lang, isArchive);
+                long? userId = null;
+                if (EidssSiteContext.Instance.AVRUserSensitiveMode && (EidssUserContext.Instance.CurrentUser.ID != null) && (EidssUserContext.Instance.CurrentUser.ID is long))
+                {
+                    userId = (long)EidssUserContext.Instance.CurrentUser.ID;
+                }
+
+                var exists = wrapper.DoesCachedQueryExists(queryId, lang, isArchive, userId);
                 return exists;
             }
         }
@@ -136,9 +143,15 @@ namespace eidss.avr.db.CacheReceiver
         {
             using (var wrapper = new AvrServiceClientWrapper())
             {
-                wrapper.GetCachedQueryTableHeader(-1, ModelUserContext.CurrentLanguage, false);
-                wrapper.GetCachedQueryTablePacket(-1, 0, 0);
-                wrapper.GetQueryRefreshDateTime(-1, ModelUserContext.CurrentLanguage);
+                long? userId = null;
+                if (EidssSiteContext.Instance.AVRUserSensitiveMode && (EidssUserContext.Instance.CurrentUser.ID != null) && (EidssUserContext.Instance.CurrentUser.ID is long))
+                {
+                    userId = (long)EidssUserContext.Instance.CurrentUser.ID;
+                }
+
+                wrapper.GetCachedQueryTableHeader(-1, ModelUserContext.CurrentLanguage, false, userId);
+                wrapper.GetCachedQueryTablePacket(-1, 0, 0, userId);
+                wrapper.GetQueryRefreshDateTime(-1, ModelUserContext.CurrentLanguage, userId);
             }
         }
 
@@ -226,7 +239,13 @@ namespace eidss.avr.db.CacheReceiver
             {
                 using (var wrapper = new AvrServiceClientWrapper())
                 {
-                    wrapper.InvalidateQueryCacheForLanguage(queryId, ModelUserContext.CurrentLanguage);
+                    long? userId = null;
+                    if (EidssSiteContext.Instance.AVRUserSensitiveMode && (EidssUserContext.Instance.CurrentUser.ID != null) && (EidssUserContext.Instance.CurrentUser.ID is long))
+                    {
+                        userId = (long)EidssUserContext.Instance.CurrentUser.ID;
+                    }
+
+                    wrapper.InvalidateQueryCacheForLanguage(queryId, ModelUserContext.CurrentLanguage, userId);
                 }
             }
 

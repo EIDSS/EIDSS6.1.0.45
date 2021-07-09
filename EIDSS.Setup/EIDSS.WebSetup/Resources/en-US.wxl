@@ -39,6 +39,7 @@
   <String Id="Azerbaijan" Overridable="yes" Localizable="yes">Azerbaijan</String>
   <String Id="Georgia" Overridable="yes" Localizable="yes">Georgia</String>
   <String Id="Iraq" Overridable="yes" Localizable="yes">Iraq</String>
+  <String Id="Jordan" Overridable="yes" Localizable="yes">Jordan</String>
   <String Id="Kazakhstan" Overridable="yes" Localizable="yes">Kazakhstan</String>
   <String Id="Laos" Overridable="yes" Localizable="yes">Laos</String>
   <String Id="Tanzania" Overridable="yes" Localizable="yes">Tanzania</String>
@@ -59,7 +60,8 @@
   <String Id="ErrorLanguagesText_EmptySupportedLanguages" Overridable="yes" Localizable="yes">Select at least one supported language!</String>
   <String Id="ErrorLanguagesText_DeadDefaultLanguage" Overridable="yes" Localizable="yes">Selected default language isn't supported!</String>
 
-  <String Id="Arabic" Overridable="yes" Localizable="yes">Arabic (Iraq)</String>
+  <String Id="Arabic_Iraq" Overridable="yes" Localizable="yes">Arabic (Iraq)</String>
+  <String Id="Arabic_Jordan" Overridable="yes" Localizable="yes">Arabic (Jordan)</String>
   <String Id="Armenian" Overridable="yes" Localizable="yes">Armenian</String>
   <String Id="Azeri" Overridable="yes" Localizable="yes">Azeri</String>
   <String Id="English" Overridable="yes" Localizable="yes">English</String>

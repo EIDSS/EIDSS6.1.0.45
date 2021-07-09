@@ -45,7 +45,8 @@ namespace eidss.main
             Application.ThreadException += eh.OnThreadException;
             try
             {
-                DbManagerFactory.SetSqlFactory(new ConnectionCredentials().ConnectionString);
+                var cc = new ConnectionCredentials();
+                DbManagerFactory.SetSqlFactory(cc.ConnectionString, DatabaseType.Main, cc.CommandTimeout);
                 EidssUserContext.Init(
                     () =>
                         EidssSiteContext.Instance.SiteType != SiteType.CDR &&
@@ -94,6 +95,8 @@ namespace eidss.main
                 WinClientContext.HelpNames.Add(Localizer.lngAzLat, Config.GetSetting("HelpUrl." + Localizer.lngAzLat, defHelpName));
                 WinClientContext.HelpNames.Add(Localizer.lngUk, Config.GetSetting("HelpUrl." + Localizer.lngUk, defHelpName));
                 WinClientContext.HelpNames.Add(Localizer.lngAr, Config.GetSetting("HelpUrl." + Localizer.lngAr, defHelpName));
+                WinClientContext.HelpNames.Add(Localizer.lngIraq, Config.GetSetting("HelpUrl." + Localizer.lngIraq, defHelpName));
+                WinClientContext.HelpNames.Add(Localizer.lngJordan, Config.GetSetting("HelpUrl." + Localizer.lngJordan, defHelpName));
                 WinClientContext.HelpNames.Add(Localizer.lngThai, Config.GetSetting("HelpUrl." + Localizer.lngThai, defHelpName));
 
                 //DevXLocalizer.ForceResourceAdding();

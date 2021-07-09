@@ -153,7 +153,7 @@
         <item name="strFieldBarcode" isParam="true" editor="Text" labelId="AsSessionTableViewItem.strFieldBarcode" />
         <!-- local sample id -->
         <item name="intTotalAnimalQty" editor="Numeric" labelId="intTotalAnimalQtyFull" range="true" />
-        <item name="strOwnerFirstName" editor="Text" labelId="OwnerFirstName" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization"/>
+        <item name="strOwnerFirstName" editor="Text" labelId="OwnerFirstName" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)"/>
         <item name="strOwnerLastName" editor="Text" labelId="OwnerLastName" />       
         <item name="idfsRegion" editor="Lookup" labelId="idfsRegion"  dependent="idfsRayon"
 					lookupName="RegionLookup" lookupType="RegionLookup" lookupText="c.strRegionName" lookupValue="c.idfsRegion"
@@ -191,7 +191,7 @@
 
         <item location="Combobox" name="strFarmCode" editor="Text" labelId="strFarmCode" defaultoper="="/>
         <item location="Combobox" name="FarmName" editor="Text" labelId="strFarmFullName" defaultoper="="/>
-        <item location="Combobox" name="strOwnerMiddleName" editor="Text" labelId="OwnerMiddleName" defaultoper="=" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization"/>
+        <item location="Combobox" name="strOwnerMiddleName" editor="Text" labelId="OwnerMiddleName" defaultoper="=" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)"/>
         <item location="Combobox" name="strContactPhone" editor="Text" labelId="ContactPhone" defaultoper="="/>
         <item location="Combobox" name="strFax" editor="Text" labelId="strFax" defaultoper="=" />
         <item location="Combobox" name="strEmail" editor="Text" labelId="strEmail" defaultoper="="/>

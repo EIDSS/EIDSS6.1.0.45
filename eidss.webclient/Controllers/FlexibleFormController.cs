@@ -65,6 +65,7 @@ namespace eidss.webclient.Controllers
 
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult ShowTestDetailFlexibleForm(long root, long key, string name, FormCollection form)
         {
             //var list = ModelStorage.Get(ModelUserContext.ClientID, root, name, false) as EditableList<CaseTest>;
@@ -97,6 +98,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SpeciesClinicalSigns(long idfCase, long idfSpecies, FormCollection form)
         {
             return ObjectStorage.Using<VetCase, ActionResult>(vc =>
@@ -125,6 +127,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult AnimalClinicalSigns(long idfCase, long idfAnimal, string name, FormCollection form)
         {
             return ObjectStorage.Using<VetCase, ActionResult>(vc =>
@@ -145,6 +148,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult CopyFFPresenter(long root, long idfObservation)
         {
             //var presenter = ModelStorage.Get(ModelUserContext.ClientID, root, idfObservation.ToString()) as FFPresenterModel;
@@ -158,6 +162,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult PasteFFPresenter(long root, long idfObservation)
         {
             var result = StatusOk;
@@ -184,6 +189,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult DeleteFFParameters(long root, long idfObservation)
         {
             //var ff = (FFPresenterModel)ModelStorage.Get(ModelUserContext.ClientID, root, idfObservation.ToString());
@@ -204,6 +210,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult AddFFParameter(long root, long idfObservation, long idfsParameter)
         {
             //var ff = (FFPresenterModel)ModelStorage.Get(ModelUserContext.ClientID, root, idfObservation.ToString());
@@ -254,6 +261,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult ClearFFPresenter(long root, long idfObservation)
         {
             //var presenter = ModelStorage.Get(ModelUserContext.ClientID, root, idfObservation.ToString()) as FFPresenterModel;
@@ -318,6 +326,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult EditTableRow(string idfsSection, bool isNew, long key, string ffpresenterId, FormCollection form)
         {
             return ObjectStorage.Using<FFPresenterModel, ActionResult>(ff =>
@@ -335,6 +344,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult CopyTableRow(string idfsSection, long idfRow, long key, string ffpresenterId)
         {
             //var ff = ModelStorage.Get(ModelUserContext.ClientID, key, ffpresenterId) as FFPresenterModel;
@@ -352,6 +362,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult DeleteTableRow(string idfsSection, long idfRow, long key, string ffpresenterId)
         {
             //var ff = ModelStorage.Get(ModelUserContext.ClientID, key, ffpresenterId) as FFPresenterModel;

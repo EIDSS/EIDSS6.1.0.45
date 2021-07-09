@@ -140,8 +140,9 @@ namespace eidss.model.AVR.SourceData
         {
             Utils.CheckNotNullOrEmpty(columnName, "columnName");
             var oldProperty = (AvrMethodDescriptor) Properties[columnName];
+            AvrMethodDelegate dbNullMethod = p => null;
             Properties.Remove(oldProperty);
-            Properties.Add(new AvrMethodDescriptor(oldProperty.Name, p => DBNull.Value, oldProperty.MethodReturnType));
+            Properties.Add(new AvrMethodDescriptor(oldProperty.Name, dbNullMethod, oldProperty.MethodReturnType));
         }
 
         public void CopyCollectionFrom(AvrDataColumnCollection collection)
