@@ -1,29 +1,20 @@
 ﻿using System;
 using System.Globalization;
-using System.Threading;
 using System.Web;
-using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Optimization;
-using System.Configuration;
-using System.Web.Security;
 using bv.common.Configuration;
 using bv.common.Core;
 using bv.common.Resources.TranslationTool;
 using bv.model.BLToolkit;
 using bv.model.Model.Core;
 using bv.model.Model.Validators;
-using eidss.gis.common;
 using eidss.model.Core;
-using eidss.model.Core.Security;
 using eidss.model.Resources;
-using eidss.web.common.Utils;
 using eidss.webclient.Utils;
 using MvcContrib.UI.InputBuilder;
 using MvcContrib;
-using System.IO;
-using System.Reflection;
 
 namespace eidss.webclient
 {
@@ -261,7 +252,8 @@ namespace eidss.webclient
                 "~/Scripts/EIDSS/Patient.js",
                 "~/Scripts/EIDSS/Laboratory.js",
                 "~/Scripts/EIDSS/VsSession.js",
-                "~/Scripts/EIDSS/Upload506.js"
+                "~/Scripts/EIDSS/Upload506.js",
+                "~/Scripts/EIDSS/UploadEhs.js"
                 ));
         }
         #endregion
@@ -271,7 +263,7 @@ namespace eidss.webclient
             RegisterBundles(BundleTable.Bundles);
             TranslationToolHelper.SetDefaultTranslationPath();
             var connectionCredentials = new ConnectionCredentials();
-            DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString);
+            DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString, DatabaseType.Main, connectionCredentials.CommandTimeout);
             EidssUserContext.Init();
             CustomCultureHelper.CurrentCountry = EidssSiteContext.Instance.CountryID;
             LookupCacheListener.Cleanup();

@@ -50,6 +50,7 @@ using EIDSS.Reports.Parameterized.Veterinary.TestType;
 using EIDSS.Reports.Parameterized.Human.UA.Keepers;
 using EIDSS.Reports.Parameterized.Human.KZ.Keeper;
 using EIDSS.Reports.Parameterized.Veterinary.AZ.Keepers;
+using EIDSS.Reports.Document.Veterinary.JO;
 
 namespace EIDSS.Reports.Factory
 {
@@ -580,6 +581,12 @@ namespace EIDSS.Reports.Factory
         #region Veterinary Reports
 
         #region Veterinary Document report
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public void VetUrgentNotificationJo(long caseId)
+        {
+            InitDocumentReport<UrgentNotificationForm>(ReportHelper.CreateParameters(caseId));
+        }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         public void VetAggregateCaseSummary(AggregateSummaryReportParameters aggrParams)

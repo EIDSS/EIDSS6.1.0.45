@@ -27,6 +27,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult PensideTestPicker(FormCollection form)
         {
             return PickerInternal<PensideTest.Accessor, PensideTest, VetCase>(form, PensideTest.Accessor.Instance(null), null, 
@@ -44,6 +45,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult VetCaseLogPicker(FormCollection form)
         {
             return PickerInternal<VetCaseLog.Accessor, VetCaseLog, VetCase>(form, VetCaseLog.Accessor.Instance(null), null,
@@ -67,6 +69,7 @@ namespace eidss.webclient.Controllers
 
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult VaccinationPicker(FormCollection form)
         {
             return PickerInternal<VaccinationListItem.Accessor, VaccinationListItem, VetCase>(form, VaccinationListItem.Accessor.Instance(null), null, 
@@ -90,6 +93,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult AnimalPicker(FormCollection form)
         {
             return PickerInternal<AnimalListItem.Accessor, AnimalListItem, VetCase>(form, AnimalListItem.Accessor.Instance(null), null,

@@ -19,8 +19,8 @@ Imports System.Runtime.InteropServices
  Assembly: AssemblyCompany("Black & Veatch Special Projects Corp."), _
  Assembly: AssemblyTitle("BV framework"), _
  Assembly: AssemblyProduct("BV framework"), _
- Assembly: AssemblyCopyright("Copyright © 2005-2020, Black & Veatch Special Projects Corp."), _
+ Assembly: AssemblyCopyright("Copyright © 2005-2021, Black & Veatch Special Projects Corp."), _
  Assembly: AssemblyTrademark("Trademark by Black & Veatch Special Projects Corp."), _
- Assembly: AssemblyVersion("6.1.0.67"), _
- Assembly: AssemblyFileVersion("6.1.0.67")> 
+ Assembly: AssemblyVersion("6.1.0.90"), _
+ Assembly: AssemblyFileVersion("6.1.0.88")> 
 

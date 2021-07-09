@@ -139,46 +139,78 @@ namespace EIDSS.AVR.Service.Scheduler
                 {
                     try
                     {
-                        DateTime? userRequestDate = Facade.GetsQueryCacheUserRequestDate(queryId);
                         DateTime dateSplitter = DateTime.Now.AddDays(-Configuration.DontRefreshCacheNotUsedByUserAfterDays);
-                        if (userRequestDate.HasValue && userRequestDate.Value > dateSplitter)
+                        var userList = Facade.GetQueryCacheValidUsers(queryId, dateSplitter);
+
+                        if (userList == null)
+                            userList = new List<long?>() { null };
+
+                        foreach (long? userId in userList)
                         {
-                            foreach (string language in Languages)
+                            var doRefresh = true;
+                            if (userId == null)
                             {
-                                TraceStartRefreshQuery(queryId, language);
-                                Facade.RefreshCachedQueryTableByScheduler(queryId, language, UseArchiveData);
-                                Facade.DeleteQueryCacheForLanguage(queryId, language, true);
-                                TraceEndRefreshQuery(queryId, language);
-
-                                if (SetAutoEventIfDisposing())
+                                DateTime? userRequestDate = Facade.GetsQueryCacheUserRequestDate(queryId, null);
+                                doRefresh = userRequestDate.HasValue && userRequestDate.Value > dateSplitter;
+                            }
+                            if (doRefresh)
+                            {
+                                foreach (string language in Languages)
                                 {
-                                    return;
-                                }
+                                    TraceStartRefreshQuery(queryId, language, userId);
+                                    Facade.RefreshCachedQueryTableByScheduler(queryId, language, UseArchiveData, userId);
+                                    Facade.DeleteQueryCacheForLanguage(queryId, language, true, userId);
+                                    TraceEndRefreshQuery(queryId, language, userId);
 
-                                TraceWaiting();
-                                for (int i = 0; i < Configuration.SecondsBetweenSchedulerTasks; i++)
-                                {
-                                    Thread.Sleep(1000);
                                     if (SetAutoEventIfDisposing())
                                     {
                                         return;
                                     }
+
+                                    TraceWaiting();
+                                    for (int i = 0; i < Configuration.SecondsBetweenSchedulerTasks; i++)
+                                    {
+                                        Thread.Sleep(1000);
+                                        if (SetAutoEventIfDisposing())
+                                        {
+                                            return;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                TraceQueryNoRequestedByUser(queryId, userId);
+                                foreach (string language in Languages)
+                                {
+                                    if (SetAutoEventIfDisposing())
+                                    {
+                                        return;
+                                    }
+                                    Facade.InvalidateQueryCacheForLanguage(queryId, language, userId);
+                                    Facade.DeleteQueryCacheForLanguage(queryId, language, false, userId);
                                 }
                             }
                         }
-                        else
+
+                        var userListToDeleteCache = Facade.GetQueryCacheInvalidUsers(queryId, dateSplitter);
+                        if (userListToDeleteCache == null)
+                            userListToDeleteCache = new List<long>() { };
+
+                        foreach (long userIdToDeleteCache in userListToDeleteCache)
                         {
-                            TraceQueryNoRequestedByUser(queryId);
+                            TraceQueryNoRequestedByUser(queryId, userIdToDeleteCache);
                             foreach (string language in Languages)
                             {
                                 if (SetAutoEventIfDisposing())
                                 {
                                     return;
                                 }
-                                Facade.InvalidateQueryCacheForLanguage(queryId, language);
-                                Facade.DeleteQueryCacheForLanguage(queryId, language, false);
+                                Facade.InvalidateQueryCacheForLanguage(queryId, language, userIdToDeleteCache);
+                                Facade.DeleteQueryCacheForLanguage(queryId, language, false, userIdToDeleteCache);
                             }
                         }
+
                     }
                     catch (Exception ex)
                     {
@@ -222,27 +254,29 @@ namespace EIDSS.AVR.Service.Scheduler
             m_Trace.TraceInfo(m_TraceTitle, msg, ids, names, langs, Environment.NewLine);
         }
 
-        private void TraceStartRefreshQuery(long queryId, string language)
+        private void TraceStartRefreshQuery(long queryId, string language, long? userId = null)
         {
-            m_Trace.TraceInfo(m_TraceTitle, "Start refresh query query '{0}' with id='{1}' for language {2}",
-                AvrDbHelper.GetQueryNameForLog(queryId), queryId, language);
+            m_Trace.TraceInfo(m_TraceTitle, 
+                "Start refresh query query '{0}' with id='{1}' for language {2} and user {3}",
+                AvrDbHelper.GetQueryNameForLog(queryId), queryId, language, userId.HasValue ? userId.Value.ToString() : "null");
             m_Watch.Start();
         }
 
-        private void TraceEndRefreshQuery(long queryId, string language)
+        private void TraceEndRefreshQuery(long queryId, string language, long? userId = null)
         {
             m_Watch.Stop();
-            m_Trace.TraceInfo(m_TraceTitle, "End refresh query '{0}' with id='{1}' for language {2}{3}Elapsed Milliseconds: {4:N0}",
+            m_Trace.TraceInfo(m_TraceTitle, 
+                "End refresh query '{0}' with id='{1}' for language {2} and user {3}{4}Elapsed Milliseconds: {5:N0}",
                 AvrDbHelper.GetQueryNameForLog(queryId), queryId,
-                language, Environment.NewLine, m_Watch.ElapsedMilliseconds);
+                language, userId.HasValue ? userId.Value.ToString() : "null", Environment.NewLine, m_Watch.ElapsedMilliseconds);
             m_Watch.Reset();
         }
 
-        private void TraceQueryNoRequestedByUser(long queryId)
+        private void TraceQueryNoRequestedByUser(long queryId, long? userId = null)
         {
             m_Trace.TraceInfo(m_TraceTitle,
-                "Skipped refresh of query '{0}' with id='{1}' because it never have been requested by user. ",
-                AvrDbHelper.GetQueryNameForLog(queryId), queryId);
+                "Skipped refresh of query '{0}' with id='{1}' for user {2} because it have been requested by user never or since long time. ",
+                AvrDbHelper.GetQueryNameForLog(queryId), queryId, userId.HasValue ? string.Format("'{0}'", userId.Value.ToString()) : "null");
         }
 
         private void TraceWaiting()

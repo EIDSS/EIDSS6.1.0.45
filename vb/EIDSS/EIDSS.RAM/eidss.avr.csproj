@@ -391,6 +391,9 @@
     <EmbeddedResource Include="ChartForm\AreaChartSettings.ar-IQ.resx">
       <DependentUpon>AreaChartSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\AreaChartSettings.ar-JO.resx">
+      <DependentUpon>AreaChartSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\AreaChartSettings.az-Latn-AZ.resx">
       <DependentUpon>AreaChartSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -413,6 +416,9 @@
       <DependentUpon>AreaChartSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\AxisSettings.ar-IQ.resx">
+      <DependentUpon>AxisSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\AxisSettings.ar-JO.resx">
       <DependentUpon>AxisSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\AxisSettings.az-Latn-AZ.resx">
@@ -442,6 +448,9 @@
     <EmbeddedResource Include="ChartForm\BarChartSettings.ar-IQ.resx">
       <DependentUpon>BarChartSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\BarChartSettings.ar-JO.resx">
+      <DependentUpon>BarChartSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\BarChartSettings.az-Latn-AZ.resx">
       <DependentUpon>BarChartSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -469,6 +478,9 @@
     <EmbeddedResource Include="ChartForm\BaseSeriesSettings.ar-IQ.resx">
       <DependentUpon>BaseSeriesSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\BaseSeriesSettings.ar-JO.resx">
+      <DependentUpon>BaseSeriesSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\BaseSeriesSettings.az-Latn-AZ.resx">
       <DependentUpon>BaseSeriesSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -494,6 +506,9 @@
       <DependentUpon>BaseSeriesSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\ChartDetailForm.ar-IQ.resx">
+      <DependentUpon>ChartDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\ChartDetailForm.ar-JO.resx">
       <DependentUpon>ChartDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\ChartDetailForm.az-Latn-AZ.resx">
@@ -524,6 +539,9 @@
     <EmbeddedResource Include="ChartForm\ChartDetailPanel.ar-IQ.resx">
       <DependentUpon>ChartDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\ChartDetailPanel.ar-JO.resx">
+      <DependentUpon>ChartDetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\ChartDetailPanel.th-TH.resx">
       <DependentUpon>ChartDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -534,6 +552,9 @@
       <DependentUpon>AreaChartSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\LegendSettings.ar-IQ.resx">
+      <DependentUpon>LegendSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\LegendSettings.ar-JO.resx">
       <DependentUpon>LegendSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\LegendSettings.az-Latn-AZ.resx">
@@ -560,6 +581,9 @@
     <EmbeddedResource Include="ChartForm\LineChartSettings.ar-IQ.resx">
       <DependentUpon>LineChartSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\LineChartSettings.ar-JO.resx">
+      <DependentUpon>LineChartSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\LineChartSettings.az-Latn-AZ.resx">
       <DependentUpon>LineChartSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -582,6 +606,9 @@
       <DependentUpon>LineChartSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\PieChartSettings.ar-IQ.resx">
+      <DependentUpon>PieChartSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\PieChartSettings.ar-JO.resx">
       <DependentUpon>PieChartSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\PieChartSettings.az-Latn-AZ.resx">
@@ -614,6 +641,9 @@
     <EmbeddedResource Include="ChartForm\PointChartSettings.ar-IQ.resx">
       <DependentUpon>PointChartSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\PointChartSettings.ar-JO.resx">
+      <DependentUpon>PointChartSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\PointChartSettings.az-Latn-AZ.resx">
       <DependentUpon>PointChartSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -644,6 +674,9 @@
     <EmbeddedResource Include="ChartForm\SeriesValueLabelsSettings.ar-IQ.resx">
       <DependentUpon>SeriesValueLabelsSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\SeriesValueLabelsSettings.ar-JO.resx">
+      <DependentUpon>SeriesValueLabelsSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\SeriesValueLabelsSettings.az-Latn-AZ.resx">
       <DependentUpon>SeriesValueLabelsSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -671,6 +704,9 @@
     <EmbeddedResource Include="ChartForm\TitleSettings.ar-IQ.resx">
       <DependentUpon>TitleSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\TitleSettings.ar-JO.resx">
+      <DependentUpon>TitleSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\TitleSettings.az-Latn-AZ.resx">
       <DependentUpon>TitleSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -695,6 +731,9 @@
     <EmbeddedResource Include="ChartForm\XAxisSettings.ar-IQ.resx">
       <DependentUpon>XAxisSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\XAxisSettings.ar-JO.resx">
+      <DependentUpon>XAxisSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\XAxisSettings.az-Latn-AZ.resx">
       <DependentUpon>XAxisSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -717,6 +756,9 @@
       <DependentUpon>XAxisSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\YAxisSettings.ar-IQ.resx">
+      <DependentUpon>YAxisSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartForm\YAxisSettings.ar-JO.resx">
       <DependentUpon>YAxisSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChartForm\YAxisSettings.az-Latn-AZ.resx">
@@ -752,6 +794,9 @@
     <EmbeddedResource Include="FilterForm\FilterDialog.ar-IQ.resx">
       <DependentUpon>FilterDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FilterForm\FilterDialog.ar-JO.resx">
+      <DependentUpon>FilterDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FilterForm\FilterDialog.th-TH.resx">
       <DependentUpon>FilterDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -764,16 +809,25 @@
     <EmbeddedResource Include="LayoutForm\LayoutDetailPanel.ar-IQ.resx">
       <DependentUpon>LayoutDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LayoutForm\LayoutDetailPanel.ar-JO.resx">
+      <DependentUpon>LayoutDetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LayoutForm\LayoutDetailPanel.th-TH.resx">
       <DependentUpon>LayoutDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\AvrMainForm.ar-IQ.resx">
       <DependentUpon>AvrMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\AvrMainForm.ar-JO.resx">
+      <DependentUpon>AvrMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm\AvrMainForm.th-TH.resx">
       <DependentUpon>AvrMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\AvrSettingsForm.ar-IQ.resx">
+      <DependentUpon>AvrSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\AvrSettingsForm.ar-JO.resx">
       <DependentUpon>AvrSettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\AvrSettingsForm.az-Latn-AZ.resx">
@@ -804,6 +858,9 @@
     <EmbeddedResource Include="MapForm\MapDetailForm.ar-IQ.resx">
       <DependentUpon>MapDetailForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MapForm\MapDetailForm.ar-JO.resx">
+      <DependentUpon>MapDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MapForm\MapDetailForm.az-Latn-AZ.resx">
       <DependentUpon>MapDetailForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -830,6 +887,9 @@
       <DependentUpon>MapDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MapForm\MapDetailPanel.ar-IQ.resx">
+      <DependentUpon>MapDetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapForm\MapDetailPanel.ar-JO.resx">
       <DependentUpon>MapDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MapForm\MapDetailPanel.th-TH.resx">
@@ -908,6 +968,9 @@
     <EmbeddedResource Include="QueryLayoutTree\RenameFolderDialog.ar-IQ.resx">
       <DependentUpon>RenameFolderDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QueryLayoutTree\RenameFolderDialog.ar-JO.resx">
+      <DependentUpon>RenameFolderDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QueryLayoutTree\RenameFolderDialog.az-Latn-AZ.resx">
       <DependentUpon>RenameFolderDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -925,6 +988,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="PivotForm\DateDiapasonDialog.ar-IQ.resx">
+      <DependentUpon>DateDiapasonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PivotForm\DateDiapasonDialog.ar-JO.resx">
       <DependentUpon>DateDiapasonDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PivotForm\DateDiapasonDialog.az-Latn-AZ.resx">
@@ -949,10 +1015,19 @@
     <EmbeddedResource Include="PivotForm\RenameFieldDialog.ar-IQ.resx">
       <DependentUpon>RenameFieldDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PivotForm\RenameFieldDialog.ar-JO.resx">
+      <DependentUpon>RenameFieldDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PivotForm\PivotDetailPanel.ar-IQ.resx">
       <DependentUpon>PivotDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PivotForm\PivotDetailPanel.ar-JO.resx">
+      <DependentUpon>PivotDetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PivotForm\PivotInfoDetailPanel.ar-IQ.resx">
+      <DependentUpon>PivotInfoDetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PivotForm\PivotInfoDetailPanel.ar-JO.resx">
       <DependentUpon>PivotInfoDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PivotForm\PivotInfoDetailPanel.az-Latn-AZ.resx">
@@ -986,10 +1061,19 @@
     <EmbeddedResource Include="QueryBuilder\QueryDetailPanel.ar-IQ.resx">
       <DependentUpon>QueryDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QueryBuilder\QueryDetailPanel.ar-JO.resx">
+      <DependentUpon>QueryDetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QueryBuilder\QuerySearchObjectInfo.ar-IQ.resx">
       <DependentUpon>QuerySearchObjectInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QueryBuilder\QuerySearchObjectInfo.ar-JO.resx">
+      <DependentUpon>QuerySearchObjectInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QueryLayoutTree\QueryLayoutTreePanel.ar-IQ.resx">
+      <DependentUpon>QueryLayoutTreePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryLayoutTree\QueryLayoutTreePanel.ar-JO.resx">
       <DependentUpon>QueryLayoutTreePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QueryLayoutTree\QueryLayoutTreePanel.az-Latn-AZ.resx">
@@ -1254,6 +1338,9 @@
       <DependentUpon>RenameColumnForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewForm\ViewDetailPanel.ar-IQ.resx">
+      <DependentUpon>ViewDetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForm\ViewDetailPanel.ar-JO.resx">
       <DependentUpon>ViewDetailPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewForm\ViewDetailPanel.az-Latn-AZ.resx">

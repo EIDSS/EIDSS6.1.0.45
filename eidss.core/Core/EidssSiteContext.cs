@@ -283,6 +283,13 @@ namespace eidss.model.Core
                 return CustomizationPackageID == (long)CustomizationPackage.Iraq;//!= CountryID;
             }
         }
+        public bool IsJordanMoACustomization
+        {
+            get
+            {
+                return CustomizationPackageID == (long)CustomizationPackage.JordanMoA;//!= CountryID;
+            }
+        }
         public bool IsGeorgiaCustomization
         {
             get
@@ -334,6 +341,26 @@ namespace eidss.model.Core
                 return CustomizationPackageID == (long)CustomizationPackage.Ukraine;//!= CountryID;
             }
         }
+
+        private bool? m_AVRUserSensitiveMode = null;
+        public bool AVRUserSensitiveMode
+        {
+            get
+            {
+                if (!m_AVRUserSensitiveMode.HasValue)
+                {
+                    m_AVRUserSensitiveMode = false;
+                    int intSetting = 0;
+                    if (int.TryParse(GetGlobalSiteOption(GlobalSiteOption.AVRUserSensitiveMode), out intSetting))
+                    {
+                        if (intSetting == 1)
+                            m_AVRUserSensitiveMode = true;
+                    }
+                }
+                return m_AVRUserSensitiveMode.Value;
+            }
+        }
+
         private int m_FirstDayOfWeek = -1;
         public DayOfWeek FirstDayOfWeek
         {

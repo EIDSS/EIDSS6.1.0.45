@@ -926,6 +926,10 @@
   <data name="tabUpload506File" xml:space="preserve">
     <value>Upload 506 File</value>
   </data>
+  <data name="tabUploadEhsFile" xml:space="preserve">
+    <value>eHealth Import</value>
+    <comment>Ukrainian customization quick access item</comment>
+  </data>
   <data name="frmFarm" xml:space="preserve">
     <value>Farm Info</value>
   </data>
@@ -1208,20 +1212,20 @@
     <comment> Layout ID={0}, Language={1}</comment>
   </data>
   <data name="msgCouldNotGetViewData" xml:space="preserve">
-    <value>Could not get View Data from Layout. Layout ID={0}, Language={1}, SessionId={2}.</value>
-    <comment>{0} - Layout ID, {1} -  Language name, {2} - session id</comment>
+    <value>Could not get View Data from Layout. LayoutID={0}, Lang={1}, SessionId={2}, UserID={3}</value>
+    <comment>{0} - Layout ID, {1} -  Language name, {2} - session id, {3} - User ID</comment>
   </data>
   <data name="msgCouldNotGetQueryCache" xml:space="preserve">
-    <value>Could not get query cache refresh date and time for Query ID={0}.</value>
-    <comment>{0} - Query ID</comment>
+    <value>Could not get query cache refresh date and time for Query ID={0} and UserID={1}.</value>
+    <comment>{0} - Query ID, {1} - User ID</comment>
   </data>
   <data name="msgCouldNotGetQueryCacheExistance" xml:space="preserve">
-    <value>Could not define does query cache exists for Query ID={0}.</value>
-    <comment>{0} - Query ID</comment>
+    <value>Could not define does query cache exists for Query ID={0} and UserID={1}.</value>
+    <comment>{0} - Query ID, {1} - User ID</comment>
   </data>
   <data name="msgCouldNotGetQueryCacheUserRequestDate" xml:space="preserve">
-    <value>Could not get date when user requested query cache for Query ID={0}</value>
-    <comment>{0} - Query ID</comment>
+    <value>Could not get date when user requested query cache for Query ID={0} and UserID={1}</value>
+    <comment>{0} - Query ID, {1} - User ID</comment>
   </data>
   <data name="msgCouldNotInvalidateQueryCacheAllLang" xml:space="preserve">
     <value>Could not make query cache table out of date. Query ID={0}, All Languages</value>
@@ -1232,26 +1236,26 @@
     <comment>{0} - Layout ID</comment>
   </data>
   <data name="msgCouldNotInvalidateQueryCache" xml:space="preserve">
-    <value>Could not make query cache table out of date. Query ID={0}, Language={1}</value>
-    <comment>{0} - Query ID, {1} -  Language name</comment>
+    <value>Could not make query cache table out of date. Query ID={0}, Language={1}, UserID={2}</value>
+    <comment>{0} - Query ID, {1} -  Language name, {2} - User ID</comment>
   </data>
   <data name="msgCouldNotDeleteQueryCache" xml:space="preserve">
-    <value>Could not delete query cache. Query ID={0}, Language={1}</value>
-    <comment>{0} - Query ID, {1} -  Language name</comment>
+    <value>Could not delete query cache. Query ID={0}, Language={1}, UserID={2}</value>
+    <comment>{0} - Query ID, {1} -  Language name, {2} - User ID</comment>
   </data>
   <data name="msgCouldNotGetQueryCachePacket" xml:space="preserve">
-    <value>Could not get packet of query cache table. Query CasheID={0}, Packet No={1}</value>
-    <comment>{0} - Query cache ID, {1} -  packet id</comment>
+    <value>Could not get packet of query cache table. Query CacheID={0}, Packet No={1}, UserID={2}</value>
+    <comment>{0} - Query cache ID, {1} -  packet id, {2} - User ID</comment>
   </data>
   <data name="msgCouldNotGetQueryCacheHeader" xml:space="preserve">
-    <value>Could not get header of query cache table. Query ID={0}, Language={1}</value>
-    <comment>{0} - Query ID, {1} -  Language name</comment>
+    <value>Could not get header of query cache table. Query ID={0}, Language={1}, UserID={2}</value>
+    <comment>{0} - Query ID, {1} -  Language name, {2} - User ID</comment>
   </data>
   <data name="msgCouldNotGetQueryCacheHeaderGeneral" xml:space="preserve">
-    <value>Could not get header of query cache table. For detail see previous exception logged</value>
+    <value>Could not get header of query cache table. For details see previous exception logged</value>
   </data>
   <data name="msgCouldNotGetQueryCacheId" xml:space="preserve">
-    <value>Could not get query cashe ID. See log for more details.</value>
+    <value>Could not get query cache ID. See log for more details.</value>
   </data>
   <data name="msgShouldOpenLayout" xml:space="preserve">
     <value>Opening the Layout can take a long time due to Query execution. Click [Ok] to continue loading layout data, otherwise click [Cancel]</value>
@@ -2122,8 +2126,8 @@
     <value>Whole Page</value>
   </data>
   <data name="msgCouldNotExportChart" xml:space="preserve">
-    <value>Could not get Export chart. View ID={0}, Language={1}</value>
-    <comment>{0} - Query ID, {1} -  Language name</comment>
+    <value>Could not get Export chart from View. ViewID={0}, Lang={1}, UserID={2}</value>
+    <comment>{0} - Query ID, {1} -  Language name, {2} - User ID</comment>
   </data>
   <data name="New_test_result_as_old_one" xml:space="preserve">
     <value>New test result can not be the same as old one.</value>
@@ -4654,7 +4658,7 @@ EIDSS will prevent saving of the Human Case containing non-validated PIN of pati
   </data>
   <data name="msgUploadFileSystemIsBusy" xml:space="preserve">
     <value>The system is busy now uploading other files. Please try again a few minutes later.</value>
-    <comment>Thai customization message</comment>
+    <comment>Thai customization message; Ukrainian customization message</comment>
   </data>
   <data name="rsUpdated" xml:space="preserve">
     <value>Updated</value>
@@ -4702,19 +4706,19 @@ EIDSS will prevent saving of the Human Case containing non-validated PIN of pati
   </data>
   <data name="btDismiss" xml:space="preserve">
     <value>Dismiss</value>
-    <comment>Thai customization message</comment>
+    <comment>Thai customization message; Ukrainian customization message</comment>
   </data>
   <data name="btDismissAll" xml:space="preserve">
     <value>Dismiss All</value>
-    <comment>Thai customization message</comment>
+    <comment>Thai customization message; Ukrainian customization message</comment>
   </data>
   <data name="btFinalize" xml:space="preserve">
     <value>Finalize</value>
-    <comment>Thai customization message</comment>
+    <comment>Thai customization message; Ukrainian customization message</comment>
   </data>
   <data name="btUpdate" xml:space="preserve">
     <value>Update</value>
-    <comment>Thai customization message</comment>
+    <comment>Thai customization message; Ukrainian customization message</comment>
   </data>
   <data name="rs506Attributes" xml:space="preserve">
     <value>Attributes to update</value>
@@ -4827,5 +4831,140 @@ EIDSS will prevent saving of the Human Case containing non-validated PIN of pati
   </data>
   <data name="msgTooManySpeciesType3" xml:space="preserve">
     <value>You can specify not more than three species in Species type filter</value>
+  </data>
+  <data name="msgEhsDateBusinessRuleFailed" xml:space="preserve">
+    <value>Date of birth is later than date of event</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgEhsDoBFuture" xml:space="preserve">
+    <value>Date of birth is later than current date</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgEhsEventFileName" xml:space="preserve">
+    <value>Laboratory/Clinical Data File</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgEhsMandatoryField" xml:space="preserve">
+    <value>Mandatory field {0} cannot be empty</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgEhsNotExistingPatient" xml:space="preserve">
+    <value>Unknown patient (does not exist in the file with patients)</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgEhsPatientFileName" xml:space="preserve">
+    <value>Patient Data File</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadFileSizeExceeded" xml:space="preserve">
+    <value>The file size exceeds the limit allowed and cannot be imported. Please reduce the file size or select another file.</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgEhsUnknownReferenceValue" xml:space="preserve">
+    <value>Unknown reference value in column {0}</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgEhsUnsupportedExtention" xml:space="preserve">
+    <value>Wrong file extension. Please select JSON file and try again.</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsFileError" xml:space="preserve">
+    <value>During file upload some errors occurred. Please try again.</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsFileNullFile" xml:space="preserve">
+    <value>During file upload some errors occurred. Please try again.</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsFileValidationError" xml:space="preserve">
+    <value>During file validation some errors were found. Please see errors in the '{0}' file. Fix the errors and try again.</value>
+    <comment>Ukrainian customization message. {0} - name of the file with errors</comment>
+  </data>
+  <data name="msgUploadEhsInvalidFileStructure" xml:space="preserve">
+    <value>Expected {0} attribute(s) is missing. Please specify all expected attributes or select other files.</value>
+    <comment>Ukrainian customization message. {0} - list of missing attributes in the file</comment>
+  </data>
+  <data name="msgUploadEhsInvalidJSONFormat" xml:space="preserve">
+    <value>Wrong file(s) format. Please select other files.</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsMaxLengthError" xml:space="preserve">
+    <value>Max string length in is exceeded in the field {0}</value>
+    <comment>Ukrainian customization message. {0} - name of the filed with error.</comment>
+  </data>
+  <data name="msgUploadEhsTooManyRecords" xml:space="preserve">
+    <value>The file size exceeds the limit allowed and cannot be imported. Please reduce the file size or select another file.</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="btnImport" xml:space="preserve">
+    <value>Import</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsConfirmSaveData" xml:space="preserve">
+    <value>Files have been validated successfully. Do you want to import them?</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsConfirmSaveDataWithExistingPatients" xml:space="preserve">
+    <value>Files have been validated successfully and all resolutions for updates of existing patients have been made. Do you want to import files?</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsDismissAllExistingPatients" xml:space="preserve">
+    <value>All the Patients will not be updated. Are you sure you want to dismiss all the Patients?</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsDismissUnspecifiedExistingPatients" xml:space="preserve">
+    <value>There are Patients without resolution. Do you want to dismiss them?</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsFilesWithSuccess" xml:space="preserve">
+    <value>Please see the results of data import in the '{0}' file.</value>
+    <comment>Ukrainian customization message. {0} - name of the file with results</comment>
+  </data>
+  <data name="msgUploadEhsResult0" xml:space="preserve">
+    <value>Unknown</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsResult1" xml:space="preserve">
+    <value>New case created</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsResult2" xml:space="preserve">
+    <value>Existing case updated</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsResult3" xml:space="preserve">
+    <value>Existing case with no updates</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsResult_1" xml:space="preserve">
+    <value>Event ignored</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="rsEhsAttributes" xml:space="preserve">
+    <value>e-Health Attributes</value>
+  </data>
+  <data name="titleEhsPatientForUpdate" xml:space="preserve">
+    <value>Patients Candidates for Update</value>
+    <comment>Ukrainian customization form name</comment>
+  </data>
+  <data name="msgUploadEhsDataTypeError" xml:space="preserve">
+    <value>Wrong date format in field {0}</value>
+    <comment>Ukrainian customization message. {0} - name of the field with error</comment>
+  </data>
+  <data name="msgUploadEhsInvalidFileStructureNoAttributes" xml:space="preserve">
+    <value>Expected attributes are missing. Please specify all expected attributes or select other files.</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgUploadEhsSystemIsBusy" xml:space="preserve">
+    <value>The system is busy now importing other files. Please try again a few minutes later.</value>
+    <comment>Ukrainian customization message</comment>
+  </data>
+  <data name="msgCouldNotGetQueryCacheInvalidUsers" xml:space="preserve">
+    <value>Could not get list of users not requested query cache for Query ID={0}</value>
+    <comment>{0} - Query ID</comment>
+  </data>
+  <data name="msgCouldNotGetQueryCacheValidUsers" xml:space="preserve">
+    <value>Could not get list of users requested query cache for Query ID={0}</value>
+    <comment>{0} - Query ID</comment>
   </data>
 </root>

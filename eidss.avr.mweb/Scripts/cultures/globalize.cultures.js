@@ -12584,7 +12584,7 @@ Globalize.addCultureInfo( "ar-IQ", "default", {
 	name: "ar-IQ",
 	englishName: "Arabic (Iraq)",
 	nativeName: "العربية (العراق)",
-	language: "ar",
+	language: "ar-IQ",//TODO: check "ar" is correct
 	isRTL: true,
 	numberFormat: {
 		pattern: ["n-"],

@@ -8,7 +8,7 @@ namespace eidss.model.AVR.ServiceData
     public class ChartTableModel
     {
         public ChartTableModel
-            (long viewId, string lang, DataTable table, byte[] chartSettings, DBChartType? chartType, Dictionary<string, object> textPatterns, int width, int height)
+            (long viewId, string lang, DataTable table, byte[] chartSettings, DBChartType? chartType, Dictionary<string, object> textPatterns, int width, int height, long? userId = null)
         {
             Utils.CheckNotNull(table, "table");
 
@@ -19,6 +19,7 @@ namespace eidss.model.AVR.ServiceData
             TextPatterns = textPatterns;
             Width = width;
             Height = height;
+            UserId = userId;
 
             Table = table;
         }
@@ -38,5 +39,8 @@ namespace eidss.model.AVR.ServiceData
         public int Width { get; set; }
 
         public int Height { get; set; }
+
+        public long? UserId { get; set; }
+
     }
 }

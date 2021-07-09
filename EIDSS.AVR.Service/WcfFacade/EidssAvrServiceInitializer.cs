@@ -38,8 +38,10 @@ namespace eidss.avr.service.WcfFacade
         {
             EidssServiceInitializer.InitEidssCore();
 
-            DbManagerFactory.SetSqlFactory(new ConnectionCredentials(null, "AvrService").ConnectionString, DatabaseType.Avr);
-            DbManagerFactory.SetSqlFactory(new ConnectionCredentials(null, "Archive").ConnectionString, DatabaseType.Archive);
+            var avrCredentials = new ConnectionCredentials(null, "AvrService");
+            DbManagerFactory.SetSqlFactory(avrCredentials.ConnectionString, DatabaseType.Avr, avrCredentials.CommandTimeout);
+            var archCredentials = new ConnectionCredentials(null, "Archive");
+            DbManagerFactory.SetSqlFactory(archCredentials.ConnectionString, DatabaseType.Archive, archCredentials.CommandTimeout);
 
             EIDSS_LookupCacheHelper.Init();
 

@@ -93,7 +93,7 @@ namespace eidss.avr.db.CacheReceiver
                     avrTable.ThreadSafeClear();
                     GC.Collect();
                     var emptyTable = new AvrDataTable(header, 1);
-                    QueryTableHeaderDTO emptyHeaderDTO = new QueryTableHeaderDTO(headerDTO.BinaryHeader, headerDTO.QueryCacheId, 0);
+                    QueryTableHeaderDTO emptyHeaderDTO = new QueryTableHeaderDTO(headerDTO.BinaryHeader, headerDTO.QueryCacheId, 0, headerDTO.UserId);
                     return new CachedQueryResult(queryId, emptyTable, emptyHeaderDTO, cancelException.ValidatorResult.ErrorMessage);
                 }
                 throw;

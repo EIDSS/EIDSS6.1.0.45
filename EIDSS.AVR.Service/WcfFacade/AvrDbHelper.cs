@@ -37,23 +37,32 @@ namespace EIDSS.AVR.Service.WcfFacade
         private static readonly object m_DbSyncLock = new object();
 
         public static long? GetQueryCacheId
-            (long queryId, string lang, bool isArchive, int refresheAfterDays = DaysInAWeek, bool allowSelectInvalidated = false)
+            (long queryId, string lang, bool isArchive, int refresheAfterDays = DaysInAWeek, bool allowSelectInvalidated = false, long? userId = null)
         {
             return GetQueryCacheId(new QueryCacheKey(queryId, lang, isArchive), refresheAfterDays, allowSelectInvalidated);
         }
 
         public static long? GetQueryCacheId
-            (QueryCacheKey queryCacheKey, int refresheAfterDays = DaysInAWeek, bool allowSelectInvalidated = false)
+            (QueryCacheKey queryCacheKey, int refresheAfterDays = DaysInAWeek, bool allowSelectInvalidated = false, long? userId = null)
         {
             using (var avrTran = new AvrDbTransaction())
             {
                 DbManagerProxy manager = avrTran.Manager;
+
+                var param = new List<IDbDataParameter>();
+                param.Add(manager.Parameter("idfQuery", queryCacheKey.QueryId));
+                param.Add(manager.Parameter("strLanguage", queryCacheKey.Lang));
+                param.Add(manager.Parameter("blnUseArchivedData", queryCacheKey.IsArchive));
+                param.Add(manager.Parameter("refreshedCacheOnUserCallAfterDays", refresheAfterDays));
+                param.Add(manager.Parameter("allowSelectInvalidated", allowSelectInvalidated));
+                if (userId.HasValue)
+                    param.Add(manager.Parameter("UserID", userId.Value));
+                else
+                    param.Add(manager.Parameter("UserID", DBNull.Value));
+
+
                 DbManager command = manager.SetSpCommand("spAsQueryCacheExist",
-                    manager.Parameter("idfQuery", queryCacheKey.QueryId),
-                    manager.Parameter("strLanguage", queryCacheKey.Lang),
-                    manager.Parameter("blnUseArchivedData", queryCacheKey.IsArchive),
-                    manager.Parameter("refreshedCacheOnUserCallAfterDays", refresheAfterDays),
-                    manager.Parameter("allowSelectInvalidated", allowSelectInvalidated)
+                    param.ToArray()
                     );
                 object result;
                 lock (m_DbSyncLock)
@@ -66,12 +75,20 @@ namespace EIDSS.AVR.Service.WcfFacade
             }
         }
 
-        public static DateTime? GetsQueryCacheUserRequestDate(long queryId)
+        public static DateTime? GetsQueryCacheUserRequestDate(long queryId, long? userId = null)
         {
             using (var avrTran = new AvrDbTransaction())
             {
                 DbManagerProxy manager = avrTran.Manager;
-                DbManager command = manager.SetSpCommand("spAsQueryCacheUserRequestDate", manager.Parameter("idfQuery", queryId));
+
+                var param = new List<IDbDataParameter>();
+                param.Add(manager.Parameter("idfQuery", queryId));
+                if (userId.HasValue)
+                    param.Add(manager.Parameter("UserID", userId.Value));
+                else
+                    param.Add(manager.Parameter("UserID", DBNull.Value));
+
+                DbManager command = manager.SetSpCommand("spAsQueryCacheUserRequestDate", param.ToArray());
                 object result;
                 lock (m_DbSyncLock)
                 {
@@ -82,15 +99,68 @@ namespace EIDSS.AVR.Service.WcfFacade
             }
         }
 
-        public static QueryTableHeaderDTO GetQueryCacheHeader(long queryCacheId, bool isSchedulerCall, bool isArchive)
+        public static List<long?> GetQueryCacheValidUsers(long queryId, DateTime? requestedLaterThanDate)
         {
             using (var avrTran = new AvrDbTransaction())
             {
                 DbManagerProxy manager = avrTran.Manager;
+
+                var param = new List<IDbDataParameter>();
+                param.Add(manager.Parameter("idfQuery", queryId));
+                if (requestedLaterThanDate.HasValue)
+                    param.Add(manager.Parameter("datRequestedLaterThan", requestedLaterThanDate.Value));
+                else
+                    param.Add(manager.Parameter("datRequestedLaterThan", DBNull.Value));
+
+                DbManager command = manager.SetSpCommand("spAsQueryCacheGetValidUsers", 
+                    param.ToArray());
+                List<long?> userList = null;
+                lock (m_DbSyncLock)
+                {
+                    userList = command.ExecuteList<long?>();
+                    avrTran.CommitTransaction();
+                }
+                return (userList == null) ? new List<long?>() { null } : userList;
+            }
+        }
+
+        public static List<long> GetQueryCacheInvalidUsers(long queryId, DateTime requestedLaterThanDate)
+        {
+            using (var avrTran = new AvrDbTransaction())
+            {
+                DbManagerProxy manager = avrTran.Manager;
+
+                DbManager command = manager.SetSpCommand("spAsQueryCacheGetInvalidUsers",
+                    manager.Parameter("idfQuery", queryId),
+                    manager.Parameter("datRequestedLaterThan", requestedLaterThanDate));
+
+                List<long> userList = null;
+                lock (m_DbSyncLock)
+                {
+                    userList = command.ExecuteList<long>();
+                    avrTran.CommitTransaction();
+                }
+                return (userList == null) ? new List<long>() { } : userList;
+            }
+        }
+
+        public static QueryTableHeaderDTO GetQueryCacheHeader(long queryCacheId, bool isSchedulerCall, bool isArchive, long? userId = null)
+        {
+            using (var avrTran = new AvrDbTransaction())
+            {
+                DbManagerProxy manager = avrTran.Manager;
+
+                var param = new List<IDbDataParameter>();
+                param.Add(manager.Parameter("idfQueryCache", queryCacheId));
+                param.Add(manager.Parameter("blnSchedulerCall", isSchedulerCall));
+                param.Add(manager.Parameter("blnUseArchivedData", isArchive));
+                if (userId.HasValue)
+                    param.Add(manager.Parameter("UserID", userId.Value));
+                else
+                    param.Add(manager.Parameter("UserID", DBNull.Value));
+
                 DbManager command = manager.SetSpCommand("spAsQueryCacheGetHeader",
-                    manager.Parameter("idfQueryCache", queryCacheId),
-                    manager.Parameter("blnSchedulerCall", isSchedulerCall),
-                    manager.Parameter("blnUseArchivedData", isArchive));
+                    param.ToArray());
 
                 QueryTablePacketDTO headerPacket = new QueryTablePacketDTO {IsArchive = isArchive};
                 int packetCount = 0;
@@ -109,17 +179,24 @@ namespace EIDSS.AVR.Service.WcfFacade
 
                     avrTran.CommitTransaction();
                 }
-                return new QueryTableHeaderDTO(headerPacket, queryCacheId, packetCount);
+                return new QueryTableHeaderDTO(headerPacket, queryCacheId, packetCount, userId);
             }
         }
 
-        public static QueryTablePacketDTO GetQueryCachePacket(long queryCasheId, int packetNumber)
+        public static QueryTablePacketDTO GetQueryCachePacket(long queryCasheId, int packetNumber, long? userId = null)
         {
             using (var avrTran = new AvrDbTransaction())
             {
+                var param = new List<IDbDataParameter>();
+                param.Add(avrTran.Manager.Parameter("idfQueryCache", queryCasheId));
+                param.Add(avrTran.Manager.Parameter("intQueryCachePacketNumber", packetNumber));
+                if (userId.HasValue)
+                    param.Add(avrTran.Manager.Parameter("UserID", userId.Value));
+                else
+                    param.Add(avrTran.Manager.Parameter("UserID", DBNull.Value));
+
                 DbManager command = avrTran.Manager.SetSpCommand("spAsQueryCacheGetPacket",
-                    avrTran.Manager.Parameter("idfQueryCache", queryCasheId),
-                    avrTran.Manager.Parameter("intQueryCachePacketNumber", packetNumber));
+                    param.ToArray());
 
                 var result = new QueryTablePacketDTO();
                 using (IDataReader reader = command.ExecuteReader())
@@ -152,23 +229,37 @@ namespace EIDSS.AVR.Service.WcfFacade
             {
                 using (DbManagerProxy manager = DbManagerFactory.Factory[DatabaseType.Avr].Create())
                 {
+                    var headerParam = new List<IDbDataParameter>();
+                    headerParam.Add(manager.Parameter("idfQuery", zippedTable.QueryId));
+                    headerParam.Add(manager.Parameter("strLanguage", zippedTable.Language));
+                    headerParam.Add(manager.Parameter("intQueryColumnCount", zippedTable.Header.RowCount));
+                    headerParam.Add(manager.Parameter("blbQuerySchema", zippedTable.Header.BinaryBody.ToArray()));
+                    headerParam.Add(manager.Parameter("blnUseArchivedData", zippedTable.UseArchivedData));
+                    if (zippedTable.UserId.HasValue)
+                        headerParam.Add(manager.Parameter("UserID", zippedTable.UserId.Value));
+                    else
+                        headerParam.Add(manager.Parameter("UserID", DBNull.Value));
+
                     DbManager headerCommand = manager.SetSpCommand("spAsQueryCachePostHeader",
-                        manager.Parameter("idfQuery", zippedTable.QueryId),
-                        manager.Parameter("strLanguage", zippedTable.Language),
-                        manager.Parameter("intQueryColumnCount", zippedTable.Header.RowCount),
-                        manager.Parameter("blbQuerySchema", zippedTable.Header.BinaryBody.ToArray()),
-                        manager.Parameter("blnUseArchivedData", zippedTable.UseArchivedData)
+                        headerParam.ToArray()
                         );
 
                     var queryCasheId = (long) headerCommand.ExecuteScalar();
                     for (int i = 0; i < zippedTable.BodyPackets.Count; i++)
                     {
+                        var param = new List<IDbDataParameter>();
+                        param.Add(manager.Parameter("idfQueryCache", queryCasheId));
+                        param.Add(manager.Parameter("intQueryCachePacketNumber", i));
+                        param.Add(manager.Parameter("intPacketRowCount", zippedTable.BodyPackets[i].RowCount));
+                        param.Add(manager.Parameter("blbQueryCachePacket", zippedTable.BodyPackets[i].BinaryBody.ToArray()));
+                        param.Add(manager.Parameter("blnArchivedData", zippedTable.BodyPackets[i].IsArchive));
+                        if (zippedTable.UserId.HasValue)
+                            param.Add(manager.Parameter("UserID", zippedTable.UserId.Value));
+                        else
+                            param.Add(manager.Parameter("UserID", DBNull.Value));
+
                         DbManager command = manager.SetSpCommand("spAsQueryCachePostPacket",
-                            manager.Parameter("idfQueryCache", queryCasheId),
-                            manager.Parameter("intQueryCachePacketNumber", i),
-                            manager.Parameter("intPacketRowCount", zippedTable.BodyPackets[i].RowCount),
-                            manager.Parameter("blbQueryCachePacket", zippedTable.BodyPackets[i].BinaryBody.ToArray()),
-                            manager.Parameter("blnArchivedData", zippedTable.BodyPackets[i].IsArchive)
+                            param.ToArray()
                             );
 
                         command.ExecuteNonQuery();
@@ -179,18 +270,26 @@ namespace EIDSS.AVR.Service.WcfFacade
             }
         }
 
-        public static void InvalidateQueryCache(long queryId, string lang = null)
+        public static void InvalidateQueryCache(long queryId, string lang = null, long? userId = null)
         {
             using (var avrTran = new AvrDbTransaction())
             {
                 DbManagerProxy manager = avrTran.Manager;
 
-                DbManager command = string.IsNullOrEmpty(lang)
-                    ? manager.SetSpCommand("spAsQueryCacheInvalidate",
-                        manager.Parameter("idfQuery", queryId))
-                    : manager.SetSpCommand("spAsQueryCacheInvalidate",
-                        manager.Parameter("idfQuery", queryId),
-                        manager.Parameter("strLanguage", lang));
+                var param = new List<IDbDataParameter>();
+                param.Add(manager.Parameter("idfQuery", queryId));
+                if (!string.IsNullOrEmpty(lang))
+                    param.Add(manager.Parameter("strLanguage", lang));
+                else
+                    param.Add(manager.Parameter("strLanguage", DBNull.Value));
+                if (userId.HasValue)
+                    param.Add(manager.Parameter("UserID", userId.Value));
+                else
+                    param.Add(manager.Parameter("UserID", DBNull.Value));
+
+
+                DbManager command = manager.SetSpCommand("spAsQueryCacheInvalidate",
+                        param.ToArray());
 
                 lock (m_DbSyncLock)
                 {
@@ -200,15 +299,23 @@ namespace EIDSS.AVR.Service.WcfFacade
             }
         }
 
-        public static int DeleteQueryCache(long queryId, string lang, bool leaveLastRecord)
+        public static int DeleteQueryCache(long queryId, string lang, bool leaveLastRecord, long? userId = null)
         {
             using (var avrTran = new AvrDbTransaction())
             {
                 DbManagerProxy manager = avrTran.Manager;
+
+                var param = new List<IDbDataParameter>();
+                param.Add(manager.Parameter("idfQuery", queryId));
+                param.Add(manager.Parameter("strLanguage", lang));
+                param.Add(manager.Parameter("blnLeaveLastRecord", leaveLastRecord));
+                if (userId.HasValue)
+                    param.Add(manager.Parameter("UserID", userId.Value));
+                else
+                    param.Add(manager.Parameter("UserID", DBNull.Value));
+                
                 DbManager command = manager.SetSpCommand("spAsQueryCacheDelete",
-                    manager.Parameter("idfQuery", queryId),
-                    manager.Parameter("strLanguage", lang),
-                    manager.Parameter("blnLeaveLastRecord", leaveLastRecord)
+                    param.ToArray()
                     );
 
                 lock (m_DbSyncLock)
@@ -225,15 +332,23 @@ namespace EIDSS.AVR.Service.WcfFacade
             }
         }
 
-        public static DateTime GetQueryRefreshDateTime(long queryId, string lang)
+        public static DateTime GetQueryRefreshDateTime(long queryId, string lang, long? userId = null)
         {
             DateTime date = DateTime.Now;
             using (var avrTran = new AvrDbTransaction())
             {
                 DbManagerProxy manager = avrTran.Manager;
+
+                var param = new List<IDbDataParameter>();
+                param.Add(manager.Parameter("idfQuery", queryId));
+                param.Add(manager.Parameter("strLanguage", lang));
+                if (userId.HasValue)
+                    param.Add(manager.Parameter("UserID", userId.Value));
+                else
+                    param.Add(manager.Parameter("UserID", DBNull.Value));
+
                 DbManager command = manager.SetSpCommand("spAsQueryCacheGetRefreshDateTime",
-                    manager.Parameter("idfQuery", queryId),
-                    manager.Parameter("strLanguage", lang));
+                    param.ToArray());
                 lock (m_DbSyncLock)
                 {
                     using (IDataReader reader = command.ExecuteReader())
@@ -249,38 +364,52 @@ namespace EIDSS.AVR.Service.WcfFacade
             return date;
         }
 
-        public static long SaveViewCache(long queryCacheId, long layoutId, ViewDTO zippedTable)
+        public static long SaveViewCache(long queryCacheId, long layoutId, ViewDTO zippedTable, long? userId = null)
         {
             using (var avrTran = new AvrDbTransaction())
             {
-                long id = SaveViewCacheWithoutTransaction(queryCacheId, layoutId, zippedTable);
+                long id = SaveViewCacheWithoutTransaction(queryCacheId, layoutId, zippedTable, userId);
                 avrTran.CommitTransaction();
                 return id;
             }
         }
 
-        public static long SaveViewCacheWithoutTransaction(long queryCacheId, long layoutId, ViewDTO zippedTable)
+        public static long SaveViewCacheWithoutTransaction(long queryCacheId, long layoutId, ViewDTO zippedTable, long? userId = null)
         {
             lock (m_DbSyncLock)
             {
                 using (DbManagerProxy manager = DbManagerFactory.Factory[DatabaseType.Avr].Create())
                 {
+                    var headerParam = new List<IDbDataParameter>();
+                    headerParam.Add(manager.Parameter("idfQueryCache", queryCacheId));
+                    headerParam.Add(manager.Parameter("idfLayout", layoutId));
+                    headerParam.Add(manager.Parameter("blbViewSchema", zippedTable.Header.BinaryBody.ToArray()));
+                    headerParam.Add(manager.Parameter("blbViewHeader", zippedTable.BinaryViewHeader));
+                    headerParam.Add(manager.Parameter("intViewColumnCount", zippedTable.Header.RowCount));
+                    if (userId.HasValue)
+                        headerParam.Add(manager.Parameter("UserID", userId.Value));
+                    else
+                        headerParam.Add(manager.Parameter("UserID", DBNull.Value));
+
                     DbManager headerCommand = manager.SetSpCommand("spAsViewCachePostHeader",
-                        manager.Parameter("idfQueryCache", queryCacheId),
-                        manager.Parameter("idfLayout", layoutId),
-                        manager.Parameter("blbViewSchema", zippedTable.Header.BinaryBody.ToArray()),
-                        manager.Parameter("blbViewHeader", zippedTable.BinaryViewHeader),
-                        manager.Parameter("intViewColumnCount", zippedTable.Header.RowCount)
+                        headerParam.ToArray()
                         );
 
                     var viewCasheId = (long) headerCommand.ExecuteScalar();
                     for (int i = 0; i < zippedTable.BodyPackets.Count; i++)
                     {
+                        var param = new List<IDbDataParameter>();
+                        param.Add(manager.Parameter("idfViewCache", viewCasheId));
+                        param.Add(manager.Parameter("intViewCachePacketNumber", i));
+                        param.Add(manager.Parameter("intPacketRowCount", zippedTable.BodyPackets[i].RowCount));
+                        param.Add(manager.Parameter("blbViewCachePacket", zippedTable.BodyPackets[i].BinaryBody.ToArray()));
+                        if (userId.HasValue)
+                            param.Add(manager.Parameter("UserID", userId.Value));
+                        else
+                            param.Add(manager.Parameter("UserID", DBNull.Value));
+
                         DbManager command = manager.SetSpCommand("spAsViewCachePostPacket",
-                            manager.Parameter("idfViewCache", viewCasheId),
-                            manager.Parameter("intViewCachePacketNumber", i),
-                            manager.Parameter("intPacketRowCount", zippedTable.BodyPackets[i].RowCount),
-                            manager.Parameter("blbViewCachePacket", zippedTable.BodyPackets[i].BinaryBody.ToArray())
+                            param.ToArray()
                             );
 
                         command.ExecuteNonQuery();
@@ -309,16 +438,24 @@ namespace EIDSS.AVR.Service.WcfFacade
         }
 
         public static long? GetViewCacheId
-            (long queryCacheId, long layoutId, int refresheAfterDays = DaysInAWeek, bool allowSelectInvalidated = false)
+            (long queryCacheId, long layoutId, int refresheAfterDays = DaysInAWeek, bool allowSelectInvalidated = false, long? userId = null)
         {
             using (var avrTran = new AvrDbTransaction())
             {
                 DbManagerProxy manager = avrTran.Manager;
+
+                var param = new List<IDbDataParameter>();
+                param.Add(manager.Parameter("idfQueryCache", queryCacheId));
+                param.Add(manager.Parameter("idfLayout", layoutId));
+                param.Add(manager.Parameter("refreshedCacheOnUserCallAfterDays", refresheAfterDays));
+                param.Add(manager.Parameter("allowSelectInvalidated", allowSelectInvalidated));
+                if (userId.HasValue)
+                    param.Add(manager.Parameter("UserID", userId.Value));
+                else
+                    param.Add(manager.Parameter("UserID", DBNull.Value));
+
                 DbManager command = manager.SetSpCommand("spAsViewCacheExist",
-                    manager.Parameter("idfQueryCache", queryCacheId),
-                    manager.Parameter("idfLayout", layoutId),
-                    manager.Parameter("refreshedCacheOnUserCallAfterDays", refresheAfterDays),
-                    manager.Parameter("allowSelectInvalidated", allowSelectInvalidated)
+                    param.ToArray()
                     );
                 object result;
                 lock (m_DbSyncLock)
@@ -331,15 +468,23 @@ namespace EIDSS.AVR.Service.WcfFacade
             }
         }
 
-        public static ViewDTO GetViewCache(long viewCacheId, bool isSchedulerCall)
+        public static ViewDTO GetViewCache(long viewCacheId, bool isSchedulerCall, long? userId = null)
         {
             ViewDTO view;
             using (var avrTran = new AvrDbTransaction())
             {
                 DbManagerProxy manager = avrTran.Manager;
+
+                var headerParam = new List<IDbDataParameter>();
+                headerParam.Add(manager.Parameter("idfViewCache", viewCacheId));
+                headerParam.Add(manager.Parameter("blnSchedulerCall", isSchedulerCall));
+                 if (userId.HasValue)
+                    headerParam.Add(manager.Parameter("UserID", userId.Value));
+                else
+                    headerParam.Add(manager.Parameter("UserID", DBNull.Value));
+
                 DbManager headerCmd = manager.SetSpCommand("spAsViewCacheGetHeader",
-                    manager.Parameter("idfViewCache", viewCacheId),
-                    manager.Parameter("blnSchedulerCall", isSchedulerCall));
+                    headerParam.ToArray());
 
                 lock (m_DbSyncLock)
                 {
@@ -367,9 +512,17 @@ namespace EIDSS.AVR.Service.WcfFacade
                     }
                     for (int packetNumber = 0; packetNumber < packetCount; packetNumber++)
                     {
+
+                        var packetParam = new List<IDbDataParameter>();
+                        packetParam.Add(manager.Parameter("idfViewCache", viewCacheId));
+                        packetParam.Add(manager.Parameter("intViewCachePacketNumber", packetNumber));
+                        if (userId.HasValue)
+                            packetParam.Add(manager.Parameter("UserID", userId.Value));
+                        else
+                            packetParam.Add(manager.Parameter("UserID", DBNull.Value));
+
                         DbManager packetCmd = manager.SetSpCommand("spAsViewCacheGetPacket",
-                            manager.Parameter("idfViewCache", viewCacheId),
-                            manager.Parameter("intViewCachePacketNumber", packetNumber));
+                            packetParam.ToArray());
 
                         var packetDTO = new BaseTablePacketDTO();
                         using (IDataReader packetReader = packetCmd.ExecuteReader())
@@ -391,34 +544,36 @@ namespace EIDSS.AVR.Service.WcfFacade
             return view;
         }
 
-        public static QueryTableModel GetQueryResult(long queryId, string lang, bool isArchive)
+        public static QueryTableModel GetQueryResult(long queryId, string lang, bool isArchive, long? userId = null)
         {
             string queryString;
             QueryTableModel zippedTable;
 
             var watch = new Stopwatch();
             watch.Start();
-            m_Trace.Trace(TraceTitle, "Executing actual query '{0}' for lang '{1}'", queryId, lang);
+            m_Trace.Trace(TraceTitle, "Executing actual query '{0}' for lang '{1}' and user {2}", queryId, lang, 
+                userId.HasValue ? string.Format("'{0}'", userId.Value.ToString()) : "null");
             using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
             {
                 queryString = QueryHelper.GetQueryText(manager, queryId, false);
 
-                QueryTableModel serializedTable = QueryHelper.GetInnerQueryResult(manager, queryString, lang,
-                    c => BinarySerializer.SerializeFromCommand(c, queryId, lang, false));
+                QueryTableModel serializedTable = QueryHelper.GetInnerQueryResult(manager, queryString, lang, userId,
+                    c => BinarySerializer.SerializeFromCommand(c, queryId, lang, false, 0, userId));
                 zippedTable = BinaryCompressor.Zip(serializedTable);
             }
 
             if (isArchive)
             {
-                m_Trace.Trace(TraceTitle, "Executing archive query '{0}' for lang '{1}'", queryId, lang);
+                m_Trace.Trace(TraceTitle, "Executing archive query '{0}' for lang '{1}' and user {2}", queryId, lang, 
+                    userId.HasValue ? string.Format("'{0}'", userId.Value.ToString()) : "null");
                 using (DbManagerProxy archiveManager = DbManagerFactory.Factory[DatabaseType.Archive].Create())
                 {
                     using (DbManagerProxy manager = DbManagerFactory.Factory.Create())
                     {
                         QueryHelper.DropAndCreateArchiveQuery(manager, archiveManager, queryId);
                     }
-                    QueryTableModel serializedArchiveTable = QueryHelper.GetInnerQueryResult(archiveManager, queryString, lang,
-                        c => BinarySerializer.SerializeFromCommand(c, queryId, lang, true));
+                    QueryTableModel serializedArchiveTable = QueryHelper.GetInnerQueryResult(archiveManager, queryString, lang, userId,
+                        c => BinarySerializer.SerializeFromCommand(c, queryId, lang, true, 0, userId));
                     QueryTableModel zippedArchiveTable = BinaryCompressor.Zip(serializedArchiveTable);
 
                     zippedTable.UseArchivedData = true;
@@ -429,7 +584,11 @@ namespace EIDSS.AVR.Service.WcfFacade
                     }
                 }
             }
-            m_Trace.Trace(TraceTitle, "Executing query '{0}' for lang '{1}' finished, duration={2},", queryId, lang, watch.Elapsed);
+            m_Trace.Trace(TraceTitle, "Executing query '{0}' for lang '{1}' and user {2} finished, duration={3},", 
+                queryId, 
+                lang, 
+                userId.HasValue ? string.Format("'{0}'", userId.Value.ToString()) : "null", 
+                watch.Elapsed);
             return zippedTable;
         }
 

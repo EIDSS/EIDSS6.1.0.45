@@ -9,7 +9,8 @@ namespace eidss.model.Helpers
         {
             if (DbManagerFactory.Factory[DatabaseType.Archive] == null)
             {
-                DbManagerFactory.SetSqlFactory(GetCredentials().ConnectionString, DatabaseType.Archive);
+                var credentials = GetCredentials();
+                DbManagerFactory.SetSqlFactory(credentials.ConnectionString, DatabaseType.Archive, credentials.CommandTimeout);
             }
         }
 

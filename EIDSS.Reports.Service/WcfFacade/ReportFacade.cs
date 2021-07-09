@@ -61,6 +61,7 @@ using SampleReport = EIDSS.Reports.Document.Lim.ContainerContent.ContainerConten
 using eidss.model.Reports.UA;
 using EIDSS.Reports.Parameterized.Human.UA.Reports;
 using EIDSS.Reports.Parameterized.Veterinary.AZ.Reports;
+using EIDSS.Reports.Document.Veterinary.JO;
 
 namespace EIDSS.Reports.Service.WcfFacade
 {
@@ -1409,6 +1410,32 @@ namespace EIDSS.Reports.Service.WcfFacade
 
         #region Veterinary reports
 
+        public byte[] ExportVetUrgentNotificationJo(BaseIdModel model)
+        {
+            try
+            {
+                m_Trace.TraceMethodCall(Utils.GetCurrentMethodName(), TraceTitle, model);
+
+                ReportHelper.CreateReportDelegate cr;
+                cr = (l, m, am) =>
+                {
+                    BaseDocumentReport report = new UrgentNotificationForm();
+
+                    Dictionary<string, string> ps = ReportHelper.CreateParameters(model.Id);
+                    ReportHelper.AppendOrganizationIdToParameters(model, ps);
+                    report.SetParameters(l, ps, m, am);
+                    return report;
+                };
+                return ExportReportToBytesWrapper(cr, model);
+            }
+            catch (Exception ex)
+            {
+                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), TraceTitle, model);
+                throw;
+            }
+        }
+
+
         public byte[] ExportVetAggregateCase(AggregateModel model)
         {
             try
@@ -2520,9 +2547,12 @@ namespace EIDSS.Reports.Service.WcfFacade
                     Config.ReloadSettings();
 
                     ConnectionManager.DefaultInstance.SetCredentials();
-                    DbManagerFactory.SetSqlFactory(new ConnectionCredentials().ConnectionString);
+   
+                    var mainCredentials = new ConnectionCredentials();
+                    DbManagerFactory.SetSqlFactory(mainCredentials.ConnectionString, DatabaseType.Main, mainCredentials.CommandTimeout);
 
-                    DbManagerFactory.SetSqlFactory(new ConnectionCredentials(null, "Archive").ConnectionString, DatabaseType.Archive);
+                    var archCredentials = new ConnectionCredentials(null, "Archive");
+                    DbManagerFactory.SetSqlFactory(archCredentials.ConnectionString, DatabaseType.Archive, archCredentials.CommandTimeout);
 
                     EidssUserContext.Init();
                     Localizer.MenuMessages = EidssMenu.Instance;

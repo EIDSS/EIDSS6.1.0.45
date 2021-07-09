@@ -863,11 +863,11 @@ namespace eidss.model.Schema
                 
                     Columns.Add("strLastName");
                 
-                    if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                    if (new Func<bool>(() => (!(EidssSiteContext.Instance.IsIraqCustomization)))())
                     
                     Columns.Add("strFirstName");
                 
-                    if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                    if (new Func<bool>(() => (!(EidssSiteContext.Instance.IsIraqCustomization)))())
                     
                     Columns.Add("strSecondName");
                 
@@ -994,9 +994,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfCase") ? " or " : " and ");
                         
                         if (filters.Operation("idfCase", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCaseDeduplicationWeb_SelectList.idfCase,0) {0} @idfCase_{1} = @idfCase_{1})", filters.Operation("idfCase", i), i);
+                          sql.AppendFormat("(fn_HumanCaseDeduplicationWeb_SelectList.idfCase {0} @idfCase_{1} = @idfCase_{1})", filters.Operation("idfCase", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCaseDeduplicationWeb_SelectList.idfCase,0) {0} @idfCase_{1}", filters.Operation("idfCase", i), i);
+                          sql.AppendFormat("fn_HumanCaseDeduplicationWeb_SelectList.idfCase {0} @idfCase_{1}", filters.Operation("idfCase", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1011,9 +1011,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsTentativeDiagnosis") ? " or " : " and ");
                         
                         if (filters.Operation("idfsTentativeDiagnosis", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCaseDeduplicationWeb_SelectList.idfsTentativeDiagnosis,0) {0} @idfsTentativeDiagnosis_{1} = @idfsTentativeDiagnosis_{1})", filters.Operation("idfsTentativeDiagnosis", i), i);
+                          sql.AppendFormat("(fn_HumanCaseDeduplicationWeb_SelectList.idfsTentativeDiagnosis {0} @idfsTentativeDiagnosis_{1} = @idfsTentativeDiagnosis_{1})", filters.Operation("idfsTentativeDiagnosis", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCaseDeduplicationWeb_SelectList.idfsTentativeDiagnosis,0) {0} @idfsTentativeDiagnosis_{1}", filters.Operation("idfsTentativeDiagnosis", i), i);
+                          sql.AppendFormat("fn_HumanCaseDeduplicationWeb_SelectList.idfsTentativeDiagnosis {0} @idfsTentativeDiagnosis_{1}", filters.Operation("idfsTentativeDiagnosis", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1042,9 +1042,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsFinalDiagnosis") ? " or " : " and ");
                         
                         if (filters.Operation("idfsFinalDiagnosis", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCaseDeduplicationWeb_SelectList.idfsFinalDiagnosis,0) {0} @idfsFinalDiagnosis_{1} = @idfsFinalDiagnosis_{1})", filters.Operation("idfsFinalDiagnosis", i), i);
+                          sql.AppendFormat("(fn_HumanCaseDeduplicationWeb_SelectList.idfsFinalDiagnosis {0} @idfsFinalDiagnosis_{1} = @idfsFinalDiagnosis_{1})", filters.Operation("idfsFinalDiagnosis", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCaseDeduplicationWeb_SelectList.idfsFinalDiagnosis,0) {0} @idfsFinalDiagnosis_{1}", filters.Operation("idfsFinalDiagnosis", i), i);
+                          sql.AppendFormat("fn_HumanCaseDeduplicationWeb_SelectList.idfsFinalDiagnosis {0} @idfsFinalDiagnosis_{1}", filters.Operation("idfsFinalDiagnosis", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1072,7 +1072,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datEnteredDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_HumanCaseDeduplicationWeb_SelectList.datEnteredDate, 112) {0} CONVERT(NVARCHAR(8), @datEnteredDate_{1}, 112)", filters.Operation("datEnteredDate", i), i);
+                        sql.AppendFormat("fn_HumanCaseDeduplicationWeb_SelectList.datEnteredDate {0} @datEnteredDate_{1}", filters.Operation("datEnteredDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1171,9 +1171,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("intPatientAge") ? " or " : " and ");
                         
                         if (filters.Operation("intPatientAge", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCaseDeduplicationWeb_SelectList.intPatientAge,0) {0} @intPatientAge_{1} = @intPatientAge_{1})", filters.Operation("intPatientAge", i), i);
+                          sql.AppendFormat("(fn_HumanCaseDeduplicationWeb_SelectList.intPatientAge {0} @intPatientAge_{1} = @intPatientAge_{1})", filters.Operation("intPatientAge", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCaseDeduplicationWeb_SelectList.intPatientAge,0) {0} @intPatientAge_{1}", filters.Operation("intPatientAge", i), i);
+                          sql.AppendFormat("fn_HumanCaseDeduplicationWeb_SelectList.intPatientAge {0} @intPatientAge_{1}", filters.Operation("intPatientAge", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1188,9 +1188,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsHumanAgeType") ? " or " : " and ");
                         
                         if (filters.Operation("idfsHumanAgeType", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCaseDeduplicationWeb_SelectList.idfsHumanAgeType,0) {0} @idfsHumanAgeType_{1} = @idfsHumanAgeType_{1})", filters.Operation("idfsHumanAgeType", i), i);
+                          sql.AppendFormat("(fn_HumanCaseDeduplicationWeb_SelectList.idfsHumanAgeType {0} @idfsHumanAgeType_{1} = @idfsHumanAgeType_{1})", filters.Operation("idfsHumanAgeType", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCaseDeduplicationWeb_SelectList.idfsHumanAgeType,0) {0} @idfsHumanAgeType_{1}", filters.Operation("idfsHumanAgeType", i), i);
+                          sql.AppendFormat("fn_HumanCaseDeduplicationWeb_SelectList.idfsHumanAgeType {0} @idfsHumanAgeType_{1}", filters.Operation("idfsHumanAgeType", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1609,7 +1609,7 @@ namespace eidss.model.Schema
                     "HumanCase.strLastName",
                     null, null, c => false, false, SearchPanelLocation.Main, false, null, null, null, null, null, null,false
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!(EidssSiteContext.Instance.IsIraqCustomization)))())
                 SearchPanelMeta.Add(new SearchPanelMetaItem(
                     "strFirstName",
                     EditorType.Text,
@@ -1625,7 +1625,7 @@ namespace eidss.model.Schema
                     "HumanCase.strLastName",
                     null, null, c => false, false, SearchPanelLocation.Main, false, null, null, null, null, null, null,false
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!(EidssSiteContext.Instance.IsIraqCustomization)))())
                 SearchPanelMeta.Add(new SearchPanelMetaItem(
                     "strSecondName",
                     EditorType.Text,
@@ -1673,12 +1673,12 @@ namespace eidss.model.Schema
                     _str_strLastName,
                     "HumanCase.strLastName", null, false, true, true, true, true, null
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!(EidssSiteContext.Instance.IsIraqCustomization)))())
                 GridMeta.Add(new GridMetaItem(
                     _str_strFirstName,
                     _str_strFirstName, null, false, true, true, true, true, null
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!(EidssSiteContext.Instance.IsIraqCustomization)))())
                 GridMeta.Add(new GridMetaItem(
                     _str_strSecondName,
                     _str_strSecondName, null, false, true, true, true, true, null

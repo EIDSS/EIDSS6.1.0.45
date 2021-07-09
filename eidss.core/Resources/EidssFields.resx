@@ -3149,4 +3149,7 @@
   <data name="ComparativeReportByRegionYear2" xml:space="preserve">
     <value>Year 2</value>
   </data>
+  <data name="ehsPatientId" xml:space="preserve">
+    <value>EHS Patient Id</value>
+  </data>
 </root>

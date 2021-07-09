@@ -78,27 +78,27 @@ namespace eidss.avr.service.VirtualLayout
             }
         }
 
-        private CachedQueryResult QueryExecutor(long queryId, string lang, bool isArchive, string filter)
+        private CachedQueryResult QueryExecutor(long queryId, string lang, bool isArchive, string filter, long? userId = null)
         {
             var receiver = new AvrCacheReceiver(new AVRFacade(m_Container));
             var validatorWaiter = new LayoutSilentValidatorWaiter();
-            CachedQueryResult result = receiver.GetCachedQueryTable(queryId, lang, isArchive, filter, validatorWaiter);
+            CachedQueryResult result = receiver.GetCachedQueryTable(queryId, lang, isArchive, filter, validatorWaiter, -1, userId);
             return result;
         }
 
-        public static AvrPivotViewModel CreateAvrPivotViewModel(long layoutId, string lang, IContainer container)
+        public static AvrPivotViewModel CreateAvrPivotViewModel(long layoutId, string lang, IContainer container, long? userId = null)
         {
             using (new CultureInfoTransaction(new CultureInfo(CustomCultureHelper.SupportedLanguages[lang])))
             {
                 using (var virtualPivot = new VirtualPivot(container))
                 {
-                    AvrPivotViewModel model = virtualPivot.CreateAvrPivotViewModelInternal(layoutId, lang);
+                    AvrPivotViewModel model = virtualPivot.CreateAvrPivotViewModelInternal(layoutId, lang, userId);
                     return model;
                 }
             }
         }
 
-        private AvrPivotViewModel CreateAvrPivotViewModelInternal(long layoutId, string lang)
+        private AvrPivotViewModel CreateAvrPivotViewModelInternal(long layoutId, string lang, long? userId = null)
         {
             LayoutDetailDataSet layoutDataSet = GetLayoutDataSet(layoutId);
             LayoutDetailDataSet.LayoutRow layoutRow = GetLayoutRow(layoutDataSet);
@@ -111,12 +111,12 @@ namespace eidss.avr.service.VirtualLayout
             var validatorWaiter = new LayoutSilentValidatorWaiter();
             var filter = layoutRow.blnApplyPivotGridFilter ? layoutRow.strPivotGridSettings : string.Empty;
             var queryResult = AvrMainFormPresenter.ExecQueryInternal(layoutRow.idflQuery, lang,
-                layoutRow.blnUseArchivedData, filter, validatorWaiter, false, QueryExecutor);
+                layoutRow.blnUseArchivedData, filter, validatorWaiter, false, QueryExecutor, userId);
 
             //var queryResult = AvrMainFormPresenter.ExecQueryInternal(layoutRow.idflQuery, lang,
             //    layoutRow.blnUseArchivedData, layoutRow.strPivotGridSettings, validatorWaiter, false, QueryExecutor);
 
-            m_Trace.Trace(TraceTitle, string.Format("Data for layout {0} received from AVR Cashe ", layoutId));
+            m_Trace.Trace(TraceTitle, string.Format("Data for layout {0} received from AVR Cache ", layoutId));
 
             AvrDataTable preparedQueryTable = AvrPivotGridHelper.GetPreparedDataSource(layoutDataSet.LayoutSearchField,
                 layoutRow.idflQuery, layoutId, queryResult.QueryTable, false);

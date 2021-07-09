@@ -93,6 +93,7 @@
               <Directory Id="Help.kk_KZ" Name="kk-KZ" />
               <Directory Id="Help.hy_AM" Name="hy-AM" />
               <Directory Id="Help.ar_IQ" Name="ar-IQ" />
+              <Directory Id="Help.ar_JO" Name="ar-JO" />
               <Directory Id="Help.lo_LA" Name="lo-LA" />
               <Directory Id="Help.vi_VN" Name="vi-VN" />
               <Directory Id="Help.th_TH" Name="th-TH" />

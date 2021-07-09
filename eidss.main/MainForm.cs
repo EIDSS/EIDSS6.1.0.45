@@ -279,6 +279,14 @@ namespace eidss.main
                         Caption = Localizer.GetMenuLanguageName(Localizer.lngIraq)
                     };
                 }
+                else if (lang.Key == Localizer.lngJordan)
+                {
+                    new MenuAction(SetJordanLanguage, m_MenuManager, m_LanguageMenu, "MenuJordan",
+                                   940, false, bWithouFlags ? -1 : (int)MenuIconsSmall.Jordan, bWithouFlags ? -1 : (int)MenuIcons.Jordan)
+                    {
+                        Caption = Localizer.GetMenuLanguageName(Localizer.lngJordan)
+                    };
+                }
                 else if (lang.Key == Localizer.lngVietnam)
                 {
                     new MenuAction(SetVietnamLanguage, m_MenuManager, m_LanguageMenu, "MenuVietnam",
@@ -374,7 +382,7 @@ namespace eidss.main
         {
             var credentials = new ConnectionCredentials();
             ConnectionManager.DefaultInstance.SetCredentials();
-            DbManagerFactory.SetSqlFactory(credentials.ConnectionString);
+            DbManagerFactory.SetSqlFactory(credentials.ConnectionString, DatabaseType.Main, credentials.CommandTimeout);
             BaseFormManager.ArchiveMode = false;
             if (m_StoredUserPermissions != null)
                 EidssUserContext.User.Permissions = m_StoredUserPermissions;
@@ -389,7 +397,8 @@ namespace eidss.main
                     m_StoredUserPermissions = EidssUserContext.User.Permissions;
                 var credentials = new ConnectionCredentials(null, "Archive");
                 ConnectionManager.DefaultInstance.SetCredentials(null, null, null, null, null, "Archive");
-                DbManagerFactory.SetSqlFactory(credentials.ConnectionString);
+                //TODO: check if DatabaseType should be changed from Main to Archive
+                DbManagerFactory.SetSqlFactory(credentials.ConnectionString, DatabaseType.Main, credentials.CommandTimeout);
                 if (credentials.IsCorrect)
                 {
                     using (var manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
@@ -516,6 +525,10 @@ namespace eidss.main
         private void SetIraqLanguage()
         {
             ResetLanguage(Localizer.lngIraq);
+        }
+        private void SetJordanLanguage()
+        {
+            ResetLanguage(Localizer.lngJordan);
         }
 
         private void SetLaosLanguage()
@@ -729,6 +742,13 @@ namespace eidss.main
                         SetIraqLanguage();
                     }
                 }
+                else if (e.KeyCode == Keys.J)
+                {
+                    if (Localizer.SupportedLanguages.ContainsKey(Localizer.lngJordan))
+                    {
+                        SetJordanLanguage();
+                    }
+                }
                 else if (e.KeyCode == Keys.L)
                 {
                     if (Localizer.SupportedLanguages.ContainsKey(Localizer.lngLaos))
@@ -940,6 +960,11 @@ namespace eidss.main
                         {
                             m_LanguageMenu.ToolbarItem.LargeImageIndex = (int)MenuIcons.Iraq;
                             m_LanguageMenu.MenuItem.ImageIndex = (int)MenuIconsSmall.Iraq;
+                        }
+                        else if (ModelUserContext.CurrentLanguage == Localizer.lngJordan)
+                        {
+                            m_LanguageMenu.ToolbarItem.LargeImageIndex = (int)MenuIcons.Jordan;
+                            m_LanguageMenu.MenuItem.ImageIndex = (int)MenuIconsSmall.Jordan;
                         }
                         else if (ModelUserContext.CurrentLanguage == Localizer.lngLaos)
                         {

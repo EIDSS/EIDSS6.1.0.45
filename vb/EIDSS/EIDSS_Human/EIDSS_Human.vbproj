@@ -298,6 +298,9 @@
     <EmbeddedResource Include="AggregateCase\AggregateCaseDetail.ar-IQ.resx">
       <DependentUpon>AggregateCaseDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\AggregateCaseDetail.ar-JO.resx">
+      <DependentUpon>AggregateCaseDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\AggregateCaseDetail.az-Latn-AZ.resx">
       <DependentUpon>AggregateCaseDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -325,6 +328,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\AggregateSummaryCaseDetail.ar-IQ.resx">
+      <DependentUpon>AggregateSummaryCaseDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\AggregateSummaryCaseDetail.ar-JO.resx">
       <DependentUpon>AggregateSummaryCaseDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\AggregateSummaryCaseDetail.az-Latn-AZ.resx">
@@ -360,7 +366,13 @@
     <EmbeddedResource Include="Human Case\HumanCaseDeduplicationDetail.ar-IQ.resx">
       <DependentUpon>HumanCaseDeduplicationDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Human Case\HumanCaseDeduplicationDetail.ar-JO.resx">
+      <DependentUpon>HumanCaseDeduplicationDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Human Case\HumanCaseDeduplicationDetail.en-IQ-Eidss.resx">
+      <DependentUpon>HumanCaseDeduplicationDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human Case\HumanCaseDeduplicationDetail.en-JO-Eidss.resx">
       <DependentUpon>HumanCaseDeduplicationDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Human Case\HumanCaseDeduplicationDetail.en-TH-Eidss.resx">
@@ -386,7 +398,13 @@
     <EmbeddedResource Include="Human Case\HumanCaseDetail.ar-IQ.resx">
       <DependentUpon>HumanCaseDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Human Case\HumanCaseDetail.ar-JO.resx">
+      <DependentUpon>HumanCaseDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Human Case\HumanCaseDetail.en-IQ-Eidss.resx">
+      <DependentUpon>HumanCaseDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human Case\HumanCaseDetail.en-JO-Eidss.resx">
       <DependentUpon>HumanCaseDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Human Case\HumanCaseDetail.en-TH-Eidss.resx">
@@ -412,6 +430,9 @@
     <EmbeddedResource Include="Human Case\HumanCaseDiagnosisChangeReason.ar-IQ.resx">
       <DependentUpon>HumanCaseDiagnosisChangeReason.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Human Case\HumanCaseDiagnosisChangeReason.ar-JO.resx">
+      <DependentUpon>HumanCaseDiagnosisChangeReason.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Human Case\HumanCaseDiagnosisChangeReason.hy-am.resx">
       <DependentUpon>HumanCaseDiagnosisChangeReason.vb</DependentUpon>
     </EmbeddedResource>
@@ -427,6 +448,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Human Case\HumanCaseDiagnosisHistory.ar-IQ.resx">
+      <DependentUpon>HumanCaseDiagnosisHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human Case\HumanCaseDiagnosisHistory.ar-JO.resx">
       <DependentUpon>HumanCaseDiagnosisHistory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Human Case\HumanCaseDiagnosisHistory.az-Latn-AZ.resx">
@@ -510,6 +534,9 @@
     <EmbeddedResource Include="Human Case\HumanCaseSamplesPanel.ar-IQ.resx">
       <DependentUpon>HumanCaseSamplesPanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Human Case\HumanCaseSamplesPanel.ar-JO.resx">
+      <DependentUpon>HumanCaseSamplesPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Human Case\HumanCaseSamplesPanel.az-Latn-AZ.resx">
       <DependentUpon>HumanCaseSamplesPanel.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -550,6 +577,9 @@
     <EmbeddedResource Include="Patient\PatientDetail.ar-IQ.resx">
       <DependentUpon>PatientDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Patient\PatientDetail.ar-JO.resx">
+      <DependentUpon>PatientDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient\PatientDetail.az-latn-az.resx">
       <DependentUpon>PatientDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -580,6 +610,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\Patient_Info.ar-IQ.resx">
+      <DependentUpon>Patient_Info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\Patient_Info.ar-JO.resx">
       <DependentUpon>Patient_Info.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\Patient_Info.az-Latn-AZ.resx">

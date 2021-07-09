@@ -67,7 +67,14 @@ Public Class VetCaseLiveStockDetail
         CaseTestsPanel1.SetColumnsVisibility(False, True, False, False)
         ValidationProcedureName = "spLivestockVetCase_Validate"
 
-        MenuItem1.Visible = eidss.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed("VetLivestockInvestigation")
+        MenuItem1.Visible = EIDSS.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed("VetLivestockInvestigation")
+
+        If (eidss.model.Reports.BaseMenuReportRegistrator.IsPaperFormAllowed("VetUrgentNotificationJo")) Then
+            miUrgentNotificationReportJo.Visible = True
+        Else
+            miUrgentNotificationReportJo.Visible = False
+        End If
+
     End Sub
 
     'Form overrides dispose to clean up the component list.
@@ -117,6 +124,7 @@ Public Class VetCaseLiveStockDetail
     Friend WithEvents cbTestsConducted As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents lbTestsConducted As DevExpress.XtraEditors.LabelControl
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
+    Friend WithEvents miUrgentNotificationReportJo As System.Windows.Forms.MenuItem
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VetCaseLiveStockDetail))
@@ -151,6 +159,7 @@ Public Class VetCaseLiveStockDetail
         Me.PopUpButton1 = New bv.winclient.Core.PopUpButton()
         Me.cmReports = New System.Windows.Forms.ContextMenu()
         Me.MenuItem1 = New System.Windows.Forms.MenuItem()
+        Me.miUrgentNotificationReportJo = New System.Windows.Forms.MenuItem()
         CType(Me.TabContol, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabContol.SuspendLayout()
         Me.DemographicsPage.SuspendLayout()
@@ -487,12 +496,17 @@ Public Class VetCaseLiveStockDetail
         '
         'cmReports
         '
-        Me.cmReports.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem1})
+        Me.cmReports.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem1, Me.miUrgentNotificationReportJo})
         '
         'MenuItem1
         '
         Me.MenuItem1.Index = 0
         resources.ApplyResources(Me.MenuItem1, "MenuItem1")
+        '
+        'miUrgentNotificationReportJo
+        '
+        Me.miUrgentNotificationReportJo.Index = 1
+        resources.ApplyResources(Me.miUrgentNotificationReportJo, "miUrgentNotificationReportJo")
         '
         'VetCaseLiveStockDetail
         '
@@ -591,6 +605,18 @@ Public Class VetCaseLiveStockDetail
             ' todo: [Andrey] use proper variable instead of BaseSettings.PrintMapInVetReports
             Dim includeMap As Boolean = BaseSettings.PrintMapInVetReports
             EidssSiteContext.ReportFactory.VetLivestockInvestigation(id, diagnosisID, includeMap)
+        End If
+
+    End Sub
+
+    Private Sub miUrgentNotificationReportJo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles miUrgentNotificationReportJo.Click
+        If baseDataSet Is Nothing OrElse baseDataSet.Tables.Count = 0 Then
+            Return
+        End If
+        If Post(PostType.FinalPosting) Then
+            Dim id As Long = CType(GetKey(), Long)
+            Dim includeMap As Boolean = BaseSettings.PrintMapInVetReports
+            EidssSiteContext.ReportFactory.VetUrgentNotificationJo(id)
         End If
 
     End Sub

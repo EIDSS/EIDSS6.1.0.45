@@ -273,6 +273,9 @@ namespace EIDSS.Reports.Service.WcfFacade
         [OperationContract]
         byte[] ExportVetActiveSurveillance(BaseYearModel model);
 
+        [OperationContract]
+        byte[] ExportVetUrgentNotificationJo(BaseIdModel model);
+
         #endregion
 
         #region KZ Human reports

@@ -641,7 +641,7 @@ namespace eidss.model.Schema
           [LocalizedDisplayName(_str_strInstitutionName)]
         public string strInstitutionName
         {
-            get { return new Func<PersonLite, string>(c => c.idfInstitution == null ? (string)null : c.Institution.name)(this); }
+            get { return new Func<PersonLite, string>(c => c.Institution == null ? (string)null : c.Institution.name)(this); }
             
         }
         
@@ -649,7 +649,7 @@ namespace eidss.model.Schema
           [LocalizedDisplayName(_str_strPositionName)]
         public string strPositionName
         {
-            get { return new Func<PersonLite, string>(c => c.idfsStaffPosition == null ? (string)null : c.StaffPosition.name)(this); }
+            get { return new Func<PersonLite, string>(c => c.StaffPosition == null ? (string)null : c.StaffPosition.name)(this); }
             
         }
         

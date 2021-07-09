@@ -48,6 +48,7 @@ namespace eidss.model.Enums
         BssAggregate = 37,
         BssAggregateList = 38,
         ASSessionList = 39,
-        Thailand = 40
+        Thailand = 40,
+        Jordan = 41
     }
 }

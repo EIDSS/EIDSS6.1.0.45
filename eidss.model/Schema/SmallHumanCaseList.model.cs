@@ -2002,9 +2002,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfCase") ? " or " : " and ");
                         
                         if (filters.Operation("idfCase", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfCase,0) {0} @idfCase_{1} = @idfCase_{1})", filters.Operation("idfCase", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfCase {0} @idfCase_{1} = @idfCase_{1})", filters.Operation("idfCase", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfCase,0) {0} @idfCase_{1}", filters.Operation("idfCase", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfCase {0} @idfCase_{1}", filters.Operation("idfCase", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2019,9 +2019,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsDiagnosis") ? " or " : " and ");
                         
                         if (filters.Operation("idfsDiagnosis", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfsDiagnosis,0) {0} @idfsDiagnosis_{1} = @idfsDiagnosis_{1})", filters.Operation("idfsDiagnosis", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfsDiagnosis {0} @idfsDiagnosis_{1} = @idfsDiagnosis_{1})", filters.Operation("idfsDiagnosis", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfsDiagnosis,0) {0} @idfsDiagnosis_{1}", filters.Operation("idfsDiagnosis", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfsDiagnosis {0} @idfsDiagnosis_{1}", filters.Operation("idfsDiagnosis", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2050,9 +2050,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsCaseStatus") ? " or " : " and ");
                         
                         if (filters.Operation("idfsCaseStatus", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfsCaseStatus,0) {0} @idfsCaseStatus_{1} = @idfsCaseStatus_{1})", filters.Operation("idfsCaseStatus", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfsCaseStatus {0} @idfsCaseStatus_{1} = @idfsCaseStatus_{1})", filters.Operation("idfsCaseStatus", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfsCaseStatus,0) {0} @idfsCaseStatus_{1}", filters.Operation("idfsCaseStatus", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfsCaseStatus {0} @idfsCaseStatus_{1}", filters.Operation("idfsCaseStatus", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2067,9 +2067,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsCaseProgressStatus") ? " or " : " and ");
                         
                         if (filters.Operation("idfsCaseProgressStatus", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfsCaseProgressStatus,0) {0} @idfsCaseProgressStatus_{1} = @idfsCaseProgressStatus_{1})", filters.Operation("idfsCaseProgressStatus", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfsCaseProgressStatus {0} @idfsCaseProgressStatus_{1} = @idfsCaseProgressStatus_{1})", filters.Operation("idfsCaseProgressStatus", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfsCaseProgressStatus,0) {0} @idfsCaseProgressStatus_{1}", filters.Operation("idfsCaseProgressStatus", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfsCaseProgressStatus {0} @idfsCaseProgressStatus_{1}", filters.Operation("idfsCaseProgressStatus", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2111,7 +2111,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datEnteredDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_HumanCase_SelectList.datEnteredDate, 112) {0} CONVERT(NVARCHAR(8), @datEnteredDate_{1}, 112)", filters.Operation("datEnteredDate", i), i);
+                        sql.AppendFormat("fn_HumanCase_SelectList.datEnteredDate {0} @datEnteredDate_{1}", filters.Operation("datEnteredDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2140,9 +2140,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsSite") ? " or " : " and ");
                         
                         if (filters.Operation("idfsSite", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfsSite,0) {0} @idfsSite_{1} = @idfsSite_{1})", filters.Operation("idfsSite", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfsSite {0} @idfsSite_{1} = @idfsSite_{1})", filters.Operation("idfsSite", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfsSite,0) {0} @idfsSite_{1}", filters.Operation("idfsSite", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfsSite {0} @idfsSite_{1}", filters.Operation("idfsSite", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2171,9 +2171,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfPersonEnteredBy") ? " or " : " and ");
                         
                         if (filters.Operation("idfPersonEnteredBy", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfPersonEnteredBy,0) {0} @idfPersonEnteredBy_{1} = @idfPersonEnteredBy_{1})", filters.Operation("idfPersonEnteredBy", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfPersonEnteredBy {0} @idfPersonEnteredBy_{1} = @idfPersonEnteredBy_{1})", filters.Operation("idfPersonEnteredBy", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfPersonEnteredBy,0) {0} @idfPersonEnteredBy_{1}", filters.Operation("idfPersonEnteredBy", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfPersonEnteredBy {0} @idfPersonEnteredBy_{1}", filters.Operation("idfPersonEnteredBy", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2188,9 +2188,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfHuman") ? " or " : " and ");
                         
                         if (filters.Operation("idfHuman", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfHuman,0) {0} @idfHuman_{1} = @idfHuman_{1})", filters.Operation("idfHuman", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfHuman {0} @idfHuman_{1} = @idfHuman_{1})", filters.Operation("idfHuman", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfHuman,0) {0} @idfHuman_{1}", filters.Operation("idfHuman", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfHuman {0} @idfHuman_{1}", filters.Operation("idfHuman", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2260,7 +2260,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datDateofBirth") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_HumanCase_SelectList.datDateofBirth, 112) {0} CONVERT(NVARCHAR(8), @datDateofBirth_{1}, 112)", filters.Operation("datDateofBirth", i), i);
+                        sql.AppendFormat("fn_HumanCase_SelectList.datDateofBirth {0} @datDateofBirth_{1}", filters.Operation("datDateofBirth", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2275,9 +2275,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("intPatientAge") ? " or " : " and ");
                         
                         if (filters.Operation("intPatientAge", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.intPatientAge,0) {0} @intPatientAge_{1} = @intPatientAge_{1})", filters.Operation("intPatientAge", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.intPatientAge {0} @intPatientAge_{1} = @intPatientAge_{1})", filters.Operation("intPatientAge", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.intPatientAge,0) {0} @intPatientAge_{1}", filters.Operation("intPatientAge", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.intPatientAge {0} @intPatientAge_{1}", filters.Operation("intPatientAge", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2292,9 +2292,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsHumanAgeType") ? " or " : " and ");
                         
                         if (filters.Operation("idfsHumanAgeType", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfsHumanAgeType,0) {0} @idfsHumanAgeType_{1} = @idfsHumanAgeType_{1})", filters.Operation("idfsHumanAgeType", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfsHumanAgeType {0} @idfsHumanAgeType_{1} = @idfsHumanAgeType_{1})", filters.Operation("idfsHumanAgeType", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfsHumanAgeType,0) {0} @idfsHumanAgeType_{1}", filters.Operation("idfsHumanAgeType", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfsHumanAgeType {0} @idfsHumanAgeType_{1}", filters.Operation("idfsHumanAgeType", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2323,9 +2323,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfAddress") ? " or " : " and ");
                         
                         if (filters.Operation("idfAddress", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfAddress,0) {0} @idfAddress_{1} = @idfAddress_{1})", filters.Operation("idfAddress", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfAddress {0} @idfAddress_{1} = @idfAddress_{1})", filters.Operation("idfAddress", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfAddress,0) {0} @idfAddress_{1}", filters.Operation("idfAddress", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfAddress {0} @idfAddress_{1}", filters.Operation("idfAddress", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2340,9 +2340,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfGeoLocation") ? " or " : " and ");
                         
                         if (filters.Operation("idfGeoLocation", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfGeoLocation,0) {0} @idfGeoLocation_{1} = @idfGeoLocation_{1})", filters.Operation("idfGeoLocation", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfGeoLocation {0} @idfGeoLocation_{1} = @idfGeoLocation_{1})", filters.Operation("idfGeoLocation", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfGeoLocation,0) {0} @idfGeoLocation_{1}", filters.Operation("idfGeoLocation", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfGeoLocation {0} @idfGeoLocation_{1}", filters.Operation("idfGeoLocation", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2371,9 +2371,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfEpiObservation") ? " or " : " and ");
                         
                         if (filters.Operation("idfEpiObservation", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfEpiObservation,0) {0} @idfEpiObservation_{1} = @idfEpiObservation_{1})", filters.Operation("idfEpiObservation", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfEpiObservation {0} @idfEpiObservation_{1} = @idfEpiObservation_{1})", filters.Operation("idfEpiObservation", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfEpiObservation,0) {0} @idfEpiObservation_{1}", filters.Operation("idfEpiObservation", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfEpiObservation {0} @idfEpiObservation_{1}", filters.Operation("idfEpiObservation", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2388,9 +2388,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfCSObservation") ? " or " : " and ");
                         
                         if (filters.Operation("idfCSObservation", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfCSObservation,0) {0} @idfCSObservation_{1} = @idfCSObservation_{1})", filters.Operation("idfCSObservation", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfCSObservation {0} @idfCSObservation_{1} = @idfCSObservation_{1})", filters.Operation("idfCSObservation", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfCSObservation,0) {0} @idfCSObservation_{1}", filters.Operation("idfCSObservation", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfCSObservation {0} @idfCSObservation_{1}", filters.Operation("idfCSObservation", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2405,9 +2405,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsInitialCaseStatus") ? " or " : " and ");
                         
                         if (filters.Operation("idfsInitialCaseStatus", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfsInitialCaseStatus,0) {0} @idfsInitialCaseStatus_{1} = @idfsInitialCaseStatus_{1})", filters.Operation("idfsInitialCaseStatus", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfsInitialCaseStatus {0} @idfsInitialCaseStatus_{1} = @idfsInitialCaseStatus_{1})", filters.Operation("idfsInitialCaseStatus", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfsInitialCaseStatus,0) {0} @idfsInitialCaseStatus_{1}", filters.Operation("idfsInitialCaseStatus", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfsInitialCaseStatus {0} @idfsInitialCaseStatus_{1}", filters.Operation("idfsInitialCaseStatus", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2422,9 +2422,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsCountry") ? " or " : " and ");
                         
                         if (filters.Operation("idfsCountry", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfsCountry,0) {0} @idfsCountry_{1} = @idfsCountry_{1})", filters.Operation("idfsCountry", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfsCountry {0} @idfsCountry_{1} = @idfsCountry_{1})", filters.Operation("idfsCountry", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfsCountry,0) {0} @idfsCountry_{1}", filters.Operation("idfsCountry", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfsCountry {0} @idfsCountry_{1}", filters.Operation("idfsCountry", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2439,9 +2439,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsLocationOfExposureRayon") ? " or " : " and ");
                         
                         if (filters.Operation("idfsLocationOfExposureRayon", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfsLocationOfExposureRayon,0) {0} @idfsLocationOfExposureRayon_{1} = @idfsLocationOfExposureRayon_{1})", filters.Operation("idfsLocationOfExposureRayon", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfsLocationOfExposureRayon {0} @idfsLocationOfExposureRayon_{1} = @idfsLocationOfExposureRayon_{1})", filters.Operation("idfsLocationOfExposureRayon", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfsLocationOfExposureRayon,0) {0} @idfsLocationOfExposureRayon_{1}", filters.Operation("idfsLocationOfExposureRayon", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfsLocationOfExposureRayon {0} @idfsLocationOfExposureRayon_{1}", filters.Operation("idfsLocationOfExposureRayon", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2456,9 +2456,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsLocationOfExposureRegion") ? " or " : " and ");
                         
                         if (filters.Operation("idfsLocationOfExposureRegion", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfsLocationOfExposureRegion,0) {0} @idfsLocationOfExposureRegion_{1} = @idfsLocationOfExposureRegion_{1})", filters.Operation("idfsLocationOfExposureRegion", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfsLocationOfExposureRegion {0} @idfsLocationOfExposureRegion_{1} = @idfsLocationOfExposureRegion_{1})", filters.Operation("idfsLocationOfExposureRegion", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfsLocationOfExposureRegion,0) {0} @idfsLocationOfExposureRegion_{1}", filters.Operation("idfsLocationOfExposureRegion", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfsLocationOfExposureRegion {0} @idfsLocationOfExposureRegion_{1}", filters.Operation("idfsLocationOfExposureRegion", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2472,7 +2472,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datFinalCaseClassificationDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_HumanCase_SelectList.datFinalCaseClassificationDate, 112) {0} CONVERT(NVARCHAR(8), @datFinalCaseClassificationDate_{1}, 112)", filters.Operation("datFinalCaseClassificationDate", i), i);
+                        sql.AppendFormat("fn_HumanCase_SelectList.datFinalCaseClassificationDate {0} @datFinalCaseClassificationDate_{1}", filters.Operation("datFinalCaseClassificationDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2487,9 +2487,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsPersonIDType") ? " or " : " and ");
                         
                         if (filters.Operation("idfsPersonIDType", i) == "&")
-                          sql.AppendFormat("(isnull(fn_HumanCase_SelectList.idfsPersonIDType,0) {0} @idfsPersonIDType_{1} = @idfsPersonIDType_{1})", filters.Operation("idfsPersonIDType", i), i);
+                          sql.AppendFormat("(fn_HumanCase_SelectList.idfsPersonIDType {0} @idfsPersonIDType_{1} = @idfsPersonIDType_{1})", filters.Operation("idfsPersonIDType", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_HumanCase_SelectList.idfsPersonIDType,0) {0} @idfsPersonIDType_{1}", filters.Operation("idfsPersonIDType", i), i);
+                          sql.AppendFormat("fn_HumanCase_SelectList.idfsPersonIDType {0} @idfsPersonIDType_{1}", filters.Operation("idfsPersonIDType", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -3613,7 +3613,7 @@ namespace eidss.model.Schema
                     "strLastName",
                     null, null, c => false, false, SearchPanelLocation.Main, false, null, null, null, null, null, null,false
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!(EidssSiteContext.Instance.IsIraqCustomization)))())
                 SearchPanelMeta.Add(new SearchPanelMetaItem(
                     "strFirstName",
                     EditorType.Text,

@@ -7,7 +7,7 @@
     <BuiltHelpDirectory>$(OutDir)Help\$(ProjectName)\</BuiltHelpDirectory>
     <BuiltHelpDirectory
       Condition=" 'True' != '$([System.IO.Path]::IsPathRooted(&quot;$(BuiltHelpDirectory)&quot;))' ">$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)\$(BuiltHelpDirectory)'))</BuiltHelpDirectory>
-    <HelpBuilder Condition=" '$(HelpBuilder)' == '' ">HELPMAN.EXE</HelpBuilder>
+    <HelpBuilder Condition=" '$(HelpBuilder)' == '' ">c:\Program Files (x86)\EC Software\HelpAndManual6\HELPMAN.EXE</HelpBuilder>
     <Mode>HTML</Mode>
   </PropertyGroup>
   

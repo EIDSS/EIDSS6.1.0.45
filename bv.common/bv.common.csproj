@@ -168,11 +168,19 @@
       <DependentUpon>BvMessages.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\BvMessages.ar-JO.resx">
+      <DependentUpon>BvMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\BvMessages.az-Latn-AZ.resx">
       <DependentUpon>BvMessages.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\BvMessages.en-IQ-Eidss.resx">
+      <DependentUpon>BvMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\BvMessages.en-JO-Eidss.resx">
       <DependentUpon>BvMessages.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -223,6 +231,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\XtraStrings.ar-IQ.resx">
+      <DependentUpon>XtraStrings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\XtraStrings.ar-JO.resx">
       <DependentUpon>XtraStrings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\XtraStrings.az-Latn-AZ.resx">

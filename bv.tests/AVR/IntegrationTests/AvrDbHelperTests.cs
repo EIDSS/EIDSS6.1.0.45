@@ -323,7 +323,7 @@ namespace bv.tests.AVR.IntegrationTests
         [TestMethod]
         public void TestSaveEmptyTable()
         {
-            TestInternalSaveTable(new QueryTableModel(123, "en"));
+            TestInternalSaveTable(new QueryTableModel(123, "en", null));
         }
 
         [TestMethod]
@@ -647,7 +647,7 @@ namespace bv.tests.AVR.IntegrationTests
 
         private static QueryTableModel GetTestTableModel(bool isArchive = false)
         {
-            var source = new QueryTableModel(123, "en")
+            var source = new QueryTableModel(123, "en", null)
             {
                 UseArchivedData = isArchive,
                 Header = new QueryTablePacketDTO

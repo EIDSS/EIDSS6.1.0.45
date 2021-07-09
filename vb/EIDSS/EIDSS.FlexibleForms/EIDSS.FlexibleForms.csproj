@@ -266,6 +266,9 @@
     <EmbeddedResource Include="FFDeterminants.ar-IQ.resx">
       <DependentUpon>FFDeterminants.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FFDeterminants.ar-JO.resx">
+      <DependentUpon>FFDeterminants.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FFDeterminants.az-Latn-AZ.resx">
       <DependentUpon>FFDeterminants.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -297,6 +300,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FFParameterTypesEditor.ar-IQ.resx">
+      <DependentUpon>FFParameterTypesEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFParameterTypesEditor.ar-JO.resx">
       <DependentUpon>FFParameterTypesEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FFParameterTypesEditor.az-Latn-AZ.resx">
@@ -332,6 +338,9 @@
     <EmbeddedResource Include="FFPresenter.ar-IQ.resx">
       <DependentUpon>FFPresenter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FFPresenter.ar-JO.resx">
+      <DependentUpon>FFPresenter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FFPresenter.az-Latn-AZ.resx">
       <DependentUpon>FFPresenter.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -365,6 +374,9 @@
     <EmbeddedResource Include="FFTreeParameterForTemplate.ar-IQ.resx">
       <DependentUpon>FFTreeParameterForTemplate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FFTreeParameterForTemplate.ar-JO.resx">
+      <DependentUpon>FFTreeParameterForTemplate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FFTreeParameterForTemplate.az-Latn-AZ.resx">
       <DependentUpon>FFTreeParameterForTemplate.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -396,6 +408,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FlexibleFormEditor.ar-IQ.resx">
+      <DependentUpon>FlexibleFormEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlexibleFormEditor.ar-JO.resx">
       <DependentUpon>FlexibleFormEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FlexibleFormEditor.az-Latn-AZ.resx">

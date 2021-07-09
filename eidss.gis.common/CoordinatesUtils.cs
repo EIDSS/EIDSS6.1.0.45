@@ -95,57 +95,101 @@ namespace eidss.gis.common
                 var id = (long) objId;
                 var sqlConnection = new SqlConnection(connection);
 
-                sqlConnection.Open();
-                var sqlCommand1 =
-                    new SqlCommand("SELECT idfsGeoObject FROM gisWKBRegion WHERE (idfsGeoObject = " + id + ")",
-                                   sqlConnection);
-                SqlDataReader sqlDataReader1 = sqlCommand1.ExecuteReader();
-                if (sqlDataReader1.HasRows)
-                {
-                    result = "gisWKBRegion";
-                }
-                sqlConnection.Close();
-
-                if (result == string.Empty)
+                try
                 {
                     sqlConnection.Open();
-                    var sqlCommand2 =
-                        new SqlCommand("SELECT idfsGeoObject FROM gisWKBDistrict WHERE (idfsGeoObject = " + id + ")",
+                    var sqlCommand1 =
+                        new SqlCommand("SELECT idfsGeoObject FROM gisWKBRegion WHERE (idfsGeoObject = " + id + ")",
                                        sqlConnection);
-                    SqlDataReader sqlDataReader2 = sqlCommand2.ExecuteReader();
-                    if (sqlDataReader2.HasRows)
+                    SqlDataReader sqlDataReader1 = sqlCommand1.ExecuteReader();
+                    if (sqlDataReader1.HasRows)
                     {
-                        result = "gisWKBDistrict";
+                        result = "gisWKBRegion";
                     }
                     sqlConnection.Close();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
                 }
 
                 if (result == string.Empty)
                 {
-                    sqlConnection.Open();
-                    var sqlCommand2 =
-                        new SqlCommand("SELECT idfsGeoObject FROM gisWKBRayon WHERE (idfsGeoObject = " + id + ")",
-                                       sqlConnection);
-                    SqlDataReader sqlDataReader2 = sqlCommand2.ExecuteReader();
-                    if (sqlDataReader2.HasRows)
+                    try
                     {
-                        result = "gisWKBRayon";
+                        sqlConnection.Open();
+                        var sqlCommand2 =
+                            new SqlCommand("SELECT idfsGeoObject FROM gisWKBDistrict WHERE (idfsGeoObject = " + id + ")",
+                                           sqlConnection);
+                        SqlDataReader sqlDataReader2 = sqlCommand2.ExecuteReader();
+                        if (sqlDataReader2.HasRows)
+                        {
+                            result = "gisWKBDistrict";
+                        }
+                        sqlConnection.Close();
                     }
-                    sqlConnection.Close();
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                    finally
+                    {
+                        if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
+                    }
                 }
 
                 if (result == string.Empty)
                 {
-                    sqlConnection.Open();
-                    var sqlCommand3 =
-                        new SqlCommand("SELECT idfsGeoObject FROM gisWKBSettlement WHERE (idfsGeoObject = " + id + ")",
-                                       sqlConnection);
-                    SqlDataReader sqlDataReader3 = sqlCommand3.ExecuteReader();
-                    if (sqlDataReader3.HasRows)
+                    try
                     {
-                        result = "gisWKBSettlement";
+                        sqlConnection.Open();
+                        var sqlCommand2 =
+                            new SqlCommand("SELECT idfsGeoObject FROM gisWKBRayon WHERE (idfsGeoObject = " + id + ")",
+                                           sqlConnection);
+                        SqlDataReader sqlDataReader2 = sqlCommand2.ExecuteReader();
+                        if (sqlDataReader2.HasRows)
+                        {
+                            result = "gisWKBRayon";
+                        }
+                        sqlConnection.Close();
                     }
-                    sqlConnection.Close();
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                    finally
+                    {
+                        if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
+                    }
+                }
+
+                if (result == string.Empty)
+                {
+                    try
+                    {
+                        sqlConnection.Open();
+                        var sqlCommand3 =
+                            new SqlCommand("SELECT idfsGeoObject FROM gisWKBSettlement WHERE (idfsGeoObject = " + id + ")",
+                                           sqlConnection);
+                        SqlDataReader sqlDataReader3 = sqlCommand3.ExecuteReader();
+                        if (sqlDataReader3.HasRows)
+                        {
+                            result = "gisWKBSettlement";
+                        }
+                        sqlConnection.Close();
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                    finally
+                    {
+                        if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
+                    }
                 }
             }
 
@@ -171,73 +215,114 @@ namespace eidss.gis.common
                 string tblName = string.Empty;
                 var sqlConnection = new SqlConnection(connection);
 
-                sqlConnection.Open();
-                var sqlCommand1 =
-                    new SqlCommand("SELECT idfsGeoObject FROM gisWKBRegion WHERE (idfsGeoObject = " + id + ")",
-                                   sqlConnection);
-                SqlDataReader sqlDataReader1 = sqlCommand1.ExecuteReader();
-                if (sqlDataReader1.HasRows)
-                    tblName = "gisWKBRegion";
-                sqlConnection.Close();
+                try
+                {
+                    sqlConnection.Open();
+                    var sqlCommand1 =
+                        new SqlCommand("SELECT idfsGeoObject FROM gisWKBRegion WHERE (idfsGeoObject = " + id + ")",
+                                       sqlConnection);
+                    SqlDataReader sqlDataReader1 = sqlCommand1.ExecuteReader();
+                    if (sqlDataReader1.HasRows)
+                        tblName = "gisWKBRegion";
+                    sqlConnection.Close();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
+                }
 
                 if (tblName == string.Empty)
                 {
-                    sqlConnection.Open();
-                    var sqlCommand2 =
-                        new SqlCommand("SELECT idfsGeoObject FROM gisWKBRayon WHERE (idfsGeoObject = " + id + ")",
-                                       sqlConnection);
-                    SqlDataReader sqlDataReader2 = sqlCommand2.ExecuteReader();
-                    if (sqlDataReader2.HasRows)
-                        tblName = "gisWKBRayon";
-                    sqlConnection.Close();
+                    try
+                    {
+                        sqlConnection.Open();
+                        var sqlCommand2 =
+                            new SqlCommand("SELECT idfsGeoObject FROM gisWKBRayon WHERE (idfsGeoObject = " + id + ")",
+                                           sqlConnection);
+                        SqlDataReader sqlDataReader2 = sqlCommand2.ExecuteReader();
+                        if (sqlDataReader2.HasRows)
+                            tblName = "gisWKBRayon";
+                        sqlConnection.Close();
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                    finally
+                    {
+                        if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
+                    }
                 }
 
                 if (tblName == string.Empty)
                 {
-                    sqlConnection.Open();
-                    var sqlCommand3 =
-                        new SqlCommand("SELECT idfsGeoObject FROM gisWKBSettlement WHERE (idfsGeoObject = " + id + ")",
-                                       sqlConnection);
-                    SqlDataReader sqlDataReader3 = sqlCommand3.ExecuteReader();
-                    if (sqlDataReader3.HasRows)
-                        tblName = "gisWKBSettlement";
-                    sqlConnection.Close();
+                    try
+                    {
+                        sqlConnection.Open();
+                        var sqlCommand3 =
+                            new SqlCommand("SELECT idfsGeoObject FROM gisWKBSettlement WHERE (idfsGeoObject = " + id + ")",
+                                           sqlConnection);
+                        SqlDataReader sqlDataReader3 = sqlCommand3.ExecuteReader();
+                        if (sqlDataReader3.HasRows)
+                            tblName = "gisWKBSettlement";
+                        sqlConnection.Close();
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                    finally
+                    {
+                        if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
+                    }
                 }
 
-                //tblName equal to one of the table names or string.Empry
-                sqlConnection.Open();
-                switch (tblName)
+                //tblName equal to one of the table names or string.Empty
+                try
                 {
-                    case "gisWKBSettlement":
-                        //settlements
-                        result = GetSettlementCoordinates(connection, id, out x, out y);
-                        break;
-                    case "gisWKBRayon":
-                    case "gisWKBRegion":
-                        //regions & districts
-                        var geom = Extents.GetGeomById(sqlConnection, tblName, id);
-                        if (geom != null)
-                        {
-                            var point = geom.GetBoundingBox().GetCentroid();
-                            //Geoms in DB in spherical mercator. Transform to wgs
-                            var projectedPoint = GeometryTransform.TransformPoint(point,
-                                                           CoordinateSystems.SphericalMercatorCS,
-                                                           CoordinateSystems.WGS84);
-                            x = projectedPoint.X;
-                            y = projectedPoint.Y;
-                        }
-                        break;
-                    default:
-                        break;
+                    sqlConnection.Open();
+                    switch (tblName)
+                    {
+                        case "gisWKBSettlement":
+                            //settlements
+                            result = GetSettlementCoordinates(connection, id, out x, out y);
+                            break;
+                        case "gisWKBRayon":
+                        case "gisWKBRegion":
+                            //regions & districts
+                            var geom = Extents.GetGeomById(sqlConnection, tblName, id);
+                            if (geom != null)
+                            {
+                                var point = geom.GetBoundingBox().GetCentroid();
+                                //Geoms in DB in spherical mercator. Transform to wgs
+                                var projectedPoint = GeometryTransform.TransformPoint(point,
+                                                               CoordinateSystems.SphericalMercatorCS,
+                                                               CoordinateSystems.WGS84);
+                                x = projectedPoint.X;
+                                y = projectedPoint.Y;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
                 }
-                sqlConnection.Close();
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
+                }
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-
-
 
             return result;
         }
@@ -466,28 +551,39 @@ namespace eidss.gis.common
         private static long GetGeoId(string connectionString, string lTable, double lon, double lat)
         {
             var connection = new SqlConnection(connectionString);
-            connection.Open();
-            var cmd = new SqlCommand();
-            cmd.Connection = connection;
-            cmd.CommandText =
-                string.Format(
-                    "SELECT idfsGeoObject FROM {0} WHERE  geomShape.STContains(geometry::STGeomFromText('POINT({1} {2})', 3857))=1",
-                    lTable, lon, lat);
-            if (lTable == "gisWKBSettlement")
-            {
-                cmd.CommandText =
-                    string.Format(
-                        "SELECT TOP 1 idfsGeoObject FROM {0} WHERE geomShape.STDistance(geometry::STGeomFromText('POINT({1} {2})', 3857)) < 1000",
-                        lTable, lon, lat);
-            }
-            long idfGeo = 0;
             try
             {
-                idfGeo = long.Parse(cmd.ExecuteScalar().ToString());
+                connection.Open();
+                var cmd = new SqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText =
+                    string.Format(
+                        "SELECT idfsGeoObject FROM {0} WHERE  geomShape.STContains(geometry::STGeomFromText('POINT({1} {2})', 3857))=1",
+                        lTable, lon, lat);
+                if (lTable == "gisWKBSettlement")
+                {
+                    cmd.CommandText =
+                        string.Format(
+                            "SELECT TOP 1 idfsGeoObject FROM {0} WHERE geomShape.STDistance(geometry::STGeomFromText('POINT({1} {2})', 3857)) < 1000",
+                            lTable, lon, lat);
+                }
+                long idfGeo = 0;
+                try
+                {
+                    idfGeo = long.Parse(cmd.ExecuteScalar().ToString());
+                }
+                catch (Exception) { }
+                connection.Close();
+                return idfGeo;
             }
-            catch (Exception) { }
-
-            return idfGeo;
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if ((connection != null) && (connection.State == ConnectionState.Open)) connection.Close();
+            }
         }
 
         private static string GetGeoName(string connectionString, string strLang, string lTable, double plon, double plat)
@@ -496,22 +592,47 @@ namespace eidss.gis.common
             string lat = plat.ToString().Replace(',', '.'); 
 
             var connection = new SqlConnection(connectionString);
-            connection.Open();
-            var cmd = new SqlCommand();
-            cmd.Connection = connection;
-            cmd.CommandText = string.Format("SELECT idfsGeoObject FROM {0} WHERE  geomShape.STContains(geometry::STGeomFromText('POINT({1} {2})', 3857))=1", lTable, lon, lat);
-            if (lTable == "gisWKBSettlement") { cmd.CommandText = string.Format("SELECT TOP 1 idfsGeoObject FROM {0} WHERE geomShape.STDistance(geometry::STGeomFromText('POINT({1} {2})', 3857)) < 1000", lTable, lon, lat); }
-            var idfGeo = (long?)cmd.ExecuteScalar();
-            
-            if (idfGeo == null) { return ""; }
-            
-            var cmd1 = new SqlCommand();
-            cmd1.Connection = connection;
-            cmd1.CommandText = string.Format("SELECT strTextString Name FROM gisStringNameTranslation WHERE idfsGISBaseReference={0} and idfsLanguage=dbo.fnGetLanguageCode('{1}')", idfGeo, strLang);
+            long? idfGeo;
+            try
+            {
+                connection.Open();
+                var cmd = new SqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = string.Format("SELECT idfsGeoObject FROM {0} WHERE  geomShape.STContains(geometry::STGeomFromText('POINT({1} {2})', 3857))=1", lTable, lon, lat);
+                if (lTable == "gisWKBSettlement") { cmd.CommandText = string.Format("SELECT TOP 1 idfsGeoObject FROM {0} WHERE geomShape.STDistance(geometry::STGeomFromText('POINT({1} {2})', 3857)) < 1000", lTable, lon, lat); }
+                idfGeo = (long?)cmd.ExecuteScalar();
+                connection.Close();
+                if (idfGeo == null) { return ""; }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if ((connection != null) && (connection.State == ConnectionState.Open)) connection.Close();
+            }
 
-            var result = (string)cmd1.ExecuteScalar();
-            
-            return result;
+            try
+            {
+                connection.Open();
+                var cmd1 = new SqlCommand();
+                cmd1.Connection = connection;
+                cmd1.CommandText = string.Format("SELECT strTextString Name FROM gisStringNameTranslation WHERE idfsGISBaseReference={0} and idfsLanguage=dbo.fnGetLanguageCode('{1}')", idfGeo, strLang);
+
+                var result = (string)cmd1.ExecuteScalar();
+                connection.Close();
+
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if ((connection != null) && (connection.State == ConnectionState.Open)) connection.Close();
+            }
         }
 
         private static string GetStatValue(object pdata)
@@ -548,8 +669,21 @@ namespace eidss.gis.common
                 mInfoRegion[0] = lRegion;
                 //// Region
                 id = GetGeoId(connectionString, "gisWKBRegion", projectedPoint.X, projectedPoint.Y);
-                tbl = SqlExecHelper.SqlExecTable(sqlConnection,
-                    string.Format("SELECT * FROM dbo.fn_GetRegionStatInfo(dbo.fnGetLanguageCode('{0}'), {1})", strLng, id));
+                try
+                {
+                    sqlConnection.Open();
+                    tbl = SqlExecHelper.SqlExecTable(sqlConnection,
+                        string.Format("SELECT * FROM dbo.fn_GetRegionStatInfo(dbo.fnGetLanguageCode('{0}'), {1})", strLng, id));
+                    if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
+                }
                 tbl.Columns.Add("varPopDens", Type.GetType("System.Double"));
                 foreach (DataRow row in tbl.Rows)
                 {
@@ -569,7 +703,20 @@ namespace eidss.gis.common
 
             mInfoRayon[0] = GetGeoName(connectionString, strLng, "gisWKBRayon", projectedPoint.X, projectedPoint.Y) + "  ";
             id = GetGeoId(connectionString, "gisWKBRayon", projectedPoint.X, projectedPoint.Y);
-            tbl = SqlExecHelper.SqlExecTable(sqlConnection, string.Format("SELECT * FROM dbo.fn_GetRayonStatInfo(dbo.fnGetLanguageCode('{0}'), {1})", strLng, id));
+            try
+            {
+                sqlConnection.Open();
+                tbl = SqlExecHelper.SqlExecTable(sqlConnection, string.Format("SELECT * FROM dbo.fn_GetRayonStatInfo(dbo.fnGetLanguageCode('{0}'), {1})", strLng, id));
+                if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
+            }
             tbl.Columns.Add("varPopDens", Type.GetType("System.Double"));
             foreach (DataRow row in tbl.Rows)
             {

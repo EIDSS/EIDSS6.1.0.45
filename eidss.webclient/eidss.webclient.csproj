@@ -32,6 +32,8 @@
     <IISExpressUseClassicPipelineMode />
     <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -217,6 +219,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GlobalLabelResource.ar-IQ.resx</DependentUpon>
     </Compile>
+    <Compile Include="App_GlobalResources\GlobalLabelResource.ar-JO.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalLabelResource.ar-JO.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_GlobalResources\GlobalLabelResource.az-latn-az.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -339,6 +346,7 @@
     <Compile Include="Controllers\CommonAggregateController.cs" />
     <Compile Include="Controllers\FlexibleFormController.cs" />
     <Compile Include="Controllers\LabSampleController.cs" />
+    <Compile Include="Controllers\UploadEhsController.cs" />
     <Compile Include="Controllers\Upload506Controller.cs" />
     <Compile Include="Controllers\PopupMenuController.cs" />
     <Compile Include="Controllers\LaboratoryController.cs" />
@@ -405,6 +413,11 @@
     <Compile Include="Models\SearchPanelModel.cs" />
     <Compile Include="Models\VetMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\EhsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ReportService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -414,6 +427,7 @@
     <Compile Include="Utils\AreaComparer.cs" />
     <Compile Include="Utils\AuthorizeEIDSSAttribute.cs" />
     <Compile Include="Utils\CompressFilterAttribute.cs" />
+    <Compile Include="Utils\EhsClientWrapper.cs" />
     <Compile Include="Utils\LogActionFilterAttribute.cs" />
     <Compile Include="Utils\PopupMenuExtender.cs" />
     <Compile Include="Utils\CultureConstraint.cs" />
@@ -440,9 +454,21 @@
     <Compile Include="Utils\VetFarmTreeProcessor.cs" />
     <Compile Include="Utils\WebMenuReportRegistrator.cs" />
     <Compile Include="Utils\XframeOptionsModule.cs" />
+    <Content Include="Content\Styles\UploadEhs.css" />
     <Content Include="Scripts\EIDSS\BvCheckedGroupComboBox.js" />
     <Content Include="Scripts\EIDSS\Upload506.js" />
+    <Content Include="Scripts\EIDSS\UploadEhs.js" />
     <Content Include="Scripts\Kendo\min\cultures\kendo.culture.en-US-EIDSS.min.js" />
+    <Content Include="Properties\DataSources\eidss.model.Model.UploadEhs.SaveDataResult.datasource" />
+    <Content Include="Properties\DataSources\eidss.model.Model.UploadEhs.ValidateDataResult.datasource" />
+    <None Include="Service References\EhsService\EhsFacade.wsdl" />
+    <None Include="Service References\EhsService\item.disco" />
+    <None Include="Service References\EhsService\configuration91.svcinfo" />
+    <None Include="Service References\EhsService\configuration.svcinfo" />
+    <None Include="Service References\EhsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Views\Report\AZ\FromYearToYearFilter.cshtml" />
     <Content Include="Views\Report\AZ\MultipleCounterFilter.cshtml" />
     <Content Include="..\dlls\gis\fgdb.template">
@@ -500,6 +526,7 @@
     <Content Include="Content\Images\EIDSS_TH_Logo.png" />
     <Content Include="Content\Images\exclamation_icon.png" />
     <Content Include="Content\Images\Flags\en-IQ-Eidss.png" />
+    <Content Include="Content\Images\Flags\en-JO-Eidss.png" />
     <Content Include="Content\Images\Flags\en-AR-Eidss.png" />
     <Content Include="Content\Images\Flags\ru-KZ-Eidss.png" />
     <Content Include="Content\Images\Flags\en-KZ-Eidss.png" />
@@ -996,6 +1023,7 @@
     <Content Include="Scripts\Kendo\min\cultures\kendo.culture.en-TT.min.js" />
     <Content Include="Scripts\Kendo\min\cultures\kendo.culture.en-TH-EIDSS.min.js" />
     <Content Include="Scripts\Kendo\min\cultures\kendo.culture.en-IQ-EIDSS.min.js" />
+    <Content Include="Scripts\Kendo\min\cultures\kendo.culture.en-JO-EIDSS.min.js" />
     <Content Include="Scripts\Kendo\min\cultures\kendo.culture.en-KZ-EIDSS.min.js" />
     <Content Include="Scripts\Kendo\min\cultures\kendo.culture.en-KA-EIDSS.min.js" />
     <Content Include="Scripts\Kendo\min\cultures\kendo.culture.en-HY-EIDSS.min.js" />
@@ -1509,6 +1537,18 @@
     <Content Include="Content\Kendo\images\kendoui.woff" />
     <Content Include="packages.config" />
     <Content Include="CBTEmpty\Web.config" />
+    <None Include="Service References\EhsService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EhsService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EhsService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EhsService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ReportService\item.disco" />
     <None Include="Service References\ReportService\configuration91.svcinfo" />
     <None Include="Service References\ReportService\configuration.svcinfo" />
@@ -1903,6 +1943,8 @@
     <Content Include="Views\Report\KZ\IncidenceReportByRegionKZ.cshtml" />
     <Content Include="Views\Report\AZ\VeterinaryComparativeByMonthReportAZ.cshtml" />
     <Content Include="Views\ASSession\Actions.cshtml" />
+    <Content Include="Views\UploadEhs\Details.cshtml" />
+    <Content Include="Views\UploadEhs\UploadEhsUpdatePicker.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\App_Data\" />
@@ -2528,8 +2570,13 @@
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>GlobalLabelResource.ar-IQ.designer.cs</LastGenOutput>
     </Content>
+    <Content Include="App_GlobalResources\GlobalLabelResource.ar-JO.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GlobalLabelResource.ar-JO.designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EhsService\" />
     <WCFMetadataStorage Include="Service References\ReportService\" />
   </ItemGroup>
   <ItemGroup>

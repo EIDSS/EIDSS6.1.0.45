@@ -20,6 +20,7 @@ using eidss.web.common.Controllers;
 using eidss.web.common.Utils;
 using eidss.webclient.Utils;
 using bv.common.Enums;
+using bv.common.Core;
 
 namespace eidss.webclient.Controllers
 {
@@ -33,39 +34,48 @@ namespace eidss.webclient.Controllers
 
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult CheckChanges(long id, string formData)
         {
             var bChanged = true;
-            //var o = ModelStorage.Get(ModelUserContext.ClientID, id, null) as IObject;
-            return ObjectStorage.Using<IObject, ActionResult>(o =>
-                {
-            if ((o != null) && (formData != null))
+
+            if (!ObjectStorage.Contains(ModelUserContext.ClientID, id, null))
             {
-                bChanged = o.HasChanges;
-                if (!bChanged)
-                {
-                    var formCollection = HttpUtility.ParseQueryString(formData);
-                    if ((formCollection != null) && (string.IsNullOrEmpty(formCollection.Get("NotToCloneInCheckChanges"))))
+                return new JsonResult { Data = bChanged, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+            }
+            else
+            {
+                //var o = ModelStorage.Get(ModelUserContext.ClientID, id, null) as IObject;
+                return ObjectStorage.Using<IObject, ActionResult>(o =>
                     {
-                        using (var manager = DbManagerFactory.Factory.Create(EidssUserContext.Instance))
+                        if ((o != null) && (formData != null))
                         {
-                            using (var clone = o.CloneWithSetup(manager, true))
+                            bChanged = o.HasChanges;
+                            if (!bChanged)
                             {
-                                clone.DeepAcceptChanges();
-                                clone.ParseFormCollection(formCollection, false);
-                                bChanged = clone.HasChanges;
+                                var formCollection = HttpUtility.ParseQueryString(formData);
+                                if ((formCollection != null) && (string.IsNullOrEmpty(formCollection.Get("NotToCloneInCheckChanges"))))
+                                {
+                                    using (var manager = DbManagerFactory.Factory.Create(EidssUserContext.Instance))
+                                    {
+                                        using (var clone = o.CloneWithSetup(manager, true))
+                                        {
+                                            clone.DeepAcceptChanges();
+                                            clone.ParseFormCollection(formCollection, false);
+                                            bChanged = clone.HasChanges;
+                                        }
+                                    }
+                                }
+                                //ICloneable cloneable = o as ICloneable;
+                                //IObject clone = cloneable.Clone() as IObject;
+                                //clone.DeepAcceptChanges();
+                                //clone.ParseFormCollection(formCollection, false, true);
+                                //bChanged = clone.HasChanges;
                             }
                         }
-                    }
-                    //ICloneable cloneable = o as ICloneable;
-                    //IObject clone = cloneable.Clone() as IObject;
-                    //clone.DeepAcceptChanges();
-                    //clone.ParseFormCollection(formCollection, false, true);
-                    //bChanged = clone.HasChanges;
-                }
+                        return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = bChanged };
+                    }, ModelUserContext.ClientID, id, null);
             }
-            return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = bChanged };
-                }, ModelUserContext.ClientID, id, null);
         }
 
         public ActionResult DeleteObject(string accessor, long id)
@@ -148,63 +158,75 @@ namespace eidss.webclient.Controllers
                 {
                     var root = (long) r.Key;
 
-            if (originalGeoLocation.idfsGeoLocationType == null)
-            {
-                originalGeoLocation.idfsGeoLocationType = (long)GeoLocationTypeEnum.ExactPoint;
-            }
-            var cloneGeoLocation = originalGeoLocation.GetForEdit();
-            cloneGeoLocation.idfGeoLocation = cloneGeoLocation.idfGeoLocation + 1;
-                    ObjectStorage.Put(ModelUserContext.ClientID, root, cloneGeoLocation.idfGeoLocation, null, cloneGeoLocation);
-            ViewData["Root"] = root;
-            return View(cloneGeoLocation);
+                    if (originalGeoLocation.idfsGeoLocationType == null)
+                    {
+                        originalGeoLocation.idfsGeoLocationType = (long)GeoLocationTypeEnum.ExactPoint;
+                    }
+                    var cloneGeoLocation = originalGeoLocation.GetForEdit();
+                    cloneGeoLocation.idfGeoLocation = cloneGeoLocation.idfGeoLocation + 1;
+                            ObjectStorage.Put(ModelUserContext.ClientID, root, cloneGeoLocation.idfGeoLocation, null, cloneGeoLocation);
+                    ViewData["Root"] = root;
+                    return View(cloneGeoLocation);
                 }, ModelUserContext.ClientID, idfGeoLocation, null);
         }
 
 
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult SetGeoLocation(long idfGeoLocation, string formData)
         {
             //var cloneGeoLocation = (GeoLocation)ModelStorage.Get(ModelUserContext.ClientID, idfGeoLocation, null);
             //long originalIdfGeoLocation = idfGeoLocation - 1;
             //var originalGeoLocation = (GeoLocation)ModelStorage.Get(ModelUserContext.ClientID, originalIdfGeoLocation, null);
 
-            return ObjectStorage.Using<GeoLocation, ActionResult>(cloneGeoLocation =>
-                {
-                    long originalIdfGeoLocation = idfGeoLocation - 1;
-                    return ObjectStorage.Using<GeoLocation, ActionResult>(originalGeoLocation =>
-                    {
-            CompareModel data = new CompareModel();
-            ValidateGeoLocation(originalGeoLocation, cloneGeoLocation, formData);
+            CompareModel data = null;
 
-            if (m_Validation != null)
+            if (!ObjectStorage.Contains(ModelUserContext.ClientID, idfGeoLocation, null))
             {
-                //if (m_validation.MessageId == "msgCoordinatesAutoCorrection")
-                //{
-                //    var tempGeoLocation = m_validation.Obj as GeoLocation;
-                //    ModifyOriginalGeoLocation(originalGeoLocation, cloneGeoLocation, formData);
-                //    data = originalGeoLocation.Compare(tempGeoLocation);
-                //}
-                string errorMessage = Translator.GetErrorMessage(m_Validation);
-                data.Add("ErrorMessage", "ErrorMessage", "ErrorMessage", errorMessage, false, false, false);
-
+                data = new CompareModel();
+                return new JsonResult { Data = data, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
             }
             else
             {
-                using (GeoLocation tempGeoLocation = originalGeoLocation.CloneWithSetup())
-                {
-                    ModifyOriginalGeoLocation(originalGeoLocation, cloneGeoLocation, formData);
-                    data = originalGeoLocation.Compare(tempGeoLocation);
-                    ObjectStorage.Remove(ModelUserContext.ClientID, idfGeoLocation, null);
-                }
-            }
+                return ObjectStorage.Using<GeoLocation, ActionResult>(cloneGeoLocation =>
+                    {
+                        long originalIdfGeoLocation = idfGeoLocation - 1;
+                        return ObjectStorage.Using<GeoLocation, ActionResult>(originalGeoLocation =>
+                        {
+                            data = new CompareModel();
+                            ValidateGeoLocation(originalGeoLocation, cloneGeoLocation, formData);
 
-            var json = new JsonResult { Data = data ?? new CompareModel(), JsonRequestBehavior = JsonRequestBehavior.AllowGet };
-            return json;
-                    }, ModelUserContext.ClientID, originalIdfGeoLocation, null);
-                }, ModelUserContext.ClientID, idfGeoLocation, null);
+                            if (m_Validation != null)
+                            {
+                                //if (m_validation.MessageId == "msgCoordinatesAutoCorrection")
+                                //{
+                                //    var tempGeoLocation = m_validation.Obj as GeoLocation;
+                                //    ModifyOriginalGeoLocation(originalGeoLocation, cloneGeoLocation, formData);
+                                //    data = originalGeoLocation.Compare(tempGeoLocation);
+                                //}
+                                string errorMessage = Translator.GetErrorMessage(m_Validation);
+                                data.Add("ErrorMessage", "ErrorMessage", "ErrorMessage", errorMessage, false, false, false);
+
+                            }
+                            else
+                            {
+                                using (GeoLocation tempGeoLocation = originalGeoLocation.CloneWithSetup())
+                                {
+                                    ModifyOriginalGeoLocation(originalGeoLocation, cloneGeoLocation, formData);
+                                    data = originalGeoLocation.Compare(tempGeoLocation);
+                                    ObjectStorage.Remove(ModelUserContext.ClientID, idfGeoLocation, null);
+                                }
+                            }
+
+                            var json = new JsonResult { Data = data ?? new CompareModel(), JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+                            return json;
+                        }, ModelUserContext.ClientID, originalIdfGeoLocation, null);
+                    }, ModelUserContext.ClientID, idfGeoLocation, null);
+            }
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult GeoLocationClear(long idfGeoLocation)
         {
             try
@@ -448,6 +470,7 @@ namespace eidss.webclient.Controllers
         }*/
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetSelectedOrganization(string objectId, string idfsOrganizationPropertyName, string strOrganizationPropertyName,
             string idfsEmployeePropertyName, string strEmployeePropertyName, string selectedItemId)
         {
@@ -530,6 +553,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult EmployeePicker(string objectId, string idfsOrganizationPropertyName, string formData)
         {
             FilterParams filter = SearchPanelHelper.SearchPanelParseValues(formData, PersonListItem.Accessor.Instance(null).SearchPanelMeta);
@@ -565,6 +589,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetSelectedEmployee(string objectId, string idfsEmployeePropertyName, string strEmployeePropertyName, string selectedItemId)
         {
             long key = long.Parse(objectId);
@@ -668,29 +693,46 @@ namespace eidss.webclient.Controllers
             {
                 type = type.Replace(" ", "+");
             }
-            //var list = ModelStorage.Get(ModelUserContext.ClientID, key, gridName) as IEnumerable; // EditableArrayList;
-            return ObjectStorage.Using<IEnumerable, ActionResult>(list =>
-                {
             string typename = type + EidssAssemblyName;
             Type typemodel = Type.GetType(typename);
-            var model = typemodel.GetConstructor(new[] { typeof(long), typeof(IEnumerable), typeof(string) }).Invoke(new object[] { key, list, null }) as IEnumerable;
-            if (model is IGridModelListSequence)
+
+            if (!ObjectStorage.Contains(ModelUserContext.ClientID, key, gridName))
             {
-                int sequence = 1;
-                foreach (IGridModelItemSequence c in model)
-                {
-                    c.SequenceNumber = sequence++;
-                }
-            }
+                var modelOfEmptyList = typemodel.GetConstructor(new[] { typeof(long) }).Invoke(new object[] { key }) as IEnumerable;
 
-            DataSourceResult result = model.ToDataSourceResult(request);
+                DataSourceResult result = modelOfEmptyList.ToDataSourceResult(request);
 
-            /*var result = new DataSourceResult { AggregateResults = null, Data = model, Errors = null, Total = list.Count };*/
+                /*var result = new DataSourceResult { AggregateResults = null, Data = modelOfEmptyList, Errors = null, Total = 0 };*/
                 return Json(result);
-                }, ModelUserContext.ClientID, key, gridName, ForceLock: ForceReadWriteLockType.Read);
+            }
+            else
+            {
+
+                ////var list = ModelStorage.Get(ModelUserContext.ClientID, key, gridName) as IEnumerable; // EditableArrayList;
+                return ObjectStorage.Using<IEnumerable, ActionResult>(list =>
+                    {
+                        //string typename = type + EidssAssemblyName;
+                        //Type typemodel = Type.GetType(typename);
+                        var model = typemodel.GetConstructor(new[] { typeof(long), typeof(IEnumerable), typeof(string) }).Invoke(new object[] { key, list, null }) as IEnumerable;
+                        if (model is IGridModelListSequence)
+                        {
+                            int sequence = 1;
+                            foreach (IGridModelItemSequence c in model)
+                            {
+                                c.SequenceNumber = sequence++;
+                            }
+                        }
+
+                        DataSourceResult result = model.ToDataSourceResult(request);
+
+                        /*var result = new DataSourceResult { AggregateResults = null, Data = model, Errors = null, Total = list.Count };*/
+                        return Json(result);
+                    }, ModelUserContext.ClientID, key, gridName, ForceLock: ForceReadWriteLockType.Read);
+            }
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult _GridUpdate([DataSourceRequest]DataSourceRequest request, long key, string gridName, string type, FormCollection form)
         {
             //var root = ModelStorage.Get(ModelUserContext.ClientID, key, null, false) as IObject;
@@ -725,6 +767,7 @@ namespace eidss.webclient.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult EditingCustom_Create([DataSourceRequest]DataSourceRequest request, string area, long key, string gridName, string type)
         {
             return Json(null);
@@ -732,6 +775,7 @@ namespace eidss.webclient.Controllers
 
 
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult _GridDelete(long key, string name, string type, long id)
         {
             //var list = ModelStorage.Get(ModelUserContext.ClientID, key, name) as IEnumerable; // EditableArrayList;
@@ -765,6 +809,7 @@ namespace eidss.webclient.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult _GridColumnsRestore(string name)
         {
             EidssUserContext.User.Options.Grids[name].RestoreToDefault();
@@ -772,6 +817,7 @@ namespace eidss.webclient.Controllers
             return new EmptyResult();
         }
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult _GridColumnHide(string name, string column)
         {
             EidssUserContext.User.Options.Grids[name][column].IsShow = false;
@@ -779,6 +825,7 @@ namespace eidss.webclient.Controllers
             return new EmptyResult();
         }
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult _GridColumnShow(string name, string column)
         {
             EidssUserContext.User.Options.Grids[name][column].IsShow = true;
@@ -786,6 +833,7 @@ namespace eidss.webclient.Controllers
             return new EmptyResult();
         }
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult _GridColumnReorder(string name, string column, int oldOrder, int newOrder)
         {
             EidssUserContext.User.Options.Grids[name].SetOrder(column, oldOrder, newOrder);
@@ -793,6 +841,7 @@ namespace eidss.webclient.Controllers
             return new EmptyResult();
         }
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult _GridColumnResize(string name, string column, int size)
         {
             EidssUserContext.User.Options.Grids[name][column].Width = size;
@@ -815,6 +864,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult PreferencesSave(FormCollection form)
         {
             return PickerInternal<SystemPreferences.Accessor, SystemPreferences, SystemPreferences>(form, SystemPreferences.Accessor.Instance(null), null,
@@ -835,6 +885,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult PreferencesDoNotShowAgain(string type, string value)
         {
             switch(type)
@@ -848,6 +899,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult PreferencesDefault(FormCollection form)
         {
             return PickerInternal<SystemPreferences.Accessor, SystemPreferences, SystemPreferences>(form, SystemPreferences.Accessor.Instance(null), null,
@@ -893,6 +945,7 @@ namespace eidss.webclient.Controllers
         }
         */
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult TryDeleteFromGridAndCompare(long key, string name, long id)
         {
             //var list = ModelStorage.Get(ModelUserContext.ClientID, key, name) as EditableArrayList;
@@ -935,6 +988,7 @@ namespace eidss.webclient.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         [CompressFilter]
         public ActionResult SetValue(string key, string value)
         {
@@ -942,6 +996,7 @@ namespace eidss.webclient.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         [CompressFilter]
         public ActionResult SetValueWithParent(string key, string value)
         {
@@ -949,8 +1004,9 @@ namespace eidss.webclient.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         [CompressFilter]
-        public ActionResult SetValueWithIgnore(string key, string value, int ignoreErr)
+           public ActionResult SetValueWithIgnore(string key, string value, int ignoreErr)
         {
             return SetValueInternal(key, value, ignoreErr, false);
         }
@@ -1092,17 +1148,77 @@ namespace eidss.webclient.Controllers
         [CompressFilter]
         public ActionResult SelectGeneric(long id, string lookup, string keyname, string textname)
         {
-            //var o = ModelStorage.Get(ModelUserContext.ClientID, id, null) as IObject;
-            return ObjectStorage.Using<IObject, ActionResult>(o =>
-                {
-            var bvList = o.GetList(lookup);
-            return Json(bvList.items.Cast<IObject>().Select(c => new
-                {
-                    id = string.IsNullOrEmpty(keyname) ? c.Key : c.GetValue(keyname),
-                    name = string.IsNullOrEmpty(textname) ? c.ToStringProp : c.GetValue(textname),
-                }), JsonRequestBehavior.AllowGet);
-            //return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = new SelectList(bvList.items, bvList.dataValueField, bvList.dataTextField) };
-                }, ModelUserContext.ClientID, id, null);
+            IEnumerable data = null;
+
+            if (!ObjectStorage.Contains(ModelUserContext.ClientID, id, null))
+            {
+                var list = new List<IObject>();
+                data =
+                    list.Select(
+                        c => new
+                        {
+                            id = c != null ? c.Key : (long)0,
+                            name = c != null ? c.ToStringProp : "name"
+                        });
+                return new JsonResult { Data = data, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+            }
+            else
+            {
+                ////var o = ModelStorage.Get(ModelUserContext.ClientID, id, null) as IObject;
+                return ObjectStorage.Using<IObject, ActionResult>(o =>
+                    {
+                        //try
+                        //{
+                            if (o != null)
+                            {
+                                var bvList = o.GetList(lookup);
+                                data =
+                                    bvList.items.Cast<IObject>().Select(
+                                        c => new
+                                            {
+                                                id = string.IsNullOrEmpty(keyname) ? c.Key : c.GetValue(keyname),
+                                                name = string.IsNullOrEmpty(textname) ? c.ToStringProp : c.GetValue(textname),
+                                            });
+                            }
+                            else
+                            {
+                                var list = new List<IObject>();
+                                data =
+                                        list.Select(
+                                            c => new
+                                            {
+                                                id = c != null ? c.Key : (long)0,
+                                                name = c != null ? c.ToStringProp : "name"
+                                            });
+                            }
+
+                            var json = new JsonResult { Data = data, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+                            return json;
+                        //}
+                        //catch (Exception ex)
+                        //{
+                        //    var exMessage = "";
+                        //    if (ex != null)
+                        //    {
+                        //        var innerEx = ex.InnerException;
+                        //        exMessage = innerEx == null ? string.Format("{0}\r\n {1}", ex.Message, ex.StackTrace) : string.Format("{0}\r\n {1}\r\n Inner Exception:\r\n {2}\r\n {3}", ex.Message, ex.StackTrace, innerEx.Message, ex.StackTrace);
+                        //    }
+                        //    LogError.Log(
+                        //        "ErrorLog",
+                        //        new ApplicationException(
+                        //            string.Format("Lookup error:id={0},lookup={1},keyname={2},textname={3}",
+                        //                id.ToString(),
+                        //                string.IsNullOrEmpty(lookup) ? "null/empty" : lookup,
+                        //                string.IsNullOrEmpty(keyname) ? "null/empty" : keyname,
+                        //                string.IsNullOrEmpty(textname) ? "null/empty" : textname)));
+                        //    LogError.Log(
+                        //        "ErrorLog",
+                        //        new ApplicationException(exMessage));
+                        //    throw;
+                        //}
+                        ////return new JsonResult { JsonRequestBehavior = JsonRequestBehavior.AllowGet, Data = new SelectList(bvList.items, bvList.dataValueField, bvList.dataTextField) };
+                    }, ModelUserContext.ClientID, id, null);
+            }
         }
 
         [CompressFilter]

@@ -361,6 +361,9 @@
     <EmbeddedResource Include="Batches\BatchDetail.ar-IQ.resx">
       <DependentUpon>BatchDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Batches\BatchDetail.ar-JO.resx">
+      <DependentUpon>BatchDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Batches\BatchDetail.az-Latn-AZ.resx">
       <DependentUpon>BatchDetail.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -394,6 +397,9 @@
     <EmbeddedResource Include="Batches\BatchSelectTestResult.ar-IQ.resx">
       <DependentUpon>BatchSelectTestResult.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Batches\BatchSelectTestResult.ar-JO.resx">
+      <DependentUpon>BatchSelectTestResult.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Batches\BatchSelectTestResult.az-Latn-AZ.resx">
       <DependentUpon>BatchSelectTestResult.vb</DependentUpon>
     </EmbeddedResource>
@@ -419,6 +425,9 @@
       <DependentUpon>BatchSelectTestResult.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Destruction\SampleDestructionDetail.ar-IQ.resx">
+      <DependentUpon>SampleDestructionDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Destruction\SampleDestructionDetail.ar-JO.resx">
       <DependentUpon>SampleDestructionDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Destruction\SampleDestructionDetail.az-Latn-AZ.resx">
@@ -460,6 +469,9 @@
     <EmbeddedResource Include="Repository Scheme\RepositorySchemeDetail.ar-IQ.resx">
       <DependentUpon>RepositorySchemeDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Repository Scheme\RepositorySchemeDetail.ar-JO.resx">
+      <DependentUpon>RepositorySchemeDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Repository Scheme\RepositorySchemeDetail.hy-am.resx">
       <DependentUpon>RepositorySchemeDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -475,6 +487,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\ASSessionInfo.ar-IQ.resx">
+      <DependentUpon>ASSessionInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\ASSessionInfo.ar-JO.resx">
       <DependentUpon>ASSessionInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\ASSessionInfo.az-Latn-AZ.resx">
@@ -510,6 +525,9 @@
     <EmbeddedResource Include="Sample\AssignTestsList.ar-IQ.resx">
       <DependentUpon>AssignTestsList.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sample\AssignTestsList.ar-JO.resx">
+      <DependentUpon>AssignTestsList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sample\AssignTestsList.az-Latn-AZ.resx">
       <DependentUpon>AssignTestsList.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -541,6 +559,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\CaseInfo.ar-IQ.resx">
+      <DependentUpon>CaseInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\CaseInfo.ar-JO.resx">
       <DependentUpon>CaseInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\CaseInfo.az-Latn-AZ.resx">
@@ -576,6 +597,9 @@
     <EmbeddedResource Include="Sample\CheckInPanel.ar-IQ.resx">
       <DependentUpon>CheckInPanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sample\CheckInPanel.ar-JO.resx">
+      <DependentUpon>CheckInPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sample\CheckInPanel.az-Latn-AZ.resx">
       <DependentUpon>CheckInPanel.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -609,6 +633,9 @@
     <EmbeddedResource Include="Sample\GroupCheckInPanel.ar-IQ.resx">
       <DependentUpon>GroupCheckInPanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sample\GroupCheckInPanel.ar-JO.resx">
+      <DependentUpon>GroupCheckInPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sample\GroupCheckInPanel.hy-am.resx">
       <DependentUpon>GroupCheckInPanel.vb</DependentUpon>
     </EmbeddedResource>
@@ -616,6 +643,9 @@
       <DependentUpon>GroupCheckInPanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\HumanCaseInfo.ar-IQ.resx">
+      <DependentUpon>HumanCaseInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\HumanCaseInfo.ar-JO.resx">
       <DependentUpon>HumanCaseInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\HumanCaseInfo.hy-am.resx">
@@ -627,6 +657,9 @@
     <EmbeddedResource Include="Sample\SampleDetail.ar-IQ.resx">
       <DependentUpon>SampleDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SampleDetail.ar-JO.resx">
+      <DependentUpon>SampleDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sample\SampleDetail.hy-am.resx">
       <DependentUpon>SampleDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -634,6 +667,9 @@
       <DependentUpon>SampleDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\SampleGroupCheckInShortList.ar-IQ.resx">
+      <DependentUpon>SampleGroupCheckInShortList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SampleGroupCheckInShortList.ar-JO.resx">
       <DependentUpon>SampleGroupCheckInShortList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\SampleGroupCheckInShortList.az-latn-az.resx">
@@ -660,6 +696,9 @@
     <EmbeddedResource Include="Sample\SamplesCheckIn.ar-IQ.resx">
       <DependentUpon>SamplesCheckIn.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SamplesCheckIn.ar-JO.resx">
+      <DependentUpon>SamplesCheckIn.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sample\SamplesCheckIn.hy-am.resx">
       <DependentUpon>SamplesCheckIn.vb</DependentUpon>
     </EmbeddedResource>
@@ -667,6 +706,9 @@
       <DependentUpon>SamplesCheckIn.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\SamplesGroupCheckIn.ar-IQ.resx">
+      <DependentUpon>SamplesGroupCheckIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SamplesGroupCheckIn.ar-JO.resx">
       <DependentUpon>SamplesGroupCheckIn.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\SamplesGroupCheckIn.hy-am.resx">
@@ -678,6 +720,9 @@
     <EmbeddedResource Include="Sample\SamplesVariants.ar-IQ.resx">
       <DependentUpon>SamplesVariants.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SamplesVariants.ar-JO.resx">
+      <DependentUpon>SamplesVariants.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sample\SamplesVariants.hy-am.resx">
       <DependentUpon>SamplesVariants.vb</DependentUpon>
     </EmbeddedResource>
@@ -685,6 +730,9 @@
       <DependentUpon>SamplesVariants.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\SessionInfo.ar-IQ.resx">
+      <DependentUpon>SessionInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\SessionInfo.ar-JO.resx">
       <DependentUpon>SessionInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\SessionInfo.az-Latn-AZ.resx">
@@ -870,6 +918,9 @@
     <EmbeddedResource Include="Sample\VetCaseInfo.ar-IQ.resx">
       <DependentUpon>VetCaseInfo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sample\VetCaseInfo.ar-JO.resx">
+      <DependentUpon>VetCaseInfo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sample\VetCaseInfo.az-Latn-AZ.resx">
       <DependentUpon>VetCaseInfo.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -899,10 +950,16 @@
     <EmbeddedResource Include="Sample\VSSessionInfo.ar-IQ.resx">
       <DependentUpon>VSSessionInfo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sample\VSSessionInfo.ar-JO.resx">
+      <DependentUpon>VSSessionInfo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sample\VSSessionInfo.az-latn-az.resx">
       <DependentUpon>VSSessionInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\VSSessionInfo.en-IQ-Eidss.resx">
+      <DependentUpon>VSSessionInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\VSSessionInfo.en-JO-Eidss.resx">
       <DependentUpon>VSSessionInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sample\VSSessionInfo.en-TH-Eidss.resx">
@@ -937,6 +994,9 @@
     <EmbeddedResource Include="Test\AmendmentDetail.ar-IQ.resx">
       <DependentUpon>AmendmentDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Test\AmendmentDetail.ar-JO.resx">
+      <DependentUpon>AmendmentDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Test\AmendmentDetail.az-latn-az.resx">
       <DependentUpon>AmendmentDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -962,6 +1022,9 @@
       <DependentUpon>AmendmentDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test\LabTestDetail.ar-IQ.resx">
+      <DependentUpon>LabTestDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\LabTestDetail.ar-JO.resx">
       <DependentUpon>LabTestDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test\LabTestDetail.az-Latn-AZ.resx">
@@ -998,6 +1061,9 @@
       <DependentUpon>VetCaseInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transfer\SampleTransferDetail.ar-IQ.resx">
+      <DependentUpon>SampleTransferDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\SampleTransferDetail.ar-JO.resx">
       <DependentUpon>SampleTransferDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transfer\SampleTransferDetail.az-Latn-AZ.resx">

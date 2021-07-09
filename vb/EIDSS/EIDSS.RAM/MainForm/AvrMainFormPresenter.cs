@@ -20,6 +20,7 @@ using eidss.model.AVR.DataBase;
 using eidss.model.AVR.SourceData;
 using eidss.model.Resources;
 using eidss.winclient.Reports;
+using eidss.model.Core;
 
 namespace eidss.avr.MainForm
 {
@@ -154,7 +155,7 @@ namespace eidss.avr.MainForm
                 string filter,
                 LayoutBaseValidatorWaiter validatorWaiter,
                 bool forExport = false,
-                Func<long, string, bool, string, CachedQueryResult> queryExecutor = null)
+                Func<long, string, bool, string, long?, CachedQueryResult> queryExecutor = null, long? userId = null)
         {
             try
             {
@@ -168,7 +169,7 @@ namespace eidss.avr.MainForm
                     }
                     else
                     {
-                        result = queryExecutor(queryId, lang, isArchive, filter);
+                        result = queryExecutor(queryId, lang, isArchive, filter, userId);
                     }
 
                     result.QueryTable.TableName = QueryProcessor.GetQueryName(queryId);
@@ -215,8 +216,14 @@ namespace eidss.avr.MainForm
                     {
                         var receiver = new AvrCacheReceiver(wrapper);
 
+                        long? userId = null;
+                        if (EidssSiteContext.Instance.AVRUserSensitiveMode && (EidssUserContext.Instance.CurrentUser.ID != null) && (EidssUserContext.Instance.CurrentUser.ID is long))
+                        {
+                            userId = (long)EidssUserContext.Instance.CurrentUser.ID;
+                        }
+
                         CachedQueryResult result = receiver.GetCachedQueryTable(queryId, ModelUserContext.CurrentLanguage, isArchive,
-                            filter, validatorWaiter);
+                            filter, validatorWaiter, -1, userId);
                         return result;
                     }
                 }
@@ -251,10 +258,16 @@ namespace eidss.avr.MainForm
 
                 using (var wrapper = new AvrServiceClientWrapper())
                 {
+                    long? userId = null;
+                    if (EidssSiteContext.Instance.AVRUserSensitiveMode && (EidssUserContext.Instance.CurrentUser.ID != null) && (EidssUserContext.Instance.CurrentUser.ID is long))
+                    {
+                        userId = (long)EidssUserContext.Instance.CurrentUser.ID;
+                    }
+
                     return WinCheckAvrServiceAccessability(wrapper) &&
                            wrapper.DoesCachedQueryExists(queryId,
                                ModelUserContext.CurrentLanguage,
-                               m_SharedPresenter.SharedModel.UseArchiveData);
+                               m_SharedPresenter.SharedModel.UseArchiveData, userId);
                 }
             }
             catch (Exception ex)
@@ -278,9 +291,15 @@ namespace eidss.avr.MainForm
                 AvrServiceAccessability access = AvrServiceAccessability.Check(wrapper);
                 if (access.IsOk)
                 {
-                    wrapper.GetCachedQueryTableHeader(-1, ModelUserContext.CurrentLanguage, false);
-                    wrapper.GetCachedQueryTablePacket(-1, 0, 0);
-                    wrapper.GetQueryRefreshDateTime(-1, ModelUserContext.CurrentLanguage);
+                    long? userId = null;
+                    if (EidssSiteContext.Instance.AVRUserSensitiveMode && (EidssUserContext.Instance.CurrentUser.ID != null) && (EidssUserContext.Instance.CurrentUser.ID is long))
+                    {
+                        userId = (long)EidssUserContext.Instance.CurrentUser.ID;
+                    }
+
+                    wrapper.GetCachedQueryTableHeader(-1, ModelUserContext.CurrentLanguage, false, userId);
+                    wrapper.GetCachedQueryTablePacket(-1, 0, 0, userId);
+                    wrapper.GetQueryRefreshDateTime(-1, ModelUserContext.CurrentLanguage, userId);
                 }
             }
         }
@@ -291,7 +310,13 @@ namespace eidss.avr.MainForm
             {
                 using (var wrapper = new AvrServiceClientWrapper())
                 {
-                    return wrapper.GetQueryRefreshDateTime(queryId, ModelUserContext.CurrentLanguage);
+                    long? userId = null;
+                    if (EidssSiteContext.Instance.AVRUserSensitiveMode && (EidssUserContext.Instance.CurrentUser.ID != null) && (EidssUserContext.Instance.CurrentUser.ID is long))
+                    {
+                        userId = (long)EidssUserContext.Instance.CurrentUser.ID;
+                    }
+
+                    return wrapper.GetQueryRefreshDateTime(queryId, ModelUserContext.CurrentLanguage, userId);
                 }
             }
             catch (Exception ex)

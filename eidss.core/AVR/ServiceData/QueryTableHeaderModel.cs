@@ -12,6 +12,7 @@ namespace eidss.model.AVR.ServiceData
         {
             QueryCacheId = headerDTO.QueryCacheId;
             PacketCount = headerDTO.PacketCount;
+            UserId = headerDTO.UserId;
 
             QueryTablePacketDTO unzipedHeader = BinaryCompressor.Unzip(headerDTO.BinaryHeader);
             List<BaseColumnModel> deserializedHeader = BinarySerializer.DeserializeHeader(unzipedHeader);
@@ -25,6 +26,7 @@ namespace eidss.model.AVR.ServiceData
 
             QueryCacheId = original.QueryCacheId;
             PacketCount = original.PacketCount;
+            UserId = original.UserId;
 
             ColumnTypeByName = new List<BaseColumnModel>();
             foreach (BaseColumnModel originalColumn in original.ColumnTypeByName)
@@ -36,6 +38,7 @@ namespace eidss.model.AVR.ServiceData
 
         public long QueryCacheId { get; private set; }
         public int PacketCount { get; private set; }
+        public long? UserId { get; set; }
 
         public List<BaseColumnModel> ColumnTypeByName { get; private set; }
         public Type[] ColumnTypes { get; private set; }

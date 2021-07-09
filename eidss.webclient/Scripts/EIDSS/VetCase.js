@@ -22,6 +22,16 @@
         detailPage.openReport(url);
     },
 
+    onUNRReportClick: function () {
+        detailPage.onShowReportClick(vetCase.showUNRReport);
+    },
+
+    showUNRReport: function() {
+        var caseId = $("#idfCase").val();
+        var url = bvUrls.getVetCaseUrgentNotificationReportJoUrl({ id: caseId });
+        detailPage.openReport(url);
+    },
+
     onTestsReportClick: function() {
         var action = "ReportsAdditional";
         var caseId = $("#idfCase").val();

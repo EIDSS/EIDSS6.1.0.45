@@ -238,7 +238,7 @@ namespace eidss.model.Core
                 var connectionCredentials = new ConnectionCredentials(null, "Avr");
                 if (connectionCredentials.IsCorrect)
                 {
-                    DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString, DatabaseType.AvrTicket);
+                    DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString, DatabaseType.AvrTicket, connectionCredentials.CommandTimeout);
                     using (var avrManager = DbManagerFactory.Factory[DatabaseType.AvrTicket].Create())
                     {
                         if (avrManager.TestConnection())

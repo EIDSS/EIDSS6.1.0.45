@@ -116,7 +116,7 @@ namespace eidss.mobileclient
         protected void Application_Start(object sender, EventArgs e)
         {
             var connectionCredentials = new ConnectionCredentials();
-            DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString);
+            DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString, DatabaseType.Main, connectionCredentials.CommandTimeout);
             EidssUserContext.Init();
             LookupCacheListener.Cleanup();
             LookupCacheListener.Listen();

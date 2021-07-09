@@ -272,11 +272,19 @@
       <DependentUpon>EidssFields.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EidssFields.ar-JO.resx">
+      <DependentUpon>EidssFields.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssFields.az-Latn-AZ.resx">
       <DependentUpon>EidssFields.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssFields.en-IQ-Eidss.resx">
+      <DependentUpon>EidssFields.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EidssFields.en-JO-Eidss.resx">
       <DependentUpon>EidssFields.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -320,12 +328,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMenu.ar-IQ.resx">
       <DependentUpon>EidssMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EidssMenu.ar-JO.resx">
+      <DependentUpon>EidssMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMenu.az-Latn-AZ.resx">
       <DependentUpon>EidssMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMenu.hy-am.resx">
       <DependentUpon>EidssMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMenu.ka-GE.resx">
       <DependentUpon>EidssMenu.cs</DependentUpon>
@@ -333,6 +348,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMenu.kk-KZ.resx">
       <DependentUpon>EidssMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMenu.resx">
       <DependentUpon>EidssMenu.cs</DependentUpon>
@@ -340,14 +356,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMenu.ru-RU.resx">
       <DependentUpon>EidssMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMenu.th-TH.resx">
       <DependentUpon>EidssMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMenu.uk-UA.resx">
       <DependentUpon>EidssMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMessages.ar-IQ.resx">
+      <DependentUpon>EidssMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EidssMessages.ar-JO.resx">
       <DependentUpon>EidssMessages.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -360,6 +383,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\EidssMessages.en-IQ-Eidss.resx">
+      <DependentUpon>EidssMessages.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EidssMessages.en-JO-Eidss.resx">
       <DependentUpon>EidssMessages.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -29,14 +29,19 @@ namespace eidss.avr.db.CacheReceiver
             zippedDTO.TableName = string.Empty;
 
             var zippedData = new ChartTableDTO(tableModel.ViewId, tableModel.Lang, zippedDTO, tableModel.ChartSettings, tableModel.ChartType,
-                tableModel.TextPatterns, tableModel.Width, tableModel.Height);
+                tableModel.TextPatterns, tableModel.Width, tableModel.Height, tableModel.UserId);
             ChartExportDTO result = m_Facade.ExportChartToJpg(zippedData);
             return result;
         }
 
         public AvrPivotViewModel GetCachedView(string sessionId, long layoutId, string lang)
         {
-            ViewDTO viewDTO = m_Facade.GetCachedView(sessionId, layoutId, lang);
+            long? userId = null;
+            if (EidssSiteContext.Instance.AVRUserSensitiveMode && (EidssUserContext.Instance.CurrentUser.ID != null) && (EidssUserContext.Instance.CurrentUser.ID is long))
+            {
+                userId = (long)EidssUserContext.Instance.CurrentUser.ID;
+            }
+            ViewDTO viewDTO = m_Facade.GetCachedView(sessionId, layoutId, lang, userId);
 
             string xmlViewStructure = BinaryCompressor.UnzipString(viewDTO.BinaryViewHeader);
             AvrView view = AvrViewSerializer.Deserialize(xmlViewStructure);
@@ -50,13 +55,21 @@ namespace eidss.avr.db.CacheReceiver
         }
 
         public CachedQueryResult GetCachedQueryTable
-            (long queryId, string lang, bool isArchive, string filter, 
-            LayoutBaseValidatorWaiter validatorWaiter, long queryCacheId = -1)
+            (long queryId, string lang, bool isArchive, string filter,
+            LayoutBaseValidatorWaiter validatorWaiter, long queryCacheId = -1, long? userId = null)
         {
+            if ((!userId.HasValue) && 
+                (EidssSiteContext.Instance.AVRUserSensitiveMode && 
+                 (EidssUserContext.Instance.CurrentUser.ID != null) && 
+                 (EidssUserContext.Instance.CurrentUser.ID is long)))
+            {
+                userId = (long)EidssUserContext.Instance.CurrentUser.ID;
+            }
+
             m_ReceiveCounter = 0;
             QueryTableHeaderDTO headerDTO = (queryCacheId > 0)
-                ? m_Facade.GetConcreteCachedQueryTableHeader(queryCacheId, queryId, lang, isArchive)
-                : m_Facade.GetCachedQueryTableHeader(queryId, lang, isArchive);
+                ? m_Facade.GetConcreteCachedQueryTableHeader(queryCacheId, queryId, lang, isArchive, userId)
+                : m_Facade.GetCachedQueryTableHeader(queryId, lang, isArchive, userId);
 
             var headerModel = new QueryTableHeaderModel(headerDTO);
 
@@ -92,7 +105,8 @@ namespace eidss.avr.db.CacheReceiver
                     {
                         return;
                     }
-                    QueryTablePacketDTO packet = m_Facade.GetCachedQueryTablePacket(header.QueryCacheId, counter - 1, header.PacketCount);
+
+                    QueryTablePacketDTO packet = m_Facade.GetCachedQueryTablePacket(header.QueryCacheId, counter - 1, header.PacketCount, header.UserId);
                     resultPackets[counter - 1] = packet;
                     QueueHelper.ThreadSafeEnqueue(m_ReceivedQueue, packet, m_ReceiveSyncLock, tokenSource);
                 }

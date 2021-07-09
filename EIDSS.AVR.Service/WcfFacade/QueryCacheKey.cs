@@ -5,16 +5,18 @@ namespace EIDSS.AVR.Service.WcfFacade
     [Serializable]
     public class QueryCacheKey
     {
-        public QueryCacheKey(long queryId, string lang, bool isArchive)
+        public QueryCacheKey(long queryId, string lang, bool isArchive, long? userId = null)
         {
             QueryId = queryId;
             Lang = lang;
             IsArchive = isArchive;
+            UserId = userId;
         }
 
         public long QueryId { get; set; }
         public string Lang { get; set; }
         public bool IsArchive { get; set; }
+        public long? UserId { get; set; }
 
         public override int GetHashCode()
         {
@@ -64,12 +66,14 @@ namespace EIDSS.AVR.Service.WcfFacade
 
         protected bool Equals(QueryCacheKey other)
         {
-            return QueryId == other.QueryId && string.Equals(Lang, other.Lang) && IsArchive.Equals(other.IsArchive);
+            return QueryId == other.QueryId && string.Equals(Lang, other.Lang) && IsArchive.Equals(other.IsArchive)
+                 && (((!UserId.HasValue) && (!other.UserId.HasValue)) || (UserId.HasValue && other.UserId.HasValue && (UserId.Value == other.UserId.Value)));
         }
 
         public override string ToString()
         {
-            return string.Format("ID={0}, Lang={1}, IsArchive={2}", QueryId, Lang, IsArchive);
+            return string.Format("ID={0}, Lang={1}, IsArchive={2}, UserID={3}", 
+                QueryId, Lang, IsArchive, UserId.HasValue ? UserId.Value.ToString() : "null");
         }
     }
 }

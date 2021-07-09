@@ -28,6 +28,7 @@ namespace eidss.gis.common
 
         private static string GetWKBTableName(DataTable dataTable, string connection)
         {
+            var sqlConnection = new SqlConnection(connection);
             try
             {
                 var objId = dataTable.Rows[0]["id"];
@@ -36,8 +37,6 @@ namespace eidss.gis.common
 
                 long id;
                 if (!long.TryParse(objId.ToString(), out id)) return string.Empty;
-
-                var sqlConnection = new SqlConnection(connection);
 
                 var sql = "SELECT idfsGISReferenceType FROM gisBaseReference WHERE (idfsGISBaseReference = " + id + ")";
 
@@ -65,6 +64,10 @@ namespace eidss.gis.common
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
+            }
+            finally
+            {
+                if ((sqlConnection != null) && (sqlConnection.State == ConnectionState.Open)) sqlConnection.Close();
             }
         }
 

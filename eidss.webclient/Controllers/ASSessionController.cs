@@ -109,6 +109,7 @@ namespace eidss.webclient.Controllers
 
 
         [HttpPost]
+        [ValidateInput(false)]
         [CompressFilter]
         public ActionResult Details(FormCollection form)
         {
@@ -148,6 +149,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetASSessionDiseases(FormCollection form)
         {
             return PickerInternal<AsSessionDisease.Accessor, AsSessionDisease, AsSession>(form, AsSessionDisease.Accessor.Instance(null), null,
@@ -164,6 +166,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult MoveItem(long key, string name, long? idfAsDisease, int moveDirection)
         {
             //var list = ModelStorage.Get(ModelUserContext.ClientID, key, name) as EditableList<AsSessionDisease>;
@@ -235,6 +238,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetASSessionAction(FormCollection form)
         {
             return PickerInternal<AsSessionAction.Accessor, AsSessionAction, AsSession>(form, AsSessionAction.Accessor.Instance(null), null,
@@ -245,6 +249,7 @@ namespace eidss.webclient.Controllers
         #endregion
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult StoreInSession(FormCollection form)
         {
             if (form.AllKeys.Contains("idfMonitoringSession"))
@@ -261,6 +266,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetASSessionCases(long key, long item)
         {
             //var session = (AsSession)ModelStorage.Get(ModelUserContext.ClientID, key, null);
@@ -311,6 +317,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult DeleteAnimalSample(long asSessionId, long animalSampleId)
         {
             //var asSession = (AsSession)ModelStorage.Get(ModelUserContext.ClientID, asSessionId, null);

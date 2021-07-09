@@ -30,14 +30,14 @@ namespace eidss.webclient.Controllers
 
 		private static readonly int LifetimeSeconds = Config.GetIntSetting("LifetimeSeconds", 1200);
 
-		public ActionResult Heartbeat(long id)
+		public ActionResult Heartbeat(long? id)
 		{
 			int iResult = 0;
 			string urlToRedirect = "";
-			if (id > 0)
+			if ((id.HasValue) && (id.Value > 0))
 			{
-				//ModelStorage.Heartbeat(ModelUserContext.ReadonlyWebClientID, id);
-				ObjectStorage.Heartbeat(ModelUserContext.ReadonlyWebClientID, id);
+				//ModelStorage.Heartbeat(ModelUserContext.ReadonlyWebClientID, id.Value);
+				ObjectStorage.Heartbeat(ModelUserContext.ReadonlyWebClientID, id.Value);
 			}
 			if (Request.Cookies["LastAccess"] != null)
 			{
@@ -193,7 +193,12 @@ namespace eidss.webclient.Controllers
 			"msgUploadFileConfirmSaveData",
 			"msgUploadFileDismissAll",
             "Form1KZFromMonth",
-            "MonthForAggr"
+            "MonthForAggr",
+            "titleEhsPatientForUpdate",
+            "msgUploadEhsConfirmSaveData",
+			"msgUploadEhsDismissAllExistingPatients",
+			"msgEhsUnsupportedExtention"
+
 		};
 		[OutputCache(Location = OutputCacheLocation.Client, NoStore = false, Duration = 60000)]
 		public ActionResult MessagesScript(string version)

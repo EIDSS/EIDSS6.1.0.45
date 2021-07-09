@@ -24,6 +24,7 @@
         <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="layoutId" type="xs:long" />
         <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:long" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -40,6 +41,7 @@
         <xs:element minOccurs="0" name="queryId" type="xs:long" />
         <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="isArchive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:long" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -57,6 +59,7 @@
         <xs:element minOccurs="0" name="queryId" type="xs:long" />
         <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="isArchive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:long" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -73,6 +76,7 @@
         <xs:element minOccurs="0" name="queryCacheId" type="xs:long" />
         <xs:element minOccurs="0" name="packetNumber" type="xs:int" />
         <xs:element minOccurs="0" name="totalPacketCount" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:long" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -88,6 +92,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="queryId" type="xs:long" />
         <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:long" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -113,6 +118,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="queryId" type="xs:long" />
         <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:long" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -137,9 +137,9 @@
               <item name="strFieldBarcode" editor="Text" labelId="strFieldBarcodeLocal" isParam="true" />
               
               <item name="strLastName" editor="Text" labelId="HumanCase.strLastName" predicate="() => Customization.Instance.VisibilityFeatures.IsLastNameBeforeFirstName" />
-              <item name="strFirstName" editor="Text" labelId="strFirstName" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization" />
+              <item name="strFirstName" editor="Text" labelId="strFirstName" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)" />
               <item name="strLastName" editor="Text" labelId="HumanCase.strLastName" predicate="() => !Customization.Instance.VisibilityFeatures.IsLastNameBeforeFirstName" />
-              <item name="strSecondName" editor="Text" labelId="strSecondName" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization" />
+              <item name="strSecondName" editor="Text" labelId="strSecondName" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)" />
               <item name="datDateofBirth" editor="Date" labelId="HumanCase.SearchPanel.datDateofBirth" range="true" />
 				      <item name="datEnteredDate" editor="Date" labelId="datEnteredDateSearchPanel" range="true" mandatory="true" rangeDefDates="true" 
 					          default="c => DateTime.Today.AddDays(-EidssUserContext.User.Options.Prefs.DefaultDays)" />
@@ -179,8 +179,8 @@
               <item location="Combobox" name="datCompletionPaperFormDate" editor="Date" labelId="datCompletionPaperFormDate" isParam="true" defaultoper="="/>
               <item location="Combobox" name="strLocalIdentifier" editor="Text" labelId="strLocalIdentifier" defaultoper="="/>
               <item location="Combobox" name="strLastName" editor="Text" labelId="HumanCase.strLastName" defaultoper="=" />
-              <item location="Combobox" name="strFirstName" editor="Text" labelId="strFirstName" defaultoper="=" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization" />
-              <item location="Combobox" name="strSecondName" editor="Text" labelId="strSecondName" defaultoper="=" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization" />
+              <item location="Combobox" name="strFirstName" editor="Text" labelId="strFirstName" defaultoper="=" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)" />
+              <item location="Combobox" name="strSecondName" editor="Text" labelId="strSecondName" defaultoper="=" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)" />
               <item location="Combobox" name="datDateofBirth" editor="Date" labelId="datDateofBirth" defaultoper="=" />
               <item location="Combobox" name="intPatientAge" editor="Numeric" labelId="Age" defaultoper="=" />
               <item location="Combobox" name="idfsHumanAgeType" editor="Lookup" labelId="idfsHumanAgeType" defaultoper="="

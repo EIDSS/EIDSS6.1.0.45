@@ -40,6 +40,10 @@
       <HintPath>..\dlls\excel\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NPOI">
       <HintPath>..\dlls\excel\NPOI.dll</HintPath>
     </Reference>
@@ -77,7 +81,6 @@
     <Compile Include="Avr\Commands\Layout\QueryLayoutCloseCommand.cs" />
     <Compile Include="Avr\Commands\Refresh\ExecQueryCommand.cs" />
     <Compile Include="Avr\Chart\DBGroupInterval.cs" />
-    <Compile Include="Avr\Export\ClosedXmlExcelWrapper.cs" />
     <Compile Include="Avr\Export\IExportStrategy.cs" />
     <Compile Include="Avr\Commands\Models\SharedModel.cs" />
     <Compile Include="Avr\Commands\Models\SharedProperty.cs" />
@@ -104,6 +107,7 @@
     <Compile Include="dbf\dbf.cs" />
     <Compile Include="Helpers\ArchiveSqlHelper.cs" />
     <Compile Include="Helpers\ExcelFileWrapper.cs" />
+    <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Helpers\LocationHelper.cs" />
     <Compile Include="Helpers\LocationPersonalDataHelper.cs" />
     <Compile Include="Helpers\PdfExportHelper.cs" />
@@ -154,6 +158,8 @@
     <Compile Include="Avr\Chart\AvrChartProperties.cs" />
     <Compile Include="Helpers\ThaiDistrictHelper.cs" />
     <Compile Include="Helpers\Upload506FileProcessor.cs" />
+    <Compile Include="Helpers\UploadEhsConverter.cs" />
+    <Compile Include="Helpers\UploadEhsFileProcessor.cs" />
     <Compile Include="Model\AggregateCaseHeader.cs" />
     <Compile Include="Model\AsCampaign.cs" />
     <Compile Include="Model\AsSessionSummary.cs" />
@@ -186,6 +192,11 @@
     <Compile Include="Model\Upload506Master.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\UploadEhs\SaveDataResult.cs" />
+    <Compile Include="Model\UploadEhs\UploadEhsEventJsonSchema.cs" />
+    <Compile Include="Model\UploadEhsMaster.cs" />
+    <Compile Include="Model\UploadEhs\UploadEhsPatientJsonSchema.cs" />
+    <Compile Include="Model\UploadEhs\ValidateDataResult.cs" />
     <Compile Include="Model\VsSessionSummary.cs" />
     <Compile Include="Model\LabSampleListItem.cs" />
     <Compile Include="Model\LaboratorySectionItem.cs" />
@@ -901,6 +912,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Upload506Master.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\UploadEhsExistingPatientItem.model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadEhsExistingPatientItem.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\UploadEhsMaster.model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UploadEhsMaster.xml</DependentUpon>
     </Compile>
     <Compile Include="Schema\UserGroupDetail.model.cs">
       <AutoGen>True</AutoGen>
@@ -1630,10 +1651,20 @@
       <CustomToolNamespace>eidss.model.Schema</CustomToolNamespace>
       <LastGenOutput>RuleConstant.model.cs</LastGenOutput>
     </Content>
+    <Content Include="Schema\UploadEhsExistingPatientItem.xml">
+      <Generator>ObjectGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>UploadEhsExistingPatientItem.model.cs</LastGenOutput>
+    </Content>
     <Content Include="Schema\Upload506Duplicate.xml">
       <Generator>ObjectGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Upload506Duplicate.model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Schema\UploadEhsMaster.xml">
+      <Generator>ObjectGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>UploadEhsMaster.model.cs</LastGenOutput>
     </Content>
     <Content Include="Schema\Upload506Item.xml">
       <Generator>ObjectGenerator</Generator>

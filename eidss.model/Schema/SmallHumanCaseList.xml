@@ -68,7 +68,7 @@
                 <item name="idfsDiagnosis" editor="Lookup" editorWidth="Large" labelId="FinalDiagnosisName"
                       lookupName="DiagnosisLookup" lookupType="DiagnosisLookup" lookupText="c.name" lookupValue="c.idfsDiagnosis"/>                
                 <item name="strLastName" editor="Text" labelId="strLastName" predicate="() => Customization.Instance.VisibilityFeatures.IsLastNameBeforeFirstName"/>
-                <item name="strFirstName" editor="Text" labelId="strFirstName" predicate="() => !EidssSiteContext.Instance.IsIraqCustomization"/>
+                <item name="strFirstName" editor="Text" labelId="strFirstName" predicate="() => (!EidssSiteContext.Instance.IsIraqCustomization)"/>
                 <item name="strLastName" editor="Text" labelId="strLastName" predicate="() => !Customization.Instance.VisibilityFeatures.IsLastNameBeforeFirstName"/>
                 <item name="datDateofBirth" editor="Date" labelId="datDateofBirth" range="true" />
                 <item name="datCompletionPaperFormDate" editor="Date" labelId="datCompletionPaperFormDate" range="true" />

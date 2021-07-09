@@ -128,6 +128,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SaveEmployee(FormCollection form)
         {
             long employeeId = long.Parse(form["idfPerson"]);

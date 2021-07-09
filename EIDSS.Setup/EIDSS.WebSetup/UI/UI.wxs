@@ -82,6 +82,10 @@
       <?define Country = !(loc.Iraq) ?>
       <?include LanguagesDlg\PublishLanguagesDlg.wxi?>
 
+      <?define LanguageDlg = JordanLanguagesDlg ?>
+      <?define Country = !(loc.Jordan) ?>
+      <?include LanguagesDlg\PublishLanguagesDlg.wxi?>
+
       <?define LanguageDlg = KazakhstanLanguagesDlg ?>
       <?define Country = !(loc.Kazakhstan) ?>
       <?include LanguagesDlg\PublishLanguagesDlg.wxi?>

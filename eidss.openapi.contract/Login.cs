@@ -33,6 +33,7 @@ namespace eidss.openapi.contract
         /// • "az-L"<br/>
         /// • "hy"<br/>
         /// • "uk"<br/>
+        /// • "ar-IQ"<br/>
         /// • "ar"<br/>
         /// • "vi"<br/>
         /// • "lo"<br/>

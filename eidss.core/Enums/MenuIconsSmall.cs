@@ -108,5 +108,6 @@ namespace eidss.model.Enums
         ReplicateData = 98,
         AberrationReport = 99,
         Thailand = 100,
+        Jordan = 101
     }
 }

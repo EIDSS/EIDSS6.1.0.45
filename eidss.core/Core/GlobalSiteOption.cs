@@ -15,5 +15,6 @@ namespace eidss.model.Core
         public const string ForcedReplicationExpirationPeriodSlvl = "ForcedReplicationExpirationPeriodSlvl";
         public const string ForcedReplicationExpirationPeriodTlvl = "ForcedReplicationExpirationPeriodTlvl";
         public const string DataRelevanceInterval = "DataRelevanceInterval";
+        public const string AVRUserSensitiveMode = "FiltrationInAVR"; 
     }
 }

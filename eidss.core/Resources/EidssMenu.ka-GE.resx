@@ -703,7 +703,10 @@
     <value>ახალი აქტიური ზედამხედველობის კამპანია</value>
   </data>
   <data name="MenuIraq" xml:space="preserve">
-    <value>არაბული</value>
+    <value>არაბული (ერაყი)</value>
+  </data>
+  <data name="MenuJordan" xml:space="preserve">
+    <value>არაბული (იორდანია)</value>
   </data>
   <data name="MenuLaos" xml:space="preserve">
     <value>ლაოსი</value>

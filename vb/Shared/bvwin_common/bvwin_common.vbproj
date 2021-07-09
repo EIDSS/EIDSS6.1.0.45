@@ -261,6 +261,9 @@
     <EmbeddedResource Include="BaseForms\BaseDetailForm.ar-IQ.resx">
       <DependentUpon>BaseDetailForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\BaseDetailForm.ar-JO.resx">
+      <DependentUpon>BaseDetailForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForms\BaseDetailForm.az-Latn-AZ.resx">
       <DependentUpon>BaseDetailForm.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -325,6 +328,9 @@
     <EmbeddedResource Include="BaseForms\BaseLookupForm.ar-IQ.resx">
       <DependentUpon>BaseLookupForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\BaseLookupForm.ar-JO.resx">
+      <DependentUpon>BaseLookupForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForms\BaseLookupForm.az-Latn-AZ.resx">
       <DependentUpon>BaseLookupForm.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -359,6 +365,9 @@
       <DependentUpon>BaseLookupForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseForms\BaseAvrForm.ar-IQ.resx">
+      <DependentUpon>BaseAvrForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\BaseAvrForm.ar-JO.resx">
       <DependentUpon>BaseAvrForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseForms\BaseAvrForm.az-Latn-AZ.resx">
@@ -408,6 +417,9 @@
     <EmbeddedResource Include="Common\AboutForm.ar-IQ.resx">
       <DependentUpon>AboutForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\AboutForm.ar-JO.resx">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\AboutForm.az-Latn-AZ.resx">
       <DependentUpon>AboutForm.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -445,6 +457,9 @@
     <EmbeddedResource Include="Common\BarcodeButton.ar-IQ.resx">
       <DependentUpon>BarcodeButton.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\BarcodeButton.ar-JO.resx">
+      <DependentUpon>BarcodeButton.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\BarcodeButton.az-Latn-AZ.resx">
       <DependentUpon>BarcodeButton.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -476,6 +491,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\PopUpButton.ar-IQ.resx">
+      <DependentUpon>PopUpButton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\PopUpButton.ar-JO.resx">
       <DependentUpon>PopUpButton.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\PopUpButton.az-Latn-AZ.resx">

@@ -110,7 +110,7 @@ namespace eidss.smartphone.web
         protected void Application_Start()
         {
             var connectionCredentials = new ConnectionCredentials();
-            DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString);
+            DbManagerFactory.SetSqlFactory(connectionCredentials.ConnectionString, DatabaseType.Main, connectionCredentials.CommandTimeout);
             EidssUserContext.Init();
             CustomCultureHelper.CurrentCountry = EidssSiteContext.Instance.CountryID;
             LookupCacheListener.Cleanup();

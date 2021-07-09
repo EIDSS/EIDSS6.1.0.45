@@ -15,28 +15,39 @@ namespace eidss.gis.common
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                connection.Open();
-                Geometry geom=null;
-                if (districtCode != null)
-                    geom = GetGeomById(connection, "gisWKBRayon", districtCode.Value);
-                else if (regionCode != null)
-                    geom = GetGeomById(connection, "gisWKBRegion", regionCode.Value);
-                else if (countryCode != null)
-                    geom = GetGeomById(connection, "gisWKBCountry", countryCode.Value);
-                //else if (settlementCode != null)
-                //    geom = GetGeomById(connection, "gisWKBSettlement", settlementCode.Value);
-
-                if (geom != null)
+                try
                 {
-                    //Geoms in DB in spherical mercator. Transform to wgs
-                    var bbox=geom.GetBoundingBox();
-                    //if (bbox.Width < 1) bbox = bbox.Grow(10);
-                    
-                    bbox = GeometryTransform.TransformBox(bbox, CoordinateSystems.SphericalMercatorCS, CoordinateSystems.WGS84);
-                    
-                    return bbox;
+                    connection.Open();
+                    Geometry geom = null;
+                    if (districtCode != null)
+                        geom = GetGeomById(connection, "gisWKBRayon", districtCode.Value);
+                    else if (regionCode != null)
+                        geom = GetGeomById(connection, "gisWKBRegion", regionCode.Value);
+                    else if (countryCode != null)
+                        geom = GetGeomById(connection, "gisWKBCountry", countryCode.Value);
+                    //else if (settlementCode != null)
+                    //    geom = GetGeomById(connection, "gisWKBSettlement", settlementCode.Value);
+
+                    if (geom != null)
+                    {
+                        //Geoms in DB in spherical mercator. Transform to wgs
+                        var bbox = geom.GetBoundingBox();
+                        //if (bbox.Width < 1) bbox = bbox.Grow(10);
+
+                        bbox = GeometryTransform.TransformBox(bbox, CoordinateSystems.SphericalMercatorCS, CoordinateSystems.WGS84);
+
+                        return bbox;
+                    }
+                    connection.Close();
                 }
-                connection.Close();
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if ((connection != null) && (connection.State == ConnectionState.Open)) connection.Close();
+                }
             }
             return null;
         }
@@ -50,14 +61,24 @@ namespace eidss.gis.common
 
                 using (var command = new SqlCommand(strSQL, conn))
                 {
-                    if (conn.State == ConnectionState.Closed) conn.Open();
-                    object wkb = command.ExecuteScalar();
-                    if (conn.State == ConnectionState.Open) conn.Close();
+                    try
+                    {
+                        if (conn.State == ConnectionState.Closed) conn.Open();
+                        object wkb = command.ExecuteScalar();
+                        if (conn.State == ConnectionState.Open) conn.Close();
+                        return wkb != null && wkb != DBNull.Value
+                                ? SharpMap.Converters.WellKnownBinary.GeometryFromWKB.Parse((byte[])wkb)
+                                : null;
 
-                    return wkb != null && wkb != DBNull.Value
-                        ? SharpMap.Converters.WellKnownBinary.GeometryFromWKB.Parse((byte[]) wkb)
-                        : null;
-
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                    finally
+                    {
+                        if ((conn != null) && (conn.State == ConnectionState.Open)) conn.Close();
+                    }
                 }
             }
             else
@@ -73,13 +94,24 @@ namespace eidss.gis.common
 
                 using (var command = new SqlCommand(strSQL, conn))
                 {
-                    if (conn.State == ConnectionState.Closed) conn.Open();
-                    object wkb = command.ExecuteScalar();
-                    if (conn.State == ConnectionState.Open) conn.Close();
+                    try
+                    {
+                        if (conn.State == ConnectionState.Closed) conn.Open();
+                        object wkb = command.ExecuteScalar();
+                        if (conn.State == ConnectionState.Open) conn.Close();
 
-                    return wkb != null && wkb != DBNull.Value
-                        ? SharpMap.Converters.WellKnownBinary.GeometryFromWKB.Parse((byte[])wkb)
-                        : null;
+                        return wkb != null && wkb != DBNull.Value
+                            ? SharpMap.Converters.WellKnownBinary.GeometryFromWKB.Parse((byte[])wkb)
+                            : null;
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }
+                    finally
+                    {
+                        if ((conn != null) && (conn.State == ConnectionState.Open)) conn.Close();
+                    }
 
                 }
             }
@@ -93,15 +125,25 @@ namespace eidss.gis.common
 
             using (var command = new SqlCommand(strSQL, conn))
             {
-                if (conn.State == ConnectionState.Closed) conn.Open();
-                object wkt = command.ExecuteScalar();
-                if (conn.State == ConnectionState.Open) conn.Close();
+                try
+                {
+                    if (conn.State == ConnectionState.Closed) conn.Open();
+                    object wkt = command.ExecuteScalar();
+                    if (conn.State == ConnectionState.Open) conn.Close();
 
-                return wkt != null && wkt != DBNull.Value
-                           //? SharpMap.Converters.WellKnownBinary.GeometryFromWKB.Parse((byte[])wkb)
-                           ? wkt.ToString()
-                           : null;
-
+                    return wkt != null && wkt != DBNull.Value
+                        //? SharpMap.Converters.WellKnownBinary.GeometryFromWKB.Parse((byte[])wkb)
+                               ? wkt.ToString()
+                               : null;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                finally
+                {
+                    if ((conn != null) && (conn.State == ConnectionState.Open)) conn.Close();
+                }
             }
         }
     }

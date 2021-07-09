@@ -53,7 +53,7 @@ namespace eidss.winclient.Location
                 txtBuilding.TabIndex = 107;
                 txtHouse.TabIndex = 106;
             }
-            if (!WinUtils.IsComponentInDesignMode(this) && EidssSiteContext.Instance.IsIraqCustomization)
+            if (!WinUtils.IsComponentInDesignMode(this) && (EidssSiteContext.Instance.IsIraqCustomization))
             {
                 lblPostalCode.Visible = false;
                 cbPostalCode.Visible = false;

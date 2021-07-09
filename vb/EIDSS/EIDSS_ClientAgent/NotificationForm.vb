@@ -340,6 +340,8 @@ Public Class NotificationForm
                 SetKazakhLanguage()
             ElseIf e.KeyCode = Keys.I Then
                 SetIraqLanguage()
+            ElseIf e.KeyCode = Keys.J Then
+                SetJordanLanguage()
             ElseIf e.KeyCode = Keys.L Then
                 SetLaosLanguage()
             ElseIf e.KeyCode = Keys.V Then
@@ -494,6 +496,9 @@ Public Class NotificationForm
     End Sub
     Private Sub SetIraqLanguage()
         ResetLanguage(Localizer.lngIraq)
+    End Sub
+    Private Sub SetJordanLanguage()
+        ResetLanguage(Localizer.lngJordan)
     End Sub
     Private Sub SetLaosLanguage()
         ResetLanguage(Localizer.lngLaos)

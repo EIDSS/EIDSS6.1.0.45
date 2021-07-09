@@ -111,37 +111,40 @@ namespace EIDSS.AVR.Service.WcfFacade
             {
                 m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, zippedData);
                 string format = EidssMessages.Get("msgCouldNotExportChart",
-                    "Could not get Export chart from View. ViewID={0}, Lang={1}");
-                string msg = String.Format(format, zippedData.ViewId, zippedData.Lang);
+                    "Could not get Export chart from View. ViewID={0}, Lang={1}, UserID={2}");
+                string msg = String.Format(format, zippedData.ViewId, zippedData.Lang, zippedData.UserId.HasValue ? zippedData.UserId.Value.ToString() : "null");
                 throw new AvrDataException(msg, ex);
             }
         }
 
-        public ViewDTO GetCachedView(string sessionId, long layoutId, string lang)
+        public ViewDTO GetCachedView(string sessionId, long layoutId, string lang, long? userId = null)
         {
             try
             {
                 m_ViewSemaphore.Wait();
 
                 var layout = AvrDbHelper.GetLayoutDTO(layoutId);
-                Stopwatch watch = TraceMethodCall(sessionId, layoutId, layout.DefaultLayoutName, lang);
+                Stopwatch watch = 
+                    userId.HasValue ? 
+                        TraceMethodCall(sessionId, layoutId, layout.DefaultLayoutName, lang, userId.Value) :
+                        TraceMethodCall(sessionId, layoutId, layout.DefaultLayoutName, lang);
                 EidssAvrServiceInitializer.CheckAndInitEidssCore();
 
                 ViewDTO view = null;
-                var cacheKey = new QueryCacheKey(layout.QueryId, lang, layout.UseArchivedData);
-                long? queryCacheId = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays);
+                var cacheKey = new QueryCacheKey(layout.QueryId, lang, layout.UseArchivedData, userId);
+                long? queryCacheId = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays, false, userId);
                 if (queryCacheId.HasValue)
                 {
-                    var viewCacheId = AvrDbHelper.GetViewCacheId(queryCacheId.Value, layoutId, RefreshedCacheOnUserCallAfterDays);
+                    var viewCacheId = AvrDbHelper.GetViewCacheId(queryCacheId.Value, layoutId, RefreshedCacheOnUserCallAfterDays, false, userId);
                     if (viewCacheId.HasValue)
                     {
-                        view = AvrDbHelper.GetViewCache(viewCacheId.Value, false);
+                        view = AvrDbHelper.GetViewCache(viewCacheId.Value, false, userId);
                     }
                 }
 
                 if (view == null)
                 {
-                    AvrPivotViewModel model = VirtualPivot.CreateAvrPivotViewModel(layoutId, lang, m_Container);
+                    AvrPivotViewModel model = VirtualPivot.CreateAvrPivotViewModel(layoutId, lang, m_Container, userId);
 
                     string xmlViewHeader = AvrViewSerializer.Serialize(model.ViewHeader);
                     byte[] zippedViewHeader = BinaryCompressor.ZipString(xmlViewHeader);
@@ -151,26 +154,36 @@ namespace EIDSS.AVR.Service.WcfFacade
 
                     view = new ViewDTO(zippedDTO, zippedViewHeader);
 
-                    queryCacheId = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays);
+                    queryCacheId = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays, false, userId);
                     if (queryCacheId.HasValue)
                     {
-                        AvrDbHelper.SaveViewCache(queryCacheId.Value, layoutId, view);
+                        AvrDbHelper.SaveViewCache(queryCacheId.Value, layoutId, view, userId);
                     }
                 }
-                TraceMethodCallFinished(watch, sessionId, layoutId, layout.DefaultLayoutName, lang);
+                if (userId.HasValue)
+                    TraceMethodCallFinished(watch, sessionId, layoutId, layout.DefaultLayoutName, lang, userId.Value);
+                else
+                    TraceMethodCallFinished(watch, sessionId, layoutId, layout.DefaultLayoutName, lang);
                 return view;
             }
             catch (OutOfMemoryException ex)
             {
-                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, sessionId, layoutId, lang);
+                if (userId.HasValue)
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, sessionId, layoutId, lang, userId.Value);
+                else
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, sessionId, layoutId, lang);
                 throw new AvrDataException(EidssMessages.Get("ErrAVROutOfMemory"), ex);
             }
             catch (Exception ex)
             {
-                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, sessionId, layoutId, lang);
+                if (userId.HasValue)
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, sessionId, layoutId, lang, userId.Value);
+                else
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, sessionId, layoutId, lang);
+                
                 string format = EidssMessages.Get("msgCouldNotGetViewData",
-                    "Could not get View Data from Layout. LayoutID={0}, Lang={1}, SessionId={2}");
-                string msg = String.Format(format, layoutId, lang, sessionId);
+                    "Could not get View Data from Layout. LayoutID={0}, Lang={1}, SessionId={2}, UserID={3}");
+                string msg = String.Format(format, layoutId, lang, sessionId, userId.HasValue ? userId.Value.ToString() : "null");
                 throw new AvrDataException(msg, ex);
             }
             finally
@@ -193,7 +206,7 @@ namespace EIDSS.AVR.Service.WcfFacade
                 m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, layoutId);
 
                 string format = EidssMessages.Get("msgCouldNotInvalidateViewCacheAllLang",
-                    "Could not make view cashe out of date. View ID={0}, All Languages");
+                    "Could not make view cache out of date. View ID={0}, All Languages");
                 throw new AvrDataException(String.Format(format, layoutId), ex);
             }
         }
@@ -201,41 +214,44 @@ namespace EIDSS.AVR.Service.WcfFacade
 
         #region query cache
 
-        public QueryTableHeaderDTO GetConcreteCachedQueryTableHeader(long queryCacheId, long queryId, string lang, bool isArchive)
+        public QueryTableHeaderDTO GetConcreteCachedQueryTableHeader(long queryCacheId, long queryId, string lang, bool isArchive, long? userId = null)
         {
-            QueryTableHeaderDTO header = AvrDbHelper.GetQueryCacheHeader(queryCacheId, false, isArchive);
+            QueryTableHeaderDTO header = AvrDbHelper.GetQueryCacheHeader(queryCacheId, false, isArchive, userId);
             return header.PacketCount > 0
                 ? header
-                : GetInternalCachedQueryTableHeader(queryId, false, lang, isArchive);
+                : GetInternalCachedQueryTableHeader(queryId, false, lang, isArchive, userId);
         }
 
-        public QueryTableHeaderDTO GetCachedQueryTableHeader(long queryId, string lang, bool isArchive)
+        public QueryTableHeaderDTO GetCachedQueryTableHeader(long queryId, string lang, bool isArchive, long? userId = null)
         {
             if (queryId < 0)
             {
                 return new QueryTableHeaderDTO();
             }
-            return GetInternalCachedQueryTableHeader(queryId, false, lang, isArchive);
+            return GetInternalCachedQueryTableHeader(queryId, false, lang, isArchive, userId);
         }
 
-        public void RefreshCachedQueryTableByScheduler(long queryId, string lang, bool isArchive)
+        public void RefreshCachedQueryTableByScheduler(long queryId, string lang, bool isArchive, long? userId = null)
         {
-            InvalidateQueryCacheForLanguage(queryId, lang);
-            GetInternalCachedQueryTableHeader(queryId, true, lang, isArchive);
+            InvalidateQueryCacheForLanguage(queryId, lang, userId);
+            GetInternalCachedQueryTableHeader(queryId, true, lang, isArchive, userId);
         }
 
-        private QueryTableHeaderDTO GetInternalCachedQueryTableHeader(long queryId, bool isSchedulerCall, string lang, bool isArchive)
+        private QueryTableHeaderDTO GetInternalCachedQueryTableHeader(long queryId, bool isSchedulerCall, string lang, bool isArchive, long? userId = null)
         {
             try
             {
                 string queryName = AvrDbHelper.GetQueryNameForLog(queryId);
-                Stopwatch watch = TraceMethodCall(queryId, queryName, lang, isArchive);
+                Stopwatch watch = 
+                    userId.HasValue ? 
+                    TraceMethodCall(queryId, queryName, lang, isArchive, userId.Value) :
+                    TraceMethodCall(queryId, queryName, lang, isArchive);
 
                 EidssAvrServiceInitializer.CheckAndInitEidssCore();
 
-                var cacheKey = new QueryCacheKey(queryId, lang, isArchive);
+                var cacheKey = new QueryCacheKey(queryId, lang, isArchive, userId);
 
-                long? id = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays);
+                long? id = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays, false, userId);
 
                 if (!id.HasValue)
                 {
@@ -264,10 +280,10 @@ namespace EIDSS.AVR.Service.WcfFacade
                             {
                                 try
                                 {
-                                    id = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays);
+                                    id = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays, false, userId);
                                     if (!id.HasValue)
                                     {
-                                        QueryTableModel tableModel = AvrDbHelper.GetQueryResult(queryId, lang, isArchive);
+                                        QueryTableModel tableModel = AvrDbHelper.GetQueryResult(queryId, lang, isArchive, userId);
                                         id = AvrDbHelper.SaveQueryCache(tableModel);
                                     }
                                 }
@@ -299,11 +315,11 @@ namespace EIDSS.AVR.Service.WcfFacade
                                     if (m_QueryCacheErrors[cacheKey])
                                     {
                                         string message = EidssMessages.Get("msgCouldNotGetQueryCacheHeaderGeneral",
-                                            "Could not get header of query cashe table. For detail see previous exception logged");
+                                            "Could not get header of query cache table. For details see previous exception logged");
                                         throw new AvrDataException(message);
                                     }
                                 }
-                                id = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays, true);
+                                id = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays, true, userId);
                             }
                         }
                         finally
@@ -314,24 +330,32 @@ namespace EIDSS.AVR.Service.WcfFacade
                 }
                 if (!id.HasValue)
                 {
-                    string msg = EidssMessages.Get("msgCouldNotGetQueryCacheId", "Could not get query cashe ID. See log for more details.");
+                    string msg = EidssMessages.Get("msgCouldNotGetQueryCacheId", "Could not get query cache ID. See log for more details.");
                     throw new AvrDataException(msg);
                 }
 
-                QueryTableHeaderDTO header = AvrDbHelper.GetQueryCacheHeader(id.Value, isSchedulerCall, isArchive);
-                TraceMethodCallFinished(watch, queryId, queryName, lang, isArchive);
+                QueryTableHeaderDTO header = AvrDbHelper.GetQueryCacheHeader(id.Value, isSchedulerCall, isArchive, userId);
+                if (userId.HasValue)
+                    TraceMethodCallFinished(watch, queryId, queryName, lang, isArchive, userId.Value);
+                else
+                    TraceMethodCallFinished(watch, queryId, queryName, lang, isArchive);
+
                 return header;
             }
             catch (Exception ex)
             {
-                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryId, lang);
+                if (userId.HasValue)
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryId, lang, userId.Value);
+                else
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryId, lang);
+
                 string format = EidssMessages.Get("msgCouldNotGetQueryCacheHeader",
-                    "Could not get header of query cashe table. Query ID={0}, Language={1}");
-                throw new AvrDataException(String.Format(format, queryId, lang), ex);
+                    "Could not get header of query cache table. Query ID={0}, Language={1}, UserID={2}");
+                throw new AvrDataException(String.Format(format, queryId, lang, userId.HasValue ? userId.Value.ToString() : "null"), ex);
             }
         }
 
-        public QueryTablePacketDTO GetCachedQueryTablePacket(long queryCasheId, int packetNumber, int totalPacketCount)
+        public QueryTablePacketDTO GetCachedQueryTablePacket(long queryCasheId, int packetNumber, int totalPacketCount, long? userId = null)
         {
             try
             {
@@ -340,38 +364,51 @@ namespace EIDSS.AVR.Service.WcfFacade
                     return new QueryTablePacketDTO();
                 }
 
-                TraceMethodCall(queryCasheId, packetNumber);
-                QueryTablePacketDTO packet = AvrDbHelper.GetQueryCachePacket(queryCasheId, packetNumber);
+                if (userId.HasValue)
+                    TraceMethodCall(queryCasheId, packetNumber, userId);
+                else
+                    TraceMethodCall(queryCasheId, packetNumber);
+                QueryTablePacketDTO packet = AvrDbHelper.GetQueryCachePacket(queryCasheId, packetNumber, userId);
 
-                m_Trace.Trace(m_TraceTitle, "Packet {0} of {1} for Query Cashe {2} received", packetNumber + 1, totalPacketCount,
-                    queryCasheId);
+                m_Trace.Trace(m_TraceTitle, "Packet {0} of {1} for Query Cache {2} for User {3} received", packetNumber + 1, totalPacketCount,
+                    queryCasheId, userId.HasValue ? userId.Value.ToString() : "null");
 
                 return packet;
             }
             catch (Exception ex)
             {
-                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryCasheId, packetNumber);
+                if (userId.HasValue)
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryCasheId, packetNumber, userId.Value);
+                else
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryCasheId, packetNumber);
+
                 string format = EidssMessages.Get("msgCouldNotGetQueryCachePacket",
-                    "Could not get packet of query cashe table. QueryCasheID={0}, Packet No={1}");
-                string msg = String.Format(format, queryCasheId, packetNumber + 1);
+                    "Could not get packet of query cache table. QueryCacheID={0}, Packet No={1}, UserID={2}");
+                string msg = String.Format(format, queryCasheId, packetNumber + 1, userId.HasValue ? userId.Value.ToString() : "null");
                 throw new AvrDataException(msg, ex);
             }
         }
 
-        public void InvalidateQueryCacheForLanguage(long queryId, string lang)
+        public void InvalidateQueryCacheForLanguage(long queryId, string lang, long? userId = null)
         {
             try
             {
-                TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang);
+                if (userId.HasValue)
+                    TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang, userId.Value);
+                else
+                    TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang);
 
-                AvrDbHelper.InvalidateQueryCache(queryId, lang);
+                AvrDbHelper.InvalidateQueryCache(queryId, lang, userId);
             }
             catch (Exception ex)
             {
-                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryId, lang);
+                if (userId.HasValue)
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryId, userId.Value);
+                else
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryId, lang);
                 string format = EidssMessages.Get("msgCouldNotInvalidateQueryCache",
-                    "Could not make query cashe table out of date. Query ID={0}, Language={1}");
-                throw new AvrDataException(String.Format(format, queryId, lang), ex);
+                    "Could not make query cache table out of date. Query ID={0}, Language={1}, UserID={2}");
+                throw new AvrDataException(String.Format(format, queryId, lang, userId.HasValue ? userId.Value.ToString() : "null"), ex);
             }
         }
 
@@ -388,53 +425,63 @@ namespace EIDSS.AVR.Service.WcfFacade
                 m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryId);
 
                 string format = EidssMessages.Get("msgCouldNotInvalidateQueryCacheAllLang",
-                    "Could not make query cashe table out of date. Query ID={0}, All Languages");
+                    "Could not make query cache table out of date. Query ID={0}, All Languages");
                 throw new AvrDataException(String.Format(format, queryId), ex);
             }
         }
 
-        public void DeleteQueryCacheForLanguage(long queryId, string lang, bool leaveLastRecord)
+        public void DeleteQueryCacheForLanguage(long queryId, string lang, bool leaveLastRecord, long? userId = null)
         {
             try
             {
-                TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang);
+                if (userId.HasValue)
+                    TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang, userId.Value);
+                else
+                    TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang);
 
-                int numberDeleted = AvrDbHelper.DeleteQueryCache(queryId, lang, leaveLastRecord);
+                int numberDeleted = AvrDbHelper.DeleteQueryCache(queryId, lang, leaveLastRecord, userId);
                 if (numberDeleted != 0)
                 {
-                    string msg = String.Format("Deleted '{0}' old cache records for Query '{1}' for language '{2}'",
-                        numberDeleted, queryId, lang);
+                    string msg = String.Format("Deleted '{0}' old cache records for Query '{1}' for language '{2}' and user {3}",
+                        numberDeleted, queryId, lang, userId.HasValue ? string.Format("'{0}'", userId.Value.ToString()) : "null");
                     m_Trace.Trace(m_TraceTitle, msg);
                 }
             }
             catch (Exception ex)
             {
-                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryId, lang);
+                if (userId.HasValue)
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryId, lang, userId.Value);
+                else
+                    m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle, queryId, lang);
                 string format = EidssMessages.Get("msgCouldNotDeleteQueryCache",
-                    "Could not delete query cashe. Query ID={0}, Language={1}");
-                throw new AvrDataException(String.Format(format, queryId, lang), ex);
+                    "Could not delete query cache. Query ID={0}, Language={1}, UserID={2}");
+                throw new AvrDataException(String.Format(format, queryId, lang, userId.HasValue ? userId.Value.ToString() : "null"), ex);
             }
         }
 
-        public bool DoesCachedQueryExists(long queryId, string lang, bool isArchive)
+        public bool DoesCachedQueryExists(long queryId, string lang, bool isArchive, long? userId = null)
         {
             try
             {
-                TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang);
-                var cacheKey = new QueryCacheKey(queryId, lang, isArchive);
-                long? id = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays);
+                if (userId.HasValue)
+                    TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang, userId.Value);
+                else
+                    TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang);
+
+                var cacheKey = new QueryCacheKey(queryId, lang, isArchive, userId);
+                long? id = AvrDbHelper.GetQueryCacheId(cacheKey, RefreshedCacheOnUserCallAfterDays, false, userId);
                 return id.HasValue;
             }
             catch (Exception ex)
             {
                 m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle);
                 string format = EidssMessages.Get("msgCouldNotGetQueryCacheExistance",
-                    "Could not define does query cache exists for Query ID={0}.");
-                throw new AvrDataException(String.Format(format, queryId), ex);
+                    "Could not define does query cache exists for Query ID={0} and UserID={1}.");
+                throw new AvrDataException(String.Format(format, queryId, userId.HasValue ? userId.Value.ToString() : "null"), ex);
             }
         }
 
-        public DateTime GetQueryRefreshDateTime(long queryId, string lang)
+        public DateTime GetQueryRefreshDateTime(long queryId, string lang, long? userId = null)
         {
             try
             {
@@ -442,32 +489,73 @@ namespace EIDSS.AVR.Service.WcfFacade
                 {
                     return DateTime.Now;
                 }
-                TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang);
 
-                return AvrDbHelper.GetQueryRefreshDateTime(queryId, lang);
+                if (userId.HasValue)
+                    TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang, userId.Value);
+                else
+                    TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), lang);
+
+                return AvrDbHelper.GetQueryRefreshDateTime(queryId, lang, userId);
             }
             catch (Exception ex)
             {
                 m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle);
                 string format = EidssMessages.Get("msgCouldNotGetQueryCache",
-                    "Could not get query cashe refresh date and time for Query ID={0}");
-                throw new AvrDataException(String.Format(format, queryId), ex);
+                    "Could not get query cache refresh date and time for Query ID={0} and UserID={1}");
+                throw new AvrDataException(String.Format(format, queryId, userId.HasValue ? userId.Value.ToString() : "null"), ex);
             }
         }
 
-        public DateTime? GetsQueryCacheUserRequestDate(long queryId)
+        public DateTime? GetsQueryCacheUserRequestDate(long queryId, long? userId = null)
         {
             try
             {
-                TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId));
+                if (userId.HasValue)
+                    TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId), userId.Value);
+                else
+                    TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId));
 
-                return AvrDbHelper.GetsQueryCacheUserRequestDate(queryId);
+                return AvrDbHelper.GetsQueryCacheUserRequestDate(queryId, userId);
             }
             catch (Exception ex)
             {
                 m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle);
                 string format = EidssMessages.Get("msgCouldNotGetQueryCacheUserRequestDate",
-                    "Could not get date when user requestet query cashe for Query ID={0}");
+                    "Could not get date when user requested query cache for Query ID={0} and UserID={1}");
+                throw new AvrDataException(String.Format(format, queryId, userId.HasValue ? userId.Value.ToString() : "null"), ex);
+            }
+        }
+
+        public List<long?> GetQueryCacheValidUsers(long queryId, DateTime? requestedLaterThanDate)
+        {
+            try
+            {
+                TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId));
+
+                return AvrDbHelper.GetQueryCacheValidUsers(queryId, requestedLaterThanDate);
+            }
+            catch (Exception ex)
+            {
+                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle);
+                string format = EidssMessages.Get("msgCouldNotGetQueryCacheValidUsers",
+                    "Could not get list of users requested query cache for Query ID={0}");
+                throw new AvrDataException(String.Format(format, queryId), ex);
+            }
+        }
+
+        public List<long> GetQueryCacheInvalidUsers(long queryId, DateTime requestedLaterThanDate)
+        {
+            try
+            {
+                TraceMethodCall(queryId, AvrDbHelper.GetQueryNameForLog(queryId));
+
+                return AvrDbHelper.GetQueryCacheInvalidUsers(queryId, requestedLaterThanDate);
+            }
+            catch (Exception ex)
+            {
+                m_Trace.TraceMethodException(ex, Utils.GetCurrentMethodName(), m_TraceTitle);
+                string format = EidssMessages.Get("msgCouldNotGetQueryCacheInvalidUsers",
+                    "Could not get list of users not requested query cache for Query ID={0}");
                 throw new AvrDataException(String.Format(format, queryId), ex);
             }
         }

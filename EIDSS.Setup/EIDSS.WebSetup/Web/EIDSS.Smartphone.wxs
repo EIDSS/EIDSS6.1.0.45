@@ -122,6 +122,7 @@
       <ComponentRef Id="eidss.apk_en" />
       <ComponentRef Id="eidss.apk_gg" />
       <ComponentRef Id="eidss.apk_iq" />
+      <ComponentRef Id="eidss.apk_jo" />
       <ComponentRef Id="eidss.apk_kz" />
       <ComponentRef Id="eidss.apk_th" />
       <ComponentRef Id="eidss.apk_uk" />
@@ -130,7 +131,7 @@
     <DirectoryRef Id="ANDROID">
       <Directory Id="Android_default" Name="Android_default">
         <Component Id="eidss.apk" MultiInstance="yes">
-          <Condition><![CDATA[COUNTRY <> "!(loc.Armenia)" And COUNTRY <> "!(loc.Azerbaijan)" And COUNTRY <> "!(loc.Georgia)" And COUNTRY <> "!(loc.Iraq)" And COUNTRY <> "!(loc.Kazakhstan)" And COUNTRY <> "!(loc.UnitedStates)"]]></Condition>
+          <Condition><![CDATA[COUNTRY <> "!(loc.Armenia)" And COUNTRY <> "!(loc.Azerbaijan)" And COUNTRY <> "!(loc.Georgia)" And COUNTRY <> "!(loc.Iraq)" And COUNTRY <> "!(loc.Jordan)" And COUNTRY <> "!(loc.Kazakhstan)" And COUNTRY <> "!(loc.UnitedStates)"]]></Condition>
           <File Id="eidss.smartphone.bin_eidss.apk" Name="eidss.apk" Source="$(var.Apk.TargetPath)" KeyPath="yes">
             <CopyFile Id="eidss.smartphone.bin_eidss.apk" DestinationDirectory="ANDROID" />
           </File>
@@ -178,6 +179,15 @@
           <Condition><![CDATA[COUNTRY = "!(loc.Iraq)"]]></Condition>
           <File Id="eidss.smartphone.bin_eidss.apk_iq" Name="eidss.apk" Source="$(var.IqApk.TargetPath)" KeyPath="yes">
             <CopyFile Id="copy_eidss.smartphone.bin_eidss.apk_iq" DestinationDirectory="ANDROID" />
+          </File>
+        </Component>
+      </Directory>
+
+      <Directory Id="Android_jo" Name="Android_jo">
+        <Component Id="eidss.apk_jo" MultiInstance="yes">
+          <Condition><![CDATA[COUNTRY = "!(loc.Jordan)"]]></Condition>
+          <File Id="eidss.smartphone.bin_eidss.apk_jo" Name="eidss.apk" Source="$(var.JoApk.TargetPath)" KeyPath="yes">
+            <CopyFile Id="copy_eidss.smartphone.bin_eidss.apk_jo" DestinationDirectory="ANDROID" />
           </File>
         </Component>
       </Directory>

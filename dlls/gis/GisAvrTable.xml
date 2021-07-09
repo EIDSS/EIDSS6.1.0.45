@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <esri:DataElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:esri="http://www.esri.com/schemas/ArcGIS/10.1" xsi:type="esri:DEFeatureClass">
-	<CatalogPath>\Transit\BusStops</CatalogPath>
-	<Name>BusStops</Name>
+	<CatalogPath>\EIDSS</CatalogPath>
+	<Name>EidssLayer</Name>
 	<ChildrenExpanded>false</ChildrenExpanded>
 	<DatasetType>esriDTFeatureClass</DatasetType>
 	<Versioned>false</Versioned>

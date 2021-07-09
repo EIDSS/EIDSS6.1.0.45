@@ -397,6 +397,9 @@
     <EmbeddedResource Include="AggregateMTX\AggregateDiagnosticActionMTXDetail.ar-IQ.resx">
       <DependentUpon>AggregateDiagnosticActionMTXDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AggregateMTX\AggregateDiagnosticActionMTXDetail.ar-JO.resx">
+      <DependentUpon>AggregateDiagnosticActionMTXDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AggregateMTX\AggregateDiagnosticActionMTXDetail.az-Latn-AZ.resx">
       <DependentUpon>AggregateDiagnosticActionMTXDetail.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -424,6 +427,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateMTX\AggregateHumanCaseMTXDetail.ar-IQ.resx">
+      <DependentUpon>AggregateHumanCaseMTXDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AggregateMTX\AggregateHumanCaseMTXDetail.ar-JO.resx">
       <DependentUpon>AggregateHumanCaseMTXDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateMTX\AggregateHumanCaseMTXDetail.az-Latn-AZ.resx">
@@ -459,6 +465,9 @@
     <EmbeddedResource Include="AggregateMTX\AggregateMatrixBase.ar-IQ.resx">
       <DependentUpon>AggregateMatrixBase.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AggregateMTX\AggregateMatrixBase.ar-JO.resx">
+      <DependentUpon>AggregateMatrixBase.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AggregateMTX\AggregateMatrixBase.az-Latn-AZ.resx">
       <DependentUpon>AggregateMatrixBase.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -492,6 +501,9 @@
     <EmbeddedResource Include="AggregateMTX\AggregateProphylacticActionMTXDetail.ar-IQ.resx">
       <DependentUpon>AggregateProphylacticActionMTXDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AggregateMTX\AggregateProphylacticActionMTXDetail.ar-JO.resx">
+      <DependentUpon>AggregateProphylacticActionMTXDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AggregateMTX\AggregateProphylacticActionMTXDetail.az-Latn-AZ.resx">
       <DependentUpon>AggregateProphylacticActionMTXDetail.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -519,6 +531,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateMTX\AggregateSanitaryActionMTXDetail.ar-IQ.resx">
+      <DependentUpon>AggregateSanitaryActionMTXDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AggregateMTX\AggregateSanitaryActionMTXDetail.ar-JO.resx">
       <DependentUpon>AggregateSanitaryActionMTXDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateMTX\AggregateSanitaryActionMTXDetail.az-Latn-AZ.resx">
@@ -552,6 +567,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateMTX\AggregateVetCaseMTXDetail.ar-IQ.resx">
+      <DependentUpon>AggregateVetCaseMTXDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AggregateMTX\AggregateVetCaseMTXDetail.ar-JO.resx">
       <DependentUpon>AggregateVetCaseMTXDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateMTX\AggregateVetCaseMTXDetail.az-Latn-AZ.resx">
@@ -595,6 +613,9 @@
     <EmbeddedResource Include="AggregateSettings\AggregateSettingsDetail.ar-IQ.resx">
       <DependentUpon>AggregateSettingsDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AggregateSettings\AggregateSettingsDetail.ar-JO.resx">
+      <DependentUpon>AggregateSettingsDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AggregateSettings\AggregateSettingsDetail.az-Latn-AZ.resx">
       <DependentUpon>AggregateSettingsDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -622,6 +643,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Audit\DataAuditDetail.ar-IQ.resx">
+      <DependentUpon>DataAuditDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audit\DataAuditDetail.ar-JO.resx">
       <DependentUpon>DataAuditDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Audit\DataAuditDetail.az-Latn-AZ.resx">
@@ -655,6 +679,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\NextNumbersDetail.ar-IQ.resx">
+      <DependentUpon>NextNumbersDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\NextNumbersDetail.ar-JO.resx">
       <DependentUpon>NextNumbersDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\NextNumbersDetail.az-Latn-AZ.resx">
@@ -696,10 +723,16 @@
     <EmbeddedResource Include="Common\PreferenciesForm.ar-IQ.resx">
       <DependentUpon>PreferenciesForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\PreferenciesForm.ar-JO.resx">
+      <DependentUpon>PreferenciesForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\PreferenciesForm.az-Latn-AZ.resx">
       <DependentUpon>PreferenciesForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\PreferenciesForm.en-IQ-Eidss.resx">
+      <DependentUpon>PreferenciesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\PreferenciesForm.en-JO-Eidss.resx">
       <DependentUpon>PreferenciesForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\PreferenciesForm.en-TH-Eidss.resx">
@@ -737,6 +770,9 @@
     <EmbeddedResource Include="LookupForms\ActionDetail.ar-IQ.resx">
       <DependentUpon>ActionDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LookupForms\ActionDetail.ar-JO.resx">
+      <DependentUpon>ActionDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\ActionDetail.az-Latn-AZ.resx">
       <DependentUpon>ActionDetail.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -768,6 +804,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\AgeForSpeciesDetail.ar-IQ.resx">
+      <DependentUpon>AgeForSpeciesDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupForms\AgeForSpeciesDetail.ar-JO.resx">
       <DependentUpon>AgeForSpeciesDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\AgeForSpeciesDetail.az-Latn-AZ.resx">
@@ -803,6 +842,9 @@
     <EmbeddedResource Include="LookupForms\DepartmentDetail.ar-IQ.resx">
       <DependentUpon>DepartmentDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LookupForms\DepartmentDetail.ar-JO.resx">
+      <DependentUpon>DepartmentDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\DepartmentDetail.hy-am.resx">
       <DependentUpon>DepartmentDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -818,6 +860,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\DerivativeForSampleType.ar-IQ.resx">
+      <DependentUpon>DerivativeForSampleType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupForms\DerivativeForSampleType.ar-JO.resx">
       <DependentUpon>DerivativeForSampleType.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\DerivativeForSampleType.az-Latn-AZ.resx">
@@ -849,6 +894,9 @@
     <EmbeddedResource Include="LookupForms\DiagnosisReferenceDetail.ar-IQ.resx">
       <DependentUpon>DiagnosisReferenceDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LookupForms\DiagnosisReferenceDetail.ar-JO.resx">
+      <DependentUpon>DiagnosisReferenceDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\DiagnosisReferenceDetail.hy-am.resx">
       <DependentUpon>DiagnosisReferenceDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -864,6 +912,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\GenericReferenceDetail.ar-IQ.resx">
+      <DependentUpon>GenericReferenceDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupForms\GenericReferenceDetail.ar-JO.resx">
       <DependentUpon>GenericReferenceDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\GenericReferenceDetail.az-Latn-AZ.resx">
@@ -932,6 +983,9 @@
     <EmbeddedResource Include="LookupForms\MaterialForDiseaseDetail.ar-IQ.resx">
       <DependentUpon>MaterialForDiseaseDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LookupForms\MaterialForDiseaseDetail.ar-JO.resx">
+      <DependentUpon>MaterialForDiseaseDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\MaterialForDiseaseDetail.az-Latn-AZ.resx">
       <DependentUpon>MaterialForDiseaseDetail.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -963,6 +1017,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\OrganizationDetail.ar-IQ.resx">
+      <DependentUpon>OrganizationDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupForms\OrganizationDetail.ar-JO.resx">
       <DependentUpon>OrganizationDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\OrganizationDetail.az-Latn-AZ.resx">
@@ -1000,6 +1057,9 @@
     <EmbeddedResource Include="LookupForms\ReferenceDetail.ar-IQ.resx">
       <DependentUpon>ReferenceDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LookupForms\ReferenceDetail.ar-JO.resx">
+      <DependentUpon>ReferenceDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\ReferenceDetail.az-Latn-AZ.resx">
       <DependentUpon>ReferenceDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -1029,6 +1089,9 @@
     <EmbeddedResource Include="LookupForms\StatisticTypeDetail.ar-IQ.resx">
       <DependentUpon>StatisticTypeDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LookupForms\StatisticTypeDetail.ar-JO.resx">
+      <DependentUpon>StatisticTypeDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\StatisticTypeDetail.az-Latn-AZ.resx">
       <DependentUpon>StatisticTypeDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -1056,6 +1119,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\TestForDiseaseDetail.ar-IQ.resx">
+      <DependentUpon>TestForDiseaseDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupForms\TestForDiseaseDetail.ar-JO.resx">
       <DependentUpon>TestForDiseaseDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LookupForms\TestForDiseaseDetail.az-Latn-AZ.resx">
@@ -1097,6 +1163,9 @@
     <EmbeddedResource Include="SecurityPolicy\SecurityPolicyDetail.ar-IQ.resx">
       <DependentUpon>SecurityPolicyDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SecurityPolicy\SecurityPolicyDetail.ar-JO.resx">
+      <DependentUpon>SecurityPolicyDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SecurityPolicy\SecurityPolicyDetail.az-Latn-AZ.resx">
       <DependentUpon>SecurityPolicyDetail.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -1130,6 +1199,9 @@
     <EmbeddedResource Include="Site Activation\SiteActivationServerDetail.ar-IQ.resx">
       <DependentUpon>SiteActivationServerDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Site Activation\SiteActivationServerDetail.ar-JO.resx">
+      <DependentUpon>SiteActivationServerDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Site Activation\SiteActivationServerDetail.hy-am.resx">
       <DependentUpon>SiteActivationServerDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -1148,11 +1220,19 @@
       <DependentUpon>AreaLookup.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\AreaLookup.ar-JO.resx">
+      <DependentUpon>AreaLookup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Statistic\AreaLookup.az-Latn-AZ.resx">
       <DependentUpon>AreaLookup.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Statistic\AreaLookup.en-IQ-Eidss.resx">
+      <DependentUpon>AreaLookup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\AreaLookup.en-JO-Eidss.resx">
       <DependentUpon>AreaLookup.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -1181,6 +1261,9 @@
     <EmbeddedResource Include="Statistic\StatisticDetail.ar-IQ.resx">
       <DependentUpon>StatisticDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\StatisticDetail.ar-JO.resx">
+      <DependentUpon>StatisticDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Statistic\StatisticDetail.hy-am.resx">
       <DependentUpon>StatisticDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -1196,6 +1279,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SystemPermissions.ar-IQ.resx">
+      <DependentUpon>SystemPermissions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemPermissions.ar-JO.resx">
       <DependentUpon>SystemPermissions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SystemPermissions.az-Latn-AZ.resx">

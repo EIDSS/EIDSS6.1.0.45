@@ -328,7 +328,7 @@
     <value>บันทึก {0} จะถูกลบ ลบหรือไม่?</value>
   </data>
   <data name="msgEIDSSCopyright" xml:space="preserve">
-    <value>สงวนลิขสิทธิ์โดย © 2005-2020 Black &amp;&amp; Veatch Special Projects Corp.</value>
+    <value>สงวนลิขสิทธิ์โดย © 2005-2021 Black &amp;&amp; Veatch Special Projects Corp.</value>
   </data>
   <data name="msgEIDSSRunning" xml:space="preserve">
     <value>คุณไม่สามารถทำงานตัวอย่างEIDSS หลายรายการพร้อมกันได้ ตัวอย่างEIDSS นั้นทำงานอยู่แล้ว</value>

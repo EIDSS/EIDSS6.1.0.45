@@ -22,6 +22,9 @@
       <ComponentGroupRef Id="WebAppSettings" />
       <ComponentGroupRef Id="PinService" />
       <ComponentGroupRef Id="Th506Upload" />
+      <ComponentGroupRef Id="ReadableIdByNumericId" />
+      <ComponentGroupRef Id="UaUploadEhs" />
+      <ComponentGroupRef Id="UaSqlCommandTimeout" />
       <ComponentGroupRef Id="web.ThirdParty.GIS.GDBAPI" />
       <ComponentRef Id="CommonAppData.Translations.Folder" Primary="yes" />
     </ComponentGroup>
@@ -130,6 +133,7 @@
           <iis:WebVirtualDir Id="Help.kk_KZ.VirtualDirectory" Alias="kk-KZ" Directory="Help.kk_KZ" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.hy_AM.VirtualDirectory" Alias="hy-AM" Directory="Help.hy_AM" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.ar_IQ.VirtualDirectory" Alias="ar-IQ" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
+          <iis:WebVirtualDir Id="Help.ar_JO.VirtualDirectory" Alias="ar-JO" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.lo_LA.VirtualDirectory" Alias="lo-LA" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.vi_VN.VirtualDirectory" Alias="vi-VN" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.th_TH.VirtualDirectory" Alias="th-TH" Directory="Help.th_TH" DirProperties="Help.VirtualDirectory.Propertiess" />
@@ -137,6 +141,7 @@
           <iis:WebVirtualDir Id="Help.en_AZ_Eidss.VirtualDirectory" Alias="en-AZ-Eidss" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.en_HY_Eidss.VirtualDirectory" Alias="en-HY-Eidss" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.en_IQ_Eidss.VirtualDirectory" Alias="en-IQ-Eidss" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
+          <iis:WebVirtualDir Id="Help.en_JO_Eidss.VirtualDirectory" Alias="en-JO-Eidss" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.en_KA_Eidss.VirtualDirectory" Alias="en-KA-Eidss" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.en_KZ_Eidss.VirtualDirectory" Alias="en-KZ-Eidss" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
           <iis:WebVirtualDir Id="Help.en_TZ_Eidss.VirtualDirectory" Alias="en-TZ-Eidss" Directory="Help.en" DirProperties="Help.VirtualDirectory.Propertiess" />
@@ -408,28 +413,66 @@
      </ComponentGroup>
   </Fragment>
 
-    <Fragment Id="ReadableIdByNumericId">
+  <Fragment Id="ReadableIdByNumericId">
     <ComponentGroup Id="ReadableIdByNumericId" Directory="eidss.web">
-        <Component Id="UaReadableIdByNumericId" Guid="{5B5E38A2-6F54-42DE-B581-69FA476A5FC3}" MultiInstance="yes" KeyPath="yes">
-          <Condition><![CDATA[COUNTRY = "!(loc.Ukraine)"]]></Condition>
+      <Component Id="UaReadableIdByNumericId" Guid="{5B5E38A2-6F54-42DE-B581-69FA476A5FC3}" MultiInstance="yes" KeyPath="yes">
+        <Condition><![CDATA[COUNTRY = "!(loc.Ukraine)"]]></Condition>
 
-          <?define key = GenerateReadableIdByNumericObjectId ?>
-          <?define value = true ?>
-          <?define order = 95 ?>
-          <?include $(var.ProjectDir)AddConfigKey.wxi?>
+        <?define key = GenerateReadableIdByNumericObjectId ?>
+        <?define value = true ?>
+        <?define order = 95 ?>
+        <?include $(var.ProjectDir)AddConfigKey.wxi?>
 
-          <?define key = AddExtraCharInReadableId ?>
-          <?define value = true ?>
-          <?define order = 96 ?>
-          <?include $(var.ProjectDir)AddConfigKey.wxi?>
+        <?define key = AddExtraCharInReadableId ?>
+        <?define value = true ?>
+        <?define order = 96 ?>
+        <?include $(var.ProjectDir)AddConfigKey.wxi?>
 
-          <?define key = ExtraCharInReadableId ?>
-          <?define value = - ?>
-          <?define order = 97 ?>
-          <?include $(var.ProjectDir)AddConfigKey.wxi?>
+        <?define key = ExtraCharInReadableId ?>
+        <?define value = - ?>
+        <?define order = 97 ?>
+        <?include $(var.ProjectDir)AddConfigKey.wxi?>
 
-        </Component>
+      </Component>
     </ComponentGroup>
+  </Fragment>
+  
+  <Fragment Id="UaUploadEhs">
+    <ComponentGroup Id="UaUploadEhs" Directory="eidss.web">
+      <Component Id="UaUploadEhsSettings" Guid="{0EC490CA-E65B-4A81-94DC-B75814140496}" MultiInstance="yes" KeyPath="yes">
+        <Condition><![CDATA[COUNTRY = "!(loc.Ukraine)"]]></Condition>
+ 
+        <?define key = UploadEhsMaxMBSize ?>
+        <?define value = 100 ?>
+        <?define order = 98 ?>
+        <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
+        <?define key = UploadingEhsSessionsCount ?>
+        <?define value = 5 ?>
+        <?define order = 99 ?>
+        <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
+        <?define key = EhsSessionMaxActiveTimeInMinutes ?>
+        <?define value = 30 ?>
+        <?define order = 100 ?>
+        <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
+      </Component>
+     </ComponentGroup>
+  </Fragment>
+  
+  <Fragment Id="UaSqlCommandTimeout">
+    <ComponentGroup Id="UaSqlCommandTimeout" Directory="eidss.web">
+      <Component Id="UaSqlCommandTimeoutSettings" Guid="{53A99A37-7919-44D4-ADA3-3D36F01E8294}" MultiInstance="yes" KeyPath="yes">
+        <Condition><![CDATA[COUNTRY = "!(loc.Ukraine)"]]></Condition>
+ 
+        <?define key = SqlCommandTimeout ?>
+        <?define value = 1200 ?>
+        <?define order = 101 ?>
+        <?include $(var.ProjectDir)AddConfigKey.wxi?>
+
+      </Component>
+     </ComponentGroup>
   </Fragment>
 
   <?define website = web?>

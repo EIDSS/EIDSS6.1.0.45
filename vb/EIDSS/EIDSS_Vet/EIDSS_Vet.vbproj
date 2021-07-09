@@ -375,11 +375,17 @@
     <EmbeddedResource Include="ActiveSurveillance\AsCampaignDetail.ar-IQ.resx">
       <DependentUpon>AsCampaignDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ActiveSurveillance\AsCampaignDetail.ar-JO.resx">
+      <DependentUpon>AsCampaignDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActiveSurveillance\AsCampaignDetail.az-Latn-AZ.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AsCampaignDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActiveSurveillance\AsCampaignDetail.en-IQ-Eidss.resx">
+      <DependentUpon>AsCampaignDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveSurveillance\AsCampaignDetail.en-JO-Eidss.resx">
       <DependentUpon>AsCampaignDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActiveSurveillance\AsCampaignDetail.en-TH-Eidss.resx">
@@ -439,11 +445,17 @@
     <EmbeddedResource Include="ActiveSurveillance\AsSessionDetail.ar-IQ.resx">
       <DependentUpon>AsSessionDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ActiveSurveillance\AsSessionDetail.ar-JO.resx">
+      <DependentUpon>AsSessionDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActiveSurveillance\AsSessionDetail.az-Latn-AZ.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AsSessionDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActiveSurveillance\AsSessionDetail.en-IQ-Eidss.resx">
+      <DependentUpon>AsSessionDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveSurveillance\AsSessionDetail.en-JO-Eidss.resx">
       <DependentUpon>AsSessionDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActiveSurveillance\AsSessionDetail.en-TH-Eidss.resx">
@@ -481,6 +493,9 @@
     <EmbeddedResource Include="ActiveSurveillance\AsSessionSummaryPanel.ar-IQ.resx">
       <DependentUpon>AsSessionSummaryPanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ActiveSurveillance\AsSessionSummaryPanel.ar-JO.resx">
+      <DependentUpon>AsSessionSummaryPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActiveSurveillance\AsSessionSummaryPanel.az-latn-az.resx">
       <DependentUpon>AsSessionSummaryPanel.vb</DependentUpon>
     </EmbeddedResource>
@@ -508,6 +523,9 @@
     <EmbeddedResource Include="ActiveSurveillance\AsSessionTableViewPanel.ar-IQ.resx">
       <DependentUpon>AsSessionTableViewPanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ActiveSurveillance\AsSessionTableViewPanel.ar-JO.resx">
+      <DependentUpon>AsSessionTableViewPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActiveSurveillance\AsSessionTableViewPanel.az-latn-az.resx">
       <DependentUpon>AsSessionTableViewPanel.vb</DependentUpon>
     </EmbeddedResource>
@@ -533,6 +551,9 @@
       <DependentUpon>AsSessionTableViewPanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateActionDetail.ar-IQ.resx">
+      <DependentUpon>VetAggregateActionDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\VetAggregateActionDetail.ar-JO.resx">
       <DependentUpon>VetAggregateActionDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateActionDetail.az-Latn-AZ.resx">
@@ -569,6 +590,9 @@
     <EmbeddedResource Include="AggregateCase\VetAggregateCaseDetail.ar-IQ.resx">
       <DependentUpon>VetAggregateCaseDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\VetAggregateCaseDetail.ar-JO.resx">
+      <DependentUpon>VetAggregateCaseDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateCaseDetail.az-Latn-AZ.resx">
       <DependentUpon>VetAggregateCaseDetail.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -597,6 +621,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateSummaryActionDetail.ar-IQ.resx">
+      <DependentUpon>VetAggregateSummaryActionDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\VetAggregateSummaryActionDetail.ar-JO.resx">
       <DependentUpon>VetAggregateSummaryActionDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateSummaryActionDetail.az-Latn-AZ.resx">
@@ -630,6 +657,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateSummaryCaseDetail.ar-IQ.resx">
+      <DependentUpon>VetAggregateSummaryCaseDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AggregateCase\VetAggregateSummaryCaseDetail.ar-JO.resx">
       <DependentUpon>VetAggregateSummaryCaseDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AggregateCase\VetAggregateSummaryCaseDetail.az-Latn-AZ.resx">
@@ -669,6 +699,9 @@
     <EmbeddedResource Include="Farm\AvianFarmDetail.ar-IQ.resx">
       <DependentUpon>AvianFarmDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Farm\AvianFarmDetail.ar-JO.resx">
+      <DependentUpon>AvianFarmDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Farm\AvianFarmDetail.az-Latn-AZ.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AvianFarmDetail.vb</DependentUpon>
@@ -702,6 +735,9 @@
     <EmbeddedResource Include="Farm\AvianFarmProductionControl.ar-IQ.resx">
       <DependentUpon>AvianFarmProductionControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Farm\AvianFarmProductionControl.ar-JO.resx">
+      <DependentUpon>AvianFarmProductionControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Farm\AvianFarmProductionControl.az-Latn-AZ.resx">
       <DependentUpon>AvianFarmProductionControl.vb</DependentUpon>
     </EmbeddedResource>
@@ -729,6 +765,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Farm\FarmDetail.ar-IQ.resx">
+      <DependentUpon>FarmDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Farm\FarmDetail.ar-JO.resx">
       <DependentUpon>FarmDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Farm\FarmDetail.az-Latn-AZ.resx">
@@ -761,6 +800,9 @@
     <EmbeddedResource Include="Farm\FarmPanel.ar-IQ.resx">
       <DependentUpon>FarmPanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Farm\FarmPanel.ar-JO.resx">
+      <DependentUpon>FarmPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Farm\FarmPanel.hy-am.resx">
       <DependentUpon>FarmPanel.vb</DependentUpon>
     </EmbeddedResource>
@@ -776,6 +818,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Farm\LivestockFarmProductionControl.ar-IQ.resx">
+      <DependentUpon>LivestockFarmProductionControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Farm\LivestockFarmProductionControl.ar-JO.resx">
       <DependentUpon>LivestockFarmProductionControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Farm\LivestockFarmProductionControl.az-Latn-AZ.resx">
@@ -834,6 +879,9 @@
     <EmbeddedResource Include="Vet Case\BaseFarmTreePanel.ar-IQ.resx">
       <DependentUpon>BaseFarmTreePanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\BaseFarmTreePanel.ar-JO.resx">
+      <DependentUpon>BaseFarmTreePanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\BaseFarmTreePanel.az-Latn-AZ.resx">
       <DependentUpon>BaseFarmTreePanel.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -865,6 +913,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\CaseLog.ar-IQ.resx">
+      <DependentUpon>CaseLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\CaseLog.ar-JO.resx">
       <DependentUpon>CaseLog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\CaseLog.az-Latn-AZ.resx">
@@ -900,6 +951,9 @@
     <EmbeddedResource Include="Vet Case\FarmTreePanel.ar-IQ.resx">
       <DependentUpon>FarmTreePanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\FarmTreePanel.ar-JO.resx">
+      <DependentUpon>FarmTreePanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\FarmTreePanel.az-Latn-AZ.resx">
       <DependentUpon>FarmTreePanel.vb</DependentUpon>
     </EmbeddedResource>
@@ -927,6 +981,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\PensideTestPanel.ar-IQ.resx">
+      <DependentUpon>PensideTestPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\PensideTestPanel.ar-JO.resx">
       <DependentUpon>PensideTestPanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\PensideTestPanel.az-Latn-AZ.resx">
@@ -962,6 +1019,9 @@
     <EmbeddedResource Include="Vet Case\VaccinationPanel.ar-IQ.resx">
       <DependentUpon>VaccinationPanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\VaccinationPanel.ar-JO.resx">
+      <DependentUpon>VaccinationPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VaccinationPanel.az-Latn-AZ.resx">
       <DependentUpon>VaccinationPanel.vb</DependentUpon>
     </EmbeddedResource>
@@ -989,6 +1049,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetCaseAnimalsPanel.ar-IQ.resx">
+      <DependentUpon>VetCaseAnimalsPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\VetCaseAnimalsPanel.ar-JO.resx">
       <DependentUpon>VetCaseAnimalsPanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetCaseAnimalsPanel.az-Latn-AZ.resx">
@@ -1020,6 +1083,9 @@
     <EmbeddedResource Include="Vet Case\VetCaseAvianDetail.ar-IQ.resx">
       <DependentUpon>VetCaseAvianDetail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\VetCaseAvianDetail.ar-JO.resx">
+      <DependentUpon>VetCaseAvianDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetCaseAvianDetail.az-Latn-AZ.resx">
       <DependentUpon>VetCaseAvianDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -1047,6 +1113,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetCaseLiveStockDetail.ar-IQ.resx">
+      <DependentUpon>VetCaseLiveStockDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\VetCaseLiveStockDetail.ar-JO.resx">
       <DependentUpon>VetCaseLiveStockDetail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetCaseLiveStockDetail.az-Latn-AZ.resx">
@@ -1081,6 +1150,9 @@
     <EmbeddedResource Include="Vet Case\VetCaseRegistrationPanel.ar-IQ.resx">
       <DependentUpon>VetCaseRegistrationPanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\VetCaseRegistrationPanel.ar-JO.resx">
+      <DependentUpon>VetCaseRegistrationPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetCaseRegistrationPanel.az-Latn-AZ.resx">
       <DependentUpon>VetCaseRegistrationPanel.vb</DependentUpon>
     </EmbeddedResource>
@@ -1108,6 +1180,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetCaseSamplesPanel.ar-IQ.resx">
+      <DependentUpon>VetCaseSamplesPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\VetCaseSamplesPanel.ar-JO.resx">
       <DependentUpon>VetCaseSamplesPanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetCaseSamplesPanel.az-Latn-AZ.resx">
@@ -1143,6 +1218,9 @@
     <EmbeddedResource Include="Vet Case\VetControlMeasurePanel.ar-IQ.resx">
       <DependentUpon>VetControlMeasurePanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\VetControlMeasurePanel.ar-JO.resx">
+      <DependentUpon>VetControlMeasurePanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetControlMeasurePanel.az-Latn-AZ.resx">
       <DependentUpon>VetControlMeasurePanel.vb</DependentUpon>
     </EmbeddedResource>
@@ -1170,6 +1248,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetDiagnosisPanel.ar-IQ.resx">
+      <DependentUpon>VetDiagnosisPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\VetDiagnosisPanel.ar-JO.resx">
       <DependentUpon>VetDiagnosisPanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetDiagnosisPanel.az-Latn-AZ.resx">
@@ -1203,6 +1284,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetStatusPanel.ar-IQ.resx">
+      <DependentUpon>VetStatusPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet Case\VetStatusPanel.ar-JO.resx">
       <DependentUpon>VetStatusPanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vet Case\VetStatusPanel.az-Latn-AZ.resx">

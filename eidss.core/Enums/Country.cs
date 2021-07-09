@@ -11,6 +11,7 @@
         Armenia = 80000000,
         Ukraine = 2260000000,
         Iraq = 1050000000,
+        Jordan = 1110000000,
         UnitedStates = 2340000000,
         Thailand = 2150000000
         //Tanzania = 2250000000,

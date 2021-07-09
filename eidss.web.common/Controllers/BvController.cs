@@ -415,6 +415,11 @@ namespace eidss.web.common.Controllers
             where O : class, IObject
             where P : class, IObject
         {
+            if (!ObjectStorage.Contains(ModelUserContext.ClientID, key, nameList))
+            {
+                return View();
+            }
+
             //var list = ModelStorage.Get(ModelUserContext.ClientID, key, nameList) as EditableList<O>;
             //var root = (long)((IObject)ModelStorage.GetRoot(ModelUserContext.ClientID, key, null)).Key;
             //var parent = ModelStorage.Get(ModelUserContext.ClientID, key, null) as P;

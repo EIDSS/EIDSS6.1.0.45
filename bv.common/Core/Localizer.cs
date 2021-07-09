@@ -19,6 +19,7 @@ namespace bv.common.Core
         public static string lngAr { get { return Core.SupportedLanguages.lngAr; } }
         public static string lngUk { get { return Core.SupportedLanguages.lngUk; } }
         public static string lngIraq { get { return Core.SupportedLanguages.lngIraq; } }
+        public static string lngJordan { get { return Core.SupportedLanguages.lngJordan; } }
         public static string lngVietnam { get { return Core.SupportedLanguages.lngVietnam; } }
         public static string lngLaos { get { return Core.SupportedLanguages.lngLaos; } }
         public static string lngThai { get { return Core.SupportedLanguages.lngThai; } }
@@ -81,6 +82,15 @@ namespace bv.common.Core
         /// -----------------------------------------------------------------------------
         public static string GetLanguageID(CultureInfo culture)
         {
+            switch (culture.Name)
+            {
+                case "ar-JO":
+                    return lngJordan;
+                case "ar-IQ":
+                    return lngIraq;
+                default:
+                    break;
+            }
             switch (culture.TwoLetterISOLanguageName)
             {
                 case "uz":
@@ -91,8 +101,6 @@ namespace bv.common.Core
                     return lngUzLat;
                 case "az":
                     return lngAzLat;
-                case "ar":
-                    return lngIraq;
                 default:
                     return culture.TwoLetterISOLanguageName;
             }
@@ -144,6 +152,8 @@ namespace bv.common.Core
                     return MenuMessages.GetString("MenuUkrainian", "Ukrainian", displayLangID).Replace("&", "");
                 case Core.SupportedLanguages.lngIraq:
                     return MenuMessages.GetString("MenuIraq", "Arabic (Iraq)", displayLangID).Replace("&", "");
+                case Core.SupportedLanguages.lngJordan:
+                    return MenuMessages.GetString("MenuJordan", "Arabic (Jordan)", displayLangID).Replace("&", "");
                 case Core.SupportedLanguages.lngLaos:
                     return MenuMessages.GetString("MenuLaos", "Laos", displayLangID).Replace("&", "");
                 case Core.SupportedLanguages.lngVietnam:
@@ -193,6 +203,9 @@ namespace bv.common.Core
             //    case lngIraq:
             //        return MenuMessages.GetString("MenuIraq", "Arabic (Iraq)", displayLangID).Replace("&", "") + " (" +
             //               MenuMessages.GetString("MenuIraq", "Arabic (Iraq)", lngIraq).Replace("&", "") + ")";
+            //    case lngJordan:
+            //        return MenuMessages.GetString("MenuJordan", "Arabic (Jordan)", displayLangID).Replace("&", "") + " (" +
+            //               MenuMessages.GetString("MenuJordan", "Arabic (Jordan)", lngJordan).Replace("&", "") + ")";
             //    case lngLaos:
             //        return MenuMessages.GetString("MenuLaos", "Laos", displayLangID).Replace("&", "") + " (" +
             //               MenuMessages.GetString("MenuLaos", "Laos", lngLaos).Replace("&", "") + ")";

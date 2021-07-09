@@ -42,6 +42,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Details(FormCollection form)
         {
             bool details = form["ASFdetails"] == "true";
@@ -71,6 +72,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult DeleteFarm(long asSessionId, long farmId, bool bDeleteDetails)
         {
             //var asSession = (AsSession)ModelStorage.Get(ModelUserContext.ClientID, asSessionId, null);
@@ -121,6 +123,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult CreateHerdOrFlock(long key, string listName)
         {
             string errorMsg = string.Empty;
@@ -171,6 +174,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SpeciesDetail(long idfMonitoringSession, long idfRoot, long? idfSpecies, string gridName, FormCollection form)
         {
             bool bEdit = false;
@@ -225,6 +229,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult AnimalSampleDetail(long idfMonitoringSession, long idfAnimalSample, string gridName, FormCollection form)
         {
             //form.Remove(form.AllKeys.Single(c => c.EndsWith("Animals")));
@@ -278,6 +283,7 @@ namespace eidss.webclient.Controllers
         
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult NumberOfCopies(FormCollection form)
         {
             return PickerInternal<AsSessionAnimalSample.Accessor, AsSessionAnimalSample, AsSession>(form, AsSessionAnimalSample.Accessor.Instance(null), "IdfRoot",

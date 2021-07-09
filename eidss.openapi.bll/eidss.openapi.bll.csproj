@@ -151,6 +151,10 @@
       <Project>{bf545ecd-f673-4c71-9362-57c01df13062}</Project>
       <Name>eidss.core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\eidss.model.customization\eidss.model.customization.csproj">
+      <Project>{14536936-3e5c-466e-82e4-22ed27b1ff35}</Project>
+      <Name>eidss.model.customization</Name>
+    </ProjectReference>
     <ProjectReference Include="..\eidss.model\eidss.model.csproj">
       <Project>{e4b87b63-d5f2-4f9f-b39c-a7714896d1de}</Project>
       <Name>eidss.model</Name>

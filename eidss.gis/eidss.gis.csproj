@@ -325,6 +325,9 @@
     <EmbeddedResource Include="Forms\OpenMapForm.ar-IQ.resx">
       <DependentUpon>OpenMapForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenMapForm.ar-JO.resx">
+      <DependentUpon>OpenMapForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\OpenMapForm.az-Latn-AZ.resx">
       <DependentUpon>OpenMapForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,6 +355,9 @@
     <EmbeddedResource Include="Forms\SaveMapForm.ar-IQ.resx">
       <DependentUpon>SaveMapForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaveMapForm.ar-JO.resx">
+      <DependentUpon>SaveMapForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SaveMapForm.hy-am.resx">
       <DependentUpon>SaveMapForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,8 +368,12 @@
       <DependentUpon>SearchResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.ar-IQ.resx" />
+    <EmbeddedResource Include="Properties\Resources.ar-JO.resx" />
     <EmbeddedResource Include="Properties\Resources.az-Latn-AZ.resx" />
     <EmbeddedResource Include="Properties\Resources.en-IQ-Eidss.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en-JO-Eidss.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.en-US-Eidss.resx">
@@ -381,10 +391,16 @@
     <EmbeddedResource Include="Tools\ToolForms\AdminUnitMaskForm.ar-IQ.resx">
       <DependentUpon>AdminUnitMaskForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolForms\AdminUnitMaskForm.ar-JO.resx">
+      <DependentUpon>AdminUnitMaskForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolForms\AdminUnitMaskForm.az-Latn-AZ.resx">
       <DependentUpon>AdminUnitMaskForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolForms\AdminUnitMaskForm.en-IQ-Eidss.resx">
+      <DependentUpon>AdminUnitMaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolForms\AdminUnitMaskForm.en-JO-Eidss.resx">
       <DependentUpon>AdminUnitMaskForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolForms\AdminUnitMaskForm.en-US-Eidss.resx">
@@ -445,6 +461,9 @@
     <EmbeddedResource Include="Tools\ToolForms\CircleBufZone.ar-IQ.resx">
       <DependentUpon>CircleBufZone.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolForms\CircleBufZone.ar-JO.resx">
+      <DependentUpon>CircleBufZone.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolForms\CircleBufZone.az-latn-az.resx">
       <DependentUpon>CircleBufZone.cs</DependentUpon>
     </EmbeddedResource>
@@ -467,6 +486,9 @@
       <DependentUpon>CircleBufZone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolForms\DbLayersForm.ar-IQ.resx">
+      <DependentUpon>DbLayersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolForms\DbLayersForm.ar-JO.resx">
       <DependentUpon>DbLayersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolForms\DbLayersForm.az-latn-az.resx">
@@ -537,6 +559,9 @@
       <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolForms\PolygonBufZone.ar-IQ.resx">
+      <DependentUpon>PolygonBufZone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ToolForms\PolygonBufZone.ar-JO.resx">
       <DependentUpon>PolygonBufZone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\ToolForms\PolygonBufZone.az-latn-az.resx">

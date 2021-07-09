@@ -783,6 +783,9 @@
   <data name="MenuIraq" xml:space="preserve">
     <value>Арабский (&amp;Ирак)</value>
   </data>
+  <data name="MenuJordan" xml:space="preserve">
+    <value>Арабский (&amp;Иордания)</value>
+  </data>
   <data name="MenuLaos" xml:space="preserve">
     <value>Лаос</value>
   </data>

@@ -138,7 +138,7 @@ namespace eidss.main.Login
             {
                 m_ConnectionCredentials.SetCredentials(BaseSettings.ConnectionString, txtSQLServer.Text, txtSQLDatabase.Text, txtSQLUser.Text, txtSQLPassword.Text);
                 ConnectionManager.DefaultInstance.SetCredentials(BaseSettings.ConnectionString, txtSQLServer.Text, txtSQLDatabase.Text, txtSQLUser.Text, txtSQLPassword.Text);
-                DbManagerFactory.SetSqlFactory(m_ConnectionCredentials.ConnectionString);
+                DbManagerFactory.SetSqlFactory(m_ConnectionCredentials.ConnectionString, DatabaseType.Main, m_ConnectionCredentials.CommandTimeout);
                 if (m_ConnectionCredentials.IsCorrect)
                 {
                     using (var manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
@@ -240,7 +240,8 @@ namespace eidss.main.Login
             m_ArchiveConnectionCredentials.SetCredentials(BaseSettings.ConnectionString, txtArchiveServer.Text, txtArchiveDatabase.Text, txtArchiveUser.Text, txtArchivePassword.Text, "Archive");
             if (m_ArchiveConnectionCredentials.IsCorrect)
             {
-                DbManagerFactory.SetSqlFactory(m_ArchiveConnectionCredentials.ConnectionString);
+                //TODO: check if DatabaseType should be changed from Main to Archive
+                DbManagerFactory.SetSqlFactory(m_ArchiveConnectionCredentials.ConnectionString, DatabaseType.Main, m_ArchiveConnectionCredentials.CommandTimeout);
                 using (var manager = DbManagerFactory.Factory.Create(ModelUserContext.Instance))
                 {
                     if (manager.TestConnection())
@@ -450,6 +451,10 @@ namespace eidss.main.Login
                 else if (e.KeyCode == Keys.I)
                 {
                     ResetLanguage(Localizer.lngIraq);
+                }
+                else if (e.KeyCode == Keys.J)
+                {
+                    ResetLanguage(Localizer.lngJordan);
                 }
                 else if (e.KeyCode == Keys.L)
                 {

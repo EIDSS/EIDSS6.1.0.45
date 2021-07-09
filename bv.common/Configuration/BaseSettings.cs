@@ -23,10 +23,14 @@ namespace bv.common.Configuration
         public const string GenerateReadableIdByNumericObjectId = "GenerateReadableIdByNumericObjectId";
         public const string AddExtraCharInReadableId = "AddExtraCharInReadableId";
         public const string ExtraCharInReadableId = "ExtraCharInReadableId";
+        public const string UploadEhsMaxMBSize = "UploadEhsMaxMBSize";
+        public const string UploadingEhsSessionsCount = "UploadingEhsSessionsCount";
+        public const string EhsSessionMaxActiveTimeInMinutes = "EhsSessionMaxActiveTimeInMinutes";
     }
     public class BaseSettings
     {
-        //private const int DefaultSqlTimeout = 200;
+        private const int _minSqlCommandTimeout = 300;
+        private const int _defaultSqlConnectionMaxPoolSize = 100;
         //Possible values: Default, ClientID, User
         private static string m_SystemFontName;
         private static string m_GGSystemFontName = "";
@@ -91,9 +95,23 @@ namespace bv.common.Configuration
             }
         }
 
+        public static int MinSqlCommandTimeout
+        {
+            get { return _minSqlCommandTimeout; }
+        }
+
         public static int SqlCommandTimeout
         {
-            get { return Config.GetIntSetting("SqlCommandTimeout", 200); }
+            get { return Config.GetIntSetting("SqlCommandTimeout", MinSqlCommandTimeout); }
+        }
+
+        public static int DefaultSqlConnectionMaxPoolSize
+        {
+            get { return _defaultSqlConnectionMaxPoolSize; }
+        }
+        public static int SqlConnectionMaxPoolSize
+        {
+            get { return Config.GetIntSetting("SqlConnectionMaxPoolSize", DefaultSqlConnectionMaxPoolSize); }
         }
 
         public static bool UseDefaultLogin
@@ -471,6 +489,11 @@ namespace bv.common.Configuration
             get { return Config.GetSetting("ReportServiceHostURL", "http://localhost:8097/"); }
         }
 
+        public static string EhsServiceHostURL
+        {
+            get { return Config.GetSetting("EhsServiceHostURL", "http://localhost:50120/"); }
+        }
+
         public static int AvrRowsPerPage
         {
             get { return Config.GetIntSetting("AvrRowsPerPage", 20); }
@@ -769,6 +792,19 @@ namespace bv.common.Configuration
         public static bool Uploading506ResultToExcel 
         {
             get { return Config.GetBoolSetting(SettingName.Uploading506ResultToExcel); }
+        }
+
+        public static int UploadEhsMaxMBSize
+        {
+            get { return Config.GetIntSetting(SettingName.UploadEhsMaxMBSize, 100); }
+        }
+        public static int UploadingEhsSessionsCount
+        {
+            get { return Config.GetIntSetting(SettingName.UploadingEhsSessionsCount, 5); }
+        }
+        public static int EhsSessionMaxActiveTimeInMinutes
+        {
+            get { return Config.GetIntSetting(SettingName.EhsSessionMaxActiveTimeInMinutes, 30); }
         }
 
         public static bool GGPinServiceVerification

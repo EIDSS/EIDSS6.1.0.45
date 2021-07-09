@@ -223,6 +223,9 @@
     <EmbeddedResource Include="BaseTaskBarForm.ar-IQ.resx">
       <DependentUpon>BaseTaskBarForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseTaskBarForm.ar-JO.resx">
+      <DependentUpon>BaseTaskBarForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseTaskBarForm.az-Latn-AZ.resx">
       <DependentUpon>BaseTaskBarForm.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -257,11 +260,17 @@
     <EmbeddedResource Include="NotificationForm.ar-IQ.resx">
       <DependentUpon>NotificationForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NotificationForm.ar-JO.resx">
+      <DependentUpon>NotificationForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NotificationForm.az-Latn-AZ.resx">
       <DependentUpon>NotificationForm.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationForm.en-IQ-Eidss.resx">
+      <DependentUpon>NotificationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationForm.en-JO-Eidss.resx">
       <DependentUpon>NotificationForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationForm.en-TH-Eidss.resx">
@@ -297,6 +306,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupMessage.ar-IQ.resx">
+      <DependentUpon>PopupMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupMessage.ar-JO.resx">
       <DependentUpon>PopupMessage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupMessage.az-Latn-AZ.resx">

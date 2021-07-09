@@ -85,6 +85,7 @@
         humanCaseEmergencyNotificationReport: "/HumanCase/EmergencyNotificationReport",
         humanCaseEmergencyNotificationDTRAReport: "/HumanCase/EmergencyNotificationDTRAReport",
         humanCaseEmergencyNotificationUkraineReport: "/HumanCase/EmergencyNotificationUkraineReport",
+        vetCaseUrgentNotificationReportJo: "/VetCase/UrgentNotificationReportJo",
         humanCaseEmergencyNotificationTanzaniaReport: "/HumanCase/EmergencyNotificationTanzaniaReport",
         humanInvestigationReport: "/HumanCase/HumanInvestigationReport",
         testsReport: "/LaboratoryReport/TestsReport",
@@ -225,6 +226,13 @@
         upload506CancelUploadedData: "/Upload506/CancelUploadedData",
         upload506DismissAllDuplicates: "/Upload506/DismissAllDuplicates",
         upload506DFinalizeResolveDuplicates: "/Upload506/FinalizeResolveDuplicates",
+
+        uploadEhsUpdatePicker: "/UploadEhs/UploadEhsUpdatePicker",
+        uploadEhsSaveUploadedData: "/UploadEhs/SaveUploadedData",
+        uploadEhsCancelUploadedData: "/UploadEhs/CancelUploadedData",
+        uploadEhsDismissAllExistingPatientItems: "/UploadEhs/DismissAllExistingPatientItems",
+
+        uploadEhsFinalizeResolveExistingPatientItems: "/UploadEhs/FinalizeResolveExistingPatientItems",
 
         GeoLocationClear: "/System/GeoLocationClear",
     };
@@ -596,6 +604,9 @@
         },
         getHumanCaseEmergencyNotificationUkraineReportUrl: function (params) {
             return bvUrls.buildUrl(bvUrls.getByPath(paths.humanCaseEmergencyNotificationUkraineReport), params);
+        },
+        getVetCaseUrgentNotificationReportJoUrl: function (params) {
+            return bvUrls.buildUrl(bvUrls.getByPath(paths.vetCaseUrgentNotificationReportJo), params);
         },
         getHumanCaseEmergencyNotificationTanzaniaReportUrl: function (params) {
             return bvUrls.buildUrl(bvUrls.getByPath(paths.humanCaseEmergencyNotificationTanzaniaReport), params);
@@ -1153,6 +1164,28 @@
         getUpload506DFinalizeResolveDuplicatesUrl: function (params) {
             return bvUrls.buildUrl(bvUrls.getByPath(paths.upload506DFinalizeResolveDuplicates), params);
         },
+
+
+        getUploadEhsUpdatePickerUrl: function (params) {
+            return bvUrls.buildUrl(bvUrls.getByPath(paths.uploadEhsUpdatePicker), params);
+        },
+
+        getUploadEhsSaveUploadedDataUrl: function (params) {
+            return bvUrls.buildUrl(bvUrls.getByPath(paths.uploadEhsSaveUploadedData), params);
+        },
+
+        getuploadEhsCancelUploadedDataUrl: function (params) {
+            return bvUrls.buildUrl(bvUrls.getByPath(paths.uploadEhsCancelUploadedData), params);
+        },
+
+        getUploadEhsDismissAllExistingPatientItemsUrl: function (params) {
+            return bvUrls.buildUrl(bvUrls.getByPath(paths.uploadEhsDismissAllExistingPatientItems), params);
+        },
+
+        getUploadEhsFinalizeResolveExistingPatientItemsUrl: function (params) {
+            return bvUrls.buildUrl(bvUrls.getByPath(paths.uploadEhsFinalizeResolveExistingPatientItems), params);
+        }
+
 
     };
 })();

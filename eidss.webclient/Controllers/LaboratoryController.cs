@@ -98,6 +98,7 @@ namespace eidss.webclient.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult GridUpdateNotMy([DataSourceRequest]DataSourceRequest request, long key, FormCollection form)
         {
             return ObjectStorage.Using<LaboratorySectionMaster, ActionResult>(master =>
@@ -108,6 +109,7 @@ namespace eidss.webclient.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
+        [ValidateInput(false)]
         public ActionResult GridUpdateMy([DataSourceRequest]DataSourceRequest request, long key, FormCollection form)
         {
             return ObjectStorage.Using<LaboratorySectionMaster, ActionResult>(master =>

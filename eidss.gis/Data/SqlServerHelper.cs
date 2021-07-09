@@ -95,11 +95,22 @@ namespace eidss.gis.Data
 
         static public bool SqlGeometryValidation(SqlConnection conn, Geometry geometry)
         {
-            var sql = string.Format("SELECT geometry::STGeomFromText('{0}', 0).STIsValid();", geometry.AsText());
-            conn.Open();
-            var valid = (bool)SqlExecScalar(conn, sql);
-            conn.Close();
-            return valid;
+            try
+            {
+                var sql = string.Format("SELECT geometry::STGeomFromText('{0}', 0).STIsValid();", geometry.AsText());
+                conn.Open();
+                var valid = (bool)SqlExecScalar(conn, sql);
+                conn.Close();
+                return valid;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if ((conn != null) && (conn.State == ConnectionState.Open)) conn.Close();
+            }
         }
 
     }

@@ -102,6 +102,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         [CompressFilter]
         public ActionResult Details(FormCollection form)
         {
@@ -153,6 +154,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult StoreCase(FormCollection form)
         {
             var key = long.Parse(form["idfCase"]);
@@ -214,6 +216,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetHumanAntimicrobialTherapy(FormCollection form)
         {
             return PickerInternal<AntimicrobialTherapy.Accessor, AntimicrobialTherapy, HumanCase>(form, AntimicrobialTherapy.Accessor.Instance(null), null, 
@@ -233,6 +236,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetHumanContactedCasePerson(FormCollection form)
         {
             return PickerInternal<ContactedCasePerson.Accessor, ContactedCasePerson, HumanCase>(form,
@@ -242,6 +246,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetSelectedPatient(string root, string selectedId)
         {
             long idfHumanActual = long.Parse(selectedId);
@@ -384,6 +389,7 @@ namespace eidss.webclient.Controllers
 
         //SetSelectedPatientAsRoot
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetSelectedPatientAsRoot(string root, string selectedId)
         {
             long idfHumanActual = long.Parse(selectedId);
@@ -439,6 +445,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult DeleteLinkToRootHuman(string root)
         {
             long key = long.Parse(root);
@@ -565,6 +572,7 @@ namespace eidss.webclient.Controllers
 
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult SetNewDiagnosis(string root, string newDiagnosis, string changeDiagnosisReason)
         {
             long key = long.Parse(root);
@@ -612,6 +620,7 @@ namespace eidss.webclient.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult FindInPersonIdentityService(FormCollection form)
         {
             return PickerInternal<Patient.Accessor, Patient, HumanCase>(form, Patient.Accessor.Instance(null), null, null, null, null, 

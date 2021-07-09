@@ -88,6 +88,7 @@
     <Folder Include="UI\OnExitCustomDialogs" />
     <Compile Include="UI\DbSettingsDlg\DbSettingsForAVRDlg.wxs" />
     <Compile Include="UI\DbSettingsDlg\DbSettingsForAVRDlg2.wxs" />
+    <Compile Include="UI\LanguagesDlg\JordanLanguagesDlg.wxs" />
     <Compile Include="UI\MustBeNumberDlg.wxs" />
     <Compile Include="UI\WebSettingsDlg\AppPoolSettingsDlg.wxs" />
     <Compile Include="UI\WebSettingsDlg\WebAppSettingsDlg.wxs" />

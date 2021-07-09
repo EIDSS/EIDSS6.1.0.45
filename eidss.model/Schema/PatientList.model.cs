@@ -27,7 +27,7 @@ using bv.model.Model.Handlers;
 using bv.model.Model.Validators;
 using eidss.model.Core;
 using eidss.model.Enums;
-using eidss.model.Helpers;
+		
 
 namespace eidss.model.Schema
 {
@@ -1147,11 +1147,11 @@ namespace eidss.model.Schema
                 
                     Columns.Add("strLastName");
                 
-                    if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                    if (new Func<bool>(() => (!EidssSiteContext.Instance.IsIraqCustomization))())
                     
                     Columns.Add("strFirstName");
                 
-                    if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                    if (new Func<bool>(() => (!EidssSiteContext.Instance.IsIraqCustomization))())
                     
                     Columns.Add("strSecondName");
                 
@@ -1312,67 +1312,25 @@ namespace eidss.model.Schema
                     sql.AppendFormat(")");
                 }
                             
-                if(EidssSiteContext.Instance.IsThaiCustomization)
+                if (filters.Contains("idfsRayon"))
                 {
-                    try
+                    sql.AppendFormat(" and (");
+                    
+                    if (filters.Count("idfsRayon") == 1)
                     {
-                        if (filters.Contains("idfsRayon"))
+                        sql.AppendFormat("geo.idfsRayon {0} @idfsRayon", filters.Operation("idfsRayon"));
+                    }
+                    else
+                    {
+                        for (int i = 0; i < filters.Count("idfsRayon"); i++)
                         {
-                            Int64 regionID = Convert.ToInt64(filters.Value("idfsRegion"));
-                            Int64 rayonID = Convert.ToInt64(filters.Value("idfsRayon"));
-                            string list = ThaiDistrictHelper.FilterThaiDistricts(manager, regionID, rayonID);
-
-                            sql.AppendFormat(" and (");
-                            sql.AppendFormat("((Cast(geo.idfsRayon as varchar(100)) in (select[Value] from fnsysSplitList(\'{0}\', 0, ','))))", list);
-                            sql.AppendFormat(")");
+                            if (i > 0) 
+                              sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
+                            sql.AppendFormat("geo.idfsRayon {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
                         }
                     }
-                    catch (Exception e)
-                    {
-                        if (filters.Contains("idfsRayon"))
-                        {
-                            sql.AppendFormat(" and (");
-
-                            if (filters.Count("idfsRayon") == 1)
-                            {
-                                sql.AppendFormat("geo.idfsRayon {0} @idfsRayon", filters.Operation("idfsRayon"));
-                            }
-                            else
-                            {
-                                for (int i = 0; i < filters.Count("idfsRayon"); i++)
-                                {
-                                    if (i > 0)
-                                        sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
-                                    sql.AppendFormat("geo.idfsRayon {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
-                                }
-                            }
-
-                            sql.AppendFormat(")");
-                        }
-                    }
-                }
-                else
-                {
-                    if (filters.Contains("idfsRayon"))
-                    {
-                        sql.AppendFormat(" and (");
-
-                        if (filters.Count("idfsRayon") == 1)
-                        {
-                            sql.AppendFormat("geo.idfsRayon {0} @idfsRayon", filters.Operation("idfsRayon"));
-                        }
-                        else
-                        {
-                            for (int i = 0; i < filters.Count("idfsRayon"); i++)
-                            {
-                                if (i > 0)
-                                    sql.AppendFormat(filters.IsOr("idfsRayon") ? " or " : " and ");
-                                sql.AppendFormat("geo.idfsRayon {0} @idfsRayon_{1}", filters.Operation("idfsRayon", i), i);
-                            }
-                        }
-
-                        sql.AppendFormat(")");
-                    }
+                        
+                    sql.AppendFormat(")");
                 }
                             
                 if (filters.Contains("idfHumanActual"))
@@ -1384,9 +1342,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfHumanActual") ? " or " : " and ");
                         
                         if (filters.Operation("idfHumanActual", i) == "&")
-                          sql.AppendFormat("(isnull(fn_Patient_SelectList.idfHumanActual,0) {0} @idfHumanActual_{1} = @idfHumanActual_{1})", filters.Operation("idfHumanActual", i), i);
+                          sql.AppendFormat("(fn_Patient_SelectList.idfHumanActual {0} @idfHumanActual_{1} = @idfHumanActual_{1})", filters.Operation("idfHumanActual", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_Patient_SelectList.idfHumanActual,0) {0} @idfHumanActual_{1}", filters.Operation("idfHumanActual", i), i);
+                          sql.AppendFormat("fn_Patient_SelectList.idfHumanActual {0} @idfHumanActual_{1}", filters.Operation("idfHumanActual", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1442,7 +1400,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datDateofBirth") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_Patient_SelectList.datDateofBirth, 112) {0} CONVERT(NVARCHAR(8), @datDateofBirth_{1}, 112)", filters.Operation("datDateofBirth", i), i);
+                        sql.AppendFormat("fn_Patient_SelectList.datDateofBirth {0} @datDateofBirth_{1}", filters.Operation("datDateofBirth", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1457,9 +1415,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfCurrentResidenceAddress") ? " or " : " and ");
                         
                         if (filters.Operation("idfCurrentResidenceAddress", i) == "&")
-                          sql.AppendFormat("(isnull(fn_Patient_SelectList.idfCurrentResidenceAddress,0) {0} @idfCurrentResidenceAddress_{1} = @idfCurrentResidenceAddress_{1})", filters.Operation("idfCurrentResidenceAddress", i), i);
+                          sql.AppendFormat("(fn_Patient_SelectList.idfCurrentResidenceAddress {0} @idfCurrentResidenceAddress_{1} = @idfCurrentResidenceAddress_{1})", filters.Operation("idfCurrentResidenceAddress", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_Patient_SelectList.idfCurrentResidenceAddress,0) {0} @idfCurrentResidenceAddress_{1}", filters.Operation("idfCurrentResidenceAddress", i), i);
+                          sql.AppendFormat("fn_Patient_SelectList.idfCurrentResidenceAddress {0} @idfCurrentResidenceAddress_{1}", filters.Operation("idfCurrentResidenceAddress", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1488,9 +1446,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsPersonIDType") ? " or " : " and ");
                         
                         if (filters.Operation("idfsPersonIDType", i) == "&")
-                          sql.AppendFormat("(isnull(fn_Patient_SelectList.idfsPersonIDType,0) {0} @idfsPersonIDType_{1} = @idfsPersonIDType_{1})", filters.Operation("idfsPersonIDType", i), i);
+                          sql.AppendFormat("(fn_Patient_SelectList.idfsPersonIDType {0} @idfsPersonIDType_{1} = @idfsPersonIDType_{1})", filters.Operation("idfsPersonIDType", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_Patient_SelectList.idfsPersonIDType,0) {0} @idfsPersonIDType_{1}", filters.Operation("idfsPersonIDType", i), i);
+                          sql.AppendFormat("fn_Patient_SelectList.idfsPersonIDType {0} @idfsPersonIDType_{1}", filters.Operation("idfsPersonIDType", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1518,7 +1476,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datEnteredDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_Patient_SelectList.datEnteredDate, 112) {0} CONVERT(NVARCHAR(8), @datEnteredDate_{1}, 112)", filters.Operation("datEnteredDate", i), i);
+                        sql.AppendFormat("fn_Patient_SelectList.datEnteredDate {0} @datEnteredDate_{1}", filters.Operation("datEnteredDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1532,7 +1490,7 @@ namespace eidss.model.Schema
                         if (i > 0) 
                           sql.AppendFormat(filters.IsOr("datModificationDate") ? " or " : " and ");
                         
-                        sql.AppendFormat("CONVERT(NVARCHAR(8), fn_Patient_SelectList.datModificationDate, 112) {0} CONVERT(NVARCHAR(8), @datModificationDate_{1}, 112)", filters.Operation("datModificationDate", i), i);
+                        sql.AppendFormat("fn_Patient_SelectList.datModificationDate {0} @datModificationDate_{1}", filters.Operation("datModificationDate", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -1561,9 +1519,9 @@ namespace eidss.model.Schema
                           sql.AppendFormat(filters.IsOr("idfsHumanGender") ? " or " : " and ");
                         
                         if (filters.Operation("idfsHumanGender", i) == "&")
-                          sql.AppendFormat("(isnull(fn_Patient_SelectList.idfsHumanGender,0) {0} @idfsHumanGender_{1} = @idfsHumanGender_{1})", filters.Operation("idfsHumanGender", i), i);
+                          sql.AppendFormat("(fn_Patient_SelectList.idfsHumanGender {0} @idfsHumanGender_{1} = @idfsHumanGender_{1})", filters.Operation("idfsHumanGender", i), i);
                         else
-                          sql.AppendFormat("isnull(fn_Patient_SelectList.idfsHumanGender,0) {0} @idfsHumanGender_{1}", filters.Operation("idfsHumanGender", i), i);
+                          sql.AppendFormat("fn_Patient_SelectList.idfsHumanGender {0} @idfsHumanGender_{1}", filters.Operation("idfsHumanGender", i), i);
                             
                     }
                     sql.AppendFormat(")");
@@ -2365,7 +2323,7 @@ namespace eidss.model.Schema
                     "strLastName",
                     null, null, c => false, false, SearchPanelLocation.Main, false, null, null, null, null, null, null,false
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!EidssSiteContext.Instance.IsIraqCustomization))())
                 SearchPanelMeta.Add(new SearchPanelMetaItem(
                     "strFirstName",
                     EditorType.Text,
@@ -2381,7 +2339,7 @@ namespace eidss.model.Schema
                     "strLastName",
                     null, null, c => false, false, SearchPanelLocation.Main, false, null, null, null, null, null, null,false
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!EidssSiteContext.Instance.IsIraqCustomization))())
                 SearchPanelMeta.Add(new SearchPanelMetaItem(
                     "strSecondName",
                     EditorType.Text,
@@ -2432,12 +2390,12 @@ namespace eidss.model.Schema
                     _str_strLastName,
                     _str_strLastName, null, true, true, true, true, true, null
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!EidssSiteContext.Instance.IsIraqCustomization))())
                 GridMeta.Add(new GridMetaItem(
                     _str_strFirstName,
                     _str_strFirstName, null, false, true, true, true, true, null
                     ));
-                if (new Func<bool>(() => !EidssSiteContext.Instance.IsIraqCustomization)())
+                if (new Func<bool>(() => (!EidssSiteContext.Instance.IsIraqCustomization))())
                 GridMeta.Add(new GridMetaItem(
                     _str_strSecondName,
                     _str_strSecondName, null, false, true, true, true, true, null

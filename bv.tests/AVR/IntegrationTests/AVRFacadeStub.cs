@@ -69,7 +69,7 @@ namespace bv.tests.AVR.IntegrationTests
             }
         }
 
-        public ViewDTO GetCachedView(string sessionId, long layoutId, string lang)
+        public ViewDTO GetCachedView(string sessionId, long layoutId, string lang, long? userId = null)
         {
             try
             {
@@ -102,34 +102,34 @@ namespace bv.tests.AVR.IntegrationTests
             
         }
 
-        public QueryTableHeaderDTO GetCachedQueryTableHeader(long queryId, string lang, bool isArchive)
+        public QueryTableHeaderDTO GetCachedQueryTableHeader(long queryId, string lang, bool isArchive, long? userId = null)
         {
             return m_ZippedHeader;
         }
 
 
-        public bool DoesCachedQueryExists(long queryId, string lang, bool isArchive)
+        public bool DoesCachedQueryExists(long queryId, string lang, bool isArchive, long? userId = null)
         {
             return true;
         }
 
-        public void RefreshCachedQueryTableByScheduler(long queryId, string lang, bool isArchive)
+        public void RefreshCachedQueryTableByScheduler(long queryId, string lang, bool isArchive, long? userId = null)
         {
             
         }
 
-        public QueryTableHeaderDTO GetConcreteCachedQueryTableHeader(long queryCacheId, long queryId, string lang, bool isArchive)
+        public QueryTableHeaderDTO GetConcreteCachedQueryTableHeader(long queryCacheId, long queryId, string lang, bool isArchive, long? userId = null)
         {
             return m_ZippedHeader;
         }
 
-        public QueryTablePacketDTO GetCachedQueryTablePacket(long queryCacheId, int packetNumber, int  totalPacketCount)
+        public QueryTablePacketDTO GetCachedQueryTablePacket(long queryCacheId, int packetNumber, int totalPacketCount, long? userId = null)
         {
             //Thread.Sleep(1);
             return m_ZippedBody[packetNumber % m_ZippedBody.Count];
         }
 
-        public void InvalidateQueryCacheForLanguage(long queryId, string lang)
+        public void InvalidateQueryCacheForLanguage(long queryId, string lang, long? userId = null)
         {
         }
 
@@ -137,14 +137,24 @@ namespace bv.tests.AVR.IntegrationTests
         {
         }
 
-        public void DeleteQueryCacheForLanguage(long queryId, string lang, bool leaveLastRecord)
+        public void DeleteQueryCacheForLanguage(long queryId, string lang, bool leaveLastRecord, long? userId = null)
         {
             
         }
 
-        public DateTime? GetsQueryCacheUserRequestDate(long queryId)
+        public DateTime? GetsQueryCacheUserRequestDate(long queryId, long? userId = null)
         {
             return DateTime.Now;
+        }
+
+        public List<long?> GetQueryCacheValidUsers(long queryId, DateTime? requestedLaterThanDate)
+        {
+            return new List<long?>() { null };
+        }
+
+        public List<long> GetQueryCacheInvalidUsers(long queryId, DateTime requestedLaterThanDate)
+        {
+            return new List<long>() { };
         }
 
         public Version GetServiceVersion()
@@ -157,7 +167,7 @@ namespace bv.tests.AVR.IntegrationTests
             throw new NotImplementedException();
         }
 
-        public DateTime GetQueryRefreshDateTime(long queryId, string lang)
+        public DateTime GetQueryRefreshDateTime(long queryId, string lang, long? userId = null)
         {
             return DateTime.Now;
         }
